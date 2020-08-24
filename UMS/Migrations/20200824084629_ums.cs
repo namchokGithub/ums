@@ -10,29 +10,51 @@ namespace UMS.Migrations
                 name: "Account",
                 columns: table => new
                 {
-                    Id = table.Column<string>(nullable: false),
-                    UserName = table.Column<string>(maxLength: 256, nullable: true),
-                    NormalizedUserName = table.Column<string>(maxLength: 256, nullable: true),
-                    Email = table.Column<string>(maxLength: 256, nullable: true),
-                    EmailConfirmed = table.Column<bool>(nullable: false),
-                    PasswordHash = table.Column<string>(nullable: true),
-                    SecurityStamp = table.Column<string>(nullable: true),
-                    ConcurrencyStamp = table.Column<string>(nullable: true),
-                    TwoFactorEnabled = table.Column<bool>(nullable: false),
-                    AccessFailedCount = table.Column<int>(nullable: false),
-                    acc_password = table.Column<string>(type: "nvarchar(256)", nullable: true),
-                    acc_salt = table.Column<string>(type: "nvarchar(256)", nullable: true),
-                    acc_user = table.Column<string>(type: "nvarchar(256)", nullable: true),
-                    acc_firstname = table.Column<string>(type: "nvarchar(256)", nullable: true),
-                    acc_lastname = table.Column<string>(type: "nvarchar(256)", nullable: true),
+                    acc_Id = table.Column<string>(nullable: false),
+                    acc_UserName = table.Column<string>(maxLength: 256, nullable: true),
+                    acc_NormalizedUserName = table.Column<string>(maxLength: 256, nullable: true),
+                    acc_Email = table.Column<string>(maxLength: 256, nullable: true),
+                    acc_PasswordHash = table.Column<string>(nullable: true),
+                    acc_SecurityStamp = table.Column<string>(nullable: true),
+                    acc_ConcurrencyStamp = table.Column<string>(nullable: true),
+                    acc_Salt = table.Column<string>(type: "nvarchar(256)", nullable: true),
+                    acc_User = table.Column<string>(type: "nvarchar(256)", nullable: true),
+                    acc_Firstname = table.Column<string>(type: "nvarchar(256)", nullable: true),
+                    acc_Lastname = table.Column<string>(type: "nvarchar(256)", nullable: true),
                     acc_IsActive = table.Column<string>(type: "char(10)", nullable: false),
                     acc_ro_Id = table.Column<int>(type: "Int", nullable: false),
-                    acc_ta_Id = table.Column<int>(type: "Int", nullable: false),
-                    acc_mem_Id = table.Column<int>(type: "Int", nullable: false)
+                    acc_ta_Id = table.Column<int>(type: "Int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Account", x => x.Id);
+                    table.PrimaryKey("PK_Account", x => x.acc_Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Log",
+                columns: table => new
+                {
+                    log_Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    log_datetime = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Log", x => x.log_Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "LogAccount",
+                columns: table => new
+                {
+                    la_Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    la_acc_Id = table.Column<int>(nullable: false),
+                    la_log_Id = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_LogAccount", x => x.la_Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -66,7 +88,7 @@ namespace UMS.Migrations
                         name: "FK_UserClaims_Account_UserId",
                         column: x => x.UserId,
                         principalTable: "Account",
-                        principalColumn: "Id",
+                        principalColumn: "acc_Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -86,7 +108,7 @@ namespace UMS.Migrations
                         name: "FK_UserLogins_Account_UserId",
                         column: x => x.UserId,
                         principalTable: "Account",
-                        principalColumn: "Id",
+                        principalColumn: "acc_Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -106,7 +128,7 @@ namespace UMS.Migrations
                         name: "FK_UserTokens_Account_UserId",
                         column: x => x.UserId,
                         principalTable: "Account",
-                        principalColumn: "Id",
+                        principalColumn: "acc_Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -151,16 +173,16 @@ namespace UMS.Migrations
                         name: "FK_UserRoles_Account_UserId",
                         column: x => x.UserId,
                         principalTable: "Account",
-                        principalColumn: "Id",
+                        principalColumn: "acc_Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
                 name: "UserNameIndex",
                 table: "Account",
-                column: "NormalizedUserName",
+                column: "acc_NormalizedUserName",
                 unique: true,
-                filter: "[NormalizedUserName] IS NOT NULL");
+                filter: "[acc_NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_RoleClaims_RoleId",
@@ -192,6 +214,12 @@ namespace UMS.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Log");
+
+            migrationBuilder.DropTable(
+                name: "LogAccount");
+
             migrationBuilder.DropTable(
                 name: "RoleClaims");
 

@@ -8,6 +8,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using UMS.Models;
 
+/*
+ * Name: HomeController.cs
+ * Namespace: Controllers
+ * Author: Namchok
+ */
+
 namespace UMS.Controllers
 {
     [Authorize]

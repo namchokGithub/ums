@@ -9,7 +9,7 @@ using UMS.Data;
 namespace UMS.Migrations
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20200824065817_ums")]
+    [Migration("20200824084629_ums")]
     partial class ums
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -158,75 +158,111 @@ namespace UMS.Migrations
             modelBuilder.Entity("UMS.Areas.Identity.Data.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
+                        .HasColumnName("acc_Id")
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("AccessFailedCount")
-                        .HasColumnType("int");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
+                        .HasColumnName("acc_ConcurrencyStamp")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
+                        .HasColumnName("acc_Email")
                         .HasColumnType("nvarchar(256)")
                         .HasMaxLength(256);
 
-                    b.Property<bool>("EmailConfirmed")
-                        .HasColumnType("bit");
-
                     b.Property<string>("NormalizedUserName")
+                        .HasColumnName("acc_NormalizedUserName")
                         .HasColumnType("nvarchar(256)")
                         .HasMaxLength(256);
 
                     b.Property<string>("PasswordHash")
+                        .HasColumnName("acc_PasswordHash")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SecurityStamp")
+                        .HasColumnName("acc_SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("TwoFactorEnabled")
-                        .HasColumnType("bit");
-
                     b.Property<string>("UserName")
+                        .HasColumnName("acc_UserName")
                         .HasColumnType("nvarchar(256)")
                         .HasMaxLength(256);
 
+                    b.Property<string>("acc_Firstname")
+                        .HasColumnName("acc_Firstname")
+                        .HasColumnType("nvarchar(256)");
+
                     b.Property<string>("acc_IsActive")
                         .IsRequired()
+                        .HasColumnName("acc_IsActive")
                         .HasColumnType("char(10)");
 
-                    b.Property<string>("acc_firstname")
+                    b.Property<string>("acc_Lastname")
+                        .HasColumnName("acc_Lastname")
                         .HasColumnType("nvarchar(256)");
 
-                    b.Property<string>("acc_lastname")
+                    b.Property<string>("acc_Salt")
                         .HasColumnType("nvarchar(256)");
 
-                    b.Property<int>("acc_mem_Id")
-                        .HasColumnType("Int");
-
-                    b.Property<string>("acc_password")
+                    b.Property<string>("acc_User")
                         .HasColumnType("nvarchar(256)");
 
                     b.Property<int>("acc_ro_Id")
+                        .HasColumnName("acc_ro_Id")
                         .HasColumnType("Int");
-
-                    b.Property<string>("acc_salt")
-                        .HasColumnType("nvarchar(256)");
 
                     b.Property<int>("acc_ta_Id")
+                        .HasColumnName("acc_ta_Id")
                         .HasColumnType("Int");
-
-                    b.Property<string>("acc_user")
-                        .HasColumnType("nvarchar(256)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedUserName")
                         .IsUnique()
                         .HasName("UserNameIndex")
-                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+                        .HasFilter("[acc_NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("Account");
+                });
+
+            modelBuilder.Entity("UMS.Models.Log", b =>
+                {
+                    b.Property<int>("log_Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("log_Id")
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("log_datetime")
+                        .IsRequired()
+                        .HasColumnName("log_datetime")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("log_Id");
+
+                    b.ToTable("Log");
+                });
+
+            modelBuilder.Entity("UMS.Models.LogAccount", b =>
+                {
+                    b.Property<int>("la_Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("la_Id")
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("la_acc_Id")
+                        .HasColumnName("la_acc_Id")
+                        .HasColumnType("int");
+
+                    b.Property<int>("la_log_Id")
+                        .HasColumnName("la_log_Id")
+                        .HasColumnType("int");
+
+                    b.HasKey("la_Id");
+
+                    b.ToTable("LogAccount");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
