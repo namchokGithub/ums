@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -28,6 +29,14 @@ namespace UMS
         {
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddAuthentication()
+            .AddGoogle(opts =>
+            {
+                opts.ClientId = "168669914421-am1vveumu5aaggtsnmceac4eedpp4nrb.apps.googleusercontent.com";
+                opts.ClientSecret = "_Z33IY-6xE8B_DkbAUKWqTFX";
+                opts.SignInScheme = IdentityConstants.ExternalScheme;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

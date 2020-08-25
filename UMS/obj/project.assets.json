@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "Microsoft.AspNetCore.Authentication.Google/3.1.7": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.7": {
         "type": "package",
         "compile": {
@@ -2699,6 +2711,21 @@
     }
   },
   "libraries": {
+    "Microsoft.AspNetCore.Authentication.Google/3.1.7": {
+      "sha512": "6Y4oKM4f8QPOKLiiznna2HIQzMObrkWFHns8TWRcUOQWadUK+4ki7qP2mtU763HZZSWZ1riY5kpzlvQUXgZ/GA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.google/3.1.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.dll",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.xml",
+        "microsoft.aspnetcore.authentication.google.3.1.7.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.google.nuspec"
+      ]
+    },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.7": {
       "sha512": "LMBt5v6poGqKqPJk6w5awsKqr9QJw2j+UN2yNukZ4/zRfveuYon58xBcc+xg9p/c2BzPs940PzEbrXfaZhpC+g==",
       "type": "package",
@@ -8802,6 +8829,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Microsoft.AspNetCore.Authentication.Google >= 3.1.7",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.7",
       "Microsoft.AspNetCore.Identity.UI >= 3.1.7",
       "Microsoft.EntityFrameworkCore >= 3.1.7",
@@ -8818,11 +8846,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Wannapa\\Source\\Repos\\ums\\UMS\\UMS.csproj",
+      "projectUniqueName": "C:\\Users\\Wannapa\\source\\repos\\ums\\UMS\\UMS.csproj",
       "projectName": "UMS",
-      "projectPath": "C:\\Users\\Wannapa\\Source\\Repos\\ums\\UMS\\UMS.csproj",
+      "projectPath": "C:\\Users\\Wannapa\\source\\repos\\ums\\UMS\\UMS.csproj",
       "packagesPath": "C:\\Users\\Wannapa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Wannapa\\Source\\Repos\\ums\\UMS\\obj\\",
+      "outputPath": "C:\\Users\\Wannapa\\source\\repos\\ums\\UMS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -8852,6 +8880,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "Microsoft.AspNetCore.Authentication.Google": {
+            "target": "Package",
+            "version": "[3.1.7, )"
+          },
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
             "target": "Package",
             "version": "[3.1.7, )"
