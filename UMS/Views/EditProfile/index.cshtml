@@ -64,6 +64,7 @@
 </div>
 
 <!--Start Script-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $(document).ready(function () {
         $("#FormChangePassword").hide();
@@ -73,13 +74,15 @@
         $("#SavePassword").hide();
 
         $("#ChangePassword").click(function () {
+            $("#ChangePassword").hide();
             $("#SaveProfile").hide();
+            $("#FormChangePassword").show();
             $("#OldPassword").show();
             $("#NewPassword").show();
             $("#ConfirmPassword").show();
             $("#SavePassword").show();
         });
-    }
+    })
 </script>
 <!--End Script-->
 
