@@ -1,8 +1,206 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Manage User";
     Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
 }
 
-<h1>Manage User</h1>
-
+<div class="mr-auto">
+    <br>
+    <!--Start Card-->
+    <div class="card card-info">
+        <!--Start Card header-->
+        <div class="card-header">
+            <h3 class="card-title">Manage users</h3>
+        </div>
+        <!--End Card header-->
+        <!--Start Card body-->
+        <div class="card-body">
+            <div class="box">
+                <div class="box-body">
+                    <!--Start Manage user table-->
+                    <table id="example1" class="table table-bordered table-striped">
+                        <!--Start Manage user table head-->
+                        <thead class="text-center">
+                            <tr>
+                                <th>No.</th>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <!--End Manage user table head-->
+                        <!--Start Manage user table body-->
+                        <tbody>
+                            <tr>
+                                <td><center>1</center></td>
+                                <td>Namchock</td>
+                                <td>Singhachai</td>
+                                <td>namchock@gmail.com</td>
+                                <td><center>Admin</center></td>
+                                <td class="text-center">
+                                    <button class="btn btn-warning text-white" data-toggle="modal" data-target="#EditUser"><i class="fa fa-pencil-alt"></i></button>
+                                    <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><center>2</center></td>
+                                <td>Wannapa</td>
+                                <td>Srijermtong</td>
+                                <td>wannapa@hotmail.com</td>
+                                <td><center>User</center></td>
+                                <td class="text-center">
+                                    <button class="btn btn-warning text-white" data-toggle="modal" data-target="#EditUser"><i class="fa fa-pencil-alt"></i></button>
+                                    <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><center>3</center></td>
+                                <td>Arthiruj</td>
+                                <td>Phusitaporn</td>
+                                <td>arthiruj101@hotmail.com</td>
+                                <td><center>User</center></td>
+                                <td class="text-center">
+                                    <button class="btn btn-warning text-white" data-toggle="modal" data-target="#EditUser"><i class="fa fa-pencil-alt"></i></button>
+                                    <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><center>4</center></td>
+                                <td>Yaowapa</td>
+                                <td>Pongpadcha</td>
+                                <td>yaowapaa@msn.com</td>
+                                <td><center>User</center></td>
+                                <td class="text-center">
+                                    <button class="btn btn-warning text-white" data-toggle="modal" data-target="#EditUser"><i class="fa fa-pencil-alt"></i></button>
+                                    <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><center>5</center></td>
+                                <td>Theo</td>
+                                <td>Saetun</td>
+                                <td>60160109@go.buu.ac.th</td>
+                                <td><center>User</center></td>
+                                <td class="text-center">
+                                    <button class="btn btn-warning text-white" data-toggle="modal" data-target="#EditUser"><i class="fa fa-pencil-alt"></i></button>
+                                    <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><center>6</center></td>
+                                <td>Phonlayut</td>
+                                <td>Sophak</td>
+                                <td>60160093@go.buu.ac.th</td>
+                                <td><center>User</center></td>
+                                <td class="text-center">
+                                    <button class="btn btn-warning text-white" data-toggle="modal" data-target="#EditUser"><i class="fa fa-pencil-alt"></i></button>
+                                    <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><center>7</center></td>
+                                <td>Chanakan</td>
+                                <td>Hokee</td>
+                                <td>60160334@go.buu.ac.th</td>
+                                <td><center>User</center></td>
+                                <td class="text-center">
+                                    <button class="btn btn-warning text-white" data-toggle="modal" data-target="#EditUser"><i class="fa fa-pencil-alt"></i></button>
+                                    <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><center>8</center></td>
+                                <td>Manita</td>
+                                <td>Doungrassamee</td>
+                                <td>60160023@go.buu.ac.th</td>
+                                <td><center>User</center></td>
+                                <td class="text-center">
+                                    <button class="btn btn-warning text-white" data-toggle="modal" data-target="#EditUser"><i class="fa fa-pencil-alt"></i></button>
+                                    <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><center>9</center></td>
+                                <td>Vartinee</td>
+                                <td>Teangthong</td>
+                                <td>60160345@go.buu.ac.th</td>
+                                <td><center>User</center></td>
+                                <td class="text-center">
+                                    <button class="btn btn-warning text-white" data-toggle="modal" data-target="#EditUser"><i class="fa fa-pencil-alt"></i></button>
+                                    <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <!--End Manage user table body-->
+                    </table>
+                    <!--End Manage user table body-->
+                </div>
+                <!--End Manage user table body-->
+            </div>
+            <!--End Manage user table-->
+        </div>
+        <!--End Card body-->
+        <!--Start Modal edit user-->
+        <div class="modal fade" id="EditUser">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!--Start Modal header edit user-->
+                    <div class="modal-header bg-warning">
+                        <h4 class="modal-title  text-white">Edit user account.</h4>
+                        <!--Start Button close-->
+                        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <!--End Button close-->
+                    </div>
+                    <!--End Modal header edit user-->
+                    <!--Start Modal body edit user-->
+                    <div class="modal-body">
+                        <!--Start Form Edit user-->
+                        <form id="ModalEditUser" method="post">
+                            <!--Start Input Edit user-->
+                            <div class="row">
+                                <label class="col-sm-3 col-form-label">Firstname:</label>
+                                <div class="col-sm-9 mr-auto">
+                                    <div class="form-group">
+                                        <input class="form-control">
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <label class="col-sm-3 col-form-label">Lastname:</label>
+                                <div class="col-sm-9 mr-auto">
+                                    <div class="form-group">
+                                        <input class="form-control">
+                                        <input class="form-control">
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <label class="col-sm-3 col-form-label">Role:</label>
+                                <div class="col-sm-9 mr-auto">
+                                    <div class="form-group">
+                                        <select class="form-control">
+                                            <option>Admin</option>
+                                            <option>User</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End Input Edit user-->
+                        </form>
+                        <!--End Form Edit user-->
+                    </div>
+                    <!--End Modal body-->
+                    <!--Start Modal footer-->
+                    <div class="modal-footer justify-content-between">
+                        <button type="button" class="btn btn-default float-left" data-dismiss="modal">Back</button>
+                        <button type="button" class="btn btn-success float-right">Save</button>
+                    </div>
+                    <!--End Modal footer-->
+                </div>
+            </div>
+        </div>
+        <!--End Modal Edit user-->
+    </div>
+    <!--End Card-->
+</div>
