@@ -49,6 +49,7 @@ namespace UMS.Areas.Identity.Pages.Account
         {
             if (code == null)
             {
+                Console.WriteLine("A code must be supplied.");
                 return BadRequest("A code must be supplied for password reset.");
             }
             else
@@ -67,15 +68,18 @@ namespace UMS.Areas.Identity.Pages.Account
             {
                 return Page();
             }
-
+            
             var user = await _userManager.FindByEmailAsync(Input.Email);
+
             if (user == null)
             {
                 // Don't reveal that the user does not exist
-                return RedirectToPage("./ResetPasswordConfirmation");
+                Console.WriteLine("Not found user!");
+                return RedirectToPage("./Login");
             }
 
             var result = await _userManager.ResetPasswordAsync(user, Input.Code, Input.Password);
+
             if (result.Succeeded)
             {
                 return RedirectToPage("./ResetPasswordConfirmation");

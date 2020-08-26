@@ -169,6 +169,11 @@ namespace UMS.Migrations
                         .HasColumnType("nvarchar(256)")
                         .HasMaxLength(256);
 
+                    b.Property<string>("NormalizedEmail")
+                        .HasColumnName("acc_NormalizedEmail")
+                        .HasColumnType("nvarchar(256)")
+                        .HasMaxLength(256);
+
                     b.Property<string>("NormalizedUserName")
                         .HasColumnName("acc_NormalizedUserName")
                         .HasColumnType("nvarchar(256)")
@@ -215,6 +220,9 @@ namespace UMS.Migrations
                         .HasColumnType("Int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasName("EmailIndex");
 
                     b.HasIndex("NormalizedUserName")
                         .IsUnique()
