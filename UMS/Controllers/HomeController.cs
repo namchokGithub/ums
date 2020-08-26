@@ -23,8 +23,9 @@ namespace UMS.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IEmailSender _emailSender;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IEmailSender emailSender, ILogger<HomeController> logger)
         {
+            _emailSender = emailSender;
             _logger = logger;
         }
 
