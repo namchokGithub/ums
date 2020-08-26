@@ -31,11 +31,25 @@ namespace UMS
             services.AddRazorPages();
 
             services.AddAuthentication()
-            .AddGoogle(opts =>
+            .AddGoogle(googleOptions =>
             {
-                opts.ClientId = "168669914421-am1vveumu5aaggtsnmceac4eedpp4nrb.apps.googleusercontent.com";
-                opts.ClientSecret = "_Z33IY-6xE8B_DkbAUKWqTFX";
-                opts.SignInScheme = IdentityConstants.ExternalScheme;
+                googleOptions.ClientId = "168669914421-am1vveumu5aaggtsnmceac4eedpp4nrb.apps.googleusercontent.com";
+                googleOptions.ClientSecret = "_Z33IY-6xE8B_DkbAUKWqTFX";
+                googleOptions.SignInScheme = IdentityConstants.ExternalScheme;
+            });
+
+            services.AddAuthentication()
+            .AddFacebook(facebookOptions =>
+            {
+                facebookOptions.AppId = "775622693211895";
+                facebookOptions.AppSecret = "bac3818b714dd5282277916f3c56f172";
+            });
+
+            services.AddAuthentication()
+            .AddMicrosoftAccount(microsoftOptions =>
+            {
+                microsoftOptions.ClientId = "ed43a983-e56c-4a2a-a1e8-55b74d56fbc4";
+                microsoftOptions.ClientSecret = ".j-k5QvM40k4Mzm1d7PwWBAQv~w42_MV.e";
             });
         }
 
