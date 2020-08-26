@@ -1,8 +1,97 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Edit Profile";
     Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
 }
 
-<h1>Edit Profile</h1>
+<div class="mx-auto col-5">
+    <br>
+    <!--Start Card-->
+    <div class="card card-info text-center">
+        <!--Start Card header-->
+        <div class="card-header">
+            <h3 class="card-title">Edit Profile</h3>
+        </div>
+        <!--End Card header-->
+        <!--Start Card body-->
+        <div class="card-body">
+            <!--Start Form profile-->
+            <form id="FormProfile">
+                <!--Start Input edit profile-->
+                <span class="text-danger small"></span>
+                <div class="input-group mb-3">
+                    <input class="form-control" />
+                </div>
+                <div class="input-group mb-3">
+                    <input class="form-control" />
+                </div>
+                <!--End Input edit profile-->
+                <!--Start Button save profile-->
+                <div class="row">
+                    <div class="col-8">
+                        <p id="ChangePassword">Change password</p>
+                    </div>
+                    <div class="col-4">
+                        <button id="SaveProfile" type="submit" class="btn btn-success btn-block float-right">Save</button>
+                    </div>
+                </div>
+                <!--End Button save profile-->
+            </form>
+            <!--End Form profile-->
+            <!--Start Form change password-->
+            <form id="FormChangePassword">
+                <!--Start Input change password-->
+                <span class="text-danger small"></span>
+                <div class="input-group mb-3">
+                    <input id="OldPassword" class="form-control" placeholder="Old password" />
+                </div>
+                <div class="input-group mb-3">
+                    <input id="NewPassword" class="form-control" placeholder="New password" />
+                </div>
+                <div class="input-group mb-3">
+                    <input id="ConfirmPassword" class="form-control" placeholder="Confirm password" />
+                </div>
+                <!--End Input change password-->
+                <!--Start Button save password-->
+                <button id="SavePassword" type="submit" class="btn btn-success btn-block">Save</button>
+                <!--End Button save password-->
+            </form>
+            <!--End Form change password-->
 
+        </div>
+        <!--End Card body-->
+    </div>
+    <!--Stop Card-->
+</div>
+
+<!--Start Script-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#FormChangePassword").hide();
+        $("#OldPassword").hide();
+        $("#NewPassword").hide();
+        $("#ConfirmPassword").hide();
+        $("#SavePassword").hide();
+
+        $("#ChangePassword").click(function () {
+            $("#ChangePassword").hide();
+            $("#SaveProfile").hide();
+            $("#FormChangePassword").show();
+            $("#OldPassword").show();
+            $("#NewPassword").show();
+            $("#ConfirmPassword").show();
+            $("#SavePassword").show();
+        });
+    })
+</script>
+<!--End Script-->
+
+<!--Start Style-->
+<style>
+    #ChangePassword {
+        text-align: left;
+        color: blue;
+        cursor: pointer;
+    }
+</style>
+<!--End Style-->

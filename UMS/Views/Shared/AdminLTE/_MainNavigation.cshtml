@@ -1,7 +1,7 @@
 ﻿@using static UMS.Helpers.NavigationIndicatorHelper;
 
 <!-- Main Sidebar Container -->
-<aside class="main-sidebar sidebar-dark-primary elevation-4 sidebar-dark-warning">
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="~/" class="brand-link">
         <img src="~/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
@@ -46,7 +46,7 @@
                     </a>
                 </li>*@
                 <li class="nav-item">
-                    <a asp-controller="ManageUser" asp-action="Index" class="nav-link @Url.MakeActiveClass("ManageUser","Index")">
+                    <a asp-controller="EditProfile" asp-action="Index" class="nav-link @Url.MakeActiveClass("EditProfile","Index")">
                         <i class="far fa-address-card"></i> &ensp;
                         <p>Edit Profile</p>
                     </a>
@@ -56,7 +56,7 @@
                 @if (true)
                 {
                     <li class="nav-item">
-                        <a asp-controller="EditProfile" asp-action="Index" class="nav-link @Url.MakeActiveClass("EditProfile","Index")">
+                        <a asp-controller="ManageUser" asp-action="Index" class="nav-link @Url.MakeActiveClass("ManageUser","Index")">
                             <i class="fas fa-user-cog"></i> &ensp;
                             <p>Manage User</p>
                         </a>
