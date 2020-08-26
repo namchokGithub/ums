@@ -30,6 +30,7 @@ namespace UMS.Data
                     entity.Property(e => e.SecurityStamp).HasColumnName("acc_SecurityStamp");
                     entity.Property(e => e.ConcurrencyStamp).HasColumnName("acc_ConcurrencyStamp");
                     entity.Property(e => e.Email).HasColumnName("acc_Email");
+                    entity.Property(e => e.NormalizedEmail).HasColumnName("acc_NormalizedEmail");
                     entity.Property(e => e.acc_Firstname).HasColumnName("acc_Firstname");
                     entity.Property(e => e.acc_Lastname).HasColumnName("acc_Lastname");
                     entity.Property(e => e.acc_IsActive).HasColumnName("acc_IsActive");
@@ -40,7 +41,7 @@ namespace UMS.Data
 
             builder.Entity<ApplicationUser>()
                 .Ignore(entity => entity.LockoutEnd)
-                .Ignore(entity => entity.NormalizedEmail)
+                //.Ignore(entity => entity.NormalizedEmail)
                 .Ignore(entity => entity.LockoutEnabled)
                 .Ignore(entity => entity.PhoneNumber)
                 .Ignore(entity => entity.EmailConfirmed)

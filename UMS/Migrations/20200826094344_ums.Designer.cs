@@ -9,7 +9,7 @@ using UMS.Data;
 namespace UMS.Migrations
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20200824084629_ums")]
+    [Migration("20200826094344_ums")]
     partial class ums
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -171,6 +171,11 @@ namespace UMS.Migrations
                         .HasColumnType("nvarchar(256)")
                         .HasMaxLength(256);
 
+                    b.Property<string>("NormalizedEmail")
+                        .HasColumnName("acc_NormalizedEmail")
+                        .HasColumnType("nvarchar(256)")
+                        .HasMaxLength(256);
+
                     b.Property<string>("NormalizedUserName")
                         .HasColumnName("acc_NormalizedUserName")
                         .HasColumnType("nvarchar(256)")
@@ -217,6 +222,9 @@ namespace UMS.Migrations
                         .HasColumnType("Int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasName("EmailIndex");
 
                     b.HasIndex("NormalizedUserName")
                         .IsUnique()

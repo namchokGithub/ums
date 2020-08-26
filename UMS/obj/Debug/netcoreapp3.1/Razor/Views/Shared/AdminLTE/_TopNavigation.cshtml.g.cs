@@ -26,8 +26,23 @@ using UMS.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 1 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Views\Shared\AdminLTE\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Views\Shared\AdminLTE\_ViewImports.cshtml"
+using UMS.Areas.Identity;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ac28daedf2a67976cee3d5b2961686108bcfd715", @"/Views/Shared/AdminLTE/_TopNavigation.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"09e50ace8fe3b4184cf126cd47ae178edfbfa883", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1e02f25971c5265441e5c2dd4ae2bea824302dab", @"/Views/Shared/AdminLTE/_ViewImports.cshtml")]
     public class Views_Shared_AdminLTE__TopNavigation : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("form-inline"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -80,7 +95,7 @@ using UMS.Models;
 #line hidden
 #nullable disable
             WriteLiteral("            <li class=\"nav-item d-none d-sm-inline-block\">\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ac28daedf2a67976cee3d5b2961686108bcfd7155963", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ac28daedf2a67976cee3d5b2961686108bcfd7156530", async() => {
                 WriteLiteral("\r\n                    <button type=\"submit\" class=\"nav-link btn btn-link text-dark\">Logout</button>\r\n                ");
             }
             );
@@ -126,7 +141,7 @@ using UMS.Models;
 #line hidden
 #nullable disable
             WriteLiteral("            <li class=\"nav-item d-none d-sm-inline-block\">\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ac28daedf2a67976cee3d5b2961686108bcfd7159241", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ac28daedf2a67976cee3d5b2961686108bcfd7159808", async() => {
                 WriteLiteral("Login");
             }
             );
@@ -145,7 +160,7 @@ using UMS.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n            </li>\r\n            <li class=\"nav-item d-none d-sm-inline-block\">\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ac28daedf2a67976cee3d5b2961686108bcfd71510777", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ac28daedf2a67976cee3d5b2961686108bcfd71511344", async() => {
                 WriteLiteral("Register");
             }
             );

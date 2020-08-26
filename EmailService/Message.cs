@@ -11,6 +11,7 @@ namespace EmailService
         public List<MailboxAddress> To { set; get; }
         public string Subject { set; get; }
         public string Content { set; get; }
+        public string htmlText { set; get; }
 
         public Message(IEnumerable<string> to, string subject, string content)
         {

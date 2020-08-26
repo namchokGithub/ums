@@ -14,6 +14,7 @@ namespace UMS.Migrations
                     acc_UserName = table.Column<string>(maxLength: 256, nullable: true),
                     acc_NormalizedUserName = table.Column<string>(maxLength: 256, nullable: true),
                     acc_Email = table.Column<string>(maxLength: 256, nullable: true),
+                    acc_NormalizedEmail = table.Column<string>(maxLength: 256, nullable: true),
                     acc_PasswordHash = table.Column<string>(nullable: true),
                     acc_SecurityStamp = table.Column<string>(nullable: true),
                     acc_ConcurrencyStamp = table.Column<string>(nullable: true),
@@ -176,6 +177,11 @@ namespace UMS.Migrations
                         principalColumn: "acc_Id",
                         onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "EmailIndex",
+                table: "Account",
+                column: "acc_NormalizedEmail");
 
             migrationBuilder.CreateIndex(
                 name: "UserNameIndex",
