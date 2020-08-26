@@ -170,5 +170,57 @@ namespace UMS.Controllers
                 return AccessDenied();
             }
         }
+
+        [AllowAnonymous]
+        public IActionResult MicrosoftLogin()
+        {
+            string redirectUrl = Url.Action("MicrosoftResponse", "Account");
+            var properties = _signInManager.ConfigureExternalAuthenticationProperties("Microsoft", redirectUrl);
+            return new ChallengeResult("Microsoft", properties);
+        }
+
+        [AllowAnonymous]
+        public async Task<IActionResult> MicrosoftResponse()
+        {
+            ExternalLoginInfo info = await _signInManager.GetExternalLoginInfoAsync();
+            if (info == null)
+                return RedirectToAction(nameof(InputModel));
+
+            var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, false);
+            string[] userInfo = {
+                info.Principal.FindFirst(ClaimTypes.Name).Value,
+                info.Principal.FindFirst(ClaimTypes.Email).Value,
+                info.Principal.FindFirst(ClaimTypes.GivenName).Value,
+                info.Principal.FindFirst(ClaimTypes.Surname).Value
+            };
+            if (result.Succeeded)
+                return View(userInfo);
+            else
+            {
+                ApplicationUser user = new ApplicationUser
+                {
+                    Email = info.Principal.FindFirst(ClaimTypes.Email).Value,
+                    UserName = info.Principal.FindFirst(ClaimTypes.Email).Value,
+                    acc_User = info.Principal.FindFirst(ClaimTypes.Email).Value,
+                    acc_Firstname = info.Principal.FindFirst(ClaimTypes.GivenName).Value,
+                    acc_Lastname = info.Principal.FindFirst(ClaimTypes.Surname).Value,
+                    acc_IsActive = 'Y',
+                    acc_ro_Id = 2,
+                    acc_ta_Id = 1
+                };
+
+                IdentityResult identResult = await _userManager.CreateAsync(user);
+                if (identResult.Succeeded)
+                {
+                    identResult = await _userManager.AddLoginAsync(user, info);
+                    if (identResult.Succeeded)
+                    {
+                        await _signInManager.SignInAsync(user, false);
+                        return RedirectToAction("Index", "Home");
+                    }
+                }
+                return AccessDenied();
+            }
+        }
     }
 }
