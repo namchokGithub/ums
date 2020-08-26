@@ -13,6 +13,8 @@
     <Compile Remove="Migrations\20200824083916_ums.Designer.cs" />
     <Compile Remove="Migrations\20200824084508_ums.cs" />
     <Compile Remove="Migrations\20200824084508_ums.Designer.cs" />
+    <Compile Remove="Migrations\20200824084629_ums.cs" />
+    <Compile Remove="Migrations\20200824084629_ums.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -36,6 +38,10 @@
 
   <ItemGroup>
     <Folder Include="Migrations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EmailService\EmailService.csproj" />
   </ItemGroup>
 
 </Project>
