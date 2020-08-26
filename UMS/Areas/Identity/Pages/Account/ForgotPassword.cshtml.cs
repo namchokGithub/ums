@@ -58,21 +58,22 @@ namespace UMS.Areas.Identity.Pages.Account
                     pageHandler: null,
                     values: new { area = "Identity", code },
                     protocol: Request.Scheme);
-
+                
                 var message = new Message(
                     new string[] { Input.Email }, 
                     "Reset Password",
-                    @$"Please reset your password by 
-                            <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>
-                                <b>click here</b></a>."
+                    @$"
+                        Hello!, {Input.Email} <br>
+
+                        Please reset your password by 
+                        <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'
+                            asp-route-Email='{Input.Email}'
+                            >
+                            <b>click here</b>
+                        </a>.
+                      "
                 );
                 await _emailSender.SendEmailAsync(message);
-
-                //await _emailSender.SendEmailAsync(
-                //    Input.Email,
-                //    "Reset Password",
-                //    @$"Please reset your password 
-                //            by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
                 return RedirectToPage("./ForgotPasswordConfirmation");
             }
