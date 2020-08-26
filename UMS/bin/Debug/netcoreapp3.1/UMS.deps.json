@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "UMS/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Authentication.Facebook": "3.1.7",
           "Microsoft.AspNetCore.Authentication.Google": "3.1.7",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.7",
           "Microsoft.AspNetCore.Identity.UI": "3.1.7",
@@ -301,6 +302,17 @@
         },
         "compile": {
           "UMS.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Facebook/3.1.7": {
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Facebook.dll": {
+            "assemblyVersion": "3.1.7.0",
+            "fileVersion": "3.100.720.37213"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Facebook.dll": {}
         }
       },
       "Microsoft.AspNetCore.Authentication.Google/3.1.7": {
@@ -3919,6 +3931,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.AspNetCore.Authentication.Facebook/3.1.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-R3j72nKQG16hO/SnVrcHR4SJsQwRDHXgtUWu6Vc/UwhXRxBYt3w13RYdwXdLvGPsW0aOgpWeon6Ao4nwo6p8Zw==",
+      "path": "microsoft.aspnetcore.authentication.facebook/3.1.7",
+      "hashPath": "microsoft.aspnetcore.authentication.facebook.3.1.7.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.Google/3.1.7": {
       "type": "package",
