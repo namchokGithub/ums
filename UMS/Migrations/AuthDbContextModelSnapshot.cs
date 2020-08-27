@@ -205,9 +205,6 @@ namespace UMS.Migrations
                         .HasColumnName("acc_Lastname")
                         .HasColumnType("nvarchar(256)");
 
-                    b.Property<string>("acc_Salt")
-                        .HasColumnType("nvarchar(256)");
-
                     b.Property<string>("acc_User")
                         .HasColumnType("nvarchar(256)");
 
