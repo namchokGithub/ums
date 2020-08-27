@@ -11,8 +11,6 @@ namespace UMS.Areas.Identity.Data
     public class ApplicationUser : IdentityUser
     {
 
-        [Column(TypeName = "nvarchar(256)")]
-        public string acc_Salt { set; get; }
 
         [Column(TypeName = "nvarchar(256)")]
         public string acc_User { set; get; }

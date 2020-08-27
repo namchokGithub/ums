@@ -41,7 +41,6 @@ namespace UMS.Data
 
             builder.Entity<ApplicationUser>()
                 .Ignore(entity => entity.LockoutEnd)
-                //.Ignore(entity => entity.NormalizedEmail)
                 .Ignore(entity => entity.LockoutEnabled)
                 .Ignore(entity => entity.PhoneNumber)
                 .Ignore(entity => entity.EmailConfirmed)

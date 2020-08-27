@@ -18,7 +18,6 @@ namespace UMS.Migrations
                     acc_PasswordHash = table.Column<string>(nullable: true),
                     acc_SecurityStamp = table.Column<string>(nullable: true),
                     acc_ConcurrencyStamp = table.Column<string>(nullable: true),
-                    acc_Salt = table.Column<string>(type: "nvarchar(256)", nullable: true),
                     acc_User = table.Column<string>(type: "nvarchar(256)", nullable: true),
                     acc_Firstname = table.Column<string>(type: "nvarchar(256)", nullable: true),
                     acc_Lastname = table.Column<string>(type: "nvarchar(256)", nullable: true),

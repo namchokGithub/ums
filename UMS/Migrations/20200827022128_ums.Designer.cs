@@ -9,7 +9,7 @@ using UMS.Data;
 namespace UMS.Migrations
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20200826094344_ums")]
+    [Migration("20200827022128_ums")]
     partial class ums
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -205,9 +205,6 @@ namespace UMS.Migrations
 
                     b.Property<string>("acc_Lastname")
                         .HasColumnName("acc_Lastname")
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("acc_Salt")
                         .HasColumnType("nvarchar(256)");
 
                     b.Property<string>("acc_User")
