@@ -10,10 +10,6 @@ namespace UMS.Areas.Identity.Data
     // Add profile data for application users by adding properties to the ApplicationUser class
     public class ApplicationUser : IdentityUser
     {
-
-        [Column(TypeName = "nvarchar(256)")]
-        public string acc_Salt { set; get; }
-
         [Column(TypeName = "nvarchar(256)")]
         public string acc_User { set; get; }
 
