@@ -1,7 +1,13 @@
-﻿@{
+﻿@model Account
+
+@{
     ViewData["Title"] = "Manage User";
     Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
+
+    var acc = @ViewData["User"] as Account;
 }
+
+<h1>@acc.acc_Firstname</h1>
 
 <div class="mr-auto">
     <br>

@@ -89,12 +89,9 @@ namespace UMS.Areas.Identity.Pages.Account
                 { 
                     UserName = Input.Email, 
                     Email = Input.Email,
-                    acc_User = Input.Email,
                     acc_Firstname = Input.acc_Firstname,
                     acc_Lastname = Input.acc_Lastname,
-                    acc_IsActive = 'Y',
-                    acc_ro_Id = 2,
-                    acc_ta_Id = 1
+                    acc_IsActive = 'Y'
                 };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)

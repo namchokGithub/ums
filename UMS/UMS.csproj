@@ -17,6 +17,10 @@
     <Compile Remove="Migrations\20200824084629_ums.Designer.cs" />
     <Compile Remove="Migrations\20200826094344_ums.cs" />
     <Compile Remove="Migrations\20200826094344_ums.Designer.cs" />
+    <Compile Remove="Migrations\20200827022128_ums.cs" />
+    <Compile Remove="Migrations\20200827022128_ums.Designer.cs" />
+    <Compile Remove="Migrations\Auth\20200827102421_ums.cs" />
+    <Compile Remove="Migrations\Auth\20200827102421_ums.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,7 +43,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Migrations\" />
+    <Folder Include="Migrations\Auth\" />
   </ItemGroup>
 
   <ItemGroup>

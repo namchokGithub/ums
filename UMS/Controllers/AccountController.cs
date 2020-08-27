@@ -97,12 +97,9 @@ namespace UMS.Controllers
                 {
                     Email = info.Principal.FindFirst(ClaimTypes.Email).Value,
                     UserName = info.Principal.FindFirst(ClaimTypes.Email).Value,
-                    acc_User = info.Principal.FindFirst(ClaimTypes.Email).Value,
                     acc_Firstname = info.Principal.FindFirst(ClaimTypes.GivenName).Value,
                     acc_Lastname = info.Principal.FindFirst(ClaimTypes.Surname).Value,
-                    acc_IsActive = 'Y',
-                    acc_ro_Id = 2,
-                    acc_ta_Id = 1
+                    acc_IsActive = 'Y'
                 };
 
                 IdentityResult identResult = await _userManager.CreateAsync(user);
@@ -149,12 +146,9 @@ namespace UMS.Controllers
                 {
                     Email = info.Principal.FindFirst(ClaimTypes.Email).Value,
                     UserName = info.Principal.FindFirst(ClaimTypes.Email).Value,
-                    acc_User = info.Principal.FindFirst(ClaimTypes.Email).Value,
                     acc_Firstname = info.Principal.FindFirst(ClaimTypes.GivenName).Value,
                     acc_Lastname = info.Principal.FindFirst(ClaimTypes.Surname).Value,
-                    acc_IsActive = 'Y',
-                    acc_ro_Id = 2,
-                    acc_ta_Id = 1
+                    acc_IsActive = 'Y'
                 };
 
                 IdentityResult identResult = await _userManager.CreateAsync(user);
@@ -201,12 +195,9 @@ namespace UMS.Controllers
                 {
                     Email = info.Principal.FindFirst(ClaimTypes.Email).Value,
                     UserName = info.Principal.FindFirst(ClaimTypes.Email).Value,
-                    acc_User = info.Principal.FindFirst(ClaimTypes.Email).Value,
                     acc_Firstname = info.Principal.FindFirst(ClaimTypes.GivenName).Value,
                     acc_Lastname = info.Principal.FindFirst(ClaimTypes.Surname).Value,
-                    acc_IsActive = 'Y',
-                    acc_ro_Id = 2,
-                    acc_ta_Id = 1
+                    acc_IsActive = 'Y'
                 };
 
                 IdentityResult identResult = await _userManager.CreateAsync(user);

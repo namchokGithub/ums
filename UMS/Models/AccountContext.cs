@@ -18,5 +18,7 @@ namespace UMS.Models
             : base(options)
         {
         }
+
+        public DbSet<Account> Account { get; set; }
     }
 }

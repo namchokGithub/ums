@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace UMS.Migrations
+namespace UMS.Migrations.Auth
 {
     public partial class ums : Migration
     {
@@ -11,19 +11,16 @@ namespace UMS.Migrations
                 columns: table => new
                 {
                     acc_Id = table.Column<string>(nullable: false),
-                    acc_UserName = table.Column<string>(maxLength: 256, nullable: true),
+                    acc_User = table.Column<string>(maxLength: 256, nullable: true),
                     acc_NormalizedUserName = table.Column<string>(maxLength: 256, nullable: true),
                     acc_Email = table.Column<string>(maxLength: 256, nullable: true),
                     acc_NormalizedEmail = table.Column<string>(maxLength: 256, nullable: true),
                     acc_PasswordHash = table.Column<string>(nullable: true),
                     acc_SecurityStamp = table.Column<string>(nullable: true),
                     acc_ConcurrencyStamp = table.Column<string>(nullable: true),
-                    acc_User = table.Column<string>(type: "nvarchar(256)", nullable: true),
                     acc_Firstname = table.Column<string>(type: "nvarchar(256)", nullable: true),
                     acc_Lastname = table.Column<string>(type: "nvarchar(256)", nullable: true),
-                    acc_IsActive = table.Column<string>(type: "char(10)", nullable: false),
-                    acc_ro_Id = table.Column<int>(type: "Int", nullable: false),
-                    acc_ta_Id = table.Column<int>(type: "Int", nullable: false)
+                    acc_IsActive = table.Column<string>(type: "char(10)", nullable: false)
                 },
                 constraints: table =>
                 {
