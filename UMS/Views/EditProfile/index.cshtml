@@ -1,6 +1,8 @@
 ﻿@{
     ViewData["Title"] = "Edit Profile";
     Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
+
+    var acc = @ViewData["User"] as Account;
 }
 
 <div class="mx-auto col-5">
@@ -19,10 +21,10 @@
                 <!--Start Input edit profile-->
                 <span class="text-danger small"></span>
                 <div class="input-group mb-3">
-                    <input class="form-control" />
+                    <input class="form-control" asp-for="@acc.acc_Firstname"/>
                 </div>
                 <div class="input-group mb-3">
-                    <input class="form-control" />
+                    <input class="form-control" asp-for="@acc.acc_Lastname"/>
                 </div>
                 <!--End Input edit profile-->
                 <!--Start Button save profile-->
@@ -85,7 +87,6 @@
     })
 </script>
 <!--End Script-->
-
 <!--Start Style-->
 <style>
     #ChangePassword {
