@@ -8,9 +8,9 @@ using UMS.Models;
 
 namespace UMS.Migrations.Models
 {
-    [DbContext(typeof(AccountContext))]
-    [Migration("20200828042639_ums_account")]
-    partial class ums_account
+    [DbContext(typeof(EditAccountContext))]
+    [Migration("20200828090425_ums_editaccount")]
+    partial class ums_editaccount
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,21 +20,15 @@ namespace UMS.Migrations.Models
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("UMS.Models.Account", b =>
+            modelBuilder.Entity("UMS.Models.EditAccount", b =>
                 {
                     b.Property<string>("acc_Id")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("acc_ConcurrencyStamp")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("acc_Email")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("acc_Firstname")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("acc_IsActive")
@@ -42,31 +36,17 @@ namespace UMS.Migrations.Models
                         .HasColumnType("nvarchar(1)");
 
                     b.Property<string>("acc_Lastname")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("acc_NormalizedEmail")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("acc_NormalizedUserName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("acc_PasswordHash")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("acc_SecurityStamp")
-                        .IsRequired()
+                    b.Property<string>("acc_Rolename")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("acc_User")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("acc_Id");
 
-                    b.ToTable("Account");
+                    b.ToTable("EditAccount");
                 });
 #pragma warning restore 612, 618
         }

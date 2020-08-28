@@ -11,16 +11,18 @@ namespace UMS.Migrations.Models
                 columns: table => new
                 {
                     acc_Id = table.Column<string>(nullable: false),
-                    acc_User = table.Column<string>(nullable: false),
-                    acc_NormalizedUserName = table.Column<string>(nullable: false),
-                    acc_Email = table.Column<string>(nullable: false),
-                    acc_NormalizedEmail = table.Column<string>(nullable: false),
+                    acc_User = table.Column<string>(nullable: true),
+                    acc_NormalizedUserName = table.Column<string>(nullable: true),
+                    acc_Email = table.Column<string>(nullable: true),
+                    acc_NormalizedEmail = table.Column<string>(nullable: true),
                     acc_PasswordHash = table.Column<string>(nullable: true),
-                    acc_SecurityStamp = table.Column<string>(nullable: false),
-                    acc_ConcurrencyStamp = table.Column<string>(nullable: false),
-                    acc_Firstname = table.Column<string>(nullable: false),
-                    acc_Lastname = table.Column<string>(nullable: false),
-                    acc_IsActive = table.Column<string>(nullable: false)
+                    acc_SecurityStamp = table.Column<string>(nullable: true),
+                    acc_ConcurrencyStamp = table.Column<string>(nullable: true),
+                    acc_Firstname = table.Column<string>(nullable: true),
+                    acc_Lastname = table.Column<string>(nullable: true),
+                    acc_IsActive = table.Column<string>(nullable: false),
+                    acc_Rolename = table.Column<string>(nullable: true),
+                    acc_TypeAccoutname = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

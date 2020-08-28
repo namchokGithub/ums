@@ -16,7 +16,7 @@
 <div class="mr-auto">
 
     <!--Start Card-->
-    <div class="card card-info mt-2 mb-2">
+    <div class="card card-info mt-2 w-auto mx-auto">
         <!--Start Card header-->
         <div class="card-header">
             <h3 class="card-title">Manage Users</h3>
@@ -28,7 +28,8 @@
                 <div class="box-body">
                     <!--Start Manage user table-->
                     <div class="table-responsive-md">
-                        <table id="showAllUserTable" class="table table-hover table-bordered table-striped">
+                        <table id="showAllUserTable" class="table table-hover 
+                                w-100 table-bordered table-striped">
                         <!--Start Manage user table head-->
                         <thead class="text-center">
                             <tr>
@@ -36,6 +37,7 @@
                                 <th>Username</th>
                                 <th>Name</th>
                                 <th>Role</th>
+                                <th>Type Account</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
@@ -43,17 +45,27 @@
                         <!--Start Manage user table body-->
                         <tbody>
                             @{ int index = 0; }
-                            @foreach(var item in ViewData["User"] as List<Account>)
+                            @if (ViewData["User"] != null)
+                            {
+                                @foreach (var item in ViewData["User"] as List<Account>)
+                                {
+                                    <tr>
+                                        <td><center>@(index += 1)</center></td>
+                                        <td>@item.acc_Email</td>
+                                        <td>@(item.acc_Firstname + " " + item.acc_Lastname)</td>
+                                        <td><center> @((item.acc_Rolename != null) ? item.acc_Rolename : "-") </center></td>
+                                        <td><center> @((item.acc_TypeAccoutname != null) ? item.acc_TypeAccoutname : "-") </center></td>
+                                        <td class="text-center">
+                                            <button class="btn btn-warning text-white" onclick="getUser('@item.acc_Id')"><i class="fa fa-pencil-alt"></i></button>
+                                            <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
                             {
                                 <tr>
-                                    <td><center>@(index += 1)</center></td>
-                                    <td>@item.acc_Email</td>
-                                    <td>@(item.acc_Firstname + " " + item.acc_Lastname)</td>
-                                    <td><center> NULL </center></td>
-                                    <td class="text-center">
-                                        <button class="btn btn-warning text-white" data-toggle="modal" data-target="#EditUser"><i class="fa fa-pencil-alt"></i></button>
-                                        <button class="btn btn-danger"><i class="fa fa-times"></i></button>
-                                    </td>
+                                    <td colspan="6"><center>No Users.</center></td>
                                 </tr>
                             }
                         </tbody>
@@ -74,7 +86,7 @@
                 <div class="modal-content">
                     <!--Start Modal header edit user-->
                     <div class="modal-header bg-warning">
-                        <h4 class="modal-title  text-white">Edit user account.</h4>
+                        <h4 class="modal-title  text-white">EDIT ACCOUNT.</h4>
                         <!--Start Button close-->
                         <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -87,31 +99,23 @@
                         <!--Start Form Edit user-->
                         <form id="ModalEditUser" method="post">
                             <!--Start Input Edit user-->
-                            <div class="row">
-                                <label class="col-sm-3 col-form-label">Firstname:</label>
-                                <div class="col-sm-9 mr-auto">
-                                    <div class="form-group">
-                                        <input class="form-control">
-                                        <span class="text-danger"></span>
-                                    </div>
-                                </div>
-                                <label class="col-sm-3 col-form-label">Lastname:</label>
-                                <div class="col-sm-9 mr-auto">
-                                    <div class="form-group">
-                                        <input class="form-control">
-                                        <input class="form-control">
-                                        <span class="text-danger"></span>
-                                    </div>
-                                </div>
-                                <label class="col-sm-3 col-form-label">Role:</label>
-                                <div class="col-sm-9 mr-auto">
-                                    <div class="form-group">
-                                        <select class="form-control">
-                                            <option>Admin</option>
-                                            <option>User</option>
-                                        </select>
-                                    </div>
-                                </div>
+                            <div class="form-group">
+                                <label asp-for="acc_Firstname">First Name</label>
+                                <input type="text" class="form-control" id="acc_Firstname" placeholder="First Name" value="">
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="acc_Lastname">Last Name</label>
+                                <input type="text" class="form-control" id="acc_Lastname" placeholder="Last Name" value="">
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="acc_Rolename">Role</label>
+                                <select class="form-control" id="acc_Rolename">
+                                    <option value="0" disabled selected>Choose</option>
+                                    <option value="1">Admin</option>
+                                    <option value="2">User</option>
+                                </select>
                             </div>
                             <!--End Input Edit user-->
                         </form>
@@ -132,3 +136,42 @@
     </div>
     <!--End Card-->
 </div>
+
+<script>
+
+    /**
+     * Name: getUser
+     * Parameter: id
+     * Author: Namchok Singhachai
+     * Description: Get active user by ID (Ajax)
+     */
+    function getUser(id) {
+        $.ajax({
+            url: "@Url.Action("getUser", "ManageUser")",
+            data: { id: id },
+            type: "POST",
+            dataType: "JSON",
+            success: function (result) {
+                console.log(result[0]);
+
+                $('#acc_Firstname').val(result[0].acc_Firstname);
+                $('#acc_Lastname').val(result[0].acc_Lastname);
+
+                if (result[0].acc_Rolename === 'Admin') {
+                    $('#acc_Rolename').val(1);
+                } else if (result[0].acc_Rolename === 'User') {
+                    $('#acc_Rolename').val(2);
+                } else {
+                    $('#acc_Rolename').val(0);
+                }
+
+                $('#EditUser').modal();
+                console.log('success~');
+
+            },
+            error: function (result) {
+                console.log(result.responseText)
+            }
+        })
+    }
+</script>

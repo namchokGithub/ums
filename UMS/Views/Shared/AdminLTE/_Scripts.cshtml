@@ -13,18 +13,21 @@
 
 <!-- page script -->
 <script>
-  $(function () {
+    $(function () {
+        // Set datatables in user mangement view
+        $('#showAllUserTable').DataTable({
+            "paging": true,
+            "lengthChange": true,
+            "searching": true,
+            "ordering": true,
+            // "info": true,
+            "autoWidth": true,
+            "responsive": true,
+            "lengthMenu": [5, 10, 25, 50]
+        });
+    })
 
-    // Set datatables in user mangement view
-    $('#showAllUserTable').DataTable({
-      "paging": true,
-      "lengthChange": true,
-      "searching": true,
-      "ordering": true,
-      "info": true,
-      "autoWidth": true,
-      "responsive": true,
-    });
-
-  });
+    $(document).ready(function () {
+        $('[data-widget="pushmenu"]').PushMenu('collapse')
+    })
 </script>
