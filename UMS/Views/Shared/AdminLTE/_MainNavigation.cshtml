@@ -39,12 +39,6 @@
                         <p>Home</p>
                     </a>
                 </li>
-                @*<li class="nav-item">
-                    <a asp-controller="Home" asp-action="Privacy" class="nav-link @Url.MakeActiveClass("home","privacy")">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Pivacy</p>
-                    </a>
-                </li>*@
                 <li class="nav-item">
                     <a asp-controller="EditProfile" asp-action="Index" class="nav-link @Url.MakeActiveClass("EditProfile","Index")">
                         <i class="far fa-address-card"></i> &ensp;
@@ -58,7 +52,7 @@
                     <li class="nav-item">
                         <a asp-controller="ManageUser" asp-action="Index" class="nav-link @Url.MakeActiveClass("ManageUser","Index")">
                             <i class="fas fa-user-cog"></i> &ensp;
-                            <p>Manage User</p>
+                            <p>Manage Users</p>
                         </a>
                     </li>
                 }

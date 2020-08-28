@@ -21,10 +21,12 @@ namespace UMS.Controllers
         {
             _accountContext = accountContext;
         }
+
         public IActionResult Index()
         {
-            // Test select data
-            var user = _accountContext.Account.FirstOrDefault<Account>();
+            var user = _accountContext.Account.ToList<Account>();
+            
+            Console.WriteLine(user);
             
             ViewData["User"] = user;
             return View();
