@@ -5,21 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20200824065817_ums.cs" />
-    <Compile Remove="Migrations\20200824065817_ums.Designer.cs" />
-    <Compile Remove="Migrations\20200824082821_ums.cs" />
-    <Compile Remove="Migrations\20200824082821_ums.Designer.cs" />
-    <Compile Remove="Migrations\20200824083916_ums.cs" />
-    <Compile Remove="Migrations\20200824083916_ums.Designer.cs" />
-    <Compile Remove="Migrations\20200824084508_ums.cs" />
-    <Compile Remove="Migrations\20200824084508_ums.Designer.cs" />
-    <Compile Remove="Migrations\20200824084629_ums.cs" />
-    <Compile Remove="Migrations\20200824084629_ums.Designer.cs" />
-    <Compile Remove="Migrations\20200826094344_ums.cs" />
-    <Compile Remove="Migrations\20200826094344_ums.Designer.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="3.1.7" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="3.1.7" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.MicrosoftAccount" Version="3.1.7" />

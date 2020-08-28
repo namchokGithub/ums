@@ -16,30 +16,30 @@
             <div class="card-body register-card-body">
                 <!--Start Form register-->
                 <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
-                    <div asp-validation-summary="All" class="text-danger"></div>
+                    @*<div asp-validation-summary="All" class="text-danger"></div>*@
                     <!--Start Input information for register-->
                     <div class="form-group">
-                        <label asp-for="Input.acc_Firstname"></label>
+                        <label asp-for="Input.acc_Firstname"></label><code>*</code>
                         <input asp-for="Input.acc_Firstname" class="form-control" />
                         <span asp-validation-for="Input.acc_Firstname" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Input.acc_Lastname"></label>
+                        <label asp-for="Input.acc_Lastname"></label><code>*</code>
                         <input asp-for="Input.acc_Lastname" class="form-control" />
                         <span asp-validation-for="Input.acc_Lastname" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Input.Email"></label>
+                        <label asp-for="Input.Email"></label><code>*</code>
                         <input asp-for="Input.Email" class="form-control" />
                         <span asp-validation-for="Input.Email" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Input.Password"></label>
+                        <label asp-for="Input.Password"></label><code>*</code>
                         <input asp-for="Input.Password" class="form-control" />
                         <span asp-validation-for="Input.Password" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Input.ConfirmPassword"></label>
+                        <label asp-for="Input.ConfirmPassword"></label><code>*</code>
                         <input asp-for="Input.ConfirmPassword" class="form-control" />
                         <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
                     </div>
