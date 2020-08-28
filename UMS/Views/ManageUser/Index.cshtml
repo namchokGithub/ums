@@ -28,49 +28,49 @@
                 <div class="box-body">
                     <!--Start Manage user table-->
                     <div class="table-responsive-md">
-                        <table id="showAllUserTable" class="table table-hover 
+                        <table id="showAllUserTable" class="table table-hover
                                 w-100 table-bordered table-striped">
-                        <!--Start Manage user table head-->
-                        <thead class="text-center">
-                            <tr>
-                                <th>No.</th>
-                                <th>Username</th>
-                                <th>Name</th>
-                                <th>Role</th>
-                                <th>Type Account</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <!--End Manage user table head-->
-                        <!--Start Manage user table body-->
-                        <tbody>
-                            @{ int index = 0; }
-                            @if (ViewData["User"] != null)
-                            {
-                                @foreach (var item in ViewData["User"] as List<Account>)
+                            <!--Start Manage user table head-->
+                            <thead class="text-center">
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Username</th>
+                                    <th>Name</th>
+                                    <th>Role</th>
+                                    <th>Type Account</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <!--End Manage user table head-->
+                            <!--Start Manage user table body-->
+                            <tbody>
+                                @{ int index = 0; }
+                                @if (ViewData["User"] != null)
+                                {
+                                    @foreach (var item in ViewData["User"] as List<Account>)
+                                    {
+                                        <tr>
+                                            <td><center>@(index += 1)</center></td>
+                                            <td>@item.acc_Email</td>
+                                            <td>@(item.acc_Firstname + " " + item.acc_Lastname)</td>
+                                            <td><center> @((item.acc_Rolename != null) ? item.acc_Rolename : "-") </center></td>
+                                            <td><center> @((item.acc_TypeAccoutname != null) ? item.acc_TypeAccoutname : "-") </center></td>
+                                            <td class="text-center">
+                                                <button class="btn btn-warning text-white" onclick="getUser('@item.acc_Id')"><i class="fa fa-pencil-alt"></i></button>
+                                                <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                                else
                                 {
                                     <tr>
-                                        <td><center>@(index += 1)</center></td>
-                                        <td>@item.acc_Email</td>
-                                        <td>@(item.acc_Firstname + " " + item.acc_Lastname)</td>
-                                        <td><center> @((item.acc_Rolename != null) ? item.acc_Rolename : "-") </center></td>
-                                        <td><center> @((item.acc_TypeAccoutname != null) ? item.acc_TypeAccoutname : "-") </center></td>
-                                        <td class="text-center">
-                                            <button class="btn btn-warning text-white" onclick="getUser('@item.acc_Id')"><i class="fa fa-pencil-alt"></i></button>
-                                            <button class="btn btn-danger"><i class="fa fa-times"></i></button>
-                                        </td>
+                                        <td colspan="6"><center>No Users.</center></td>
                                     </tr>
                                 }
-                            }
-                            else
-                            {
-                                <tr>
-                                    <td colspan="6"><center>No Users.</center></td>
-                                </tr>
-                            }
-                        </tbody>
-                        <!--End Manage user table body-->
-                    </table>
+                            </tbody>
+                            <!--End Manage user table body-->
+                        </table>
                     </div>
                     <!--End Manage user table body-->
                 </div>
@@ -79,59 +79,61 @@
             <!--End Manage user table-->
         </div>
         <!--End Card body-->
+        <!--Start Form Edit user-->
+        <form id="ModalEditUser" method="post" asp-action="editUser" asp-controller="ManageUser">
+            <!--Start Modal edit user-->
+            <div class="modal fade" id="EditUser">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!--Start Modal header edit user-->
+                        <div class="modal-header bg-warning">
+                            <h4 class="modal-title  text-white">EDIT ACCOUNT.</h4>
+                            <!--Start Button close-->
+                            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <!--End Button close-->
+                        </div>
+                        <!--End Modal header edit user-->
+                        <!--Start Modal body edit user-->
+                        <div class="modal-body">
 
-        <!--Start Modal edit user-->
-        <div class="modal fade" id="EditUser">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <!--Start Modal header edit user-->
-                    <div class="modal-header bg-warning">
-                        <h4 class="modal-title  text-white">EDIT ACCOUNT.</h4>
-                        <!--Start Button close-->
-                        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <!--End Button close-->
-                    </div>
-                    <!--End Modal header edit user-->
-                    <!--Start Modal body edit user-->
-                    <div class="modal-body">
-                        <!--Start Form Edit user-->
-                        <form id="ModalEditUser" method="post">
+                            <input type="hidden" asp-for="acc_Id" id="acc_Id"/>
+
                             <!--Start Input Edit user-->
                             <div class="form-group">
                                 <label asp-for="acc_Firstname">First Name</label>
-                                <input type="text" class="form-control" id="acc_Firstname" placeholder="First Name" value="">
+                                <input type="text" class="form-control" name="acc_Firstname" id="acc_Firstname" placeholder="First Name" value="">
                             </div>
 
                             <div class="form-group">
                                 <label asp-for="acc_Lastname">Last Name</label>
-                                <input type="text" class="form-control" id="acc_Lastname" placeholder="Last Name" value="">
+                                <input type="text" class="form-control" name="acc_Lastname" id="acc_Lastname" placeholder="Last Name" value="">
                             </div>
 
                             <div class="form-group">
                                 <label asp-for="acc_Rolename">Role</label>
-                                <select class="form-control" id="acc_Rolename">
+                                <select class="form-control" id="acc_Rolename" name="acc_Rolename">
                                     <option value="0" disabled selected>Choose</option>
                                     <option value="1">Admin</option>
                                     <option value="2">User</option>
                                 </select>
                             </div>
                             <!--End Input Edit user-->
-                        </form>
-                        <!--End Form Edit user-->
+                        </div>
+                        <!--End Modal body-->
+                        <!--Start Modal footer-->
+                        <div class="modal-footer justify-content-between">
+                            <button type="button" class="btn btn-default float-left" data-dismiss="modal">Back</button>
+                            <button type="submit" class="btn btn-success float-right">Save</button>
+                        </div>
+                        <!--End Modal footer-->
                     </div>
-                    <!--End Modal body-->
-                    <!--Start Modal footer-->
-                    <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-default float-left" data-dismiss="modal">Back</button>
-                        <button type="button" class="btn btn-success float-right">Save</button>
-                    </div>
-                    <!--End Modal footer-->
                 </div>
             </div>
-        </div>
-        <!--End Modal Edit user-->
+            <!--End Modal Edit user-->
+        </form>
+        <!--End Form Edit user-->
 
     </div>
     <!--End Card-->
@@ -154,6 +156,7 @@
             success: function (result) {
                 console.log(result[0]);
 
+                $('#acc_Id').val(result[0].acc_Id);
                 $('#acc_Firstname').val(result[0].acc_Firstname);
                 $('#acc_Lastname').val(result[0].acc_Lastname);
 

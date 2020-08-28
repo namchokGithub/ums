@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using UMS.Areas.Identity.Data;
 using UMS.Models;
@@ -62,13 +63,38 @@ namespace UMS.Controllers
         public JsonResult getUser(string id)
         {
             // SQL text for exextut procedure
-            string sqltext = $"EXEC [dbo].getUserById '{id}'";
+            string sqltext = $"EXEC [dbo].ums_getUserById '{id}'";
 
             // Query data from "dbo.Account" and Convert to List<Account>
             var user = _editaccountContext.EditAccount.FromSqlRaw(sqltext).ToList<EditAccount>();
 
             return new JsonResult(user);
         }
+        
+        /*
+         * Name: editUser
+         * Parameter: none
+         * Author: Namchok Singhachai
+         * Description: Edit profile user
+         */
+        [HttpPost]
+        public IActionResult editUser()
+        {
+
+            var acc_Id  = HttpContext.Request.Form["acc_Id"];
+            var acc_Firstname = HttpContext.Request.Form["acc_Firstname"];
+            var acc_Lastname = HttpContext.Request.Form["acc_Lastname"];
+            var acc_RoleId = HttpContext.Request.Form["acc_Rolename"];
+
+            // SQL text for exextut procedure
+            string sqltext = @$"EXEC ums_updateUser '{acc_Id}', '{acc_Firstname}', '{acc_Lastname}', '{acc_RoleId}'";
+
+            // Update Account add UserRoles
+            _accountContext.Account.FromSqlRaw(sqltext);
+
+            return RedirectToAction("Index");
+        }
 
     } // End class
 }
+    
