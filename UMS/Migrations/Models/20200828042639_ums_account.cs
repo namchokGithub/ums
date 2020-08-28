@@ -2,7 +2,7 @@
 
 namespace UMS.Migrations.Models
 {
-    public partial class ums_acc : Migration
+    public partial class ums_account : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,7 +15,7 @@ namespace UMS.Migrations.Models
                     acc_NormalizedUserName = table.Column<string>(nullable: false),
                     acc_Email = table.Column<string>(nullable: false),
                     acc_NormalizedEmail = table.Column<string>(nullable: false),
-                    acc_PasswordHash = table.Column<string>(nullable: false),
+                    acc_PasswordHash = table.Column<string>(nullable: true),
                     acc_SecurityStamp = table.Column<string>(nullable: false),
                     acc_ConcurrencyStamp = table.Column<string>(nullable: false),
                     acc_Firstname = table.Column<string>(nullable: false),

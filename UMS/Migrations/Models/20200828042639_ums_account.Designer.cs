@@ -9,8 +9,8 @@ using UMS.Models;
 namespace UMS.Migrations.Models
 {
     [DbContext(typeof(AccountContext))]
-    [Migration("20200827105002_ums_acc")]
-    partial class ums_acc
+    [Migration("20200828042639_ums_account")]
+    partial class ums_account
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -54,7 +54,6 @@ namespace UMS.Migrations.Models
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("acc_PasswordHash")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("acc_SecurityStamp")

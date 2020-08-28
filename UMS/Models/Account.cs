@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 
 /*
  * Namspace: ~/Models/Account
@@ -31,8 +32,9 @@ namespace UMS.Models
         [Required]
         public string acc_NormalizedEmail { set; get; } // อีเมลแบบธรรมดา
 
-        [Required]
+        [AllowNull]
         public string acc_PasswordHash { set; get; } // รหัสผ่านแบบแฮช
+
         [Required]
         public string acc_SecurityStamp { set; get; } // ---
 
@@ -41,10 +43,12 @@ namespace UMS.Models
 
         [Required]
         public string acc_Firstname { set; get; } // ชื่อจริง
+
         [Required]
         public string acc_Lastname { set; get; } // นามสกุล
 
         [Required]
+        [NotNull]
         public char acc_IsActive { set; get; } // สถานะของบัญชีผู้ใช้
 
     }

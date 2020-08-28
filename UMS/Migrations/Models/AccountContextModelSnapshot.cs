@@ -52,7 +52,6 @@ namespace UMS.Migrations.Models
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("acc_PasswordHash")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("acc_SecurityStamp")
