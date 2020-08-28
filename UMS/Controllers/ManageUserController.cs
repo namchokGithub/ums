@@ -24,10 +24,9 @@ namespace UMS.Controllers
 
         public IActionResult Index()
         {
+            // Query data from "dbo.Account" and Convert to List<Account>
             var user = _accountContext.Account.ToList<Account>();
-            
-            Console.WriteLine(user);
-            
+            // Send data to view Index.cshtml
             ViewData["User"] = user;
             return View();
         }
