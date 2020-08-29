@@ -90,7 +90,7 @@ namespace UMS.Controllers
                 info.Principal.FindFirst(ClaimTypes.Surname).Value
             };
             if (result.Succeeded)
-                return View(userInfo);
+                return RedirectToAction("Index", "Home");
             else
             {
                 ApplicationUser user = new ApplicationUser

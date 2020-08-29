@@ -87,10 +87,12 @@ namespace UMS.Controllers
             var acc_RoleId = HttpContext.Request.Form["acc_Rolename"];
 
             // SQL text for exextut procedure
-            string sqltext = @$"EXEC ums_updateUser '{acc_Id}', '{acc_Firstname}', '{acc_Lastname}', '{acc_RoleId}'";
+            string sqlUpdateUser = $"ums_updateUser '{acc_Id}', '{acc_Firstname}', '{acc_Lastname}'";
+            string sqlUpdateRoleUser = $"ums_updateRoleUser '{acc_Id}', '{acc_RoleId}'";
 
             // Update Account add UserRoles
-            _accountContext.Account.FromSqlRaw(sqltext);
+            _editaccountContext.Database.ExecuteSqlRaw(sqlUpdateUser);
+            _editaccountContext.Database.ExecuteSqlRaw(sqlUpdateRoleUser);
 
             return RedirectToAction("Index");
         }

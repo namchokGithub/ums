@@ -3,8 +3,6 @@
 @{
     ViewData["Title"] = "Manage User";
     Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
-
-    var acc = @ViewData["User"] as Account;
 }
 
 <!--
@@ -140,6 +138,10 @@
 </div>
 
 <script>
+    // For collapse menu
+    $(document).ready(function () {
+        $('[data-widget="pushmenu"]').PushMenu('collapse')
+    })
 
     /**
      * Name: getUser
