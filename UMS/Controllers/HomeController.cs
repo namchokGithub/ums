@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using EmailService;
 using Microsoft.AspNetCore.Authorization;
@@ -31,6 +32,8 @@ namespace UMS.Controllers
 
         public IActionResult Index()
         {
+            var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            ViewData["UserId"] = UserId;
             return View();
         }
 

@@ -24,7 +24,7 @@ namespace UMS.Data
             builder.Entity<ApplicationUser>(entity =>
                 {
                     entity.Property(e => e.Id).HasColumnName("acc_Id");
-                    entity.Property(e => e.UserName).HasColumnName("acc_UserName");
+                    entity.Property(e => e.UserName).HasColumnName("acc_User");
                     entity.Property(e => e.NormalizedUserName).HasColumnName("acc_NormalizedUserName");
                     entity.Property(e => e.PasswordHash).HasColumnName("acc_PasswordHash");
                     entity.Property(e => e.SecurityStamp).HasColumnName("acc_SecurityStamp");
@@ -34,8 +34,6 @@ namespace UMS.Data
                     entity.Property(e => e.acc_Firstname).HasColumnName("acc_Firstname");
                     entity.Property(e => e.acc_Lastname).HasColumnName("acc_Lastname");
                     entity.Property(e => e.acc_IsActive).HasColumnName("acc_IsActive");
-                    entity.Property(e => e.acc_ro_Id).HasColumnName("acc_ro_Id");
-                    entity.Property(e => e.acc_ta_Id).HasColumnName("acc_ta_Id");
                 }
             );
 
