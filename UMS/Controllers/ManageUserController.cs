@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using UMS.Areas.Identity.Data;
 using UMS.Models;
+using Microsoft.AspNetCore.Diagnostics;
 
 /*
  * Name: MangeUserController.cs
@@ -21,6 +22,7 @@ namespace UMS.Controllers
         // For context of database
         private readonly AccountContext _accountContext;
         private readonly EditAccountContext _editaccountContext;
+        public Account _account;
 
         /*
          * Name: ManageUserController
@@ -43,7 +45,7 @@ namespace UMS.Controllers
         public IActionResult Index()
         {
             // SQL text for exextut procedure
-            string sqltext = "EXEC [dbo].ums_get_all_user";
+            string sqltext = "EXEC [dbo].ums_get_all_active_user";
 
             // Query data from "dbo.Account" and Convert to List<Account>
             var user = _accountContext.Account.FromSqlRaw(sqltext).ToList<Account>();
@@ -62,11 +64,11 @@ namespace UMS.Controllers
         [HttpPost]
         public JsonResult getUser(string id)
         {
-            // SQL text for exextut procedure
+            // SQL text for execute procedure
             string sqltext = $"EXEC [dbo].ums_getUserById '{id}'";
 
             // Query data from "dbo.Account" and Convert to List<Account>
-            var user = _editaccountContext.EditAccount.FromSqlRaw(sqltext).ToList<EditAccount>();
+            var user = _editaccountContext.EditAccount.FromSqlRaw(sqltext).ToList<EditAccount>().FirstOrDefault<EditAccount>();
 
             return new JsonResult(user);
         }
@@ -78,24 +80,80 @@ namespace UMS.Controllers
          * Description: Edit profile user
          */
         [HttpPost]
-        public IActionResult editUser()
+        public void editUser()
         {
+            // Value for update
+            var acc_Id  = HttpContext.Request.Form["acc_Id"];               // ID
+            var acc_Firstname = HttpContext.Request.Form["acc_Firstname"];  // First name 
+            var acc_Lastname = HttpContext.Request.Form["acc_Lastname"];    // Last name
+            var acc_RoleId = HttpContext.Request.Form["acc_RoleId"];      // Role ID 
 
-            var acc_Id  = HttpContext.Request.Form["acc_Id"];
-            var acc_Firstname = HttpContext.Request.Form["acc_Firstname"];
-            var acc_Lastname = HttpContext.Request.Form["acc_Lastname"];
-            var acc_RoleId = HttpContext.Request.Form["acc_Rolename"];
-
-            // SQL text for exextut procedure
-            string sqlUpdateUser = $"ums_updateUser '{acc_Id}', '{acc_Firstname}', '{acc_Lastname}'";
-            string sqlUpdateRoleUser = $"ums_updateRoleUser '{acc_Id}', '{acc_RoleId}'";
+            // SQL text for execute procedure
+            string sqlUpdateUser = $"ums_updateUser '{acc_Id}', '{acc_Firstname}', '{acc_Lastname}'"; // Update name's user
+            string sqlUpdateRoleUser = $"ums_updateRoleUser '{acc_Id}', '{acc_RoleId}'";              // Update role's user
 
             // Update Account add UserRoles
             _editaccountContext.Database.ExecuteSqlRaw(sqlUpdateUser);
             _editaccountContext.Database.ExecuteSqlRaw(sqlUpdateRoleUser);
 
-            return RedirectToAction("Index");
-        }
+            // For check if update success 
+            var result = false;
+            while (!result)
+            {
+                try
+                {
+                    _editaccountContext.SaveChanges();
+                    TempData["UpdateResult"] = @"Swal.fire({
+                                                    icon: 'success',
+                                                    title: 'Successed !',
+                                                    showConfirmButton: false,
+                                                    timer: 1000
+                                                })";
+                    result = true;
+                } catch
+                {
+                    throw;
+                }
+            }
+        } // End editUser
+
+        /*
+         * Name: deleteUser
+         * Parameter: id(string)
+         * Author: Namchok Singhachai
+         * Description: Inactive account
+         */
+        [HttpPost]
+        public IActionResult deleteUser(string id)
+        {
+            // SQL text for execute procudure
+            string sqlText = $"ums_deleteUser '{id}'";
+            // Inactive account by store procedure
+            _accountContext.Database.ExecuteSqlRaw(sqlText);
+
+            // For check if inactive success 
+            var result = false;
+            while (!result)
+            {
+                try
+                {
+                    _accountContext.SaveChanges();
+                    //TempData["DeleteResult"] = @"Swal.fire({
+                    //                                icon: 'success',
+                    //                                title: 'Deleted !!',
+                    //                                showConfirmButton: false,
+                    //                                timer: 1200
+                    //                            })";
+                    result = true; // If success
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+
+            return RedirectToAction("Index", TempData);
+        } // End deleteUser
 
     } // End class
 }

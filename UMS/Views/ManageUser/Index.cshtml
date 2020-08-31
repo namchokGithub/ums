@@ -55,7 +55,7 @@
                                             <td><center> @((item.acc_TypeAccoutname != null) ? item.acc_TypeAccoutname : "-") </center></td>
                                             <td class="text-center">
                                                 <button class="btn btn-warning text-white" onclick="getUser('@item.acc_Id')"><i class="fa fa-pencil-alt"></i></button>
-                                                <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+                                                <button class="btn btn-danger" onclick="deleteUser('@item.acc_Id')"><i class="fa fa-times"></i></button>
                                             </td>
                                         </tr>
                                     }
@@ -77,7 +77,8 @@
             <!--End Manage user table-->
         </div>
         <!--End Card body-->
-        <!--Start Form Edit user-->
+
+        <!--Start Form Edit user | Update in controller -->
         <form id="ModalEditUser" method="post" asp-action="editUser" asp-controller="ManageUser">
             <!--Start Modal edit user-->
             <div class="modal fade" id="EditUser">
@@ -85,7 +86,7 @@
                     <div class="modal-content">
                         <!--Start Modal header edit user-->
                         <div class="modal-header bg-warning">
-                            <h4 class="modal-title  text-white">EDIT ACCOUNT.</h4>
+                            <h4 class="modal-title  text-white">EDIT ACCOUNT</h4>
                             <!--Start Button close-->
                             <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
@@ -101,17 +102,19 @@
                             <!--Start Input Edit user-->
                             <div class="form-group">
                                 <label asp-for="acc_Firstname">First Name</label>
-                                <input type="text" class="form-control" name="acc_Firstname" id="acc_Firstname" placeholder="First Name" value="">
+                                <input type="text" class="form-control" name="acc_Firstname" 
+                                       id="acc_Firstname" placeholder="First Name" value="">
                             </div>
 
                             <div class="form-group">
                                 <label asp-for="acc_Lastname">Last Name</label>
-                                <input type="text" class="form-control" name="acc_Lastname" id="acc_Lastname" placeholder="Last Name" value="">
+                                <input type="text" class="form-control" name="acc_Lastname" 
+                                       id="acc_Lastname" placeholder="Last Name" value="">
                             </div>
 
                             <div class="form-group">
                                 <label asp-for="acc_Rolename">Role</label>
-                                <select class="form-control" id="acc_Rolename" name="acc_Rolename">
+                                <select class="form-control" id="acc_RoleId" name="acc_RoleId">
                                     <option value="0" disabled selected>Choose</option>
                                     <option value="1">Admin</option>
                                     <option value="2">User</option>
@@ -134,10 +137,56 @@
         <!--End Form Edit user-->
 
     </div>
-    <!--End Card-->
+    <!--End Card--> 
 </div>
 
 <script>
+
+    /**
+     * Name: deleteUser
+     * Parameter: id
+     * Author: Namchok Singhachai
+     * Description: Set user to inactive
+     */
+    function deleteUser(id) {
+        Swal.fire({
+            title: 'Do you want to delete?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#28A745',
+            cancelButtonColor: '#DC3545',
+            confirmButtonText: 'Yes'
+        }).then((result) => {
+            if (result.value) {
+                // Ajax for Inactive user
+                $.ajax({
+                    url: '@Url.Action("deleteUser", "ManageUser")',
+                    data: { id: id },
+                    method: "POST"
+                }).done(function () {
+                    console.log("Inactive user success")
+                    alertAndReload()  
+                });
+            }
+        })
+    } // End deleteUser
+
+    /**
+     * Name: swal
+     * Parameter: none
+     * Author: Namchok Singhachai
+     * Description: for show sweetalert and reload page
+     */
+    async function alertAndReload() {
+        await Swal.fire({
+            icon: 'success',
+            title: 'Deleted !',
+            showConfirmButton: false,
+            timer: 1200
+        })
+        await location.reload();
+    }
+
     /**
      * Name: getUser
      * Parameter: id
@@ -151,27 +200,30 @@
             type: "POST",
             dataType: "JSON",
             success: function (result) {
-                console.log(result[0]);
+                // Set data to form update
+                $('#acc_Id').val(result.acc_Id);
+                $('#acc_Firstname').val(result.acc_Firstname);
+                $('#acc_Lastname').val(result.acc_Lastname);
 
-                $('#acc_Id').val(result[0].acc_Id);
-                $('#acc_Firstname').val(result[0].acc_Firstname);
-                $('#acc_Lastname').val(result[0].acc_Lastname);
-
-                if (result[0].acc_Rolename === 'Admin') {
-                    $('#acc_Rolename').val(1);
-                } else if (result[0].acc_Rolename === 'User') {
-                    $('#acc_Rolename').val(2);
+                if (result.acc_Rolename === 'Admin') {
+                    $('#acc_RoleId').val(1);
+                } else if (result.acc_Rolename === 'User') {
+                    $('#acc_RoleId').val(2);
                 } else {
-                    $('#acc_Rolename').val(0);
+                    $('#acc_RoleId').val(0);
                 }
-
+                // Show modal
                 $('#EditUser').modal();
-                console.log('success~');
-
+                console.log('query success ~');
             },
             error: function (result) {
                 console.log(result.responseText)
             }
         })
-    }
+    } // End getUser
+
+    // Check is update user success
+    @if (TempData["UpdateResult"] != null) { @Html.Raw(TempData["UpdateResult"]) /* Swal funciton */ }
+    // Check is update user success
+    @if (TempData["DeleteResult"] != null) { @Html.Raw(TempData["DeleteResult"]) /* Swal funciton */ }
 </script>
