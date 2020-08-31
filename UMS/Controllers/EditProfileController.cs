@@ -8,7 +8,7 @@ using UMS.Models;
 /*
  * Name: EditProfileController.cs
  * Namespace: Controllers
- * Author: Namchok
+ * Author: Wannapa
  */
 
 namespace UMS.Controllers

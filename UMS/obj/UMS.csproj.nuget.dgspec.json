@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Wannapa\\source\\repos\\ums\\UMS\\UMS.csproj": {}
+    "C:\\Users\\Wannapa\\Source\\Repos\\ums\\UMS\\UMS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Wannapa\\source\\repos\\ums\\EmailService\\EmailService.csproj": {
+    "C:\\Users\\Wannapa\\Source\\Repos\\ums\\EmailService\\EmailService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Wannapa\\source\\repos\\ums\\EmailService\\EmailService.csproj",
+        "projectUniqueName": "C:\\Users\\Wannapa\\Source\\Repos\\ums\\EmailService\\EmailService.csproj",
         "projectName": "EmailService",
-        "projectPath": "C:\\Users\\Wannapa\\source\\repos\\ums\\EmailService\\EmailService.csproj",
+        "projectPath": "C:\\Users\\Wannapa\\Source\\Repos\\ums\\EmailService\\EmailService.csproj",
         "packagesPath": "C:\\Users\\Wannapa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Wannapa\\source\\repos\\ums\\EmailService\\obj\\",
+        "outputPath": "C:\\Users\\Wannapa\\Source\\Repos\\ums\\EmailService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -72,14 +72,14 @@
         }
       }
     },
-    "C:\\Users\\Wannapa\\source\\repos\\ums\\UMS\\UMS.csproj": {
+    "C:\\Users\\Wannapa\\Source\\Repos\\ums\\UMS\\UMS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Wannapa\\source\\repos\\ums\\UMS\\UMS.csproj",
+        "projectUniqueName": "C:\\Users\\Wannapa\\Source\\Repos\\ums\\UMS\\UMS.csproj",
         "projectName": "UMS",
-        "projectPath": "C:\\Users\\Wannapa\\source\\repos\\ums\\UMS\\UMS.csproj",
+        "projectPath": "C:\\Users\\Wannapa\\Source\\Repos\\ums\\UMS\\UMS.csproj",
         "packagesPath": "C:\\Users\\Wannapa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Wannapa\\source\\repos\\ums\\UMS\\obj\\",
+        "outputPath": "C:\\Users\\Wannapa\\Source\\Repos\\ums\\UMS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -98,8 +98,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Wannapa\\source\\repos\\ums\\EmailService\\EmailService.csproj": {
-                "projectPath": "C:\\Users\\Wannapa\\source\\repos\\ums\\EmailService\\EmailService.csproj"
+              "C:\\Users\\Wannapa\\Source\\Repos\\ums\\EmailService\\EmailService.csproj": {
+                "projectPath": "C:\\Users\\Wannapa\\Source\\Repos\\ums\\EmailService\\EmailService.csproj"
               }
             }
           }
