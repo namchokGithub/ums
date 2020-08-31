@@ -1,8 +1,9 @@
-﻿@{
+﻿@model EditProfile
+@{
     ViewData["Title"] = "Edit Profile";
     Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
 
-    var acc = @ViewData["User"] as Account;
+    var editProfile = ViewData["User"] as EditProfile;
 }
 
 <div class="mx-auto col-5">
@@ -21,10 +22,10 @@
                 <!--Start Input edit profile-->
                 <span class="text-danger small"></span>
                 <div class="input-group mb-3">
-                    <input class="form-control" asp-for="@acc.acc_Firstname"/>
+                    <input class="form-control" asp-for="acc_Firstname" value="@editProfile.acc_Firstname"/>
                 </div>
                 <div class="input-group mb-3">
-                    <input class="form-control" asp-for="@acc.acc_Lastname"/>
+                    <input class="form-control" asp-for="acc_Lastname" value="@editProfile.acc_Lastname"/>
                 </div>
                 <!--End Input edit profile-->
                 <!--Start Button save profile-->

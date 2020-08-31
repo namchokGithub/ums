@@ -1,5 +1,7 @@
 ﻿@using static UMS.Helpers.NavigationIndicatorHelper;
-
+@{
+    var Id = ViewData["UserId"];
+}
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
@@ -40,17 +42,17 @@
                     </a>
                 </li>
                 @*<li class="nav-item">
-                    <a asp-controller="Home" asp-action="Privacy" class="nav-link @Url.MakeActiveClass("home","privacy")">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Pivacy</p>
-                    </a>
-                </li>*@
-                <li class="nav-item">
-                    <a asp-controller="EditProfile" asp-action="Index" class="nav-link @Url.MakeActiveClass("EditProfile","Index")">
-                        <i class="far fa-address-card"></i> &ensp;
-                        <p>Edit Profile</p>
-                    </a>
-                </li>
+                        <a asp-controller="Home" asp-action="Privacy" class="nav-link @Url.MakeActiveClass("home","privacy")">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Pivacy</p>
+                        </a>
+                    </li>*@
+                    <li class="nav-item">
+                        <a asp-route-id="@Id" asp-controller="EditProfile" asp-action="Index" class="nav-link @Url.MakeActiveClass("EditProfile","Index")">
+                            <i class="far fa-address-card"></i> &ensp;
+                            <p>Edit Profile</p>
+                        </a>
+                    </li>
 
                 <!-- ตรวจสอบว่าเป็นตำแหน่งไหน ถ้าเป็น Admin จะแสดง -->
                 @if (true)

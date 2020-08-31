@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using UMS.Models;
 
 /*
@@ -15,15 +16,20 @@ namespace UMS.Controllers
 {
     public class EditProfileController : Controller
     {
-        private readonly AccountContext _accountContext;
-        public EditProfileController(AccountContext accountContext)
+        private readonly EditProfileContext _editprofileContext;
+        public EditProfileController(EditProfileContext editprofileContext)
         {
-            _accountContext = accountContext;
+            _editprofileContext = editprofileContext;
         }
-        public IActionResult Index()
+        public IActionResult Index(string Id)
         {
-            var user = _accountContext.Account.FirstOrDefault<Account>();
+            // SQL text for exextut procedure
+            string sqltext = $"EXEC [dbo].get_User '{Id}'";
 
+            // Query data from "dbo.EditProfile" and Convert to List<EditProfile>
+            var user = _editprofileContext.EditProfile.FromSqlRaw(sqltext).ToList<EditProfile>().FirstOrDefault();
+
+            // Send data to view Index.cshtml
             ViewData["User"] = user;
             return View();
         }
