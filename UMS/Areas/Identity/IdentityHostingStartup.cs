@@ -28,6 +28,7 @@ namespace UMS.Areas.Identity
                     options.Password.RequireNonAlphanumeric = false;
                     options.Password.RequireUppercase = false;
                 })
+                    .AddRoles<IdentityRole>()
                     .AddEntityFrameworkStores<AuthDbContext>();
             });
         }

@@ -80,7 +80,7 @@ namespace UMS.Controllers
          * Description: Edit profile user
          */
         [HttpPost]
-        public void editUser()
+        public IActionResult editUser()
         {
             // Value for update
             var acc_Id  = HttpContext.Request.Form["acc_Id"];               // ID
@@ -115,6 +115,8 @@ namespace UMS.Controllers
                     throw;
                 }
             }
+
+            return RedirectToAction("Index");
         } // End editUser
 
         /*
