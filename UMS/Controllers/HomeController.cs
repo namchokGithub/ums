@@ -42,22 +42,6 @@ namespace UMS.Controllers
             return View();
         }
 
-        /*
-         * Name: mail
-         * Author: Namchok
-         * Description: test send Email
-         */
-        //public void mail()
-        //{
-        //    var message = new Message(
-        //            new string[] { "usermanagement2020@mail.com" }, // add email to send
-        //            "So hungy",
-        //            "This message is the content from MHEE"
-        //        );
-
-        //    _emailSender.SendEmail(message);
-        //}
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
