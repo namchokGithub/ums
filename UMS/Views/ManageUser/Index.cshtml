@@ -149,6 +149,7 @@
      * Description: Set user to inactive
      */
     function deleteUser(id) {
+        // SweetAlert confirm delete
         Swal.fire({
             title: 'Do you want to delete?',
             icon: 'warning',
@@ -165,7 +166,7 @@
                     method: "POST"
                 }).done(function () {
                     console.log("Inactive user success")
-                    alertAndReload()  
+                    alertAndReload()  // for show alert and reload page
                 });
             }
         })

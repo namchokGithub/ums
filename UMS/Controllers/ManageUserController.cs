@@ -124,7 +124,7 @@ namespace UMS.Controllers
          * Description: Inactive account
          */
         [HttpPost]
-        public IActionResult deleteUser(string id)
+        public void deleteUser(string id)
         {
             // SQL text for execute procudure
             string sqlText = $"ums_deleteUser '{id}'";
@@ -138,12 +138,6 @@ namespace UMS.Controllers
                 try
                 {
                     _accountContext.SaveChanges();
-                    //TempData["DeleteResult"] = @"Swal.fire({
-                    //                                icon: 'success',
-                    //                                title: 'Deleted !!',
-                    //                                showConfirmButton: false,
-                    //                                timer: 1200
-                    //                            })";
                     result = true; // If success
                 }
                 catch
@@ -151,8 +145,6 @@ namespace UMS.Controllers
                     throw;
                 }
             }
-
-            return RedirectToAction("Index", TempData);
         } // End deleteUser
 
     } // End class
