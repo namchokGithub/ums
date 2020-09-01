@@ -30,15 +30,16 @@ namespace UMS
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // Set conect database
+            // Set connect database
             services.AddDbContext<AccountContext>(options =>
                     options.UseSqlServer(
                        Configuration.GetConnectionString("AuthDbContextConnection")));
 
+            // Set connect database
             services.AddDbContext<EditProfileContext>(options =>
                     options.UseSqlServer(
                        Configuration.GetConnectionString("AuthDbContextConnection")));
-
+            
             // Service for send email
             var emailConfig = Configuration
                 .GetSection("EmailConfiguration")
@@ -49,6 +50,7 @@ namespace UMS
             services.AddControllersWithViews();
             services.AddRazorPages();
 
+            // Service for Google authentication
             services.AddAuthentication()
             .AddGoogle(googleOptions =>
             {
@@ -57,6 +59,7 @@ namespace UMS
                 googleOptions.SignInScheme = IdentityConstants.ExternalScheme;
             });
 
+            // Service for Facebook authentication
             services.AddAuthentication()
             .AddFacebook(facebookOptions =>
             {
@@ -64,6 +67,7 @@ namespace UMS
                 facebookOptions.AppSecret = "bac3818b714dd5282277916f3c56f172";
             });
 
+            // Service for Microsoft authentication
             services.AddAuthentication()
             .AddMicrosoftAccount(microsoftOptions =>
             {
