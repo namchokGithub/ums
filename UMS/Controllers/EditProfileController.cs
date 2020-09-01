@@ -22,7 +22,6 @@ namespace UMS.Controllers
         private readonly EditProfileContext _editprofileContext;
         private readonly SignInManager<ApplicationUser> _signInManager;
 
-
         /*
          * Name: EditProfileController
          * Parameter: editprofileContext(EditProfileContext)
