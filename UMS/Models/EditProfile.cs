@@ -4,6 +4,11 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
+/*
+ * Namespace: ~/Models/EditProfile.cs
+ * Author: Wannapa
+ * Description:  Model for table dbo.Account
+ */
 namespace UMS.Models
 {
     public class EditProfile
@@ -14,7 +19,5 @@ namespace UMS.Models
         public string acc_Firstname { set; get; } // ชื่อจริง
 
         public string acc_Lastname { set; get; } // นามสกุล
-
-        public string acc_PasswordHash { set; get; } // รหัสผ่าน
     }
 }

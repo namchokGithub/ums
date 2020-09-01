@@ -4,6 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+/*
+ * Namespace: ~/Models/EditProfileContext.cs
+ * Author: Wannapa
+ * Description: Context for Account model
+ */
 namespace UMS.Models
 {
     public class EditProfileContext : DbContext
