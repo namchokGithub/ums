@@ -11,7 +11,7 @@ using UMS.Models;
 /*
  * Name: EditProfileController.cs
  * Namespace: Controllers
- * Author: Wannapa
+ * Author: Wannapa Srijermtong
  */
 
 namespace UMS.Controllers
@@ -25,7 +25,7 @@ namespace UMS.Controllers
         /*
          * Name: EditProfileController
          * Parameter: editprofileContext(EditProfileContext)
-         * Author: Wannapa
+         * Author: Wannapa Srijermtong
          * Description: Set context for database
          */
         public EditProfileController(EditProfileContext editprofileContext, SignInManager<ApplicationUser> signInManager)
@@ -37,7 +37,7 @@ namespace UMS.Controllers
         /*
          * Name: Index
          * Parameter: Id
-         * Author: Wannapa
+         * Author: Wannapa Srijermtong
          * Description: Show Firstname and Lastname of user
          */
         public IActionResult Index(string Id)
@@ -56,7 +56,7 @@ namespace UMS.Controllers
         /*
          * Name: editProfile
          * Parameter: none
-         * Author: Wannapa
+         * Author: Wannapa Srijermtong
          * Description: Edit user profile
          */
         [HttpPost]
