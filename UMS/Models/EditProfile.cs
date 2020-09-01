@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 /*
  * Namespace: ~/Models/EditProfile.cs
- * Author: Wannapa
+ * Author: Wannapa Srijermtong
  * Description:  Model for table dbo.Account
  */
 namespace UMS.Models
