@@ -38,6 +38,9 @@ namespace UMS
                     options.UseSqlServer(
                        Configuration.GetConnectionString("AuthDbContextConnection")));
 
+            // Add mvc
+            services.AddMvcCore().AddDataAnnotations();
+
             // Service for send email
             var emailConfig = Configuration
                 .GetSection("EmailConfiguration")

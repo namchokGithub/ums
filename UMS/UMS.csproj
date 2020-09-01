@@ -5,30 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20200824065817_ums.cs" />
-    <Compile Remove="Migrations\20200824065817_ums.Designer.cs" />
-    <Compile Remove="Migrations\20200824082821_ums.cs" />
-    <Compile Remove="Migrations\20200824082821_ums.Designer.cs" />
-    <Compile Remove="Migrations\20200824083916_ums.cs" />
-    <Compile Remove="Migrations\20200824083916_ums.Designer.cs" />
-    <Compile Remove="Migrations\20200824084508_ums.cs" />
-    <Compile Remove="Migrations\20200824084508_ums.Designer.cs" />
-    <Compile Remove="Migrations\20200824084629_ums.cs" />
-    <Compile Remove="Migrations\20200824084629_ums.Designer.cs" />
-    <Compile Remove="Migrations\20200826094344_ums.cs" />
-    <Compile Remove="Migrations\20200826094344_ums.Designer.cs" />
-    <Compile Remove="Migrations\20200827022128_ums.cs" />
-    <Compile Remove="Migrations\20200827022128_ums.Designer.cs" />
-    <Compile Remove="Migrations\Auth\20200827102421_ums.cs" />
-    <Compile Remove="Migrations\Auth\20200827102421_ums.Designer.cs" />
-    <Compile Remove="Migrations\Models\20200827105002_ums_acc.cs" />
-    <Compile Remove="Migrations\Models\20200827105002_ums_acc.Designer.cs" />
-    <Compile Remove="Migrations\Models\20200828042639_ums_account.cs" />
-    <Compile Remove="Migrations\Models\20200828042639_ums_account.Designer.cs" />
-    <Compile Remove="Migrations\Models\20200828051928_ums_account.cs" />
-    <Compile Remove="Migrations\Models\20200828051928_ums_account.Designer.cs" />
-    <Compile Remove="Migrations\Models\20200828084133_ums_account.cs" />
-    <Compile Remove="Migrations\Models\20200828084133_ums_account.Designer.cs" />
+    <Compile Remove="Migrations\Models\20200831100318_ums_account.cs" />
+    <Compile Remove="Migrations\Models\20200831100318_ums_account.Designer.cs" />
+    <Compile Remove="Migrations\Models\20200831100400_ums_editaccount.cs" />
+    <Compile Remove="Migrations\Models\20200831100400_ums_editaccount.Designer.cs" />
+    <Compile Remove="Migrations\Models\20200901033115_ums_editaccount.cs" />
+    <Compile Remove="Migrations\Models\20200901033115_ums_editaccount.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -48,11 +30,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Migrations\Auth\" />
-    <Folder Include="Migrations\Models\" />
   </ItemGroup>
 
   <ItemGroup>

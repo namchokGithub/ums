@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using UMS.Areas.Identity.Data;
 using UMS.Models;
 using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 
 /*
  * Name: MangeUserController.cs
@@ -17,13 +18,13 @@ using Microsoft.AspNetCore.Diagnostics;
 
 namespace UMS.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class ManageUserController : Controller
     {
         // For context of database
         private readonly AccountContext _accountContext;
         private readonly EditAccountContext _editaccountContext;
-        public Account _account;
-
+        
         /*
          * Name: ManageUserController
          * Parameter: accountContext(AccountContext)
@@ -68,53 +69,73 @@ namespace UMS.Controllers
             string sqltext = $"EXEC [dbo].ums_getUserById '{id}'";
 
             // Query data from "dbo.Account" and Convert to List<Account>
-            var user = _editaccountContext.EditAccount.FromSqlRaw(sqltext).ToList<EditAccount>().FirstOrDefault<EditAccount>();
+            var user = _editaccountContext.EditAccount.FromSqlRaw(sqltext).ToList().FirstOrDefault<EditAccount>();
 
+            // Return JSON by Ajax
             return new JsonResult(user);
         }
         
         /*
          * Name: editUser
-         * Parameter: none
+         * Parameter: _account(EditAccount)
          * Author: Namchok Singhachai
          * Description: Edit profile user
          */
         [HttpPost]
-        public void editUser()
+        public IActionResult editUser(EditAccount _account)
         {
-            // Value for update
-            var acc_Id  = HttpContext.Request.Form["acc_Id"];               // ID
-            var acc_Firstname = HttpContext.Request.Form["acc_Firstname"];  // First name 
-            var acc_Lastname = HttpContext.Request.Form["acc_Lastname"];    // Last name
-            var acc_RoleId = HttpContext.Request.Form["acc_RoleId"];      // Role ID 
 
-            // SQL text for execute procedure
-            string sqlUpdateUser = $"ums_updateUser '{acc_Id}', '{acc_Firstname}', '{acc_Lastname}'"; // Update name's user
-            string sqlUpdateRoleUser = $"ums_updateRoleUser '{acc_Id}', '{acc_RoleId}'";              // Update role's user
-
-            // Update Account add UserRoles
-            _editaccountContext.Database.ExecuteSqlRaw(sqlUpdateUser);
-            _editaccountContext.Database.ExecuteSqlRaw(sqlUpdateRoleUser);
-
-            // For check if update success 
-            var result = false;
-            while (!result)
+            // Check if select role form selection in form
+            if (HttpContext.Request.Form["acc_RoleId"].ToString() != "0")
             {
-                try
+                // Has condition in store procedure if equal zero or '' it's nothing happened
+                _account.acc_Rolename = HttpContext.Request.Form["acc_RoleId"].ToString();
+            }
+
+            Console.WriteLine(_account);
+            if (ModelState.IsValid)
+            {
+
+                // SQL text for execute procedure
+                string sqlUpdateUser = $"ums_updateUser '{_account.acc_Id}', '{_account.acc_Firstname}', '{_account.acc_Lastname}'"; // Update name's user
+                string sqlUpdateRoleUser = $"ums_updateRoleUser '{_account.acc_Id}', '{_account.acc_Rolename}'";              // Update role's user
+                
+                // Update Account add UserRoles
+                _editaccountContext.Database.ExecuteSqlRaw(sqlUpdateUser);
+                _editaccountContext.Database.ExecuteSqlRaw(sqlUpdateRoleUser);
+
+                // For check if update success 
+                var result = false;
+                while (!result)
                 {
-                    _editaccountContext.SaveChanges();
-                    TempData["UpdateResult"] = @"Swal.fire({
+                    try
+                    {
+                        _editaccountContext.SaveChanges();
+                        TempData["UpdateResult"] = @"Swal.fire({
                                                     icon: 'success',
                                                     title: 'Successed !',
                                                     showConfirmButton: false,
                                                     timer: 1000
                                                 })";
-                    result = true;
-                } catch
-                {
-                    throw;
+                        result = true;
+                    }
+                    catch
+                    {
+                        throw;
+                    }
                 }
-            }
+
+            } else
+            {
+                TempData["UpdateResult"] = @"Swal.fire({
+                                                    icon: 'error',
+                                                    title: 'Error !',
+                                                    showConfirmButton: true
+                                            })";
+                // return BadRequest(ModelState);
+            } // End if-else
+
+            return RedirectToAction("Index");
         } // End editUser
 
         /*

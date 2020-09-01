@@ -6,8 +6,10 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using EmailService;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using UMS.Areas.Identity.Data;
 using UMS.Models;
 
 /*
@@ -19,20 +21,39 @@ using UMS.Models;
 namespace UMS.Controllers
 {
     [Authorize]
+    // [Authorize(Roles = "Admin")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public HomeController(IEmailSender emailSender, ILogger<HomeController> logger)
+        public HomeController(IEmailSender emailSender, ILogger<HomeController> logger, UserManager<ApplicationUser> userManager)
         {
             _emailSender = emailSender;
             _logger = logger;
+            _userManager = userManager;
         }
-
-        public IActionResult Index()
+        
+        /*
+         * Name: Index
+         * Parameter: none
+         * Author: Namchok Singhachai
+         * Description: First page of UMS
+         */
+        public async Task<IActionResult> Index()
         {
+            // Console.WriteLine(User.IsInRole("Admin")); // Check Role of users
+            // Set default data
+            TempData["UpdateResult"] = null;
+            // Get ID of user
             var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var user = await _userManager.FindByIdAsync(UserId);        // Find user
+            var roles = await _userManager.GetRolesAsync(user);         // Get role user
+
+            // Set Data to view
+            ViewData["UserRole"] = roles[0].ToString();
             ViewData["UserId"] = UserId;
             return View();
         }

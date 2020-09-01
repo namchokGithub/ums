@@ -1,4 +1,4 @@
-﻿@model Account
+﻿@model UMS.Models.EditAccount
 
 @{
     ViewData["Title"] = "Manage User";
@@ -11,7 +11,7 @@
     Description: view for user management
 -->
 
-<div class="mr-auto">
+<div class="m-auto ml-1">
 
     <!--Start Card-->
     <div class="card card-info mt-2 w-auto mx-auto">
@@ -96,20 +96,26 @@
                         <!--End Modal header edit user-->
                         <!--Start Modal body edit user-->
                         <div class="modal-body">
-
-                            <input type="hidden" asp-for="acc_Id" id="acc_Id"/>
+                            
+                            <!-- Hidden values -->
+                            <input type="hidden" asp-for="acc_Id" id="acc_Id" />
+                            <input type="hidden" asp-for="acc_User" id="acc_User" />
+                            <input type="hidden" asp-for="acc_Email" id="acc_Email" />
+                            <input type="hidden" asp-for="acc_IsActive" id="acc_IsActive" />
 
                             <!--Start Input Edit user-->
                             <div class="form-group">
-                                <label asp-for="acc_Firstname">First Name</label>
-                                <input type="text" class="form-control" name="acc_Firstname" 
-                                       id="acc_Firstname" placeholder="First Name" value="">
+                                <label asp-for="acc_Firstname">First Name</label> <code>*</code>
+                                <input asp-for="acc_Firstname" class="form-control"
+                                       id="acc_Firstname" placeholder="First name">
+                                <span asp-validation-for="acc_Firstname" class="text-danger"></span>
                             </div>
 
                             <div class="form-group">
-                                <label asp-for="acc_Lastname">Last Name</label>
-                                <input type="text" class="form-control" name="acc_Lastname" 
-                                       id="acc_Lastname" placeholder="Last Name" value="">
+                                <label asp-for="acc_Lastname">Last Name</label> <code>*</code>
+                                <input asp-for="acc_Lastname" class="form-control"
+                                       id="acc_Lastname" placeholder="Last name">
+                                <span asp-validation-for="acc_Lastname" class="text-danger"></span>
                             </div>
 
                             <div class="form-group">
@@ -125,7 +131,7 @@
                         <!--End Modal body-->
                         <!--Start Modal footer-->
                         <div class="modal-footer justify-content-between">
-                            <button type="button" class="btn btn-default float-left" data-dismiss="modal">Back</button>
+                            <button type="button" class="btn btn-default float-left" onclick="SwalAlert('warning', 'Canceled !')" data-dismiss="modal">Cancel</button>
                             <button type="submit" class="btn btn-success float-right">Save</button>
                         </div>
                         <!--End Modal footer-->
@@ -171,9 +177,9 @@
             }
         })
     } // End deleteUser
-
+    
     /**
-     * Name: swal
+     * Name: alertAndReload
      * Parameter: none
      * Author: Namchok Singhachai
      * Description: for show sweetalert and reload page
@@ -203,6 +209,9 @@
             success: function (result) {
                 // Set data to form update
                 $('#acc_Id').val(result.acc_Id);
+                $('#acc_User').val(result.acc_User);
+                $('#acc_Email').val(result.acc_Email);
+                $('#acc_IsActive').val(result.acc_IsActive);
                 $('#acc_Firstname').val(result.acc_Firstname);
                 $('#acc_Lastname').val(result.acc_Lastname);
 
