@@ -1,8 +1,9 @@
-﻿@model UMS.Models.EditAccount
+﻿<!-- Use Edit profile model -->
+@model UMS.Models.EditAccount
 
 @{
-    ViewData["Title"] = "Manage User";
-    Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
+    ViewData["Title"] = "Manage User";                  // Set title
+    Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";  // Set layout
 }
 
 <!--
@@ -11,6 +12,7 @@
     Description: view for user management
 -->
 
+<!-- Content -->
 <div class="m-auto ml-1">
 
     <!--Start Card-->
@@ -42,7 +44,7 @@
                             <!--End Manage user table head-->
                             <!--Start Manage user table body-->
                             <tbody>
-                                @{ int index = 0; }
+                                @{ int index = 0; /* For show order in table */ }
                                 @if (ViewData["User"] != null)
                                 {
                                     @foreach (var item in ViewData["User"] as List<Account>)
@@ -60,7 +62,7 @@
                                         </tr>
                                     }
                                 }
-                                else
+                                else // If ViweData["User"] is null
                                 {
                                     <tr>
                                         <td colspan="6"><center>No Users.</center></td>
@@ -77,7 +79,6 @@
             <!--End Manage user table-->
         </div>
         <!--End Card body-->
-
         <!--Start Form Edit user | Update in controller -->
         <form id="ModalEditUser" method="post" asp-action="editUser" asp-controller="ManageUser">
             <!--Start Modal edit user-->
@@ -96,7 +97,7 @@
                         <!--End Modal header edit user-->
                         <!--Start Modal body edit user-->
                         <div class="modal-body">
-                            
+
                             <!-- Hidden values -->
                             <input type="hidden" asp-for="acc_Id" id="acc_Id" />
                             <input type="hidden" asp-for="acc_User" id="acc_User" />
@@ -143,9 +144,10 @@
         <!--End Form Edit user-->
 
     </div>
-    <!--End Card--> 
+    <!--End Card-->
 </div>
-
+<!-- End content -->
+<!-- Script section -->
 <script>
 
     /**
@@ -169,7 +171,16 @@
                 $.ajax({
                     url: '@Url.Action("deleteUser", "ManageUser")',
                     data: { id: id },
-                    method: "POST"
+                    method: "POST",
+                    error: function (result) {
+                        console.log(result) // Show log of error
+                        // Set message status
+                        let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
+                        let statusText = (result.statusText != '') ? ' (' + result.statusText + ')' : ''
+                        let _text = 'Status : ' + result.status + statusText + statusResText
+                        // Alert message error
+                        Swal.fire({ icon: 'error', title: 'Error !', text: _text, showConfirmButton: true })
+                    }
                 }).done(function () {
                     console.log("Inactive user success")
                     alertAndReload()  // for show alert and reload page
@@ -177,7 +188,7 @@
             }
         })
     } // End deleteUser
-    
+
     /**
      * Name: alertAndReload
      * Parameter: none
@@ -185,14 +196,15 @@
      * Description: for show sweetalert and reload page
      */
     async function alertAndReload() {
+        // Function sweetalert
         await Swal.fire({
             icon: 'success',
             title: 'Deleted !',
             showConfirmButton: false,
             timer: 1200
         })
-        await location.reload();
-    }
+        await location.reload(); // Reload pages
+    } // End alertAndReload
 
     /**
      * Name: getUser
@@ -207,27 +219,40 @@
             type: "POST",
             dataType: "JSON",
             success: function (result) {
-                // Set data to form update
-                $('#acc_Id').val(result.acc_Id);
-                $('#acc_User').val(result.acc_User);
-                $('#acc_Email').val(result.acc_Email);
-                $('#acc_IsActive').val(result.acc_IsActive);
-                $('#acc_Firstname').val(result.acc_Firstname);
-                $('#acc_Lastname').val(result.acc_Lastname);
+                // Check if id is null will return error
+                if (result['condition'] != "error") {
+                    // Set data to form update
+                    $('#acc_Id').val(result.acc_Id);
+                    $('#acc_User').val(result.acc_User);
+                    $('#acc_Email').val(result.acc_Email);
+                    $('#acc_IsActive').val(result.acc_IsActive);
+                    $('#acc_Firstname').val(result.acc_Firstname);
+                    $('#acc_Lastname').val(result.acc_Lastname);
 
-                if (result.acc_Rolename === 'Admin') {
-                    $('#acc_RoleId').val(1);
-                } else if (result.acc_Rolename === 'User') {
-                    $('#acc_RoleId').val(2);
+                    if (result.acc_Rolename === 'Admin') {
+                        $('#acc_RoleId').val(1);
+                    } else if (result.acc_Rolename === 'User') {
+                        $('#acc_RoleId').val(2);
+                    } else {
+                        $('#acc_RoleId').val(0);
+                    }
+                    // Show modal
+                    $('#EditUser').modal();
+                    console.log('query success ~');
                 } else {
-                    $('#acc_RoleId').val(0);
+                    // Check is has exception
+                    eval(result['messages']) // Excute js
+                    console.log('Query Error!!!');
                 }
-                // Show modal
-                $('#EditUser').modal();
-                console.log('query success ~');
             },
             error: function (result) {
-                console.log(result.responseText)
+                console.log(result) // show log of error
+                // Set message status
+                let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
+                let statusText = (result.statusText != '') ? ' (' + result.statusText + ')' : ''
+                let _text = 'Status : ' + result.status + statusText + statusResText
+                // Alert message error
+                Swal.fire({ icon: 'error', title: 'Error !', text: _text, showConfirmButton: true })
             }
         })
     } // End getUser
@@ -235,5 +260,5 @@
     // Check is update user success
     @if (TempData["UpdateResult"] != null) { @Html.Raw(TempData["UpdateResult"]) /* Swal funciton */ }
     // Check is has exception
-    @if (TempData["exception"] != null) { @Html.Raw(TempData["exception"]) /* Swal funciton */ }
+    @if (TempData["nullException"] != null) { @Html.Raw(TempData["nullException"]) /* Swal funciton */ }
 </script>

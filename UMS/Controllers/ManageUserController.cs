@@ -48,7 +48,7 @@ namespace UMS.Controllers
             try
             {
                 // Set defalut exception message
-                TempData["exception"] = null;
+                TempData["nullException"] = null;
 
                 // SQL text for exextut procedure
                 string sqltext = "EXEC [dbo].ums_get_all_active_user";
@@ -68,9 +68,9 @@ namespace UMS.Controllers
                 // Set sweet alert with error messages
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: '" + e.Message + @"', showConfirmButton: true })";
                 // Send alert to home pages
-                TempData["exception"] = message;
+                TempData["nullException"] = message;
                 return View();
-            }
+            } // End try catch
 
         }
 
@@ -83,14 +83,36 @@ namespace UMS.Controllers
         [HttpPost]
         public JsonResult getUser(string id)
         {
-            // SQL text for execute procedure
-            string sqltext = $"EXEC [dbo].ums_getUserById '{id}'";
+            try
+            {
+                // Check if query is null
+                if (id == null) throw new Exception("Calling a method on a null object reference");
 
-            // Query data from "dbo.Account" and Convert to List<Account>
-            var user = _editaccountContext.EditAccount.FromSqlRaw(sqltext).ToList().FirstOrDefault<EditAccount>();
+                // SQL text for execute procedure
+                string sqltext = $"EXEC [dbo].ums_getUserById '{id}'";
 
-            // Return JSON by Ajax
-            return new JsonResult(user);
+                // Query data from "dbo.Account" and Convert to List<Account>
+                var user = _editaccountContext.EditAccount.FromSqlRaw(sqltext).ToList().FirstOrDefault<EditAccount>();
+
+                // Check if query is null
+                if (user == null) throw new Exception("Calling a method on a null object reference");
+
+                // Return JSON by Ajax
+                return new JsonResult(user);
+
+            } catch (Exception e)
+            {
+                // Set sweet alert with error messages
+                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: '" + e.Message + @"', showConfirmButton: true })";
+
+                var er = new objectJason
+                {
+                    condition = "error",
+                    messages = message
+                };
+
+                return new JsonResult(er);
+            } // End try catch
         }
         
         /*
@@ -186,6 +208,12 @@ namespace UMS.Controllers
             }
         } // End deleteUser
 
+
+        class objectJason
+        {
+            public string condition { set; get; }
+            public string messages { set; get; }
+        }
     } // End class
 }
     
