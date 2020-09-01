@@ -30,6 +30,7 @@ namespace UMS.Migrations.Models
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("acc_Firstname")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("acc_IsActive")
@@ -37,6 +38,7 @@ namespace UMS.Migrations.Models
                         .HasColumnType("nvarchar(1)");
 
                     b.Property<string>("acc_Lastname")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("acc_NormalizedEmail")

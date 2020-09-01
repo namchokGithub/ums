@@ -34,19 +34,26 @@ namespace UMS.Controllers
             _logger = logger;
             _userManager = userManager;
         }
-
+        
+        /*
+         * Name: Index
+         * Parameter: none
+         * Author: Namchok Singhachai
+         * Description: First page of UMS
+         */
         public async Task<IActionResult> Index()
         {
+            // Console.WriteLine(User.IsInRole("Admin")); // Check Role of users
             // Set default data
             TempData["UpdateResult"] = null;
-
+            // Get ID of user
             var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            Console.WriteLine(User.IsInRole("Admin"));
 
-            var user = await _userManager.FindByIdAsync(UserId);
-            var roles = await _userManager.GetRolesAsync(user);
+            var user = await _userManager.FindByIdAsync(UserId);        // Find user
+            var roles = await _userManager.GetRolesAsync(user);         // Get role user
 
-            ViewData["UserRole"] = roles.ToString();
+            // Set Data to view
+            ViewData["UserRole"] = roles[0].ToString();
             ViewData["UserId"] = UserId;
             return View();
         }

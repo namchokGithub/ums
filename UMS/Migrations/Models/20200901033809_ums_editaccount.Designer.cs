@@ -9,7 +9,7 @@ using UMS.Models;
 namespace UMS.Migrations.Models
 {
     [DbContext(typeof(EditAccountContext))]
-    [Migration("20200831100400_ums_editaccount")]
+    [Migration("20200901033809_ums_editaccount")]
     partial class ums_editaccount
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -29,6 +29,7 @@ namespace UMS.Migrations.Models
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("acc_Firstname")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("acc_IsActive")
@@ -36,6 +37,7 @@ namespace UMS.Migrations.Models
                         .HasColumnType("nvarchar(1)");
 
                     b.Property<string>("acc_Lastname")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("acc_Rolename")

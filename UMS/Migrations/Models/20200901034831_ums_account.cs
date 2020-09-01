@@ -18,8 +18,8 @@ namespace UMS.Migrations.Models
                     acc_PasswordHash = table.Column<string>(nullable: true),
                     acc_SecurityStamp = table.Column<string>(nullable: true),
                     acc_ConcurrencyStamp = table.Column<string>(nullable: true),
-                    acc_Firstname = table.Column<string>(nullable: true),
-                    acc_Lastname = table.Column<string>(nullable: true),
+                    acc_Firstname = table.Column<string>(nullable: false),
+                    acc_Lastname = table.Column<string>(nullable: false),
                     acc_IsActive = table.Column<string>(nullable: false),
                     acc_Rolename = table.Column<string>(nullable: true),
                     acc_TypeAccoutname = table.Column<string>(nullable: true)

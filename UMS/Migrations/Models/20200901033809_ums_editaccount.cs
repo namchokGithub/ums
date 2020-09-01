@@ -13,8 +13,8 @@ namespace UMS.Migrations.Models
                     acc_Id = table.Column<string>(nullable: false),
                     acc_User = table.Column<string>(nullable: true),
                     acc_Email = table.Column<string>(nullable: true),
-                    acc_Firstname = table.Column<string>(nullable: true),
-                    acc_Lastname = table.Column<string>(nullable: true),
+                    acc_Firstname = table.Column<string>(nullable: false),
+                    acc_Lastname = table.Column<string>(nullable: false),
                     acc_IsActive = table.Column<string>(nullable: false),
                     acc_Rolename = table.Column<string>(nullable: true)
                 },

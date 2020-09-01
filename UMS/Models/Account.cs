@@ -33,9 +33,19 @@ namespace UMS.Models
         public string acc_SecurityStamp { set; get; } // ---
 
         public string acc_ConcurrencyStamp { set; get; } // ---
-
+        
+        [Required(ErrorMessage = "Please enter first name")]
+        [DataType(DataType.Text, ErrorMessage = "The first name have only text. No number no space, digit and special charactor")]
+        [Display(Name = "First Name")]
+        [RegularExpression(@"^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$"
+                , ErrorMessage = "The first name have only text. No number no space digit and special charactor")]
         public string acc_Firstname { set; get; } // ชื่อจริง
 
+        [Required(ErrorMessage = "Please enter last name")]
+        [DataType(DataType.Text, ErrorMessage = "The last name have only text. No number no space, digit and special charactor")]
+        [Display(Name = "Last Name")]
+        [RegularExpression(@"^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$"
+                , ErrorMessage = "The last name have only text. No number no space digit and special charactor")]
         public string acc_Lastname { set; get; } // นามสกุล
 
         public char acc_IsActive { set; get; } // สถานะของบัญชีผู้ใช้
