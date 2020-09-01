@@ -1,11 +1,19 @@
-﻿@model ErrorViewModel
+﻿<!--
+    Namespace: ~/View/Shared
+    File: _Layout.cshtml
+    Description: Layout template
+-->
+
+@model ErrorViewModel
 @{
     ViewData["Title"] = "Error";
+    Layout = "~/Views/Shared/_Layout.cshtml";  // Set layout
 }
 
 <h1 class="text-danger">Error.</h1>
 <h2 class="text-danger">An error occurred while processing your request.</h2>
 
+<!-- If has model error -->
 @if (Model.ShowRequestId)
 {
     <p>

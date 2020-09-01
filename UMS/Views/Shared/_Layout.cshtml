@@ -1,25 +1,28 @@
-﻿<!DOCTYPE html>
+﻿<!--
+    Namespace: ~/View/Shared
+    File: _Layout.cshtml
+    Description: Layout template
+-->
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>@ViewData["Title"] - User Management System</title>
     <link rel="shortcut icon" href="https://image.flaticon.com/icons/svg/3266/3266632.svg" />
-
-    <partial name="AdminLTE/_Styles" />
+    <partial name="AdminLTE/_Styles" /> <!-- Partial or style -->
 </head>
 <body>
-
     <!-- content -->
     <div class="content">
         <div class="container-fluid">
-            @RenderBody()
+            @RenderBody() <!-- Rander the content -->
         </div>
     </div>
     <!-- ./content -->
-    <partial name="AdminLTE/_Scripts" />
+    <partial name="AdminLTE/_Scripts" /> <!-- Partial or script -->
     @RenderSection("Scripts", required: false)
-
 </body>
 </html>
+<!-- End html -->

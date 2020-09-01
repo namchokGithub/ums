@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿<!--
+    Namespace: ~/View/Shared/AdminLTE
+    File: _Layout.cshtml
+    Description: Layout of template
+-->
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -6,23 +12,24 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <link rel="icon" href="https://image.flaticon.com/icons/svg/993/993928.svg" type="image/icon type">
     <title>@ViewData["Title"] | UMS </title>
-    <partial name="AdminLTE/_Styles" />
+    <partial name="AdminLTE/_Styles" /> <!-- Partial of style -->
 </head>
 
 <!-- Body -->
 <body class="hold-transition sidebar-mini sidebar-collapse">
     <div class="wrapper">
-        <partial name="AdminLTE/_TopNavigation" />
-        <partial name="AdminLTE/_MainNavigation" />
+        <partial name="AdminLTE/_TopNavigation" /> <!-- Partial of top navigation -->
+        <partial name="AdminLTE/_MainNavigation" /> <!-- Partial of Main navigation -->
         <div class="content-wrapper">
             <div class="content">
-                @RenderBody()
+                @RenderBody() <!-- Render content -->
             </div>
         </div>
-        <partial name="AdminLTE/_Footer" />
+        <partial name="AdminLTE/_Footer" /> <!-- Partial of footer -->
     </div>
-    <partial name="AdminLTE/_Scripts" />
+    <partial name="AdminLTE/_Scripts" /> <!-- Partial of script -->
 </body>
 <!-- End body -->
 
 </html>
+<!-- End html -->

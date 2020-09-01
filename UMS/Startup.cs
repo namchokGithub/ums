@@ -13,6 +13,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using UMS.Models;
 
+/*
+ * Name : Startup
+ * Description: For set up the project
+ */
+
 namespace UMS
 {
     public class Startup
@@ -48,9 +53,11 @@ namespace UMS
             services.AddSingleton(emailConfig);
             services.AddScoped<IEmailSender, EmailSender>();
 
+            // Controller with view and add razor pages
             services.AddControllersWithViews();
             services.AddRazorPages();
 
+            // Service google login
             services.AddAuthentication()
             .AddGoogle(googleOptions =>
             {
@@ -59,6 +66,7 @@ namespace UMS
                 googleOptions.SignInScheme = IdentityConstants.ExternalScheme;
             });
 
+            // Service facebook login
             services.AddAuthentication()
             .AddFacebook(facebookOptions =>
             {
@@ -66,6 +74,7 @@ namespace UMS
                 facebookOptions.AppSecret = "bac3818b714dd5282277916f3c56f172";
             });
 
+            // Service microsoft login
             services.AddAuthentication()
             .AddMicrosoftAccount(microsoftOptions =>
             {
