@@ -1,15 +1,25 @@
-﻿@{
-    ViewData["Title"] = "Manage User";
-    Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
+﻿<!-- Use Edit profile model -->
+@model UMS.Models.EditAccount
+
+@{
+    ViewData["Title"] = "Manage User";                  // Set title
+    Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";  // Set layout
 }
 
-<div class="mr-auto">
-    <br>
+<!--
+    Namspace: ~/View/ManageUser/Index.cshtml
+    Author: Namchok Singhachai
+    Description: view for user management
+-->
+
+<!-- Content -->
+<div class="m-auto ml-1">
+
     <!--Start Card-->
-    <div class="card card-info">
+    <div class="card card-info mt-2 w-auto mx-auto">
         <!--Start Card header-->
         <div class="card-header">
-            <h3 class="card-title">Manage users</h3>
+            <h3 class="card-title">Manage Users</h3>
         </div>
         <!--End Card header-->
         <!--Start Card body-->
@@ -17,123 +27,51 @@
             <div class="box">
                 <div class="box-body">
                     <!--Start Manage user table-->
-                    <table id="example1" class="table table-bordered table-striped">
-                        <!--Start Manage user table head-->
-                        <thead class="text-center">
-                            <tr>
-                                <th>No.</th>
-                                <th>Firstname</th>
-                                <th>Lastname</th>
-                                <th>Email</th>
-                                <th>Role</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <!--End Manage user table head-->
-                        <!--Start Manage user table body-->
-                        <tbody>
-                            <tr>
-                                <td><center>1</center></td>
-                                <td>Namchock</td>
-                                <td>Singhachai</td>
-                                <td>namchock@gmail.com</td>
-                                <td><center>Admin</center></td>
-                                <td class="text-center">
-                                    <button class="btn btn-warning text-white" data-toggle="modal" data-target="#EditUser"><i class="fa fa-pencil-alt"></i></button>
-                                    <button class="btn btn-danger"><i class="fa fa-times"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><center>2</center></td>
-                                <td>Wannapa</td>
-                                <td>Srijermtong</td>
-                                <td>wannapa@hotmail.com</td>
-                                <td><center>User</center></td>
-                                <td class="text-center">
-                                    <button class="btn btn-warning text-white" data-toggle="modal" data-target="#EditUser"><i class="fa fa-pencil-alt"></i></button>
-                                    <button class="btn btn-danger"><i class="fa fa-times"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><center>3</center></td>
-                                <td>Arthiruj</td>
-                                <td>Phusitaporn</td>
-                                <td>arthiruj101@hotmail.com</td>
-                                <td><center>User</center></td>
-                                <td class="text-center">
-                                    <button class="btn btn-warning text-white" data-toggle="modal" data-target="#EditUser"><i class="fa fa-pencil-alt"></i></button>
-                                    <button class="btn btn-danger"><i class="fa fa-times"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><center>4</center></td>
-                                <td>Yaowapa</td>
-                                <td>Pongpadcha</td>
-                                <td>yaowapaa@msn.com</td>
-                                <td><center>User</center></td>
-                                <td class="text-center">
-                                    <button class="btn btn-warning text-white" data-toggle="modal" data-target="#EditUser"><i class="fa fa-pencil-alt"></i></button>
-                                    <button class="btn btn-danger"><i class="fa fa-times"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><center>5</center></td>
-                                <td>Theo</td>
-                                <td>Saetun</td>
-                                <td>60160109@go.buu.ac.th</td>
-                                <td><center>User</center></td>
-                                <td class="text-center">
-                                    <button class="btn btn-warning text-white" data-toggle="modal" data-target="#EditUser"><i class="fa fa-pencil-alt"></i></button>
-                                    <button class="btn btn-danger"><i class="fa fa-times"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><center>6</center></td>
-                                <td>Phonlayut</td>
-                                <td>Sophak</td>
-                                <td>60160093@go.buu.ac.th</td>
-                                <td><center>User</center></td>
-                                <td class="text-center">
-                                    <button class="btn btn-warning text-white" data-toggle="modal" data-target="#EditUser"><i class="fa fa-pencil-alt"></i></button>
-                                    <button class="btn btn-danger"><i class="fa fa-times"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><center>7</center></td>
-                                <td>Chanakan</td>
-                                <td>Hokee</td>
-                                <td>60160334@go.buu.ac.th</td>
-                                <td><center>User</center></td>
-                                <td class="text-center">
-                                    <button class="btn btn-warning text-white" data-toggle="modal" data-target="#EditUser"><i class="fa fa-pencil-alt"></i></button>
-                                    <button class="btn btn-danger"><i class="fa fa-times"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><center>8</center></td>
-                                <td>Manita</td>
-                                <td>Doungrassamee</td>
-                                <td>60160023@go.buu.ac.th</td>
-                                <td><center>User</center></td>
-                                <td class="text-center">
-                                    <button class="btn btn-warning text-white" data-toggle="modal" data-target="#EditUser"><i class="fa fa-pencil-alt"></i></button>
-                                    <button class="btn btn-danger"><i class="fa fa-times"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><center>9</center></td>
-                                <td>Vartinee</td>
-                                <td>Teangthong</td>
-                                <td>60160345@go.buu.ac.th</td>
-                                <td><center>User</center></td>
-                                <td class="text-center">
-                                    <button class="btn btn-warning text-white" data-toggle="modal" data-target="#EditUser"><i class="fa fa-pencil-alt"></i></button>
-                                    <button class="btn btn-danger"><i class="fa fa-times"></i></button>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <!--End Manage user table body-->
-                    </table>
+                    <div class="table-responsive-md">
+                        <table id="showAllUserTable" class="table table-hover
+                                w-100 table-bordered table-striped">
+                            <!--Start Manage user table head-->
+                            <thead class="text-center">
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Username</th>
+                                    <th>Name</th>
+                                    <th>Role</th>
+                                    <th>Type Account</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <!--End Manage user table head-->
+                            <!--Start Manage user table body-->
+                            <tbody>
+                                @{ int index = 0; /* For show order in table */ }
+                                @if (ViewData["User"] != null)
+                                {
+                                    @foreach (var item in ViewData["User"] as List<Account>)
+                                    {
+                                        <tr>
+                                            <td><center>@(index += 1)</center></td>
+                                            <td>@item.acc_Email</td>
+                                            <td>@(item.acc_Firstname + " " + item.acc_Lastname)</td>
+                                            <td><center> @((item.acc_Rolename != null) ? item.acc_Rolename : "-") </center></td>
+                                            <td><center> @((item.acc_TypeAccoutname != null) ? item.acc_TypeAccoutname : "-") </center></td>
+                                            <td class="text-center">
+                                                <button class="btn btn-warning text-white" onclick="getUser('@item.acc_Id')"><i class="fa fa-pencil-alt"></i></button>
+                                                <button class="btn btn-danger" onclick="deleteUser('@item.acc_Id')"><i class="fa fa-times"></i></button>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                                else // If ViweData["User"] is null
+                                {
+                                    <tr>
+                                        <td colspan="6"><center>No Users.</center></td>
+                                    </tr>
+                                }
+                            </tbody>
+                            <!--End Manage user table body-->
+                        </table>
+                    </div>
                     <!--End Manage user table body-->
                 </div>
                 <!--End Manage user table body-->
@@ -141,66 +79,186 @@
             <!--End Manage user table-->
         </div>
         <!--End Card body-->
-        <!--Start Modal edit user-->
-        <div class="modal fade" id="EditUser">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <!--Start Modal header edit user-->
-                    <div class="modal-header bg-warning">
-                        <h4 class="modal-title  text-white">Edit user account.</h4>
-                        <!--Start Button close-->
-                        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <!--End Button close-->
-                    </div>
-                    <!--End Modal header edit user-->
-                    <!--Start Modal body edit user-->
-                    <div class="modal-body">
-                        <!--Start Form Edit user-->
-                        <form id="ModalEditUser" method="post">
+        <!--Start Form Edit user | Update in controller -->
+        <form id="ModalEditUser" method="post" asp-action="editUser" asp-controller="ManageUser">
+            <!--Start Modal edit user-->
+            <div class="modal fade" id="EditUser">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!--Start Modal header edit user-->
+                        <div class="modal-header bg-warning">
+                            <h4 class="modal-title  text-white">EDIT ACCOUNT</h4>
+                            <!--Start Button close-->
+                            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <!--End Button close-->
+                        </div>
+                        <!--End Modal header edit user-->
+                        <!--Start Modal body edit user-->
+                        <div class="modal-body">
+
+                            <!-- Hidden values -->
+                            <input type="hidden" asp-for="acc_Id" id="acc_Id" />
+                            <input type="hidden" asp-for="acc_User" id="acc_User" />
+                            <input type="hidden" asp-for="acc_Email" id="acc_Email" />
+                            <input type="hidden" asp-for="acc_IsActive" id="acc_IsActive" />
+
                             <!--Start Input Edit user-->
-                            <div class="row">
-                                <label class="col-sm-3 col-form-label">Firstname:</label>
-                                <div class="col-sm-9 mr-auto">
-                                    <div class="form-group">
-                                        <input class="form-control">
-                                        <span class="text-danger"></span>
-                                    </div>
-                                </div>
-                                <label class="col-sm-3 col-form-label">Lastname:</label>
-                                <div class="col-sm-9 mr-auto">
-                                    <div class="form-group">
-                                        <input class="form-control">
-                                        <input class="form-control">
-                                        <span class="text-danger"></span>
-                                    </div>
-                                </div>
-                                <label class="col-sm-3 col-form-label">Role:</label>
-                                <div class="col-sm-9 mr-auto">
-                                    <div class="form-group">
-                                        <select class="form-control">
-                                            <option>Admin</option>
-                                            <option>User</option>
-                                        </select>
-                                    </div>
-                                </div>
+                            <div class="form-group">
+                                <label asp-for="acc_Firstname">First Name</label> <code>*</code>
+                                <input asp-for="acc_Firstname" class="form-control"
+                                       id="acc_Firstname" placeholder="First name">
+                                <span asp-validation-for="acc_Firstname" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="acc_Lastname">Last Name</label> <code>*</code>
+                                <input asp-for="acc_Lastname" class="form-control"
+                                       id="acc_Lastname" placeholder="Last name">
+                                <span asp-validation-for="acc_Lastname" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="acc_Rolename">Role</label>
+                                <select class="form-control" id="acc_RoleId" name="acc_RoleId">
+                                    <option value="0" disabled selected>Choose</option>
+                                    <option value="1">Admin</option>
+                                    <option value="2">User</option>
+                                </select>
                             </div>
                             <!--End Input Edit user-->
-                        </form>
-                        <!--End Form Edit user-->
+                        </div>
+                        <!--End Modal body-->
+                        <!--Start Modal footer-->
+                        <div class="modal-footer justify-content-between">
+                            <button type="button" class="btn btn-default float-left" onclick="SwalAlert('warning', 'Canceled !')" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-success float-right">Save</button>
+                        </div>
+                        <!--End Modal footer-->
                     </div>
-                    <!--End Modal body-->
-                    <!--Start Modal footer-->
-                    <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-default float-left" data-dismiss="modal">Back</button>
-                        <button type="button" class="btn btn-success float-right">Save</button>
-                    </div>
-                    <!--End Modal footer-->
                 </div>
             </div>
-        </div>
-        <!--End Modal Edit user-->
+            <!--End Modal Edit user-->
+        </form>
+        <!--End Form Edit user-->
+
     </div>
     <!--End Card-->
 </div>
+<!-- End content -->
+<!-- Script section -->
+<script>
+
+    /**
+     * Name: deleteUser
+     * Parameter: id
+     * Author: Namchok Singhachai
+     * Description: Set user to inactive
+     */
+    function deleteUser(id) {
+        // SweetAlert confirm delete
+        Swal.fire({
+            title: 'Do you want to delete?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#28A745',
+            cancelButtonColor: '#DC3545',
+            confirmButtonText: 'Yes'
+        }).then((result) => {
+            if (result.value) {
+                // Ajax for Inactive user
+                $.ajax({
+                    url: '@Url.Action("deleteUser", "ManageUser")',
+                    data: { id: id },
+                    method: "POST",
+                    error: function (result) {
+                        console.log(result) // Show log of error
+                        // Set message status
+                        let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
+                        let statusText = (result.statusText != '') ? ' (' + result.statusText + ')' : ''
+                        let _text = 'Status : ' + result.status + statusText + statusResText
+                        // Alert message error
+                        Swal.fire({ icon: 'error', title: 'Error !', text: _text, showConfirmButton: true })
+                    }
+                }).done(function () {
+                    console.log("Inactive user success")
+                    alertAndReload()  // for show alert and reload page
+                });
+            }
+        })
+    } // End deleteUser
+
+    /**
+     * Name: alertAndReload
+     * Parameter: none
+     * Author: Namchok Singhachai
+     * Description: for show sweetalert and reload page
+     */
+    async function alertAndReload() {
+        // Function sweetalert
+        await Swal.fire({
+            icon: 'success',
+            title: 'Deleted !',
+            showConfirmButton: false,
+            timer: 1200
+        })
+        await location.reload(); // Reload pages
+    } // End alertAndReload
+
+    /**
+     * Name: getUser
+     * Parameter: id
+     * Author: Namchok Singhachai
+     * Description: Get active user by ID (Ajax)
+     */
+    function getUser(id) {
+        $.ajax({
+            url: "@Url.Action("getUser", "ManageUser")",
+            data: { id: id },
+            type: "POST",
+            dataType: "JSON",
+            success: function (result) {
+                // Check if id is null will return error
+                if (result['condition'] != "error") {
+                    // Set data to form update
+                    $('#acc_Id').val(result.acc_Id);
+                    $('#acc_User').val(result.acc_User);
+                    $('#acc_Email').val(result.acc_Email);
+                    $('#acc_IsActive').val(result.acc_IsActive);
+                    $('#acc_Firstname').val(result.acc_Firstname);
+                    $('#acc_Lastname').val(result.acc_Lastname);
+
+                    if (result.acc_Rolename === 'Admin') {
+                        $('#acc_RoleId').val(1);
+                    } else if (result.acc_Rolename === 'User') {
+                        $('#acc_RoleId').val(2);
+                    } else {
+                        $('#acc_RoleId').val(0);
+                    }
+                    // Show modal
+                    $('#EditUser').modal();
+                    console.log('query success ~');
+                } else {
+                    // Check is has exception
+                    eval(result['messages']) // Excute js
+                    console.log('Query Error!!!');
+                }
+            },
+            error: function (result) {
+                console.log(result) // show log of error
+                // Set message status
+                let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
+                let statusText = (result.statusText != '') ? ' (' + result.statusText + ')' : ''
+                let _text = 'Status : ' + result.status + statusText + statusResText
+                // Alert message error
+                Swal.fire({ icon: 'error', title: 'Error !', text: _text, showConfirmButton: true })
+            }
+        })
+    } // End getUser
+
+    // Check is update user success
+    @if (TempData["UpdateResult"] != null) { @Html.Raw(TempData["UpdateResult"]) /* Swal funciton */ }
+    // Check is has exception
+    @if (TempData["nullException"] != null) { @Html.Raw(TempData["nullException"]) /* Swal funciton */ }
+</script>

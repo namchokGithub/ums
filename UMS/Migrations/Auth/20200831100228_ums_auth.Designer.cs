@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UMS.Data;
 
-namespace UMS.Migrations
+namespace UMS.Migrations.Auth
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20200826094344_ums")]
-    partial class ums
+    [Migration("20200831100228_ums_auth")]
+    partial class ums_auth
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -190,7 +190,7 @@ namespace UMS.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserName")
-                        .HasColumnName("acc_UserName")
+                        .HasColumnName("acc_User")
                         .HasColumnType("nvarchar(256)")
                         .HasMaxLength(256);
 
@@ -206,20 +206,6 @@ namespace UMS.Migrations
                     b.Property<string>("acc_Lastname")
                         .HasColumnName("acc_Lastname")
                         .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("acc_Salt")
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("acc_User")
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<int>("acc_ro_Id")
-                        .HasColumnName("acc_ro_Id")
-                        .HasColumnType("Int");
-
-                    b.Property<int>("acc_ta_Id")
-                        .HasColumnName("acc_ta_Id")
-                        .HasColumnType("Int");
 
                     b.HasKey("Id");
 

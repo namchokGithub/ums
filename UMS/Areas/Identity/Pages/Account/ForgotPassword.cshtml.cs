@@ -63,14 +63,21 @@ namespace UMS.Areas.Identity.Pages.Account
                     new string[] { Input.Email }, 
                     "Reset Password",
                     @$"
-                        Hello!, {Input.Email} <br>
-
-                        Please reset your password by 
-                        <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'
-                            asp-route-Email='{Input.Email}'
-                            >
-                            <b>click here</b>
+                        <h2>Hello!, {Input.Email} </h2>
+                        <br>
+                        We got a request to reset your UMS password.
+                        <br>
+                        You can reset your password by clicking the link 
+                        <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'asp-route-Email='{Input.Email}'>
+                            <b>Reset password</b>
                         </a>.
+                        <br>
+                        If you ignore this message, your password won't be changed.
+                        <br><br><br>
+                        <hr>
+                        Best regards,
+                        <br>
+                        User Management System
                       "
                 );
                 await _emailSender.SendEmailAsync(message);

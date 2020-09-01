@@ -4,7 +4,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="~/" class="brand-link">
-        <img src="~/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+        <img src="~/img/AdminLTELogo.png" alt="UMSLogo" class="brand-image img-circle elevation-3"
              style="opacity: .8">
         <span class="brand-text font-weight-light text-logo">User Management System</span>
     </a>
@@ -13,8 +13,10 @@
     <div class="sidebar">
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-1 mb-2 d-flex">
-            <div class="info text-white">
-                <i class="fas fa-user-alt"></i>
+            
+            <div class="image text-center">
+                <img src="https://image.flaticon.com/icons/svg/560/560216.svg" alt="Profile"
+                     class="img-circle elevation-2">
             </div>
 
             <div class="info">
@@ -25,44 +27,41 @@
                 }
                 else
                 {
-                    <p class="d-block text-white">Alexander Pierce</p>
+                    <p class="d-block text-white"> Defautl </p>
                 }
             </div>
         </div>
 
         <!-- Sidebar Menu -->
         <nav class="mt-2">
+
+            <!-- List of menu -->
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
                 <li class="nav-item">
                     <a asp-controller="Home" asp-action="Index" class="nav-link @Url.MakeActiveClass("home","index")">
                         <i class="fas fa-home"></i> &ensp;
                         <p>Home</p>
                     </a>
-                </li>
-                @*<li class="nav-item">
-                    <a asp-controller="Home" asp-action="Privacy" class="nav-link @Url.MakeActiveClass("home","privacy")">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Pivacy</p>
-                    </a>
-                </li>*@
+                </li> <!-- Home -->
                 <li class="nav-item">
                     <a asp-controller="EditProfile" asp-action="Index" class="nav-link @Url.MakeActiveClass("EditProfile","Index")">
-                        <i class="far fa-address-card"></i> &ensp;
+                        <i class="fas fa-address-card"></i> &ensp;
                         <p>Edit Profile</p>
                     </a>
-                </li>
-
+                </li> <!-- Edit profile -->
                 <!-- ตรวจสอบว่าเป็นตำแหน่งไหน ถ้าเป็น Admin จะแสดง -->
-                @if (true)
+                @if (User.IsInRole("Admin"))
                 {
                     <li class="nav-item">
                         <a asp-controller="ManageUser" asp-action="Index" class="nav-link @Url.MakeActiveClass("ManageUser","Index")">
                             <i class="fas fa-user-cog"></i> &ensp;
-                            <p>Manage User</p>
+                            <p>Manage Users</p>
                         </a>
-                    </li>
-                }
+                    </li> <!-- Manage users -->
+                } <!-- End if -->
             </ul>
+            <!-- End List of menu -->
         </nav>
         <!-- /.sidebar-menu -->
     </div>

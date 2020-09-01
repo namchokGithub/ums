@@ -65,11 +65,13 @@ namespace UMS.Areas.Identity.Pages.Account
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
+            [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z0-9$@$!%*?&]+$"
+                ,ErrorMessage = "The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.")]
             public string Password { get; set; }
 
             [DataType(DataType.Password)]
             [Display(Name = "Confirm password")]
-            [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+            [Compare("Password", ErrorMessage = "The password and confirm password do not match.")]
             public string ConfirmPassword { get; set; }
         }
 
@@ -89,12 +91,9 @@ namespace UMS.Areas.Identity.Pages.Account
                 { 
                     UserName = Input.Email, 
                     Email = Input.Email,
-                    acc_User = Input.Email,
                     acc_Firstname = Input.acc_Firstname,
                     acc_Lastname = Input.acc_Lastname,
-                    acc_IsActive = 'Y',
-                    acc_ro_Id = 2,
-                    acc_ta_Id = 1
+                    acc_IsActive = 'Y'
                 };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
