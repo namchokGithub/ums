@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 /*
  * Namespace: ~/Models/EditProfileContext.cs
- * Author: Wannapa
+ * Author: Wannapa Srijermtong
  * Description: Context for Account model
  */
 namespace UMS.Models
