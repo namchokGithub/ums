@@ -84,11 +84,11 @@ namespace UMS.Controllers
         [HttpPost]
         public IActionResult editUser(EditAccount _account)
         {
-            Console.WriteLine(HttpContext.Request.Form["acc_RoleId"].ToString());
-            var i = HttpContext.Request.Form["acc_RoleId"].ToString();
+
             // Check if select role form selection in form
             if (HttpContext.Request.Form["acc_RoleId"].ToString() != "0")
             {
+                // Has condition in store procedure if equal zero or '' it's nothing happened
                 _account.acc_Rolename = HttpContext.Request.Form["acc_RoleId"].ToString();
             }
 
