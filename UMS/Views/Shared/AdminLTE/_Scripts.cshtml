@@ -23,6 +23,16 @@
 
 <!-- page script -->
 <script>
+    // For show name in top bar
+    $(document).ready(function () {
+        $(document).on('shown.lte.pushmenu', function () {
+            $('#user_email').hide();
+        });
+        $(document).on('collapsed.lte.pushmenu', function () {
+            $('#user_email').show();
+        });
+    });
+
     $(function () {
         // Set datatables in user mangement view
         $('#showAllUserTable').DataTable({

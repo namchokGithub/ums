@@ -13,21 +13,21 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Views\_ViewImports.cshtml"
+#line 6 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Views\_ViewImports.cshtml"
 using UMS;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Views\_ViewImports.cshtml"
+#line 7 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Views\_ViewImports.cshtml"
 using UMS.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9bfad4dfe3003555e00a15daa4a1220375d89c86", @"/Views/EditProfile/index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"09e50ace8fe3b4184cf126cd47ae178edfbfa883", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9cc5d94ada11e5d4d5f1390d93fe8321e6fddb41", @"/Views/_ViewImports.cshtml")]
     public class Views_EditProfile_index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("id", new global::Microsoft.AspNetCore.Html.HtmlString("FormProfile"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
