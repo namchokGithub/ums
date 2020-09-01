@@ -21,9 +21,9 @@ using UMS.Models;
 namespace UMS.Controllers
 {
     [Authorize]
-    // [Authorize(Roles = "Admin")]
     public class HomeController : Controller
     {
+        // Variable for manager
         private readonly ILogger<HomeController> _logger;
         private readonly IEmailSender _emailSender;
         private readonly UserManager<ApplicationUser> _userManager;
@@ -41,7 +41,7 @@ namespace UMS.Controllers
          * Author: Namchok Singhachai
          * Description: First page of UMS
          */
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             // Console.WriteLine(User.IsInRole("Admin")); // Check Role of users
             // Set default data
@@ -49,20 +49,21 @@ namespace UMS.Controllers
             // Get ID of user
             var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            var user = await _userManager.FindByIdAsync(UserId);        // Find user
-            var roles = await _userManager.GetRolesAsync(user);         // Get role user
-
+            //var user = await _userManager.FindByIdAsync(UserId);        // Find user
+            //var roles = await _userManager.GetRolesAsync(user);         // Get role user
+            //var ian = roles[0].ToString();
+            
             // Set Data to view
-            ViewData["UserRole"] = roles[0].ToString();
             ViewData["UserId"] = UserId;
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
+        /*
+         * Name: Error
+         * Parameter: none
+         * Author: System
+         * Description: create new model error
+         */
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

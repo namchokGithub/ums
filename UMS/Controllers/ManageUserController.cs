@@ -45,15 +45,33 @@ namespace UMS.Controllers
          */
         public IActionResult Index()
         {
-            // SQL text for exextut procedure
-            string sqltext = "EXEC [dbo].ums_get_all_active_user";
+            try
+            {
+                // Set defalut exception message
+                TempData["exception"] = null;
 
-            // Query data from "dbo.Account" and Convert to List<Account>
-            var user = _accountContext.Account.FromSqlRaw(sqltext).ToList<Account>();
+                // SQL text for exextut procedure
+                string sqltext = "EXEC [dbo].ums_get_all_active_user";
 
-            // Send data to view Index.cshtml
-            ViewData["User"] = user;
-            return View();
+                // Query data from "dbo.Account" and Convert to List<Account>
+                var user = _accountContext.Account.FromSqlRaw(sqltext).ToList<Account>();
+
+                // Check if query is null
+                if (user == null) throw new Exception("Calling a method on a null object reference");
+
+                // Send data to view Index.cshtml
+                ViewData["User"] = user;
+                return View();
+            }
+            catch (Exception e)
+            {
+                // Set sweet alert with error messages
+                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: '" + e.Message + @"', showConfirmButton: true })";
+                // Send alert to home pages
+                TempData["exception"] = message;
+                return View();
+            }
+
         }
 
         /*

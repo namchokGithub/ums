@@ -234,6 +234,6 @@
 
     // Check is update user success
     @if (TempData["UpdateResult"] != null) { @Html.Raw(TempData["UpdateResult"]) /* Swal funciton */ }
-    // Check is update user success
-    @if (TempData["DeleteResult"] != null) { @Html.Raw(TempData["DeleteResult"]) /* Swal funciton */ }
+    // Check is has exception
+    @if (TempData["exception"] != null) { @Html.Raw(TempData["exception"]) /* Swal funciton */ }
 </script>
