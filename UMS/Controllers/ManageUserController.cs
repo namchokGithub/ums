@@ -65,29 +65,10 @@ namespace UMS.Controllers
                 ViewData["User"] = user;
                 return View();
             }
-            catch (SqlException ex)
-            {
-                string errorMessages = "";
-                for (int i = 0; i < ex.Errors.Count; i++)
-                {
-                    errorMessages += "Index #" + i + "\n" +
-                                        "Message: " + ex.Errors[i].Message + "\n" +
-                                        "LineNumber: " + ex.Errors[i].LineNumber + "\n" +
-                                        "Source: " + ex.Errors[i].Source + "\n" +
-                                        "Procedure: " + ex.Errors[i].Procedure + "\n";
-                }
-
-                Console.WriteLine(errorMessages);   
-                // Set sweet alert with error messages
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + errorMessages + @"`, showConfirmButton: true })";
-                // Send alert to home pages
-                TempData["SqlException"] = message;
-                return View();
-            }
             catch (Exception e)
             {
                 // Set sweet alert with error messages
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: '" + e.Message + @"', showConfirmButton: true })";
+                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 // Send alert to home pages
                 TempData["nullException"] = message;
                 return View();
@@ -124,13 +105,13 @@ namespace UMS.Controllers
             } catch (Exception e)
             {
                 // Set sweet alert with error messages
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: '" + e.Message + @"', showConfirmButton: true })";
+                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
 
-                var er = new objectJason
+                var er = new objectJSON
                 {
                     condition = "error",
                     messages = message
-                };
+                }; // Object for set alert
 
                 return new JsonResult(er);
             } // End try catch
@@ -145,15 +126,17 @@ namespace UMS.Controllers
         [HttpPost]
         public IActionResult editUser(EditAccount _account)
         {
+            // Check if parametor is null
+            if (_account == null) throw new Exception("Calling a method on a null object reference");
 
             // Check if select role form selection in form
             if (HttpContext.Request.Form["acc_RoleId"].ToString() != "0")
             {
                 // Has condition in store procedure if equal zero or '' it's nothing happened
                 _account.acc_Rolename = HttpContext.Request.Form["acc_RoleId"].ToString();
-            }
+            } // End if check role
 
-            Console.WriteLine(_account);
+            // Console.WriteLine(_account);
             if (ModelState.IsValid)
             {
 
@@ -172,28 +155,25 @@ namespace UMS.Controllers
                     try
                     {
                         _editaccountContext.SaveChanges();
-                        TempData["UpdateResult"] = @"Swal.fire({
-                                                    icon: 'success',
-                                                    title: 'Successed !',
-                                                    showConfirmButton: false,
-                                                    timer: 1000
-                                                })";
+                        TempData["UpdateResult"] = 
+                            @"Swal.fire({ icon: 'success', title: 'Successed !', showConfirmButton: false, timer: 1000 })";
                         result = true;
                     }
-                    catch
+                    catch (Exception e)
                     {
-                        throw;
-                    }
+                        // Set sweet alert with error messages
+                        string message = 
+                            @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
+                        // Send alert to home pages
+                        TempData["Exception"] = message;
+                        return View();
+                    } // End try catch
                 }
 
             } else
             {
-                TempData["UpdateResult"] = @"Swal.fire({
-                                                    icon: 'error',
-                                                    title: 'Error !',
-                                                    showConfirmButton: true
-                                            })";
                 // return BadRequest(ModelState);
+                TempData["UpdateResult"] = @"Swal.fire({ icon: 'error', title: 'Error !', showConfirmButton: true })";
             } // End if-else
 
             return RedirectToAction("Index");
@@ -208,6 +188,9 @@ namespace UMS.Controllers
         [HttpPost]
         public void deleteUser(string id)
         {
+            // Check if parametor is null
+            if (id == null) throw new Exception("Calling a method on a null object reference");
+
             // SQL text for execute procudure
             string sqlText = $"ums_deleteUser '{id}'";
             // Inactive account by store procedure
@@ -222,19 +205,22 @@ namespace UMS.Controllers
                     _accountContext.SaveChanges();
                     result = true; // If success
                 }
-                catch
+                catch (Exception e)
                 {
-                    throw;
-                }
+                    // Set sweet alert with error messages
+                    string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
+                    // Send alert to home pages
+                    TempData["Exception"] = message;
+                } // End try catch
             }
         } // End deleteUser
 
         /*
-         * Name: objectJason
+         * Name: objectJSON
          * Author: Namchok Snghachai
          * Description: For create json object result to view and check response
          */
-        class objectJason
+        class objectJSON
         {
             public string condition { set; get; } // For check etc. success error and warning
             public string messages { set; get; } // Text explain

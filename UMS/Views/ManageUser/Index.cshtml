@@ -158,37 +158,44 @@
      * Description: Set user to inactive
      */
     function deleteUser(id) {
-        // SweetAlert confirm delete
-        Swal.fire({
-            title: 'Do you want to delete?',
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#28A745',
-            cancelButtonColor: '#DC3545',
-            confirmButtonText: 'Yes'
-        }).then((result) => {
-            // Check if click "Yes"
-            if (result.value) {
-                // Ajax for Inactive user
-                $.ajax({
-                    url: '@Url.Action("deleteUser", "ManageUser")',
-                    data: { id: id },
-                    method: "POST",
-                    error: function (result) {
-                        console.log(result) // Show log of error
-                        // Set message status
-                        let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
-                        let statusText = (result.statusText != '') ? ' (' + result.statusText + ')' : ''
-                        let _text = 'Status : ' + result.status + statusText + statusResText
-                        // Alert message error
-                        Swal.fire({ icon: 'error', title: 'Error !', text: _text, showConfirmButton: true })
-                    } // if error
-                }).done(function () {
-                    console.log("Inactive user success")
-                    alertAndReload()  // for show alert and reload page
-                }); // End ajax for inactive user
-            } // End if result.value
-        })
+        try {
+            // Check Id
+            if (id == null) throw new Error("ID in not defind")
+
+            // SweetAlert confirm delete
+            Swal.fire({
+                title: 'Do you want to delete?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#28A745',
+                cancelButtonColor: '#DC3545',
+                confirmButtonText: 'Yes'
+            }).then((result) => {
+                // Check if click "Yes"
+                if (result.value) {
+                    // Ajax for Inactive user
+                    $.ajax({
+                        url: '@Url.Action("deleteUser", "ManageUser")',
+                        data: { id: id },
+                        method: "POST",
+                        error: function (result) {
+                            console.log(result) // Show log of error
+                            // Set message status
+                            let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
+                            let statusText = (result.statusText != '') ? ' (' + result.statusText + ')' : ''
+                            let _text = 'Status : ' + result.status + statusText + statusResText
+                            // Alert message error
+                            Swal.fire({ icon: 'error', title: 'Error !', text: _text, showConfirmButton: true })
+                        } // if error
+                    }).done(function () {
+                        console.log("Inactive user success")
+                        alertAndReload()  // for show alert and reload page
+                    }); // End ajax for inactive user
+                } // End if result.value
+            }) // End Swal function
+        } catch (err) {
+            Swal.fire({ icon: 'error', title: 'Error !', text: err.message, showConfirmButton: true }) // Alert
+        } // End try catch
     } // End deleteUser
 
     /**
@@ -215,50 +222,57 @@
      * Description: Get active user by ID (Ajax)
      */
     function getUser(id) {
-        // Ajax for get user by id and set to form
-        $.ajax({
-            url: "@Url.Action("getUser", "ManageUser")",
-            data: { id: id },
-            type: "POST",
-            dataType: "JSON",
-            success: function (result) {
-                // Check if id is null will return error
-                if (result['condition'] != "error") {
-                    // Set data to form ]
-                    $('#acc_Id').val(result.acc_Id);
-                    $('#acc_User').val(result.acc_User);
-                    $('#acc_Email').val(result.acc_Email);
-                    $('#acc_IsActive').val(result.acc_IsActive);
-                    $('#acc_Firstname').val(result.acc_Firstname);
-                    $('#acc_Lastname').val(result.acc_Lastname);
+        try {
+            // Check Id
+            if (id == null) throw new Error("ID in not defind")
 
-                    if (result.acc_Rolename === 'Admin') {
-                        $('#acc_RoleId').val(1);
-                    } else if (result.acc_Rolename === 'User') {
-                        $('#acc_RoleId').val(2);
+            // Ajax for get user by id and set to form
+            $.ajax({
+                url: "@Url.Action("getUser", "ManageUser")",
+                data: { id: id },
+                type: "POST",
+                dataType: "JSON",
+                success: function (result) {
+                    // Check if id is null will return error
+                    if (result['condition'] != "error") {
+                        // Set data to form ]
+                        $('#acc_Id').val(result.acc_Id);
+                        $('#acc_User').val(result.acc_User);
+                        $('#acc_Email').val(result.acc_Email);
+                        $('#acc_IsActive').val(result.acc_IsActive);
+                        $('#acc_Firstname').val(result.acc_Firstname);
+                        $('#acc_Lastname').val(result.acc_Lastname);
+
+                        if (result.acc_Rolename === 'Admin') {
+                            $('#acc_RoleId').val(1);
+                        } else if (result.acc_Rolename === 'User') {
+                            $('#acc_RoleId').val(2);
+                        } else {
+                            $('#acc_RoleId').val(0);
+                        } // end check role from select
+
+                        // Show modal
+                        $('#EditUser').modal();
+                        console.log('query success ~');
                     } else {
-                        $('#acc_RoleId').val(0);
-                    } // end check role from select
-
-                    // Show modal
-                    $('#EditUser').modal();
-                    console.log('query success ~');
-                } else {
-                    // Check is has exception
-                    eval(result['messages']) // Excute js
-                    console.log('Query Error!!!');
-                } // End if result is not error
-            },
-            error: function (result) {
-                console.log(result) // show log of error
-                // Set message status
-                let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
-                let statusText = (result.statusText != '') ? ' (' + result.statusText + ')' : ''
-                let _text = 'Status : ' + result.status + statusText + statusResText
-                // Alert message error
-                Swal.fire({ icon: 'error', title: 'Error !', text: _text, showConfirmButton: true })
-            } // End error
-        }) // End ajax for get user by id and set to form
+                        // Check is has exception
+                        eval(result['messages']) // Excute js
+                        console.log('Query Error!!!');
+                    } // End if result is not error
+                },
+                error: function (result) {
+                    console.log(result) // show log of error
+                    // Set message status
+                    let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
+                    let statusText = (result.statusText != '') ? ' (' + result.statusText + ')' : ''
+                    let _text = 'Status : ' + result.status + statusText + statusResText
+                    // Alert message error
+                    Swal.fire({ icon: 'error', title: 'Error !', text: _text, showConfirmButton: true })
+                } // End error
+            }) // End ajax for get user by id and set to form
+        } catch (err) {
+            Swal.fire({ icon: 'error', title: 'Error !', text: err.message, showConfirmButton: true }) // Alert
+        } // End try catch
     } // End getUser
 
     // Check is update user success
@@ -267,4 +281,6 @@
     @if (TempData["nullException"] != null) { @Html.Raw(TempData["nullException"]) /* Swal funciton */ }
     // Check is has exception
     @if (TempData["SqlException"] != null) { @Html.Raw(TempData["SqlException"]) /* Swal funciton */ }
+    // Check is has exception
+    @if (TempData["Exception"] != null) { @Html.Raw(TempData["SqlException"]) /* Swal funciton */ }
 </script>
