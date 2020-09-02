@@ -31,15 +31,15 @@
                 </div>
 
                 <!--Start Input change password-->
-                <div id="acc_OldPassword" class="input-group mb-3 col-12">
+                <div id="acc_OldPassword" class="input-group mb-3 col-12" style="display: none">
                     <input class="form-control" id="acc_Old" type="password" name="acc_OldPassword" placeholder="Old password" />
                     <span id="validation_acc_OldPassword" class="text-danger col-12"></span>
                 </div>
-                <div id="acc_NewPassword" class="input-group mb-3 col-12">
+                <div id="acc_NewPassword" class="input-group mb-3 col-12" style="display: none">
                     <input class="form-control" id="acc_New" type="password" name="acc_NewPassword" placeholder="New password"/>
                     <span id="validation_acc_NewPassword" class="text-danger col-12"></span>
                 </div>
-                <div id="acc_ConfirmPassword" class="input-group mb-3 col-12">
+                <div id="acc_ConfirmPassword" class="input-group mb-3 col-12" style="display: none">
                     <input class="form-control" id="acc_Con" type="password" name="acc_ConfirmPassword" placeholder="Confirm password" />
                     <span id="validation_acc_ConfirmPassword" class="text-danger col-12"></span>
                 </div>
@@ -90,8 +90,8 @@
         });
 
         //Regular expression
-        var RegExname = /^(?=.*[a-z])(?=.*[A-Z])[A-Za-z]+$/;
-        var RegExpassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$!%*?&])[A-Za-z0-9$!%*?&]+$/;
+        var RegExName = /^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$/;
+        var RegExPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$!%*?&])[A-Za-z0-9$!%*?&]+$/;
 
         //Validation for acc_Firstname
         $("#acc_Firstname").keyup(function (e) {
@@ -101,8 +101,8 @@
             var acc_Firstname = $('#acc_Fname').val();
 
             // Validation if acc_Firstname do not math with Regular expression.
-            if (!RegExname.test(acc_Firstname)) {
-                $('#validation_acc_Firstname').html('The Firstname must contain at least <br> 1 uppercase, 1 lowercase and only character.');
+            if(!RegExName.test(acc_Firstname)) {
+                $('#validation_acc_Firstname').html('The Firstname must only character.');
             } else {
                 $('#validation_acc_Firstname').html('');
             }
@@ -116,8 +116,8 @@
             var acc_Lastname = $('#acc_Lname').val();
 
             // Validation if acc_Lastname do not math with Regular expression.
-            if (!RegExname.test(acc_Lastname)) {
-                $('#validation_acc_Lastname').html('The Lastname must contain at least <br> 1 uppercase, 1 lowercase and only character.');
+            if(!RegExName.test(acc_Lastname)) {
+                $('#validation_acc_Lastname').html('The Lastname must contain only character.');
             } else {
                 $('#validation_acc_Lastname').html('');
             }
@@ -147,7 +147,7 @@
             var acc_OldPassword = $('#acc_Old').val();
 
             // Validation if acc_OldPassword do not math with Regular expression.
-            if (!RegExpassword.test(acc_OldPassword)) {
+            if (!RegExPassword.test(acc_OldPassword)) {
                 $('#validation_acc_OldPassword').html('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
             } else {
                 $('#validation_acc_OldPassword').html('');
@@ -162,7 +162,7 @@
             var acc_NewPassword = $('#acc_New').val();
 
             // Validation if acc_NewPassword do not math with Regular expression.
-            if (!RegExpassword.test(acc_NewPassword)) {
+            if (!RegExPassword.test(acc_NewPassword)) {
                 $('#validation_acc_NewPassword').html('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
             } else {
                 $('#validation_acc_NewPassword').html('');
@@ -171,10 +171,8 @@
 
         // Toastr if old password is not match with password hash in database.
         @if (TempData["LoginErrorResult"] != null) { @Html.Raw(TempData["LoginErrorResult"])}
-        // Toastr if EditProfile (Firstname and Lastname) Success.
-        @if (TempData["LoginSuccessResult"] != null) { @Html.Raw(TempData["LoginSuccessResult"])}
         // Toastr if EditProfile (Firstname, Lastname and Change password) Success.
-        @if (TempData["LoginAllSuccessResult"] != null) { @Html.Raw(TempData["LoginAllSuccessResult"])}
+        @if (TempData["LoginSuccessResult"] != null) { @Html.Raw(TempData["LoginSuccessResult"])}
     })
 </script>
 <!--End Script-->
