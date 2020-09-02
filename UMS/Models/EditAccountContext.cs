@@ -20,5 +20,5 @@ namespace UMS.Models
         }
 
         public DbSet<EditAccount> EditAccount { get; set; }
-    }
+    } // End EditAccountContext
 }

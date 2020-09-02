@@ -35,7 +35,7 @@ namespace UMS.Controllers
         {
             _accountContext = accountContext;
             _editaccountContext = editaccountContext;
-        }
+        } // End constructor
 
         /*
          * Name: Index
@@ -55,7 +55,7 @@ namespace UMS.Controllers
 
                 // Query data from "dbo.Account" and Convert to List<Account>
                 var user = _accountContext.Account.FromSqlRaw(sqltext).ToList<Account>();
-
+                
                 // Check if query is null
                 if (user == null) throw new Exception("Calling a method on a null object reference");
 
@@ -72,7 +72,7 @@ namespace UMS.Controllers
                 return View();
             } // End try catch
 
-        }
+        } // End index
 
         /*
          * Name: getUser
@@ -113,7 +113,7 @@ namespace UMS.Controllers
 
                 return new JsonResult(er);
             } // End try catch
-        }
+        } // End get user
         
         /*
          * Name: editUser
@@ -208,11 +208,15 @@ namespace UMS.Controllers
             }
         } // End deleteUser
 
-
+        /*
+         * Name: objectJason
+         * Author: Namchok Snghachai
+         * Description: For create json object result to view and check response
+         */
         class objectJason
         {
-            public string condition { set; get; }
-            public string messages { set; get; }
+            public string condition { set; get; } // For check etc. success error and warning
+            public string messages { set; get; } // Text explain
         }
     } // End class
 }

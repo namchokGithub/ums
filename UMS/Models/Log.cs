@@ -5,9 +5,10 @@ using System.Linq;
 using System.Threading.Tasks;
 
 /*
- * Name: Log.cs
+ * Name: LogAccount.cs
  * Namespace: Models
- * Author: Namchok
+ * Author: Namchok Singhachai
+ * Description: Model of log account
  */
 
 namespace UMS.Models
@@ -21,5 +22,5 @@ namespace UMS.Models
         [Required]
         [Display(Name = "Date")]
         public string log_datetime { set; get; }
-    }
+    } // End Log
 }
