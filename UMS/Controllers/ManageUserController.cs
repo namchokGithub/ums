@@ -9,6 +9,7 @@ using UMS.Areas.Identity.Data;
 using UMS.Models;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.Data.SqlClient;
 
 /*
  * Name: MangeUserController.cs
@@ -49,6 +50,7 @@ namespace UMS.Controllers
             {
                 // Set defalut exception message
                 TempData["nullException"] = null;
+                TempData["SqlException"] = null;
 
                 // SQL text for exextut procedure
                 string sqltext = "EXEC [dbo].ums_get_all_active_user";
@@ -61,6 +63,25 @@ namespace UMS.Controllers
 
                 // Send data to view Index.cshtml
                 ViewData["User"] = user;
+                return View();
+            }
+            catch (SqlException ex)
+            {
+                string errorMessages = "";
+                for (int i = 0; i < ex.Errors.Count; i++)
+                {
+                    errorMessages += "Index #" + i + "\n" +
+                                        "Message: " + ex.Errors[i].Message + "\n" +
+                                        "LineNumber: " + ex.Errors[i].LineNumber + "\n" +
+                                        "Source: " + ex.Errors[i].Source + "\n" +
+                                        "Procedure: " + ex.Errors[i].Procedure + "\n";
+                }
+
+                Console.WriteLine(errorMessages);   
+                // Set sweet alert with error messages
+                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + errorMessages + @"`, showConfirmButton: true })";
+                // Send alert to home pages
+                TempData["SqlException"] = message;
                 return View();
             }
             catch (Exception e)
