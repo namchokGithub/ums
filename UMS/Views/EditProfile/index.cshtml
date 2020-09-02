@@ -31,22 +31,22 @@
                 </div>
 
                 <!--Start Input change password-->
-                <div id="acc_OldPassword" class="input-group mb-3 col-12" style="display: none">
+                <div id="acc_OldPassword" class="input-group mb-3 col-12 d-none">
                     <input class="form-control" id="acc_Old" type="password" name="acc_OldPassword" placeholder="Old password" />
                     <span id="validation_acc_OldPassword" class="text-danger col-12"></span>
                 </div>
-                <div id="acc_NewPassword" class="input-group mb-3 col-12" style="display: none">
+                <div id="acc_NewPassword" class="input-group mb-3 col-12 d-none">
                     <input class="form-control" id="acc_New" type="password" name="acc_NewPassword" placeholder="New password"/>
                     <span id="validation_acc_NewPassword" class="text-danger col-12"></span>
                 </div>
-                <div id="acc_ConfirmPassword" class="input-group mb-3 col-12" style="display: none">
+                <div id="acc_ConfirmPassword" class="input-group mb-3 col-12 d-none">
                     <input class="form-control" id="acc_Con" type="password" name="acc_ConfirmPassword" placeholder="Confirm password" />
                     <span id="validation_acc_ConfirmPassword" class="text-danger col-12"></span>
                 </div>
                 <!--End Input change password-->
 
                 <!--Start Button save password-->
-                <button id="btn_SavePassword" type="submit" class="btn btn-success btn-block">Save</button>
+                <button id="btn_SavePassword" type="submit" class="btn btn-success btn-block d-none">Save</button>
                 <!--End Button save password-->
 
                 <!--End Input edit profile-->
@@ -70,23 +70,16 @@
 </div>
 
 <!--Start Script-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $(document).ready(function () {
-        //Hide input and button for Change password
-        $("#acc_OldPassword").hide();
-        $("#acc_NewPassword").hide();
-        $("#acc_ConfirmPassword").hide();
-        $("#btn_SavePassword").hide();
-
         //Hide href and button SaveProfile for Change password
         $("#href_ChangePassword").click(function () {
             $("#href_ChangePassword").hide();
             $("#btn_SaveProfile").hide();
-            $("#acc_OldPassword").show();
-            $("#acc_NewPassword").show();
-            $("#acc_ConfirmPassword").show();
-            $("#btn_SavePassword").show();
+            $("#acc_OldPassword").removeClass('d-none');
+            $("#acc_NewPassword").removeClass('d-none');
+            $("#acc_ConfirmPassword").removeClass('d-none');
+            $("#btn_SavePassword").removeClass('d-none');
         });
 
         //Regular expression

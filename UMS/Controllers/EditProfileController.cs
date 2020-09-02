@@ -79,7 +79,7 @@ namespace UMS.Controllers
             if (!Regex.IsMatch(acc_Firstname, RegExName))
             {
                 // Toastr if Edit profile blank.
-                TempData["LoginErrorResult"] = @"toastr.warning('The Firstname must only character.')";
+                TempData["LoginErrorResult"] = @"toastr.warning('The Firstname can not be blank and must only character.')";
 
                 return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
             }
@@ -88,13 +88,13 @@ namespace UMS.Controllers
             if (!Regex.IsMatch(acc_Lastname, RegExName))
             {
                 // Toastr if Edit profile blank.
-                TempData["LoginErrorResult"] = @"toastr.warning('The Lastname must only character.')";
+                TempData["LoginErrorResult"] = @"toastr.warning('The Lastname can not be blank and must only character.')";
 
                 return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
             }
 
             // Validation if acc_OldPassword do not math with Regular expression.
-            if (!Regex.IsMatch(acc_OldPassword, RegExPassword))
+            if (!Regex.IsMatch(acc_OldPassword, RegExPassword) && (acc_OldPassword != ""))
             {
                 // Toastr if Edit profile blank.
                 TempData["LoginErrorResult"] = @"toastr.warning('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.')";
@@ -103,7 +103,7 @@ namespace UMS.Controllers
             }
 
             // Validation if acc_NewPassword do not math with Regular expression.
-            if (!Regex.IsMatch(acc_NewPassword, RegExPassword))
+            if (!Regex.IsMatch(acc_NewPassword, RegExPassword) && acc_NewPassword != "")
             {
                 // Toastr if Edit profile blank.
                 TempData["LoginErrorResult"] = @"toastr.warning('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.')";
@@ -112,7 +112,7 @@ namespace UMS.Controllers
             }
 
             // Validation if acc_ConfirmPassword do not math with Regular expression.
-            if (!Regex.IsMatch(acc_ConfirmPassword, RegExPassword))
+            if (!Regex.IsMatch(acc_ConfirmPassword, RegExPassword) && acc_ConfirmPassword != "")
             {
                 // Toastr if Edit profile blank.
                 TempData["LoginErrorResult"] = @"toastr.warning('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.')";
