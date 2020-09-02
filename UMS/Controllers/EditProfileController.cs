@@ -44,7 +44,7 @@ namespace UMS.Controllers
         public IActionResult Index(string Id)
         {
             // SQL text for exextut procedure
-            string sqltext = $"EXEC [dbo].get_User '{Id}'";
+            string sqltext = $"EXEC [dbo].ums_Get_user '{Id}'";
 
             // Query data from "dbo.EditProfile" and Convert to List<EditProfile>
             var user = _editprofileContext.EditProfile.FromSqlRaw(sqltext).ToList<EditProfile>().FirstOrDefault();
