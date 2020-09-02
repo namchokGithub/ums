@@ -39,7 +39,7 @@ namespace UMS.Controllers
          * Name: Index
          * Parameter: Id
          * Author: Wannapa Srijermtong
-         * Description: Show Firstname and Lastname of user
+         * Description: Get Firstname, Lastname and LoginProvider by UserId
          */
         public IActionResult Index(string Id)
         {
@@ -79,7 +79,7 @@ namespace UMS.Controllers
             if (!Regex.IsMatch(acc_Firstname, RegExName))
             {
                 // Toastr if Edit profile blank.
-                TempData["LoginErrorResult"] = @"toastr.warning('The Firstname can not be blank and must only character.')";
+                TempData["EditProfileErrorResult"] = @"toastr.warning('The Firstname can not be blank and must only character.')";
 
                 return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
             }
@@ -88,7 +88,7 @@ namespace UMS.Controllers
             if (!Regex.IsMatch(acc_Lastname, RegExName))
             {
                 // Toastr if Edit profile blank.
-                TempData["LoginErrorResult"] = @"toastr.warning('The Lastname can not be blank and must only character.')";
+                TempData["EditProfileErrorResult"] = @"toastr.warning('The Lastname can not be blank and must only character.')";
 
                 return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
             }
@@ -97,7 +97,7 @@ namespace UMS.Controllers
             if (!Regex.IsMatch(acc_OldPassword, RegExPassword) && (acc_OldPassword != ""))
             {
                 // Toastr if Edit profile blank.
-                TempData["LoginErrorResult"] = @"toastr.warning('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.')";
+                TempData["EditProfileErrorResult"] = @"toastr.warning('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.')";
 
                 return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
             }
@@ -106,7 +106,7 @@ namespace UMS.Controllers
             if (!Regex.IsMatch(acc_NewPassword, RegExPassword) && acc_NewPassword != "")
             {
                 // Toastr if Edit profile blank.
-                TempData["LoginErrorResult"] = @"toastr.warning('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.')";
+                TempData["EditProfileErrorResult"] = @"toastr.warning('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.')";
 
                 return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
             }
@@ -115,7 +115,7 @@ namespace UMS.Controllers
             if (!Regex.IsMatch(acc_ConfirmPassword, RegExPassword) && acc_ConfirmPassword != "")
             {
                 // Toastr if Edit profile blank.
-                TempData["LoginErrorResult"] = @"toastr.warning('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.')";
+                TempData["EditProfileErrorResult"] = @"toastr.warning('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.')";
 
                 return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
             }
@@ -126,7 +126,7 @@ namespace UMS.Controllers
                 // Validation if acc_Firstname and acc_Lastname is not blank.
                 if(acc_Firstname != "" && acc_Lastname != "")
                 {
-                    TempData["LoginSuccessResult"] = @"toastr.success('Edit profile successfully!')";
+                    TempData["EditProfileSuccessResult"] = @"toastr.success('Edit profile successfully!')";
 
                     // SQL text for execute procedure
                     string sqlUpdateUser = $"ums_Update_user '{acc_Id}', '{acc_Firstname}', '{acc_Lastname}'";
@@ -137,7 +137,7 @@ namespace UMS.Controllers
                     return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
                 }
                 // Toastr if Edit profile blank.
-                TempData["LoginErrorResult"] = @"toastr.warning('The input can not be blank!')";
+                TempData["EditProfileErrorResult"] = @"toastr.warning('The input can not be blank!')";
 
                 return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
             }
@@ -150,7 +150,7 @@ namespace UMS.Controllers
                 if (!result.Succeeded)
                 {
                     // Toastr if old password is not match with password hash in database.
-                    TempData["LoginErrorResult"] = @"toastr.warning('Old password is not correct!')";
+                    TempData["EditProfileErrorResult"] = @"toastr.warning('Old password is not correct!')";
 
                     return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
                 }
@@ -174,7 +174,7 @@ namespace UMS.Controllers
                     var hashed = Convert.ToBase64String(dst);
 
                     // Toastr if Edit profile success.
-                    TempData["LoginSuccessResult"] = @"toastr.success('Edit profile successfully!')";
+                    TempData["EditProfileSuccessResult"] = @"toastr.success('Edit profile successfully!')";
 
                     // SQL text for execute procedure
                     string sqlUpdateAll = $"ums_Update_all '{acc_Id}', '{acc_Firstname}', '{acc_Lastname}', '{hashed}'";
@@ -186,7 +186,7 @@ namespace UMS.Controllers
             else
             {
                 // Toastr if Edit profile success.
-                TempData["LoginSuccessResult"] = @"toastr.success('Edit profile successfully!')";
+                TempData["EditProfileSuccessResult"] = @"toastr.success('Edit profile successfully!')";
 
                 // SQL text for execute procedure
                 string sqlUpdateUser = $"ums_Update_user '{acc_Id}', '{acc_Firstname}', '{acc_Lastname}'";
