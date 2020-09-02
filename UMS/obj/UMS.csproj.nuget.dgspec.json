@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Namchok\\Desktop\\สหกิจ\\ums\\UMS\\UMS.csproj": {}
+    "C:\\Users\\Wannapa\\source\\repos\\ums\\UMS\\UMS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Namchok\\Desktop\\สหกิจ\\ums\\EmailService\\EmailService.csproj": {
+    "C:\\Users\\Wannapa\\source\\repos\\ums\\EmailService\\EmailService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Namchok\\Desktop\\สหกิจ\\ums\\EmailService\\EmailService.csproj",
+        "projectUniqueName": "C:\\Users\\Wannapa\\source\\repos\\ums\\EmailService\\EmailService.csproj",
         "projectName": "EmailService",
-        "projectPath": "C:\\Users\\Namchok\\Desktop\\สหกิจ\\ums\\EmailService\\EmailService.csproj",
-        "packagesPath": "C:\\Users\\Namchok\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Namchok\\Desktop\\สหกิจ\\ums\\EmailService\\obj\\",
+        "projectPath": "C:\\Users\\Wannapa\\source\\repos\\ums\\EmailService\\EmailService.csproj",
+        "packagesPath": "C:\\Users\\Wannapa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Wannapa\\source\\repos\\ums\\EmailService\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Namchok\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Wannapa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,21 +68,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Namchok\\Desktop\\สหกิจ\\ums\\UMS\\UMS.csproj": {
+    "C:\\Users\\Wannapa\\source\\repos\\ums\\UMS\\UMS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Namchok\\Desktop\\สหกิจ\\ums\\UMS\\UMS.csproj",
+        "projectUniqueName": "C:\\Users\\Wannapa\\source\\repos\\ums\\UMS\\UMS.csproj",
         "projectName": "UMS",
-        "projectPath": "C:\\Users\\Namchok\\Desktop\\สหกิจ\\ums\\UMS\\UMS.csproj",
-        "packagesPath": "C:\\Users\\Namchok\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Namchok\\Desktop\\สหกิจ\\ums\\UMS\\obj\\",
+        "projectPath": "C:\\Users\\Wannapa\\source\\repos\\ums\\UMS\\UMS.csproj",
+        "packagesPath": "C:\\Users\\Wannapa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Wannapa\\source\\repos\\ums\\UMS\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Namchok\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Wannapa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -92,8 +98,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Namchok\\Desktop\\สหกิจ\\ums\\EmailService\\EmailService.csproj": {
-                "projectPath": "C:\\Users\\Namchok\\Desktop\\สหกิจ\\ums\\EmailService\\EmailService.csproj"
+              "C:\\Users\\Wannapa\\source\\repos\\ums\\EmailService\\EmailService.csproj": {
+                "projectPath": "C:\\Users\\Wannapa\\source\\repos\\ums\\EmailService\\EmailService.csproj"
               }
             }
           }
@@ -174,7 +180,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

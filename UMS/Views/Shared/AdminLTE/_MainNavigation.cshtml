@@ -52,7 +52,7 @@
                     </a>
                 </li> <!-- Home -->
                 <li class="nav-item">
-                    <a asp-controller="EditProfile" asp-action="Index" class="nav-link @Url.MakeActiveClass("EditProfile","Index")">
+                    <a asp-controller="EditProfile" asp-action="Index" asp-route-id="@ViewData["UserId"]" class="nav-link @Url.MakeActiveClass("EditProfile","Index")">
                         <i class="fas fa-address-card"></i> &ensp;
                         <p>Edit Profile</p>
                     </a>
