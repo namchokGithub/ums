@@ -20,27 +20,28 @@
             <!--Start Form profile-->
             <form id="FormProfile" method="post" asp-action="editProfile" asp-controller="EditProfile">
                 <!--Start Input edit profile-->
-                <span class="text-danger small"></span>
                 <input type="hidden" asp-for="acc_Id" id="acc_Id" value="@editProfile.acc_Id" />
-                <div class="input-group mb-3">
-                    <input class="form-control" id="acc_Firstname" name="acc_Firstname" asp-for="acc_Firstname" value="@editProfile.acc_Firstname" />
+                <div id="acc_Firstname" class="input-group mb-3 col-12">
+                    <input class="form-control" id="acc_Fname" type="text" name="acc_Firstname" placeholder="Firstname" asp-for="acc_Firstname" value="@editProfile.acc_Firstname" />
+                    <span id="validation_acc_Firstname" class="text-danger col-12"></span>
                 </div>
-                <div class="input-group mb-3">
-                    <input class="form-control" id="acc_Lastname" name="acc_Lastname" asp-for="acc_Lastname" value="@editProfile.acc_Lastname" />
+                <div id="acc_Lastname" class="input-group mb-3 col-12">
+                    <input class="form-control" id="acc_Lname" type="text" name="acc_Lastname" placeholder="Lastname" asp-for="acc_Lastname" value="@editProfile.acc_Lastname" />
+                    <span id="validation_acc_Lastname" class="text-danger col-12"></span>
                 </div>
 
                 <!--Start Input change password-->
-                <div id="acc_OldPassword" class="input-group mb-3">
-                    <input id="acc_Old" type="password" name="acc_OldPassword" class="form-control" placeholder="Old password" />
-                    <span id="validation_acc_OldPassword" class="text-danger"></span>
+                <div id="acc_OldPassword" class="input-group mb-3 col-12">
+                    <input class="form-control" id="acc_Old" type="password" name="acc_OldPassword" placeholder="Old password" />
+                    <span id="validation_acc_OldPassword" class="text-danger col-12"></span>
                 </div>
-                <div id="acc_NewPassword" class="input-group mb-3">
-                    <input id="acc_New" type="password" name="acc_NewPassword" class="form-control" placeholder="New password"/>
-                    <span id="validation_acc_NewPassword" class="text-danger"></span>
+                <div id="acc_NewPassword" class="input-group mb-3 col-12">
+                    <input class="form-control" id="acc_New" type="password" name="acc_NewPassword" placeholder="New password"/>
+                    <span id="validation_acc_NewPassword" class="text-danger col-12"></span>
                 </div>
-                <div id="acc_ConfirmPassword" class="input-group mb-3">
-                    <input id="acc_Con" type="password" name="acc_ConfirmPassword" class="form-control" placeholder="Confirm password" />
-                    <span id="validation_acc_ConfirmPassword" class="text-danger"></span>
+                <div id="acc_ConfirmPassword" class="input-group mb-3 col-12">
+                    <input class="form-control" id="acc_Con" type="password" name="acc_ConfirmPassword" placeholder="Confirm password" />
+                    <span id="validation_acc_ConfirmPassword" class="text-danger col-12"></span>
                 </div>
                 <!--End Input change password-->
 
@@ -86,15 +87,47 @@
             $("#btn_SavePassword").show();
         });
 
-        // Validation Form
-        $("#FormProfile").keyup(function (e) {
+        //Regular expression
+        var RegExname = /^(?=.*[a-z])(?=.*[A-Z])[A-Za-z]+$/;
+        var RegExpassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$!%*?&])[A-Za-z0-9$!%*?&]+$/;
+
+        //Validation for acc_Firstname
+        $("#acc_Firstname").keyup(function (e) {
             e.preventDefault();
-            var acc_OldPassword = $('#acc_Old').val();
+
+            // Get id from input
+            var acc_Firstname = $('#acc_Fname').val();
+
+            // Validation if acc_Firstname do not math with Regular expression.
+            if (!RegExname.test(acc_Firstname)) {
+                $('#validation_acc_Firstname').html('The Firstname must contain at least <br> 1 uppercase, 1 lowercase and only character.');
+            } else {
+                $('#validation_acc_Firstname').html('');
+            }
+        });
+
+        //Validation for acc_Lastname
+        $("#acc_Lastname").keyup(function (e) {
+            e.preventDefault();
+
+            // Get id from input
+            var acc_Lastname = $('#acc_Lname').val();
+
+            // Validation if acc_Lastname do not math with Regular expression.
+            if (!RegExname.test(acc_Lastname)) {
+                $('#validation_acc_Lastname').html('The Lastname must contain at least <br> 1 uppercase, 1 lowercase and only character.');
+            } else {
+                $('#validation_acc_Lastname').html('');
+            }
+        });
+
+        //Validation for acc_ConfirmPassword
+        $("#acc_ConfirmPassword").keyup(function (e) {
+            e.preventDefault();
+
+            // Get id from input
             var acc_NewPassword = $('#acc_New').val();
             var acc_ConfirmPassword = $('#acc_Con').val();
-
-            //Regular expression
-            var pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$!%*?&])[A-Za-z0-9$!%*?&]+$/;
 
             // Validation if acc_NewPassword do not match with acc_ConfirmPassword.
             if (acc_NewPassword != acc_ConfirmPassword) {
@@ -102,16 +135,32 @@
             } else {
                 $('#validation_acc_ConfirmPassword').html('');
             }
+        });
+
+        //Validation for acc_OldPassword
+        $("#acc_OldPassword").keyup(function (e) {
+            e.preventDefault();
+
+            // Get id from input
+            var acc_OldPassword = $('#acc_Old').val();
 
             // Validation if acc_OldPassword do not math with Regular expression.
-            if (!pattern.test(acc_OldPassword)) {
+            if (!RegExpassword.test(acc_OldPassword)) {
                 $('#validation_acc_OldPassword').html('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
             } else {
                 $('#validation_acc_OldPassword').html('');
             }
+        });
+
+        //Validation for acc_NewPassword
+        $("#acc_NewPassword").keyup(function (e) {
+            e.preventDefault();
+
+            // Get id from input
+            var acc_NewPassword = $('#acc_New').val();
 
             // Validation if acc_NewPassword do not math with Regular expression.
-            if (!pattern.test(acc_NewPassword)) {
+            if (!RegExpassword.test(acc_NewPassword)) {
                 $('#validation_acc_NewPassword').html('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
             } else {
                 $('#validation_acc_NewPassword').html('');
@@ -135,13 +184,7 @@
         color: blue;
         cursor: pointer;
     }
-    #validation_acc_OldPassword {
-        text-align: left;
-    }
-    #validation_acc_NewPassword {
-        text-align: left;
-    }
-    #validation_acc_ConfirmPassword {
+    .text-danger {
         text-align: left;
     }
 </style>
