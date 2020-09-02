@@ -56,8 +56,8 @@
                 <!--End Input edit profile-->
                 <!--Start Button save profile-->
                 <div class="row">
-                    <!--If Login ProviderLogin is not Google, Facebook and Microsoft can change password-->
-                    @if (editProfile.acc_TypeAccoutname != "Google" && editProfile.acc_TypeAccoutname != "Facebook" && editProfile.acc_TypeAccoutname != "Microsoft")
+                    <!--If Login ProviderLogin is Email can change password-->
+                    @if (editProfile.acc_TypeAccoutname == "Email")
                     {
                         <div class="col-8">
                             <p id="href_ChangePassword">Change password</p>
