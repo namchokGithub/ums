@@ -27,14 +27,14 @@ using UMS.Models;
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Views\Shared\_LoginPartial.cshtml"
+#line 1 "C:\Users\Wannapa\Source\Repos\ums\UMS\Views\Shared\_LoginPartial.cshtml"
 using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Views\Shared\_LoginPartial.cshtml"
+#line 2 "C:\Users\Wannapa\Source\Repos\ums\UMS\Views\Shared\_LoginPartial.cshtml"
 using UMS.Areas.Identity.Data;
 
 #line default

@@ -13,35 +13,35 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\_ViewImports.cshtml"
+#line 1 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\_ViewImports.cshtml"
 using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\_ViewImports.cshtml"
+#line 2 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\_ViewImports.cshtml"
 using UMS.Areas.Identity;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\_ViewImports.cshtml"
+#line 3 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\_ViewImports.cshtml"
 using UMS.Areas.Identity.Pages;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\_ViewImports.cshtml"
+#line 5 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\_ViewImports.cshtml"
 using UMS.Areas.Identity.Data;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\Account\_ViewImports.cshtml"
+#line 1 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\Account\_ViewImports.cshtml"
 using UMS.Areas.Identity.Pages.Account;
 
 #line default
@@ -86,7 +86,7 @@ using UMS.Areas.Identity.Pages.Account;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
 #nullable restore
-#line 3 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\Account\Register.cshtml"
+#line 3 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\Account\Register.cshtml"
   
     ViewData["Title"] = "Register";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -115,7 +115,7 @@ using UMS.Areas.Identity.Pages.Account;
                 __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.LabelTagHelper>();
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper);
 #nullable restore
-#line 22 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\Account\Register.cshtml"
+#line 22 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\Account\Register.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Input.acc_Firstname);
 
 #line default
@@ -136,7 +136,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper);
 #nullable restore
-#line 23 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\Account\Register.cshtml"
+#line 23 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\Account\Register.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Input.acc_Firstname);
 
 #line default
@@ -158,7 +158,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.ValidationMessageTagHelper>();
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper);
 #nullable restore
-#line 24 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\Account\Register.cshtml"
+#line 24 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\Account\Register.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Input.acc_Firstname);
 
 #line default
@@ -180,7 +180,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpr
                 __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.LabelTagHelper>();
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper);
 #nullable restore
-#line 27 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\Account\Register.cshtml"
+#line 27 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\Account\Register.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Input.acc_Lastname);
 
 #line default
@@ -201,7 +201,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper);
 #nullable restore
-#line 28 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\Account\Register.cshtml"
+#line 28 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\Account\Register.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Input.acc_Lastname);
 
 #line default
@@ -223,7 +223,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.ValidationMessageTagHelper>();
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper);
 #nullable restore
-#line 29 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\Account\Register.cshtml"
+#line 29 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\Account\Register.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Input.acc_Lastname);
 
 #line default
@@ -455,7 +455,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpr
             }
             BeginWriteTagHelperAttribute();
 #nullable restore
-#line 18 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\Account\Register.cshtml"
+#line 18 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\Account\Register.cshtml"
                                WriteLiteral(Model.ReturnUrl);
 
 #line default

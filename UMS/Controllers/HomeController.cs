@@ -38,7 +38,7 @@ namespace UMS.Controllers
         /*
          * Name: Index
          * Parameter: none
-         * Author: Namchok Singhachai
+         * Author: Wannapa
          * Description: First page of UMS
          */
         public IActionResult Index()
