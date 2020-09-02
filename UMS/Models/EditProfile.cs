@@ -9,6 +9,7 @@ using System.Threading.Tasks;
  * Author: Wannapa Srijermtong
  * Description:  Model for table dbo.Account
  */
+
 namespace UMS.Models
 {
     public class EditProfile
