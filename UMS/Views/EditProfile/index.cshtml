@@ -73,11 +73,13 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $(document).ready(function () {
+        //Hide input and button for Change password
         $("#acc_OldPassword").hide();
         $("#acc_NewPassword").hide();
         $("#acc_ConfirmPassword").hide();
         $("#btn_SavePassword").hide();
 
+        //Hide href and button SaveProfile for Change password
         $("#href_ChangePassword").click(function () {
             $("#href_ChangePassword").hide();
             $("#btn_SaveProfile").hide();
