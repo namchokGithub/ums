@@ -129,7 +129,7 @@ namespace UMS.Controllers
                     TempData["LoginSuccessResult"] = @"toastr.success('Edit profile successfully!')";
 
                     // SQL text for execute procedure
-                    string sqlUpdateUser = $"update_User '{acc_Id}', '{acc_Firstname}', '{acc_Lastname}'";
+                    string sqlUpdateUser = $"ums_Update_user '{acc_Id}', '{acc_Firstname}', '{acc_Lastname}'";
 
                     // Update Account
                     _editprofileContext.Database.ExecuteSqlRaw(sqlUpdateUser);
@@ -177,7 +177,7 @@ namespace UMS.Controllers
                     TempData["LoginSuccessResult"] = @"toastr.success('Edit profile successfully!')";
 
                     // SQL text for execute procedure
-                    string sqlUpdateAll = $"update_All '{acc_Id}', '{acc_Firstname}', '{acc_Lastname}', '{hashed}'";
+                    string sqlUpdateAll = $"ums_Update_all '{acc_Id}', '{acc_Firstname}', '{acc_Lastname}', '{hashed}'";
 
                     // Update Account
                     _editprofileContext.Database.ExecuteSqlRaw(sqlUpdateAll);
@@ -189,7 +189,7 @@ namespace UMS.Controllers
                 TempData["LoginSuccessResult"] = @"toastr.success('Edit profile successfully!')";
 
                 // SQL text for execute procedure
-                string sqlUpdateUser = $"update_User '{acc_Id}', '{acc_Firstname}', '{acc_Lastname}'";
+                string sqlUpdateUser = $"ums_Update_user '{acc_Id}', '{acc_Firstname}', '{acc_Lastname}'";
                 
                 // Update Account
                 _editprofileContext.Database.ExecuteSqlRaw(sqlUpdateUser);
