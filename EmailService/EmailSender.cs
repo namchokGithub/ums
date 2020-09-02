@@ -8,6 +8,12 @@ using System.Security.Authentication;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
+ * Name : EmailSender (extend: IEmailSender)
+ * Author: Namchok Singhachai
+ * Description: Configuration of Email service
+ */
+
 namespace EmailService
 {
     public class EmailSender : IEmailSender
