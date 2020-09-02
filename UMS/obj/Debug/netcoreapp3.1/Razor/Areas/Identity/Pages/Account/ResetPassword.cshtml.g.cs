@@ -13,35 +13,35 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\_ViewImports.cshtml"
+#line 1 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\_ViewImports.cshtml"
 using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\_ViewImports.cshtml"
+#line 2 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\_ViewImports.cshtml"
 using UMS.Areas.Identity;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\_ViewImports.cshtml"
+#line 3 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\_ViewImports.cshtml"
 using UMS.Areas.Identity.Pages;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\_ViewImports.cshtml"
+#line 5 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\_ViewImports.cshtml"
 using UMS.Areas.Identity.Data;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\Account\_ViewImports.cshtml"
+#line 1 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\Account\_ViewImports.cshtml"
 using UMS.Areas.Identity.Pages.Account;
 
 #line default
@@ -88,7 +88,7 @@ using UMS.Areas.Identity.Pages.Account;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
 #nullable restore
-#line 3 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\Account\ResetPassword.cshtml"
+#line 3 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\Account\ResetPassword.cshtml"
   
     ViewData["Title"] = "Reset password";
     Layout = "~/Areas/Identity/Pages/_AuthLayout.cshtml";
@@ -113,7 +113,7 @@ using UMS.Areas.Identity.Pages.Account;
                 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.ValidationSummaryTagHelper>();
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper);
 #nullable restore
-#line 16 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\Account\ResetPassword.cshtml"
+#line 16 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\Account\ResetPassword.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper.ValidationSummary = global::Microsoft.AspNetCore.Mvc.Rendering.ValidationSummary.ModelOnly;
 
 #line default
@@ -135,7 +135,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper.ValidationSumma
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper);
 #nullable restore
-#line 17 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\Account\ResetPassword.cshtml"
+#line 17 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\Account\ResetPassword.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Input.Code);
 
 #line default
@@ -158,7 +158,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.LabelTagHelper>();
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper);
 #nullable restore
-#line 19 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\Account\ResetPassword.cshtml"
+#line 19 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\Account\ResetPassword.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Input.Email);
 
 #line default
@@ -179,7 +179,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper);
 #nullable restore
-#line 20 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\Account\ResetPassword.cshtml"
+#line 20 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\Account\ResetPassword.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Input.Email);
 
 #line default
@@ -201,7 +201,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.ValidationMessageTagHelper>();
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper);
 #nullable restore
-#line 21 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\Account\ResetPassword.cshtml"
+#line 21 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\Account\ResetPassword.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Input.Email);
 
 #line default
@@ -223,7 +223,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpr
                 __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.LabelTagHelper>();
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper);
 #nullable restore
-#line 24 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\Account\ResetPassword.cshtml"
+#line 24 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\Account\ResetPassword.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Input.Password);
 
 #line default
@@ -244,7 +244,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper);
 #nullable restore
-#line 25 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\Account\ResetPassword.cshtml"
+#line 25 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\Account\ResetPassword.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Input.Password);
 
 #line default
@@ -266,7 +266,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.ValidationMessageTagHelper>();
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper);
 #nullable restore
-#line 26 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\Account\ResetPassword.cshtml"
+#line 26 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\Account\ResetPassword.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Input.Password);
 
 #line default
@@ -288,7 +288,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpr
                 __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.LabelTagHelper>();
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper);
 #nullable restore
-#line 29 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\Account\ResetPassword.cshtml"
+#line 29 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\Account\ResetPassword.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Input.ConfirmPassword);
 
 #line default
@@ -309,7 +309,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper);
 #nullable restore
-#line 30 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\Account\ResetPassword.cshtml"
+#line 30 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\Account\ResetPassword.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Input.ConfirmPassword);
 
 #line default
@@ -331,7 +331,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.ValidationMessageTagHelper>();
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper);
 #nullable restore
-#line 31 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\Account\ResetPassword.cshtml"
+#line 31 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\Account\ResetPassword.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Input.ConfirmPassword);
 
 #line default

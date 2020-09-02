@@ -13,35 +13,35 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\_ViewImports.cshtml"
+#line 1 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\_ViewImports.cshtml"
 using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\_ViewImports.cshtml"
+#line 2 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\_ViewImports.cshtml"
 using UMS.Areas.Identity;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\_ViewImports.cshtml"
+#line 3 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\_ViewImports.cshtml"
 using UMS.Areas.Identity.Pages;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\_ViewImports.cshtml"
+#line 5 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\_ViewImports.cshtml"
 using UMS.Areas.Identity.Data;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\Account\_ViewImports.cshtml"
+#line 1 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\Account\_ViewImports.cshtml"
 using UMS.Areas.Identity.Pages.Account;
 
 #line default
@@ -81,7 +81,7 @@ using UMS.Areas.Identity.Pages.Account;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
 #nullable restore
-#line 3 "C:\Users\Wannapa\Source\Repos\ums\UMS\Areas\Identity\Pages\Account\ForgotPasswordConfirmation.cshtml"
+#line 3 "C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Areas\Identity\Pages\Account\ForgotPasswordConfirmation.cshtml"
   
     ViewData["Title"] = "Forgot password confirmation";
     Layout = "~/Views/Shared/_Layout.cshtml";
