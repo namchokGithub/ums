@@ -74,6 +74,9 @@ namespace UMS.Controllers
 
                 if (!result.Succeeded)
                 {
+                    // Toastr if old password is not match with password hash in database.
+                    TempData["LoginErrorResult"] = @"toastr.warning('Old password is not correct!')";
+
                     return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
                 }
                 else
@@ -95,6 +98,9 @@ namespace UMS.Controllers
                     Buffer.BlockCopy(buffer2, 0, dst, 0x11, 0x20);
                     var hashed = Convert.ToBase64String(dst);
 
+                    // Toastr if Edit profile success.
+                    TempData["LoginSuccessResult"] = @"toastr.success('Edit profile successfully!')";
+
                     // SQL text for execute procedure
                     string sqlUpdateAll = $"update_All '{acc_Id}', '{acc_Firstname}', '{acc_Lastname}', '{hashed}'";
 
@@ -104,6 +110,9 @@ namespace UMS.Controllers
             }
             else
             {
+                // Toastr if Edit profile success.
+                TempData["LoginAllSuccessResult"] = @"toastr.success('Edit profile successfully!')";
+
                 // SQL text for execute procedure
                 string sqlUpdateUser = $"update_User '{acc_Id}', '{acc_Firstname}', '{acc_Lastname}'";
                 
