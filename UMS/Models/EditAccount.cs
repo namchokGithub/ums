@@ -5,6 +5,12 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
 
+/*
+ * Namspace: ~/Models/EditAccount
+ * Author: Namchok Singhachai
+ * Description: Model for Edit accout in Manage user
+ */
+
 namespace UMS.Models
 {
     public class EditAccount
@@ -33,5 +39,5 @@ namespace UMS.Models
         public char acc_IsActive { set; get; } // สถานะของบัญชีผู้ใช้
 
         public string acc_Rolename { set; get; } // ชื่อตำแหน่งของผู้ใช้งาน
-    }
+    } // End EditAccount
 }

@@ -13,6 +13,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using UMS.Models;
 
+/*
+ * Name : Startup
+ * Description: For set up the project
+ */
+
 namespace UMS
 {
     public class Startup
@@ -30,7 +35,7 @@ namespace UMS
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // Set conect database
+            // Set connect database
             services.AddDbContext<AccountContext>(options =>
                     options.UseSqlServer(
                        Configuration.GetConnectionString("AuthDbContextConnection")));            
@@ -38,9 +43,11 @@ namespace UMS
                     options.UseSqlServer(
                        Configuration.GetConnectionString("AuthDbContextConnection")));
 
-            // Add mvc
-            services.AddMvcCore().AddDataAnnotations();
-
+            // Set connect database
+            services.AddDbContext<EditProfileContext>(options =>
+                    options.UseSqlServer(
+                       Configuration.GetConnectionString("AuthDbContextConnection")));
+            
             // Service for send email
             var emailConfig = Configuration
                 .GetSection("EmailConfiguration")
@@ -48,9 +55,14 @@ namespace UMS
             services.AddSingleton(emailConfig);
             services.AddScoped<IEmailSender, EmailSender>();
 
+            // Controller with view and add razor pages
             services.AddControllersWithViews();
             services.AddRazorPages();
 
+            // Add mvc
+            services.AddMvcCore().AddDataAnnotations();
+
+            // Service for Google authentication
             services.AddAuthentication()
             .AddGoogle(googleOptions =>
             {
@@ -59,6 +71,7 @@ namespace UMS
                 googleOptions.SignInScheme = IdentityConstants.ExternalScheme;
             });
 
+            // Service for Facebook authentication
             services.AddAuthentication()
             .AddFacebook(facebookOptions =>
             {
@@ -66,6 +79,7 @@ namespace UMS
                 facebookOptions.AppSecret = "bac3818b714dd5282277916f3c56f172";
             });
 
+            // Service for Microsoft authentication
             services.AddAuthentication()
             .AddMicrosoftAccount(microsoftOptions =>
             {

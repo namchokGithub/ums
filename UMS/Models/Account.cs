@@ -54,5 +54,5 @@ namespace UMS.Models
 
         public string acc_TypeAccoutname { set; get; } // ชื่อประเภทของผู้ใช้งาน
 
-    }
+    } // End Account 
 }

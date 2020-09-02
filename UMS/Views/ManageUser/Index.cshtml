@@ -1,16 +1,16 @@
-﻿<!-- Use Edit profile model -->
+﻿<!--
+    Namspace: ~/View/ManageUser/Index.cshtml
+    Author: Namchok Singhachai
+    Description: view for user management
+-->
+
+<!-- Use Edit profile model -->
 @model UMS.Models.EditAccount
 
 @{
     ViewData["Title"] = "Manage User";                  // Set title
     Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";  // Set layout
 }
-
-<!--
-    Namspace: ~/View/ManageUser/Index.cshtml
-    Author: Namchok Singhachai
-    Description: view for user management
--->
 
 <!-- Content -->
 <div class="m-auto ml-1">
@@ -45,6 +45,7 @@
                             <!--Start Manage user table body-->
                             <tbody>
                                 @{ int index = 0; /* For show order in table */ }
+                                <!-- ViewData["User"] is List from query -->
                                 @if (ViewData["User"] != null)
                                 {
                                     @foreach (var item in ViewData["User"] as List<Account>)
@@ -166,6 +167,7 @@
             cancelButtonColor: '#DC3545',
             confirmButtonText: 'Yes'
         }).then((result) => {
+            // Check if click "Yes"
             if (result.value) {
                 // Ajax for Inactive user
                 $.ajax({
@@ -180,12 +182,12 @@
                         let _text = 'Status : ' + result.status + statusText + statusResText
                         // Alert message error
                         Swal.fire({ icon: 'error', title: 'Error !', text: _text, showConfirmButton: true })
-                    }
+                    } // if error
                 }).done(function () {
                     console.log("Inactive user success")
                     alertAndReload()  // for show alert and reload page
-                });
-            }
+                }); // End ajax for inactive user
+            } // End if result.value
         })
     } // End deleteUser
 
@@ -202,7 +204,7 @@
             title: 'Deleted !',
             showConfirmButton: false,
             timer: 1200
-        })
+        }) // End sweetalert
         await location.reload(); // Reload pages
     } // End alertAndReload
 
@@ -213,6 +215,7 @@
      * Description: Get active user by ID (Ajax)
      */
     function getUser(id) {
+        // Ajax for get user by id and set to form
         $.ajax({
             url: "@Url.Action("getUser", "ManageUser")",
             data: { id: id },
@@ -221,7 +224,7 @@
             success: function (result) {
                 // Check if id is null will return error
                 if (result['condition'] != "error") {
-                    // Set data to form update
+                    // Set data to form ]
                     $('#acc_Id').val(result.acc_Id);
                     $('#acc_User').val(result.acc_User);
                     $('#acc_Email').val(result.acc_Email);
@@ -235,7 +238,8 @@
                         $('#acc_RoleId').val(2);
                     } else {
                         $('#acc_RoleId').val(0);
-                    }
+                    } // end check role from select
+
                     // Show modal
                     $('#EditUser').modal();
                     console.log('query success ~');
@@ -243,7 +247,7 @@
                     // Check is has exception
                     eval(result['messages']) // Excute js
                     console.log('Query Error!!!');
-                }
+                } // End if result is not error
             },
             error: function (result) {
                 console.log(result) // show log of error
@@ -253,8 +257,8 @@
                 let _text = 'Status : ' + result.status + statusText + statusResText
                 // Alert message error
                 Swal.fire({ icon: 'error', title: 'Error !', text: _text, showConfirmButton: true })
-            }
-        })
+            } // End error
+        }) // End ajax for get user by id and set to form
     } // End getUser
 
     // Check is update user success

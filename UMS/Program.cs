@@ -7,6 +7,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
+/*
+ * Name : Program
+ * Author: System
+ * Description: Program class of project
+ */
+
 namespace UMS
 {
     public class Program

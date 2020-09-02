@@ -2918,10 +2918,7 @@
         },
         "runtime": {
           "bin/placeholder/EmailService.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       }
     }
   },
@@ -9409,6 +9406,7 @@
       "Microsoft.AspNetCore.Authentication.Facebook >= 3.1.7",
       "Microsoft.AspNetCore.Authentication.Google >= 3.1.7",
       "Microsoft.AspNetCore.Authentication.MicrosoftAccount >= 3.1.7",
+      "Microsoft.AspNetCore.Cryptography.KeyDerivation >= 3.1.7",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.7",
       "Microsoft.AspNetCore.Identity.UI >= 3.1.7",
       "Microsoft.EntityFrameworkCore >= 3.1.7",
@@ -9419,19 +9417,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Namchok\\.nuget\\packages\\": {}
+    "C:\\Users\\Wannapa\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Namchok\\Desktop\\สหกิจ\\ums\\UMS\\UMS.csproj",
+      "projectUniqueName": "C:\\Users\\Wannapa\\source\\repos\\ums\\UMS\\UMS.csproj",
       "projectName": "UMS",
-      "projectPath": "C:\\Users\\Namchok\\Desktop\\สหกิจ\\ums\\UMS\\UMS.csproj",
-      "packagesPath": "C:\\Users\\Namchok\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Namchok\\Desktop\\สหกิจ\\ums\\UMS\\obj\\",
+      "projectPath": "C:\\Users\\Wannapa\\source\\repos\\ums\\UMS\\UMS.csproj",
+      "packagesPath": "C:\\Users\\Wannapa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Wannapa\\source\\repos\\ums\\UMS\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Namchok\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Wannapa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9444,8 +9446,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Namchok\\Desktop\\สหกิจ\\ums\\EmailService\\EmailService.csproj": {
-              "projectPath": "C:\\Users\\Namchok\\Desktop\\สหกิจ\\ums\\EmailService\\EmailService.csproj"
+            "C:\\Users\\Wannapa\\source\\repos\\ums\\EmailService\\EmailService.csproj": {
+              "projectPath": "C:\\Users\\Wannapa\\source\\repos\\ums\\EmailService\\EmailService.csproj"
             }
           }
         }
@@ -9468,6 +9470,10 @@
             "version": "[3.1.7, )"
           },
           "Microsoft.AspNetCore.Authentication.MicrosoftAccount": {
+            "target": "Package",
+            "version": "[3.1.7, )"
+          },
+          "Microsoft.AspNetCore.Cryptography.KeyDerivation": {
             "target": "Package",
             "version": "[3.1.7, )"
           },
@@ -9522,7 +9528,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

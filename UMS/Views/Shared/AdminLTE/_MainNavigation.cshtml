@@ -1,5 +1,10 @@
-﻿@using static UMS.Helpers.NavigationIndicatorHelper;
+﻿<!--
+    Namespace: ~/View/Shared/AdminLTE
+    File: _MainNavigation.cshtml
+    Description: Main side bar of template
+-->
 
+@using static UMS.Helpers.NavigationIndicatorHelper; <!-- For active menu class -->
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
@@ -13,14 +18,15 @@
     <div class="sidebar">
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-1 mb-2 d-flex">
-            
+            <!-- Profile image -->
             <div class="image text-center">
                 <img src="https://image.flaticon.com/icons/svg/560/560216.svg" alt="Profile"
                      class="img-circle elevation-2">
             </div>
-
+            <!-- End profile image -->
+            <!-- Profile name -->
             <div class="info">
-                <!-- If Authenticated show name -->
+                <!-- If Authenticated then show name's user -->
                 @if (User.Identity.IsAuthenticated)
                 {
                     <p class="d-block text-white">Hi!, @User.Identity.Name </p>
@@ -30,8 +36,9 @@
                     <p class="d-block text-white"> Defautl </p>
                 }
             </div>
+            <!-- End profile name -->
         </div>
-
+        <!-- End sidebar user panel (optional) -->
         <!-- Sidebar Menu -->
         <nav class="mt-2">
 
@@ -45,7 +52,7 @@
                     </a>
                 </li> <!-- Home -->
                 <li class="nav-item">
-                    <a asp-controller="EditProfile" asp-action="Index" class="nav-link @Url.MakeActiveClass("EditProfile","Index")">
+                    <a asp-controller="EditProfile" asp-action="Index" asp-route-id="@ViewData["UserId"]" class="nav-link @Url.MakeActiveClass("EditProfile","Index")">
                         <i class="fas fa-address-card"></i> &ensp;
                         <p>Edit Profile</p>
                     </a>
@@ -58,7 +65,8 @@
                             <i class="fas fa-user-cog"></i> &ensp;
                             <p>Manage Users</p>
                         </a>
-                    </li> <!-- Manage users -->
+                    </li>
+                    <!-- Manage users -->
                 } <!-- End if -->
             </ul>
             <!-- End List of menu -->
@@ -67,3 +75,4 @@
     </div>
     <!-- /.sidebar -->
 </aside>
+<!-- End main side bar -->

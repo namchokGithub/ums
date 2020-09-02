@@ -31,3 +31,39 @@ UMS/obj/Debug/netcoreapp3.1/UMS.assets.cache
 UMS/obj/Debug/netcoreapp3.1/UMS.csprojAssemblyReference.cache
 UMS/obj/Debug/netcoreapp3.1/UMS.assets.cache
 UMS/obj/Debug/netcoreapp3.1/UMS.csprojAssemblyReference.cache
+
+*.swp
+*.*~
+project.lock.json
+.DS_Store
+*.pyc
+
+# Visual Studio Code
+.vscode
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+msbuild.log
+msbuild.err
+msbuild.wrn
+EmailService/obj/Debug/netcoreapp3.1/EmailService.csproj.FileListAbsolute.txt
+EmailService/obj/Debug/netcoreapp3.1/EmailService.csprojAssemblyReference.cache
+UMS/bin/Debug/netcoreapp3.1/UMS.StaticWebAssets.xml
+UMS/obj/Debug/netcoreapp3.1/UMS.csproj.FileListAbsolute.txt
+UMS/obj/Debug/netcoreapp3.1/UMS.csprojAssemblyReference.cache
+UMS/obj/Debug/netcoreapp3.1/staticwebassets/UMS.StaticWebAssets.xml

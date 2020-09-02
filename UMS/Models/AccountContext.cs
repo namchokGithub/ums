@@ -20,5 +20,5 @@ namespace UMS.Models
         }
 
         public DbSet<Account> Account { get; set; }
-    }
+    } // End AccountContext
 }
