@@ -5,6 +5,19 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<!--
+    Name: Register.cshtml
+    Namespace: ~/Area/Identity/Pages/Account
+-->
+
+<!--Start Style-->
+<style>
+    #btn_back {
+        width: 60px;
+    }
+</style>
+<!--End Style-->
+
 <div class="hold-transition register-page">
     <div class="register-box">
         <div class="register-logo">
@@ -30,8 +43,9 @@
                     </div>
                     <div class="form-group">
                         <label asp-for="Input.Email"></label><code>*</code>
-                        <input asp-for="Input.Email" class="form-control" />
+                        <input asp-for="Input.Email" class="form-control" onblur="checkUser()" id="acc_Email"/>
                         <span asp-validation-for="Input.Email" class="text-danger"></span>
+                        <span class="text-danger d-none" id="alert_acc_email">This email is already exist.</span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Input.Password"></label><code>*</code>
@@ -60,14 +74,54 @@
 
     @section Scripts {
         <partial name="_ValidationScriptsPartial" />
+        <script>
+
+            $(document).ready(() => {
+                // Check is has exception
+                @if (TempData["Exception"] != null) {@Html.Raw(TempData["Exception"])/* Swal funciton */ }
+            });
+
+            /*
+             * Name: checkUser()
+             * Parameter: none
+             * Author: Namchok Singhachai
+             */
+            function checkUser() {
+                try {
+                    let userStr = $('#acc_Email').val()
+                    // Ajax for check user exits
+                    $.ajax({
+                        url: "@Url.Action("checkUserExist", "ManageUser")",
+                        data: { userStr: userStr},
+                        type: "POST",
+                        dataType: "JSON",
+                        success: function (res) {
+                            // If res qual 1 is the user is exits
+                            if (res) {
+                                $('#alert_acc_email').removeClass('d-none')
+                                console.log('This email is already exist.')
+                            } else {
+                                $('#alert_acc_email').addClass('d-none')
+                                console.log('No user name is exits.')
+                            } // End if
+                        },
+                        error: function (result) {
+                            // Set message status
+                            let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
+                            let _text = 'Status : ' + result.status + statusResText
+                            console.log(result) // show log of error
+                            console.log(_text)
+                            toastr.error(_text)
+                        } // End error
+                    }) // End ajax for check user exits
+                } catch (err) {
+                    console.log(err.message)
+                    toastr.error(err.message)
+                } // End try catch
+
+            } // End checkUser
+
+        </script>
     }
     <!--Ed Script-->
-
-    <!--Start Style-->
-    <style>
-        #btn_back {
-            width: 60px;
-        }
-    </style>
-    <!--End Style-->
 </div>

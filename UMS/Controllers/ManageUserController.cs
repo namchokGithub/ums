@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Data.SqlClient;
 using System.Security.Claims;
+using System.Data;
 
 /*
  * Name: MangeUserController.cs
@@ -51,6 +52,7 @@ namespace UMS.Controllers
             {
                 var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
                 // Set Data to view
+                if (UserId == null) throw new Exception("The user ID not found !.");
                 ViewData["UserId"] = UserId;
 
                 // Set defalut exception message
@@ -131,57 +133,64 @@ namespace UMS.Controllers
         [HttpPost]
         public IActionResult editUser(EditAccount _account)
         {
-            // Check if parametor is null
-            if (_account == null) throw new Exception("Calling a method on a null object reference.");
-
-            // Check if select role form selection in form
-            if (HttpContext.Request.Form["acc_RoleId"].ToString() != "0")
+            try
             {
-                // Has condition in store procedure if equal zero or '' it's nothing happened
-                _account.acc_Rolename = HttpContext.Request.Form["acc_RoleId"].ToString();
-            } // End if check role
+                // Check if parametor is null
+                if (_account == null) throw new Exception("Calling a method on a null object reference.");
 
-            // Console.WriteLine(_account);
-            if (ModelState.IsValid)
-            {
-
-                // SQL text for execute procedure
-                string sqlUpdateUser = $"ums_updateUser '{_account.acc_Id}', '{_account.acc_Firstname}', '{_account.acc_Lastname}'"; // Update name's user
-                string sqlUpdateRoleUser = $"ums_updateRoleUser '{_account.acc_Id}', '{_account.acc_Rolename}'";              // Update role's user
-                
-                // Update Account add UserRoles
-                _editaccountContext.Database.ExecuteSqlRaw(sqlUpdateUser);
-                _editaccountContext.Database.ExecuteSqlRaw(sqlUpdateRoleUser);
-
-                // For check if update success 
-                var result = false;
-                while (!result)
+                // Check if select role form selection in form
+                if (HttpContext.Request.Form["acc_RoleId"].ToString() != "0")
                 {
-                    try
+                    // Has condition in store procedure if equal zero or '' it's nothing happened
+                    _account.acc_Rolename = HttpContext.Request.Form["acc_RoleId"].ToString();
+                } // End if check role
+
+                // Console.WriteLine(_account);
+                if (ModelState.IsValid)
+                {
+
+                    // SQL text for execute procedure
+                    string sqlUpdateUser = $"ums_updateUser '{_account.acc_Id}', '{_account.acc_Firstname}', '{_account.acc_Lastname}'"; // Update name's user
+                    string sqlUpdateRoleUser = $"ums_updateRoleUser '{_account.acc_Id}', '{_account.acc_Rolename}'";              // Update role's user
+
+                    // Update Account add UserRoles
+                    _editaccountContext.Database.ExecuteSqlRaw(sqlUpdateUser);
+                    _editaccountContext.Database.ExecuteSqlRaw(sqlUpdateRoleUser);
+
+                    // For check if update success 
+                    var result = false;
+                    while (!result)
                     {
-                        _editaccountContext.SaveChanges();
-                        TempData["UpdateResult"] =
-                            @"toastr.success('Success !')";
-                        result = true;
+                        try
+                        {
+                            _editaccountContext.SaveChanges();
+                            TempData["UpdateResult"] =
+                                @"toastr.success('Success !')";
+                            result = true;
+                        }
+                        catch (Exception e)
+                        {
+                            // Send alert to home pages
+                            TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
+                            return View();
+                        } // End try catch
                     }
-                    catch (Exception e)
-                    {
-                        // Set sweet alert with error messages
-                        string message = 
-                            @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                        // Send alert to home pages
-                        TempData["Exception"] = message;
-                        return View();
-                    } // End try catch
+
                 }
+                else
+                {
+                    // return BadRequest(ModelState);
+                    TempData["UpdateResult"] = @"Swal.fire({ icon: 'error', title: 'Error !', showConfirmButton: true })";
+                } // End if-else
 
-            } else
+                return RedirectToAction("Index");
+            }
+            catch (Exception e)
             {
-                // return BadRequest(ModelState);
-                TempData["UpdateResult"] = @"Swal.fire({ icon: 'error', title: 'Error !', showConfirmButton: true })";
-            } // End if-else
-
-            return RedirectToAction("Index");
+                // Send alert to home pages
+                TempData["UpdateResult"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
+                return RedirectToAction("Index");
+            }
         } // End editUser
 
         /*
@@ -193,32 +202,67 @@ namespace UMS.Controllers
         [HttpPost]
         public void deleteUser(string id)
         {
-            // Check if parametor is null
-            if (id == null) throw new Exception("Calling a method on a null object reference");
-
-            // SQL text for execute procudure
-            string sqlText = $"ums_deleteUser '{id}'";
-            // Inactive account by store procedure
-            _accountContext.Database.ExecuteSqlRaw(sqlText);
-
-            // For check if inactive success 
-            var result = false;
-            while (!result)
+            try
             {
-                try
+                // Check if parametor is null
+                if (id == null) throw new Exception("Calling a method on a null object reference");
+
+                // SQL text for execute procudure
+                string sqlText = $"ums_deleteUser '{id}'";
+                // Inactive account by store procedure
+                _accountContext.Database.ExecuteSqlRaw(sqlText);
+
+                // For check if inactive success 
+                var result = false;
+                while (!result)
                 {
-                    _accountContext.SaveChanges();
-                    result = true; // If success
+                    try
+                    {
+                        _accountContext.SaveChanges();
+                        result = true; // If success
+                    }
+                    catch (Exception e)
+                    {
+                        // Send alert to home pages
+                        TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
+                    } // End try catch
                 }
-                catch (Exception e)
-                {
-                    // Set sweet alert with error messages
-                    string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                    // Send alert to home pages
-                    TempData["Exception"] = message;
-                } // End try catch
+            }
+            catch (Exception e)
+            {
+                // Send alert to home pages
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
             }
         } // End deleteUser
+
+        /*
+         * Name: checkUserExist
+         * Parameter: user(string)
+         * Author: Namchok Singhachai
+         * Description: Check if user is exist and return 1
+         */
+        [AllowAnonymous]
+        public int checkUserExist(string userStr = "")
+        {
+            try
+            {
+                // Set parameter for get value
+                var checkExits = new SqlParameter("@returnVal", SqlDbType.Int);
+                checkExits.Direction = ParameterDirection.Output;
+
+                // Return value from sture procudure
+                var sqlText = $"EXEC @returnVal=[dbo].ums_Check_user '{userStr}'";
+                _accountContext.Database.ExecuteSqlRaw(sqlText, checkExits);
+
+                return (int)checkExits.Value;
+            }
+            catch (Exception e)
+            {
+                // Send alert to home pages
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
+                return 0;
+            } // End try catch
+        } // End checkUserExist
 
         /*
          * Name: objectJSON
