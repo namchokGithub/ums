@@ -49,11 +49,15 @@ namespace UMS.Areas.Identity.Pages.Account
             [Required]
             [DataType(DataType.Text)]
             [Display(Name = "First Name")]
+            [RegularExpression(@"^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$"
+                , ErrorMessage = "The First name must only character.")]
             public string acc_Firstname { get; set; }
 
             [Required]
             [DataType(DataType.Text)]
             [Display(Name = "Last Name")]
+            [RegularExpression(@"^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$"
+                , ErrorMessage = "The Last name must only character.")]
             public string acc_Lastname { get; set; }
 
             [Required]
