@@ -79,7 +79,7 @@ namespace UMS.Controllers
             if (!Regex.IsMatch(acc_Firstname, RegExName))
             {
                 // Toastr if acc_Firstname do not math with Regular expression.
-                TempData["EditProfileErrorResult"] = @"toastr.warning('The Firstname can not be blank and must only character.')";
+                TempData["EditProfileErrorResult"] = @"toastr.warning('The First name can not be blank and must only character.')";
 
                 return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
             }
@@ -88,7 +88,7 @@ namespace UMS.Controllers
             if (!Regex.IsMatch(acc_Lastname, RegExName))
             {
                 // Toastr if acc_Lastname do not math with Regular expression.
-                TempData["EditProfileErrorResult"] = @"toastr.warning('The Lastname can not be blank and must only character.')";
+                TempData["EditProfileErrorResult"] = @"toastr.warning('The Last name can not be blank and must only character.')";
 
                 return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
             }
