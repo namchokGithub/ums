@@ -34,7 +34,8 @@ namespace UMS.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
-            [EmailAddress]
+            [RegularExpression(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+                , ErrorMessage = "The Email is not valid.")]
             public string Email { get; set; }
         }
 
