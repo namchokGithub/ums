@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
-//using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
@@ -44,7 +41,8 @@ namespace UMS.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
-            [EmailAddress]
+            [RegularExpression(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+                , ErrorMessage = "The Email is not valid.")]
             public string Email { get; set; }
 
             [Required]
@@ -53,6 +51,7 @@ namespace UMS.Areas.Identity.Pages.Account
 
             [Display(Name = "Remember me?")]
             public bool RememberMe { get; set; }
+
             public string ReturnUrl { get; set; }
         }
 
@@ -103,7 +102,7 @@ namespace UMS.Areas.Identity.Pages.Account
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    ModelState.AddModelError(string.Empty, "Your email or password is not valid.");
                     return Page();
                 }
             }
