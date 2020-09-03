@@ -28,11 +28,11 @@
                 <!--Start Input edit profile-->
                 <input type="hidden" asp-for="acc_Id" id="acc_Id" value="@editProfile.acc_Id" />
                 <div id="acc_Firstname" class="input-group mb-3 col-12">
-                    <input class="form-control" id="acc_Fname" type="text" name="acc_Firstname" placeholder="Firstname" asp-for="acc_Firstname" value="@editProfile.acc_Firstname" />
+                    <input class="form-control" id="acc_Fname" type="text" name="acc_Firstname" placeholder="First name" asp-for="acc_Firstname" value="@editProfile.acc_Firstname" />
                     <span id="validation_acc_Firstname" class="text-danger col-12"></span>
                 </div>
                 <div id="acc_Lastname" class="input-group mb-3 col-12">
-                    <input class="form-control" id="acc_Lname" type="text" name="acc_Lastname" placeholder="Lastname" asp-for="acc_Lastname" value="@editProfile.acc_Lastname" />
+                    <input class="form-control" id="acc_Lname" type="text" name="acc_Lastname" placeholder="Last name" asp-for="acc_Lastname" value="@editProfile.acc_Lastname" />
                     <span id="validation_acc_Lastname" class="text-danger col-12"></span>
                 </div>
 
@@ -108,7 +108,7 @@
 
             // Validation if acc_Firstname do not math with Regular expression.
             if(!RegExName.test(acc_Firstname)) {
-                $('#validation_acc_Firstname').html('The Firstname must only character.');
+                $('#validation_acc_Firstname').html('The First name must only character.');
             } else {
                 $('#validation_acc_Firstname').html('');
             }
@@ -123,7 +123,7 @@
 
             // Validation if acc_Lastname do not math with Regular expression.
             if(!RegExName.test(acc_Lastname)) {
-                $('#validation_acc_Lastname').html('The Lastname must contain only character.');
+                $('#validation_acc_Lastname').html('The Last name must contain only character.');
             } else {
                 $('#validation_acc_Lastname').html('');
             }
