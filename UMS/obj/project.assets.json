@@ -2918,7 +2918,10 @@
         },
         "runtime": {
           "bin/placeholder/EmailService.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -9423,11 +9426,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Wannapa\\source\\repos\\ums\\UMS\\UMS.csproj",
+      "projectUniqueName": "C:\\Users\\Wannapa\\Source\\Repos\\ums\\UMS\\UMS.csproj",
       "projectName": "UMS",
-      "projectPath": "C:\\Users\\Wannapa\\source\\repos\\ums\\UMS\\UMS.csproj",
+      "projectPath": "C:\\Users\\Wannapa\\Source\\Repos\\ums\\UMS\\UMS.csproj",
       "packagesPath": "C:\\Users\\Wannapa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Wannapa\\source\\repos\\ums\\UMS\\obj\\",
+      "outputPath": "C:\\Users\\Wannapa\\Source\\Repos\\ums\\UMS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -9446,8 +9449,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Wannapa\\source\\repos\\ums\\EmailService\\EmailService.csproj": {
-              "projectPath": "C:\\Users\\Wannapa\\source\\repos\\ums\\EmailService\\EmailService.csproj"
+            "C:\\Users\\Wannapa\\Source\\Repos\\ums\\EmailService\\EmailService.csproj": {
+              "projectPath": "C:\\Users\\Wannapa\\Source\\Repos\\ums\\EmailService\\EmailService.csproj"
             }
           }
         }
