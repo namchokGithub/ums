@@ -10,6 +10,7 @@ using UMS.Models;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Data.SqlClient;
+using System.Security.Claims;
 
 /*
  * Name: MangeUserController.cs
@@ -48,6 +49,10 @@ namespace UMS.Controllers
         {
             try
             {
+                var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                // Set Data to view
+                ViewData["UserId"] = UserId;
+
                 // Set defalut exception message
                 TempData["nullException"] = null;
                 TempData["SqlException"] = null;
@@ -127,7 +132,7 @@ namespace UMS.Controllers
         public IActionResult editUser(EditAccount _account)
         {
             // Check if parametor is null
-            if (_account == null) throw new Exception("Calling a method on a null object reference");
+            if (_account == null) throw new Exception("Calling a method on a null object reference.");
 
             // Check if select role form selection in form
             if (HttpContext.Request.Form["acc_RoleId"].ToString() != "0")
@@ -155,8 +160,8 @@ namespace UMS.Controllers
                     try
                     {
                         _editaccountContext.SaveChanges();
-                        TempData["UpdateResult"] = 
-                            @"Swal.fire({ icon: 'success', title: 'Successed !', showConfirmButton: false, timer: 1000 })";
+                        TempData["UpdateResult"] =
+                            @"toastr.success('Success !')";
                         result = true;
                     }
                     catch (Exception e)
