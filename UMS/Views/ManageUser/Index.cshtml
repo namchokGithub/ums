@@ -133,8 +133,8 @@
                         <!--End Modal body-->
                         <!--Start Modal footer-->
                         <div class="modal-footer justify-content-between">
-                            <button type="button" class="btn btn-default float-left" onclick="SwalAlert('warning', 'Canceled !')" data-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-success float-right">Save</button>
+                            <button type="button" class="btn btn-default float-left" data-dismiss="modal">Cancel</button>
+                            <button onclick="updateUser()" class="btn btn-success float-right">Save</button>
                         </div>
                         <!--End Modal footer-->
                     </div>
@@ -152,61 +152,95 @@
 <script>
 
     /**
+     * Name: updateUser
+     * Parametor: none
+     * Author: Namchok Singhachai
+     * Description: Check value input
+     */
+    function updateUser() {
+        // Check value
+        if ($('#acc_Id').val() == '') toastr.error('ID not found.')
+        if ($('#acc_User').val() == '') toastr.error('Username not found.')
+        if ($('#acc_Email').val() == '') toastr.error('Email not found.')
+        if ($('#acc_IsActive').val() == '') toastr.error('User not Active.')
+        if ($('#acc_Firstname').val() == '') toastr.error('Please enter firstname.')
+        if ($('#acc_Lastname').val() == '') toastr.error('Please enter lastname.')
+        if ($('#acc_RoleId').val() == '') toastr.error('Please select role.')
+
+        // Check regex
+        let regex = /^(([a-zA-Z])?[a-zA-Z]*)*$/;
+
+        if (!regex.test($('#acc_Firstname').val())) toastr.error('Firstname has only character.')
+        if (!regex.test($('#acc_Lastname').val())) toastr.error('Lastname has only character.')
+
+        if (
+            $('#acc_Id').val() != '' &&
+            $('#acc_User').val() != '' &&
+            $('#acc_Email').val() != '' &&
+            $('#acc_IsActive').val() != '' &&
+            $('#acc_Firstname').val() != '' &&
+            $('#acc_Lastname').val() != '' &&
+            $('#acc_RoleId').val() != '' &&
+            regex.test($('#acc_Firstname').val()) &&
+            regex.test($('#acc_Lastname').val())
+        ) {
+            console.log($('#acc_Email').val())
+            console.log($('#acc_User').val())
+            console.log('Submit.')
+            //$('ModalEditUser').submit();
+        } // End if check all
+
+    } // End updateUser
+
+    /**
      * Name: deleteUser
      * Parameter: id
      * Author: Namchok Singhachai
      * Description: Set user to inactive
      */
     function deleteUser(id) {
-        // SweetAlert confirm delete
-        Swal.fire({
-            title: 'Do you want to delete?',
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#28A745',
-            cancelButtonColor: '#DC3545',
-            confirmButtonText: 'Yes'
-        }).then((result) => {
-            // Check if click "Yes"
-            if (result.value) {
-                // Ajax for Inactive user
-                $.ajax({
-                    url: '@Url.Action("deleteUser", "ManageUser")',
-                    data: { id: id },
-                    method: "POST",
-                    error: function (result) {
-                        console.log(result) // Show log of error
-                        // Set message status
-                        let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
-                        let statusText = (result.statusText != '') ? ' (' + result.statusText + ')' : ''
-                        let _text = 'Status : ' + result.status + statusText + statusResText
-                        // Alert message error
-                        Swal.fire({ icon: 'error', title: 'Error !', text: _text, showConfirmButton: true })
-                    } // if error
-                }).done(function () {
-                    console.log("Inactive user success")
-                    alertAndReload()  // for show alert and reload page
-                }); // End ajax for inactive user
-            } // End if result.value
-        })
-    } // End deleteUser
+        try {
+            // Check Id and throw if not found
+            if (id == null) throw new Error("ID in not defind")
 
-    /**
-     * Name: alertAndReload
-     * Parameter: none
-     * Author: Namchok Singhachai
-     * Description: for show sweetalert and reload page
-     */
-    async function alertAndReload() {
-        // Function sweetalert
-        await Swal.fire({
-            icon: 'success',
-            title: 'Deleted !',
-            showConfirmButton: false,
-            timer: 1200
-        }) // End sweetalert
-        await location.reload(); // Reload pages
-    } // End alertAndReload
+            // SweetAlert confirm delete
+            Swal.fire({
+                title: 'Do you want to delete?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#28A745',
+                cancelButtonColor: '#DC3545',
+                confirmButtonText: 'Yes'
+            }).then((result) => {
+                if (result.value) {
+                    // Ajax for Inactive user
+                    $.ajax({
+                        url: '@Url.Action("deleteUser", "ManageUser")',
+                        data: { id: id },
+                        method: "POST",
+                        success: () => {
+                            console.log('Success !!')
+                            toastr.success('Success !!')
+                        },
+                        error: function (result) {
+                            // Set message status
+                            let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
+                            let _text = 'Status : ' + result.status  + statusResText
+                            // Alert message error
+                            console.log(result) // Show log of error
+                            console.log(_text) 
+                            toastr.error(_text)
+                        } // if error
+                    }).done(function () {
+                        setTimeout(function () { location.reload(); }, 1000); // Reload pages
+                    }) // End ajax for inactive user
+                } // End if result.value
+            }) // End Swal function
+        } catch (err) {
+            console.log(err.message)
+            toastr.error(err.message)
+        }// End try catch
+    } // End deleteUser
 
     /**
      * Name: getUser
@@ -215,54 +249,66 @@
      * Description: Get active user by ID (Ajax)
      */
     function getUser(id) {
-        // Ajax for get user by id and set to form
-        $.ajax({
-            url: "@Url.Action("getUser", "ManageUser")",
-            data: { id: id },
-            type: "POST",
-            dataType: "JSON",
-            success: function (result) {
-                // Check if id is null will return error
-                if (result['condition'] != "error") {
-                    // Set data to form ]
-                    $('#acc_Id').val(result.acc_Id);
-                    $('#acc_User').val(result.acc_User);
-                    $('#acc_Email').val(result.acc_Email);
-                    $('#acc_IsActive').val(result.acc_IsActive);
-                    $('#acc_Firstname').val(result.acc_Firstname);
-                    $('#acc_Lastname').val(result.acc_Lastname);
+        try {
+            // Check Id
+            if (id == null) throw new Error("ID in not defind")
 
-                    if (result.acc_Rolename === 'Admin') {
-                        $('#acc_RoleId').val(1);
-                    } else if (result.acc_Rolename === 'User') {
-                        $('#acc_RoleId').val(2);
+            // Ajax for get user by id and set to form
+            $.ajax({
+                url: "@Url.Action("getUser", "ManageUser")",
+                data: { id: id },
+                type: "POST",
+                dataType: "JSON",
+                success: function (result) {
+                    // Check if id is null will return error
+                    if (result['condition'] != "error") {
+                        // Set data to form ]
+                        $('#acc_Id').val(result.acc_Id);
+                        $('#acc_IsActive').val(result.acc_IsActive);
+                        $('#acc_Firstname').val(result.acc_Firstname);
+                        $('#acc_Lastname').val(result.acc_Lastname);
+
+                        if (result.acc_Rolename === 'Admin') {
+                            $('#acc_RoleId').val(1);
+                        } else if (result.acc_Rolename === 'User') {
+                            $('#acc_RoleId').val(2);
+                        } else {
+                            $('#acc_RoleId').val(0);
+                        } // end check role from select
+                        console.log('Query success');
+
+                        // Show modal
+                        $('#EditUser').modal();
                     } else {
-                        $('#acc_RoleId').val(0);
-                    } // end check role from select
-
-                    // Show modal
-                    $('#EditUser').modal();
-                    console.log('query success ~');
-                } else {
-                    // Check is has exception
-                    eval(result['messages']) // Excute js
-                    console.log('Query Error!!!');
-                } // End if result is not error
-            },
-            error: function (result) {
-                console.log(result) // show log of error
-                // Set message status
-                let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
-                let statusText = (result.statusText != '') ? ' (' + result.statusText + ')' : ''
-                let _text = 'Status : ' + result.status + statusText + statusResText
-                // Alert message error
-                Swal.fire({ icon: 'error', title: 'Error !', text: _text, showConfirmButton: true })
-            } // End error
-        }) // End ajax for get user by id and set to form
+                        // Check is has exception
+                        eval(result['messages']) // Excute js
+                        console.log('Query Error!!!');
+                    } // End if result is not error
+                },
+                error: function (result) {
+                    // Set message status
+                    let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
+                    let _text = 'Status : ' + result.status + statusResText
+                    console.log(result) // show log of error
+                    console.log(_text)
+                    // Alert message error
+                    toastr.error(_text)
+                } // End error
+            }) // End ajax for get user by id and set to form
+        } catch (err) {
+            console.log(err.message)
+            toastr.error(err.message)
+        } // End try catch
     } // End getUser
 
     // Check is update user success
     @if (TempData["UpdateResult"] != null) { @Html.Raw(TempData["UpdateResult"]) /* Swal funciton */ }
     // Check is has exception
     @if (TempData["nullException"] != null) { @Html.Raw(TempData["nullException"]) /* Swal funciton */ }
+    // Check is has exception
+    @if (TempData["SqlException"] != null) { @Html.Raw(TempData["SqlException"]) /* Swal funciton */ }
+    // Check is has exception
+    @if (TempData["Exception"] != null) { @Html.Raw(TempData["SqlException"]) /* Swal funciton */ }
 </script>
+
+<!-- End Index of Home controller -->

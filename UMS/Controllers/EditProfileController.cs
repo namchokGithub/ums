@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -43,6 +44,10 @@ namespace UMS.Controllers
          */
         public IActionResult Index(string Id)
         {
+            var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            // Set Data to view
+            ViewData["UserId"] = UserId;
+
             // SQL text for exextut procedure
             string sqltext = $"EXEC [dbo].ums_Get_user '{Id}'";
 

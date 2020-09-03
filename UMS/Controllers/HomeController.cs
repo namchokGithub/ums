@@ -28,12 +28,18 @@ namespace UMS.Controllers
         private readonly IEmailSender _emailSender;
         private readonly UserManager<ApplicationUser> _userManager;
 
+        /*
+         * Name: HomeController(Controller)
+         * Parameter: emailSender(IEmailSender), logger(ILogger<HomeController>), userManager(UserManager<ApplicationUser)
+         * Author: Wannapa
+         * Description: First page of UMS
+         */
         public HomeController(IEmailSender emailSender, ILogger<HomeController> logger, UserManager<ApplicationUser> userManager)
         {
             _emailSender = emailSender;
             _logger = logger;
             _userManager = userManager;
-        }
+        } // End HomeController
         
         /*
          * Name: Index
@@ -44,7 +50,6 @@ namespace UMS.Controllers
         public IActionResult Index()
         {
             // Console.WriteLine(User.IsInRole("Admin")); // Check Role of users
-            // Set default data
             TempData["UpdateResult"] = null;
             // Get ID of user
             var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -56,7 +61,7 @@ namespace UMS.Controllers
             // Set Data to view
             ViewData["UserId"] = UserId;
             return View();
-        }
+        } // End Index
 
         /*
          * Name: Error
@@ -68,6 +73,6 @@ namespace UMS.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-    }
+        } // End Error
+    } // End Home controller
 }
