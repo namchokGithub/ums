@@ -15,8 +15,8 @@ using UMS.Areas.Identity.Data;
 using UMS.Models;
 
 /*
- * Name: EditProfileController.cs
- * Namespace: Controllers
+ * Name: RegisterModel.cs
+ * Namespace: UMS.Areas.Identity.Pages.Account
  * Author: Idenity system
  */
 
