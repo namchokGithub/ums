@@ -160,8 +160,6 @@
     function updateUser() {
         // Check value
         if ($('#acc_Id').val() == '') toastr.error('ID not found.')
-        if ($('#acc_User').val() == '') toastr.error('Username not found.')
-        if ($('#acc_Email').val() == '') toastr.error('Email not found.')
         if ($('#acc_IsActive').val() == '') toastr.error('User not Active.')
         if ($('#acc_Firstname').val() == '') toastr.error('Please enter firstname.')
         if ($('#acc_Lastname').val() == '') toastr.error('Please enter lastname.')
@@ -172,23 +170,6 @@
 
         if (!regex.test($('#acc_Firstname').val())) toastr.error('Firstname has only character.')
         if (!regex.test($('#acc_Lastname').val())) toastr.error('Lastname has only character.')
-
-        if (
-            $('#acc_Id').val() != '' &&
-            $('#acc_User').val() != '' &&
-            $('#acc_Email').val() != '' &&
-            $('#acc_IsActive').val() != '' &&
-            $('#acc_Firstname').val() != '' &&
-            $('#acc_Lastname').val() != '' &&
-            $('#acc_RoleId').val() != '' &&
-            regex.test($('#acc_Firstname').val()) &&
-            regex.test($('#acc_Lastname').val())
-        ) {
-            console.log($('#acc_Email').val())
-            console.log($('#acc_User').val())
-            console.log('Submit.')
-            $('ModalEditUser').submit();
-        } // End if check all
 
     } // End updateUser
 
