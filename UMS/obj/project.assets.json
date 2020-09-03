@@ -2918,7 +2918,10 @@
         },
         "runtime": {
           "bin/placeholder/EmailService.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
