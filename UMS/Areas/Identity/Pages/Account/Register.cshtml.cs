@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text;
-using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
@@ -11,7 +8,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using UMS.Areas.Identity.Data;
 
@@ -49,15 +45,20 @@ namespace UMS.Areas.Identity.Pages.Account
             [Required]
             [DataType(DataType.Text)]
             [Display(Name = "First Name")]
+            [RegularExpression(@"^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$"
+                , ErrorMessage = "The First name must only character.")]
             public string acc_Firstname { get; set; }
 
             [Required]
             [DataType(DataType.Text)]
             [Display(Name = "Last Name")]
+            [RegularExpression(@"^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$"
+                , ErrorMessage = "The Last name must only character.")]
             public string acc_Lastname { get; set; }
 
             [Required]
-            [EmailAddress]
+            [RegularExpression(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+                , ErrorMessage = "The Email is not valid.")]
             [Display(Name = "Email")]
             public string Email { get; set; }
 

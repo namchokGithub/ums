@@ -83,8 +83,8 @@ namespace UMS.Controllers
             // Validation if acc_Firstname do not math with Regular expression.
             if (!Regex.IsMatch(acc_Firstname, RegExName))
             {
-                // Toastr if Edit profile blank.
-                TempData["EditProfileErrorResult"] = @"toastr.warning('The Firstname can not be blank and must only character.')";
+                // Toastr if acc_Firstname do not math with Regular expression.
+                TempData["EditProfileErrorResult"] = @"toastr.warning('The First name can not be blank and must only character.')";
 
                 return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
             }
@@ -92,8 +92,8 @@ namespace UMS.Controllers
             // Validation if acc_Lastname do not math with Regular expression.
             if (!Regex.IsMatch(acc_Lastname, RegExName))
             {
-                // Toastr if Edit profile blank.
-                TempData["EditProfileErrorResult"] = @"toastr.warning('The Lastname can not be blank and must only character.')";
+                // Toastr if acc_Lastname do not math with Regular expression.
+                TempData["EditProfileErrorResult"] = @"toastr.warning('The Last name can not be blank and must only character.')";
 
                 return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
             }
@@ -101,7 +101,7 @@ namespace UMS.Controllers
             // Validation if acc_OldPassword do not math with Regular expression.
             if (!Regex.IsMatch(acc_OldPassword, RegExPassword) && (acc_OldPassword != ""))
             {
-                // Toastr if Edit profile blank.
+                // Toastr if acc_OldPassword do not math with Regular expression.
                 TempData["EditProfileErrorResult"] = @"toastr.warning('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.')";
 
                 return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
@@ -110,7 +110,7 @@ namespace UMS.Controllers
             // Validation if acc_NewPassword do not math with Regular expression.
             if (!Regex.IsMatch(acc_NewPassword, RegExPassword) && acc_NewPassword != "")
             {
-                // Toastr if Edit profile blank.
+                // Toastr if acc_NewPassword do not math with Regular expression.
                 TempData["EditProfileErrorResult"] = @"toastr.warning('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.')";
 
                 return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
@@ -119,7 +119,7 @@ namespace UMS.Controllers
             // Validation if acc_ConfirmPassword do not math with Regular expression.
             if (!Regex.IsMatch(acc_ConfirmPassword, RegExPassword) && acc_ConfirmPassword != "")
             {
-                // Toastr if Edit profile blank.
+                // Toastr if acc_ConfirmPassword do not math with Regular expression.
                 TempData["EditProfileErrorResult"] = @"toastr.warning('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.')";
 
                 return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
@@ -131,6 +131,7 @@ namespace UMS.Controllers
                 // Validation if acc_Firstname and acc_Lastname is not blank.
                 if(acc_Firstname != "" && acc_Lastname != "")
                 {
+                    // Toastr if acc_Firstname and acc_Lastname is not blank.
                     TempData["EditProfileSuccessResult"] = @"toastr.success('Edit profile successfully!')";
 
                     // SQL text for execute procedure
