@@ -10,6 +10,12 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using UMS.Areas.Identity.Data;
 
+/*
+ * Name: ConfirmEmailModel.cs
+ * Namespace: UMS.Areas.Identity.Pages.Account
+ * Author: Idenity system
+ */
+
 namespace UMS.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
@@ -25,23 +31,40 @@ namespace UMS.Areas.Identity.Pages.Account
         [TempData]
         public string StatusMessage { get; set; }
 
+        /*
+         * Name: OnGetAsync
+         * Parameter: userId(string), code(String)
+         * Description: Check code and user before confirm email
+         */
         public async Task<IActionResult> OnGetAsync(string userId, string code)
         {
-            if (userId == null || code == null)
+            try
             {
-                return RedirectToPage("/Index");
-            }
+                if (userId == null || code == null)
+                {
+                    return RedirectToPage("/Index");
+                }
 
-            var user = await _userManager.FindByIdAsync(userId);
-            if (user == null)
+                var user = await _userManager.FindByIdAsync(userId);
+                if (user == null)
+                {
+                    return NotFound($"Unable to load user with ID '{userId}'.");
+                }
+
+                code = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(code));
+                var result = await _userManager.ConfirmEmailAsync(user, code);
+                StatusMessage = result.Succeeded ? "Thank you for confirming your email." : "Error confirming your email.";
+
+                return Page();
+            } catch (Exception e)
             {
-                return NotFound($"Unable to load user with ID '{userId}'.");
-            }
+                // Set sweet alert with error messages
+                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
+                // Send alert to home pages
+                TempData["Exception"] = message;
 
-            code = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(code));
-            var result = await _userManager.ConfirmEmailAsync(user, code);
-            StatusMessage = result.Succeeded ? "Thank you for confirming your email." : "Error confirming your email.";
-            return Page();
-        }
-    }
+                return Page();
+            } // End try catch
+        } // End OnGetAsync
+    }// End ConfirmEmailModel
 }

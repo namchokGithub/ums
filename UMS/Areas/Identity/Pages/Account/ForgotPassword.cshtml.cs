@@ -14,6 +14,12 @@ using UMS.Areas.Identity.Data;
 using EmailService;
 using System.Linq;
 
+/*
+ * Name: ForgotPasswordModel.cs
+ * Namespace: UMS.Areas.Identity.Pages.Account
+ * Author: Idenity system
+ */
+
 namespace UMS.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
@@ -26,43 +32,56 @@ namespace UMS.Areas.Identity.Pages.Account
         {
             _userManager = userManager;
             _emailSender = emailSender;
-        }
+        } // End contructor
 
         [BindProperty]
-        public InputModel Input { get; set; }
+        public InputModel Input { get; set; } // For input value
 
+        /*
+         * Name: InputModel
+         * Description: for input email and ser expession
+         */
         public class InputModel
         {
             [Required]
-            [EmailAddress]
+            [RegularExpression(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+                , ErrorMessage = "The Email is not valid.")]
             public string Email { get; set; }
-        }
+        } // End InputModel
 
+        /*
+         * Name: OnPostAsync
+         * Parameter: none
+         * Description: Send email for set password.
+         */
         public async Task<IActionResult> OnPostAsync()
         {
-            if (ModelState.IsValid)
+            try
             {
-                var user = await _userManager.FindByEmailAsync(Input.Email);
-
-                if (user == null)
+                if (ModelState.IsValid)
                 {
-                    // Don't have this user
-                    Console.WriteLine("Not found User!!");
-                    return RedirectToPage("Login");
-                }
+                    var user = await _userManager.FindByEmailAsync(Input.Email); // Find user
 
-                var code = await _userManager.GeneratePasswordResetTokenAsync(user);
-                code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-                var callbackUrl = Url.Page(
-                    "/Account/ResetPassword",
-                    pageHandler: null,
-                    values: new { area = "Identity", code },
-                    protocol: Request.Scheme);
-                
-                var message = new Message(
-                    new string[] { Input.Email }, 
-                    "Reset Password",
-                    @$"
+                    if (user == null)
+                    {
+                        // Don't have this user
+                        Console.WriteLine("Not found User!!");
+                        return RedirectToPage("Login");
+                    } // End check user is null
+
+                    var code = await _userManager.GeneratePasswordResetTokenAsync(user); // Gen token for this user
+                    code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+
+                    var callbackUrl = Url.Page(
+                        "/Account/ResetPassword",
+                        pageHandler: null,
+                        values: new { area = "Identity", code },
+                        protocol: Request.Scheme); // Craete call back url
+
+                    var message = new Message(
+                        new string[] { Input.Email },
+                        "Reset Password",
+                        @$"
                         <h2>Hello!, {Input.Email} </h2>
                         <br>
                         We got a request to reset your UMS password.
@@ -79,13 +98,22 @@ namespace UMS.Areas.Identity.Pages.Account
                         <br>
                         User Management System
                       "
-                );
-                await _emailSender.SendEmailAsync(message);
+                        ); // End craete message 
 
-                return RedirectToPage("./ForgotPasswordConfirmation");
-            }
+                    await _emailSender.SendEmailAsync(message);
 
-            return Page();
-        }
-    }
+                    return RedirectToPage("./ForgotPasswordConfirmation");
+                }
+
+                return Page();
+            } catch (Exception e)
+            {
+                // Set sweet alert with error messages
+                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
+                // Send alert to home pages
+                TempData["Exception"] = message;
+                return Page();
+            } // End try catch
+        } // End OnPostAsync
+    } // End ForgotPasswordModel
 }

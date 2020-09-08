@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 /*
  * Namespace: ~/Models/EditProfile.cs
@@ -20,5 +16,7 @@ namespace UMS.Models
         public string acc_Firstname { set; get; } // ชื่อจริง
 
         public string acc_Lastname { set; get; } // นามสกุล
+
+        public string acc_TypeAccoutname { set; get; } // ชื่อประเภทของผู้ใช้งาน
     }
 }

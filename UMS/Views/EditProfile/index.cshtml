@@ -1,4 +1,10 @@
-﻿@model EditProfile
+﻿<!--
+    Namspace: ~/View/EditProfile/Index.cshtml
+    Author: Wannapa Srijermtong
+    Description: View for edit profile
+-->
+
+@model EditProfile
 @{
     ViewData["Title"] = "Edit Profile";
     Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
@@ -22,11 +28,11 @@
                 <!--Start Input edit profile-->
                 <input type="hidden" asp-for="acc_Id" id="acc_Id" value="@editProfile.acc_Id" />
                 <div id="acc_Firstname" class="input-group mb-3 col-12">
-                    <input class="form-control" id="acc_Fname" type="text" name="acc_Firstname" placeholder="Firstname" asp-for="acc_Firstname" value="@editProfile.acc_Firstname" />
+                    <input class="form-control" id="acc_Fname" type="text" name="acc_Firstname" placeholder="First name" asp-for="acc_Firstname" value="@editProfile.acc_Firstname" />
                     <span id="validation_acc_Firstname" class="text-danger col-12"></span>
                 </div>
                 <div id="acc_Lastname" class="input-group mb-3 col-12">
-                    <input class="form-control" id="acc_Lname" type="text" name="acc_Lastname" placeholder="Lastname" asp-for="acc_Lastname" value="@editProfile.acc_Lastname" />
+                    <input class="form-control" id="acc_Lname" type="text" name="acc_Lastname" placeholder="Last name" asp-for="acc_Lastname" value="@editProfile.acc_Lastname" />
                     <span id="validation_acc_Lastname" class="text-danger col-12"></span>
                 </div>
 
@@ -36,7 +42,7 @@
                     <span id="validation_acc_OldPassword" class="text-danger col-12"></span>
                 </div>
                 <div id="acc_NewPassword" class="input-group mb-3 col-12 d-none">
-                    <input class="form-control" id="acc_New" type="password" name="acc_NewPassword" placeholder="New password"/>
+                    <input class="form-control" id="acc_New" type="password" name="acc_NewPassword" placeholder="New password" />
                     <span id="validation_acc_NewPassword" class="text-danger col-12"></span>
                 </div>
                 <div id="acc_ConfirmPassword" class="input-group mb-3 col-12 d-none">
@@ -44,21 +50,28 @@
                     <span id="validation_acc_ConfirmPassword" class="text-danger col-12"></span>
                 </div>
                 <!--End Input change password-->
-
                 <!--Start Button save password-->
                 <button id="btn_SavePassword" type="submit" class="btn btn-success btn-block d-none">Save</button>
                 <!--End Button save password-->
-
                 <!--End Input edit profile-->
-
                 <!--Start Button save profile-->
                 <div class="row">
-                    <div class="col-8">
-                        <p id="href_ChangePassword">Change password</p>
-                    </div>
-                    <div class="col-4">
-                        <button id="btn_SaveProfile" type="submit" class="btn btn-success btn-block float-right">Save</button>
-                    </div>
+                    <!--If Login ProviderLogin is Email can change password-->
+                    @if (editProfile.acc_TypeAccoutname == "Email")
+                    {
+                        <div class="col-8">
+                            <p id="href_ChangePassword">Change password</p>
+                        </div>
+                        <div class="col-4">
+                            <button id="btn_SaveProfile" type="submit" class="btn btn-success btn-block float-right">Save</button>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col-12">
+                            <button id="btn_SaveProfile" type="submit" class="btn btn-success btn-block float-right">Save</button>
+                        </div>
+                    }
                 </div>
                 <!--End Button save profile-->
             </form>
@@ -95,7 +108,7 @@
 
             // Validation if acc_Firstname do not math with Regular expression.
             if(!RegExName.test(acc_Firstname)) {
-                $('#validation_acc_Firstname').html('The Firstname must only character.');
+                $('#validation_acc_Firstname').html('The First name must only character.');
             } else {
                 $('#validation_acc_Firstname').html('');
             }
@@ -110,7 +123,7 @@
 
             // Validation if acc_Lastname do not math with Regular expression.
             if(!RegExName.test(acc_Lastname)) {
-                $('#validation_acc_Lastname').html('The Lastname must contain only character.');
+                $('#validation_acc_Lastname').html('The Last name must contain only character.');
             } else {
                 $('#validation_acc_Lastname').html('');
             }
@@ -163,13 +176,14 @@
         });
 
         // Toastr if old password is not match with password hash in database.
-        @if (TempData["LoginErrorResult"] != null) { @Html.Raw(TempData["LoginErrorResult"])}
+        @if (TempData["EditProfileErrorResult"] != null) { @Html.Raw(TempData["EditProfileErrorResult"])}
         // Toastr if EditProfile (Firstname, Lastname and Change password) Success.
-        @if (TempData["LoginSuccessResult"] != null) { @Html.Raw(TempData["LoginSuccessResult"])}
+        @if (TempData["EditProfileSuccessResult"] != null) { @Html.Raw(TempData["EditProfileSuccessResult"])}
+        // Exeception
+        @if (TempData["Exeception"] != null) { @Html.Raw(TempData["Exeception"])}
     })
 </script>
 <!--End Script-->
-
 <!--Start Style-->
 <style>
     #href_ChangePassword {
@@ -177,6 +191,7 @@
         color: blue;
         cursor: pointer;
     }
+
     .text-danger {
         text-align: left;
     }

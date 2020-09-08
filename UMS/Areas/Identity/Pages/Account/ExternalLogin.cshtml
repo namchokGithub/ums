@@ -2,7 +2,14 @@
 @model ExternalLoginModel
 @{
     ViewData["Title"] = "Register";
+    Layout = "~/Areas/Identity/Pages/_AuthLayout.cshtml";
 }
+
+<!--
+    Namespace: ~/Areas/Identity/Pages/Account/ExternalLogin.cshtml
+    Author: Namchok Singhachai
+    Description: External Login.
+-->
 
 <h1>@ViewData["Title"]</h1>
 <h4 id="external-login-title">Associate your @Model.ProviderDisplayName account.</h4>

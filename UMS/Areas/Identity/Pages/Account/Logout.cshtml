@@ -2,7 +2,13 @@
 @model LogoutModel
 @{
     ViewData["Title"] = "Log out";
+    Layout = "~/Areas/Identity/Pages/_AuthLayout.cshtml";
 }
+
+<!--
+    Namespace: ~/Areas/Identity/Pages/Account/Logout.cshtml
+    Description: Show when logged out.
+-->
 
 <header>
     <h1>@ViewData["Title"]</h1>

@@ -6,6 +6,12 @@
     Layout = "~/Areas/Identity/Pages/_AuthLayout.cshtml";
 }
 
+<!--
+    Namespace: ~/Areas/Identity/Pages/Account/Login.cshtml
+    Author: Wannapa
+    Description: For login.
+-->
+
 <div class="hold-transition login-page">
     <div class="login-box">
         <h3 class="login-box-msg">User Management System</h3>
@@ -59,7 +65,6 @@
                         </div>
                         <!--Endt Button login-->
                     </div>
-                    <div asp-validation-summary="All" class="text-danger small"></div>
                 </form>
                 <!--End Form login-->
                 <!--Start Social media login-->
@@ -87,7 +92,11 @@
 
     <!--Start Script-->
     @section Scripts {
-        <partial name="_ValidationScriptsPartial" />
+        <partial name="_ValidationScriptsPartial" />    
+        <script>
+            // Check is has exception
+            @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ }
+        </script>
     }
     <!--End Script-->
 
