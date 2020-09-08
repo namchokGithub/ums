@@ -154,6 +154,18 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.4, )"
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[4.7.4, )"
+            },
+            "NLog.Config": {
+              "target": "Package",
+              "version": "[4.7.4, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[4.9.3, )"
             }
           },
           "imports": [

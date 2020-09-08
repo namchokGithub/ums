@@ -61,6 +61,7 @@ namespace UMS.Controllers
 
             // Set Data to view
             ViewData["UserId"] = UserId;
+            _logger.LogInformation("Welcome!");
             return View();
         } // End Index
 
