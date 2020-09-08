@@ -57,6 +57,7 @@
                                             <td><center> @((item.acc_Rolename != null) ? item.acc_Rolename : "-") </center></td>
                                             <td><center> @((item.acc_TypeAccoutname != null) ? item.acc_TypeAccoutname : "-") </center></td>
                                             <td class="text-center">
+                                                <input type="hidden" asp-for="acc_Id" value="@item.acc_Id">
                                                 <button class="btn btn-warning text-white" onclick="getUser('@item.acc_Id')"><i class="fa fa-pencil-alt"></i></button>
                                                 <button class="btn btn-danger" onclick="deleteUser('@item.acc_Id')"><i class="fa fa-times"></i></button>
                                             </td>

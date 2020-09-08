@@ -179,6 +179,8 @@
         @if (TempData["EditProfileErrorResult"] != null) { @Html.Raw(TempData["EditProfileErrorResult"])}
         // Toastr if EditProfile (Firstname, Lastname and Change password) Success.
         @if (TempData["EditProfileSuccessResult"] != null) { @Html.Raw(TempData["EditProfileSuccessResult"])}
+        // Exeception
+        @if (TempData["Exeception"] != null) { @Html.Raw(TempData["Exeception"])}
     })
 </script>
 <!--End Script-->

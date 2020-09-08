@@ -50,14 +50,14 @@ namespace UMS.Controllers
         {
             try
             {
+                // Set defalut exception message
+                TempData["nullException"] = null;
+                TempData["SqlException"] = null;
+
                 var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
                 // Set Data to view
                 if (UserId == null) throw new Exception("The user ID not found !.");
                 ViewData["UserId"] = UserId;
-
-                // Set defalut exception message
-                TempData["nullException"] = null;
-                TempData["SqlException"] = null;
 
                 // SQL text for exextut procedure
                 string sqltext = "EXEC [dbo].ums_get_all_active_user";
@@ -190,7 +190,7 @@ namespace UMS.Controllers
                 // Send alert to home pages
                 TempData["UpdateResult"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 return RedirectToAction("Index");
-            }
+            } // End try catch
         } // End editUser
 
         /*
@@ -232,7 +232,7 @@ namespace UMS.Controllers
             {
                 // Send alert to home pages
                 TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-            }
+            } // End try catch
         } // End deleteUser
 
         /*
@@ -241,7 +241,7 @@ namespace UMS.Controllers
          * Author: Namchok Singhachai
          * Description: Check if user is exist and return 1
          */
-        [AllowAnonymous]
+        [AllowAnonymous] // For register
         public int checkUserExist(string userStr = "")
         {
             try
@@ -273,7 +273,7 @@ namespace UMS.Controllers
         {
             public string condition { set; get; } // For check etc. success error and warning
             public string messages { set; get; } // Text explain
-        }
+        } // End objectJSON
     } // End class
 }
     

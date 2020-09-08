@@ -40,7 +40,7 @@ namespace UMS.Controllers
             _logger = logger;
             _userManager = userManager;
         } // End HomeController
-        
+
         /*
          * Name: Index
          * Parameter: none
@@ -49,20 +49,28 @@ namespace UMS.Controllers
          */
         public IActionResult Index()
         {
-            // Console.WriteLine(User.IsInRole("Admin")); // Check Role of users
-            TempData["UpdateResult"] = null;
-            // Get ID of user
-            var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            if (UserId == null) throw new Exception("The user ID not found !.");
+            try
+            {
+                // Console.WriteLine(User.IsInRole("Admin")); // Check Role of users
+                TempData["UpdateResult"] = null;
+                // Get ID of user
+                var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                if (UserId == null) throw new Exception("The user ID not found !.");
 
-            //var user = await _userManager.FindByIdAsync(UserId);        // Find user
-            //var roles = await _userManager.GetRolesAsync(user);         // Get role user
-            //var ian = roles[0].ToString();
+                //var user = await _userManager.FindByIdAsync(UserId);        // Find user
+                //var roles = await _userManager.GetRolesAsync(user);         // Get role user
+                //var ian = roles[0].ToString();
 
-            // Set Data to view
-            ViewData["UserId"] = UserId;
-            _logger.LogInformation("Welcome!");
-            return View();
+                // Set Data to view
+                ViewData["UserId"] = UserId;
+                return View();
+            }
+            catch (Exception e)
+            {
+                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
+                TempData["nullException"] = message;
+                return View();
+            } // End try catch
         } // End Index
 
         /*
