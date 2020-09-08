@@ -8,6 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using UMS.Areas.Identity.Data;
 using UMS.Models;
 
+/*
+ * Name: AuthDbContext (Extend: IdentityDbContext<ApplicationUser>)
+ * Namespace: ~/Area/Identity/Data
+ */
+
 namespace UMS.Data
 {
     public class AuthDbContext : IdentityDbContext<ApplicationUser>
@@ -15,8 +20,13 @@ namespace UMS.Data
         public AuthDbContext(DbContextOptions<AuthDbContext> options)
             : base(options)
         {
-        }
+        } // End contructor
 
+        /*
+         * Name: OnModelCreating
+         * Parametor: builder(ModelBuilder)
+         * Description: For config the modal before creat database
+         */
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -64,6 +74,6 @@ namespace UMS.Data
                 entity.Property(e => e.la_log_Id).HasColumnName("la_log_Id");
                 entity.Property(e => e.la_acc_Id).HasColumnName("la_acc_Id");
             });
-        }
-    }
+        } // End OnModelCreating
+    } // End AuthDbContext
 }

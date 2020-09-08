@@ -8,11 +8,22 @@ using Microsoft.Extensions.DependencyInjection;
 using UMS.Areas.Identity.Data;
 using UMS.Data;
 
+/*
+ * Name: IdentityHostingStartup (Extend: IHostingStartup)
+ * Namespace: ~/Area/Identity
+ * Description: For config of Identity
+ */
+
 [assembly: HostingStartup(typeof(UMS.Areas.Identity.IdentityHostingStartup))]
 namespace UMS.Areas.Identity
 {
     public class IdentityHostingStartup : IHostingStartup
     {
+        /*
+         * Name: Configura
+         * Parameter: builder(IWebHostBuilder)
+         * Description: Configuration for Identity
+         */
         public void Configure(IWebHostBuilder builder)
         {
             builder.ConfigureServices((context, services) => {
@@ -31,6 +42,6 @@ namespace UMS.Areas.Identity
                     .AddRoles<IdentityRole>()
                     .AddEntityFrameworkStores<AuthDbContext>();
             });
-        }
-    }
+        } // End Configure
+    } // End IdentityHostingStartup
 }

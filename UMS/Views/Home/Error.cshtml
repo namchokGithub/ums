@@ -1,6 +1,4 @@
-﻿@page
-@model AccessDeniedModel
-@{
+﻿@{
     ViewData["Title"] = "Access Denied";
 }
 
@@ -9,7 +7,6 @@
     Author: Namchok Singhachai
     Description: Access Denied page
 -->
-
 <!-- Content -->
 <div class="hold-transition login-page">
     <div class="login-box mx-auto mt-2 mt-lg-3">
@@ -23,7 +20,7 @@
                 <br><br>
                 <h4 class="text-black-50">You do not have access to this resource.</h4>
                 <!-- Back to home -->
-                <form method="post">
+                <form method="post" asp-action="Index">
                     <button type="submit" class="btn btn-block btn-default btn-flat">Back</button>
                 </form>
             </div>

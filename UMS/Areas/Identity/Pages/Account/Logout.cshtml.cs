@@ -9,6 +9,12 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using UMS.Areas.Identity.Data;
 
+/*
+ * Name: LogoutModel.cs
+ * Namespace: UMS.Areas.Identity.Pages.Account
+ * Author: Idenity system
+ */
+
 namespace UMS.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
@@ -23,10 +29,20 @@ namespace UMS.Areas.Identity.Pages.Account
             _logger = logger;
         }
 
+        /*
+         * Name: OnGet
+         * Parameter: none
+         * Description: 
+         */
         public void OnGet()
         {
-        }
+        } // End OnGet
 
+        /*
+         * Name: OnPost
+         * Parameter: returnUrl(String)
+         * Description: For log out user
+         */
         public async Task<IActionResult> OnPost(string returnUrl = null)
         {
             await _signInManager.SignOutAsync();
@@ -39,6 +55,6 @@ namespace UMS.Areas.Identity.Pages.Account
             {
                 return RedirectToPage();
             }
-        }
-    }
+        } // End OnPost
+    } // End LogoutModel
 }
