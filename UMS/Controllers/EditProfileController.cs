@@ -48,6 +48,7 @@ namespace UMS.Controllers
             try
             {
                 var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                if (UserId == null) throw new Exception("The user ID not found !.");
                 // Set Data to view
                 ViewData["UserId"] = UserId;
 
