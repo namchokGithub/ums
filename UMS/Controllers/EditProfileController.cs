@@ -32,7 +32,6 @@ namespace UMS.Controllers
          */
         public EditProfileController(EditProfileContext editprofileContext, SignInManager<ApplicationUser> signInManager)
         {
-            TempData["Exeception"] = null;
             _editprofileContext = editprofileContext;
             _signInManager = signInManager;
         } // End Constructor
@@ -57,6 +56,7 @@ namespace UMS.Controllers
 
                 // Query data from "dbo.EditProfile" and Convert to List<EditProfile>
                 var user = _editprofileContext.EditProfile.FromSqlRaw(sqltext).ToList<EditProfile>().FirstOrDefault();
+                if (user == null ) throw new Exception("Calling a method on a null object reference");
 
                 // Send data to view Index.cshtml
                 ViewData["User"] = user;

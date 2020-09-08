@@ -38,9 +38,6 @@ namespace UMS.Controllers
         {
             _accountContext = accountContext;
             _editaccountContext = editaccountContext;
-            // Set defalut exception message
-            TempData["nullException"] = null;
-            TempData["SqlException"] = null;
         } // End constructor
 
         /*
@@ -53,6 +50,10 @@ namespace UMS.Controllers
         {
             try
             {
+                // Set defalut exception message
+                TempData["nullException"] = null;
+                TempData["SqlException"] = null;
+
                 var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
                 // Set Data to view
                 if (UserId == null) throw new Exception("The user ID not found !.");

@@ -23,7 +23,6 @@ namespace UMS.Controllers
 
         public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
         {
-            TempData["Exception"] = null;
             _userManager = userManager;
             _signInManager = signInManager;
         } // End consturcter
