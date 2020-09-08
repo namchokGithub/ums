@@ -15,6 +15,12 @@ using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using UMS.Areas.Identity.Data;
 
+/*
+ * Name: ExternalLoginModel.cs
+ * Namespace: UMS.Areas.Identity.Pages.Account
+ * Author: Idenity system
+ */
+
 namespace UMS.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
@@ -54,19 +60,34 @@ namespace UMS.Areas.Identity.Pages.Account
             public string Email { get; set; }
         }
 
+        /*
+         * Name: OnGetAsync
+         * Parameter: none
+         * Description: go to login page
+         */
         public IActionResult OnGetAsync()
         {
             return RedirectToPage("./Login");
-        }
+        } // End OnGetAsync
 
+        /*
+         * Name: OnPost
+         * Parameter: provider(string), returnUrl(string)
+         * Description: get properties of external authen
+         */
         public IActionResult OnPost(string provider, string returnUrl = null)
         {
             // Request a redirect to the external login provider.
             var redirectUrl = Url.Page("./ExternalLogin", pageHandler: "Callback", values: new { returnUrl });
             var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
             return new ChallengeResult(provider, properties);
-        }
+        } // End OnPost
 
+        /*
+         * Name: OnGetCallbackAsync
+         * Parameter: remoteError(string), returnUrl(string)
+         * Description: get properties of external authen
+         */
         public async Task<IActionResult> OnGetCallbackAsync(string returnUrl = null, string remoteError = null)
         {
             returnUrl = returnUrl ?? Url.Content("~/");
@@ -107,8 +128,13 @@ namespace UMS.Areas.Identity.Pages.Account
                 }
                 return Page();
             }
-        }
+        } // End OnGetCallbackAsync
 
+        /*
+         * Name: OnPostConfirmationAsync
+         * Parameter: returnUrl(string)
+         * Description: get properties of external authen
+         */
         public async Task<IActionResult> OnPostConfirmationAsync(string returnUrl = null)
         {
             returnUrl = returnUrl ?? Url.Content("~/");
@@ -118,7 +144,7 @@ namespace UMS.Areas.Identity.Pages.Account
             {
                 ErrorMessage = "Error loading external login information during confirmation.";
                 return RedirectToPage("./Login", new { ReturnUrl = returnUrl });
-            }
+            } // Check info
 
             if (ModelState.IsValid)
             {
@@ -164,6 +190,6 @@ namespace UMS.Areas.Identity.Pages.Account
             ProviderDisplayName = info.ProviderDisplayName;
             ReturnUrl = returnUrl;
             return Page();
-        }
-    }
+        } // End OnPostConfirmationAsync
+    } // End ExternalLoginModel
 }

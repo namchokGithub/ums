@@ -9,6 +9,12 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using UMS.Areas.Identity.Data;
 
+/*
+ * Name: ResetPasswordModel.cs
+ * Namespace: UMS.Areas.Identity.Pages.Account
+ * Author: Idenity system
+ */
+
 namespace UMS.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
@@ -48,51 +54,84 @@ namespace UMS.Areas.Identity.Pages.Account
             public string Code { get; set; }
         }
 
+        /*
+         * Name: OnGet
+         * Parameter: code(String)
+         * Description: Check code for set password
+         */
         public IActionResult OnGet(string code = null)
         {
-            if (code == null)
+            try
             {
-                Console.WriteLine("A code must be supplied.");
-                return BadRequest("A code must be supplied for password reset.");
-            }
-            else
-            {
-                Input = new InputModel
+                if (code == null)
                 {
-                    Code = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(code))
-                };
+                    Console.WriteLine("A code must be supplied.");
+                    throw new Exception("A code must be supplied for password reset.");
+                }
+                else
+                {
+                    Input = new InputModel
+                    {
+                        Code = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(code))
+                    };
+                    return Page();
+                }
+            } catch (Exception e)
+            {
+                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
+                TempData["Exception"] = message;
                 return Page();
-            }
-        }
+            } // End try catch
+        } // End OnGet
 
+        /*
+         * Name: OnPostAsync
+         * Parameter: none
+         * Description: Check code for set password
+         */
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid)
+            try
             {
+                if (!ModelState.IsValid)
+                {
+                    Console.WriteLine("ModelState: false.");
+                    return Page();
+                }
+
+                var user = await _userManager.FindByEmailAsync(Input.Email);
+
+                if (user == null)
+                {
+                    // Don't reveal that the user does not exist
+                    Console.WriteLine("Not found user!");
+                    return RedirectToPage("./Login");
+                }
+
+                var result = await _userManager.ResetPasswordAsync(user, Input.Code, Input.Password);
+
+                if (result.Succeeded)
+                {
+                    return RedirectToPage("./ResetPasswordConfirmation");
+                }
+
+                string errorStr = "";
+                foreach (var error in result.Errors)
+                {
+                    errorStr += error.Description + " (" + error.Code + "). ";
+                    ModelState.AddModelError(string.Empty, error.Description);
+                } // End loop get error
+
+                // Send alert to home pages
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + errorStr + @"`, showConfirmButton: true })";
                 return Page();
             }
-            
-            var user = await _userManager.FindByEmailAsync(Input.Email);
-
-            if (user == null)
+            catch (Exception e)
             {
-                // Don't reveal that the user does not exist
-                Console.WriteLine("Not found user!");
-                return RedirectToPage("./Login");
-            }
-
-            var result = await _userManager.ResetPasswordAsync(user, Input.Code, Input.Password);
-
-            if (result.Succeeded)
-            {
-                return RedirectToPage("./ResetPasswordConfirmation");
-            }
-
-            foreach (var error in result.Errors)
-            {
-                ModelState.AddModelError(string.Empty, error.Description);
-            }
-            return Page();
-        }
-    }
+                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
+                TempData["Exception"] = message;
+                return Page();
+            } // End try catch
+        } // End OnPostAsync
+    } // End ResetPasswordModel
 }

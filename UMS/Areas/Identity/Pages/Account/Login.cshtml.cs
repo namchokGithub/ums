@@ -9,6 +9,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using UMS.Areas.Identity.Data;
+using System;
+
+/*
+ * Name: LoginModel.cs
+ * Namespace: UMS.Areas.Identity.Pages.Account
+ * Author: Idenity system
+ */
 
 namespace UMS.Areas.Identity.Pages.Account
 {
@@ -38,6 +45,10 @@ namespace UMS.Areas.Identity.Pages.Account
         [TempData]
         public string ErrorMessage { get; set; }
 
+        /*
+         * Name: InputModel
+         * Description: for input
+         */
         public class InputModel
         {
             [Required]
@@ -55,19 +66,24 @@ namespace UMS.Areas.Identity.Pages.Account
             public bool RememberMe { get; set; }
 
             public string ReturnUrl { get; set; }
-        }
+        } // End InputModel
 
+        /*
+         * Name: OnGetAsync
+         * Parameter: returnUrl(String)
+         * Description: Check if logged in.
+         */
         public async Task OnGetAsync(string returnUrl = null)
         {
             if (User.Identity.IsAuthenticated)
             {
                 Response.Redirect("/");
-            }
+            } // Check if logged in
 
             if (!string.IsNullOrEmpty(ErrorMessage))
             {
                 ModelState.AddModelError(string.Empty, ErrorMessage);
-            }
+            } // check if has error message
 
             returnUrl = returnUrl ?? Url.Content("~/");
 
@@ -77,40 +93,57 @@ namespace UMS.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
 
             ReturnUrl = returnUrl;
-        }
+        } // End OnGetAsync
 
+        /*
+         * Name: OnPostAsync
+         * Parameter: returnUrl(String)
+         * Description: for log in to system
+         */
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
-            returnUrl = returnUrl ?? Url.Content("~/");
-
-            if (ModelState.IsValid)
+            try
             {
-                // This doesn't count login failures towards account lockout
-                // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
-                if (result.Succeeded)
-                {
-                    _logger.LogInformation("User logged in.");
-                    return LocalRedirect(returnUrl);
-                }
-                if (result.RequiresTwoFactor)
-                {
-                    return RedirectToPage("./LoginWith2fa", new { ReturnUrl = returnUrl, RememberMe = Input.RememberMe });
-                }
-                if (result.IsLockedOut)
-                {
-                    _logger.LogWarning("User account locked out.");
-                    return RedirectToPage("./Lockout");
-                }
-                else
-                {
-                    ModelState.AddModelError(string.Empty, "Your email or password is not valid.");
-                    return Page();
-                }
-            }
+                returnUrl = returnUrl ?? Url.Content("~/");
 
-            // If we got this far, something failed, redisplay form
-            return Page();
-        }
-    }
+                if (ModelState.IsValid)
+                {
+                    // This doesn't count login failures towards account lockout
+                    // To enable password failures to trigger account lockout, set lockoutOnFailure: true
+                    var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+
+                    if (result.Succeeded)
+                    {
+                        _logger.LogInformation("User logged in.");
+                        return LocalRedirect(returnUrl);
+                    } // If login success
+
+                    if (result.IsLockedOut)
+                    {
+                        _logger.LogWarning("User account locked out.");
+                        return RedirectToPage("./Lockout");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError(string.Empty, "Your email or password is not valid.");
+                        // Set sweet alert with error messages
+                        string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: 'Your email or password is not valid.', showConfirmButton: true })";
+                        // Send alert to home pages
+                        TempData["Exception"] = message;
+                        return Page();
+                    } // If Loged out
+                } // End if check modelState
+
+                // If we got this far, something failed, redisplay form
+                return Page();
+            } catch (Exception e)
+            {
+                // Set sweet alert with error messages
+                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
+                // Send alert to home pages
+                TempData["Exception"] = message;
+                return Page();
+            } // End try catch
+        } // End OnPostAsync
+    } // End login
 }

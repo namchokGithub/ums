@@ -5,6 +5,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 
+/*
+ * Name: ApplicationUser (Extend: IdentityUser)
+ * Namespace: ~/Area/Identity/Data
+ */
+
 namespace UMS.Areas.Identity.Data
 {
     // Add profile data for application users by adding properties to the ApplicationUser class
@@ -19,6 +24,6 @@ namespace UMS.Areas.Identity.Data
         public string acc_Lastname { set; get; }
 
         [Column(TypeName = "char(10)")]
-        public char acc_IsActive { set; get; }
-    }
+        public char acc_IsActive { set; get; } // For check status user
+    } // End ApplicationUser
 }
