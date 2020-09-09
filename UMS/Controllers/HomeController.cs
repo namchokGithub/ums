@@ -60,6 +60,7 @@ namespace UMS.Controllers
                 TempData["UpdateResult"] = null;
                 // Get ID of user
                 var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                UserId = null;
                 if (UserId == null) throw new Exception("The user ID not found !.");
 
                 //var user = await _userManager.FindByIdAsync(UserId);        // Find user
@@ -74,7 +75,6 @@ namespace UMS.Controllers
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                _logger.LogCritical(e.Message.ToString());
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 TempData["nullException"] = message;
                 return View();

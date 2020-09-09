@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.nlog-project.org/schemas/NLog.xsd NLog.xsd"
+      autoReload="true"
+      throwExceptions="false"
+      internalLogLevel="Off" internalLogFile="c:\temp\nlog-internal.log">
+
+  <!-- optional, add some variables https://github.com/nlog/NLog/wiki/Configuration-file#variables -->
+  <variable name="myvar" value="myvalue"/>
+
+	<!-- enable asp.net core layout renderers -->
+	<extensions>
+		<add assembly="NLog.Web.AspNetCore"/>
+		<add assembly="NLog.Web"/>
+	</extensions>
+	
+  <targets>
+	  <!-- All Trace -->
+	  <target xsi:type="Console" name="logconsole_alltrace" layout="${date}|${level:uppercase=true}|${message}${when:when=length('${exception}')>0:Inner=|${exception:format=tostring}}${when:when=length('${aspnet-mvc-action}')>0:Inner=|${aspnet-mvc-action}}${when:when=length('${aspnet-mvc-controller}')>0:Inner=-${aspnet-mvc-controller}|${callsite-linenumber}|${logger}" />	  	  
+	   <!--Error--> 
+	  <target xsi:type="ColoredConsole" name="logconsole_error" layout="${date}|${level:uppercase=true}|${message}${when:when=length('${exception}')>0:Inner=|${exception:format=tostring}}${when:when=length('${aspnet-mvc-action}')>0:Inner=|${aspnet-mvc-action}}${when:when=length('${aspnet-mvc-controller}')>0:Inner=-${aspnet-mvc-controller}}|${callsite-filename:includeSourcePath=False}|${callsite-linenumber:skipFrames=1}|${logger}" />
+  </targets>
+
+  <rules>
+	  <logger name="*" maxlevel="Info" writeTo="logconsole_alltrace" />
+	  <!--Skip non-critical Microsoft logs and so log only own logs-->
+	  <logger name="Microsoft.*" maxlevel="Info" final="true" />
+	  <logger name="*" Levels="Warn, Error, Fatal" writeTo="logconsole_error" />
+  </rules>
+</nlog>
