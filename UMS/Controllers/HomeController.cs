@@ -40,6 +40,7 @@ namespace UMS.Controllers
             _logger = logger;
             _userManager = userManager;
 
+            _logger.LogTrace("HomeController Constructor");
             _logger.LogDebug(1, "NLog injected into HomeController");
             _logger.LogDebug(1, "Email injected into HomeController");
             _logger.LogDebug(1, "User manager injected into HomeController");
@@ -56,6 +57,9 @@ namespace UMS.Controllers
             try
             {
                 _logger.LogInformation("Welcome to UMS.");
+                _logger.LogCritical("Cri Welcome to UMS.");
+                _logger.LogDebug("Dedug Welcome to UMS.");
+                _logger.LogError("Error Welcome to UMS.");
                 // Console.WriteLine(User.IsInRole("Admin")); // Check Role of users
                 TempData["UpdateResult"] = null;
                 // Get ID of user

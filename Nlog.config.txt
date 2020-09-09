@@ -16,14 +16,17 @@
 	</extensions>
 	
   <targets>
-	  <!-- All Trace -->
-	  <target xsi:type="Console" name="logconsole_alltrace" layout="${date}|${level:uppercase=true}|${message}${when:when=length('${exception}')>0:Inner=|${exception:format=tostring}}${when:when=length('${aspnet-mvc-action}')>0:Inner=|${aspnet-mvc-action}}${when:when=length('${aspnet-mvc-controller}')>0:Inner=-${aspnet-mvc-controller}|${callsite-linenumber}|${logger}" />	  	  
+	  <!-- Trace -->
+	  <target xsi:type="ColoredConsole" name="logconsole_trace" layout="${date}|${level:uppercase=true}|${message}|${callsite-filename:includeSourcePath=False}:${callsite-linenumber}|${logger}" />	  	  
+	  <!-- Debug and Info -->
+	  <target xsi:type="Console" name="logconsole_info" layout="${date}|${level:uppercase=true}|${message}${when:when=length('${exception}')>0:Inner=|${exception:format=tostring}}${when:when=length('${aspnet-mvc-action}')>0:Inner=|${aspnet-mvc-action}}:${callsite-linenumber}|${logger}|${aspnet-user-identity}" />	  	  
 	   <!--Error--> 
-	  <target xsi:type="ColoredConsole" name="logconsole_error" layout="${date}|${level:uppercase=true}|${message}${when:when=length('${exception}')>0:Inner=|${exception:format=tostring}}${when:when=length('${aspnet-mvc-action}')>0:Inner=|${aspnet-mvc-action}}${when:when=length('${aspnet-mvc-controller}')>0:Inner=-${aspnet-mvc-controller}}|${callsite-filename:includeSourcePath=False}|${callsite-linenumber:skipFrames=1}|${logger}" />
+	  <target xsi:type="ColoredConsole" name="logconsole_error" layout="${date}|${level:uppercase=true}|${message}${when:when=length('${exception}')>0:Inner=|${exception:format=tostring}}${when:when=length('${aspnet-mvc-action}')>0:Inner=|${aspnet-mvc-action}}${when:when=length('${aspnet-mvc-controller}')>0:Inner=-${aspnet-mvc-controller}}|${callsite-filename:includeSourcePath=False}:${callsite-linenumber}|${logger}" />
   </targets>
 
   <rules>
-	  <logger name="*" maxlevel="Info" writeTo="logconsole_alltrace" />
+	  <logger name="*" maxlevel="Trace" writeTo="logconsole_trace" />
+	  <logger name="*" Levels="Debug, Info" writeTo="logconsole_info" />
 	  <!--Skip non-critical Microsoft logs and so log only own logs-->
 	  <logger name="Microsoft.*" maxlevel="Info" final="true" />
 	  <logger name="*" Levels="Warn, Error, Fatal" writeTo="logconsole_error" />
