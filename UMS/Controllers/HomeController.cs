@@ -39,6 +39,10 @@ namespace UMS.Controllers
             _emailSender = emailSender;
             _logger = logger;
             _userManager = userManager;
+
+            _logger.LogDebug(1, "NLog injected into HomeController");
+            _logger.LogDebug(1, "Email injected into HomeController");
+            _logger.LogDebug(1, "User manager injected into HomeController");
         } // End HomeController
         
         /*
@@ -51,6 +55,7 @@ namespace UMS.Controllers
         {
             try
             {
+                _logger.LogInformation("Welcome to UMS.");
                 // Console.WriteLine(User.IsInRole("Admin")); // Check Role of users
                 TempData["UpdateResult"] = null;
                 // Get ID of user
@@ -63,10 +68,13 @@ namespace UMS.Controllers
 
                 // Set Data to view
                 ViewData["UserId"] = UserId;
+                _logger.LogTrace("Set user ID");
                 return View();
             }
             catch (Exception e)
             {
+                _logger.LogError(e.Message.ToString());
+                _logger.LogCritical(e.Message.ToString());
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 TempData["nullException"] = message;
                 return View();
