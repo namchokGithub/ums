@@ -25,7 +25,6 @@ namespace UMS.Controllers
     {
         // Variable for manager
         private readonly ILogger<HomeController> _logger;
-        private readonly IEmailSender _emailSender;
         private readonly UserManager<ApplicationUser> _userManager;
 
         /*
@@ -34,16 +33,21 @@ namespace UMS.Controllers
          * Author: Wannapa
          * Description: First page of UMS
          */
-        public HomeController(IEmailSender emailSender, ILogger<HomeController> logger, UserManager<ApplicationUser> userManager)
+        public HomeController(ILogger<HomeController> logger, UserManager<ApplicationUser> userManager)
         {
-            _emailSender = emailSender;
-            _logger = logger;
-            _userManager = userManager;
-
-            _logger.LogTrace("HomeController Constructor");
-            _logger.LogDebug(1, "NLog injected into HomeController");
-            _logger.LogDebug(1, "Email injected into HomeController");
-            _logger.LogDebug(1, "User manager injected into HomeController");
+            try
+            {
+                _logger = logger;
+                _logger.LogDebug(1, "NLog injected into HomeController.");
+                _userManager = userManager;
+                _logger.LogDebug(1, "User manager injected into HomeController.");
+                _logger.LogTrace("End HomeController Constructor.");
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.Message.ToString());
+                _logger.LogTrace("End HomeController Constructor.");
+            }// End try catch
         } // End HomeController
         
         /*
@@ -56,15 +60,13 @@ namespace UMS.Controllers
         {
             try
             {
+                _logger.LogTrace("Start Index.");
                 _logger.LogInformation("Welcome to UMS.");
-                _logger.LogCritical("Cri Welcome to UMS.");
-                _logger.LogDebug("Dedug Welcome to UMS.");
-                _logger.LogError("Error Welcome to UMS.");
                 // Console.WriteLine(User.IsInRole("Admin")); // Check Role of users
                 TempData["UpdateResult"] = null;
                 // Get ID of user
                 var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                UserId = null;
+                _logger.LogDebug("Find first value from user.");
                 if (UserId == null) throw new Exception("The user ID not found !.");
 
                 //var user = await _userManager.FindByIdAsync(UserId);        // Find user
@@ -73,7 +75,7 @@ namespace UMS.Controllers
 
                 // Set Data to view
                 ViewData["UserId"] = UserId;
-                _logger.LogTrace("Set user ID");
+                _logger.LogTrace("End Index.");
                 return View();
             }
             catch (Exception e)
@@ -81,6 +83,7 @@ namespace UMS.Controllers
                 _logger.LogError(e.Message.ToString());
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 TempData["nullException"] = message;
+                _logger.LogTrace("End Index.");
                 return View();
             } // End try catch
         } // End Index

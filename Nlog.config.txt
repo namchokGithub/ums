@@ -17,11 +17,18 @@
 	
   <targets>
 	  <!-- Trace -->
-	  <target xsi:type="ColoredConsole" name="logconsole_trace" layout="${date}|${level:uppercase=true}|${message}|${callsite-filename:includeSourcePath=False}:${callsite-linenumber}|${logger}" />	  	  
+	  <target xsi:type="ColoredConsole" name="logconsole_trace" layout="${date} | ${level:uppercase=true} | ${message} | ${callsite-filename:includeSourcePath=False}:${callsite-linenumber} | ${logger}" />	  	  
 	  <!-- Debug and Info -->
-	  <target xsi:type="Console" name="logconsole_info" layout="${date}|${level:uppercase=true}|${message}${when:when=length('${exception}')>0:Inner=|${exception:format=tostring}}${when:when=length('${aspnet-mvc-action}')>0:Inner=|${aspnet-mvc-action}}:${callsite-linenumber}|${logger}|${aspnet-user-identity}" />	  	  
-	   <!--Error--> 
-	  <target xsi:type="ColoredConsole" name="logconsole_error" layout="${date}|${level:uppercase=true}|${message}${when:when=length('${exception}')>0:Inner=|${exception:format=tostring}}${when:when=length('${aspnet-mvc-action}')>0:Inner=|${aspnet-mvc-action}}${when:when=length('${aspnet-mvc-controller}')>0:Inner=-${aspnet-mvc-controller}}|${callsite-filename:includeSourcePath=False}:${callsite-linenumber}|${logger}" />
+	  <target xsi:type="ColoredConsole" name="logconsole_info" layout="${date} | ${level:uppercase=true} | ${message}${when:when=length('${exception}')>0:Inner= | ${exception:format=tostring}}${when:when=length('${aspnet-mvc-action}')>0:Inner= | ${aspnet-mvc-action}}${when:when=length('${aspnet-mvc-controller}')>0:Inner=-${aspnet-mvc-controller}}:${callsite-linenumber} | ${logger} | ${aspnet-user-identity}" useDefaultRowHighlightingRules="false">
+		  <highlight-row condition="level == LogLevel.Debug" foregroundColor="DarkGreen" />
+		  <highlight-row condition="level == LogLevel.Info" foregroundColor="White" />
+	  </target>
+	  <!--Error--> 
+	  <target xsi:type="ColoredConsole" name="logconsole_error" layout="${date} | ${level:uppercase=true} | ${message}${when:when=length('${exception}')>0:Inner= | ${exception:format=tostring}}${when:when=length('${aspnet-mvc-action}')>0:Inner= | ${aspnet-mvc-action}}${when:when=length('${aspnet-mvc-controller}')>0:Inner=-${aspnet-mvc-controller}} | ${callsite-filename:includeSourcePath=False}:${callsite-linenumber} | ${logger}" useDefaultRowHighlightingRules="false">
+		  <highlight-row condition="level == LogLevel.Warn" foregroundColor="Yellow" />
+		  <highlight-row condition="level == LogLevel.Error" foregroundColor="Red"/>
+		  <highlight-row condition="level == LogLevel.Fatal" foregroundColor="Red" backgroundColor="White" />
+	  </target>
   </targets>
 
   <rules>
