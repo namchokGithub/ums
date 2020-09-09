@@ -3,7 +3,7 @@
 -- Create date: 2020-08-28
 -- Description:	Update firstname and lastname
 -- =============================================
-ALTER PROCEDURE ums_updateUser
+CREATE PROCEDURE ums_updateUser
 	@param_Id nvarchar(256),
 	@param_fname nvarchar(256),
 	@param_lname nvarchar(256)

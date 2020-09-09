@@ -3,7 +3,7 @@
 -- Create date: 2020-09-02
 -- Description:	For update name and last name
 -- =============================================
-ALTER procedure ums_Update_user
+CREATE procedure ums_Update_user
 	@param_Id nvarchar(256),   
 	@param_fname nvarchar(256),    
 	@param_lname nvarchar(256)   

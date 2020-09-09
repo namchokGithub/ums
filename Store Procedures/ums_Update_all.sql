@@ -3,7 +3,7 @@
 -- Create date: 2020-09-02
 -- Description:	Update name
 -- =============================================
-ALTER procedure ums_Update_all
+CREATE procedure ums_Update_all
    @id nvarchar(256) ,   
    @fname nvarchar(256),    
    @lname nvarchar(256),

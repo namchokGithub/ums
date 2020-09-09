@@ -178,7 +178,7 @@ namespace UMS.Controllers
                     _logger.LogDebug("Update name'user.");
                     _editaccountContext.Database.ExecuteSqlRaw(sqlUpdateRoleUser);
                     _logger.LogDebug("Update role'user.");
-
+                        
                     // For check if update success 
                     var result = false;
                     while (!result)
