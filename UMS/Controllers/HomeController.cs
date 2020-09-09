@@ -40,7 +40,7 @@ namespace UMS.Controllers
             _logger = logger;
             _userManager = userManager;
         } // End HomeController
-        
+
         /*
          * Name: Index
          * Parameter: none
