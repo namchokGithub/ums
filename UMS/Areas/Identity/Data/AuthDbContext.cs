@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using UMS.Areas.Identity.Data;
 using UMS.Models;
 
@@ -17,9 +18,13 @@ namespace UMS.Data
 {
     public class AuthDbContext : IdentityDbContext<ApplicationUser>
     {
-        public AuthDbContext(DbContextOptions<AuthDbContext> options)
+        private readonly ILogger<AuthDbContext> _logger;
+
+        public AuthDbContext(DbContextOptions<AuthDbContext> options, ILogger<AuthDbContext> logger)
             : base(options)
         {
+            _logger = logger;
+            _logger.LogDebug("Auth Database Context.");
         } // End contructor
 
         /*

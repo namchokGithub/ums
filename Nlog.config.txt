@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.nlog-project.org/schemas/NLog.xsd NLog.xsd"
+      autoReload="true"
+      throwExceptions="false"
+      internalLogLevel="Off" internalLogFile="c:\temp\nlog-internal.log">
+
+  <!-- optional, add some variables https://github.com/nlog/NLog/wiki/Configuration-file#variables -->
+  <variable name="myvar" value="myvalue"/>
+
+	<!-- enable asp.net core layout renderers -->
+	<extensions>
+		<add assembly="NLog.Web.AspNetCore"/>
+		<add assembly="NLog.Web"/>
+	</extensions>
+	
+  <targets>
+	  <!-- Trace -->
+	  <target xsi:type="ColoredConsole" name="logconsole_trace" layout="${date} [${level:uppercase=true}] [${logger}] ${when:when=length('${callsite-filename:includeSourcePath=False}')>0:Inner=${callsite-filename:includeSourcePath=False}${literal:text=\:}}${when:when=length('${callsite-linenumber}')>0:Inner=${callsite-linenumber}} | ${message}" />	  	  
+	  <!-- Debug -->
+	  <target xsi:type="ColoredConsole" name="logconsole_debug" layout="${date} [${level:uppercase=true}] [${logger}] ${when:when=length('${callsite-filename:includeSourcePath=False}')>0:Inner=${callsite-filename:includeSourcePath=False}${literal:text=\:}}${when:when=length('${callsite-linenumber}')>0:Inner=${callsite-linenumber}} | ${message}${when:when=length('${exception}')>0:Inner= Exception: ${exception:format=tostring}}"/>
+	  <!-- Info -->
+	  <target xsi:type="ColoredConsole" name="logconsole_info" layout="${date} [${level:uppercase=true}] [${logger}] ${when:when=length('${aspnet-user-identity}')>0:Inner=:[${aspnet-user-identity}]} ${when:when=length('${callsite-filename:includeSourcePath=False}')>0:Inner=${callsite-filename:includeSourcePath=False}${literal:text=\:}${when:when=length('${callsite-linenumber}')>0:Inner=${callsite-linenumber}}} | ${message}${when:when=length('${exception}')>0:Inner= Exception: ${exception:format=tostring}}" useDefaultRowHighlightingRules="false">
+		  <highlight-row condition="level == LogLevel.Info" foregroundColor="White" />
+	  </target>
+	  <!--Error--> 
+	  <target xsi:type="ColoredConsole" name="logconsole_error" layout="${date} [${level:uppercase=true}] [${logger}] ${when:when=length('${aspnet-user-identity}')>0:Inner=:[${aspnet-user-identity}]} ${when:when=length('${aspnet-mvc-action}')>0:Inner=${aspnet-mvc-action}${literal:text=\:}}${when:when=length('${aspnet-mvc-controller}')>0:Inner=${aspnet-mvc-controller}${literal:text=\:}}${when:when=length('${callsite-filename:includeSourcePath=False}')>0:Inner=${callsite-filename:includeSourcePath=False}${literal:text=\:}${when:when=length('${callsite-linenumber}')>0:Inner=${callsite-linenumber}}} | ${message}${when:when=length('${exception}')>0:Inner= Exception: ${exception:format=tostring}}" useDefaultRowHighlightingRules="false">
+		  <highlight-row condition="level == LogLevel.Warn" foregroundColor="Magenta" />
+		  <highlight-row condition="level == LogLevel.Error" foregroundColor="Yellow"/>
+		  <highlight-row condition="level == LogLevel.Fatal" foregroundColor="Red" backgroundColor="White" />
+	  </target>
+  </targets>
+
+  <rules>
+	  <logger name="*" maxlevel="Trace" writeTo="logconsole_trace" />
+	  <logger name="*" Level="Debug" writeTo="logconsole_debug" />
+	  <logger name="*" Level="Info" writeTo="logconsole_info" />
+	  <!--Skip non-critical Microsoft logs and so log only own logs-->
+	  <logger name="Microsoft.*" maxlevel="Info" final="true" />
+	  <logger name="*" Levels="Warn, Error, Fatal" writeTo="logconsole_error" />
+  </rules>
+</nlog>

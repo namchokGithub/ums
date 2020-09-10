@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +15,14 @@ namespace UMS.Models
 {
     public class EditAccountContext : DbContext
     {
-        public EditAccountContext(DbContextOptions<EditAccountContext> options)
+        private readonly ILogger<EditAccountContext> _logger;
+
+        public EditAccountContext(DbContextOptions<EditAccountContext> options, ILogger<EditAccountContext> logger)
             : base(options)
         {
-        }
+            _logger = logger;
+            _logger.LogDebug("Edit Account Context.");
+        } // End Constructor
 
         public DbSet<EditAccount> EditAccount { get; set; }
     } // End EditAccountContext

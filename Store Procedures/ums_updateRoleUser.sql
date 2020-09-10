@@ -3,19 +3,26 @@
 -- Create date: 2020-08-28
 -- Description:	Update role user
 -- =============================================
-ALTER PROCEDURE ums_updateRoleUser 
-	@param_Id nvarchar(256), @param_Role nchar(1)
+CREATE PROCEDURE ums_updateRoleUser
+	@param_Id nvarchar(256),
+	@param_Role nchar(10)
 AS
-	IF (@param_Role <> '' AND @param_Role <> '0')
-		IF (SELECT [dbo].[UserRoles].UserId FROM [dbo].[UserRoles] WHERE [dbo].[UserRoles].UserId = @param_Id) != ''
+IF (@param_Role <> '' AND @param_Role <> '0')
+		BEGIN
+	IF (SELECT [dbo].[UserRoles].UserId
+	FROM [dbo].[UserRoles]
+	WHERE [dbo].[UserRoles].UserId = @param_Id) != ''
 			BEGIN
-				UPDATE [dbo].[UserRoles] SET 
+		UPDATE [dbo].[UserRoles] SET 
 						[dbo].[UserRoles].RoleId = @param_Role
 				WHERE [dbo].[UserRoles].UserId = @param_Id;
-			END
+	END
 			ELSE
 			BEGIN
-				INSERT INTO [dbo].[UserRoles] ([dbo].[UserRoles].UserId, [dbo].[UserRoles].RoleId)
-					VALUES (@param_Id, @param_Role);
-			END
+		INSERT INTO [dbo].[UserRoles]
+			([dbo].[UserRoles].UserId, [dbo].[UserRoles].RoleId)
+		VALUES
+			(@param_Id, @param_Role);
+	END
+END
 GO

@@ -3,7 +3,7 @@
 -- Create date: 2020-08-31
 -- Description:	Inactive user 
 -- =============================================
-ALTER PROCEDURE ums_deleteUser
+CREATE PROCEDURE ums_deleteUser
 	@param_Id nvarchar(max)
 AS
 BEGIN

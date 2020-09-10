@@ -3,7 +3,7 @@
 -- Create date: 2020-08-29
 -- Description: Get Active User by ID
 -- =============================================
-ALTER PROCEDURE ums_getUserById
+CREATE PROCEDURE ums_getUserById
 	@param_Id nvarchar(max)
 AS
 BEGIN
