@@ -1,9 +1,5 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using NLog.Web;
@@ -21,20 +17,20 @@ namespace UMS
         /*
          * Name: Main
          * Parameter: args(string[])
-         * Description: Start program.
+         * Description: Starting program
          */
         public static void Main(string[] args)
         {
             var logger = NLog.Web.NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
             try
             {
-                logger.Info("Start Main");
+                logger.Trace("Starting Program.");
                 CreateHostBuilder(args).Build().Run();
             }
-            catch (Exception exception)
+            catch (Exception e)
             {
                 //NLog: catch setup errors
-                logger.Error(exception, "Stopped program because of exception");
+                logger.Error(e, "Stopped program because of exception.");
                 throw;
             }
             finally
@@ -54,12 +50,12 @@ namespace UMS
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                }).ConfigureLogging(logging =>
+                })
+                .ConfigureLogging(logging =>
                 {
                     logging.ClearProviders();
                     logging.SetMinimumLevel(LogLevel.Trace);
                 })
-                .UseNLog();
-        // End CreateHostBuilder
+                .UseNLog();  // NLog: Setup NLog for Dependency injection
     } // End Program
 }

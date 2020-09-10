@@ -135,16 +135,21 @@ namespace UMS.Areas.Identity.Pages.Account
                     // Check if create success
                     if (result.Succeeded)
                     {
-                        var info = new UserLoginInfo("Email", "0", "Email");
+                        _logger.LogInformation("User created a new account with password.");
+                        var info = new UserLoginInfo("Email", RandomString(127).ToString(), "Email");
                         result = await _userManager.AddLoginAsync(user, info);
-                        // Check if add login success
+
                         if (result.Succeeded)
                         {
+                            _logger.LogInformation("User created a new log in.");
                             await _signInManager.SignInAsync(user, false);
                             return LocalRedirect(returnUrl);
                         }
-
-                        _logger.LogInformation("User created a new account with password.");
+                        else
+                        {
+                            TempData["Exception"] =
+                                @"Swal.fire({ icon: 'warning', title: 'Error !', text: 'Log in Already Associated. A user with this login already exists.', showConfirmButton: true })";
+                        } // End Check if add login success
 
                         await _signInManager.SignInAsync(user, isPersistent: false);
                         return LocalRedirect(returnUrl);
@@ -172,5 +177,18 @@ namespace UMS.Areas.Identity.Pages.Account
             } // End Try Catch
         } // End OnPostAsync
 
+        private static Random random = new Random(); // for random provider key
+
+        /*
+         * Name: RandomString
+         * Parameter: length(int)
+         * Description: For random provider key
+         */
+        public static string RandomString(int length)
+        {
+            const string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+              .Select(s => s[random.Next(s.Length)]).ToArray());
+        } // End RandomString
     } // End Register
 }

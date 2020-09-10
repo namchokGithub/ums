@@ -3,7 +3,7 @@
 -- Create date: 2020-09-02
 -- Description:	Get user for edit profile
 -- =============================================
-ALTER procedure ums_Get_user
+CREATE procedure ums_Get_user
 	@param_Id nvarchar(256)
 AS
 BEGIN
