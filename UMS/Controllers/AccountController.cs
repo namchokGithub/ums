@@ -29,12 +29,12 @@ namespace UMS.Controllers
             try
             {
                 _logger = logger;
-                _logger.LogDebug(1, "NLog injected into AccountController.");
+                _logger.LogTrace("NLog injected into AccountController.");
                 _signInManager = signInManager;
-                _logger.LogDebug(1, "Sign In Manager injected into AccountController.");
+                _logger.LogTrace("Sign In Manager injected into AccountController.");
                 _userManager = userManager;
-                _logger.LogDebug(1, "User Manager manager injected into AccountController.");
-                _logger.LogTrace("End AccountController Constructor.");
+                _logger.LogTrace("User Manager manager injected into AccountController.");
+                _logger.LogTrace("Start AccountController Constructor.");
             }
             catch (Exception e)
             {

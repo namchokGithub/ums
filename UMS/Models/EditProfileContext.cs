@@ -20,7 +20,7 @@ namespace UMS.Models
             : base(options)
         {
             _logger = logger;
-            _logger.LogDebug("Edit Profile Context.");
+            _logger.LogDebug("Start Edit Profile Context.");
         } // End Constructor
 
         public DbSet<EditProfile> EditProfile { get; set; }

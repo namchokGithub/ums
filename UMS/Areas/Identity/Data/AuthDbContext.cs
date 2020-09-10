@@ -24,7 +24,7 @@ namespace UMS.Data
             : base(options)
         {
             _logger = logger;
-            _logger.LogDebug("Auth Database Context.");
+            _logger.LogDebug("Start Auth Database Context.");
         } // End contructor
 
         /*
@@ -69,16 +69,10 @@ namespace UMS.Data
             builder.Entity<IdentityUserClaim<string>>().ToTable("UserClaims");
             builder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaims");
 
-            builder.Entity<Log>(entity => {
-                entity.Property(e => e.log_Id).HasColumnName("log_Id");
-                entity.Property(e => e.log_datetime).HasColumnName("log_datetime");
-            });
-
-            builder.Entity<LogAccount>(entity => {
-                entity.Property(e => e.la_Id).HasColumnName("la_Id");
-                entity.Property(e => e.la_log_Id).HasColumnName("la_log_Id");
-                entity.Property(e => e.la_acc_Id).HasColumnName("la_acc_Id");
-            });
+            //builder.Entity<Log>(entity => {
+            //    entity.Property(e => e.log_Id).HasColumnName("log_Id");
+            //    entity.Property(e => e.log_datetime).HasColumnName("log_datetime");
+            //});
         } // End OnModelCreating
     } // End AuthDbContext
 }
