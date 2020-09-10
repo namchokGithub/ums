@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using UMS.Areas.Identity.Data;
 using UMS.Models;
-using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Data.SqlClient;
 using System.Security.Claims;
@@ -57,9 +54,6 @@ namespace UMS.Controllers
                 _logger.LogError(e.Message.ToString());
                 _logger.LogTrace("End EditProfileController Constructor.");
             }// End try catch
-
-            _accountContext = accountContext;
-            _editaccountContext = editaccountContext;
         } // End constructor
 
         /*
@@ -78,17 +72,18 @@ namespace UMS.Controllers
                 TempData["SqlException"] = null;
 
                 var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Get user ID
+                _logger.LogTrace("Find first value from user.");
                 if (UserId == null) throw new Exception("The user ID not found !.");
                 ViewData["UserId"] = UserId;
 
                 string sqltext = "EXEC [dbo].ums_get_all_active_user";
                 // Query data from "dbo.Account" and Convert to List<Account>
-                var user = _accountContext.Account.FromSqlRaw(sqltext).ToList<Account>();
+                var alluser = _accountContext.Account.FromSqlRaw(sqltext).ToList<Account>();
                 _logger.LogDebug("Get all active user.");
-                if (user == null) throw new Exception("Calling a method on a null object reference.");
+                if (alluser == null) throw new Exception("Calling a method on a null object reference.");
 
                 // Send data to view Index.cshtml
-                ViewData["User"] = user;
+                ViewData["User"] = alluser;
                 _logger.LogTrace("End Index.");
                 return View();
             }
@@ -100,7 +95,6 @@ namespace UMS.Controllers
                 _logger.LogTrace("End Index.");
                 return View();
             } // End try catch
-
         } // End index
 
         /*
@@ -117,13 +111,11 @@ namespace UMS.Controllers
                 _logger.LogTrace("Start get user.");
                 // Check if query is null
                 if (id == null) throw new Exception("Calling a method on a null object reference.");
-
                 string sqltext = $"EXEC [dbo].ums_getUserById '{id}'";
                 // Query data from "dbo.Account" and Convert to List<Account>
                 var user = _editaccountContext.EditAccount.FromSqlRaw(sqltext).ToList().FirstOrDefault<EditAccount>();
                 _logger.LogDebug("Get user by ID");
                 if (user == null) throw new Exception("Calling a method on a null object reference.");
-
                 _logger.LogTrace("End get user.");
                 // Return JSON by Ajax
                 return new JsonResult(user);
@@ -156,29 +148,24 @@ namespace UMS.Controllers
                 _logger.LogTrace("Start edit user.");
                 // Check if select role form selection in form
                 _account.acc_Id = HttpContext.Request.Form["acc_Id"].ToString();
-                if (HttpContext.Request.Form["acc_RoleId"].ToString() != "0")
+                if (HttpContext.Request.Form["acc_RoleId"].ToString() != "0" || HttpContext.Request.Form["acc_RoleId"].ToString() != "")
                 {
-                    // Has condition in store procedure if equal zero or '' it's nothing happened
-                    _account.acc_Rolename = HttpContext.Request.Form["acc_RoleId"].ToString();
+                    _account.acc_Rolename = HttpContext.Request.Form["acc_RoleId"].ToString(); // Has condition in store procedure if equal zero or '' it's nothing happened
                     _logger.LogDebug("Set role ID.");
                 } // End if check role
-                // Check if parametor is null
-                if (_account.acc_Id == null || _account.acc_Id == "") throw new Exception("Calling a method on a null object reference.");
+                if (_account.acc_Id == null || _account.acc_Id == "") throw new Exception("Cannot find ID.");
                 if (_account == null) throw new Exception("Calling a method on a null object reference.");
                 // Console.WriteLine(_account);
                 if (ModelState.IsValid)
                 {
-
                     // SQL text for execute procedure
                     string sqlUpdateUser = $"ums_updateUser '{_account.acc_Id}', '{_account.acc_Firstname}', '{_account.acc_Lastname}'"; // Update name's user
                     string sqlUpdateRoleUser = $"ums_updateRoleUser '{_account.acc_Id}', '{_account.acc_Rolename}'";              // Update role's user
-
                     // Update Account add UserRoles
                     _editaccountContext.Database.ExecuteSqlRaw(sqlUpdateUser);
                     _logger.LogDebug("Update name'user.");
                     _editaccountContext.Database.ExecuteSqlRaw(sqlUpdateRoleUser);
                     _logger.LogDebug("Update role'user.");
-                        
                     // For check if update success 
                     var result = false;
                     while (!result)
@@ -187,7 +174,7 @@ namespace UMS.Controllers
                         {
                             _editaccountContext.SaveChanges();
                             _logger.LogDebug("Save changes: Update user.");
-                            TempData["UpdateResult"] = @"toastr.success('Success !')";
+                            TempData["UpdateResult"] = @"toastr.success('Update user succeeded!.')";
                             result = true;
                         }
                         catch (Exception e)
@@ -202,7 +189,7 @@ namespace UMS.Controllers
                 else
                 {
                     // return BadRequest(ModelState);
-                    _logger.LogError("ModelState is not valid!");
+                    _logger.LogError("ModelState is not valid!.");
                     TempData["UpdateResult"] = @"Swal.fire({ icon: 'error', title: 'Error !', text 'ModelState is not valid!.', showConfirmButton: true })";
                 } // End if-else
                 _logger.LogTrace("End edit user.");
@@ -229,14 +216,10 @@ namespace UMS.Controllers
             try
             {
                 _logger.LogTrace("Start delete user.");
-                // Check if parametor is null
                 if (id == null) throw new Exception("Calling a method on a null object reference.");
-
-                // SQL text for execute procudure
                 string sqlText = $"ums_deleteUser '{id}'";
                 _accountContext.Database.ExecuteSqlRaw(sqlText);
-                _logger.LogDebug("Inactive user.");
-
+                _logger.LogDebug("Execute sql inactive user.");
                 var result = false;
                 while (!result)
                 {
@@ -244,6 +227,7 @@ namespace UMS.Controllers
                     {
                         _accountContext.SaveChanges();
                         _logger.LogDebug("Save changes: Inactive user.");
+                        _logger.LogTrace("Inactive user succeeded.");
                         result = true; // If success
                     }
                     catch (Exception e)
@@ -278,12 +262,10 @@ namespace UMS.Controllers
                 // Set parameter for get value
                 var checkExits = new SqlParameter("@returnVal", SqlDbType.Int);
                 checkExits.Direction = ParameterDirection.Output;
-
                 // Return value from sture procudure
                 var sqlText = $"EXEC @returnVal=[dbo].ums_Check_user '{userStr}'";
                 _accountContext.Database.ExecuteSqlRaw(sqlText, checkExits);
                 _logger.LogDebug("Check user is exist.");
-
                 var result = false;
                 while (!result)
                 {
@@ -291,6 +273,7 @@ namespace UMS.Controllers
                     {
                         _accountContext.SaveChanges();
                         _logger.LogDebug("Save changes: Check user is exist.");
+                        _logger.LogTrace("Query succeeded.");
                         result = true; // If success
                     }
                     catch (Exception e)
