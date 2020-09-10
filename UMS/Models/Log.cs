@@ -17,40 +17,40 @@ namespace UMS.Models
 {
     public class Log
     {        
-        [MaybeNull]
+        [AllowNull]
         public string log_datetime { set; get; }
 
-        [MaybeNull]
+        [AllowNull]
         public string log_date { set; get; }
 
-        [MaybeNull]
+        [AllowNull]
         public string log_time { set; get; }
 
-        [MaybeNull]
+        [AllowNull]
         public string log_level { set; get; }
 
-        [MaybeNull]
+        [AllowNull]
         public string log_logger { set; get; }
 
-        [MaybeNull]
+        [AllowNull]
         public string log_user_identity { set; get; }
 
-        [MaybeNull]
+        [AllowNull]
         public string log_mvc_action { set; get; }
 
-        [MaybeNull]
+        [AllowNull]
         public string log_mvc_controller { set; get; }
 
-        [MaybeNull]
+        [AllowNull]
         public string log_filename { set; get; }
 
-        [MaybeNull]
+        [AllowNull]
         public string log_linenumber { set; get; }
 
-        [MaybeNull]
+        [AllowNull]
         public string log_message { set; get; }
 
-        [MaybeNull]
+        [AllowNull]
         public string log_exception { set; get; }
 
     } // End Log

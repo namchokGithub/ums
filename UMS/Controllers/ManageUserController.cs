@@ -73,6 +73,7 @@ namespace UMS.Controllers
 
                 var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Get user ID
                 _logger.LogTrace("Find first value from user.");
+                UserId = null;
                 if (UserId == null) throw new Exception("The user ID not found !.");
                 ViewData["UserId"] = UserId;
 

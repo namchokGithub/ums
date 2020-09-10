@@ -21,9 +21,9 @@
 			  name="logfile" 
 			  filename="${aspnet-appbasepath}/logs/ums_log_${shortdate}.txt" 
 			  keepfileopen="false" 
-			  archivefilename="${aspnet-appbasepath}/logs/archives/ums_log_archive.{###}.zip" 
-			  archivenumbering="dateandsequence" 
-			  archiveevery="Month" 
+			  archivefilename="${aspnet-appbasepath}/logs/archives/ums_log_archive.{#}.zip" 
+			  archivenumbering="sequence"
+			  archiveEvery="Month" 
 			  maxarchivefiles="500" 
 			  archivedateformat="yyyy-mm-dd" 
 			  archiveoldfileonstartup="true" 
@@ -31,7 +31,7 @@
 			  enablearchivefilecompression="true" 
 			  encoding="utf-8"
 			  header="############################################## User Management System log ##############################################" 
-			  layout="${date} [${level:uppercase=true}] [${logger}] ${when:when=length('${aspnet-user-identity}')>0:Inner=:[${aspnet-user-identity}]} ${when:when=length('${aspnet-mvc-action}')>0:Inner=${aspnet-mvc-action}${literal:text=\:}}${when:when=length('${aspnet-mvc-controller}')>0:Inner=${aspnet-mvc-controller}${literal:text=\:}}${when:when=length('${callsite-filename:includeSourcePath=False}')>0:Inner=${callsite-filename:includeSourcePath=False}${literal:text=\:}${when:when=length('${callsite-linenumber}')>0:Inner=${callsite-linenumber}}} | ${message}${when:when=length('${exception}')>0:Inner= Exception: ${exception:format=tostring}}" 
+			  layout="${date} [${level:uppercase=true}] [${logger}] ${when:when=length('${aspnet-user-identity}')>0:Inner=:[${aspnet-user-identity}]} ${when:when=length('${aspnet-mvc-action}')>0:Inner=${aspnet-mvc-action}${literal:text=\:}}${when:when=length('${callsite-filename:includeSourcePath=False}')>0:Inner=${callsite-filename:includeSourcePath=False}${literal:text=\:}${when:when=length('${callsite-linenumber}')>0:Inner=${callsite-linenumber}}} | ${message}${when:when=length('${exception}')>0:Inner= Exception: ${exception:format=tostring}}" 
 			  archiveabovesize="100000000" />
 	  <!-- Trace -->
 	  <target xsi:type="ColoredConsole" 
@@ -51,7 +51,7 @@
 	  <!--Error--> 
 	  <target xsi:type="ColoredConsole" 
 			  name="logconsole_error" 
-			  layout="${date} [${level:uppercase=true}] [${logger}] ${when:when=length('${aspnet-user-identity}')>0:Inner=:[${aspnet-user-identity}]} ${when:when=length('${aspnet-mvc-action}')>0:Inner=${aspnet-mvc-action}${literal:text=\:}}${when:when=length('${aspnet-mvc-controller}')>0:Inner=${aspnet-mvc-controller}${literal:text=\:}}${when:when=length('${callsite-filename:includeSourcePath=False}')>0:Inner=${callsite-filename:includeSourcePath=False}${literal:text=\:}${when:when=length('${callsite-linenumber}')>0:Inner=${callsite-linenumber}}} | ${message}${when:when=length('${exception}')>0:Inner= Exception: ${exception:format=tostring}}" 
+			  layout="${date} [${level:uppercase=true}] [${logger}] ${when:when=length('${aspnet-user-identity}')>0:Inner=:[${aspnet-user-identity}]} ${when:when=length('${aspnet-mvc-action}')>0:Inner=${aspnet-mvc-action}${literal:text=\:}}${when:when=length('${callsite-filename:includeSourcePath=False}')>0:Inner=${callsite-filename:includeSourcePath=False}${literal:text=\:}${when:when=length('${callsite-linenumber}')>0:Inner=${callsite-linenumber}}} | ${message}${when:when=length('${exception}')>0:Inner= Exception: ${exception:format=tostring}}" 
 			  useDefaultRowHighlightingRules="false">
 		  <highlight-row condition="level == LogLevel.Warn" foregroundColor="Magenta" />
 		  <highlight-row condition="level == LogLevel.Error" foregroundColor="Yellow"/>
