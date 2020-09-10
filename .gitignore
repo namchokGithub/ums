@@ -2,8 +2,8 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-UMS/obj/*
-EmailService/obj/*
+UMS/obj
+EmailService/obj
 *.cache
 UMS/obj/Debug/netcoreapp3.1/*.cache
 /.vs/UMS
@@ -76,3 +76,5 @@ UMS/obj/project.nuget.cache
 UMS/obj/UMS.csproj.nuget.dgspec.json
 UMS/obj/Debug/netcoreapp3.1/UMS.assets.cache
 UMS/obj/Debug/netcoreapp3.1/UMS.csprojAssemblyReference.cache
+EmailService/obj/Debug/netcoreapp3.1/EmailService.assets.cache
+UMS/obj/Debug/netcoreapp3.1/UMS.assets.cache
