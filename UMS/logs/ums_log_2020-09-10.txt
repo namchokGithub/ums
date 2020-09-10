@@ -1,0 +1,41 @@
+############################################## User Management System log ##############################################
+2020/09/10 16:35:08.618 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/10 16:35:11.805 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:5001
+2020/09/10 16:35:11.817 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: http://localhost:5000
+2020/09/10 16:35:11.817 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/10 16:35:11.817 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/10 16:35:11.817 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/10 16:35:13.662 [DEBUG] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Auth Database Context.
+2020/09/10 16:35:13.680 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/10 16:35:13.714 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:81 | Start log in on get.
+2020/09/10 16:35:13.720 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:94 | Signing out.
+2020/09/10 16:35:13.720 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:96 | Getting external authentication scheme.
+2020/09/10 16:35:13.738 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:99 | End log in on get.
+2020/09/10 16:35:25.582 [DEBUG] [UMS.Data.AuthDbContext]  GoogleLogin:Account:AuthDbContext.cs:27 | Auth Database Context.
+2020/09/10 16:35:25.603 [DEBUG] [UMS.Controllers.AccountController]  GoogleLogin:Account:AccountController.cs:32 | NLog injected into AccountController.
+2020/09/10 16:35:25.614 [DEBUG] [UMS.Controllers.AccountController]  GoogleLogin:Account:AccountController.cs:34 | Sign In Manager injected into AccountController.
+2020/09/10 16:35:25.614 [DEBUG] [UMS.Controllers.AccountController]  GoogleLogin:Account:AccountController.cs:36 | User Manager manager injected into AccountController.
+2020/09/10 16:35:25.614 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:Account:AccountController.cs:37 | End AccountController Constructor.
+2020/09/10 16:35:25.614 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:Account:AccountController.cs:157 | Start Google Login.
+2020/09/10 16:35:25.628 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:Account:AccountController.cs:160 | Get properties from google.
+2020/09/10 16:35:25.628 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:Account:AccountController.cs:161 | End Google Login.
+2020/09/10 16:35:41.833 [DEBUG] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Auth Database Context.
+2020/09/10 16:35:41.856 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/10 16:35:41.856 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:81 | Start log in on get.
+2020/09/10 16:35:41.862 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:94 | Signing out.
+2020/09/10 16:35:41.862 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:96 | Getting external authentication scheme.
+2020/09/10 16:35:41.862 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:99 | End log in on get.
+2020/09/10 16:36:28.662 [DEBUG] [UMS.Data.AuthDbContext]  GoogleLogin:Account:AuthDbContext.cs:27 | Auth Database Context.
+2020/09/10 16:36:28.662 [DEBUG] [UMS.Controllers.AccountController]  GoogleLogin:Account:AccountController.cs:32 | NLog injected into AccountController.
+2020/09/10 16:36:28.675 [DEBUG] [UMS.Controllers.AccountController]  GoogleLogin:Account:AccountController.cs:34 | Sign In Manager injected into AccountController.
+2020/09/10 16:36:28.675 [DEBUG] [UMS.Controllers.AccountController]  GoogleLogin:Account:AccountController.cs:36 | User Manager manager injected into AccountController.
+2020/09/10 16:36:28.675 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:Account:AccountController.cs:37 | End AccountController Constructor.
+2020/09/10 16:36:28.675 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:Account:AccountController.cs:157 | Start Google Login.
+2020/09/10 16:36:28.691 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:Account:AccountController.cs:160 | Get properties from google.
+2020/09/10 16:36:28.691 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:Account:AccountController.cs:161 | End Google Login.
+2020/09/10 16:36:40.908 [DEBUG] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Auth Database Context.
+2020/09/10 16:36:40.917 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/10 16:36:40.923 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:81 | Start log in on get.
+2020/09/10 16:36:40.923 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:94 | Signing out.
+2020/09/10 16:36:40.923 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:96 | Getting external authentication scheme.
+2020/09/10 16:36:40.923 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:99 | End log in on get.
