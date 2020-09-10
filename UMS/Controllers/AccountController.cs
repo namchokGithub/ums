@@ -396,7 +396,6 @@ namespace UMS.Controllers
                     _logger.LogTrace("End Microsoft Response.");
                     return RedirectToAction(nameof(InputModel));
                 }
-
                 _logger.LogDebug("Getting External log in and sign in.");
                 var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, false);
                 _logger.LogTrace("Creating user info object.");
@@ -406,7 +405,6 @@ namespace UMS.Controllers
                     info.Principal.FindFirst(ClaimTypes.GivenName).Value,
                     info.Principal.FindFirst(ClaimTypes.Surname).Value
                 }; // Create new user info
-
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("Log in succeeded.");

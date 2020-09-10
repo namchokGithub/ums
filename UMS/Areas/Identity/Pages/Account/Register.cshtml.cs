@@ -54,6 +54,7 @@ namespace UMS.Areas.Identity.Pages.Account
             _logger = logger;
             _emailSender = emailSender;
             _accountContext = accountContext;
+            _logger.LogDebug("Register model.");
         } // End Constructor
 
         /*
@@ -106,6 +107,7 @@ namespace UMS.Areas.Identity.Pages.Account
         {
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+            _logger.LogTrace("Register on get.");
         } // End OnGetAsync
 
         /*
@@ -117,11 +119,12 @@ namespace UMS.Areas.Identity.Pages.Account
         {
             try
             {
+                _logger.LogTrace("Start register on post.");
                 returnUrl = returnUrl ?? Url.Content("~/");
                 ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
-
                 if (ModelState.IsValid)
                 {
+                    _logger.LogTrace("Creating application user.");
                     var user = new ApplicationUser
                     {
                         UserName = Input.Email,
@@ -130,49 +133,51 @@ namespace UMS.Areas.Identity.Pages.Account
                         acc_Lastname = Input.acc_Lastname,
                         acc_IsActive = 'Y'
                     }; // New user
-
+                    _logger.LogTrace("Creating user.");
                     var result = await _userManager.CreateAsync(user, Input.Password);
                     // Check if create success
                     if (result.Succeeded)
                     {
                         _logger.LogInformation("User created a new account with password.");
+                        _logger.LogDebug("Generating provider key.");
                         var info = new UserLoginInfo("Email", RandomString(127).ToString(), "Email");
                         result = await _userManager.AddLoginAsync(user, info);
-
+                        _logger.LogTrace("Add login.");
                         if (result.Succeeded)
                         {
                             _logger.LogInformation("User created a new log in.");
                             await _signInManager.SignInAsync(user, false);
+                            _logger.LogTrace("End register on post.");
                             return LocalRedirect(returnUrl);
                         }
                         else
                         {
+                            _logger.LogWarning("Log in Already Associated. A user with this login already exists.");
                             TempData["Exception"] =
                                 @"Swal.fire({ icon: 'warning', title: 'Error !', text: 'Log in Already Associated. A user with this login already exists.', showConfirmButton: true })";
                         } // End Check if add login success
-
+                        _logger.LogTrace("Signing in.");
                         await _signInManager.SignInAsync(user, isPersistent: false);
+                        _logger.LogTrace("End register on post.");
                         return LocalRedirect(returnUrl);
                     } // End if create success
-
                     string errorStr = "";
                     foreach (var error in result.Errors)
                     {
                         errorStr += error.Description + " (" + error.Code + "). ";
                         ModelState.AddModelError(string.Empty, error.Description);
                     } // End loop get error
-
-                    // Send alert to home pages
+                    _logger.LogError(errorStr.ToString());
                     TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + errorStr + @"`, showConfirmButton: true })";
-
                 } // End if model is valid
-
+                _logger.LogTrace("End register on post.");
                 return Page();
             } 
             catch (Exception e)
             {
-                // Send alert to home pages
+                _logger.LogError(e.Message.ToString());
                 TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
+                _logger.LogTrace("End register on post.");
                 return Page();
             } // End Try Catch
         } // End OnPostAsync

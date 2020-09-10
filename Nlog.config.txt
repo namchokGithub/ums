@@ -17,23 +17,25 @@
 	
   <targets>
 	  <!-- Trace -->
-	  <target xsi:type="ColoredConsole" name="logconsole_trace" layout="${date} | ${level:uppercase=true} | ${message} | ${callsite-filename:includeSourcePath=False}:${callsite-linenumber} | ${logger}" />	  	  
-	  <!-- Debug and Info -->
-	  <target xsi:type="ColoredConsole" name="logconsole_info" layout="${date} | ${level:uppercase=true} | ${message}${when:when=length('${exception}')>0:Inner= | ${exception:format=tostring}}${when:when=length('${aspnet-mvc-action}')>0:Inner= | ${aspnet-mvc-action}}${when:when=length('${aspnet-mvc-controller}')>0:Inner=-${aspnet-mvc-controller}}:${callsite-linenumber} | ${logger} | ${aspnet-user-identity}" useDefaultRowHighlightingRules="false">
-		  <highlight-row condition="level == LogLevel.Debug" foregroundColor="DarkGreen" />
+	  <target xsi:type="ColoredConsole" name="logconsole_trace" layout="${date} [${level:uppercase=true}] [${logger}] ${when:when=length('${callsite-filename:includeSourcePath=False}')>0:Inner=${callsite-filename:includeSourcePath=False}${literal:text=\:}}${when:when=length('${callsite-linenumber}')>0:Inner=${callsite-linenumber}} | ${message}" />	  	  
+	  <!-- Debug -->
+	  <target xsi:type="ColoredConsole" name="logconsole_debug" layout="${date} [${level:uppercase=true}] [${logger}] ${when:when=length('${callsite-filename:includeSourcePath=False}')>0:Inner=${callsite-filename:includeSourcePath=False}${literal:text=\:}}${when:when=length('${callsite-linenumber}')>0:Inner=${callsite-linenumber}} | ${message}${when:when=length('${exception}')>0:Inner= Exception: ${exception:format=tostring}}"/>
+	  <!-- Info -->
+	  <target xsi:type="ColoredConsole" name="logconsole_info" layout="${date} [${level:uppercase=true}] [${logger}] ${when:when=length('${aspnet-user-identity}')>0:Inner=:[${aspnet-user-identity}]} ${when:when=length('${callsite-filename:includeSourcePath=False}')>0:Inner=${callsite-filename:includeSourcePath=False}${literal:text=\:}${when:when=length('${callsite-linenumber}')>0:Inner=${callsite-linenumber}}} | ${message}${when:when=length('${exception}')>0:Inner= Exception: ${exception:format=tostring}}" useDefaultRowHighlightingRules="false">
 		  <highlight-row condition="level == LogLevel.Info" foregroundColor="White" />
 	  </target>
 	  <!--Error--> 
-	  <target xsi:type="ColoredConsole" name="logconsole_error" layout="${date} | ${level:uppercase=true} | ${message}${when:when=length('${exception}')>0:Inner= | ${exception:format=tostring}}${when:when=length('${aspnet-mvc-action}')>0:Inner= | ${aspnet-mvc-action}}${when:when=length('${aspnet-mvc-controller}')>0:Inner=-${aspnet-mvc-controller}} | ${callsite-filename:includeSourcePath=False}:${callsite-linenumber} | ${logger}" useDefaultRowHighlightingRules="false">
-		  <highlight-row condition="level == LogLevel.Warn" foregroundColor="Yellow" />
-		  <highlight-row condition="level == LogLevel.Error" foregroundColor="Red"/>
+	  <target xsi:type="ColoredConsole" name="logconsole_error" layout="${date} [${level:uppercase=true}] [${logger}] ${when:when=length('${aspnet-user-identity}')>0:Inner=:[${aspnet-user-identity}]} ${when:when=length('${aspnet-mvc-action}')>0:Inner=${aspnet-mvc-action}${literal:text=\:}}${when:when=length('${aspnet-mvc-controller}')>0:Inner=${aspnet-mvc-controller}${literal:text=\:}}${when:when=length('${callsite-filename:includeSourcePath=False}')>0:Inner=${callsite-filename:includeSourcePath=False}${literal:text=\:}${when:when=length('${callsite-linenumber}')>0:Inner=${callsite-linenumber}}} | ${message}${when:when=length('${exception}')>0:Inner= Exception: ${exception:format=tostring}}" useDefaultRowHighlightingRules="false">
+		  <highlight-row condition="level == LogLevel.Warn" foregroundColor="Magenta" />
+		  <highlight-row condition="level == LogLevel.Error" foregroundColor="Yellow"/>
 		  <highlight-row condition="level == LogLevel.Fatal" foregroundColor="Red" backgroundColor="White" />
 	  </target>
   </targets>
 
   <rules>
 	  <logger name="*" maxlevel="Trace" writeTo="logconsole_trace" />
-	  <logger name="*" Levels="Debug, Info" writeTo="logconsole_info" />
+	  <logger name="*" Level="Debug" writeTo="logconsole_debug" />
+	  <logger name="*" Level="Info" writeTo="logconsole_info" />
 	  <!--Skip non-critical Microsoft logs and so log only own logs-->
 	  <logger name="Microsoft.*" maxlevel="Info" final="true" />
 	  <logger name="*" Levels="Warn, Error, Fatal" writeTo="logconsole_error" />

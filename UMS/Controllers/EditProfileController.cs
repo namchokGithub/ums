@@ -57,7 +57,7 @@ namespace UMS.Controllers
          * Author: Wannapa Srijermtong
          * Description: Get Firstname, Lastname and LoginProvider by UserId
          */
-        public IActionResult Index(string Id)
+        public IActionResult Index()
         {
             try
             {
@@ -65,7 +65,7 @@ namespace UMS.Controllers
                 var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
                 if (UserId == null) throw new Exception("The user ID not found !.");
                 ViewData["UserId"] = UserId;
-                string sqltext = $"EXEC [dbo].ums_Get_user '{Id}'";
+                string sqltext = $"EXEC [dbo].ums_Get_user '{UserId}'";
                 // Query data from "dbo.EditProfile" and Convert to List<EditProfile>
                 var user = _editprofileContext.EditProfile.FromSqlRaw(sqltext).ToList<EditProfile>().FirstOrDefault();
                 _logger.LogDebug("Get user by ID.");
@@ -103,12 +103,10 @@ namespace UMS.Controllers
                 var acc_OldPassword = HttpContext.Request.Form["acc_OldPassword"];
                 var acc_NewPassword = HttpContext.Request.Form["acc_NewPassword"];
                 var acc_ConfirmPassword = HttpContext.Request.Form["acc_ConfirmPassword"];
-
                 _logger.LogTrace("Check regular expression.");
                 // Regular expression
                 var RegExName = @"^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$";
                 var RegExPassword = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$!%*?&])[A-Za-z0-9$!%*?&]+$";
-
                 // Validation if acc_Firstname do not math with Regular expression.
                 if (!Regex.IsMatch(acc_Firstname, RegExName))
                 {
@@ -116,7 +114,6 @@ namespace UMS.Controllers
                     _logger.LogTrace("End Edit Profile.");
                     return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
                 }
-
                 // Validation if acc_Lastname do not math with Regular expression.
                 if (!Regex.IsMatch(acc_Lastname, RegExName))
                 {
@@ -124,7 +121,6 @@ namespace UMS.Controllers
                     _logger.LogTrace("End Edit Profile.");
                     return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
                 }
-
                 // Validation if acc_OldPassword do not math with Regular expression.
                 if (!Regex.IsMatch(acc_OldPassword, RegExPassword) && (acc_OldPassword != ""))
                 {
@@ -132,7 +128,6 @@ namespace UMS.Controllers
                     _logger.LogTrace("End Edit Profile.");
                     return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
                 }
-
                 // Validation if acc_NewPassword do not math with Regular expression.
                 if (!Regex.IsMatch(acc_NewPassword, RegExPassword) && acc_NewPassword != "")
                 {
@@ -140,7 +135,6 @@ namespace UMS.Controllers
                     _logger.LogTrace("End Edit Profile.");
                     return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
                 }
-
                 // Validation if acc_ConfirmPassword do not math with Regular expression.
                 if (!Regex.IsMatch(acc_ConfirmPassword, RegExPassword) && acc_ConfirmPassword != "")
                 {
@@ -148,20 +142,16 @@ namespace UMS.Controllers
                     _logger.LogTrace("End Edit Profile.");
                     return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
                 }
-
                 // Validation if acc_Firstname, acc_Lastname, acc_OldPassword, acc_NewPassword and acc_ConfirmPassword is blank.
                 if (acc_Firstname == "" || acc_Lastname == "" || acc_OldPassword == "" || acc_NewPassword == "" || acc_ConfirmPassword == "")
                 {
                     // Validation if acc_Firstname and acc_Lastname is not blank.
                     if (acc_Firstname != "" && acc_Lastname != "")
                     {
-                        TempData["EditProfileSuccessResult"] = @"toastr.success('Edit profile successfully!')";
-
                         // SQL text for execute procedure
                         string sqlUpdateUser = $"ums_Update_user '{acc_Id}', '{acc_Firstname}', '{acc_Lastname}'";
                         _editprofileContext.Database.ExecuteSqlRaw(sqlUpdateUser);
                         _logger.LogDebug("Update name's user.");
-
                         var resultUpdate_user = false;
                         while (!resultUpdate_user)
                         {
@@ -169,6 +159,8 @@ namespace UMS.Controllers
                             {
                                 _editprofileContext.SaveChanges();
                                 _logger.LogDebug("Save changes: Check update user.");
+                                _logger.LogTrace("Query succeeded.");
+                                TempData["EditProfileSuccessResult"] = @"toastr.success('Edit profile successfully!')";
                                 resultUpdate_user = true; // If success
                             }
                             catch (Exception e)
@@ -186,7 +178,6 @@ namespace UMS.Controllers
                     _logger.LogTrace("End Edit Profile.");
                     return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
                 } // End validate all input
-
                 // Validation if acc_OldPassword is not blank.
                 if (acc_OldPassword != "")
                 {
@@ -216,12 +207,10 @@ namespace UMS.Controllers
                         Buffer.BlockCopy(salt, 0, dst, 1, 0x10);
                         Buffer.BlockCopy(buffer2, 0, dst, 0x11, 0x20);
                         var hashed = Convert.ToBase64String(dst);
-
                         // SQL text for execute procedure
                         string sqlUpdateAll = $"ums_Update_all '{acc_Id}', '{acc_Firstname}', '{acc_Lastname}', '{hashed}'";
                         _editprofileContext.Database.ExecuteSqlRaw(sqlUpdateAll);
                         _logger.LogDebug("Update name's user and password.");
-
                         var resultUpdate_all = false;
                         while (!resultUpdate_all)
                         {
@@ -229,6 +218,7 @@ namespace UMS.Controllers
                             {
                                 _editprofileContext.SaveChanges();
                                 _logger.LogDebug("Save changes: Check update user.");
+                                _logger.LogTrace("Query succeeded.");
                                 TempData["EditProfileSuccessResult"] = @"toastr.success('Edit profile successfully!')";
                                 resultUpdate_all = true; // If success
                             }
@@ -238,17 +228,14 @@ namespace UMS.Controllers
                                 TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                             } // End try catch
                         } // Check if succeeded
-
                     } // End if old password is correct
                 }
                 else
                 {
-                    TempData["EditProfileSuccessResult"] = @"toastr.success('Edit profile successfully!')";
                     // SQL text for execute procedure
                     string sqlUpdateUser = $"ums_Update_user '{acc_Id}', '{acc_Firstname}', '{acc_Lastname}'";
                     _editprofileContext.Database.ExecuteSqlRaw(sqlUpdateUser);
                     _logger.LogDebug("Update name's user.");
-
                     var result = false;
                     while (!result)
                     {
@@ -256,6 +243,8 @@ namespace UMS.Controllers
                         {
                             _editprofileContext.SaveChanges();
                             _logger.LogDebug("Save changes: Check update user.");
+                            _logger.LogTrace("Query succeeded.");
+                            TempData["EditProfileSuccessResult"] = @"toastr.success('Edit profile successfully!')";
                             result = true; // If success
                         }
                         catch (Exception e)

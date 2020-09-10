@@ -41,6 +41,7 @@ namespace UMS.Areas.Identity.Pages.Account
             _userManager = userManager;
             _logger = logger;
             _emailSender = emailSender;
+            _logger.LogDebug("External Log in model.");
         }
 
         [BindProperty]
@@ -67,6 +68,7 @@ namespace UMS.Areas.Identity.Pages.Account
          */
         public IActionResult OnGetAsync()
         {
+            _logger.LogTrace("External Log in On get.");
             return RedirectToPage("./Login");
         } // End OnGetAsync
 
@@ -78,6 +80,7 @@ namespace UMS.Areas.Identity.Pages.Account
         public IActionResult OnPost(string provider, string returnUrl = null)
         {
             // Request a redirect to the external login provider.
+            _logger.LogTrace("External Log in On post.");
             var redirectUrl = Url.Page("./ExternalLogin", pageHandler: "Callback", values: new { returnUrl });
             var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
             return new ChallengeResult(provider, properties);
@@ -90,6 +93,7 @@ namespace UMS.Areas.Identity.Pages.Account
          */
         public async Task<IActionResult> OnGetCallbackAsync(string returnUrl = null, string remoteError = null)
         {
+            _logger.LogTrace("External Log On call back.");
             returnUrl = returnUrl ?? Url.Content("~/");
             if (remoteError != null)
             {
@@ -137,6 +141,7 @@ namespace UMS.Areas.Identity.Pages.Account
          */
         public async Task<IActionResult> OnPostConfirmationAsync(string returnUrl = null)
         {
+            _logger.LogTrace("External Log On post confirmation.");
             returnUrl = returnUrl ?? Url.Content("~/");
             // Get the information about the user from the external login provider
             var info = await _signInManager.GetExternalLoginInfoAsync();

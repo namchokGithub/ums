@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Logging;
 
 /*
  * Name: ForgotPasswordConfirmation.cs
@@ -16,11 +17,19 @@ namespace UMS.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class ForgotPasswordConfirmation : PageModel
     {
+        private readonly ILogger<ForgotPasswordConfirmation> _logger;
+
+        public ForgotPasswordConfirmation(ILogger<ForgotPasswordConfirmation> logger)
+        {
+            _logger = logger;
+            _logger.LogDebug("Forgot Password Confirmation.");
+        }  // End constructor
+
         /*
          * Name: OnGet
          * Parameter: none
          */
-        public void OnGet() {} // End OnGet
+        public void OnGet() { _logger.LogTrace("Forgot Password Confirmation On get."); } // End OnGet
 
         /*
          * Name: OnPost
@@ -29,6 +38,7 @@ namespace UMS.Areas.Identity.Pages.Account
          */
         public IActionResult OnPost()
         {
+            _logger.LogTrace("Forgot Password Confirmation On post.");
             return RedirectToPage("Login");
         } // End OnPost
     } // End ForgotPasswordConfirmation

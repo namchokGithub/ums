@@ -27,16 +27,15 @@ namespace UMS.Areas.Identity.Pages.Account
         {
             _signInManager = signInManager;
             _logger = logger;
-        }
+            _logger.LogDebug("Log out model.");
+        } // End constructor
 
         /*
          * Name: OnGet
          * Parameter: none
          * Description: 
          */
-        public void OnGet()
-        {
-        } // End OnGet
+        public void OnGet() { _logger.LogTrace("Log out model On get."); } // End OnGet
 
         /*
          * Name: OnPost
@@ -45,14 +44,17 @@ namespace UMS.Areas.Identity.Pages.Account
          */
         public async Task<IActionResult> OnPost(string returnUrl = null)
         {
+            _logger.LogTrace("Start Log out model On Post.");
             await _signInManager.SignOutAsync();
             _logger.LogInformation("User logged out.");
             if (returnUrl != null)
             {
+                _logger.LogTrace("End Log out model On Post.");
                 return LocalRedirect(returnUrl);
             }
             else
             {
+                _logger.LogTrace("End Log out model On Post.");
                 return RedirectToPage();
             }
         } // End OnPost
