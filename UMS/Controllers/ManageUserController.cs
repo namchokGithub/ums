@@ -154,17 +154,17 @@ namespace UMS.Controllers
             try
             {
                 _logger.LogTrace("Start edit user.");
-                // Check if parametor is null
-                if (_account == null) throw new Exception("Calling a method on a null object reference.");
-
                 // Check if select role form selection in form
+                _account.acc_Id = HttpContext.Request.Form["acc_Id"].ToString();
                 if (HttpContext.Request.Form["acc_RoleId"].ToString() != "0")
                 {
                     // Has condition in store procedure if equal zero or '' it's nothing happened
                     _account.acc_Rolename = HttpContext.Request.Form["acc_RoleId"].ToString();
-                    _logger.LogDebug("Set role ID");
+                    _logger.LogDebug("Set role ID.");
                 } // End if check role
-
+                // Check if parametor is null
+                if (_account.acc_Id == null || _account.acc_Id == "") throw new Exception("Calling a method on a null object reference.");
+                if (_account == null) throw new Exception("Calling a method on a null object reference.");
                 // Console.WriteLine(_account);
                 if (ModelState.IsValid)
                 {

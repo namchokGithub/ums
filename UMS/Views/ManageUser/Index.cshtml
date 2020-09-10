@@ -101,10 +101,12 @@
                         <div class="modal-body">
 
                             <!-- Hidden values -->
-                            <input type="hidden" asp-for="acc_Id" id="acc_Id" />
-                            <input type="hidden" asp-for="acc_User" id="acc_User" />
-                            <input type="hidden" asp-for="acc_Email" id="acc_Email" />
-                            <input type="hidden" asp-for="acc_IsActive" id="acc_IsActive" />
+                            <div class="form-group">
+                                <input type="hidden" asp-for="acc_Id" name="acc_Id"/>
+                                <input type="hidden" asp-for="acc_User" id="acc_User" />
+                                <input type="hidden" asp-for="acc_Email" id="acc_Email" />
+                                <input type="hidden" asp-for="acc_IsActive" id="acc_IsActive" />
+                            </div>
 
                             <!--Start Input Edit user-->
                             <div class="form-group">
@@ -126,7 +128,7 @@
                                 <select class="form-control" id="acc_RoleId" name="acc_RoleId">
                                     <option value="0" disabled selected>Choose</option>
                                     <option value="1">Admin</option>
-                                    <option value="2">User</option>
+                                    <option value="2">User</option> <!-- Show option form data base-->
                                 </select>
                             </div>
                             <!--End Input Edit user-->
@@ -171,7 +173,6 @@
 
         if (!regex.test($('#acc_Firstname').val())) toastr.error('Firstname has only character.')
         if (!regex.test($('#acc_Lastname').val())) toastr.error('Lastname has only character.')
-
     } // End updateUser
 
     /**
@@ -244,12 +245,7 @@
                 success: function (result) {
                     // Check if id is null will return error
                     if (result['condition'] != "error") {
-                        // Set data to form ]
-                        $('#acc_Id').val(result.acc_Id);
-                        $('#acc_IsActive').val(result.acc_IsActive);
-                        $('#acc_Firstname').val(result.acc_Firstname);
-                        $('#acc_Lastname').val(result.acc_Lastname);
-
+                        // Set data to form
                         if (result.acc_Rolename === 'Admin') {
                             $('#acc_RoleId').val(1);
                         } else if (result.acc_Rolename === 'User') {
@@ -257,12 +253,13 @@
                         } else {
                             $('#acc_RoleId').val(0);
                         } // end check role from select
-                        console.log('Query success');
-
-                        // Show modal
-                        $('#EditUser').modal();
+                        $(`input[name='acc_Id']`).val(result.acc_Id);
+                        $('#acc_IsActive').val(result.acc_IsActive);
+                        $('#acc_Firstname').val(result.acc_Firstname);
+                        $('#acc_Lastname').val(result.acc_Lastname);
+                        console.log('Set value success.');
+                        $('#EditUser').modal(); // Show modal
                     } else {
-                        // Check is has exception
                         eval(result['messages']) // Excute js
                         console.log('Query Error!!!');
                     } // End if result is not error
@@ -277,6 +274,7 @@
                     toastr.error(_text)
                 } // End error
             }) // End ajax for get user by id and set to form
+            console.log($(`input[name='acc_Id']`).val());
         } catch (err) {
             console.log(err.message)
             toastr.error(err.message)
