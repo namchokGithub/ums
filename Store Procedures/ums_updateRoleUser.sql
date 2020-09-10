@@ -3,7 +3,7 @@
 -- Create date: 2020-08-28
 -- Description:	Update role user
 -- =============================================
-ALTER PROCEDURE ums_updateRoleUser
+CREATE PROCEDURE ums_updateRoleUser
 	@param_Id nvarchar(256),
 	@param_Role nchar(10)
 AS

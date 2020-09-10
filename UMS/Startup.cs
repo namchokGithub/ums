@@ -15,6 +15,7 @@ using UMS.Models;
 
 /*
  * Name : Startup
+ * Author: System
  * Description: For set up the project
  */
 
@@ -22,17 +23,23 @@ namespace UMS
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; }
+
+        /*
+         * Name: Startup
+         * Parameter: configuration(IConfiguration)
+         * Description: Constructor
+         */
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-        }
+        } // End Constructor
 
-        public IConfiguration Configuration
-        {
-            get;
-        }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
+        /*
+         * Name: ConfigureServices
+         * Parameter: services(IServiceCollection)
+         * Description: This method gets called by the runtime. Use this method to add services to the container.
+         */
         public void ConfigureServices(IServiceCollection services)
         {
             // Set connect database
@@ -86,9 +93,13 @@ namespace UMS
                 microsoftOptions.ClientId = "ed43a983-e56c-4a2a-a1e8-55b74d56fbc4";
                 microsoftOptions.ClientSecret = ".j-k5QvM40k4Mzm1d7PwWBAQv~w42_MV.e";
             });
-        }
+        } // End ConfigureServices
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /*
+         * Name: Configure
+         * Parameter: app(IApplicationBuilder), env(IWebHostEnvironment)
+         * Description: This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+         */
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -116,6 +127,6 @@ namespace UMS
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
-        }
-    }
+        } // End Configure
+    } // End Startup
 }
