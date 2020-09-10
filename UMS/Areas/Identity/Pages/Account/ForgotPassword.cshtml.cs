@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.WebUtilities;
 using UMS.Areas.Identity.Data;
 using EmailService;
 using System.Linq;
+using Microsoft.Extensions.Logging;
 
 /*
  * Name: ForgotPasswordModel.cs
@@ -27,11 +28,14 @@ namespace UMS.Areas.Identity.Pages.Account
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IEmailSender _emailSender;
+        private readonly ILogger<ForgotPasswordModel> _logger;
 
-        public ForgotPasswordModel(UserManager<ApplicationUser> userManager, IEmailSender emailSender)
+        public ForgotPasswordModel(UserManager<ApplicationUser> userManager, IEmailSender emailSender, ILogger<ForgotPasswordModel> logger)
         {
             _userManager = userManager;
             _emailSender = emailSender;
+            _logger = logger;
+            _logger.LogDebug("Forgot Password model.");
         } // End contructor
 
         [BindProperty]
@@ -58,17 +62,19 @@ namespace UMS.Areas.Identity.Pages.Account
         {
             try
             {
+                _logger.LogTrace("Start forgot password on post.");
                 if (ModelState.IsValid)
                 {
                     var user = await _userManager.FindByEmailAsync(Input.Email); // Find user
-
+                    _logger.LogTrace("Finding user.");
                     if (user == null)
                     {
-                        // Don't have this user
-                        Console.WriteLine("Not found User!!");
+                        string mes = @"Swal.fire({ icon: 'error', title: 'Error !', text: 'User Not found.', showConfirmButton: true })";
+                        TempData["Exception"] = mes;
+                        _logger.LogWarning("User Not found.");
                         return RedirectToPage("Login");
                     } // End check user is null
-
+                    _logger.LogDebug("Generating code.");
                     var code = await _userManager.GeneratePasswordResetTokenAsync(user); // Gen token for this user
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
 
@@ -96,22 +102,22 @@ namespace UMS.Areas.Identity.Pages.Account
                         <hr>
                         Best regards,
                         <br>
-                        User Management System
+                        User Management System.
                       "
                         ); // End craete message 
-
+                    _logger.LogTrace("Sending email.");
                     await _emailSender.SendEmailAsync(message);
-
+                    _logger.LogTrace("End forgot password on post.");
                     return RedirectToPage("./ForgotPasswordConfirmation");
                 }
-
+                _logger.LogTrace("End forgot password on post.");
                 return Page();
             } catch (Exception e)
             {
-                // Set sweet alert with error messages
+                _logger.LogError(e.Message.ToString());
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                // Send alert to home pages
                 TempData["Exception"] = message;
+                _logger.LogTrace("End forgot password on post.");
                 return Page();
             } // End try catch
         } // End OnPostAsync
