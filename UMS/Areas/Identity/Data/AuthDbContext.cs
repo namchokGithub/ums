@@ -24,7 +24,7 @@ namespace UMS.Data
             : base(options)
         {
             _logger = logger;
-            _logger.LogDebug("Start Auth Database Context.");
+            _logger.LogTrace("Start Auth Database Context.");
         } // End contructor
 
         /*
@@ -49,6 +49,18 @@ namespace UMS.Data
                     entity.Property(e => e.acc_Firstname).HasColumnName("acc_Firstname");
                     entity.Property(e => e.acc_Lastname).HasColumnName("acc_Lastname");
                     entity.Property(e => e.acc_IsActive).HasColumnName("acc_IsActive");
+
+                    entity.Property(e => e.Id).HasComment("User ID");
+                    entity.Property(e => e.UserName).HasComment("Username");
+                    entity.Property(e => e.NormalizedUserName).HasComment("Normalized UserName");
+                    entity.Property(e => e.PasswordHash).HasComment("Password hash");
+                    entity.Property(e => e.SecurityStamp).HasComment("Security Stamp");
+                    entity.Property(e => e.ConcurrencyStamp).HasComment("Concurrency Stamp");
+                    entity.Property(e => e.Email).HasComment("User email");
+                    entity.Property(e => e.NormalizedEmail).HasComment("Normalized user email");
+                    entity.Property(e => e.acc_Firstname).HasComment("Firstname");
+                    entity.Property(e => e.acc_Lastname).HasComment("Lastname");
+                    entity.Property(e => e.acc_IsActive).HasComment("Status of account");
                 }
             );
 
@@ -61,6 +73,7 @@ namespace UMS.Data
                 .Ignore(entity => entity.AccessFailedCount)
                 .Ignore(entity => entity.PhoneNumberConfirmed)
                 .ToTable(name: "Account");
+            _logger.LogTrace("Creating applications user.");
 
             builder.Entity<IdentityRole>().ToTable("Roles");
             builder.Entity<IdentityUserRole<string>>().ToTable("UserRoles");
@@ -68,9 +81,10 @@ namespace UMS.Data
             builder.Entity<IdentityUserToken<string>>().ToTable("UserTokens");
             builder.Entity<IdentityUserClaim<string>>().ToTable("UserClaims");
             builder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaims");
+            _logger.LogTrace("Creating Identity database.");
 
-            builder.Entity<Log>().HasNoKey();
-            builder.Entity<Log>(entity =>
+            builder.Entity<Logs>().HasNoKey();
+            builder.Entity<Logs>(entity =>
             {
                 entity.Property(e => e.log_datetime).HasColumnName("log_datetime");
                 entity.Property(e => e.log_level).HasColumnName("log_level");
@@ -81,17 +95,18 @@ namespace UMS.Data
                 entity.Property(e => e.log_linenumber).HasColumnName("log_linenumber");
                 entity.Property(e => e.log_message).HasColumnName("log_message");
                 entity.Property(e => e.log_exception).HasColumnName("log_exception");
-                
                 entity.Property(e => e.log_datetime).HasComment("Date time");
                 entity.Property(e => e.log_level).HasComment("Level of log");
                 entity.Property(e => e.log_exception).HasComment("Exception");
                 entity.Property(e => e.log_logger).HasComment("A computer program to keep track of events.");
             });
 
-            builder.Entity<Log>()
+            builder.Entity<Logs>()
                 .Ignore(e => e.log_date)
                 .Ignore(e => e.log_time);
+            _logger.LogTrace("Creating log models.");
 
+            _logger.LogTrace("ENd creating on model.");
         } // End OnModelCreating
     } // End AuthDbContext
 }

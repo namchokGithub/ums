@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace UMS.Models
 {
-    public class Log
+    public class Logs
     {
         [Required]
         [DataType(DataType.Date)]
@@ -37,6 +37,14 @@ namespace UMS.Models
         public string log_logger { set; get; }
 
         [AllowNull]
+        [Column(TypeName = "nvarchar(450)")]
+        public string log_message { set; get; }
+
+        [AllowNull]
+        [Column(TypeName = "nvarchar(450)")]
+        public string log_exception { set; get; }
+
+        [AllowNull]
         [Column(TypeName = "nvarchar(256)")]
         public string log_user_identity { set; get; }
 
@@ -55,14 +63,6 @@ namespace UMS.Models
         [AllowNull]
         [Column(TypeName = "nvarchar(256)")]
         public string log_linenumber { set; get; }
-
-        [AllowNull]
-        [Column(TypeName = "nvarchar(450)")]
-        public string log_message { set; get; }
-
-        [AllowNull]
-        [Column(TypeName = "nvarchar(450)")]
-        public string log_exception { set; get; }
 
     } // End Log
 }

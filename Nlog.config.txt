@@ -13,16 +13,24 @@
 	<extensions>
 		<add assembly="NLog.Web.AspNetCore"/>
 		<add assembly="NLog.Web"/>
+		<add assembly="NLog.Appsettings.Standard" />
+		<!-- Install-Package NLog.Appsettings.Standard -Version 2.1.0 -->
 	</extensions>
 	
   <targets>
 	  <!-- Database --> <!-- SQLEXPRESSMHEE , SQLEXPRESS-->
-	  <target name="database" xsi:type="Database" connectionString="Server=localhost\\SQLEXPRESSMHEE;Database=UMS;Trusted_Connection=True;MultipleActiveResultSets=true" >
+	  <target name="logdatabase" 
+			  xsi:type="Database"
+			  keepConnection="true"
+			  commandType="text">
+		  <connectionString>
+			  Server=localhost\SQLEXPRESSMHEE;Database=UMS;Trusted_Connection=True;
+		  </connectionString>
 		  <commandText>
-			  INSERT INTO "Log" 
-				("log_datetime", "log_level", "log_logger", "log_user_identity", "log_mvc_action", "log_filename", "log_linenumber", "log_message", "log_exception")
-			  VALUES 
-				(@log_datetime, @log_level, @log_logger, @log_user_identity, @log_mvc_action, @log_filename, @log_linenumber, @log_message, @log_exception);
+			  INSERT INTO [dbo].[Log]
+			  ([log_datetime] ,[log_level] ,[log_logger] ,[log_user_identity] ,[log_mvc_action] ,[log_filename] ,[log_linenumber] ,[log_message] ,[log_exception])
+			  VALUES
+			  (@log_datetime ,@log_level ,@log_logger ,@log_user_identity ,@log_mvc_action ,@log_filename ,@log_linenumber ,@log_message ,@log_exception)
 		  </commandText>
 		  <parameter name="@log_datetime" layout="${date}" />
 		  <parameter name="@log_level" layout="${level:uppercase=true}" />
@@ -100,6 +108,7 @@
 	  <logger name="*" minlevel="Trace" writeTo="logfilealltrace" />
 	  <logger name="*" maxlevel="Trace" writeTo="logconsole_trace" />
 	  <logger name="*" minlevel="Debug" writeTo="logfile" />
+	  <logger name="*" minlevel="Debug" writeTo="logdatabase" />
 	  <logger name="*" Level="Debug" writeTo="logconsole_debug" />
 	  <logger name="*" Level="Info" writeTo="logconsole_info" />
 	  <!--Skip non-critical Microsoft logs and so log only own logs-->

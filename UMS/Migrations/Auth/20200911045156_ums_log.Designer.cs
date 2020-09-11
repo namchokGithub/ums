@@ -9,7 +9,7 @@ using UMS.Data;
 namespace UMS.Migrations.Auth
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20200911033140_ums_log")]
+    [Migration("20200911045156_ums_log")]
     partial class ums_log
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -159,53 +159,64 @@ namespace UMS.Migrations.Auth
                 {
                     b.Property<string>("Id")
                         .HasColumnName("acc_Id")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(450)")
+                        .HasComment("User ID");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnName("acc_ConcurrencyStamp")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasComment("Concurrency Stamp");
 
                     b.Property<string>("Email")
                         .HasColumnName("acc_Email")
                         .HasColumnType("nvarchar(256)")
+                        .HasComment("User email")
                         .HasMaxLength(256);
 
                     b.Property<string>("NormalizedEmail")
                         .HasColumnName("acc_NormalizedEmail")
                         .HasColumnType("nvarchar(256)")
+                        .HasComment("Normalized user email")
                         .HasMaxLength(256);
 
                     b.Property<string>("NormalizedUserName")
                         .HasColumnName("acc_NormalizedUserName")
                         .HasColumnType("nvarchar(256)")
+                        .HasComment("Normalized UserName")
                         .HasMaxLength(256);
 
                     b.Property<string>("PasswordHash")
                         .HasColumnName("acc_PasswordHash")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasComment("Password hash");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnName("acc_SecurityStamp")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasComment("Security Stamp");
 
                     b.Property<string>("UserName")
                         .HasColumnName("acc_User")
                         .HasColumnType("nvarchar(256)")
+                        .HasComment("Username")
                         .HasMaxLength(256);
 
                     b.Property<string>("acc_Firstname")
                         .HasColumnName("acc_Firstname")
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("nvarchar(256)")
+                        .HasComment("Firstname");
 
                     b.Property<string>("acc_IsActive")
                         .IsRequired()
                         .HasColumnName("acc_IsActive")
-                        .HasColumnType("char(10)");
+                        .HasColumnType("char(10)")
+                        .HasComment("Status of account");
 
                     b.Property<string>("acc_Lastname")
                         .HasColumnName("acc_Lastname")
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("nvarchar(256)")
+                        .HasComment("Lastname");
 
                     b.HasKey("Id");
 
@@ -220,7 +231,7 @@ namespace UMS.Migrations.Auth
                     b.ToTable("Account");
                 });
 
-            modelBuilder.Entity("UMS.Models.Log", b =>
+            modelBuilder.Entity("UMS.Models.Logs", b =>
                 {
                     b.Property<string>("log_datetime")
                         .IsRequired()
@@ -263,7 +274,7 @@ namespace UMS.Migrations.Auth
                         .HasColumnName("log_user_identity")
                         .HasColumnType("nvarchar(256)");
 
-                    b.ToTable("Log");
+                    b.ToTable("Logs");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

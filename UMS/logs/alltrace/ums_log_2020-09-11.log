@@ -61,3 +61,263 @@
 2020/09/11 10:10:57.474 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] getUser:ManageUserController.cs:119 | End get user.
 2020/09/11 10:26:30.271 [DEBUG] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start Auth Database Context.
 2020/09/11 10:31:39.859 [DEBUG] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 10:33:16.043 [DEBUG] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 10:39:11.336 [DEBUG] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 10:53:01.724 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/11 10:53:15.007 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/11 10:53:15.134 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/11 10:53:15.177 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/11 10:53:15.177 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/11 10:53:19.745 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 10:53:21.618 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:64 | Creating applications user.
+2020/09/11 10:53:21.709 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:72 | Creating Identity database.
+2020/09/11 10:53:21.981 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:96 | Creating log models.
+2020/09/11 10:53:21.991 [DEBUG] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:98 | ENd creating on model.
+2020/09/11 10:53:24.710 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 10:53:24.772 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 10:53:24.864 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:81 | Start log in on get.
+2020/09/11 10:53:24.878 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:94 | Signing out.
+2020/09/11 10:53:24.878 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:96 | Getting external authentication scheme.
+2020/09/11 10:53:24.878 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:99 | End log in on get.
+2020/09/11 10:53:32.104 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 10:53:32.128 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/11 10:53:32.147 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:57 | Register model.
+2020/09/11 10:53:32.147 [TRACE] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:110 | Register on get.
+2020/09/11 10:53:33.828 [DEBUG] [UMS.Models.AccountContext]  checkUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/11 10:53:33.839 [DEBUG] [UMS.Models.EditAccountContext]  checkUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/11 10:53:33.846 [TRACE] [UMS.Data.AuthDbContext]  checkUserExist:AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 10:53:33.846 [TRACE] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:43 | NLog injected into EditProfileController.
+2020/09/11 10:53:33.846 [TRACE] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:45 | Account Context injected into EditProfileController.
+2020/09/11 10:53:33.865 [TRACE] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:47 | Edit Profile Context injected into EditProfileController.
+2020/09/11 10:53:33.865 [TRACE] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:49 | Sign In Manager injected into EditProfileController.
+2020/09/11 10:53:33.865 [TRACE] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:50 | Start EditProfileController Constructor.
+2020/09/11 10:53:33.896 [TRACE] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:261 | Start check user is exist.
+2020/09/11 10:53:34.128 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:268 | Check user is exist.
+2020/09/11 10:53:34.153 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:275 | Save changes: Check user is exist.
+2020/09/11 10:53:34.153 [TRACE] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:276 | Query succeeded.
+2020/09/11 10:53:34.159 [TRACE] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:286 | End check user is exist.
+2020/09/11 10:53:35.874 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 10:53:35.878 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 10:53:35.878 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:81 | Start log in on get.
+2020/09/11 10:53:35.878 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:94 | Signing out.
+2020/09/11 10:53:35.894 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:96 | Getting external authentication scheme.
+2020/09/11 10:53:35.894 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:99 | End log in on get.
+2020/09/11 10:58:36.919 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/11 10:58:38.726 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/11 10:58:38.745 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/11 10:58:38.765 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/11 10:58:38.769 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/11 10:58:40.609 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 10:58:40.635 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 10:58:40.675 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:81 | Start log in on get.
+2020/09/11 10:58:40.675 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:94 | Signing out.
+2020/09/11 10:58:40.711 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:96 | Getting external authentication scheme.
+2020/09/11 10:58:40.725 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:99 | End log in on get.
+2020/09/11 10:59:30.617 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 10:59:30.617 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 10:59:30.673 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:119 | Start log in on post.
+2020/09/11 10:59:31.276 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:64 | Creating applications user.
+2020/09/11 10:59:31.276 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:72 | Creating Identity database.
+2020/09/11 10:59:31.295 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:96 | Creating log models.
+2020/09/11 10:59:31.302 [DEBUG] [UMS.Data.AuthDbContext]  AuthDbContext.cs:98 | ENd creating on model.
+2020/09/11 10:59:32.434 [ERROR] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:142 | Your email or password is not valid.
+2020/09/11 10:59:32.502 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | End log in on post.
+2020/09/11 11:13:06.854 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/11 11:13:09.293 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/11 11:13:09.312 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/11 11:13:09.323 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/11 11:13:09.323 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/11 11:13:11.093 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 11:13:11.116 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 11:13:11.151 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:81 | Start log in on get.
+2020/09/11 11:13:11.151 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:94 | Signing out.
+2020/09/11 11:13:11.163 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:96 | Getting external authentication scheme.
+2020/09/11 11:13:11.163 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:99 | End log in on get.
+2020/09/11 11:13:25.152 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 11:13:25.152 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 11:13:25.185 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:119 | Start log in on post.
+2020/09/11 11:13:25.747 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:64 | Creating applications user.
+2020/09/11 11:13:25.755 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:72 | Creating Identity database.
+2020/09/11 11:13:25.770 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:96 | Creating log models.
+2020/09/11 11:13:25.770 [DEBUG] [UMS.Data.AuthDbContext]  AuthDbContext.cs:98 | ENd creating on model.
+2020/09/11 11:13:26.833 [ERROR] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:142 | Your email or password is not valid.
+2020/09/11 11:13:26.833 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | End log in on post.
+2020/09/11 11:15:05.499 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/11 11:15:07.370 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/11 11:15:07.394 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/11 11:15:07.394 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/11 11:15:07.411 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/11 11:15:09.712 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 11:15:09.731 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 11:15:09.765 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:81 | Start log in on get.
+2020/09/11 11:15:09.773 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:94 | Signing out.
+2020/09/11 11:15:09.784 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:96 | Getting external authentication scheme.
+2020/09/11 11:15:09.784 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:99 | End log in on get.
+2020/09/11 11:19:48.145 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/11 11:19:50.163 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/11 11:19:50.182 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/11 11:19:50.193 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/11 11:19:50.193 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/11 11:19:51.492 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 11:19:51.524 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 11:19:51.589 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:81 | Start log in on get.
+2020/09/11 11:19:51.589 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:94 | Signing out.
+2020/09/11 11:19:51.606 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:96 | Getting external authentication scheme.
+2020/09/11 11:19:51.611 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:99 | End log in on get.
+2020/09/11 11:19:54.341 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 11:19:54.350 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 11:19:54.388 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:119 | Start log in on post.
+2020/09/11 11:19:54.923 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:64 | Creating applications user.
+2020/09/11 11:19:54.940 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:72 | Creating Identity database.
+2020/09/11 11:19:54.958 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:96 | Creating log models.
+2020/09/11 11:19:54.958 [DEBUG] [UMS.Data.AuthDbContext]  AuthDbContext.cs:98 | ENd creating on model.
+2020/09/11 11:19:56.282 [ERROR] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:142 | Your email or password is not valid.
+2020/09/11 11:19:56.289 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | End log in on post.
+2020/09/11 11:26:32.430 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/11 11:26:34.597 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/11 11:26:34.619 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/11 11:26:34.627 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/11 11:26:34.627 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/11 11:26:36.612 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 11:26:36.649 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 11:26:36.705 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:81 | Start log in on get.
+2020/09/11 11:26:36.705 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:94 | Signing out.
+2020/09/11 11:26:36.733 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:96 | Getting external authentication scheme.
+2020/09/11 11:26:36.749 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:99 | End log in on get.
+2020/09/11 11:28:00.997 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/11 11:28:03.898 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/11 11:28:03.927 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/11 11:28:03.949 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/11 11:28:03.955 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/11 11:28:06.081 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 11:28:06.106 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 11:28:06.140 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:81 | Start log in on get.
+2020/09/11 11:28:06.145 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:94 | Signing out.
+2020/09/11 11:28:06.145 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:96 | Getting external authentication scheme.
+2020/09/11 11:28:06.160 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:99 | End log in on get.
+2020/09/11 11:28:23.225 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 11:28:23.239 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 11:28:23.277 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:119 | Start log in on post.
+2020/09/11 11:28:23.928 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:64 | Creating applications user.
+2020/09/11 11:28:23.928 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:72 | Creating Identity database.
+2020/09/11 11:28:23.958 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:96 | Creating log models.
+2020/09/11 11:28:23.958 [DEBUG] [UMS.Data.AuthDbContext]  AuthDbContext.cs:98 | ENd creating on model.
+2020/09/11 11:28:25.241 [ERROR] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:142 | Your email or password is not valid.
+2020/09/11 11:28:25.255 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | End log in on post.
+2020/09/11 11:32:57.228 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/11 11:32:59.103 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/11 11:32:59.136 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/11 11:32:59.156 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/11 11:32:59.160 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/11 11:33:00.882 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 11:33:00.906 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 11:33:00.938 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:81 | Start log in on get.
+2020/09/11 11:33:00.944 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:94 | Signing out.
+2020/09/11 11:33:00.956 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:96 | Getting external authentication scheme.
+2020/09/11 11:33:00.956 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:99 | End log in on get.
+2020/09/11 11:40:44.011 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/11 11:40:47.185 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/11 11:40:47.755 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/11 11:40:47.772 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/11 11:40:47.796 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/11 11:40:49.374 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 11:40:49.401 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 11:40:49.456 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:81 | Start log in on get.
+2020/09/11 11:40:49.481 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:94 | Signing out.
+2020/09/11 11:40:49.491 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:96 | Getting external authentication scheme.
+2020/09/11 11:40:49.560 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:99 | End log in on get.
+2020/09/11 11:42:17.409 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 11:42:17.409 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 11:42:17.462 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:119 | Start log in on post.
+2020/09/11 11:42:18.194 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:64 | Creating applications user.
+2020/09/11 11:42:18.194 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:72 | Creating Identity database.
+2020/09/11 11:42:18.220 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:96 | Creating log models.
+2020/09/11 11:42:18.225 [DEBUG] [UMS.Data.AuthDbContext]  AuthDbContext.cs:98 | ENd creating on model.
+2020/09/11 11:42:19.549 [ERROR] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:142 | Your email or password is not valid.
+2020/09/11 11:42:19.567 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | End log in on post.
+2020/09/11 11:44:48.035 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/11 11:44:50.735 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/11 11:44:52.286 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 11:44:52.311 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 11:45:00.966 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/11 11:45:00.976 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/11 11:45:00.976 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/11 11:45:01.033 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:81 | Start log in on get.
+2020/09/11 11:45:01.048 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:94 | Signing out.
+2020/09/11 11:45:01.065 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:96 | Getting external authentication scheme.
+2020/09/11 11:45:01.065 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:99 | End log in on get.
+2020/09/11 11:45:11.902 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 11:45:11.902 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 11:45:21.991 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:119 | Start log in on post.
+2020/09/11 11:45:22.475 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:64 | Creating applications user.
+2020/09/11 11:45:22.475 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:72 | Creating Identity database.
+2020/09/11 11:45:22.496 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:96 | Creating log models.
+2020/09/11 11:45:22.502 [DEBUG] [UMS.Data.AuthDbContext]  AuthDbContext.cs:98 | ENd creating on model.
+2020/09/11 11:45:23.419 [ERROR] [Microsoft.EntityFrameworkCore.Database.Connection]   | An error occurred using the connection to database 'UMS' on server 'localhost\SQLEXPRESSMHEE'.
+2020/09/11 11:45:23.531 [ERROR] [Microsoft.EntityFrameworkCore.Query]   | An exception occurred while iterating over the results of a query for context type 'UMS.Data.AuthDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "UMS" requested by the login. The login failed.
+Login failed for user 'CSIGROUPS\namchok'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:bc5bb932-ff1b-4e89-b7bd-a15c60fc66f6
+Error Number:4060,State:1,Class:11Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "UMS" requested by the login. The login failed.
+Login failed for user 'CSIGROUPS\namchok'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:bc5bb932-ff1b-4e89-b7bd-a15c60fc66f6
+Error Number:4060,State:1,Class:11
+2020/09/11 11:45:23.974 [ERROR] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:125 | Cannot open database "UMS" requested by the login. The login failed.
+Login failed for user 'CSIGROUPS\namchok'.
+2020/09/11 11:45:23.974 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:125 | End log in on post.
+2020/09/11 11:51:06.107 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 11:51:06.621 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:76 | Creating applications user.
+2020/09/11 11:51:06.628 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:84 | Creating Identity database.
+2020/09/11 11:51:06.646 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:107 | Creating log models.
+2020/09/11 11:51:06.646 [DEBUG] [UMS.Data.AuthDbContext]  AuthDbContext.cs:109 | ENd creating on model.
+2020/09/11 11:51:55.953 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 11:51:56.504 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:76 | Creating applications user.
+2020/09/11 11:51:56.504 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:84 | Creating Identity database.
+2020/09/11 11:51:56.522 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:107 | Creating log models.
+2020/09/11 11:51:56.522 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:109 | ENd creating on model.
