@@ -9,8 +9,8 @@ using UMS.Data;
 namespace UMS.Migrations.Auth
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20200909095346_ums_auth")]
-    partial class ums_auth
+    [Migration("20200911030130_ums_log")]
+    partial class ums_log
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -222,41 +222,57 @@ namespace UMS.Migrations.Auth
 
             modelBuilder.Entity("UMS.Models.Log", b =>
                 {
-                    b.Property<int>("log_Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("log_Id")
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<string>("log_date")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("log_datetime")
                         .IsRequired()
                         .HasColumnName("log_datetime")
+                        .HasColumnType("nvarchar(max)")
+                        .HasComment("Date time");
+
+                    b.Property<string>("log_exception")
+                        .HasColumnName("log_exception")
+                        .HasColumnType("nvarchar(450)")
+                        .HasComment("Exception");
+
+                    b.Property<string>("log_filename")
+                        .HasColumnName("log_filename")
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("log_level")
+                        .HasColumnName("log_level")
+                        .HasColumnType("nvarchar(256)")
+                        .HasComment("Level of log");
+
+                    b.Property<string>("log_linenumber")
+                        .HasColumnName("log_linenumber")
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("log_logger")
+                        .HasColumnName("log_logger")
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("log_message")
+                        .HasColumnName("log_message")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("log_mvc_action")
+                        .HasColumnName("log_mvc_action")
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("log_mvc_controller")
+                        .HasColumnName("log_mvc_controller")
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("log_time")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("log_Id");
+                    b.Property<string>("log_user_identity")
+                        .HasColumnName("log_user_identity")
+                        .HasColumnType("nvarchar(256)");
 
                     b.ToTable("Log");
-                });
-
-            modelBuilder.Entity("UMS.Models.LogAccount", b =>
-                {
-                    b.Property<int>("la_Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("la_Id")
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("la_acc_Id")
-                        .HasColumnName("la_acc_Id")
-                        .HasColumnType("int");
-
-                    b.Property<int>("la_log_Id")
-                        .HasColumnName("la_log_Id")
-                        .HasColumnType("int");
-
-                    b.HasKey("la_Id");
-
-                    b.ToTable("LogAccount");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

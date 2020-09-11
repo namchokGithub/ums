@@ -1,0 +1,61 @@
+############################################## User Management System log ##############################################
+2020/09/11 10:10:26.461 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/11 10:10:29.632 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/11 10:10:29.653 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/11 10:10:29.670 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/11 10:10:29.687 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/11 10:10:31.425 [DEBUG] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 10:10:31.491 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:41 | NLog injected into HomeController.
+2020/09/11 10:10:31.491 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:43 | User manager injected into HomeController.
+2020/09/11 10:10:31.502 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:44 | Start HomeController Constructor.
+2020/09/11 10:10:31.502 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:63 | Start Index.
+2020/09/11 10:10:31.502 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome to UMS.
+2020/09/11 10:10:31.521 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:69 | Find first value from user.
+2020/09/11 10:10:31.521 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:73 | End Index.
+2020/09/11 10:10:33.796 [DEBUG] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 10:10:33.808 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/11 10:10:33.818 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/11 10:10:33.830 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:43 | NLog injected into EditProfileController.
+2020/09/11 10:10:33.830 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:45 | Account Context injected into EditProfileController.
+2020/09/11 10:10:33.830 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:47 | Edit Profile Context injected into EditProfileController.
+2020/09/11 10:10:33.830 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:49 | Sign In Manager injected into EditProfileController.
+2020/09/11 10:10:33.830 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:50 | Start EditProfileController Constructor.
+2020/09/11 10:10:33.846 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:69 | Start Index.
+2020/09/11 10:10:33.846 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:75 | Find first value from user.
+2020/09/11 10:10:35.261 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/11 10:10:35.261 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:87 | End Index.
+2020/09/11 10:10:36.523 [DEBUG] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 10:10:36.544 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/11 10:10:36.551 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/11 10:10:36.551 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:43 | NLog injected into EditProfileController.
+2020/09/11 10:10:36.551 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:45 | Account Context injected into EditProfileController.
+2020/09/11 10:10:36.551 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:47 | Edit Profile Context injected into EditProfileController.
+2020/09/11 10:10:36.565 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:49 | Sign In Manager injected into EditProfileController.
+2020/09/11 10:10:36.565 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:50 | Start EditProfileController Constructor.
+2020/09/11 10:10:36.565 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:69 | Start Index.
+2020/09/11 10:10:36.565 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:75 | Find first value from user.
+2020/09/11 10:10:36.613 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/11 10:10:36.613 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:87 | End Index.
+2020/09/11 10:10:37.398 [DEBUG] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 10:10:37.417 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/11 10:10:37.431 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/11 10:10:37.440 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:43 | NLog injected into EditProfileController.
+2020/09/11 10:10:37.440 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:45 | Account Context injected into EditProfileController.
+2020/09/11 10:10:37.440 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:47 | Edit Profile Context injected into EditProfileController.
+2020/09/11 10:10:37.440 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:49 | Sign In Manager injected into EditProfileController.
+2020/09/11 10:10:37.460 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:50 | Start EditProfileController Constructor.
+2020/09/11 10:10:37.460 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:69 | Start Index.
+2020/09/11 10:10:37.474 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:75 | Find first value from user.
+2020/09/11 10:10:37.499 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/11 10:10:37.508 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:87 | End Index.
+2020/09/11 10:10:57.351 [DEBUG] [UMS.Data.AuthDbContext]  getUser:AuthDbContext.cs:27 | Start Auth Database Context.
+2020/09/11 10:10:57.379 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] getUser:AccountContext.cs:24 | Start Account Context.
+2020/09/11 10:10:57.379 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] getUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/11 10:10:57.379 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] getUser:ManageUserController.cs:43 | NLog injected into EditProfileController.
+2020/09/11 10:10:57.379 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] getUser:ManageUserController.cs:45 | Account Context injected into EditProfileController.
+2020/09/11 10:10:57.394 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] getUser:ManageUserController.cs:47 | Edit Profile Context injected into EditProfileController.
+2020/09/11 10:10:57.394 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] getUser:ManageUserController.cs:49 | Sign In Manager injected into EditProfileController.
+2020/09/11 10:10:57.394 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] getUser:ManageUserController.cs:50 | Start EditProfileController Constructor.
+2020/09/11 10:10:57.429 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] getUser:ManageUserController.cs:111 | Start get user.
+2020/09/11 10:10:57.474 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] getUser:ManageUserController.cs:117 | Get user by ID
+2020/09/11 10:10:57.474 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] getUser:ManageUserController.cs:119 | End get user.

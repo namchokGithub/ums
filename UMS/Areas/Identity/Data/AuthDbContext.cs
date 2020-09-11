@@ -35,7 +35,7 @@ namespace UMS.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-
+            
             builder.Entity<ApplicationUser>(entity =>
                 {
                     entity.Property(e => e.Id).HasColumnName("acc_Id");
@@ -69,10 +69,23 @@ namespace UMS.Data
             builder.Entity<IdentityUserClaim<string>>().ToTable("UserClaims");
             builder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaims");
 
-            //builder.Entity<Log>(entity => {
-            //    entity.Property(e => e.log_Id).HasColumnName("log_Id");
-            //    entity.Property(e => e.log_datetime).HasColumnName("log_datetime");
-            //});
+            builder.Entity<Log>().HasNoKey();
+            builder.Entity<Log>(entity =>
+            {
+                entity.Property(e => e.log_datetime).HasColumnName("log_datetime");
+                entity.Property(e => e.log_datetime).HasComment("Date time");
+                entity.Property(e => e.log_level).HasColumnName("log_level");
+                entity.Property(e => e.log_level).HasComment("Level of log");
+                entity.Property(e => e.log_logger).HasColumnName("log_logger");
+                entity.Property(e => e.log_user_identity).HasColumnName("log_user_identity");
+                entity.Property(e => e.log_mvc_action).HasColumnName("log_mvc_action");
+                entity.Property(e => e.log_mvc_controller).HasColumnName("log_mvc_controller");
+                entity.Property(e => e.log_filename).HasColumnName("log_filename");
+                entity.Property(e => e.log_linenumber).HasColumnName("log_linenumber");
+                entity.Property(e => e.log_message).HasColumnName("log_message");
+                entity.Property(e => e.log_exception).HasColumnName("log_exception");
+                entity.Property(e => e.log_exception).HasComment("Exception");
+            });
         } // End OnModelCreating
     } // End AuthDbContext
 }

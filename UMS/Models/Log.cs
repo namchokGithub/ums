@@ -16,8 +16,10 @@ using System.Threading.Tasks;
 namespace UMS.Models
 {
     public class Log
-    {        
-        [AllowNull]
+    {
+        [Required]
+        [DataType(DataType.Date)]
+        // [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public string log_datetime { set; get; }
 
         [AllowNull]
@@ -27,30 +29,39 @@ namespace UMS.Models
         public string log_time { set; get; }
 
         [AllowNull]
+        [Column(TypeName = "nvarchar(256)")]
         public string log_level { set; get; }
 
         [AllowNull]
+        [Column(TypeName = "nvarchar(256)")]
         public string log_logger { set; get; }
 
         [AllowNull]
+        [Column(TypeName = "nvarchar(256)")]
         public string log_user_identity { set; get; }
 
         [AllowNull]
+        [Column(TypeName = "nvarchar(256)")]
         public string log_mvc_action { set; get; }
 
         [AllowNull]
+        [Column(TypeName = "nvarchar(256)")]
         public string log_mvc_controller { set; get; }
 
         [AllowNull]
+        [Column(TypeName = "nvarchar(256)")]
         public string log_filename { set; get; }
 
         [AllowNull]
+        [Column(TypeName = "nvarchar(256)")]
         public string log_linenumber { set; get; }
 
         [AllowNull]
+        [Column(TypeName = "nvarchar(450)")]
         public string log_message { set; get; }
 
         [AllowNull]
+        [Column(TypeName = "nvarchar(450)")]
         public string log_exception { set; get; }
 
     } // End Log
