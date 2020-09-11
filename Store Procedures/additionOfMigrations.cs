@@ -246,6 +246,33 @@ var ums_updateUser = @"-- =============================================
                         END
                         GO
                         ";
+var ums_Get_all_log = @"
+                        -- =============================================
+                        -- Author:		Namchok Singhachai
+                        -- Create date: 2020-09-11
+                        -- Description:	Get all log top 50
+                        -- =============================================
+                        CREATE PROCEDURE ums_Get_all_log
+                        AS
+                        BEGIN
+                            SELECT TOP 50
+                                [dbo].[Logs].[log_Id]
+                                , [dbo].[Logs].[log_datetime]
+                                , CONVERT(VARCHAR(10), [dbo].[Logs].[log_datetime], 111) AS [log_date]
+                                , CONVERT(VARCHAR(10), CAST([dbo].[Logs].[log_datetime] AS TIME	), 0) AS [log_time]
+                                , [dbo].[Logs].[log_level]
+                                , [dbo].[Logs].[log_logger]
+                                , CONCAT([dbo].[Logs].[log_message], ' ', [dbo].[Logs].[log_exception]) AS [log_message]
+                                , [dbo].[Logs].[log_exception]
+                                , [dbo].[Logs].[log_user_identity]
+                                , [dbo].[Logs].[log_mvc_action]
+                                , [dbo].[Logs].[log_filename]
+                                , [dbo].[Logs].[log_linenumber]
+                            FROM [dbo].[Logs]
+                            ORDER BY [dbo].[Logs].[log_Id] DESC
+                        END
+                        GO
+                        ";
 
 migrationBuilder.Sql(ums_Check_User);
 migrationBuilder.Sql(ums_deleteUser);
@@ -258,6 +285,7 @@ migrationBuilder.Sql(ums_Update_all);
 migrationBuilder.Sql(ums_Update_user);
 migrationBuilder.Sql(ums_updateRoleUser);
 migrationBuilder.Sql(ums_updateUser);
+migrationBuilder.Sql(ums_Get_all_log);
 // End create stored procedure
 
 var insertRole = @" INSERT INTO [dbo].[Roles] ([Id], [Name], [NormalizedName])
