@@ -53,7 +53,7 @@
                 </li> <!-- Home -->
                 <li class="nav-item">
                     <a asp-controller="EditProfile" asp-action="Index" asp-route-id="@ViewData["UserId"]" class="nav-link @Url.MakeActiveClass("EditProfile","Index")">
-                        <i class="fas fa-address-card"></i> &ensp;
+                        <i class="far fa-address-card"></i> &ensp;
                         <p>Edit Profile</p>
                     </a>
                 </li> <!-- Edit profile -->
@@ -64,6 +64,12 @@
                         <a asp-controller="ManageUser" asp-action="Index" class="nav-link @Url.MakeActiveClass("ManageUser","Index")">
                             <i class="fas fa-user-cog"></i> &ensp;
                             <p>Manage Users</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Logs" asp-action="Index" class="nav-link @Url.MakeActiveClass("Logs","Index")">
+                            <i class="far fa-file-alt"></i> &ensp;
+                            <p>Logs Monitor</p>
                         </a>
                     </li>
                     <!-- Manage users -->

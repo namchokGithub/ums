@@ -468,3 +468,114 @@ Error Number:4060,State:1,Class:11
 2020/09/11 11:45:23.974 [ERROR] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:125 | Cannot open database "UMS" requested by the login. The login failed.
 Login failed for user 'CSIGROUPS\namchok'.
 2020/09/11 11:51:06.646 [DEBUG] [UMS.Data.AuthDbContext]  AuthDbContext.cs:109 | ENd creating on model.
+2020/09/11 12:04:09.190 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/11 12:04:09.796 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/11 12:04:09.807 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/11 12:04:09.819 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/11 12:04:12.672 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 12:04:12.737 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:96 | Getting external authentication scheme.
+2020/09/11 12:06:35.711 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/11 12:06:36.134 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/11 12:06:36.156 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/11 12:06:36.176 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/11 12:06:37.554 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 12:06:37.614 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:96 | Getting external authentication scheme.
+2020/09/11 12:06:40.401 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 12:06:42.556 [ERROR] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:142 | Your email or password is not valid.
+2020/09/11 12:08:23.175 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/11 12:08:23.659 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/11 12:08:23.679 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/11 12:08:23.715 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/11 12:08:24.939 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 12:08:25.004 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:96 | Getting external authentication scheme.
+2020/09/11 12:08:31.477 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 12:08:33.479 [ERROR] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:142 | Your email or password is not valid.
+2020/09/11 12:25:44.252 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/11 12:25:44.821 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/11 12:25:44.874 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/11 12:25:44.900 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/11 12:25:46.330 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 12:25:46.410 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:96 | Getting external authentication scheme.
+2020/09/11 12:25:57.818 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/11 12:25:57.841 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:57 | Register model.
+2020/09/11 12:25:58.967 [DEBUG] [UMS.Models.AccountContext]  checkUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/11 12:25:58.980 [DEBUG] [UMS.Models.EditAccountContext]  checkUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/11 12:26:00.199 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:268 | Check user is exist.
+2020/09/11 12:26:00.244 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:275 | Save changes: Check user is exist.
+2020/09/11 12:26:02.212 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/11 12:26:02.212 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:57 | Register model.
+2020/09/11 12:26:03.483 [INFO] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:141 | User created a new account with password.
+2020/09/11 12:26:03.518 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:142 | Generating provider key.
+2020/09/11 12:26:03.744 [INFO] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:148 | User created a new log in.
+2020/09/11 12:26:04.002 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome to UMS.
+2020/09/11 12:26:07.397 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Log out model.
+2020/09/11 12:26:07.412 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:49 | User logged out.
+2020/09/11 12:26:07.471 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 12:26:07.490 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:96 | Getting external authentication scheme.
+2020/09/11 12:26:11.273 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 12:26:11.538 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:129 | User logged in.
+2020/09/11 12:26:11.661 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome to UMS.
+2020/09/11 12:26:16.064 [DEBUG] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [usermanagement2020@gmail.com] AccessDenied.cshtml.cs:24 | Access Denined model.
+2020/09/11 12:26:24.300 [DEBUG] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [usermanagement2020@gmail.com] AccessDenied.cshtml.cs:24 | Access Denined model.
+2020/09/11 12:26:24.377 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome to UMS.
+2020/09/11 12:27:45.885 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Log out model.
+2020/09/11 12:27:45.896 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:49 | User logged out.
+2020/09/11 12:27:45.968 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 12:27:45.977 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:96 | Getting external authentication scheme.
+2020/09/11 12:27:53.537 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 12:27:53.600 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:129 | User logged in.
+2020/09/11 12:27:53.693 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome to UMS.
+2020/09/11 12:28:08.667 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Log out model.
+2020/09/11 12:28:08.704 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:49 | User logged out.
+2020/09/11 12:28:08.772 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 12:28:08.804 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:96 | Getting external authentication scheme.
+2020/09/11 12:29:08.153 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 12:29:08.178 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:96 | Getting external authentication scheme.
+2020/09/11 12:29:17.892 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/11 12:29:18.100 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:129 | User logged in.
+2020/09/11 12:29:18.129 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome to UMS.
+2020/09/11 12:32:43.642 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/11 12:32:44.028 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/11 12:32:44.073 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/11 12:32:44.092 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/11 12:32:45.069 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome to UMS.
+2020/09/11 12:35:10.214 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/11 12:35:10.564 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/11 12:35:10.611 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/11 12:35:10.638 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/11 12:35:12.189 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome to UMS.
+2020/09/11 12:35:21.439 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/11 12:35:21.526 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/11 12:35:22.793 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/11 12:40:49.671 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/11 12:40:49.963 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/11 12:40:49.995 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/11 12:40:50.022 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/11 12:40:51.379 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome to UMS.
+2020/09/11 12:44:28.200 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/11 12:44:28.806 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/11 12:44:29.032 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/11 12:44:29.306 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/11 12:44:30.067 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome to UMS.
+2020/09/11 12:49:00.872 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome to UMS.
+2020/09/11 12:51:47.972 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome to UMS.
+2020/09/11 12:53:05.170 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/11 12:53:05.703 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/11 12:53:05.750 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/11 12:53:05.796 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/11 12:53:06.943 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome to UMS.
+2020/09/11 12:54:09.555 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/11 12:54:09.969 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/11 12:54:10.053 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/11 12:54:10.144 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/11 12:54:11.708 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome to UMS.
+2020/09/11 12:55:27.820 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/11 12:55:28.351 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/11 12:55:28.388 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/11 12:55:28.411 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/11 12:55:29.697 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome to UMS.
+2020/09/11 12:56:32.961 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/11 12:56:33.379 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/11 12:56:33.441 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/11 12:56:33.476 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/11 12:56:35.006 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome to UMS.

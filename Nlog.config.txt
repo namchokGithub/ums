@@ -27,7 +27,7 @@
 			  Server=localhost\SQLEXPRESSMHEE;Database=UMS;Trusted_Connection=True;
 		  </connectionString>
 		  <commandText>
-			  INSERT INTO [dbo].[Log]
+			  INSERT INTO [dbo].[Logs]
 			  ([log_datetime] ,[log_level] ,[log_logger] ,[log_user_identity] ,[log_mvc_action] ,[log_filename] ,[log_linenumber] ,[log_message] ,[log_exception])
 			  VALUES
 			  (@log_datetime ,@log_level ,@log_logger ,@log_user_identity ,@log_mvc_action ,@log_filename ,@log_linenumber ,@log_message ,@log_exception)

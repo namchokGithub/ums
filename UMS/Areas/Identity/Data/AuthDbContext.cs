@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using Org.BouncyCastle.Tsp;
 using UMS.Areas.Identity.Data;
 using UMS.Models;
 
@@ -63,7 +64,6 @@ namespace UMS.Data
                     entity.Property(e => e.acc_IsActive).HasComment("Status of account");
                 }
             );
-
             builder.Entity<ApplicationUser>()
                 .Ignore(entity => entity.LockoutEnd)
                 .Ignore(entity => entity.LockoutEnabled)
@@ -73,7 +73,7 @@ namespace UMS.Data
                 .Ignore(entity => entity.AccessFailedCount)
                 .Ignore(entity => entity.PhoneNumberConfirmed)
                 .ToTable(name: "Account");
-            _logger.LogTrace("Creating applications user.");
+            _logger.LogTrace("Creating applications user models.");
 
             builder.Entity<IdentityRole>().ToTable("Roles");
             builder.Entity<IdentityUserRole<string>>().ToTable("UserRoles");
@@ -81,7 +81,7 @@ namespace UMS.Data
             builder.Entity<IdentityUserToken<string>>().ToTable("UserTokens");
             builder.Entity<IdentityUserClaim<string>>().ToTable("UserClaims");
             builder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaims");
-            _logger.LogTrace("Creating Identity database.");
+            _logger.LogTrace("Creating Identity models.");
 
             builder.Entity<Logs>().HasNoKey();
             builder.Entity<Logs>(entity =>
