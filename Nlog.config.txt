@@ -16,13 +16,13 @@
 	</extensions>
 	
   <targets>
-	  <!-- File log -->
+	  <!-- File log all trace-->
 	  <target xsi:type="File" 
-			  name="logfile" 
-			  filename="${aspnet-appbasepath}/logs/ums_log_${shortdate}.log" 
+			  name="logfilealltrace" 
+			  filename="${aspnet-appbasepath}/logs/alltrace/ums_log_${shortdate}.log" 
 			  keepfileopen="false" 
 			  maxarchivefiles="500" 
-			  archivefilename="${aspnet-appbasepath}/logs/archive/ums_log_{#}.zip" 
+			  archivefilename="${aspnet-appbasepath}/logs/alltrace/archive/ums_log_{#}.zip" 
 			  archivenumbering="sequence"
 			  archiveEvery="Month" 
 			  archiveoldfileonstartup="false"
@@ -33,6 +33,24 @@
 			  encoding="utf-8"
 			  header="############################################## User Management System log ##############################################" 
 			  layout="${date} [${level:uppercase=true}] [${logger}] ${when:when=length('${aspnet-user-identity}')>0:Inner=:[${aspnet-user-identity}]} ${when:when=length('${aspnet-mvc-action}')>0:Inner=${aspnet-mvc-action}${literal:text=\:}}${when:when=length('${callsite-filename:includeSourcePath=False}')>0:Inner=${callsite-filename:includeSourcePath=False}${literal:text=\:}${when:when=length('${callsite-linenumber}')>0:Inner=${callsite-linenumber}}} | ${message}${when:when=length('${exception}')>0:Inner= Exception: ${exception:format=tostring}}" 
+			  />
+	  <!-- File log -->
+	  <target xsi:type="File"
+			  name="logfile"
+			  filename="${aspnet-appbasepath}/logs/ums_log_${shortdate}.log"
+			  keepfileopen="false"
+			  maxarchivefiles="500"
+			  archivefilename="${aspnet-appbasepath}/logs/archive/ums_log_{#}.zip"
+			  archivenumbering="sequence"
+			  archiveEvery="Month"
+			  archiveoldfileonstartup="false"
+			  archiveabovesize="10000000"
+			  createdirs="true"
+			  enablearchivefilecompression="true"
+			  deleteOldFileOnStartup="false"
+			  encoding="utf-8"
+			  header="############################################## User Management System log ##############################################"
+			  layout="${date} [${level:uppercase=true}] [${logger}] ${when:when=length('${aspnet-user-identity}')>0:Inner=:[${aspnet-user-identity}]} ${when:when=length('${aspnet-mvc-action}')>0:Inner=${aspnet-mvc-action}${literal:text=\:}}${when:when=length('${callsite-filename:includeSourcePath=False}')>0:Inner=${callsite-filename:includeSourcePath=False}${literal:text=\:}${when:when=length('${callsite-linenumber}')>0:Inner=${callsite-linenumber}}} | ${message}${when:when=length('${exception}')>0:Inner= Exception: ${exception:format=tostring}}"
 			  />
 	  <!-- Trace -->
 	  <target xsi:type="ColoredConsole" 
@@ -61,8 +79,9 @@
   </targets>
 
   <rules>
-	  <logger name="*" minlevel="Trace" writeTo="logfile" />
+	  <logger name="*" minlevel="Trace" writeTo="logfilealltrace" />
 	  <logger name="*" maxlevel="Trace" writeTo="logconsole_trace" />
+	  <logger name="*" minlevel="Debug" writeTo="logfile" />
 	  <logger name="*" Level="Debug" writeTo="logconsole_debug" />
 	  <logger name="*" Level="Info" writeTo="logconsole_info" />
 	  <!--Skip non-critical Microsoft logs and so log only own logs-->
