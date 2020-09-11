@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\Auth\20200911030130_ums_log.cs" />
+    <Compile Remove="Migrations\Auth\20200911030130_ums_log.Designer.cs" />
     <Compile Remove="Migrations\Models\20200831100318_ums_account.cs" />
     <Compile Remove="Migrations\Models\20200831100318_ums_account.Designer.cs" />
     <Compile Remove="Migrations\Models\20200831100400_ums_editaccount.cs" />
@@ -39,6 +41,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EmailService\EmailService.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\Auth\" />
   </ItemGroup>
 
 </Project>

@@ -9,7 +9,7 @@ using UMS.Data;
 namespace UMS.Migrations.Auth
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20200911030130_ums_log")]
+    [Migration("20200911033140_ums_log")]
     partial class ums_log
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -222,9 +222,6 @@ namespace UMS.Migrations.Auth
 
             modelBuilder.Entity("UMS.Models.Log", b =>
                 {
-                    b.Property<string>("log_date")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("log_datetime")
                         .IsRequired()
                         .HasColumnName("log_datetime")
@@ -251,7 +248,8 @@ namespace UMS.Migrations.Auth
 
                     b.Property<string>("log_logger")
                         .HasColumnName("log_logger")
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("nvarchar(256)")
+                        .HasComment("A computer program to keep track of events.");
 
                     b.Property<string>("log_message")
                         .HasColumnName("log_message")
@@ -260,13 +258,6 @@ namespace UMS.Migrations.Auth
                     b.Property<string>("log_mvc_action")
                         .HasColumnName("log_mvc_action")
                         .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("log_mvc_controller")
-                        .HasColumnName("log_mvc_controller")
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("log_time")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("log_user_identity")
                         .HasColumnName("log_user_identity")

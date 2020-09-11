@@ -44,9 +44,9 @@ namespace UMS.Models
         [Column(TypeName = "nvarchar(256)")]
         public string log_mvc_action { set; get; }
 
-        [AllowNull]
-        [Column(TypeName = "nvarchar(256)")]
-        public string log_mvc_controller { set; get; }
+        //[AllowNull]
+        //[Column(TypeName = "nvarchar(256)")]
+        //public string log_mvc_controller { set; get; }
 
         [AllowNull]
         [Column(TypeName = "nvarchar(256)")]

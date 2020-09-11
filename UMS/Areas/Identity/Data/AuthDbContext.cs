@@ -73,19 +73,25 @@ namespace UMS.Data
             builder.Entity<Log>(entity =>
             {
                 entity.Property(e => e.log_datetime).HasColumnName("log_datetime");
-                entity.Property(e => e.log_datetime).HasComment("Date time");
                 entity.Property(e => e.log_level).HasColumnName("log_level");
-                entity.Property(e => e.log_level).HasComment("Level of log");
                 entity.Property(e => e.log_logger).HasColumnName("log_logger");
                 entity.Property(e => e.log_user_identity).HasColumnName("log_user_identity");
                 entity.Property(e => e.log_mvc_action).HasColumnName("log_mvc_action");
-                entity.Property(e => e.log_mvc_controller).HasColumnName("log_mvc_controller");
                 entity.Property(e => e.log_filename).HasColumnName("log_filename");
                 entity.Property(e => e.log_linenumber).HasColumnName("log_linenumber");
                 entity.Property(e => e.log_message).HasColumnName("log_message");
                 entity.Property(e => e.log_exception).HasColumnName("log_exception");
+                
+                entity.Property(e => e.log_datetime).HasComment("Date time");
+                entity.Property(e => e.log_level).HasComment("Level of log");
                 entity.Property(e => e.log_exception).HasComment("Exception");
+                entity.Property(e => e.log_logger).HasComment("A computer program to keep track of events.");
             });
+
+            builder.Entity<Log>()
+                .Ignore(e => e.log_date)
+                .Ignore(e => e.log_time);
+
         } // End OnModelCreating
     } // End AuthDbContext
 }

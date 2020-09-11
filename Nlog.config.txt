@@ -16,6 +16,24 @@
 	</extensions>
 	
   <targets>
+	  <!-- Database --> <!-- SQLEXPRESSMHEE , SQLEXPRESS-->
+	  <target name="database" xsi:type="Database" connectionString="Server=localhost\\SQLEXPRESSMHEE;Database=UMS;Trusted_Connection=True;MultipleActiveResultSets=true" >
+		  <commandText>
+			  INSERT INTO "Log" 
+				("log_datetime", "log_level", "log_logger", "log_user_identity", "log_mvc_action", "log_filename", "log_linenumber", "log_message", "log_exception")
+			  VALUES 
+				(@log_datetime, @log_level, @log_logger, @log_user_identity, @log_mvc_action, @log_filename, @log_linenumber, @log_message, @log_exception);
+		  </commandText>
+		  <parameter name="@log_datetime" layout="${date}" />
+		  <parameter name="@log_level" layout="${level:uppercase=true}" />
+		  <parameter name="@log_logger" layout="${logger}" />
+		  <parameter name="@log_user_identity" layout="${aspnet-user-identity}" />
+		  <parameter name="@log_mvc_action" layout="${aspnet-mvc-action}" />
+		  <parameter name="@log_filename" layout="${callsite-filename:includeSourcePath=False}" />
+		  <parameter name="@log_linenumber" layout="${callsite-linenumber}" />
+		  <parameter name="@log_message" layout="${message}" />
+		  <parameter name="@log_exception" layout="${exception}" />
+	  </target>
 	  <!-- File log all trace-->
 	  <target xsi:type="File" 
 			  name="logfilealltrace" 
