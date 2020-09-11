@@ -17,7 +17,10 @@ namespace UMS.Models
 {
     public class Logs
     {
-        [Required]
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int log_Id { set; get; }
+
         [DataType(DataType.Date)]
         // [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public string log_datetime { set; get; }

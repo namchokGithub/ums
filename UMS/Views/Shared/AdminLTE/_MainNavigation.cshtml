@@ -41,19 +41,17 @@
         <!-- End sidebar user panel (optional) -->
         <!-- Sidebar Menu -->
         <nav class="mt-2">
-
             <!-- List of menu -->
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-
                 <li class="nav-item">
                     <a asp-controller="Home" asp-action="Index" class="nav-link @Url.MakeActiveClass("home","index")">
-                        <i class="fas fa-home"></i> &ensp;
+                        <i class="fas fa-home nav-icon"></i> &ensp;
                         <p>Home</p>
                     </a>
                 </li> <!-- Home -->
                 <li class="nav-item">
                     <a asp-controller="EditProfile" asp-action="Index" asp-route-id="@ViewData["UserId"]" class="nav-link @Url.MakeActiveClass("EditProfile","Index")">
-                        <i class="far fa-address-card"></i> &ensp;
+                        <i class="fas fa-address-card nav-icon"></i> &ensp;
                         <p>Edit Profile</p>
                     </a>
                 </li> <!-- Edit profile -->
@@ -62,13 +60,13 @@
                 {
                     <li class="nav-item">
                         <a asp-controller="ManageUser" asp-action="Index" class="nav-link @Url.MakeActiveClass("ManageUser","Index")">
-                            <i class="fas fa-user-cog"></i> &ensp;
+                            <i class="fas fa-user-cog nav-icon"></i> &ensp;
                             <p>Manage Users</p>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a asp-controller="Logs" asp-action="Index" class="nav-link @Url.MakeActiveClass("Logs","Index")">
-                            <i class="far fa-file-alt"></i> &ensp;
+                            <i class="nav-icon fas fa-desktop nav-icon"></i> &ensp;
                             <p>Logs Monitor</p>
                         </a>
                     </li>

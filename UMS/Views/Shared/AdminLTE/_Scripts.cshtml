@@ -23,6 +23,9 @@
 <script>
     // For show name in top bar
     $(document).ready(function () {
+
+        $('[data-toggle="tooltip"]').tooltip();
+
         $(document).on('shown.lte.pushmenu', function () {
             $('#user_email').hide();
         });
@@ -42,6 +45,17 @@
             "autoWidth": true,
             "responsive": true,
             "lengthMenu": [5, 10, 25, 50]
+        });
+
+        // Set datatables in log monitor view
+        $('#showAllLogs').DataTable({
+            "paging": true,
+            "lengthChange": true,
+            "searching": true,
+            "autoWidth": true,
+            "order": [[0, "desc"]],
+            "responsive": true,
+            "lengthMenu": [5, 10, 25, 50, 100]
         });
     })
 

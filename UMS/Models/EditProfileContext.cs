@@ -10,6 +10,7 @@ using System.Threading.Tasks;
  * Author: Wannapa Srijermtong
  * Description: Context for Account model
  */
+
 namespace UMS.Models
 {
     public class EditProfileContext : DbContext
@@ -20,7 +21,7 @@ namespace UMS.Models
             : base(options)
         {
             _logger = logger;
-            _logger.LogDebug("Start Edit Profile Context.");
+            _logger.LogTrace("Start Edit Profile Context.");
         } // End Constructor
 
         public DbSet<EditProfile> EditProfile { get; set; }

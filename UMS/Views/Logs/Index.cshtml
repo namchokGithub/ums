@@ -1,13 +1,135 @@
 ﻿@model UMS.Models.Logs
 
 @{
-    ViewData["Title"] = "Logs monitor";
+    ViewData["Title"] = "Log Monitor";
     Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
 }
 <!--
     Name: ~/Views/Logs/Index.cshtml
     Author: Namchok Singhachai
-    Description: View for logs monitor
+    Description: View for log monitor
 -->
 
-<h2>Logs</h2>
+<style>
+    .logslevel > span {
+        border-radius: 4px;
+        display: inline-block;
+        font-weight: 600;
+        padding: 5px;
+    }
+</style>
+
+<!-- Content -->
+<div class="mx-auto">
+    <br/>
+    <!--Start Card-->
+    <div class="card card-info">
+        <!--Start Card header-->
+        <div class="card-header">
+            <h3 class="card-title">Logs Monitor</h3>
+        </div>
+        <!--End Card header-->
+        <!--Start Card body-->
+        <div class="card-body">
+            <div class="box">
+                <div class="box-body">
+                    <!--Start Logs Monitor table-->
+                    <div class="table-responsive-md">
+                        <table id="showAllLogs" class="table table-hover w-100 table-bordered table-locationsiped">
+                            <!--Start Logs Monitor table head-->
+                            <thead class="text-center">
+                                <tr>
+                                    <th data-toggle="tooltip" title="Logged time">Time</th>
+                                    <th data-toggle="tooltip" title="Level of Logs">Serveity</th>
+                                    <th data-toggle="tooltip" title="Logged location">Locations</th>
+                                    <th data-toggle="tooltip" title="Message and Exceptions">Messages</th>
+                                </tr>
+                            </thead>
+                            <!--End Logs Monitor table head-->
+                            <!--Start Logs Monitor table body-->
+                            <tbody>
+                        @if (ViewData["Logs"] != null)
+                        {
+                            @foreach (var item in ViewData["Logs"] as List<Logs>)
+                            {
+                                var locations = "";
+                                var locatip = "";
+                                if (item.log_mvc_action != null && item.log_mvc_action != "")
+                                {
+                                    if (item.log_filename != null && item.log_filename != "")
+                                    {
+                                        locations = item.log_mvc_action + "-" + item.log_filename + ":" + item.log_linenumber;
+                                        locatip = "Action name - File name : Line number";
+                                    }
+                                    else
+                                    {
+                                        locations = item.log_mvc_action + ":" + item.log_linenumber;
+                                        locatip = "Action name : Line number";
+                                    }
+                                }
+                                else if (item.log_filename != null && item.log_filename != "")
+                                {
+                                    locations = item.log_linenumber;
+                                    locatip = "Line number";
+                                }
+                                else
+                                {
+                                    locations = "-";
+                                    locatip = "None";
+                                } // For locations logs
+                                <tr>
+                                    <td><center>@item.log_datetime</center></td>
+                                    @*<td><center>@(item.log_date + " " + item.log_time)</center></td>*@
+                                    @{
+                                        if (item.log_level == "FATAL")
+                                        {
+                                            <td class="text-center"><span class="logslevel"><span class="bg-gradient-purple">@item.log_level</span></span></td>
+                                        }
+                                        else if (item.log_level == "ERROR")
+                                        {
+                                            <td class="text-center"><span class="logslevel"><span class="bg-gradient-red">@item.log_level</span></span></td>
+                                        }
+                                        else if (item.log_level == "WARN")
+                                        {
+                                            <td class="text-center text-white"><span class="logslevel"><span class="bg-gradient-yellow text-white">@item.log_level</span></span></td>
+                                        }
+                                        else if (item.log_level == "INFO")
+                                        {
+                                            <td class="text-center"><span class="logslevel"><span class="bg-gradient-cyan">@item.log_level</span></span></td>
+                                        }
+                                        else
+                                        {
+                                            <td class="text-center"><span class="logslevel"><span class="bg-gray-light">@item.log_level</span></span></td>
+                                        }
+                                    }
+                                    <td><center>@locations</center></td>
+                                    <td>@item.log_message</td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                                <tr>
+                                    <td colspan="6"><center>No logs.</center></td>
+                                </tr>
+                        }
+                            </tbody>
+                            <!--End Logs Monitor table body-->
+                        </table>
+                    </div>
+                    <!--End Logs Monitor table body-->
+                </div>
+                <!--End Logs Monitor table body-->
+            </div>
+            <!--End Logs Monitor table-->
+        </div>
+        <!--End Card body-->
+    </div>
+    <!--End Card-->
+</div>
+<!-- End content -->
+
+<script>
+    // Check is has exception
+    @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ }
+</script>

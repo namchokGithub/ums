@@ -83,9 +83,9 @@ namespace UMS.Data
             builder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaims");
             _logger.LogTrace("Creating Identity models.");
 
-            builder.Entity<Logs>().HasNoKey();
             builder.Entity<Logs>(entity =>
             {
+                entity.Property(e => e.log_Id).HasColumnName("log_Id");
                 entity.Property(e => e.log_datetime).HasColumnName("log_datetime");
                 entity.Property(e => e.log_level).HasColumnName("log_level");
                 entity.Property(e => e.log_logger).HasColumnName("log_logger");

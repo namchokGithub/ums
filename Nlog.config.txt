@@ -32,7 +32,7 @@
 			  VALUES
 			  (@log_datetime ,@log_level ,@log_logger ,@log_user_identity ,@log_mvc_action ,@log_filename ,@log_linenumber ,@log_message ,@log_exception)
 		  </commandText>
-		  <parameter name="@log_datetime" layout="${date}" />
+		  <parameter name="@log_datetime" layout="${longdate}" />
 		  <parameter name="@log_level" layout="${level:uppercase=true}" />
 		  <parameter name="@log_logger" layout="${logger}" />
 		  <parameter name="@log_user_identity" layout="${aspnet-user-identity}" />

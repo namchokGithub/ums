@@ -61,7 +61,7 @@ namespace UMS.Controllers
             try
             {
                 _logger.LogTrace("Start Index.");
-                _logger.LogInformation("Welcome to UMS.");
+                _logger.LogInformation($"Welcome {User.Identity.Name} to UMS.");
                 // Console.WriteLine(User.IsInRole("Admin")); // Check Role of users
                 TempData["UpdateResult"] = null;
                 // Get ID of user
