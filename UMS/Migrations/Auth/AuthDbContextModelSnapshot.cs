@@ -231,8 +231,13 @@ namespace UMS.Migrations.Auth
 
             modelBuilder.Entity("UMS.Models.Logs", b =>
                 {
+                    b.Property<int>("log_Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("log_Id")
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
                     b.Property<string>("log_datetime")
-                        .IsRequired()
                         .HasColumnName("log_datetime")
                         .HasColumnType("nvarchar(max)")
                         .HasComment("Date time");
@@ -271,6 +276,8 @@ namespace UMS.Migrations.Auth
                     b.Property<string>("log_user_identity")
                         .HasColumnName("log_user_identity")
                         .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("log_Id");
 
                     b.ToTable("Logs");
                 });

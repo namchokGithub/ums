@@ -31,7 +31,9 @@ namespace UMS.Migrations.Auth
                 name: "Logs",
                 columns: table => new
                 {
-                    log_datetime = table.Column<string>(nullable: false, comment: "Date time"),
+                    log_Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    log_datetime = table.Column<string>(nullable: true, comment: "Date time"),
                     log_level = table.Column<string>(type: "nvarchar(256)", nullable: true, comment: "Level of log"),
                     log_logger = table.Column<string>(type: "nvarchar(256)", nullable: true, comment: "A computer program to keep track of events."),
                     log_message = table.Column<string>(type: "nvarchar(450)", nullable: true),
@@ -43,6 +45,7 @@ namespace UMS.Migrations.Auth
                 },
                 constraints: table =>
                 {
+                    table.PrimaryKey("PK_Logs", x => x.log_Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -452,6 +455,33 @@ namespace UMS.Migrations.Auth
                         END
                         GO
                         ";
+            var ums_Get_all_log = @"
+                        -- =============================================
+                        -- Author:		Namchok Singhachai
+                        -- Create date: 2020-09-11
+                        -- Description:	Get all log top 50
+                        -- =============================================
+                        CREATE PROCEDURE ums_Get_all_log
+                        AS
+                        BEGIN
+                            SELECT TOP 50
+                                [dbo].[Logs].[log_Id]
+                                , [dbo].[Logs].[log_datetime]
+                                , CONVERT(VARCHAR(10), [dbo].[Logs].[log_datetime], 111) AS [log_date]
+                                , CONVERT(VARCHAR(10), CAST([dbo].[Logs].[log_datetime] AS TIME	), 0) AS [log_time]
+                                , [dbo].[Logs].[log_level]
+                                , [dbo].[Logs].[log_logger]
+                                , CONCAT([dbo].[Logs].[log_message], ' ', [dbo].[Logs].[log_exception]) AS [log_message]
+                                , [dbo].[Logs].[log_exception]
+                                , [dbo].[Logs].[log_user_identity]
+                                , [dbo].[Logs].[log_mvc_action]
+                                , [dbo].[Logs].[log_filename]
+                                , [dbo].[Logs].[log_linenumber]
+                            FROM [dbo].[Logs]
+                            ORDER BY [dbo].[Logs].[log_Id] DESC
+                        END
+                        GO
+                        ";
 
             migrationBuilder.Sql(ums_Check_User);
             migrationBuilder.Sql(ums_deleteUser);
@@ -464,6 +494,7 @@ namespace UMS.Migrations.Auth
             migrationBuilder.Sql(ums_Update_user);
             migrationBuilder.Sql(ums_updateRoleUser);
             migrationBuilder.Sql(ums_updateUser);
+            migrationBuilder.Sql(ums_Get_all_log);
             // End create stored procedure
 
             var insertRole = @" INSERT INTO [dbo].[Roles] ([Id], [Name], [NormalizedName])
