@@ -21,8 +21,45 @@
 
 <!-- Content -->
 <div class="mx-auto">
-    <br/>
-    <!--Start Card-->
+    <br />
+    <!--Start Search logs Card-->
+    <div class="card card-info">
+        <div class="card-header">
+            <h3 class="card-title">Search</h3>
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                </button>
+            </div>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body" style="display: block;">
+            <div class="col-md-6 offset-3">
+                <div class="form-group">
+                    <label>Message:</label>
+                    <input type="text" class="form-control" placeholder="Enter message logs">
+                </div>
+                <div class="form-group">
+                    <label>Date and time range:</label>
+                    <div class="row">
+                        <div class="col-8">
+                            <input type="text" class="form-control float-right" id="logstime" placeholder="Date and time">
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radio1">
+                                <label class="form-check-label">Today</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-block btn btn-success">Search</button>
+            </div>
+        </div>
+        <!-- /.card-body -->
+    </div>
+    <!--End Card-->
+    <!--Start table logs Card-->
     <div class="card card-info">
         <!--Start Card header-->
         <div class="card-header">
@@ -48,71 +85,66 @@
                             <!--End Logs Monitor table head-->
                             <!--Start Logs Monitor table body-->
                             <tbody>
-                        @if (ViewData["Logs"] != null)
-                        {
-                            @foreach (var item in ViewData["Logs"] as List<Logs>)
-                            {
-                                var locations = "";
-                                var locatip = "";
-                                if (item.log_mvc_action != null && item.log_mvc_action != "")
+                                @if (ViewData["Logs"] != null)
                                 {
-                                    if (item.log_filename != null && item.log_filename != "")
+                                    @foreach (var item in ViewData["Logs"] as List<Logs>)
                                     {
-                                        locations = item.log_mvc_action + "-" + item.log_filename + ":" + item.log_linenumber;
-                                        locatip = "Action name - File name : Line number";
-                                    }
-                                    else
-                                    {
-                                        locations = item.log_mvc_action + ":" + item.log_linenumber;
-                                        locatip = "Action name : Line number";
-                                    }
-                                }
-                                else if (item.log_filename != null && item.log_filename != "")
-                                {
-                                    locations = item.log_linenumber;
-                                    locatip = "Line number";
-                                }
-                                else
-                                {
-                                    locations = "-";
-                                    locatip = "None";
-                                } // For locations logs
-                                <tr>
-                                    <td><center>@item.log_datetime</center></td>
-                                    @*<td><center>@(item.log_date + " " + item.log_time)</center></td>*@
-                                    @{
-                                        if (item.log_level == "FATAL")
+                                        var locations = "";
+                                        if (item.log_mvc_action != null && item.log_mvc_action != "")
                                         {
-                                            <td class="text-center"><span class="logslevel"><span class="bg-gradient-purple">@item.log_level</span></span></td>
+                                            if (item.log_filename != null && item.log_filename != "")
+                                            {
+                                                locations = item.log_mvc_action + "-" + item.log_filename + ":" + item.log_linenumber;
+                                            }
+                                            else
+                                            {
+                                                locations = item.log_mvc_action + ":" + item.log_linenumber;
+                                            }
                                         }
-                                        else if (item.log_level == "ERROR")
+                                        else if (item.log_filename != null && item.log_filename != "")
                                         {
-                                            <td class="text-center"><span class="logslevel"><span class="bg-gradient-red">@item.log_level</span></span></td>
-                                        }
-                                        else if (item.log_level == "WARN")
-                                        {
-                                            <td class="text-center text-white"><span class="logslevel"><span class="bg-gradient-yellow text-white">@item.log_level</span></span></td>
-                                        }
-                                        else if (item.log_level == "INFO")
-                                        {
-                                            <td class="text-center"><span class="logslevel"><span class="bg-gradient-cyan">@item.log_level</span></span></td>
+                                            locations = item.log_linenumber;
                                         }
                                         else
                                         {
-                                            <td class="text-center"><span class="logslevel"><span class="bg-gray-light">@item.log_level</span></span></td>
-                                        }
+                                            locations = "-";
+                                        } // For locations logs
+                                        <tr>
+                                            <td><center>@item.log_datetime</center></td>
+                                            @*<td><center>@(item.log_date + " " + item.log_time)</center></td>*@
+                                            @{
+                                                if (item.log_level == "FATAL")
+                                                {
+                                                    <td class="text-center"><span class="logslevel"><span class="bg-gradient-purple">@item.log_level</span></span></td>
+                                                }
+                                                else if (item.log_level == "ERROR")
+                                                {
+                                                    <td class="text-center"><span class="logslevel"><span class="bg-gradient-red">@item.log_level</span></span></td>
+                                                }
+                                                else if (item.log_level == "WARN")
+                                                {
+                                                    <td class="text-center text-white"><span class="logslevel"><span class="bg-gradient-yellow text-white">@item.log_level</span></span></td>
+                                                }
+                                                else if (item.log_level == "INFO")
+                                                {
+                                                    <td class="text-center"><span class="logslevel"><span class="bg-gradient-cyan">@item.log_level</span></span></td>
+                                                }
+                                                else
+                                                {
+                                                    <td class="text-center"><span class="logslevel"><span class="bg-gray-light">@item.log_level</span></span></td>
+                                                }
+                                            }
+                                            <td><center>@locations</center></td>
+                                            <td>@item.log_message</td>
+                                        </tr>
                                     }
-                                    <td><center>@locations</center></td>
-                                    <td>@item.log_message</td>
-                                </tr>
-                            }
-                        }
-                        else
-                        {
-                                <tr>
-                                    <td colspan="6"><center>No logs.</center></td>
-                                </tr>
-                        }
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="6"><center>No logs.</center></td>
+                                    </tr>
+                                }
                             </tbody>
                             <!--End Logs Monitor table body-->
                         </table>
@@ -128,8 +160,18 @@
     <!--End Card-->
 </div>
 <!-- End content -->
-
 <script>
     // Check is has exception
     @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ }
+
+    $(document).ready(() => {
+        //Date range picker with time picker
+        $('#logstime').daterangepicker({
+            timePicker: true,
+            timePickerIncrement: 15,
+            locale: {
+                format: 'MM/DD/YYYY hh:mm A'
+            }
+        })
+    })
 </script>
