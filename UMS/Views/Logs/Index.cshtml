@@ -23,7 +23,7 @@
 <div class="mx-auto">
     <br />
     <!--Start Search logs Card-->
-    <div class="card card-info">
+    <div class="card card-info" id="searchLogs">
         <div class="card-header">
             <h3 class="card-title">Search</h3>
             <div class="card-tools">
@@ -33,34 +33,37 @@
             </div>
         </div>
         <!-- /.card-header -->
-        <div class="card-body" style="display: block;">
+        <div class="card-body">
             <div class="col-md-6 offset-3">
                 <div class="form-group">
                     <label>Message:</label>
-                    <input type="text" class="form-control" placeholder="Enter message logs">
+                    <input type="text" id="message" name="message" class="form-control" placeholder="Enter message logs">
+                    <span id="messageErrorInput" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label>Date and time range:</label>
                     <div class="row">
                         <div class="col-8">
-                            <input type="text" class="form-control float-right" id="logstime" placeholder="Date and time">
+                            <input type="text" class="form-control float-right" id="logstime" name="logstime" placeholder="Date and time">
                         </div>
-                        <div class="col-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radio1">
+                        <div class="col-4 my-auto">
+                            <div class="form-check my-auto">
+                                <input class="form-check-input" type="checkbox" name="today" id="today">
                                 <label class="form-check-label">Today</label>
                             </div>
                         </div>
                     </div>
-                </div>
-                <button class="btn-block btn btn-success">Search</button>
+                </div> <!-- Form group -->
             </div>
-        </div>
-        <!-- /.card-body -->
+        </div> <!-- /.card-body -->
+        <div class="card-footer">
+            <button type="reset" class="float-left btn btn-default">Clear</button>
+            <button onclick="checkSearchInput()" class="float-right btn btn-success">Search</button>
+        </div> <!-- /.card-footer -->
     </div>
-    <!--End Card-->
+    <!--End Search logs Card-->
     <!--Start table logs Card-->
-    <div class="card card-info">
+    <div class="card card-info" id="logsByIndex">
         <!--Start Card header-->
         <div class="card-header">
             <h3 class="card-title">Logs Monitor</h3>
@@ -157,7 +160,47 @@
         </div>
         <!--End Card body-->
     </div>
-    <!--End Card-->
+    <!--End table logs Card-->
+    <!--Start table logs Card-->
+    <div class="card card-info" id="logsByAjax" style="display: none">
+        <!--Start Card header-->
+        <div class="card-header">
+            <h3 class="card-title">Logs MonitorA</h3>
+        </div>
+        <!--End Card header-->
+        <!--Start Card body-->
+        <div class="card-body">
+            <div class="box">
+                <div class="box-body">
+                    <!--Start Logs Monitor table-->
+                    <div class="table-responsive-md">
+                        <table id="showSearchLogs" class="table table-hover w-100 table-bordered table-locationsiped">
+                            <!--Start Logs Monitor table head-->
+                            <thead class="text-center">
+                                <tr>
+                                    <th data-toggle="tooltip" title="Logged time">Time</th>
+                                    <th data-toggle="tooltip" title="Level of Logs">Serveity</th>
+                                    <th data-toggle="tooltip" title="Logged location">Locations</th>
+                                    <th data-toggle="tooltip" title="Message and Exceptions">Messages</th>
+                                </tr>
+                            </thead>
+                            <!--End Logs Monitor table head-->
+                            <!--Start Logs Monitor table body-->
+                            <tbody id="TbLogs">
+                               
+                            </tbody>
+                            <!--End Logs Monitor table body-->
+                        </table>
+                    </div>
+                    <!--End Logs Monitor table body-->
+                </div>
+                <!--End Logs Monitor table body-->
+            </div>
+            <!--End Logs Monitor table-->
+        </div>
+        <!--End Card body-->
+    </div>
+    <!--End table logs Card-->
 </div>
 <!-- End content -->
 <script>
@@ -165,13 +208,161 @@
     @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ }
 
     $(document).ready(() => {
+
+        $('#message').on('change', () => {
+            $('#messageErrorInput').empty();
+        })
+
+        // On click on today checkbok and set today to input daterange
+        $('#today').on('click', () => {
+            console.log($('#today').is(':checked'))
+            if ($('#today').is(':checked')) {
+                console.log(dateToNiceString(new Date()))
+                $('#logstime').val(dateToNiceString(new Date()) + ' - ' + dateToNiceString(new Date(), 30));
+                //$('#logstime').prop("disabled", true);
+            } else {
+                //$('#logstime').prop("disabled", false);
+            }
+        })
+
         //Date range picker with time picker
         $('#logstime').daterangepicker({
             timePicker: true,
             timePickerIncrement: 15,
+            //startDate: moment().startOf('hour'),
+            //endDate: moment().startOf('hour').add(25, 'hour'),
             locale: {
                 format: 'MM/DD/YYYY hh:mm A'
             }
         })
-    })
+    }) // Document ready
+
+    /**
+     * Name: checkSearchInput
+     * Author: Namchok Singhachai
+     * Description: For check input before search
+     */
+    function checkSearchInput() {
+        try {
+            let regex = /^[a-zA-Z0-9 ]+[a-zA-Z0-9 ]|(^$)$/
+            if (!regex.test($('#message').val())) {
+                toastr.error('No symbols or special chars.')
+                $('#messageErrorInput').text('No symbols or special chars.')
+                console.log('Error')
+            }
+            else
+            {
+                console.log('Message: ' + $('#message').val())
+                console.log('Date: ' + $('#logstime').val())
+                $.ajax({
+                    url: "@Url.Action("Search", "Logs")",
+                    data: { messageInput: $('#message').val(), dateInput: $('#logstime').val() },
+                    type: "POST",
+                    dataType: "JSON",
+                    success: function (result) {
+                        // Check if id is null will return error
+                        if (result['condition'] != "error") {
+                            $('#logsByIndex').hide()
+                            $('#logsByAjax').show()
+                            $('#searchLogs').CardWidget('collapse')
+                            $('#TbLogs').empty()
+                            $('#showSearchLogs').DataTable().destroy()
+                            console.log(result)
+                            let text = ''
+
+                            //for (let item in result) {
+                            //    text += `<tr><td>${result[item].log_datetime}</td>`
+                            //    text += `<td>${result[item].log_level}</td>`
+                            //    text += `<td>${result[item].log_filename}</td>`
+                            //    text += `<td>${result[item].log_message}</td><tr>`
+                            //}
+                            //$('#TbLogs').html(text)
+                            //// Set datatables in log monitor view
+                            //$('#showSearchLogs').DataTable({
+                            //    "paging": true,
+                            //    "lengthChange": true,
+                            //    "searching": true,
+                            //    "autoWidth": true,
+                            //    "order": [[0, "desc"]],
+                            //    "responsive": true,
+                            //    "lengthMenu": [5, 10, 25, 50, 100]
+                            //});
+                            console.log(result.length)
+                            var myArr = new Array(result.length)
+                            for (var i = 0; i < myArr.length; i++) {
+                                myArr[i] = new Array(5);
+                            }
+                            for (let i = 0; i < result.length; i++) {
+                                myArr[i][0] = result[i].log_datetime
+                                myArr[i][1] = result[i].log_level
+                                myArr[i][2] = result[i].log_filename
+                                myArr[i][3] = result[i].log_message
+                            }
+                            console.log(myArr)
+                            $('#showSearchLogs').DataTable({
+                                "paging": true,
+                                "lengthChange": true,
+                                "searching": true,
+                                "autoWidth": true,
+                                "order": [[0, "desc"]],
+                                "responsive": true,
+                                "lengthMenu": [5, 10, 25, 50, 100],
+                                data: myArr,
+                                columns: [
+                                    { title: "Time" },
+                                    { title: "Serverity" },
+                                    { title: "Locations" },
+                                    { title: "Messages" }
+                                ]
+                            });
+                            console.log('Searching succeeded.')
+                            toastr.success('Searching succeeded.')
+                        } // End if result is not error
+                    },
+                    error: function (result) {
+                        // Set message status
+                        let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
+                        let _text = 'Status : ' + result.status + statusResText
+                        console.log(result) // show log of error
+                        toastr.error(_text) // Alert message error
+                    } // End error
+                }) // End ajax
+            } // End if else
+        } catch (e) {
+            console.log(e.message)
+            toastr.error(e.message)
+        }
+    } // End checkSearchInput
+
+    //usage ex: alert(dateToNiceString(new Date()));
+    //returns this format: "09/14/2020 10:00 AM"
+    function dateToNiceString(myDate, extra = null) {
+        var month = new Array();
+        month[0] = "01";
+        month[1] = "02";
+        month[2] = "03";
+        month[3] = "04";
+        month[4] = "05";
+        month[5] = "06";
+        month[6] = "07";
+        month[7] = "08";
+        month[8] = "09";
+        month[9] = "10";
+        month[10] = "11";
+        month[11] = "12";
+        var hours = myDate.getHours();
+        var minutes = myDate.getMinutes();
+        var ampm = ''
+        if (extra != null) {
+            let sec = (minutes + extra) * 60;
+            hours += Math.ceil(sec / 3600);
+            minutes = (sec % 3600) / 60;
+        }
+        ampm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        var strTime = hours + ':' + minutes + ' ' + ampm;
+        return month[myDate.getMonth()] + "/" + myDate.getDate() + "/" + myDate.getFullYear() + " " + strTime;
+    } // "09/14/2020 10:00 AM - 09/15/2020 06:00 PM"
 </script>

@@ -301,7 +301,7 @@ namespace UMS.Controllers
          * Author: Namchok Snghachai
          * Description: For create json object result to view and check response
          */
-        class objectJSON
+        public class objectJSON
         {
             public string condition { set; get; } // For check etc. success error and warning
             public string messages { set; get; } // Text explain

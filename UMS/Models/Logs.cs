@@ -22,8 +22,9 @@ namespace UMS.Models
         public int log_Id { set; get; }
 
         [DataType(DataType.Date)]
+        [Column(TypeName = "datetime")]
         // [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
-        public string log_datetime { set; get; }
+        public DateTime log_datetime { set; get; }
 
         [AllowNull]
         public string log_date { set; get; }

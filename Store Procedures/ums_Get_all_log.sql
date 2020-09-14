@@ -1,12 +1,13 @@
 -- =============================================
 -- Author:		Namchok Singhachai
 -- Create date: 2020-09-11
--- Description:	Get all log top 50
+-- Description:	Get all log top ?
 -- =============================================
 CREATE PROCEDURE ums_Get_all_log
+	@param_num int
 AS
 BEGIN
-	SELECT TOP 50
+	SELECT TOP (@param_num)
 		[dbo].[Logs].[log_Id]
 		, [dbo].[Logs].[log_datetime]
 		, CONVERT(VARCHAR(10), [dbo].[Logs].[log_datetime], 111) AS [log_date]

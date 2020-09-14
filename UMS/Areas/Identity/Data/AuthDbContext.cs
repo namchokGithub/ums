@@ -87,6 +87,7 @@ namespace UMS.Data
             {
                 entity.Property(e => e.log_Id).HasColumnName("log_Id");
                 entity.Property(e => e.log_datetime).HasColumnName("log_datetime");
+                entity.Property(e => e.log_datetime).HasColumnType("datetime");
                 entity.Property(e => e.log_level).HasColumnName("log_level");
                 entity.Property(e => e.log_logger).HasColumnName("log_logger");
                 entity.Property(e => e.log_user_identity).HasColumnName("log_user_identity");
@@ -106,7 +107,7 @@ namespace UMS.Data
                 .Ignore(e => e.log_time);
             _logger.LogTrace("Creating log models.");
 
-            _logger.LogTrace("ENd creating on model.");
+            _logger.LogTrace("End creating on model.");
         } // End OnModelCreating
     } // End AuthDbContext
 }
