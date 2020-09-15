@@ -92,9 +92,9 @@ namespace UMS.Areas.Identity.Pages.Account
                         <br>
                         We got a request to reset your UMS password.
                         <br>
-                        You can reset your password by clicking the link 
+                        You can change your password by clicking the link 
                         <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'asp-route-Email='{Input.Email}'>
-                            <b>Reset password</b>
+                            <b>Change password</b>
                         </a>.
                         <br>
                         If you ignore this message, your password won't be changed.
