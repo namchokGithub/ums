@@ -10,6 +10,7 @@
 @{
     ViewData["Title"] = "Manage User";                  // Set title
     Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";  // Set layout
+    var id = ViewData["UserId"];
 }
 
 <!-- Content -->
@@ -50,19 +51,22 @@
                                 {
                                     @foreach (var item in ViewData["User"] as List<Account>)
                                     {
-                                        <tr>
-                                            <td><center>@(index += 1)</center></td>
-                                            <td>@item.acc_Firstname</td>
-                                            <td>@item.acc_Lastname</td>
-                                            <td>@item.acc_Email</td>
-                                            <td><center> @((item.acc_Rolename != null) ? item.acc_Rolename : "-") </center></td>
-                                            <td><center> @((item.acc_TypeAccoutname != null) ? item.acc_TypeAccoutname : "-") </center></td>
-                                            <td class="text-center">
-                                                <input type="hidden" asp-for="acc_Id" value="@item.acc_Id">
-                                                <button class="btn btn-warning text-white" onclick="getUser('@item.acc_Id')"><i class="fa fa-pencil-alt"></i></button>
-                                                <button class="btn btn-danger" onclick="deleteUser('@item.acc_Id')"><i class="fa fa-times"></i></button>
-                                            </td>
-                                        </tr>
+                                        if (id.ToString() != item.acc_Id)
+                                        {
+                                            <tr>
+                                                <td><center>@(index += 1)</center></td>
+                                                <td>@item.acc_Firstname</td>
+                                                <td>@item.acc_Lastname</td>
+                                                <td>@item.acc_Email</td>
+                                                <td><center> @((item.acc_Rolename != null) ? item.acc_Rolename : "-") </center></td>
+                                                <td><center> @((item.acc_TypeAccoutname != null) ? item.acc_TypeAccoutname : "-") </center></td>
+                                                <td class="text-center">
+                                                    <input type="hidden" asp-for="acc_Id" value="@item.acc_Id">
+                                                    <button class="btn btn-warning text-white" onclick="getUser('@item.acc_Id')"><i class="fa fa-pencil-alt"></i></button>
+                                                    <button class="btn btn-danger" onclick="deleteUser('@item.acc_Id')"><i class="fa fa-times"></i></button>
+                                                </td>
+                                            </tr>
+                                        }
                                     }
                                 }
                                 else // If ViweData["User"] is null
