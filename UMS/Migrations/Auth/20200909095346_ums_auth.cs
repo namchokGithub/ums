@@ -341,7 +341,7 @@ namespace UMS.Migrations.Auth
                                     GO
                                     ";
             var ums_Get_user = @"-- =============================================
-                                -- Author:		Wannapa
+                                -- Author:		Wannapa Srijermtong
                                 -- Create date: 2020-09-02
                                 -- Description:	Get user for edit profile
                                 -- =============================================
@@ -380,9 +380,9 @@ namespace UMS.Migrations.Auth
                                     GO
                                     ";
             var ums_Update_all = @"-- =============================================
-                                    -- Author:		Wannapa
+                                    -- Author:		Wannapa Srijermtong
                                     -- Create date: 2020-09-02
-                                    -- Description:	Update name
+                                    -- Description:	For update firstname, lastname and password
                                     -- =============================================
                                     CREATE procedure ums_Update_all
                                        @id nvarchar(256) ,   
@@ -398,9 +398,9 @@ namespace UMS.Migrations.Auth
                                        WHERE [dbo].[Account].acc_Id = @id
                                     END";
             var ums_Update_user = @"-- =============================================
-                                    -- Author:		Wannapa
+                                    -- Author:		Wannapa Srijermtong
                                     -- Create date: 2020-09-02
-                                    -- Description:	For update name and last name
+                                    -- Description:	For update firstname and lastname
                                     -- =============================================
                                     CREATE procedure ums_Update_user
 	                                    @param_Id nvarchar(256),   

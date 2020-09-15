@@ -96,33 +96,36 @@ namespace UMS.Controllers
             {
                 _logger.LogTrace("Start Edit Profile.");
                 _logger.LogDebug("Getting value from httpcontext request.");
+
                 //Get data from Form Input
                 var acc_Id = HttpContext.Request.Form["acc_Id"];
                 var acc_Firstname = HttpContext.Request.Form["acc_Firstname"];
                 var acc_Lastname = HttpContext.Request.Form["acc_Lastname"];
-                var acc_OldPassword = HttpContext.Request.Form["acc_OldPassword"];
+                var acc_CurrentPassword = HttpContext.Request.Form["acc_CurrentPassword"];
                 var acc_NewPassword = HttpContext.Request.Form["acc_NewPassword"];
                 var acc_ConfirmPassword = HttpContext.Request.Form["acc_ConfirmPassword"];
                 _logger.LogTrace("Check regular expression.");
+
                 // Regular expression
                 var RegExName = @"^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$";
                 var RegExPassword = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$!%*?&])[A-Za-z0-9$!%*?&]+$";
+
                 // Validation if acc_Firstname do not math with Regular expression.
-                if (!Regex.IsMatch(acc_Firstname, RegExName))
+                if (!Regex.IsMatch(acc_Firstname, RegExName) && acc_Firstname != "")
                 {
                     TempData["EditProfileErrorResult"] = @"toastr.warning('The First name can not be blank and must only character.')";
                     _logger.LogTrace("End Edit Profile.");
                     return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
                 }
                 // Validation if acc_Lastname do not math with Regular expression.
-                if (!Regex.IsMatch(acc_Lastname, RegExName))
+                if (!Regex.IsMatch(acc_Lastname, RegExName) && acc_Lastname != "")
                 {
                     TempData["EditProfileErrorResult"] = @"toastr.warning('The Last name can not be blank and must only character.')";
                     _logger.LogTrace("End Edit Profile.");
                     return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
                 }
-                // Validation if acc_OldPassword do not math with Regular expression.
-                if (!Regex.IsMatch(acc_OldPassword, RegExPassword) && (acc_OldPassword != ""))
+                // Validation if acc_CurrentPassword do not math with Regular expression.
+                if (!Regex.IsMatch(acc_CurrentPassword, RegExPassword) && acc_CurrentPassword != "")
                 {
                     TempData["EditProfileErrorResult"] = @"toastr.warning('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.')";
                     _logger.LogTrace("End Edit Profile.");
@@ -142,8 +145,9 @@ namespace UMS.Controllers
                     _logger.LogTrace("End Edit Profile.");
                     return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
                 }
-                // Validation if acc_Firstname, acc_Lastname, acc_OldPassword, acc_NewPassword and acc_ConfirmPassword is blank.
-                if (acc_Firstname == "" || acc_Lastname == "" || acc_OldPassword == "" || acc_NewPassword == "" || acc_ConfirmPassword == "")
+
+                // Validation if acc_Firstname, acc_Lastname, acc_CurrentPassword, acc_NewPassword and acc_ConfirmPassword is blank.
+                if (acc_Firstname == "" || acc_Lastname == "" || acc_CurrentPassword == "" || acc_NewPassword == "" || acc_ConfirmPassword == "")
                 {
                     // Validation if acc_Firstname and acc_Lastname is not blank.
                     if (acc_Firstname != "" && acc_Lastname != "")
@@ -178,15 +182,22 @@ namespace UMS.Controllers
                     _logger.LogTrace("End Edit Profile.");
                     return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
                 } // End validate all input
-                // Validation if acc_OldPassword is not blank.
-                if (acc_OldPassword != "")
+                // Validation if acc_CurrentPassword is not blank.
+                if (acc_CurrentPassword != "")
                 {
-                    var result = await _signInManager.PasswordSignInAsync(User.Identity.Name, acc_OldPassword, false, lockoutOnFailure: false);
+                    // Validation if acc_NewPassword and acc_ConfirmPassword do not match.
+                    if (acc_NewPassword != acc_ConfirmPassword)
+                    {
+                        TempData["EditProfileErrorResult"] = @"toastr.warning('The new password and confirmation password do not match.')";
+                        _logger.LogTrace("End Edit Profile.");
+                        return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
+                    }
+                    var result = await _signInManager.PasswordSignInAsync(User.Identity.Name, acc_CurrentPassword, false, lockoutOnFailure: false);
                     _logger.LogDebug("Signing in with password.");
                     if (!result.Succeeded)
                     {
-                        TempData["EditProfileErrorResult"] = @"toastr.warning('Old password is not correct!')";
-                        _logger.LogDebug("Old password is not correct!. Cannot sign in.");
+                        TempData["EditProfileErrorResult"] = @"toastr.warning('Current password is not correct!')";
+                        _logger.LogDebug("Current password is not correct!. Cannot sign in.");
                         _logger.LogTrace("End Edit Profile.");
                         return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
                     }
@@ -206,9 +217,10 @@ namespace UMS.Controllers
                         byte[] dst = new byte[0x31];
                         Buffer.BlockCopy(salt, 0, dst, 1, 0x10);
                         Buffer.BlockCopy(buffer2, 0, dst, 0x11, 0x20);
-                        var hashed = Convert.ToBase64String(dst);
+                        var acc_NewPasswordHashed = Convert.ToBase64String(dst);
+
                         // SQL text for execute procedure
-                        string sqlUpdateAll = $"ums_Update_all '{acc_Id}', '{acc_Firstname}', '{acc_Lastname}', '{hashed}'";
+                        string sqlUpdateAll = $"ums_Update_all '{acc_Id}', '{acc_Firstname}', '{acc_Lastname}', '{acc_NewPasswordHashed}'";
                         _editprofileContext.Database.ExecuteSqlRaw(sqlUpdateAll);
                         _logger.LogDebug("Update name's user and password.");
                         var resultUpdate_all = false;
@@ -228,7 +240,7 @@ namespace UMS.Controllers
                                 TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                             } // End try catch
                         } // Check if succeeded
-                    } // End if old password is correct
+                    } // End if current password is correct
                 }
                 else
                 {
@@ -254,7 +266,7 @@ namespace UMS.Controllers
                         } // End try catch
                     } // Check if check succeeded
 
-                } // If old password is not blank
+                } // If current password is not blank
                 _logger.LogTrace("End Edit Profile.");
                 return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
             }
