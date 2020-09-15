@@ -41,7 +41,7 @@ namespace UMS.Areas.Identity.Pages.Account
             _userManager = userManager;
             _logger = logger;
             _emailSender = emailSender;
-            _logger.LogDebug("External Log in model.");
+            _logger.LogDebug("External login model.");
         }
 
         [BindProperty]
@@ -68,7 +68,7 @@ namespace UMS.Areas.Identity.Pages.Account
          */
         public IActionResult OnGetAsync()
         {
-            _logger.LogTrace("External Log in On get.");
+            _logger.LogTrace("External login On get.");
             return RedirectToPage("./Login");
         } // End OnGetAsync
 
@@ -80,7 +80,7 @@ namespace UMS.Areas.Identity.Pages.Account
         public IActionResult OnPost(string provider, string returnUrl = null)
         {
             // Request a redirect to the external login provider.
-            _logger.LogTrace("External Log in On post.");
+            _logger.LogTrace("External login On post.");
             var redirectUrl = Url.Page("./ExternalLogin", pageHandler: "Callback", values: new { returnUrl });
             var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
             return new ChallengeResult(provider, properties);

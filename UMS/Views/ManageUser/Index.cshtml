@@ -72,7 +72,7 @@
                                 else // If ViweData["User"] is null
                                 {
                                     <tr>
-                                        <td colspan="6"><center>No Users.</center></td>
+                                        <td colspan="6"><center>No results.</center></td>
                                     </tr>
                                 }
                             </tbody>
@@ -194,9 +194,9 @@
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonText: 'Yes',
-                confirmButtonColor: '#DC3545',
+                confirmButtonColor: '#28a745',
                 cancelButtonText: 'Back',
-                cancelButtonColor: '#545b62'
+                cancelButtonColor: '#6c757d'
             }).then((result) => {
                 if (result.value) {
                     // Ajax for Inactive user
@@ -218,7 +218,7 @@
                             toastr.error(_text)
                         } // if error
                     }).done(function () {
-                        setTimeout(function () { location.reload(); }, 1000); // Reload pages
+                        setTimeout(function () { location.reload(); }, 900); // Reload pages
                     }) // End ajax for inactive user
                 } // End if result.value
             }) // End Swal function

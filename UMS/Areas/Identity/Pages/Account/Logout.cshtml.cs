@@ -27,7 +27,7 @@ namespace UMS.Areas.Identity.Pages.Account
         {
             _signInManager = signInManager;
             _logger = logger;
-            _logger.LogDebug("Log out model.");
+            _logger.LogDebug("Starting Log out model.");
         } // End constructor
 
         /*
@@ -45,6 +45,7 @@ namespace UMS.Areas.Identity.Pages.Account
         public async Task<IActionResult> OnPost(string returnUrl = null)
         {
             _logger.LogTrace("Start Log out model On Post.");
+            _logger.LogTrace("Signing out.");
             await _signInManager.SignOutAsync();
             _logger.LogInformation("User logged out.");
             if (returnUrl != null)

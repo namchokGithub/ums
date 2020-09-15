@@ -147,16 +147,16 @@ namespace UMS.Areas.Identity.Pages.Account
                         _logger.LogTrace("Add login.");
                         if (result.Succeeded)
                         {
-                            _logger.LogInformation("User created a new log in.");
+                            _logger.LogInformation("User created a new login.");
                             await _signInManager.SignInAsync(user, false);
                             _logger.LogTrace("End register on post.");
                             return LocalRedirect(returnUrl);
                         }
                         else
                         {
-                            _logger.LogWarning("Log in Already Associated. A user with this login already exists.");
+                            _logger.LogWarning("login Already Associated. A user with this login already exists.");
                             TempData["Exception"] =
-                                @"Swal.fire({ icon: 'warning', title: 'Error !', text: 'Log in Already Associated. A user with this login already exists.', showConfirmButton: true })";
+                                @"Swal.fire({ icon: 'warning', title: 'Error !', text: 'login Already Associated. A user with this login already exists.', showConfirmButton: true })";
                         } // End Check if add login success
                         _logger.LogTrace("Signing in.");
                         await _signInManager.SignInAsync(user, isPersistent: false);

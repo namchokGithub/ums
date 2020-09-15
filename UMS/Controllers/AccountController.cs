@@ -69,7 +69,7 @@ namespace UMS.Controllers
         /*
          * Name: InputModel (Overload)
          * Parameter: login(InputModel)
-         * Description: for log in
+         * Description: for login
          */
         [HttpPost]
         [AllowAnonymous]
@@ -184,14 +184,14 @@ namespace UMS.Controllers
             {
                 _logger.LogTrace("Start Google Response.");
                 ExternalLoginInfo info = await _signInManager.GetExternalLoginInfoAsync();
-                _logger.LogDebug("Get external log in info.");
+                _logger.LogDebug("Get external login info.");
                 if (info == null)
                 {
                     _logger.LogWarning("User info is null.");
                     _logger.LogTrace("End Google Response.");
                     return RedirectToAction(nameof(InputModel));
                 }
-                _logger.LogDebug("Getting external log in and sign in.");
+                _logger.LogDebug("Getting external login and sign in.");
                 var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, false);
                 _logger.LogTrace("Creating user info.");
                 string[] userInfo = {
@@ -203,7 +203,7 @@ namespace UMS.Controllers
 
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("Log In Successfully.");
+                    _logger.LogInformation("login Successfully.");
                     _logger.LogTrace("End Google Response.");
                     return RedirectToAction("Index", "Home");
                 }// If had account
@@ -296,7 +296,7 @@ namespace UMS.Controllers
                     _logger.LogTrace("End Facebook Response.");
                     return RedirectToAction(nameof(InputModel));
                 }
-                _logger.LogDebug("Getting result external log in and sign in.");
+                _logger.LogDebug("Getting result external login and sign in.");
                 var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, false);
                 _logger.LogTrace("Craete user info.");
                 string[] userInfo = {
@@ -307,7 +307,7 @@ namespace UMS.Controllers
                 }; // Crate new user info
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("Log in succeeded.");
+                    _logger.LogInformation("login succeeded.");
                     _logger.LogTrace("End Facebook Response.");
                     return RedirectToAction("Index", "Home");
                 }
@@ -335,7 +335,7 @@ namespace UMS.Controllers
                         {
                             _logger.LogDebug("Signing in.");
                             await _signInManager.SignInAsync(user, false);
-                            _logger.LogInformation("Add log in succeeded.");
+                            _logger.LogInformation("Add login succeeded.");
                             _logger.LogTrace("End Facebook Response.");
                             return RedirectToAction("Index", "Home");
                         }
@@ -393,14 +393,14 @@ namespace UMS.Controllers
             {
                 _logger.LogTrace("Start Microsoft Response.");
                 ExternalLoginInfo info = await _signInManager.GetExternalLoginInfoAsync();
-                _logger.LogDebug("Get external log in.");
+                _logger.LogDebug("Get external login.");
                 if (info == null)
                 {
                     _logger.LogWarning("User info is null.");
                     _logger.LogTrace("End Microsoft Response.");
                     return RedirectToAction(nameof(InputModel));
                 }
-                _logger.LogDebug("Getting External log in and sign in.");
+                _logger.LogDebug("Getting External login and sign in.");
                 var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, false);
                 _logger.LogTrace("Creating user info object.");
                 string[] userInfo = {
@@ -411,7 +411,7 @@ namespace UMS.Controllers
                 }; // Create new user info
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("Log in succeeded.");
+                    _logger.LogInformation("login succeeded.");
                     _logger.LogTrace("End Microsoft Response.");
                     return RedirectToAction("Index", "Home");
                 }
@@ -433,14 +433,14 @@ namespace UMS.Controllers
                     {
                         _logger.LogInformation("Create user succeeded.");
                         identResult = await _userManager.AddLoginAsync(user, info);
-                        _logger.LogDebug("Adding log in.");
+                        _logger.LogDebug("Adding login.");
                         if (identResult.Succeeded)
                         {
                             ApplicationUser userId = await _userManager.FindByEmailAsync(user.Email);
                             await _userManager.AddToRoleAsync(userId, "User");
                             _logger.LogDebug("Singing in.");
                             await _signInManager.SignInAsync(user, false);
-                            _logger.LogInformation("Add log in succeeded.");
+                            _logger.LogInformation("Add login succeeded.");
                             _logger.LogTrace("End Microsoft Response.");
                             return RedirectToAction("Index", "Home");
                         }

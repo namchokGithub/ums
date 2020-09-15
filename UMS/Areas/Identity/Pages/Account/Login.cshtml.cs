@@ -26,14 +26,20 @@ namespace UMS.Areas.Identity.Pages.Account
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
 
-        public LoginModel(SignInManager<ApplicationUser> signInManager, 
-            ILogger<LoginModel> logger,
-            UserManager<ApplicationUser> userManager)
+        public LoginModel(SignInManager<ApplicationUser> signInManager, ILogger<LoginModel> logger, UserManager<ApplicationUser> userManager)
         {
-            _userManager = userManager;
-            _signInManager = signInManager;
-            _logger = logger;
-            _logger.LogDebug("Log in model.");
+            try
+            {
+                _userManager = userManager;
+                _signInManager = signInManager;
+                _logger = logger;
+                _logger.LogDebug("Starting Login model.");
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.Message.ToString());
+                _logger.LogTrace("End Login model Constructor.");
+            }// End try catch
         } // End constructor
 
         [BindProperty]
@@ -78,10 +84,10 @@ namespace UMS.Areas.Identity.Pages.Account
         {
             try
             {
-                _logger.LogTrace("Start log in on get.");
+                _logger.LogTrace("Start login on get.");
                 if (User.Identity.IsAuthenticated)
                 {
-                    _logger.LogTrace("User is authenticated.");
+                    _logger.LogInformation("User is authenticated.");
                     Response.Redirect("/");
                 } // Check if logged in
                 if (!string.IsNullOrEmpty(ErrorMessage))
@@ -96,67 +102,74 @@ namespace UMS.Areas.Identity.Pages.Account
                 _logger.LogDebug("Getting external authentication scheme.");
                 ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
                 ReturnUrl = returnUrl;
-                _logger.LogTrace("End log in on get.");
+                _logger.LogTrace("End login on get.");
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 TempData["Exception"] = message;
-                _logger.LogTrace("End log in on get.");
+                _logger.LogTrace("End login on get.");
             } // End try catch
         } // End OnGetAsync
 
         /*
          * Name: OnPostAsync
          * Parameter: returnUrl(String)
-         * Description: for log in to system
+         * Description: for login to system
          */
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             try
             {
-                _logger.LogTrace("Start log in on post.");
+                _logger.LogTrace("Start login on post.");
                 returnUrl = returnUrl ?? Url.Content("~/");
                 if (ModelState.IsValid)
                 {
                     // This doesn't count login failures towards account lockout
                     // To enable password failures to trigger account lockout, set lockoutOnFailure: true
                     var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
-
-                    if (result.Succeeded)
+                    ApplicationUser user = await _userManager.FindByEmailAsync(Input.Email.ToString());
+                    if (user.acc_IsActive == 'N')
+                    {
+                        _logger.LogTrace("Signing out.");
+                        await _signInManager.SignOutAsync();
+                        _logger.LogTrace("Your email or password is not valid.");
+                        ModelState.AddModelError(string.Empty, "Your email or password is not valid.");
+                        TempData["ExceptionLoggedOut"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: 'Your email or password is not valid.', showConfirmButton: true })";
+                        _logger.LogTrace("End login on post.");
+                        return RedirectToPage("./Login");
+                    }
+                    else if (result.Succeeded)
                     {
                         _logger.LogInformation("User logged in.");
-                        _logger.LogTrace("End log in on post.");
+                        _logger.LogTrace("End login on post.");
                         return LocalRedirect(returnUrl);
                     } // If login success
-
-                    if (result.IsLockedOut)
+                    else if (result.IsLockedOut)
                     {
                         _logger.LogWarning("User account locked out.");
-                        _logger.LogTrace("End log in on post.");
+                        _logger.LogTrace("End login on post.");
                         return RedirectToPage("./Lockout");
                     }
                     else
                     {
                         _logger.LogError("Your email or password is not valid.");
                         ModelState.AddModelError(string.Empty, "Your email or password is not valid.");
-                        // Set sweet alert with error messages
-                        string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: 'Your email or password is not valid.', showConfirmButton: true })";
                         // Send alert to home pages
-                        TempData["Exception"] = message;
-                        _logger.LogTrace("End log in on post.");
+                        TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: 'Your email or password is not valid.', showConfirmButton: true })";
+                        _logger.LogTrace("End login on post.");
                         return Page();
                     } // If Loged out
                 } // End if check modelState
-                _logger.LogTrace("End log in on post.");
+                _logger.LogTrace("End login on post.");
                 return Page();
             } catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 TempData["Exception"] = message;
-                _logger.LogTrace("End log in on post.");
+                _logger.LogTrace("End login on post.");
                 return Page();
             } // End try catch
         } // End OnPostAsync

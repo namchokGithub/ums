@@ -2,7 +2,7 @@
 @model LoginModel
 
 @{
-    ViewData["Title"] = "Log in";
+    ViewData["Title"] = "login";
     Layout = "~/Areas/Identity/Pages/_AuthLayout.cshtml";
 }
 
@@ -96,6 +96,7 @@
         <script>
             // Check is has exception
             @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ }
+            @if (TempData["ExceptionLoggedOut"] != null) { @Html.Raw(TempData["ExceptionLoggedOut"]) /* Swal funciton */ }
         </script>
     }
     <!--End Script-->
