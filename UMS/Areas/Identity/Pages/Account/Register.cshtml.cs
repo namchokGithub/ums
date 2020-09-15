@@ -138,6 +138,8 @@ namespace UMS.Areas.Identity.Pages.Account
                     // Check if create success
                     if (result.Succeeded)
                     {
+                        ApplicationUser userId = await _userManager.FindByEmailAsync(Input.Email);
+                        await _userManager.AddToRoleAsync(userId, "User");
                         _logger.LogInformation("User created a new account with password.");
                         _logger.LogDebug("Generating provider key.");
                         var info = new UserLoginInfo("Email", RandomString(127).ToString(), "Email");

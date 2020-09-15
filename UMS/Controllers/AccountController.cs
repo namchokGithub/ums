@@ -9,9 +9,9 @@ using UMS.Areas.Identity.Data;
 using static UMS.Areas.Identity.Pages.Account.LoginModel;
 
 /*
- * Name: HomeController.cs
+ * Name: AccountController.cs
  * Namespace: Controllers
- * Author: Wannapa
+ * Author: Wannapa Srijermtong
  */
 
 namespace UMS.Controllers
@@ -222,6 +222,8 @@ namespace UMS.Controllers
                     IdentityResult identResult = await _userManager.CreateAsync(user);
                     if (identResult.Succeeded)
                     {
+                        ApplicationUser userId = await _userManager.FindByEmailAsync(user.Email);
+                        await _userManager.AddToRoleAsync(userId, "User");
                         _logger.LogInformation("Create user succeeded.");
                         _logger.LogDebug("Adding login.");
                         identResult = await _userManager.AddLoginAsync(user, info);
@@ -324,6 +326,8 @@ namespace UMS.Controllers
                     IdentityResult identResult = await _userManager.CreateAsync(user);
                     if (identResult.Succeeded)
                     {
+                        ApplicationUser userId = await _userManager.FindByEmailAsync(user.Email);
+                        await _userManager.AddToRoleAsync(userId, "User");
                         _logger.LogTrace("Create user succeeded.");
                         _logger.LogDebug("Craeting user.");
                         identResult = await _userManager.AddLoginAsync(user, info);
@@ -432,6 +436,8 @@ namespace UMS.Controllers
                         _logger.LogDebug("Adding log in.");
                         if (identResult.Succeeded)
                         {
+                            ApplicationUser userId = await _userManager.FindByEmailAsync(user.Email);
+                            await _userManager.AddToRoleAsync(userId, "User");
                             _logger.LogDebug("Singing in.");
                             await _signInManager.SignInAsync(user, false);
                             _logger.LogInformation("Add log in succeeded.");
