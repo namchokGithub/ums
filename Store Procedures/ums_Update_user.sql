@@ -1,5 +1,5 @@
 -- =============================================
--- Author:		Wannapa
+-- Author:		Wannapa Srijermtong
 -- Create date: 2020-09-02
 -- Description:	For update name and last name
 -- =============================================

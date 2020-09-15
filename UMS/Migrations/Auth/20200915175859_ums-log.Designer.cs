@@ -7,10 +7,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UMS.Data;
 
-namespace UMS.Migrations.AuthDb
+namespace UMS.Migrations.Auth
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20200915162930_ums-log")]
+    [Migration("20200915175859_ums-log")]
     partial class umslog
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

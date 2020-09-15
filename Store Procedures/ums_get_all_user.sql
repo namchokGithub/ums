@@ -3,7 +3,7 @@
 -- Create date: 2020-08-29
 -- Description:	Get all user for management
 -- =============================================
-CREATE PROCEDURE ums_get_all_user
+CREATE PROCEDURE ums_Get_all_user
 AS
 BEGIN
 	SELECT [dbo].[Account].[acc_Id]

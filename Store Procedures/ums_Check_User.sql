@@ -3,7 +3,7 @@
 -- Create date: 2020-09-03
 -- Description:	Check user if exist return 1
 -- =============================================
-CREATE PROCEDURE ums_Check_User
+CREATE PROCEDURE ums_Check_user
     @param_user nvarchar(max)
 AS
 BEGIN

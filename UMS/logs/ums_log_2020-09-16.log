@@ -194,3 +194,106 @@ INSERT INTO [dbo].[Account] ([acc_Id] ,[acc_User] ,[acc_NormalizedUserName] ,[ac
 2020/09/16 00:41:35.357 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:91 | Input Date Input: 09/15/2020 12:00 AM - 09/15/2020 11:00 PM
 2020/09/16 00:41:35.357 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:92 | Input Message: -
 2020/09/16 00:41:35.368 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:104 | Getting log by 09/15/2020 12:00 AM - 09/15/2020 11:00 PM.
+2020/09/16 00:43:16.790 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/16 00:43:16.790 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 00:43:16.886 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:81 | Get all active user.
+2020/09/16 00:43:18.658 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:71 | Get user by ID.
+2020/09/16 00:44:12.904 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/16 01:15:50.630 [ERROR] [Microsoft.EntityFrameworkCore.Database.Command]   | Failed executing DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+-- =============================================
+                        -- Author:		Namchok Singhachai
+                        -- Create date: 2020-09-14
+                        -- Description:	Search log by text or date
+                        -- =============================================
+                        ALTER PROCEDURE ums_Search_log
+                            @param_dateFirst Date,
+                            @param_dateEnd Date,
+                            @param_text NVARCHAR(MAX)
+                        AS
+                        BEGIN
+                            IF @param_text = '' OR @param_text = null 
+                                SELECT
+                                    [dbo].[Logs].[log_Id]
+                                    , [dbo].[Logs].[log_datetime]
+                                    , CONVERT(VARCHAR(10), [dbo].[Logs].[log_datetime], 111) AS [log_date]
+                                    , CONVERT(VARCHAR(10), CAST([dbo].[Logs].[log_datetime] AS TIME	), 0) AS [log_time]
+                                    , [dbo].[Logs].[log_level]
+                                    , [dbo].[Logs].[log_logger]
+                                    , CONCAT([dbo].[Logs].[log_message], ' ', [dbo].[Logs].[log_exception]) AS [log_message]
+                                    , [dbo].[Logs].[log_exception]
+                                    , [dbo].[Logs].[log_user_identity]
+                                    , [dbo].[Logs].[log_mvc_action]
+                                    , [dbo].[Logs].[log_filename]
+                                    , [dbo].[Logs].[log_linenumber]
+                                FROM [dbo].[Logs]
+                                WHERE 
+                                    CONVERT(date, [dbo].[Logs].[log_datetime], 121) BETWEEN CONVERT(date, @param_dateFirst, 121) AND CONVERT(date, @param_dateEnd, 121)
+                                ORDER BY [dbo].[Logs].[log_Id] DESC
+                            ELSE IF @param_dateFirst = '' OR @param_dateEnd = ''
+                                SELECT
+                                    [dbo].[Logs].[log_Id]
+                                    , [dbo].[Logs].[log_datetime]
+                                    , CONVERT(VARCHAR(10), [dbo].[Logs].[log_datetime], 111) AS [log_date]
+                                    , CONVERT(VARCHAR(10), CAST([dbo].[Logs].[log_datetime] AS TIME	), 0) AS [log_time]
+                                    , [dbo].[Logs].[log_level]
+                                    , [dbo].[Logs].[log_logger]
+                                    , CONCAT([dbo].[Logs].[log_message], ' ', [dbo].[Logs].[log_exception]) AS [log_message]
+                                    , [dbo].[Logs].[log_exception]
+                                    , [dbo].[Logs].[log_user_identity]
+                                    , [dbo].[Logs].[log_mvc_action]
+                                    , [dbo].[Logs].[log_filename]
+                                    , [dbo].[Logs].[log_linenumber]
+                                FROM [dbo].[Logs]
+                                WHERE 
+                                    [log_message] LIKE '%'+@param_text+'%'
+                                ORDER BY [dbo].[Logs].[log_Id] DESC
+                            ELSE 
+                                SELECT
+                                    [dbo].[Logs].[log_Id]
+                                    , [dbo].[Logs].[log_datetime]
+                                    , CONVERT(VARCHAR(10), [dbo].[Logs].[log_datetime], 111) AS [log_date]
+                                    , CONVERT(VARCHAR(10), CAST([dbo].[Logs].[log_datetime] AS TIME	), 0) AS [log_time]
+                                    , [dbo].[Logs].[log_level]
+                                    , [dbo].[Logs].[log_logger]
+                                    , CONCAT([dbo].[Logs].[log_message], ' ', [dbo].[Logs].[log_exception]) AS [log_message]
+                                    , [dbo].[Logs].[log_exception]
+                                    , [dbo].[Logs].[log_user_identity]
+                                    , [dbo].[Logs].[log_mvc_action]
+                                    , [dbo].[Logs].[log_filename]
+                                    , [dbo].[Logs].[log_linenumber]
+                                FROM [dbo].[Logs]
+                                WHERE 
+                                    [log_message] LIKE '%'+@param_text+'%' OR [log_message] LIKE @param_text+'%' OR [log_message] LIKE '%'+@param_text
+                                    AND CONVERT(date, [dbo].[Logs].[log_datetime], 121) BETWEEN CONVERT(date, @param_dateFirst, 121) AND CONVERT(date, @param_dateEnd, 121)
+                                ORDER BY [dbo].[Logs].[log_Id] DESC
+                        END
+2020/09/16 01:17:40.603 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 01:17:40.835 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 01:17:40.835 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 01:17:40.835 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 01:17:42.508 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/16 01:17:45.711 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:64 | Getting top 100 from all logs.
+2020/09/16 01:18:09.116 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:91 | Input Date Input: 09/16/2020 12:00 AM - 09/16/2020 11:59 PM
+2020/09/16 01:18:09.116 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:92 | Input Message: -
+2020/09/16 01:18:09.116 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:104 | Getting log by 09/16/2020 12:00 AM - 09/16/2020 11:59 PM.
+2020/09/16 01:18:25.147 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/16 01:18:25.167 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 01:18:25.213 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:81 | Get all active user.
+2020/09/16 01:18:27.758 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] getUser:AccountContext.cs:24 | Start Account Context.
+2020/09/16 01:18:27.758 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] getUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 01:18:27.796 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] getUser:ManageUserController.cs:116 | Get user by ID
+2020/09/16 01:18:31.344 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:71 | Get user by ID.
+2020/09/16 01:18:32.569 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/16 01:18:33.809 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:71 | Get user by ID.
+2020/09/16 01:18:41.694 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] editProfile:EditProfileController.cs:98 | Getting value from httpcontext request.
+2020/09/16 01:18:41.726 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] editProfile:EditProfileController.cs:158 | Update name's user.
+2020/09/16 01:18:41.726 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] editProfile:EditProfileController.cs:165 | Save changes: Check update user.
+2020/09/16 01:18:41.788 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:71 | Get user by ID.
+2020/09/16 01:18:44.632 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/16 01:18:44.632 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 01:18:44.684 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:81 | Get all active user.
+2020/09/16 01:18:52.055 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:71 | Get user by ID.
+2020/09/16 01:18:56.212 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] editProfile:EditProfileController.cs:98 | Getting value from httpcontext request.
+2020/09/16 01:18:56.229 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] editProfile:EditProfileController.cs:158 | Update name's user.
+2020/09/16 01:18:56.229 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] editProfile:EditProfileController.cs:165 | Save changes: Check update user.
+2020/09/16 01:18:56.292 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:71 | Get user by ID.

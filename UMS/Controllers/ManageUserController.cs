@@ -75,7 +75,7 @@ namespace UMS.Controllers
                 _logger.LogTrace("Find first value from user.");
                 ViewData["UserId"] = UserId ?? throw new Exception("The user ID not found !.");
 
-                string sqltext = "EXEC [dbo].ums_get_all_active_user"; // Set sql text for execute
+                string sqltext = "EXEC [dbo].ums_Get_all_active_user"; // Set sql text for execute
                 // Query data from "dbo.Account" and Convert to List<Account>
                 var alluser = _accountContext.Account.FromSqlRaw(sqltext).ToList<Account>();
                 _logger.LogDebug("Get all active user.");
@@ -110,7 +110,7 @@ namespace UMS.Controllers
                 _logger.LogTrace("Start get user.");
                 // Check if query is null
                 if (id == null) throw new Exception("Calling a method on a null object reference.");
-                string sqltext = $"EXEC [dbo].ums_getUserById '{id}'";
+                string sqltext = $"EXEC [dbo].ums_Get_user_by_Id '{id}'";
                 // Query data from "dbo.Account" and Convert to List<Account>
                 var user = _editaccountContext.EditAccount.FromSqlRaw(sqltext).ToList().FirstOrDefault<EditAccount>();
                 _logger.LogDebug("Get user by ID");
@@ -159,8 +159,8 @@ namespace UMS.Controllers
                 if (ModelState.IsValid)
                 {
                     // SQL text for execute procedure
-                    string sqlUpdateUser = $"ums_updateUser '{_account.acc_Id}', '{_account.acc_Firstname}', '{_account.acc_Lastname}'"; // Update name's user
-                    string sqlUpdateRoleUser = $"ums_updateRoleUser '{_account.acc_Id}', '{_account.acc_Rolename}'";              // Update role's user
+                    string sqlUpdateUser = $"ums_Update_name_user '{_account.acc_Id}', '{_account.acc_Firstname}', '{_account.acc_Lastname}'"; // Update name's user
+                    string sqlUpdateRoleUser = $"ums_Update_role_user '{_account.acc_Id}', '{_account.acc_Rolename}'";              // Update role's user
                     // Update Account add UserRoles
                     _editaccountContext.Database.ExecuteSqlRaw(sqlUpdateUser);
                     _logger.LogDebug("Update name'user.");
@@ -217,7 +217,7 @@ namespace UMS.Controllers
             {
                 _logger.LogTrace("Start delete user.");
                 if (id == null) throw new Exception("Calling a method on a null object reference.");
-                string sqlText = $"ums_deleteUser '{id}'";
+                string sqlText = $"ums_Delete_user '{id}'";
                 _accountContext.Database.ExecuteSqlRaw(sqlText);
                 _logger.LogDebug("Execute sql inactive user.");
                 var result = false;
