@@ -258,7 +258,7 @@
                         $('#EditUser').modal(); // Show modal
                     } else {
                         eval(result['messages']) // Excute js
-                        console.log('Query Error!!!');
+                        console.log(`Error! ${result['text']}`);
                     } // End if result is not error
                 },
                 error: function (result) {

@@ -126,7 +126,8 @@ namespace UMS.Controllers
                 var er = new objectJSON
                 {
                     condition = "error",
-                    messages = message
+                    messages = message,
+                    text = e.Message
                 }; // Object for set alert
                 _logger.LogDebug("Create new objectJSON.");
                 _logger.LogTrace("End get user.");
@@ -305,6 +306,7 @@ namespace UMS.Controllers
         {
             public string condition { set; get; } // For check etc. success error and warning
             public string messages { set; get; } // Text explain
+            public string text { set; get; } // Text explain
         } // End objectJSON
     } // End class
 }
