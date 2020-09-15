@@ -32,7 +32,7 @@ namespace EmailService
         {
             _emailConfig = emailConfig; // Set config
             _logger = logger;
-            _logger.LogDebug("Email sender.");
+            _logger.LogDebug("Start Email sender.");
         } // End EmailConfig
 
         /*

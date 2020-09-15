@@ -40,14 +40,14 @@ namespace UMS.Controllers
             try
             {
                 _logger = logger;
-                _logger.LogDebug(1, "NLog injected into EditProfileController.");
+                _logger.LogTrace("NLog injected into EditProfileController.");
                 _accountContext = accountContext;
-                _logger.LogDebug(1, "Account Context injected into EditProfileController.");                
+                _logger.LogTrace("Account Context injected into EditProfileController.");                
                 _editaccountContext = editaccountContext;
-                _logger.LogDebug(1, "Edit Profile Context injected into EditProfileController.");
+                _logger.LogTrace("Edit Profile Context injected into EditProfileController.");
                 _signInManager = signInManager;
-                _logger.LogDebug(1, "Sign In Manager injected into EditProfileController.");
-                _logger.LogTrace("End EditProfileController Constructor.");
+                _logger.LogTrace("Sign In Manager injected into EditProfileController.");
+                _logger.LogTrace("Start EditProfileController Constructor.");
             }
             catch (Exception e)
             {
@@ -73,10 +73,9 @@ namespace UMS.Controllers
 
                 var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Get user ID
                 _logger.LogTrace("Find first value from user.");
-                if (UserId == null) throw new Exception("The user ID not found !.");
-                ViewData["UserId"] = UserId;
+                ViewData["UserId"] = UserId ?? throw new Exception("The user ID not found !.");
 
-                string sqltext = "EXEC [dbo].ums_get_all_active_user";
+                string sqltext = "EXEC [dbo].ums_get_all_active_user"; // Set sql text for execute
                 // Query data from "dbo.Account" and Convert to List<Account>
                 var alluser = _accountContext.Account.FromSqlRaw(sqltext).ToList<Account>();
                 _logger.LogDebug("Get all active user.");
@@ -126,7 +125,8 @@ namespace UMS.Controllers
                 var er = new objectJSON
                 {
                     condition = "error",
-                    messages = message
+                    messages = message,
+                    text = e.Message
                 }; // Object for set alert
                 _logger.LogDebug("Create new objectJSON.");
                 _logger.LogTrace("End get user.");
@@ -301,10 +301,11 @@ namespace UMS.Controllers
          * Author: Namchok Snghachai
          * Description: For create json object result to view and check response
          */
-        class objectJSON
+        public class objectJSON
         {
             public string condition { set; get; } // For check etc. success error and warning
             public string messages { set; get; } // Text explain
+            public string text { set; get; } // Text explain
         } // End objectJSON
     } // End class
 }

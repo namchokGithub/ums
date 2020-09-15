@@ -34,10 +34,10 @@ namespace UMS.Controllers
             try
             {
                 _logger = logger;
-                _logger.LogDebug(1, "NLog injected into HomeController.");
+                _logger.LogTrace("NLog injected into HomeController.");
                 _userManager = userManager;
-                _logger.LogDebug(1, "User manager injected into HomeController.");
-                _logger.LogTrace("End HomeController Constructor.");
+                _logger.LogTrace("User manager injected into HomeController.");
+                _logger.LogTrace("Start HomeController Constructor.");
             }
             catch (Exception e)
             {
@@ -57,7 +57,7 @@ namespace UMS.Controllers
             try
             {
                 _logger.LogTrace("Start Index.");
-                _logger.LogInformation("Welcome to UMS.");
+                _logger.LogInformation($"Welcome {User.Identity.Name} to UMS.");
                 // Console.WriteLine(User.IsInRole("Admin")); // Check Role of users
                 TempData["UpdateResult"] = null;
                 // Get ID of user

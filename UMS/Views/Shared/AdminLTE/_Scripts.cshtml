@@ -4,9 +4,10 @@
     Description: Section of script
 -->
 <!-- REQUIRED SCRIPTS -->
-
 <!-- Bootstrap 4 -->
 <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- date-range-picker -->
+<script src="~/plugins/daterangepicker/daterangepicker.js"></script>
 <!-- AdminLTE App -->
 <script src="~/js/adminlte.min.js"></script>
 <!-- Validattion -->
@@ -23,6 +24,9 @@
 <script>
     // For show name in top bar
     $(document).ready(function () {
+
+        $('[data-toggle="tooltip"]').tooltip();
+
         $(document).on('shown.lte.pushmenu', function () {
             $('#user_email').hide();
         });
@@ -42,6 +46,18 @@
             "autoWidth": true,
             "responsive": true,
             "lengthMenu": [5, 10, 25, 50]
+        });
+
+        // Set datatables in log monitor view
+        $('#showAllLogs').DataTable({
+            "paging": true,
+            "lengthChange": true,
+            "searching": true,
+            "autoWidth": true,
+            "ordering": false,
+            //"order": [[0, "desc"]],
+            "responsive": true,
+            "lengthMenu": [5, 10, 25, 50, 100]
         });
     })
 

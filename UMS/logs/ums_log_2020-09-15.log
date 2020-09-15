@@ -1,0 +1,431 @@
+############################################## User Management System log ##############################################
+2020/09/15 09:24:13.983 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 09:24:19.328 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 09:24:19.403 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 09:24:19.503 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 09:24:23.329 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 09:25:14.521 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 09:25:16.280 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/15 09:25:16.292 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/15 09:25:16.377 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/15 09:26:26.364 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 09:26:40.410 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Input dateInput: 09/14/2020 12:00 AM - 09/14/2020 11:00 PM
+2020/09/15 09:26:40.410 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:106 | Input Message: 
+2020/09/15 09:26:40.429 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:114 | Getting log by 09/14/2020 12:00 AM - 09/14/2020 11:00 PM or -.
+2020/09/15 09:31:17.617 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 09:31:20.877 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 09:31:21.195 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 09:31:21.343 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 09:31:22.955 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 09:31:54.693 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 09:32:11.666 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Input dateInput: 09/11/2020 12:00 AM - 09/11/2020 11:00 PM
+2020/09/15 09:32:11.685 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:106 | Input Message: 
+2020/09/15 09:32:11.691 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:114 | Getting log by 09/11/2020 12:00 AM - 09/11/2020 11:00 PM or -.
+2020/09/15 09:32:36.489 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Input dateInput: 09/14/2020 12:00 AM - 09/14/2020 11:00 PM
+2020/09/15 09:32:36.509 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:106 | Input Message: 
+2020/09/15 09:32:36.540 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:114 | Getting log by 09/14/2020 12:00 AM - 09/14/2020 11:00 PM or -.
+2020/09/15 09:40:08.697 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 09:40:09.841 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 09:40:09.905 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 09:40:09.941 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 09:40:10.583 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 09:40:13.035 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 09:41:41.748 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 09:41:42.872 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 09:41:42.897 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 09:41:42.928 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 09:41:43.283 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 09:42:27.005 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 09:42:39.944 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Input dateInput: 09/14/2020 12:00 AM - 09/14/2020 11:00 PM
+2020/09/15 09:42:39.960 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:106 | Input Message: 
+2020/09/15 09:42:39.960 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:114 | Getting log by 09/14/2020 12:00 AM - 09/14/2020 11:00 PM or -.
+2020/09/15 09:44:56.729 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 09:44:57.280 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 09:44:57.299 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 09:44:57.337 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 09:44:58.393 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 09:45:01.021 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 09:45:08.502 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Input dateInput: 09/15/2020 9:45 AM - 09/15/2020 11:15 AM
+2020/09/15 09:45:08.502 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:106 | Input Message: 
+2020/09/15 09:45:08.524 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:114 | Getting log by 09/15/2020 9:45 AM - 09/15/2020 11:15 AM or -.
+2020/09/15 09:48:44.496 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 09:48:45.554 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 09:48:45.596 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 09:48:45.613 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 09:48:45.705 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 09:49:08.801 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 09:54:45.173 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Input dateInput: 09/14/2020 12:00 AM - 09/14/2020 11:00 PM
+2020/09/15 09:54:45.173 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:106 | Input Message: 
+2020/09/15 09:54:45.191 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:114 | Getting log by 09/14/2020 12:00 AM - 09/14/2020 11:00 PM or -.
+2020/09/15 10:04:43.129 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 10:04:43.662 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 10:04:43.701 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 10:04:43.726 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 10:04:44.660 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 10:04:46.799 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 10:06:39.941 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 10:10:02.992 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 10:10:04.055 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 10:10:04.086 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 10:10:04.130 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 10:10:04.428 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 10:10:18.160 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 10:10:39.369 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Input dateInput: 09/15/2020 10:10 AM - 09/15/2020 11:40 AM
+2020/09/15 10:10:39.385 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:106 | Input Message: -
+2020/09/15 10:10:39.482 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:113 | Getting log by 09/15/2020 10:10 AM - 09/15/2020 11:40 AM.
+2020/09/15 10:12:34.291 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 10:12:35.228 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 10:12:35.308 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 10:12:35.389 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 10:12:35.741 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 10:12:51.722 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 10:13:00.036 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Input dateInput: 09/15/2020 10:12 AM - 09/15/2020 11:42 AM
+2020/09/15 10:13:00.052 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:106 | Input Message: -
+2020/09/15 10:13:00.052 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:113 | Getting log by 09/15/2020 10:12 AM - 09/15/2020 11:42 AM.
+2020/09/15 10:34:46.851 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 10:34:48.217 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 10:34:48.254 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 10:34:48.305 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 10:34:51.205 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 10:35:48.066 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 10:38:03.492 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Input dateInput: 09/15/2020 10:38 AM - 09/15/2020 12:08 PM
+2020/09/15 10:38:03.507 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:106 | Input Message: -
+2020/09/15 10:38:03.507 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:113 | Getting log by 09/15/2020 10:38 AM - 09/15/2020 12:08 PM.
+2020/09/15 10:40:41.955 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Input dateInput: 09/15/2020 10:39 AM - 09/15/2020 12:09 PM
+2020/09/15 10:40:41.981 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:106 | Input Message: -
+2020/09/15 10:40:41.989 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:113 | Getting log by 09/15/2020 10:39 AM - 09/15/2020 12:09 PM.
+2020/09/15 10:44:25.180 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 10:44:26.002 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 10:44:26.050 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 10:44:26.078 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 10:44:26.675 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 10:44:41.679 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 10:44:53.648 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Input dateInput: 09/15/2020 10:44 AM - 09/15/2020 12:14 PM
+2020/09/15 10:44:53.665 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:106 | Input Message: -
+2020/09/15 10:44:53.665 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:113 | Getting log by 09/15/2020 10:44 AM - 09/15/2020 12:14 PM.
+2020/09/15 10:46:15.733 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 10:46:17.341 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 10:46:17.381 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 10:46:17.434 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 10:46:17.682 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 10:46:22.833 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 10:47:25.114 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 10:49:03.785 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 10:49:21.285 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Input dateInput: 09/15/2020 10:49 AM - 09/15/2020 12:19 PM
+2020/09/15 10:49:21.285 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:106 | Input Message: -
+2020/09/15 10:49:21.305 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:113 | Getting log by 09/15/2020 10:49 AM - 09/15/2020 12:19 PM.
+2020/09/15 10:51:01.321 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 10:51:01.676 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 10:51:01.748 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 10:51:01.792 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 10:51:02.770 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 10:51:04.942 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 10:52:48.143 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 10:52:48.573 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 10:52:48.609 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 10:52:48.632 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 10:52:49.549 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 10:52:54.644 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 10:53:34.706 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 10:56:11.963 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 10:56:12.431 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 10:56:12.499 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 10:56:12.762 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 10:56:13.912 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 10:56:16.423 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 10:56:54.301 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Input dateInput: 09/15/2020 10:56 AM - 09/15/2020 12:26 PM
+2020/09/15 10:56:54.319 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:106 | Input Message: -
+2020/09/15 10:56:54.319 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:113 | Getting log by 09/15/2020 10:56 AM - 09/15/2020 12:26 PM.
+2020/09/15 10:57:47.832 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 10:58:06.176 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Input dateInput: 09/11/2020 12:00 AM - 09/11/2020 11:00 PM
+2020/09/15 10:58:06.204 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:106 | Input Message: -
+2020/09/15 10:58:06.241 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:113 | Getting log by 09/11/2020 12:00 AM - 09/11/2020 11:00 PM.
+2020/09/15 11:00:02.795 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 11:00:03.094 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 11:00:03.127 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 11:00:03.127 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 11:00:05.255 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 11:00:09.519 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 11:00:15.066 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 11:00:32.425 [ERROR] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:102 | Object reference not set to an instance of an object.
+2020/09/15 11:00:41.924 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 11:02:08.634 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 11:02:08.913 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 11:02:08.934 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 11:02:08.953 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 11:02:10.803 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 11:02:14.629 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 11:02:24.681 [ERROR] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:102 | Object reference not set to an instance of an object.
+2020/09/15 11:02:38.917 [ERROR] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:102 | Object reference not set to an instance of an object.
+2020/09/15 11:04:32.219 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 11:04:32.641 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 11:04:32.665 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 11:04:32.677 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 11:04:33.490 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 11:04:48.177 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 11:09:52.285 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 11:09:52.753 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 11:09:52.836 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 11:09:52.922 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 11:09:57.908 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 11:10:06.584 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 11:18:04.248 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 11:18:04.656 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 11:18:04.683 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 11:18:04.696 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 11:18:06.739 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 11:18:12.254 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 11:18:48.320 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:103 | Input dateInput: 09/15/2020 11:18 AM - 09/15/2020 12:48 PM
+2020/09/15 11:18:48.330 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:104 | Input Message: -
+2020/09/15 11:18:48.422 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:123 | Getting log by 09/15/2020 11:18 AM - 09/15/2020 12:48 PM.
+2020/09/15 11:19:00.659 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 11:24:32.186 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 11:24:32.745 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 11:24:32.780 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 11:24:32.805 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 11:24:34.034 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 11:24:36.736 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 11:25:37.460 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 11:25:38.107 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 11:25:38.221 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 11:25:38.259 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 11:25:39.642 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 11:25:42.849 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 11:25:47.269 [WARN] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Please input information for searching.
+2020/09/15 11:25:47.409 [ERROR] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:108 | Please input information for searching.
+2020/09/15 11:25:51.894 [WARN] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Please input information for searching.
+2020/09/15 11:25:51.961 [ERROR] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:108 | Please input information for searching.
+2020/09/15 11:25:53.628 [WARN] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Please input information for searching.
+2020/09/15 11:25:53.680 [ERROR] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:108 | Please input information for searching.
+2020/09/15 11:25:54.068 [WARN] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Please input information for searching.
+2020/09/15 11:25:54.123 [ERROR] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:108 | Please input information for searching.
+2020/09/15 11:25:54.271 [WARN] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Please input information for searching.
+2020/09/15 11:25:54.384 [ERROR] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:108 | Please input information for searching.
+2020/09/15 11:27:22.144 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 11:27:28.533 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 11:28:29.351 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 11:28:30.255 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 11:28:30.631 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 11:28:30.763 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 11:28:32.288 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 11:32:29.710 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 11:33:52.056 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 11:33:52.752 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 11:33:52.799 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 11:33:52.829 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 11:33:53.257 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 11:34:27.253 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 11:34:40.802 [WARN] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Please input information for searching.
+2020/09/15 11:34:40.878 [ERROR] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:108 | Please input information for searching.
+2020/09/15 11:34:45.080 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 11:34:50.340 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 11:37:00.725 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 11:37:01.248 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 11:37:01.368 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 11:37:01.408 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 11:37:02.598 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 11:37:06.146 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 11:37:12.596 [WARN] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Please input information for searching.
+2020/09/15 11:37:12.673 [ERROR] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:108 | Please input information for searching.
+2020/09/15 11:38:41.857 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 11:38:42.396 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 11:38:42.533 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 11:38:42.941 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 11:38:43.611 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 11:40:20.190 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 11:40:26.984 [WARN] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Please input information for searching.
+2020/09/15 11:40:27.061 [ERROR] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:108 | Please input information for searching.
+2020/09/15 11:41:23.051 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 11:41:24.582 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 11:41:24.618 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 11:41:24.730 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 11:41:25.566 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 11:41:32.080 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 11:41:57.278 [WARN] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Please input information for searching.
+2020/09/15 11:41:57.364 [ERROR] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:108 | Error: Please input information for searching.
+2020/09/15 11:43:59.017 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 11:43:59.362 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 11:43:59.514 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 11:44:00.301 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 11:44:03.966 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 11:46:34.018 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 11:46:39.633 [WARN] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Please input information for searching.
+2020/09/15 11:46:39.735 [ERROR] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:108 | Error: Please input information for searching.
+2020/09/15 11:46:46.777 [WARN] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Please input information for searching.
+2020/09/15 11:46:46.835 [ERROR] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:108 | Error: Please input information for searching.
+2020/09/15 11:49:35.599 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 11:49:36.210 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 11:49:36.245 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 11:49:36.300 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 11:49:37.685 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 11:49:43.368 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 11:49:49.182 [WARN] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Please input information for searching.
+2020/09/15 11:49:49.257 [ERROR] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:108 | Error: Please input information for searching.
+2020/09/15 11:51:43.520 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 11:51:44.312 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 11:51:44.643 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 11:51:44.690 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 11:51:45.354 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 11:51:47.737 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 11:52:10.770 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:104 | Input dateInput: 09/15/2020 11:52 AM - 09/15/2020 1:22 PM
+2020/09/15 11:52:10.770 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Input Message: -
+2020/09/15 11:52:10.800 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:116 | Getting log by 09/15/2020 11:52 AM - 09/15/2020 1:22 PM.
+2020/09/15 11:52:43.100 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:104 | Input dateInput: 09/15/2020 11:52 AM - 09/15/2020 1:22 PM
+2020/09/15 11:52:43.113 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Input Message: Starting
+2020/09/15 11:52:43.222 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:116 | Getting log by 09/15/2020 11:52 AM - 09/15/2020 1:22 PM or Starting.
+2020/09/15 11:52:56.472 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:104 | Input dateInput: 09/15/2020 11:52 AM - 09/15/2020 1:22 PM
+2020/09/15 11:52:56.532 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Input Message: Starting
+2020/09/15 11:52:56.555 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:116 | Getting log by 09/15/2020 11:52 AM - 09/15/2020 1:22 PM or Starting.
+2020/09/15 11:53:12.771 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:104 | Input dateInput: 09/15/2020 11:52 AM - 09/15/2020 1:22 PM
+2020/09/15 11:53:12.791 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Input Message: Starting Program
+2020/09/15 11:53:12.847 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:116 | Getting log by 09/15/2020 11:52 AM - 09/15/2020 1:22 PM or Starting Program.
+2020/09/15 11:53:30.348 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:104 | Input dateInput: 09/15/2020 11:52 AM - 09/15/2020 1:22 PM
+2020/09/15 11:53:30.495 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Input Message: Welcome
+2020/09/15 11:53:30.548 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:116 | Getting log by 09/15/2020 11:52 AM - 09/15/2020 1:22 PM or Welcome.
+2020/09/15 11:53:44.130 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:104 | Input dateInput: 09/15/2020 11:52 AM - 09/15/2020 1:22 PM
+2020/09/15 11:53:44.130 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Input Message: Welcome
+2020/09/15 11:53:44.144 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:116 | Getting log by 09/15/2020 11:52 AM - 09/15/2020 1:22 PM or Welcome.
+2020/09/15 11:55:41.979 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 11:55:42.420 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 11:55:42.482 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 11:55:42.530 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 11:55:44.764 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 12:00:21.944 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:69 | Getting top 100 from all logs.
+2020/09/15 12:00:28.596 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:104 | Input dateInput: 09/15/2020 12:00 PM - 09/15/2020 1:30 PM
+2020/09/15 12:00:28.596 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Input Message: -
+2020/09/15 12:00:28.615 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:116 | Getting log by 09/15/2020 12:00 PM - 09/15/2020 1:30 PM.
+2020/09/15 12:00:44.736 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:104 | Input dateInput: 09/15/2020 12:00 PM - 09/15/2020 1:30 PM
+2020/09/15 12:00:44.736 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:105 | Input Message: Input
+2020/09/15 12:00:46.586 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:116 | Getting log by 09/15/2020 12:00 PM - 09/15/2020 1:30 PM or Input.
+2020/09/15 12:05:52.568 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 12:05:53.879 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 12:05:53.907 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 12:05:53.955 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 12:05:55.647 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 12:05:58.395 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:66 | Getting top 100 from all logs.
+2020/09/15 12:06:03.113 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 12:06:04.848 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:66 | Getting top 100 from all logs.
+2020/09/15 12:06:23.818 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:66 | Getting top 100 from all logs.
+2020/09/15 12:07:14.112 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 12:07:14.663 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 12:07:14.709 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 12:07:14.857 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 12:07:16.095 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 12:07:18.726 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:66 | Getting top 100 from all logs.
+2020/09/15 12:07:36.745 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/15 12:10:09.124 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 12:10:09.510 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 12:10:09.545 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 12:10:09.567 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 12:10:11.479 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 12:10:14.178 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:66 | Getting top 100 from all logs.
+2020/09/15 12:10:32.810 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/15 12:11:43.273 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 12:11:43.888 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 12:11:44.360 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 12:11:44.388 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 12:11:47.517 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 12:11:49.799 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:66 | Getting top 100 from all logs.
+2020/09/15 12:13:44.923 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 12:13:45.539 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 12:13:45.569 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 12:13:45.679 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 12:13:47.209 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 12:13:52.102 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:66 | Getting top 100 from all logs.
+2020/09/15 12:14:08.141 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/15 12:15:20.970 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 12:15:21.940 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 12:15:21.971 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 12:15:22.109 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 12:15:22.891 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 12:15:30.020 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:66 | Getting top 100 from all logs.
+2020/09/15 12:15:53.726 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:95 | Input dateInput: 09/11/2020 12:00 AM - 09/12/2020 11:00 PM
+2020/09/15 12:15:53.799 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:96 | Input Message: -
+2020/09/15 12:15:53.874 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:107 | Getting log by 09/11/2020 12:00 AM - 09/12/2020 11:00 PM.
+2020/09/15 12:40:57.988 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/15 13:36:31.910 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 13:36:35.180 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 13:36:35.215 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 13:36:35.269 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 13:36:41.143 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 13:37:12.926 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:66 | Getting top 100 from all logs.
+2020/09/15 13:37:22.855 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:95 | Input dateInput: 09/15/2020 1:37 PM - 09/15/2020 3:07 PM
+2020/09/15 13:37:22.931 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:96 | Input Message: -
+2020/09/15 13:37:22.977 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:107 | Getting log by 09/15/2020 1:37 PM - 09/15/2020 3:07 PM.
+2020/09/15 13:37:48.347 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:66 | Getting top 100 from all logs.
+2020/09/15 13:44:42.243 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/15 13:45:59.524 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 13:46:00.355 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 13:46:00.391 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 13:46:01.057 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 13:46:02.289 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 13:46:05.564 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:66 | Getting top 100 from all logs.
+2020/09/15 13:46:22.346 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:95 | Input dateInput: 09/15/2020 1:46 PM - 09/15/2020 3:16 PM
+2020/09/15 13:46:22.346 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:96 | Input Message: -
+2020/09/15 13:46:22.396 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:107 | Getting log by 09/15/2020 1:46 PM - 09/15/2020 3:16 PM.
+2020/09/15 13:59:24.283 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 13:59:24.837 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 13:59:24.871 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 13:59:24.971 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 13:59:27.288 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 13:59:46.493 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:66 | Getting top 100 from all logs.
+2020/09/15 13:59:59.575 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:95 | Input dateInput: 09/12/2020 12:00 AM - 09/12/2020 11:00 PM
+2020/09/15 13:59:59.588 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:96 | Input Message: -
+2020/09/15 13:59:59.613 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:107 | Getting log by 09/12/2020 12:00 AM - 09/12/2020 11:00 PM.
+2020/09/15 14:02:11.156 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 14:02:11.857 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 14:02:11.941 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 14:02:12.012 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 14:02:14.271 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 14:03:22.877 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:66 | Getting top 100 from all logs.
+2020/09/15 14:03:37.269 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:95 | Input dateInput: 09/14/2020 12:00 AM - 09/14/2020 11:00 PM
+2020/09/15 14:03:37.284 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:96 | Input Message: -
+2020/09/15 14:03:37.299 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:107 | Getting log by 09/14/2020 12:00 AM - 09/14/2020 11:00 PM.
+2020/09/15 14:06:24.120 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/15 14:08:00.153 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 14:08:00.488 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 14:08:00.563 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 14:08:00.594 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 14:08:05.633 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 14:08:09.489 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:65 | Getting top 100 from all logs.
+2020/09/15 14:08:13.293 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:94 | Input Date Input: 09/15/2020 12:00 AM - 09/15/2020 11:59 PM
+2020/09/15 14:08:13.394 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:95 | Input Message: -
+2020/09/15 14:08:13.434 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:106 | Getting log by 09/15/2020 12:00 AM - 09/15/2020 11:59 PM.
+2020/09/15 14:08:19.137 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/15 14:08:48.844 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 14:08:50.507 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 14:08:50.521 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 14:08:50.564 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 14:08:51.237 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 14:08:55.431 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:65 | Getting top 100 from all logs.
+2020/09/15 14:09:01.527 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:94 | Input Date Input: 09/15/2020 12:00 AM - 09/15/2020 11:59 PM
+2020/09/15 14:09:01.551 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:95 | Input Message: -
+2020/09/15 14:09:01.572 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:106 | Getting log by 09/15/2020 12:00 AM - 09/15/2020 11:59 PM.
+2020/09/15 14:09:20.099 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/15 14:10:57.797 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 14:10:58.560 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 14:10:58.741 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 14:10:58.869 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 14:10:59.690 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 14:12:32.020 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:65 | Getting top 100 from all logs.
+2020/09/15 14:12:45.595 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:94 | Input Date Input: 09/15/2020 12:00 AM - 09/15/2020 11:59 PM
+2020/09/15 14:12:45.612 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:95 | Input Message: -
+2020/09/15 14:12:45.637 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:106 | Getting log by 09/15/2020 12:00 AM - 09/15/2020 11:59 PM.
+2020/09/15 16:46:41.927 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 16:46:43.255 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 16:46:43.650 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 16:46:43.728 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 16:46:51.861 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 16:46:55.475 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:62 | Getting top 100 from all logs.
+2020/09/15 16:56:34.353 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 16:56:35.260 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 16:56:35.466 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 16:56:35.519 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 16:56:38.140 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 16:56:53.379 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:64 | Getting top 100 from all logs.
+2020/09/15 16:57:31.379 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/15 16:57:32.034 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 16:57:32.089 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 16:57:32.157 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/15 16:57:34.054 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:64 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/15 16:57:53.995 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:64 | Getting top 100 from all logs.

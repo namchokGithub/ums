@@ -1,4 +1,213 @@
-var ums_Check_User = @"-- =============================================
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
+
+namespace UMS.Migrations.Auth
+{
+    public partial class ums_log : Migration
+    {
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.CreateTable(
+                name: "Account",
+                columns: table => new
+                {
+                    acc_Id = table.Column<string>(nullable: false, comment: "User ID"),
+                    acc_User = table.Column<string>(maxLength: 256, nullable: true, comment: "Username"),
+                    acc_NormalizedUserName = table.Column<string>(maxLength: 256, nullable: true, comment: "Normalized UserName"),
+                    acc_Email = table.Column<string>(maxLength: 256, nullable: true, comment: "User email"),
+                    acc_NormalizedEmail = table.Column<string>(maxLength: 256, nullable: true, comment: "Normalized user email"),
+                    acc_PasswordHash = table.Column<string>(nullable: true, comment: "Password hash"),
+                    acc_SecurityStamp = table.Column<string>(nullable: true, comment: "Security Stamp"),
+                    acc_ConcurrencyStamp = table.Column<string>(nullable: true, comment: "Concurrency Stamp"),
+                    acc_Firstname = table.Column<string>(type: "nvarchar(256)", nullable: true, comment: "Firstname"),
+                    acc_Lastname = table.Column<string>(type: "nvarchar(256)", nullable: true, comment: "Lastname"),
+                    acc_IsActive = table.Column<string>(type: "char(10)", nullable: false, comment: "Status of account")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Account", x => x.acc_Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Logs",
+                columns: table => new
+                {
+                    log_Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    log_datetime = table.Column<DateTime>(type: "datetime", nullable: false, comment: "Date time"),
+                    log_level = table.Column<string>(type: "nvarchar(256)", nullable: true, comment: "Level of log"),
+                    log_logger = table.Column<string>(type: "nvarchar(256)", nullable: true, comment: "A computer program to keep track of events."),
+                    log_message = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    log_exception = table.Column<string>(type: "nvarchar(450)", nullable: true, comment: "Exception"),
+                    log_user_identity = table.Column<string>(type: "nvarchar(256)", nullable: true),
+                    log_mvc_action = table.Column<string>(type: "nvarchar(256)", nullable: true),
+                    log_filename = table.Column<string>(type: "nvarchar(256)", nullable: true),
+                    log_linenumber = table.Column<string>(type: "nvarchar(256)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Logs", x => x.log_Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Roles",
+                columns: table => new
+                {
+                    Id = table.Column<string>(nullable: false),
+                    Name = table.Column<string>(maxLength: 256, nullable: true),
+                    NormalizedName = table.Column<string>(maxLength: 256, nullable: true),
+                    ConcurrencyStamp = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Roles", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "UserClaims",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<string>(nullable: false),
+                    ClaimType = table.Column<string>(nullable: true),
+                    ClaimValue = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserClaims", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_UserClaims_Account_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Account",
+                        principalColumn: "acc_Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "UserLogins",
+                columns: table => new
+                {
+                    LoginProvider = table.Column<string>(maxLength: 128, nullable: false),
+                    ProviderKey = table.Column<string>(maxLength: 128, nullable: false),
+                    ProviderDisplayName = table.Column<string>(nullable: true),
+                    UserId = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserLogins", x => new { x.LoginProvider, x.ProviderKey });
+                    table.ForeignKey(
+                        name: "FK_UserLogins_Account_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Account",
+                        principalColumn: "acc_Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "UserTokens",
+                columns: table => new
+                {
+                    UserId = table.Column<string>(nullable: false),
+                    LoginProvider = table.Column<string>(maxLength: 128, nullable: false),
+                    Name = table.Column<string>(maxLength: 128, nullable: false),
+                    Value = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserTokens", x => new { x.UserId, x.LoginProvider, x.Name });
+                    table.ForeignKey(
+                        name: "FK_UserTokens_Account_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Account",
+                        principalColumn: "acc_Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "RoleClaims",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    RoleId = table.Column<string>(nullable: false),
+                    ClaimType = table.Column<string>(nullable: true),
+                    ClaimValue = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RoleClaims", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_RoleClaims_Roles_RoleId",
+                        column: x => x.RoleId,
+                        principalTable: "Roles",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "UserRoles",
+                columns: table => new
+                {
+                    UserId = table.Column<string>(nullable: false),
+                    RoleId = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserRoles", x => new { x.UserId, x.RoleId });
+                    table.ForeignKey(
+                        name: "FK_UserRoles_Roles_RoleId",
+                        column: x => x.RoleId,
+                        principalTable: "Roles",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_UserRoles_Account_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Account",
+                        principalColumn: "acc_Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "EmailIndex",
+                table: "Account",
+                column: "acc_NormalizedEmail");
+
+            migrationBuilder.CreateIndex(
+                name: "UserNameIndex",
+                table: "Account",
+                column: "acc_NormalizedUserName",
+                unique: true,
+                filter: "[acc_NormalizedUserName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_RoleClaims_RoleId",
+                table: "RoleClaims",
+                column: "RoleId");
+
+            migrationBuilder.CreateIndex(
+                name: "RoleNameIndex",
+                table: "Roles",
+                column: "NormalizedName",
+                unique: true,
+                filter: "[NormalizedName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UserClaims_UserId",
+                table: "UserClaims",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UserLogins_UserId",
+                table: "UserLogins",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UserRoles_RoleId",
+                table: "UserRoles",
+                column: "RoleId");
+            var ums_Check_User = @"-- =============================================
                                     -- Author: Namchok Singhachai
                                     --Create date: 2020 - 09 - 03
                                     -- Description: Check user if exist return 1
@@ -21,7 +230,7 @@ var ums_Check_User = @"-- =============================================
                                                 END
                                             END
                                     ";
-var ums_deleteUser = @"-- =============================================
+            var ums_deleteUser = @"-- =============================================
                         -- Author: Namchok Singhachai
                         --Create date: 2020 - 08 - 31
                         -- Description: Inactive user
@@ -40,7 +249,7 @@ var ums_deleteUser = @"-- =============================================
                                     END
                                     GO
                         ";
-var ums_get_active_user = @"-- =============================================
+            var ums_get_active_user = @"-- =============================================
                             -- Author:		Namchok Singhachai
                             -- Create date: 2020-08-29
                             -- Description:	Get all user for management
@@ -68,7 +277,7 @@ var ums_get_active_user = @"-- =============================================
                                 WHERE [dbo].[Account].[acc_IsActive] = 'Y';
                             END
                             ";
-var ums_get_all_active_user = @"-- =============================================
+            var ums_get_all_active_user = @"-- =============================================
                                 -- Author:		Namchok Singhachai
                                 -- Create date: 2020-08-29
                                 -- Description:	Get all active user for management
@@ -97,7 +306,7 @@ var ums_get_all_active_user = @"-- =============================================
                                 END
                                 GO
                                 ";
-var ums_get_all_user = @"-- =============================================
+            var ums_get_all_user = @"-- =============================================
                         -- Author:		Namchok Singhachai
                         -- Create date: 2020-08-29
                         -- Description:	Get all user for management
@@ -125,7 +334,7 @@ var ums_get_all_user = @"-- =============================================
                         END
                         GO
                         ";
-var ums_Get_user = @"-- =============================================
+            var ums_Get_user = @"-- =============================================
                     -- Author:		Wannapa
                     -- Create date: 2020-09-02
                     -- Description:	Get user for edit profile
@@ -139,7 +348,7 @@ var ums_Get_user = @"-- =============================================
                         LEFT JOIN [dbo].[UserLogins] ON [dbo].[UserLogins].UserId = [dbo].[Account].acc_Id
                         WHERE [dbo].[Account].acc_Id = @param_Id AND [dbo].[Account].acc_IsActive = 'Y' ;
                     END";
-var ums_getUserById = @"-- =============================================
+            var ums_getUserById = @"-- =============================================
                         -- Author:		Namchok Singhachai
                         -- Create date: 2020-08-29
                         -- Description: Get Active User by ID
@@ -164,7 +373,7 @@ var ums_getUserById = @"-- =============================================
                         END
                         GO
                         ";
-var ums_Update_all = @"-- =============================================
+            var ums_Update_all = @"-- =============================================
                         -- Author:		Wannapa
                         -- Create date: 2020-09-02
                         -- Description:	Update name
@@ -182,7 +391,7 @@ var ums_Update_all = @"-- =============================================
                                 [dbo].[Account].acc_PasswordHash = @newpw
                             WHERE [dbo].[Account].acc_Id = @id
                         END";
-var ums_Update_user = @"-- =============================================
+            var ums_Update_user = @"-- =============================================
                         -- Author:		Wannapa
                         -- Create date: 2020-09-02
                         -- Description:	For update name and last name
@@ -197,7 +406,7 @@ var ums_Update_user = @"-- =============================================
                             SET [dbo].[Account].acc_Firstname = @param_fname, [dbo].[Account].acc_Lastname = @param_lname  
                             WHERE [dbo].[Account].acc_Id = @param_Id;
                         END";
-var ums_updateRoleUser = @"-- =============================================
+            var ums_updateRoleUser = @"-- =============================================
                             -- Author:		Namchok Singhachai
                             -- Create date: 2020-08-28
                             -- Description:	Update role user
@@ -225,7 +434,7 @@ var ums_updateRoleUser = @"-- =============================================
                                 END
                             END
                             GO";
-var ums_updateUser = @"-- =============================================
+            var ums_updateUser = @"-- =============================================
                         -- Author:		Namchok Singhachai
                         -- Create date: 2020-08-28
                         -- Description:	Update firstname and lastname
@@ -246,16 +455,16 @@ var ums_updateUser = @"-- =============================================
                         END
                         GO
                         ";
-var ums_Get_all_log = @"-- =============================================
+            var ums_Get_all_log = @"
+                        -- =============================================
                         -- Author:		Namchok Singhachai
                         -- Create date: 2020-09-11
-                        -- Description:	Get all log top ?
+                        -- Description:	Get all log top 50
                         -- =============================================
                         CREATE PROCEDURE ums_Get_all_log
-                            @param_num int
                         AS
                         BEGIN
-                            SELECT TOP (@param_num)
+                            SELECT TOP 50
                                 [dbo].[Logs].[log_Id]
                                 , [dbo].[Logs].[log_datetime]
                                 , CONVERT(VARCHAR(10), [dbo].[Logs].[log_datetime], 111) AS [log_date]
@@ -274,91 +483,85 @@ var ums_Get_all_log = @"-- =============================================
                         GO
                         ";
 
-var ums_Search_log = @"-- =============================================
+            var ums_Search_log = @"-- =============================================
                         -- Author:		Namchok Singhachai
                         -- Create date: 2020-09-14
                         -- Description:	Search log by text or date
                         -- =============================================
-                        ALTER PROCEDURE ums_Search_log
+                        CREATE PROCEDURE ums_Search_log
                             @param_dateFirst Date,
                             @param_dateEnd Date,
                             @param_text NVARCHAR(MAX)
                         AS
                         BEGIN
-                            IF @param_text = '' OR @param_text = null 
-                                SELECT
-                                    [dbo].[Logs].[log_Id]
-                                    , [dbo].[Logs].[log_datetime]
-                                    , CONVERT(VARCHAR(10), [dbo].[Logs].[log_datetime], 111) AS [log_date]
-                                    , CONVERT(VARCHAR(10), CAST([dbo].[Logs].[log_datetime] AS TIME	), 0) AS [log_time]
-                                    , [dbo].[Logs].[log_level]
-                                    , [dbo].[Logs].[log_logger]
-                                    , CONCAT([dbo].[Logs].[log_message], ' ', [dbo].[Logs].[log_exception]) AS [log_message]
-                                    , [dbo].[Logs].[log_exception]
-                                    , [dbo].[Logs].[log_user_identity]
-                                    , [dbo].[Logs].[log_mvc_action]
-                                    , [dbo].[Logs].[log_filename]
-                                    , [dbo].[Logs].[log_linenumber]
-                                FROM [dbo].[Logs]
-                                WHERE 
-                                    CONVERT(date, [dbo].[Logs].[log_datetime], 121) BETWEEN CONVERT(date, @param_dateFirst, 121) AND CONVERT(date, @param_dateEnd, 121)
-                                ORDER BY [dbo].[Logs].[log_Id] DESC
-                            ELSE IF @param_dateFirst = '' OR @param_dateEnd = ''
-                                SELECT
-                                    [dbo].[Logs].[log_Id]
-                                    , [dbo].[Logs].[log_datetime]
-                                    , CONVERT(VARCHAR(10), [dbo].[Logs].[log_datetime], 111) AS [log_date]
-                                    , CONVERT(VARCHAR(10), CAST([dbo].[Logs].[log_datetime] AS TIME	), 0) AS [log_time]
-                                    , [dbo].[Logs].[log_level]
-                                    , [dbo].[Logs].[log_logger]
-                                    , CONCAT([dbo].[Logs].[log_message], ' ', [dbo].[Logs].[log_exception]) AS [log_message]
-                                    , [dbo].[Logs].[log_exception]
-                                    , [dbo].[Logs].[log_user_identity]
-                                    , [dbo].[Logs].[log_mvc_action]
-                                    , [dbo].[Logs].[log_filename]
-                                    , [dbo].[Logs].[log_linenumber]
-                                FROM [dbo].[Logs]
-                                WHERE 
-                                    [log_message] LIKE '%'+@param_text+'%'
-                                ORDER BY [dbo].[Logs].[log_Id] DESC
-                            ELSE 
-                                SELECT
-                                    [dbo].[Logs].[log_Id]
-                                    , [dbo].[Logs].[log_datetime]
-                                    , CONVERT(VARCHAR(10), [dbo].[Logs].[log_datetime], 111) AS [log_date]
-                                    , CONVERT(VARCHAR(10), CAST([dbo].[Logs].[log_datetime] AS TIME	), 0) AS [log_time]
-                                    , [dbo].[Logs].[log_level]
-                                    , [dbo].[Logs].[log_logger]
-                                    , CONCAT([dbo].[Logs].[log_message], ' ', [dbo].[Logs].[log_exception]) AS [log_message]
-                                    , [dbo].[Logs].[log_exception]
-                                    , [dbo].[Logs].[log_user_identity]
-                                    , [dbo].[Logs].[log_mvc_action]
-                                    , [dbo].[Logs].[log_filename]
-                                    , [dbo].[Logs].[log_linenumber]
-                                FROM [dbo].[Logs]
-                                WHERE 
-                                    [log_message] LIKE '%'+@param_text+'%' OR [log_message] LIKE @param_text+'%' OR [log_message] LIKE '%'+@param_text
-                                    AND CONVERT(date, [dbo].[Logs].[log_datetime], 121) BETWEEN CONVERT(date, @param_dateFirst, 121) AND CONVERT(date, @param_dateEnd, 121)
-                                ORDER BY [dbo].[Logs].[log_Id] DESC
+                            SELECT
+                                [dbo].[Logs].[log_Id]
+                                , [dbo].[Logs].[log_datetime]
+                                , CONVERT(VARCHAR(10), [dbo].[Logs].[log_datetime], 111) AS [log_date]
+                                , CONVERT(VARCHAR(10), CAST([dbo].[Logs].[log_datetime] AS TIME	), 0) AS [log_time]
+                                , [dbo].[Logs].[log_level]
+                                , [dbo].[Logs].[log_logger]
+                                , CONCAT([dbo].[Logs].[log_message], ' ', [dbo].[Logs].[log_exception]) AS [log_message]
+                                , [dbo].[Logs].[log_exception]
+                                , [dbo].[Logs].[log_user_identity]
+                                , [dbo].[Logs].[log_mvc_action]
+                                , [dbo].[Logs].[log_filename]
+                                , [dbo].[Logs].[log_linenumber]
+                            FROM [dbo].[Logs]
+                            WHERE [dbo].[Logs].[log_message] LIKE '%'+@param_text+'%'
+                                OR [dbo].[Logs].[log_exception] LIKE '%'+@param_text+'%'
+                                OR CONVERT(datetime, [dbo].[Logs].[log_datetime], 112) BETWEEN @param_dateFirst AND @param_dateEnd
+                            ORDER BY [dbo].[Logs].[log_Id] DESC
                         END
-                        GO";
+                        GO
+                        ";
 
-migrationBuilder.Sql(ums_Check_User);
-migrationBuilder.Sql(ums_deleteUser);
-migrationBuilder.Sql(ums_get_active_user);
-migrationBuilder.Sql(ums_get_all_active_user);
-migrationBuilder.Sql(ums_get_all_user);
-migrationBuilder.Sql(ums_Get_user);
-migrationBuilder.Sql(ums_getUserById);
-migrationBuilder.Sql(ums_Update_all);
-migrationBuilder.Sql(ums_Update_user);
-migrationBuilder.Sql(ums_updateRoleUser);
-migrationBuilder.Sql(ums_updateUser);
-migrationBuilder.Sql(ums_Get_all_log);
-migrationBuilder.Sql(ums_Search_log);
-// End create stored procedure
+            migrationBuilder.Sql(ums_Check_User);
+            migrationBuilder.Sql(ums_deleteUser);
+            migrationBuilder.Sql(ums_get_active_user);
+            migrationBuilder.Sql(ums_get_all_active_user);
+            migrationBuilder.Sql(ums_get_all_user);
+            migrationBuilder.Sql(ums_Get_user);
+            migrationBuilder.Sql(ums_getUserById);
+            migrationBuilder.Sql(ums_Update_all);
+            migrationBuilder.Sql(ums_Update_user);
+            migrationBuilder.Sql(ums_updateRoleUser);
+            migrationBuilder.Sql(ums_updateUser);
+            migrationBuilder.Sql(ums_Get_all_log);
+            migrationBuilder.Sql(ums_Search_log);
+            // End create stored procedure
 
-var insertRole = @" INSERT INTO [dbo].[Roles] ([Id], [Name], [NormalizedName])
+            var insertRole = @" INSERT INTO [dbo].[Roles] ([Id], [Name], [NormalizedName])
                             VALUES (1,'Admin','ADMIN'), (2,'User','USER')";
-migrationBuilder.Sql(insertRole);
-// End Insert role
+            migrationBuilder.Sql(insertRole);
+            // End Insert role
+        }
+
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropTable(
+                name: "Logs");
+
+            migrationBuilder.DropTable(
+                name: "RoleClaims");
+
+            migrationBuilder.DropTable(
+                name: "UserClaims");
+
+            migrationBuilder.DropTable(
+                name: "UserLogins");
+
+            migrationBuilder.DropTable(
+                name: "UserRoles");
+
+            migrationBuilder.DropTable(
+                name: "UserTokens");
+
+            migrationBuilder.DropTable(
+                name: "Roles");
+
+            migrationBuilder.DropTable(
+                name: "Account");
+        }
+    }
+}
