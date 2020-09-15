@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using UMS.Models;
 using static UMS.Controllers.ManageUserController;
+using UMS.Models;
+using System.Threading;
 
 /*
  * Name: UMS.Controllers.LogsController
@@ -55,25 +54,24 @@ namespace UMS.Controllers
             try
             {
                 _logger.LogTrace("Start Index.");
-                TempData["UpdateResult"] = null;
                 var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Find id
-                _logger.LogTrace("Find id from first value.");
-                if (UserId == null) throw new Exception("The user ID not found !.");
-                ViewData["UserId"] = UserId; // Set Data to view
+                _logger.LogTrace("Find ID from first value.");
+                ViewData["UserId"] = UserId ?? throw new Exception("The user ID not found !."); // Set Data to view
+
                 int numofrow = 100; // Get top log form database
-                string sqlGetallLog = @$"Exec dbo.ums_Get_all_log {numofrow}";
+                string sqlGetallLog = @$"Exec dbo.ums_Get_all_log {numofrow}"; // Set sql text for get data
+                
                 _logger.LogDebug($"Getting top {numofrow} from all logs.");
                 var item = _logsContext.Logs.FromSqlRaw(sqlGetallLog).ToList<Logs>();
-                ViewData["Logs"] = item;
-                ViewData["INFO"] = @$"toastr.info('Select lasted logs top {item.Count}.');";
+                ViewData["Logs"] = item ?? throw new Exception("Calling a method on a null object reference."); // Set result to view and check null value
+                ViewData["INFO"] = @$"toastr.info('Select lasted logs top {item.Count}.');"; // Message for result query
                 _logger.LogTrace("End Index.");
                 return View();
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                TempData["Exception"] = message;
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })"; // Message to html view
                 _logger.LogTrace("End Index.");
                 return View();
             } // End try catch
@@ -89,30 +87,30 @@ namespace UMS.Controllers
             try {
                 _logger.LogTrace("Start searching logs.");
                 string sqlGetLog;
-                // Check null value
                 if ((dateInput == null && messageInput == null) || (dateInput == "" && messageInput == "")) throw new Exception("Please input information for searching."); // End if param both is null 
                 _logger.LogDebug("Input Date Input: " + ((dateInput != null && dateInput != "") ? dateInput : "-"));
                 _logger.LogDebug("Input Message: " + ((messageInput != null && messageInput != "") ? messageInput : "-"));
                 if (dateInput!=null || dateInput != "")
                 {
-                    _logger.LogTrace("Set dete from dateInput.");
+                    _logger.LogTrace("Set dete from dateIinput.");
                     DateTime dateInputStart = Convert.ToDateTime(dateInput.Substring(0, (dateInput.IndexOf("-"))).ToString());
-                    DateTime dateInputEnd = Convert.ToDateTime(dateInput.Substring((dateInput.IndexOf("-")) + 1).ToString());
+                    DateTime dateInputEnd = Convert.ToDateTime(dateInput.Substring((dateInput.IndexOf("-")) + 1).ToString()); // Set date for query
                     sqlGetLog = @$"Exec dbo.ums_Search_log '{dateInputStart}', '{dateInputEnd}', '{messageInput}'";
-                } else
+                }
+                else
                 {
                     sqlGetLog = @$"Exec dbo.ums_Search_log '', '', '{messageInput}'";
-                }
-                _logger.LogDebug($"Getting log by {(dateInput == null?"":dateInput)}{(messageInput==null?"":" or "+messageInput)}.");
+                } // End if date input not null
+                _logger.LogDebug($"Getting log by {(dateInput ?? "")}{(messageInput==null?"":" or "+messageInput)}.");
                 var item = _logsContext.Logs.FromSqlRaw(sqlGetLog).ToList<Logs>();
-                if (item == null) throw new Exception("Calling a method on a null object reference.");
+                if(item == null) throw new Exception("Calling a method on a null object reference.");
                 _logger.LogTrace("End searching logs.");
-                return new JsonResult(item);
+                return new JsonResult(item); // Return object JSON
             }
             catch (Exception e)
             {
                 _logger.LogError("Error: " + e.Message.ToString());
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
+                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })"; // Message to html view
                 var er = new objectJSON
                 {
                     condition = "error",

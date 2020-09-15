@@ -73,10 +73,9 @@ namespace UMS.Controllers
 
                 var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Get user ID
                 _logger.LogTrace("Find first value from user.");
-                if (UserId == null) throw new Exception("The user ID not found !.");
-                ViewData["UserId"] = UserId;
+                ViewData["UserId"] = UserId ?? throw new Exception("The user ID not found !.");
 
-                string sqltext = "EXEC [dbo].ums_get_all_active_user";
+                string sqltext = "EXEC [dbo].ums_get_all_active_user"; // Set sql text for execute
                 // Query data from "dbo.Account" and Convert to List<Account>
                 var alluser = _accountContext.Account.FromSqlRaw(sqltext).ToList<Account>();
                 _logger.LogDebug("Get all active user.");
