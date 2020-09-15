@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Security.Claims;
-using System.Threading.Tasks;
-using EmailService;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -30,7 +26,7 @@ namespace UMS.Controllers
         /*
          * Name: HomeController(Controller)
          * Parameter: emailSender(IEmailSender), logger(ILogger<HomeController>), userManager(UserManager<ApplicationUser)
-         * Author: Wannapa
+         * Author: Wannapa Srijermtong
          * Description: First page of UMS
          */
         public HomeController(ILogger<HomeController> logger, UserManager<ApplicationUser> userManager)
@@ -53,7 +49,7 @@ namespace UMS.Controllers
         /*
          * Name: Index
          * Parameter: none
-         * Author: Wannapa
+         * Author: Wannapa Srijermtong
          * Description: First page of UMS
          */
         public IActionResult Index()
