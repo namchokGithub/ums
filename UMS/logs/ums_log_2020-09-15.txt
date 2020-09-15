@@ -1,75 +1,57 @@
 ############################################## User Management System log ##############################################
-2020/09/15 15:56:05.138 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
-2020/09/15 15:56:11.055 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
-2020/09/15 15:56:11.111 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
-2020/09/15 15:56:11.152 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Wannapa\source\repos\ums\UMS
-2020/09/15 15:56:11.700 [DEBUG] [UMS.Data.AuthDbContext]  Index:Home:AuthDbContext.cs:27 | Auth Database Context.
-2020/09/15 15:56:12.170 [DEBUG] [UMS.Controllers.HomeController] [ee@hotmail.com] Index:Home:HomeController.cs:37 | NLog injected into HomeController.
-2020/09/15 15:56:12.235 [DEBUG] [UMS.Controllers.HomeController] [ee@hotmail.com] Index:Home:HomeController.cs:39 | User manager injected into HomeController.
-2020/09/15 15:56:12.368 [TRACE] [UMS.Controllers.HomeController] [ee@hotmail.com] Index:Home:HomeController.cs:40 | End HomeController Constructor.
-2020/09/15 15:56:12.403 [TRACE] [UMS.Controllers.HomeController] [ee@hotmail.com] Index:Home:HomeController.cs:59 | Start Index.
-2020/09/15 15:56:12.437 [INFO] [UMS.Controllers.HomeController] [ee@hotmail.com] Index:Home:HomeController.cs:60 | Welcome to UMS.
-2020/09/15 15:56:12.460 [TRACE] [UMS.Controllers.HomeController] [ee@hotmail.com] Index:Home:HomeController.cs:65 | Find first value from user.
-2020/09/15 15:56:12.460 [TRACE] [UMS.Controllers.HomeController] [ee@hotmail.com] Index:Home:HomeController.cs:69 | End Index.
-2020/09/15 16:03:04.013 [DEBUG] [UMS.Data.AuthDbContext]  Index:EditProfile:AuthDbContext.cs:27 | Auth Database Context.
-2020/09/15 16:03:04.026 [DEBUG] [UMS.Models.EditProfileContext] [ee@hotmail.com] Index:EditProfile:EditProfileContext.cs:23 | Edit Profile Context.
-2020/09/15 16:03:04.040 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:40 | NLog injected into EditProfileController.
-2020/09/15 16:03:04.040 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:42 | Edit Profile Context injected into EditProfileController.
-2020/09/15 16:03:04.040 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:44 | Sign In Manager injected into EditProfileController.
-2020/09/15 16:03:04.050 [TRACE] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:45 | End EditProfileController Constructor.
-2020/09/15 16:03:04.050 [TRACE] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:64 | Start Index
-2020/09/15 16:03:05.774 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:71 | Get user by ID.
-2020/09/15 16:03:05.774 [TRACE] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:74 | End Index
-2020/09/15 16:03:08.072 [DEBUG] [UMS.Data.AuthDbContext]  editProfile:EditProfile:AuthDbContext.cs:27 | Auth Database Context.
-2020/09/15 16:03:08.110 [DEBUG] [UMS.Models.EditProfileContext] [ee@hotmail.com] editProfile:EditProfile:EditProfileContext.cs:23 | Edit Profile Context.
-2020/09/15 16:03:08.118 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] editProfile:EditProfile:EditProfileController.cs:40 | NLog injected into EditProfileController.
-2020/09/15 16:03:08.118 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] editProfile:EditProfile:EditProfileController.cs:42 | Edit Profile Context injected into EditProfileController.
-2020/09/15 16:03:08.118 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] editProfile:EditProfile:EditProfileController.cs:44 | Sign In Manager injected into EditProfileController.
-2020/09/15 16:03:08.118 [TRACE] [UMS.Controllers.EditProfileController] [ee@hotmail.com] editProfile:EditProfile:EditProfileController.cs:45 | End EditProfileController Constructor.
-2020/09/15 16:03:08.139 [TRACE] [UMS.Controllers.EditProfileController] [ee@hotmail.com] editProfile:EditProfile:EditProfileController.cs:97 | Start Edit Profile.
-2020/09/15 16:03:08.139 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] editProfile:EditProfile:EditProfileController.cs:98 | Getting value from httpcontext request.
-2020/09/15 16:03:08.167 [TRACE] [UMS.Controllers.EditProfileController] [ee@hotmail.com] editProfile:EditProfile:EditProfileController.cs:107 | Check regular expression.
-2020/09/15 16:03:08.301 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] editProfile:EditProfile:EditProfileController.cs:158 | Update name's user.
-2020/09/15 16:03:08.358 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] editProfile:EditProfile:EditProfileController.cs:165 | Save changes: Check update user.
-2020/09/15 16:03:08.358 [TRACE] [UMS.Controllers.EditProfileController] [ee@hotmail.com] editProfile:EditProfile:EditProfileController.cs:166 | Query succeeded.
-2020/09/15 16:03:08.366 [TRACE] [UMS.Controllers.EditProfileController] [ee@hotmail.com] editProfile:EditProfile:EditProfileController.cs:177 | End Edit Profile.
-2020/09/15 16:03:08.382 [DEBUG] [UMS.Data.AuthDbContext]  Index:EditProfile:AuthDbContext.cs:27 | Auth Database Context.
-2020/09/15 16:03:08.382 [DEBUG] [UMS.Models.EditProfileContext] [ee@hotmail.com] Index:EditProfile:EditProfileContext.cs:23 | Edit Profile Context.
-2020/09/15 16:03:08.382 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:40 | NLog injected into EditProfileController.
-2020/09/15 16:03:08.382 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:42 | Edit Profile Context injected into EditProfileController.
-2020/09/15 16:03:08.382 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:44 | Sign In Manager injected into EditProfileController.
-2020/09/15 16:03:08.393 [TRACE] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:45 | End EditProfileController Constructor.
-2020/09/15 16:03:08.393 [TRACE] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:64 | Start Index
-2020/09/15 16:03:08.420 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:71 | Get user by ID.
-2020/09/15 16:03:08.420 [TRACE] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:74 | End Index
-2020/09/15 16:03:19.585 [DEBUG] [UMS.Data.AuthDbContext]  Index:EditProfile:AuthDbContext.cs:27 | Auth Database Context.
-2020/09/15 16:03:19.605 [DEBUG] [UMS.Models.EditProfileContext] [ee@hotmail.com] Index:EditProfile:EditProfileContext.cs:23 | Edit Profile Context.
-2020/09/15 16:03:19.617 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:40 | NLog injected into EditProfileController.
-2020/09/15 16:03:19.633 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:42 | Edit Profile Context injected into EditProfileController.
-2020/09/15 16:03:19.633 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:44 | Sign In Manager injected into EditProfileController.
-2020/09/15 16:03:19.650 [TRACE] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:45 | End EditProfileController Constructor.
-2020/09/15 16:03:19.650 [TRACE] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:64 | Start Index
-2020/09/15 16:03:19.674 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:71 | Get user by ID.
-2020/09/15 16:03:19.683 [TRACE] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:74 | End Index
-2020/09/15 16:03:30.364 [DEBUG] [UMS.Data.AuthDbContext]  editProfile:EditProfile:AuthDbContext.cs:27 | Auth Database Context.
-2020/09/15 16:03:30.364 [DEBUG] [UMS.Models.EditProfileContext] [ee@hotmail.com] editProfile:EditProfile:EditProfileContext.cs:23 | Edit Profile Context.
-2020/09/15 16:03:30.378 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] editProfile:EditProfile:EditProfileController.cs:40 | NLog injected into EditProfileController.
-2020/09/15 16:03:30.378 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] editProfile:EditProfile:EditProfileController.cs:42 | Edit Profile Context injected into EditProfileController.
-2020/09/15 16:03:30.378 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] editProfile:EditProfile:EditProfileController.cs:44 | Sign In Manager injected into EditProfileController.
-2020/09/15 16:03:30.378 [TRACE] [UMS.Controllers.EditProfileController] [ee@hotmail.com] editProfile:EditProfile:EditProfileController.cs:45 | End EditProfileController Constructor.
-2020/09/15 16:03:30.378 [TRACE] [UMS.Controllers.EditProfileController] [ee@hotmail.com] editProfile:EditProfile:EditProfileController.cs:97 | Start Edit Profile.
-2020/09/15 16:03:30.396 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] editProfile:EditProfile:EditProfileController.cs:98 | Getting value from httpcontext request.
-2020/09/15 16:03:30.396 [TRACE] [UMS.Controllers.EditProfileController] [ee@hotmail.com] editProfile:EditProfile:EditProfileController.cs:107 | Check regular expression.
-2020/09/15 16:03:30.422 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] editProfile:EditProfile:EditProfileController.cs:158 | Update name's user.
-2020/09/15 16:03:30.429 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] editProfile:EditProfile:EditProfileController.cs:165 | Save changes: Check update user.
-2020/09/15 16:03:30.429 [TRACE] [UMS.Controllers.EditProfileController] [ee@hotmail.com] editProfile:EditProfile:EditProfileController.cs:166 | Query succeeded.
-2020/09/15 16:03:30.429 [TRACE] [UMS.Controllers.EditProfileController] [ee@hotmail.com] editProfile:EditProfile:EditProfileController.cs:177 | End Edit Profile.
-2020/09/15 16:03:30.467 [DEBUG] [UMS.Data.AuthDbContext]  Index:EditProfile:AuthDbContext.cs:27 | Auth Database Context.
-2020/09/15 16:03:30.467 [DEBUG] [UMS.Models.EditProfileContext] [ee@hotmail.com] Index:EditProfile:EditProfileContext.cs:23 | Edit Profile Context.
-2020/09/15 16:03:30.472 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:40 | NLog injected into EditProfileController.
-2020/09/15 16:03:30.472 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:42 | Edit Profile Context injected into EditProfileController.
-2020/09/15 16:03:30.472 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:44 | Sign In Manager injected into EditProfileController.
-2020/09/15 16:03:30.472 [TRACE] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:45 | End EditProfileController Constructor.
-2020/09/15 16:03:30.472 [TRACE] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:64 | Start Index
-2020/09/15 16:03:30.489 [DEBUG] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:71 | Get user by ID.
-2020/09/15 16:03:30.489 [TRACE] [UMS.Controllers.EditProfileController] [ee@hotmail.com] Index:EditProfile:EditProfileController.cs:74 | End Index
+2020/09/15 17:15:02.081 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/15 17:15:09.920 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/15 17:15:09.966 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/15 17:15:10.005 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Wannapa\source\repos\ums\UMS
+2020/09/15 17:15:11.023 [DEBUG] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Auth Database Context.
+2020/09/15 17:15:11.072 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/15 17:15:11.118 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:81 | Start log in on get.
+2020/09/15 17:15:11.118 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:94 | Signing out.
+2020/09/15 17:15:11.133 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:96 | Getting external authentication scheme.
+2020/09/15 17:15:11.133 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:99 | End log in on get.
+2020/09/15 17:15:15.091 [DEBUG] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Auth Database Context.
+2020/09/15 17:15:15.104 [DEBUG] [EmailService.EmailSender]  EmailSender.cs:35 | Email sender.
+2020/09/15 17:15:15.124 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:38 | Forgot Password model.
+2020/09/15 17:15:17.101 [DEBUG] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Auth Database Context.
+2020/09/15 17:15:17.114 [DEBUG] [EmailService.EmailSender]  EmailSender.cs:35 | Email sender.
+2020/09/15 17:15:17.114 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:38 | Forgot Password model.
+2020/09/15 17:15:17.157 [TRACE] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:65 | Start forgot password on post.
+2020/09/15 17:15:20.852 [TRACE] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:69 | Finding user.
+2020/09/15 17:15:20.887 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:77 | Generating code.
+2020/09/15 17:15:21.069 [TRACE] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:108 | Sending email.
+2020/09/15 17:15:21.515 [TRACE] [EmailService.EmailSender]  EmailSender.cs:64 | Creating message.
+2020/09/15 17:15:21.522 [TRACE] [EmailService.EmailSender]  EmailSender.cs:111 | Email Sender: Sending email (Async).
+2020/09/15 17:15:21.607 [TRACE] [EmailService.EmailSender]  EmailSender.cs:127 | Email Sender: Start Sending email (Async).
+2020/09/15 17:15:26.071 [TRACE] [EmailService.EmailSender]  EmailSender.cs:133 | Email Sender: End Sending email (Async).
+2020/09/15 17:15:26.350 [TRACE] [EmailService.EmailSender]  EmailSender.cs:144 | Email Sender: End Sending email (Async).
+2020/09/15 17:15:26.350 [TRACE] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:110 | End forgot password on post.
+2020/09/15 17:15:26.399 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordConfirmation]  ForgotPasswordConfirmation.cshtml.cs:25 | Forgot Password Confirmation.
+2020/09/15 17:15:26.399 [TRACE] [UMS.Areas.Identity.Pages.Account.ForgotPasswordConfirmation]  ForgotPasswordConfirmation.cshtml.cs:32 | Forgot Password Confirmation On get.
+2020/09/15 17:15:44.229 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordConfirmation]  ForgotPasswordConfirmation.cshtml.cs:25 | Forgot Password Confirmation.
+2020/09/15 17:15:44.229 [TRACE] [UMS.Areas.Identity.Pages.Account.ForgotPasswordConfirmation]  ForgotPasswordConfirmation.cshtml.cs:41 | Forgot Password Confirmation On post.
+2020/09/15 17:15:44.263 [DEBUG] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Auth Database Context.
+2020/09/15 17:15:44.263 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/15 17:15:44.278 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:81 | Start log in on get.
+2020/09/15 17:15:44.278 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:94 | Signing out.
+2020/09/15 17:15:44.286 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:96 | Getting external authentication scheme.
+2020/09/15 17:15:44.286 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:99 | End log in on get.
+2020/09/15 17:15:56.083 [DEBUG] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Auth Database Context.
+2020/09/15 17:15:56.083 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:30 | Reset password model.
+2020/09/15 17:15:56.103 [TRACE] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:70 | Start reset password on get.
+2020/09/15 17:15:56.111 [TRACE] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:82 | Encoding to input model.
+2020/09/15 17:15:56.111 [TRACE] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:83 | End reset password on get.
+2020/09/15 17:16:14.993 [DEBUG] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Auth Database Context.
+2020/09/15 17:16:14.993 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:30 | Reset password model.
+2020/09/15 17:16:15.026 [TRACE] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:105 | Start reset password on post.
+2020/09/15 17:16:15.045 [TRACE] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:112 | Finding by email.
+2020/09/15 17:16:15.125 [TRACE] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:121 | Resetign password.
+2020/09/15 17:16:15.718 [INFO] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:126 | User reseted password.
+2020/09/15 17:16:15.774 [TRACE] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:127 | End reset password on post.
+2020/09/15 17:16:15.790 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordConfirmationModel]  ResetPasswordConfirmation.cshtml.cs:26 | Reset Password Confirmation model.
+2020/09/15 17:16:15.790 [TRACE] [UMS.Areas.Identity.Pages.Account.ResetPasswordConfirmationModel]  ResetPasswordConfirmation.cshtml.cs:35 | Reset Password Confirmation on get.
+2020/09/15 17:16:22.385 [DEBUG] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Auth Database Context.
+2020/09/15 17:16:22.400 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/15 17:16:22.400 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:81 | Start log in on get.
+2020/09/15 17:16:22.411 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:94 | Signing out.
+2020/09/15 17:16:22.411 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:96 | Getting external authentication scheme.
+2020/09/15 17:16:22.424 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:99 | End log in on get.
