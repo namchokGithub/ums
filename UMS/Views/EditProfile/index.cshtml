@@ -53,6 +53,7 @@
 
                 <!--Start Button save password-->
                 <button id="btn_SavePassword" type="button" class="btn btn-success btn-block d-none" onclick="SavePassword()">Save</button>
+                <button id="btn_NotSavePassword" type="button" class="btn btn-secondary btn-block d-none">Back</button>
                 <!--End Button save password-->
 
                 <!--End Input edit profile-->
@@ -178,7 +179,18 @@
             $("#acc_NewPassword").removeClass('d-none');
             $("#acc_ConfirmPassword").removeClass('d-none');
             $("#btn_SavePassword").removeClass('d-none');
+            $("#btn_NotSavePassword").removeClass('d-none');
         });
+
+        $('#btn_NotSavePassword').on('click', () => {
+            $("#href_ChangePassword").show();
+            $("#btn_SaveProfile").show();
+            $("#btn_NotSavePassword").addClass('d-none');
+            $("#acc_CurrentPassword").addClass('d-none');
+            $("#acc_NewPassword").addClass('d-none');
+            $("#acc_ConfirmPassword").addClass('d-none');
+            $("#btn_SavePassword").addClass('d-none');
+        })
 
         //Validation for acc_Firstname
         $("#acc_Firstname").keyup(function (e) {
