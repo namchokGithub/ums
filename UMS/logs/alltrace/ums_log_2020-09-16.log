@@ -1,0 +1,297 @@
+############################################## User Management System log ##############################################
+2020/09/16 00:25:00.187 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/16 00:25:00.560 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:76 | Creating applications user models.
+2020/09/16 00:25:00.560 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:84 | Creating Identity models.
+2020/09/16 00:25:00.576 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:108 | Creating log models.
+2020/09/16 00:25:00.576 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:110 | End creating on model.
+2020/09/16 00:25:01.075 [ERROR] [Microsoft.EntityFrameworkCore.Database.Command]   | Failed executing DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Account] (
+    [acc_Id] nvarchar(450) NOT NULL,
+    [acc_User] nvarchar(256) NULL,
+    [acc_NormalizedUserName] nvarchar(256) NULL,
+    [acc_Email] nvarchar(256) NULL,
+    [acc_NormalizedEmail] nvarchar(256) NULL,
+    [acc_PasswordHash] nvarchar(max) NULL,
+    [acc_SecurityStamp] nvarchar(max) NULL,
+    [acc_ConcurrencyStamp] nvarchar(max) NULL,
+    [acc_Firstname] nvarchar(256) NULL,
+    [acc_Lastname] nvarchar(256) NULL,
+    [acc_IsActive] char(10) NOT NULL,
+    CONSTRAINT [PK_Account] PRIMARY KEY ([acc_Id])
+);
+DECLARE @defaultSchema AS sysname;
+SET @defaultSchema = SCHEMA_NAME();
+EXEC sp_addextendedproperty 'MS_Description', N'User ID', 'SCHEMA', @defaultSchema, 'TABLE', N'Account', 'COLUMN', N'acc_Id';
+EXEC sp_addextendedproperty 'MS_Description', N'Username', 'SCHEMA', @defaultSchema, 'TABLE', N'Account', 'COLUMN', N'acc_User';
+EXEC sp_addextendedproperty 'MS_Description', N'Normalized UserName', 'SCHEMA', @defaultSchema, 'TABLE', N'Account', 'COLUMN', N'acc_NormalizedUserName';
+EXEC sp_addextendedproperty 'MS_Description', N'User email', 'SCHEMA', @defaultSchema, 'TABLE', N'Account', 'COLUMN', N'acc_Email';
+EXEC sp_addextendedproperty 'MS_Description', N'Normalized user email', 'SCHEMA', @defaultSchema, 'TABLE', N'Account', 'COLUMN', N'acc_NormalizedEmail';
+EXEC sp_addextendedproperty 'MS_Description', N'Password hash', 'SCHEMA', @defaultSchema, 'TABLE', N'Account', 'COLUMN', N'acc_PasswordHash';
+EXEC sp_addextendedproperty 'MS_Description', N'Security Stamp', 'SCHEMA', @defaultSchema, 'TABLE', N'Account', 'COLUMN', N'acc_SecurityStamp';
+EXEC sp_addextendedproperty 'MS_Description', N'Concurrency Stamp', 'SCHEMA', @defaultSchema, 'TABLE', N'Account', 'COLUMN', N'acc_ConcurrencyStamp';
+EXEC sp_addextendedproperty 'MS_Description', N'Firstname', 'SCHEMA', @defaultSchema, 'TABLE', N'Account', 'COLUMN', N'acc_Firstname';
+EXEC sp_addextendedproperty 'MS_Description', N'Lastname', 'SCHEMA', @defaultSchema, 'TABLE', N'Account', 'COLUMN', N'acc_Lastname';
+EXEC sp_addextendedproperty 'MS_Description', N'Status of account', 'SCHEMA', @defaultSchema, 'TABLE', N'Account', 'COLUMN', N'acc_IsActive';
+2020/09/16 00:25:39.412 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/16 00:25:39.804 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:76 | Creating applications user models.
+2020/09/16 00:25:39.804 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:84 | Creating Identity models.
+2020/09/16 00:25:39.804 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:108 | Creating log models.
+2020/09/16 00:25:39.804 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:110 | End creating on model.
+2020/09/16 00:25:50.657 [ERROR] [Microsoft.EntityFrameworkCore.Database.Command]   | Failed executing DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+-- =============================================
+                        -- Author:		Namchok Singhachai
+                        -- Create date: 2020-09-14
+                        -- Description:	Search log by text or date
+                        -- =============================================
+                        ALTER PROCEDURE ums_Search_log
+                            @param_dateFirst Date,
+                            @param_dateEnd Date,
+                            @param_text NVARCHAR(MAX)
+                        AS
+                        BEGIN
+                            IF @param_text = '' OR @param_text = null 
+                                SELECT
+                                    [dbo].[Logs].[log_Id]
+                                    , [dbo].[Logs].[log_datetime]
+                                    , CONVERT(VARCHAR(10), [dbo].[Logs].[log_datetime], 111) AS [log_date]
+                                    , CONVERT(VARCHAR(10), CAST([dbo].[Logs].[log_datetime] AS TIME	), 0) AS [log_time]
+                                    , [dbo].[Logs].[log_level]
+                                    , [dbo].[Logs].[log_logger]
+                                    , CONCAT([dbo].[Logs].[log_message], ' ', [dbo].[Logs].[log_exception]) AS [log_message]
+                                    , [dbo].[Logs].[log_exception]
+                                    , [dbo].[Logs].[log_user_identity]
+                                    , [dbo].[Logs].[log_mvc_action]
+                                    , [dbo].[Logs].[log_filename]
+                                    , [dbo].[Logs].[log_linenumber]
+                                FROM [dbo].[Logs]
+                                WHERE 
+                                    CONVERT(date, [dbo].[Logs].[log_datetime], 121) BETWEEN CONVERT(date, @param_dateFirst, 121) AND CONVERT(date, @param_dateEnd, 121)
+                                ORDER BY [dbo].[Logs].[log_Id] DESC
+                            ELSE IF @param_dateFirst = '' OR @param_dateEnd = ''
+                                SELECT
+                                    [dbo].[Logs].[log_Id]
+                                    , [dbo].[Logs].[log_datetime]
+                                    , CONVERT(VARCHAR(10), [dbo].[Logs].[log_datetime], 111) AS [log_date]
+                                    , CONVERT(VARCHAR(10), CAST([dbo].[Logs].[log_datetime] AS TIME	), 0) AS [log_time]
+                                    , [dbo].[Logs].[log_level]
+                                    , [dbo].[Logs].[log_logger]
+                                    , CONCAT([dbo].[Logs].[log_message], ' ', [dbo].[Logs].[log_exception]) AS [log_message]
+                                    , [dbo].[Logs].[log_exception]
+                                    , [dbo].[Logs].[log_user_identity]
+                                    , [dbo].[Logs].[log_mvc_action]
+                                    , [dbo].[Logs].[log_filename]
+                                    , [dbo].[Logs].[log_linenumber]
+                                FROM [dbo].[Logs]
+                                WHERE 
+                                    [log_message] LIKE '%'+@param_text+'%'
+                                ORDER BY [dbo].[Logs].[log_Id] DESC
+                            ELSE 
+                                SELECT
+                                    [dbo].[Logs].[log_Id]
+                                    , [dbo].[Logs].[log_datetime]
+                                    , CONVERT(VARCHAR(10), [dbo].[Logs].[log_datetime], 111) AS [log_date]
+                                    , CONVERT(VARCHAR(10), CAST([dbo].[Logs].[log_datetime] AS TIME	), 0) AS [log_time]
+                                    , [dbo].[Logs].[log_level]
+                                    , [dbo].[Logs].[log_logger]
+                                    , CONCAT([dbo].[Logs].[log_message], ' ', [dbo].[Logs].[log_exception]) AS [log_message]
+                                    , [dbo].[Logs].[log_exception]
+                                    , [dbo].[Logs].[log_user_identity]
+                                    , [dbo].[Logs].[log_mvc_action]
+                                    , [dbo].[Logs].[log_filename]
+                                    , [dbo].[Logs].[log_linenumber]
+                                FROM [dbo].[Logs]
+                                WHERE 
+                                    [log_message] LIKE '%'+@param_text+'%' OR [log_message] LIKE @param_text+'%' OR [log_message] LIKE '%'+@param_text
+                                    AND CONVERT(date, [dbo].[Logs].[log_datetime], 121) BETWEEN CONVERT(date, @param_dateFirst, 121) AND CONVERT(date, @param_dateEnd, 121)
+                                ORDER BY [dbo].[Logs].[log_Id] DESC
+                        END
+2020/09/16 00:28:53.464 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/16 00:28:53.805 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:76 | Creating applications user models.
+2020/09/16 00:28:53.805 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:84 | Creating Identity models.
+2020/09/16 00:28:53.805 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:108 | Creating log models.
+2020/09/16 00:28:53.805 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:110 | End creating on model.
+2020/09/16 00:29:04.583 [ERROR] [Microsoft.EntityFrameworkCore.Database.Command]   | Failed executing DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+-- =============================================
+                        -- Author:		Namchok Singhachai
+                        -- Create date: 2020-09-14
+                        -- Description:	Search log by text or date
+                        -- =============================================
+                        ALTER PROCEDURE ums_Search_log
+                            @param_dateFirst Date,
+                            @param_dateEnd Date,
+                            @param_text NVARCHAR(MAX)
+                        AS
+                        BEGIN
+                            IF @param_text = '' OR @param_text = null 
+                                SELECT
+                                    [dbo].[Logs].[log_Id]
+                                    , [dbo].[Logs].[log_datetime]
+                                    , CONVERT(VARCHAR(10), [dbo].[Logs].[log_datetime], 111) AS [log_date]
+                                    , CONVERT(VARCHAR(10), CAST([dbo].[Logs].[log_datetime] AS TIME	), 0) AS [log_time]
+                                    , [dbo].[Logs].[log_level]
+                                    , [dbo].[Logs].[log_logger]
+                                    , CONCAT([dbo].[Logs].[log_message], ' ', [dbo].[Logs].[log_exception]) AS [log_message]
+                                    , [dbo].[Logs].[log_exception]
+                                    , [dbo].[Logs].[log_user_identity]
+                                    , [dbo].[Logs].[log_mvc_action]
+                                    , [dbo].[Logs].[log_filename]
+                                    , [dbo].[Logs].[log_linenumber]
+                                FROM [dbo].[Logs]
+                                WHERE 
+                                    CONVERT(date, [dbo].[Logs].[log_datetime], 121) BETWEEN CONVERT(date, @param_dateFirst, 121) AND CONVERT(date, @param_dateEnd, 121)
+                                ORDER BY [dbo].[Logs].[log_Id] DESC
+                            ELSE IF @param_dateFirst = '' OR @param_dateEnd = ''
+                                SELECT
+                                    [dbo].[Logs].[log_Id]
+                                    , [dbo].[Logs].[log_datetime]
+                                    , CONVERT(VARCHAR(10), [dbo].[Logs].[log_datetime], 111) AS [log_date]
+                                    , CONVERT(VARCHAR(10), CAST([dbo].[Logs].[log_datetime] AS TIME	), 0) AS [log_time]
+                                    , [dbo].[Logs].[log_level]
+                                    , [dbo].[Logs].[log_logger]
+                                    , CONCAT([dbo].[Logs].[log_message], ' ', [dbo].[Logs].[log_exception]) AS [log_message]
+                                    , [dbo].[Logs].[log_exception]
+                                    , [dbo].[Logs].[log_user_identity]
+                                    , [dbo].[Logs].[log_mvc_action]
+                                    , [dbo].[Logs].[log_filename]
+                                    , [dbo].[Logs].[log_linenumber]
+                                FROM [dbo].[Logs]
+                                WHERE 
+                                    [log_message] LIKE '%'+@param_text+'%'
+                                ORDER BY [dbo].[Logs].[log_Id] DESC
+                            ELSE 
+                                SELECT
+                                    [dbo].[Logs].[log_Id]
+                                    , [dbo].[Logs].[log_datetime]
+                                    , CONVERT(VARCHAR(10), [dbo].[Logs].[log_datetime], 111) AS [log_date]
+                                    , CONVERT(VARCHAR(10), CAST([dbo].[Logs].[log_datetime] AS TIME	), 0) AS [log_time]
+                                    , [dbo].[Logs].[log_level]
+                                    , [dbo].[Logs].[log_logger]
+                                    , CONCAT([dbo].[Logs].[log_message], ' ', [dbo].[Logs].[log_exception]) AS [log_message]
+                                    , [dbo].[Logs].[log_exception]
+                                    , [dbo].[Logs].[log_user_identity]
+                                    , [dbo].[Logs].[log_mvc_action]
+                                    , [dbo].[Logs].[log_filename]
+                                    , [dbo].[Logs].[log_linenumber]
+                                FROM [dbo].[Logs]
+                                WHERE 
+                                    [log_message] LIKE '%'+@param_text+'%' OR [log_message] LIKE @param_text+'%' OR [log_message] LIKE '%'+@param_text
+                                    AND CONVERT(date, [dbo].[Logs].[log_datetime], 121) BETWEEN CONVERT(date, @param_dateFirst, 121) AND CONVERT(date, @param_dateEnd, 121)
+                                ORDER BY [dbo].[Logs].[log_Id] DESC
+                        END
+2020/09/16 00:30:32.251 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/16 00:30:32.593 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:76 | Creating applications user models.
+2020/09/16 00:30:32.593 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:84 | Creating Identity models.
+2020/09/16 00:30:32.604 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:108 | Creating log models.
+2020/09/16 00:30:32.604 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:110 | End creating on model.
+2020/09/16 00:30:43.350 [ERROR] [Microsoft.EntityFrameworkCore.Database.Command]   | Failed executing DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [dbo].[UserRoles] ([UserId] ,[RoleId])
+                            VALUES ('adminidtempfortestsystem2020', 1)
+2020/09/16 00:32:22.730 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/16 00:32:23.073 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:76 | Creating applications user models.
+2020/09/16 00:32:23.073 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:84 | Creating Identity models.
+2020/09/16 00:32:23.073 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:108 | Creating log models.
+2020/09/16 00:32:23.085 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:110 | End creating on model.
+2020/09/16 00:32:33.865 [ERROR] [Microsoft.EntityFrameworkCore.Database.Command]   | Failed executing DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [dbo].[Account] ([acc_Id] ,[acc_User] ,[acc_NormalizedUserName] ,[acc_Email] ,[acc_NormalizedEmail] ,[acc_PasswordHash] ,[acc_SecurityStamp] 
+                            ,[acc_ConcurrencyStamp], [acc_Firstname], [acc_Lastname] ,[acc_IsActive]) VALUES ('adminidtempfortestsystem2020' , 'usermanagement2020@gmail.com', 'USERMANAGEMENT2020@GMAIL.com' , 'usermanagement2020@gmail.com', 'USERMANAGEMENT2020@GMAIL.com' , 'AQAAAAEAACcQAAAAEKuboZS9XFQZJ2w6n+Iv/h9lNb/SKUH1AtUwrzPleRfBClrIUQsfNYQCChpGx6MoDQ==' ,'OWWI2VTYV564YBQIUK3PI75QL7DA6NPJ' , 'dc294a4b-8d8a-49b0-8966-e23ff87778b0' , 'Namchok' , 'Singhachai' , 'Y'
+2020/09/16 00:35:19.648 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/16 00:35:19.987 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:76 | Creating applications user models.
+2020/09/16 00:35:19.987 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:84 | Creating Identity models.
+2020/09/16 00:35:19.999 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:108 | Creating log models.
+2020/09/16 00:35:19.999 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:110 | End creating on model.
+2020/09/16 00:36:07.756 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/16 00:36:08.818 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 00:36:09.039 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/16 00:36:09.093 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 00:36:09.093 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 00:36:09.404 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:76 | Creating applications user models.
+2020/09/16 00:36:09.404 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:84 | Creating Identity models.
+2020/09/16 00:36:09.417 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:108 | Creating log models.
+2020/09/16 00:36:09.417 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:110 | End creating on model.
+2020/09/16 00:36:10.195 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/16 00:36:10.195 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/16 00:36:10.219 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:81 | Start log in on get.
+2020/09/16 00:36:10.219 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:94 | Signing out.
+2020/09/16 00:36:10.219 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:96 | Getting external authentication scheme.
+2020/09/16 00:36:10.229 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:99 | End log in on get.
+2020/09/16 00:36:13.901 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/16 00:36:13.901 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Log in model.
+2020/09/16 00:36:13.925 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:119 | Start log in on post.
+2020/09/16 00:36:14.147 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:129 | User logged in.
+2020/09/16 00:36:14.147 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:130 | End log in on post.
+2020/09/16 00:36:14.166 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/16 00:36:14.166 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/16 00:36:14.166 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/16 00:36:14.166 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/16 00:36:14.180 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/16 00:36:14.180 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/16 00:36:14.180 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/16 00:36:14.180 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:69 | End Index.
+2020/09/16 00:36:16.389 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/16 00:36:16.403 [TRACE] [UMS.Models.LogsContext] [usermanagement2020@gmail.com] Index:LogsContext.cs:24 | Start Edit Profile Context.
+2020/09/16 00:36:16.403 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:37 | Logs Context injected into LogsController.
+2020/09/16 00:36:16.403 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:38 | Start LogsControllerl.
+2020/09/16 00:36:18.512 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:56 | Start Index.
+2020/09/16 00:36:18.512 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:58 | Find ID from first value.
+2020/09/16 00:36:18.512 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:64 | Getting top 100 from all logs.
+2020/09/16 00:36:18.553 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:68 | End Index.
+2020/09/16 00:36:23.266 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/16 00:36:23.266 [TRACE] [UMS.Models.LogsContext] [usermanagement2020@gmail.com] Index:LogsContext.cs:24 | Start Edit Profile Context.
+2020/09/16 00:36:23.272 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:37 | Logs Context injected into LogsController.
+2020/09/16 00:36:23.272 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:38 | Start LogsControllerl.
+2020/09/16 00:36:25.405 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:56 | Start Index.
+2020/09/16 00:36:25.405 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:58 | Find ID from first value.
+2020/09/16 00:36:25.405 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:64 | Getting top 100 from all logs.
+2020/09/16 00:36:25.415 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:68 | End Index.
+2020/09/16 00:37:49.317 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/16 00:37:50.654 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 00:37:50.860 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 00:37:50.866 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 00:37:50.866 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 00:37:51.700 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/16 00:37:51.738 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/16 00:37:51.738 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/16 00:37:51.743 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/16 00:37:51.743 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/16 00:37:51.743 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/16 00:37:51.756 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/16 00:37:51.756 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:69 | End Index.
+2020/09/16 00:37:53.275 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/16 00:37:53.292 [TRACE] [UMS.Models.LogsContext] [usermanagement2020@gmail.com] Index:LogsContext.cs:24 | Start Edit Profile Context.
+2020/09/16 00:37:53.292 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:37 | Logs Context injected into LogsController.
+2020/09/16 00:37:53.292 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:38 | Start LogsControllerl.
+2020/09/16 00:37:54.888 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:56 | Start Index.
+2020/09/16 00:37:54.888 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:58 | Find ID from first value.
+2020/09/16 00:37:54.888 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:64 | Getting top 100 from all logs.
+2020/09/16 00:37:55.592 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:68 | End Index.
+2020/09/16 00:41:16.854 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/16 00:41:17.910 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 00:41:18.115 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 00:41:18.120 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 00:41:18.120 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 00:41:18.549 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/16 00:41:18.584 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/16 00:41:18.588 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/16 00:41:18.588 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/16 00:41:18.588 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/16 00:41:18.588 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/16 00:41:18.588 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/16 00:41:18.601 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:69 | End Index.
+2020/09/16 00:41:20.249 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/16 00:41:20.261 [TRACE] [UMS.Models.LogsContext] [usermanagement2020@gmail.com] Index:LogsContext.cs:24 | Start Edit Profile Context.
+2020/09/16 00:41:20.261 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:37 | Logs Context injected into LogsController.
+2020/09/16 00:41:20.261 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:38 | Start LogsControllerl.
+2020/09/16 00:41:20.261 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:56 | Start Index.
+2020/09/16 00:41:20.261 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:58 | Find ID from first value.
+2020/09/16 00:41:20.261 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:64 | Getting top 100 from all logs.
+2020/09/16 00:41:21.020 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:68 | End Index.
+2020/09/16 00:41:35.310 [TRACE] [UMS.Data.AuthDbContext]  Search:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/16 00:41:35.331 [TRACE] [UMS.Models.LogsContext] [usermanagement2020@gmail.com] Search:LogsContext.cs:24 | Start Edit Profile Context.
+2020/09/16 00:41:35.331 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:37 | Logs Context injected into LogsController.
+2020/09/16 00:41:35.335 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:38 | Start LogsControllerl.
+2020/09/16 00:41:35.357 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:88 | Start searching logs.
+2020/09/16 00:41:35.357 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:91 | Input Date Input: 09/15/2020 12:00 AM - 09/15/2020 11:00 PM
+2020/09/16 00:41:35.357 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:92 | Input Message: -
+2020/09/16 00:41:35.368 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:95 | Set dete from dateIinput.
+2020/09/16 00:41:35.368 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:104 | Getting log by 09/15/2020 12:00 AM - 09/15/2020 11:00 PM.
+2020/09/16 00:41:35.413 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:107 | End searching logs.

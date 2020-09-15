@@ -64,7 +64,7 @@ namespace UMS.Controllers
                 _logger.LogDebug($"Getting top {numofrow} from all logs.");
                 var item = _logsContext.Logs.FromSqlRaw(sqlGetallLog).ToList<Logs>();
                 ViewData["Logs"] = item ?? throw new Exception("Calling a method on a null object reference."); // Set result to view and check null value
-                ViewData["INFO"] = @$"toastr.info('Select lasted logs top {item.Count}.');"; // Message for result query
+                ViewData["INFO"] = @$"toastr.info('Select lasted logs.');"; // Message for result query
                 _logger.LogTrace("End Index.");
                 return View();
             }

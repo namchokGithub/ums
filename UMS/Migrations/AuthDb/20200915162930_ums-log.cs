@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace UMS.Migrations.Auth
+namespace UMS.Migrations.AuthDb
 {
-    public partial class ums_log : Migration
+    public partial class umslog : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -207,6 +207,7 @@ namespace UMS.Migrations.Auth
                 name: "IX_UserRoles_RoleId",
                 table: "UserRoles",
                 column: "RoleId");
+
             var ums_Check_User = @"-- =============================================
                                     -- Author: Namchok Singhachai
                                     --Create date: 2020 - 09 - 03
@@ -455,16 +456,16 @@ namespace UMS.Migrations.Auth
                         END
                         GO
                         ";
-            var ums_Get_all_log = @"
-                        -- =============================================
+            var ums_Get_all_log = @"-- =============================================
                         -- Author:		Namchok Singhachai
                         -- Create date: 2020-09-11
-                        -- Description:	Get all log top 50
+                        -- Description:	Get all log top ?
                         -- =============================================
                         CREATE PROCEDURE ums_Get_all_log
+                            @param_num int
                         AS
                         BEGIN
-                            SELECT TOP 50
+                            SELECT TOP (@param_num)
                                 [dbo].[Logs].[log_Id]
                                 , [dbo].[Logs].[log_datetime]
                                 , CONVERT(VARCHAR(10), [dbo].[Logs].[log_datetime], 111) AS [log_date]
@@ -494,27 +495,63 @@ namespace UMS.Migrations.Auth
                             @param_text NVARCHAR(MAX)
                         AS
                         BEGIN
-                            SELECT
-                                [dbo].[Logs].[log_Id]
-                                , [dbo].[Logs].[log_datetime]
-                                , CONVERT(VARCHAR(10), [dbo].[Logs].[log_datetime], 111) AS [log_date]
-                                , CONVERT(VARCHAR(10), CAST([dbo].[Logs].[log_datetime] AS TIME	), 0) AS [log_time]
-                                , [dbo].[Logs].[log_level]
-                                , [dbo].[Logs].[log_logger]
-                                , CONCAT([dbo].[Logs].[log_message], ' ', [dbo].[Logs].[log_exception]) AS [log_message]
-                                , [dbo].[Logs].[log_exception]
-                                , [dbo].[Logs].[log_user_identity]
-                                , [dbo].[Logs].[log_mvc_action]
-                                , [dbo].[Logs].[log_filename]
-                                , [dbo].[Logs].[log_linenumber]
-                            FROM [dbo].[Logs]
-                            WHERE [dbo].[Logs].[log_message] LIKE '%'+@param_text+'%'
-                                OR [dbo].[Logs].[log_exception] LIKE '%'+@param_text+'%'
-                                OR CONVERT(datetime, [dbo].[Logs].[log_datetime], 112) BETWEEN @param_dateFirst AND @param_dateEnd
-                            ORDER BY [dbo].[Logs].[log_Id] DESC
+                            IF @param_text = '' OR @param_text = null 
+                                SELECT
+                                    [dbo].[Logs].[log_Id]
+                                    , [dbo].[Logs].[log_datetime]
+                                    , CONVERT(VARCHAR(10), [dbo].[Logs].[log_datetime], 111) AS [log_date]
+                                    , CONVERT(VARCHAR(10), CAST([dbo].[Logs].[log_datetime] AS TIME	), 0) AS [log_time]
+                                    , [dbo].[Logs].[log_level]
+                                    , [dbo].[Logs].[log_logger]
+                                    , CONCAT([dbo].[Logs].[log_message], ' ', [dbo].[Logs].[log_exception]) AS [log_message]
+                                    , [dbo].[Logs].[log_exception]
+                                    , [dbo].[Logs].[log_user_identity]
+                                    , [dbo].[Logs].[log_mvc_action]
+                                    , [dbo].[Logs].[log_filename]
+                                    , [dbo].[Logs].[log_linenumber]
+                                FROM [dbo].[Logs]
+                                WHERE 
+                                    CONVERT(date, [dbo].[Logs].[log_datetime], 121) BETWEEN CONVERT(date, @param_dateFirst, 121) AND CONVERT(date, @param_dateEnd, 121)
+                                ORDER BY [dbo].[Logs].[log_Id] DESC
+                            ELSE IF @param_dateFirst = '' OR @param_dateEnd = ''
+                                SELECT
+                                    [dbo].[Logs].[log_Id]
+                                    , [dbo].[Logs].[log_datetime]
+                                    , CONVERT(VARCHAR(10), [dbo].[Logs].[log_datetime], 111) AS [log_date]
+                                    , CONVERT(VARCHAR(10), CAST([dbo].[Logs].[log_datetime] AS TIME	), 0) AS [log_time]
+                                    , [dbo].[Logs].[log_level]
+                                    , [dbo].[Logs].[log_logger]
+                                    , CONCAT([dbo].[Logs].[log_message], ' ', [dbo].[Logs].[log_exception]) AS [log_message]
+                                    , [dbo].[Logs].[log_exception]
+                                    , [dbo].[Logs].[log_user_identity]
+                                    , [dbo].[Logs].[log_mvc_action]
+                                    , [dbo].[Logs].[log_filename]
+                                    , [dbo].[Logs].[log_linenumber]
+                                FROM [dbo].[Logs]
+                                WHERE 
+                                    [log_message] LIKE '%'+@param_text+'%'
+                                ORDER BY [dbo].[Logs].[log_Id] DESC
+                            ELSE 
+                                SELECT
+                                    [dbo].[Logs].[log_Id]
+                                    , [dbo].[Logs].[log_datetime]
+                                    , CONVERT(VARCHAR(10), [dbo].[Logs].[log_datetime], 111) AS [log_date]
+                                    , CONVERT(VARCHAR(10), CAST([dbo].[Logs].[log_datetime] AS TIME	), 0) AS [log_time]
+                                    , [dbo].[Logs].[log_level]
+                                    , [dbo].[Logs].[log_logger]
+                                    , CONCAT([dbo].[Logs].[log_message], ' ', [dbo].[Logs].[log_exception]) AS [log_message]
+                                    , [dbo].[Logs].[log_exception]
+                                    , [dbo].[Logs].[log_user_identity]
+                                    , [dbo].[Logs].[log_mvc_action]
+                                    , [dbo].[Logs].[log_filename]
+                                    , [dbo].[Logs].[log_linenumber]
+                                FROM [dbo].[Logs]
+                                WHERE 
+                                    [log_message] LIKE '%'+@param_text+'%' OR [log_message] LIKE @param_text+'%' OR [log_message] LIKE '%'+@param_text
+                                    AND CONVERT(date, [dbo].[Logs].[log_datetime], 121) BETWEEN CONVERT(date, @param_dateFirst, 121) AND CONVERT(date, @param_dateEnd, 121)
+                                ORDER BY [dbo].[Logs].[log_Id] DESC
                         END
-                        GO
-                        ";
+                        GO";
 
             migrationBuilder.Sql(ums_Check_User);
             migrationBuilder.Sql(ums_deleteUser);
@@ -531,10 +568,17 @@ namespace UMS.Migrations.Auth
             migrationBuilder.Sql(ums_Search_log);
             // End create stored procedure
 
-            var insertRole = @" INSERT INTO [dbo].[Roles] ([Id], [Name], [NormalizedName])
-                            VALUES (1,'Admin','ADMIN'), (2,'User','USER')";
+            var insertRole = @"INSERT INTO [dbo].[Roles] ([Id], [Name], [NormalizedName])
+                VALUES (1,'Admin','ADMIN'), (2,'User','USER')";
+            var insertAdmin = @"INSERT INTO [dbo].[Account] ([acc_Id] ,[acc_User] ,[acc_NormalizedUserName] ,[acc_Email] ,[acc_NormalizedEmail] ,[acc_PasswordHash] ,[acc_SecurityStamp] ,[acc_ConcurrencyStamp], [acc_Firstname], [acc_Lastname] ,[acc_IsActive]) VALUES ('adminidtempfortestsystem2020' , 'usermanagement2020@gmail.com', 'USERMANAGEMENT2020@GMAIL.com' , 'usermanagement2020@gmail.com', 'USERMANAGEMENT2020@GMAIL.com' , 'AQAAAAEAACcQAAAAEKuboZS9XFQZJ2w6n+Iv/h9lNb/SKUH1AtUwrzPleRfBClrIUQsfNYQCChpGx6MoDQ==' ,'OWWI2VTYV564YBQIUK3PI75QL7DA6NPJ' , 'dc294a4b-8d8a-49b0-8966-e23ff87778b0' , 'Namchok' , 'Singhachai' , 'Y')";
+            var insertRoleAdmin = @"INSERT INTO [dbo].[UserRoles] ([UserId] ,[RoleId])
+                VALUES ('adminidtempfortestsystem2020', 1)";
+            var insertAdminProviderKey = @"INSERT INTO [dbo].[UserLogins] ([LoginProvider], [ProviderKey], [ProviderDisplayName], [UserId])
+                VALUES ('Email' , 'DHrmO6VFIqxU9hzoUBc3uJFKVE3FxmyadminproviderKey', 'Email', 'adminidtempfortestsystem2020')";
+            migrationBuilder.Sql(insertAdmin);
             migrationBuilder.Sql(insertRole);
-            // End Insert role
+            migrationBuilder.Sql(insertAdminProviderKey);
+            migrationBuilder.Sql(insertRoleAdmin);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

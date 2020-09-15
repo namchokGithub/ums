@@ -279,7 +279,7 @@ var ums_Search_log = @"-- =============================================
                         -- Create date: 2020-09-14
                         -- Description:	Search log by text or date
                         -- =============================================
-                        ALTER PROCEDURE ums_Search_log
+                        CREATE PROCEDURE ums_Search_log
                             @param_dateFirst Date,
                             @param_dateEnd Date,
                             @param_text NVARCHAR(MAX)
@@ -358,7 +358,14 @@ migrationBuilder.Sql(ums_Get_all_log);
 migrationBuilder.Sql(ums_Search_log);
 // End create stored procedure
 
-var insertRole = @" INSERT INTO [dbo].[Roles] ([Id], [Name], [NormalizedName])
-                            VALUES (1,'Admin','ADMIN'), (2,'User','USER')";
+var insertRole = @"INSERT INTO [dbo].[Roles] ([Id], [Name], [NormalizedName])
+                VALUES (1,'Admin','ADMIN'), (2,'User','USER')";
+var insertAdmin = @"INSERT INTO [dbo].[Account] ([acc_Id] ,[acc_User] ,[acc_NormalizedUserName] ,[acc_Email] ,[acc_NormalizedEmail] ,[acc_PasswordHash] ,[acc_SecurityStamp] ,[acc_ConcurrencyStamp], [acc_Firstname], [acc_Lastname] ,[acc_IsActive]) VALUES ('adminidtempfortestsystem2020' , 'usermanagement2020@gmail.com', 'USERMANAGEMENT2020@GMAIL.com' , 'usermanagement2020@gmail.com', 'USERMANAGEMENT2020@GMAIL.com' , 'AQAAAAEAACcQAAAAEKuboZS9XFQZJ2w6n+Iv/h9lNb/SKUH1AtUwrzPleRfBClrIUQsfNYQCChpGx6MoDQ==' ,'OWWI2VTYV564YBQIUK3PI75QL7DA6NPJ' , 'dc294a4b-8d8a-49b0-8966-e23ff87778b0' , 'Namchok' , 'Singhachai' , 'Y')";
+var insertRoleAdmin = @"INSERT INTO [dbo].[UserRoles] ([UserId] ,[RoleId])
+                VALUES ('adminidtempfortestsystem2020', 1)";
+var insertAdminProviderKey = @"INSERT INTO [dbo].[UserLogins] ([LoginProvider], [ProviderKey], [ProviderDisplayName], [UserId])
+                VALUES ('Email' , 'DHrmO6VFIqxU9hzoUBc3uJFKVE3FxmyadminproviderKey', 'Email', 'adminidtempfortestsystem2020')";
+migrationBuilder.Sql(insertAdmin);
 migrationBuilder.Sql(insertRole);
-// End Insert role
+migrationBuilder.Sql(insertAdminProviderKey);
+migrationBuilder.Sql(insertRoleAdmin);
