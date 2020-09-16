@@ -637,3 +637,713 @@ INSERT INTO [dbo].[Account] ([acc_Id] ,[acc_User] ,[acc_NormalizedUserName] ,[ac
 2020/09/16 02:06:25.964 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
 2020/09/16 02:06:25.964 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
 2020/09/16 02:06:35.439 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/16 09:03:58.925 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 09:03:59.191 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 09:03:59.191 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 09:03:59.204 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 09:03:59.573 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 09:03:59.601 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 09:04:10.672 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 09:04:11.715 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 09:04:11.715 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 09:04:17.344 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 09:04:17.400 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 09:04:17.400 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 09:11:36.969 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/16 09:12:46.695 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 09:12:46.925 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 09:12:46.929 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 09:12:46.929 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 09:12:47.366 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 09:12:47.396 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 09:13:43.025 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 09:13:43.025 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:57 | Register model.
+2020/09/16 09:13:43.214 [DEBUG] [UMS.Models.AccountContext]  checkUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/16 09:13:43.214 [DEBUG] [UMS.Models.EditAccountContext]  checkUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 09:13:43.844 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:268 | Check user is exist.
+2020/09/16 09:13:43.856 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:275 | Save changes: Check user is exist.
+2020/09/16 09:13:50.750 [DEBUG] [UMS.Models.AccountContext]  checkUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/16 09:13:50.750 [DEBUG] [UMS.Models.EditAccountContext]  checkUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 09:13:50.774 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:268 | Check user is exist.
+2020/09/16 09:13:50.774 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:275 | Save changes: Check user is exist.
+2020/09/16 09:13:59.747 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 09:13:59.747 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:57 | Register model.
+2020/09/16 09:14:28.020 [WARN] [Microsoft.AspNetCore.Identity.UserManager]   | User 7c28f1bf-739e-44e3-9cf9-4217008f8483 validation failed: DuplicateUserName.
+2020/09/16 09:17:13.927 [ERROR] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:172 | User name '2@gmail.com' is already taken. (DuplicateUserName). 
+2020/09/16 09:18:02.519 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/16 09:20:46.271 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 09:20:46.479 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 09:20:46.479 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 09:20:46.479 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 09:20:46.823 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 09:20:46.854 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 09:20:49.279 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 09:20:50.394 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:147 | User logged in.
+2020/09/16 09:20:50.430 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/16 09:20:51.602 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:64 | Getting top 100 from all logs.
+2020/09/16 09:21:26.711 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:64 | Getting top 100 from all logs.
+2020/09/16 09:22:19.026 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:91 | Input Date Input: 09/11/2020 12:00 AM - 09/14/2020 11:00 PM
+2020/09/16 09:22:19.026 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:92 | Input Message: Getting top 100 from all logs.
+2020/09/16 09:22:19.039 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:104 | Getting log by 09/11/2020 12:00 AM - 09/14/2020 11:00 PM or Getting top 100 from all logs..
+2020/09/16 09:23:00.975 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:64 | Getting top 100 from all logs.
+2020/09/16 09:23:17.600 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:91 | Input Date Input: 09/16/2020 12:00 AM - 09/16/2020 11:59 PM
+2020/09/16 09:23:17.600 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:92 | Input Message: -
+2020/09/16 09:23:17.600 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:104 | Getting log by 09/16/2020 12:00 AM - 09/16/2020 11:59 PM.
+2020/09/16 09:24:29.425 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 09:24:32.527 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 09:24:32.533 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 09:24:32.537 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 09:24:32.572 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/16 09:24:56.787 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:64 | Getting top 100 from all logs.
+2020/09/16 09:25:01.461 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:91 | Input Date Input: 09/16/2020 12:00 AM - 09/16/2020 11:59 PM
+2020/09/16 09:25:01.461 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:92 | Input Message: -
+2020/09/16 09:25:01.461 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:104 | Getting log by 09/16/2020 12:00 AM - 09/16/2020 11:59 PM.
+2020/09/16 10:24:54.975 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 10:24:55.187 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 10:24:55.187 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 10:24:55.196 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 10:24:56.679 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/16 10:25:00.549 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Log out model.
+2020/09/16 10:25:00.574 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:50 | User logged out.
+2020/09/16 10:25:00.621 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 10:25:00.636 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 10:25:03.821 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 10:25:03.821 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:58 | Register model.
+2020/09/16 10:25:03.971 [DEBUG] [UMS.Models.AccountContext]  checkUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/16 10:25:03.976 [DEBUG] [UMS.Models.EditAccountContext]  checkUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 10:25:04.046 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:268 | Check user is exist.
+2020/09/16 10:25:04.057 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:275 | Save changes: Check user is exist.
+2020/09/16 10:25:11.163 [DEBUG] [UMS.Models.AccountContext]  checkUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/16 10:25:11.163 [DEBUG] [UMS.Models.EditAccountContext]  checkUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 10:25:11.199 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:268 | Check user is exist.
+2020/09/16 10:25:11.199 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:275 | Save changes: Check user is exist.
+2020/09/16 10:25:15.732 [DEBUG] [UMS.Models.AccountContext]  checkUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/16 10:25:15.732 [DEBUG] [UMS.Models.EditAccountContext]  checkUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 10:25:15.775 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:268 | Check user is exist.
+2020/09/16 10:25:15.775 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:275 | Save changes: Check user is exist.
+2020/09/16 10:25:16.838 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 10:25:16.838 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:58 | Register model.
+2020/09/16 10:25:44.395 [ERROR] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:138 | Object reference not set to an instance of an object.
+2020/09/16 10:25:58.459 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/16 10:27:03.322 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 10:27:03.503 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 10:27:03.507 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 10:27:03.507 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 10:27:04.228 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 10:27:04.257 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 10:27:05.993 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]   | An unhandled exception has occurred while executing the request.System.InvalidOperationException: Unable to resolve service for type 'UMS.Areas.Identity.Data.UserManagerUMS`1[UMS.Areas.Identity.Data.ApplicationUser]' while attempting to activate 'UMS.Areas.Identity.Pages.Account.RegisterModel'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelActivatorProvider.<>c__DisplayClass1_0.<CreateActivator>b__0(PageContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelFactoryProvider.<>c__DisplayClass3_0.<CreateModelFactory>b__0(PageContext pageContext)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.CreateInstance()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/09/16 10:29:53.441 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 10:29:53.669 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 10:29:53.669 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 10:29:53.669 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 10:29:54.335 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 10:29:54.370 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 10:29:56.494 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 10:29:56.506 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]   | An unhandled exception has occurred while executing the request.System.InvalidOperationException: Unable to resolve service for type 'UMS.Areas.Identity.Data.UserManagerUMS`1[UMS.Areas.Identity.Data.ApplicationUser]' while attempting to activate 'UMS.Areas.Identity.Pages.Account.RegisterModel'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelActivatorProvider.<>c__DisplayClass1_0.<CreateActivator>b__0(PageContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelFactoryProvider.<>c__DisplayClass3_0.<CreateModelFactory>b__0(PageContext pageContext)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.CreateInstance()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/09/16 10:32:21.321 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 10:32:21.525 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 10:32:21.525 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 10:32:21.525 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 10:32:22.011 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 10:32:22.040 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 10:32:24.428 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 10:32:24.444 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]   | An unhandled exception has occurred while executing the request.System.InvalidOperationException: Unable to resolve service for type 'UMS.Areas.Identity.Data.UserManagerUMS`1[UMS.Areas.Identity.Data.ApplicationUser]' while attempting to activate 'UMS.Areas.Identity.Pages.Account.RegisterModel'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelActivatorProvider.<>c__DisplayClass1_0.<CreateActivator>b__0(PageContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelFactoryProvider.<>c__DisplayClass3_0.<CreateModelFactory>b__0(PageContext pageContext)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.CreateInstance()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/09/16 10:32:37.369 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/16 10:36:23.511 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 10:36:23.719 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 10:36:23.719 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 10:36:23.727 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 10:36:24.148 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 10:36:24.167 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 10:36:25.747 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 10:36:25.764 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]   | An unhandled exception has occurred while executing the request.System.InvalidOperationException: Unable to resolve service for type 'UMS.Areas.Identity.Data.UserManagerUMS`1[UMS.Areas.Identity.Data.ApplicationUser]' while attempting to activate 'UMS.Areas.Identity.Pages.Account.RegisterModel'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelActivatorProvider.<>c__DisplayClass1_0.<CreateActivator>b__0(PageContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelFactoryProvider.<>c__DisplayClass3_0.<CreateModelFactory>b__0(PageContext pageContext)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.CreateInstance()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/09/16 10:38:41.960 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 10:38:42.173 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 10:38:42.178 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 10:38:42.178 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 10:38:42.575 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 10:38:42.603 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 10:38:44.200 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 10:38:44.217 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]   | An unhandled exception has occurred while executing the request.System.InvalidOperationException: Unable to resolve service for type 'UMS.Areas.Identity.Data.UserManagerUMS`1[UMS.Areas.Identity.Data.ApplicationUser]' while attempting to activate 'UMS.Areas.Identity.Pages.Account.RegisterModel'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelActivatorProvider.<>c__DisplayClass1_0.<CreateActivator>b__0(PageContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelFactoryProvider.<>c__DisplayClass3_0.<CreateModelFactory>b__0(PageContext pageContext)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.CreateInstance()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/09/16 10:39:07.341 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 10:39:07.547 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 10:39:07.547 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 10:39:07.556 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 10:39:08.016 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 10:39:08.042 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 10:39:09.561 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 10:39:09.576 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]   | An unhandled exception has occurred while executing the request.System.InvalidOperationException: Unable to resolve service for type 'UMS.Areas.Identity.Data.UserManagerUMS`1[UMS.Areas.Identity.Data.ApplicationUser]' while attempting to activate 'UMS.Areas.Identity.Pages.Account.RegisterModel'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelActivatorProvider.<>c__DisplayClass1_0.<CreateActivator>b__0(PageContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelFactoryProvider.<>c__DisplayClass3_0.<CreateModelFactory>b__0(PageContext pageContext)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.CreateInstance()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/09/16 10:39:32.632 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 10:39:32.832 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 10:39:32.837 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 10:39:32.837 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 10:39:33.259 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 10:39:33.292 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 10:39:35.259 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 10:39:35.259 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]   | An unhandled exception has occurred while executing the request.System.InvalidOperationException: Unable to resolve service for type 'UMS.Areas.Identity.Data.UserManagerUMS`1[UMS.Areas.Identity.Data.ApplicationUser]' while attempting to activate 'UMS.Areas.Identity.Pages.Account.RegisterModel'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelActivatorProvider.<>c__DisplayClass1_0.<CreateActivator>b__0(PageContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelFactoryProvider.<>c__DisplayClass3_0.<CreateModelFactory>b__0(PageContext pageContext)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.CreateInstance()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/09/16 10:39:41.984 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/16 10:41:11.866 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 10:41:12.063 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 10:41:12.072 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 10:41:12.072 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 10:41:12.492 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 10:41:12.523 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 10:41:13.997 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 10:41:14.015 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]   | An unhandled exception has occurred while executing the request.System.InvalidOperationException: Unable to resolve service for type 'UMS.Areas.Identity.Data.UserManagerUMS`1[UMS.Areas.Identity.Data.ApplicationUser]' while attempting to activate 'UMS.Areas.Identity.Pages.Account.RegisterModel'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelActivatorProvider.<>c__DisplayClass1_0.<CreateActivator>b__0(PageContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelFactoryProvider.<>c__DisplayClass3_0.<CreateModelFactory>b__0(PageContext pageContext)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.CreateInstance()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/09/16 10:43:49.270 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 10:43:49.446 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 10:43:49.462 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 10:43:49.462 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 10:43:49.984 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 10:43:50.006 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 10:43:52.868 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 10:43:52.883 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]   | An unhandled exception has occurred while executing the request.System.InvalidOperationException: Unable to resolve service for type 'UMS.Areas.Identity.Data.UserManagerUMS`1[UMS.Areas.Identity.Data.ApplicationUser]' while attempting to activate 'UMS.Areas.Identity.Pages.Account.RegisterModel'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelActivatorProvider.<>c__DisplayClass1_0.<CreateActivator>b__0(PageContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelFactoryProvider.<>c__DisplayClass3_0.<CreateModelFactory>b__0(PageContext pageContext)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.CreateInstance()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/09/16 10:44:41.538 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 10:44:41.721 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 10:44:41.726 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 10:44:41.726 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 10:44:42.244 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 10:44:42.273 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 10:44:44.561 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 10:44:44.576 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]   | An unhandled exception has occurred while executing the request.System.InvalidOperationException: Unable to resolve service for type 'UMS.Areas.Identity.Data.UserManagerUMS`1[UMS.Areas.Identity.Data.ApplicationUser]' while attempting to activate 'UMS.Areas.Identity.Pages.Account.RegisterModel'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelActivatorProvider.<>c__DisplayClass1_0.<CreateActivator>b__0(PageContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelFactoryProvider.<>c__DisplayClass3_0.<CreateModelFactory>b__0(PageContext pageContext)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.CreateInstance()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/09/16 10:44:47.779 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 10:44:47.788 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 10:44:53.004 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/16 10:54:58.822 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 10:54:59.011 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 10:54:59.011 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 10:54:59.011 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 10:54:59.589 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 10:54:59.619 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 10:55:01.775 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 10:55:01.789 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]   | An unhandled exception has occurred while executing the request.System.InvalidOperationException: Unable to resolve service for type 'UMS.Areas.Identity.Data.UserManagerUMS`1[UMS.Areas.Identity.Data.ApplicationUser]' while attempting to activate 'UMS.Areas.Identity.Pages.Account.RegisterModel'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelActivatorProvider.<>c__DisplayClass1_0.<CreateActivator>b__0(PageContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelFactoryProvider.<>c__DisplayClass3_0.<CreateModelFactory>b__0(PageContext pageContext)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.CreateInstance()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/09/16 10:55:38.610 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/16 10:58:47.359 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 10:58:47.560 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 10:58:47.560 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 10:58:47.569 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 10:58:48.017 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 10:58:48.039 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 10:58:50.341 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 10:58:50.354 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]   | An unhandled exception has occurred while executing the request.System.InvalidOperationException: Unable to resolve service for type 'UMS.Areas.Identity.Data.UserManagerUMS' while attempting to activate 'UMS.Areas.Identity.Pages.Account.RegisterModel'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelActivatorProvider.<>c__DisplayClass1_0.<CreateActivator>b__0(PageContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelFactoryProvider.<>c__DisplayClass3_0.<CreateModelFactory>b__0(PageContext pageContext)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.CreateInstance()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/09/16 10:59:00.107 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/16 11:03:54.750 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 11:03:54.966 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 11:03:54.966 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 11:03:54.975 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 11:03:55.445 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 11:03:55.464 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 11:03:57.100 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 11:03:57.100 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]   | An unhandled exception has occurred while executing the request.System.InvalidOperationException: Unable to resolve service for type 'UMS.Areas.Identity.Data.UserManagerUMS' while attempting to activate 'UMS.Areas.Identity.Pages.Account.RegisterModel'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelActivatorProvider.<>c__DisplayClass1_0.<CreateActivator>b__0(PageContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelFactoryProvider.<>c__DisplayClass3_0.<CreateModelFactory>b__0(PageContext pageContext)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.CreateInstance()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/09/16 11:04:14.465 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/16 11:10:51.620 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 11:10:51.799 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 11:10:51.799 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 11:10:51.807 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 11:10:52.549 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 11:10:52.570 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 11:10:58.729 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 11:10:58.744 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]   | An unhandled exception has occurred while executing the request.System.InvalidOperationException: Unable to resolve service for type 'UMS.Areas.Identity.Data.UserManagerUMS' while attempting to activate 'UMS.Areas.Identity.Pages.Account.RegisterModel'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelActivatorProvider.<>c__DisplayClass1_0.<CreateActivator>b__0(PageContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelFactoryProvider.<>c__DisplayClass3_0.<CreateModelFactory>b__0(PageContext pageContext)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.CreateInstance()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/09/16 11:11:16.336 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/16 11:13:15.820 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 11:13:16.051 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 11:13:16.055 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 11:13:16.055 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 11:13:16.541 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 11:13:16.560 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 11:16:26.557 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 11:16:26.572 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/16 11:16:26.771 [DEBUG] [UMS.Models.AccountContext]  checkUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/16 11:16:26.778 [DEBUG] [UMS.Models.EditAccountContext]  checkUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 11:16:27.393 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:268 | Check user is exist.
+2020/09/16 11:16:27.404 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:275 | Save changes: Check user is exist.
+2020/09/16 11:16:44.509 [DEBUG] [UMS.Models.AccountContext]  checkUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/16 11:16:44.509 [DEBUG] [UMS.Models.EditAccountContext]  checkUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 11:16:44.542 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:268 | Check user is exist.
+2020/09/16 11:16:44.542 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:275 | Save changes: Check user is exist.
+2020/09/16 11:16:46.730 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 11:16:46.730 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/16 11:17:59.850 [WARN] [Microsoft.AspNetCore.Identity.UserManager]   | User 6ab49852-bb77-4090-b5dd-9290ef2db7cd validation failed: DuplicateUserName.
+2020/09/16 11:18:12.904 [ERROR] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:185 | User name '2@gmail.com' is already taken. (DuplicateUserName). 
+2020/09/16 12:00:18.727 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 12:00:18.896 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 12:00:18.900 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 12:00:18.900 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 12:00:19.810 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 12:00:19.840 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 12:00:25.509 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 12:00:25.509 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/16 12:00:25.680 [DEBUG] [UMS.Models.AccountContext]  checkUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/16 12:00:25.680 [DEBUG] [UMS.Models.EditAccountContext]  checkUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 12:00:26.276 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:268 | Check user is exist.
+2020/09/16 12:00:26.276 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:275 | Save changes: Check user is exist.
+2020/09/16 12:00:31.320 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 12:00:31.320 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/16 12:00:50.429 [INFO] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:156 | User created a new account with password.
+2020/09/16 12:00:50.429 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:157 | Generating provider key.
+2020/09/16 12:00:50.455 [WARN] [Microsoft.AspNetCore.Identity.UserManager]   | User 788ee5b1-7682-4385-9199-c91035f628d8 validation failed: DuplicateUserName.
+2020/09/16 12:00:50.463 [WARN] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:170 | login Already Associated. A user with this login already exists.
+2020/09/16 12:00:50.554 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/16 12:01:02.805 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:71 | Get user by ID.
+2020/09/16 12:01:11.245 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 12:01:11.439 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 12:01:11.444 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 12:01:11.444 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 12:01:11.897 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/16 12:01:14.393 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Log out model.
+2020/09/16 12:01:14.432 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:50 | User logged out.
+2020/09/16 12:01:14.482 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 12:01:14.491 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 12:01:18.029 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/16 12:01:46.153 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 12:01:46.352 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 12:01:46.352 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 12:01:46.352 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 12:01:46.826 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 12:01:46.854 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 12:01:56.789 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 12:01:56.789 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/16 12:01:56.990 [DEBUG] [UMS.Models.AccountContext]  checkUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/16 12:01:56.995 [DEBUG] [UMS.Models.EditAccountContext]  checkUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 12:01:57.599 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:268 | Check user is exist.
+2020/09/16 12:01:57.610 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:275 | Save changes: Check user is exist.
+2020/09/16 12:02:00.928 [DEBUG] [UMS.Models.AccountContext]  checkUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/16 12:02:00.928 [DEBUG] [UMS.Models.EditAccountContext]  checkUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 12:02:00.945 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:268 | Check user is exist.
+2020/09/16 12:02:00.945 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:275 | Save changes: Check user is exist.
+2020/09/16 12:02:06.539 [DEBUG] [UMS.Models.AccountContext]  checkUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/16 12:02:06.539 [DEBUG] [UMS.Models.EditAccountContext]  checkUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 12:02:06.599 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:268 | Check user is exist.
+2020/09/16 12:02:06.603 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:275 | Save changes: Check user is exist.
+2020/09/16 12:02:11.238 [DEBUG] [UMS.Models.AccountContext]  checkUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/16 12:02:11.242 [DEBUG] [UMS.Models.EditAccountContext]  checkUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 12:02:11.273 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:268 | Check user is exist.
+2020/09/16 12:02:11.273 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:275 | Save changes: Check user is exist.
+2020/09/16 12:02:13.233 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 12:02:13.242 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/16 12:02:21.843 [WARN] [Microsoft.AspNetCore.Identity.UserManager]   | User adminidtempfortestsystem2020 is already in role User.
+2020/09/16 12:02:21.854 [INFO] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:156 | User created a new account with password.
+2020/09/16 12:02:21.854 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:157 | Generating provider key.
+2020/09/16 12:02:21.903 [WARN] [Microsoft.AspNetCore.Identity.UserManager]   | User 8c5a206f-2ca2-4907-b3e9-3d67e9bd38c9 validation failed: DuplicateUserName.
+2020/09/16 12:02:21.916 [WARN] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:170 | login Already Associated. A user with this login already exists.
+2020/09/16 12:02:22.027 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/16 12:02:25.961 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Log out model.
+2020/09/16 12:02:25.978 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:50 | User logged out.
+2020/09/16 12:02:25.997 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 12:02:26.009 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 12:02:42.836 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 12:02:43.017 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 12:02:43.017 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 12:02:43.027 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 12:02:43.500 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 12:02:43.525 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 12:02:45.449 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 12:02:45.461 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/16 12:02:45.621 [DEBUG] [UMS.Models.AccountContext]  checkUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/16 12:02:45.621 [DEBUG] [UMS.Models.EditAccountContext]  checkUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 12:02:46.219 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:268 | Check user is exist.
+2020/09/16 12:02:46.231 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:275 | Save changes: Check user is exist.
+2020/09/16 12:02:50.444 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 12:02:50.444 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/16 12:03:17.198 [WARN] [Microsoft.AspNetCore.Identity.UserManager]   | User adminidtempfortestsystem2020 is already in role User.
+2020/09/16 12:03:17.819 [INFO] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:156 | User created a new account with password.
+2020/09/16 12:03:18.413 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:157 | Generating provider key.
+2020/09/16 12:03:20.527 [WARN] [Microsoft.AspNetCore.Identity.UserManager]   | User 8cf50869-9624-465c-ace1-734d634161ad validation failed: DuplicateUserName.
+2020/09/16 12:05:21.462 [WARN] [UMS.Areas.Identity.Pages.Account.RegisterModel]   | login Already Associated. A user with this login already exists.
+2020/09/16 12:05:37.476 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index: | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/16 12:05:44.148 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com]  | Starting Log out model.
+2020/09/16 12:05:44.164 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com]  | User logged out.
+2020/09/16 12:05:44.191 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]   | Starting Login model.
+2020/09/16 12:05:44.197 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]   | Getting external authentication scheme.
+2020/09/16 12:05:49.033 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/16 12:09:28.863 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 12:09:29.060 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 12:09:29.060 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 12:09:29.069 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 12:09:29.636 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 12:09:29.663 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 12:09:31.748 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 12:09:31.757 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/16 12:09:31.943 [DEBUG] [UMS.Models.AccountContext]  checkUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/16 12:09:31.949 [DEBUG] [UMS.Models.EditAccountContext]  checkUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 12:09:32.537 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:268 | Check user is exist.
+2020/09/16 12:09:32.549 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:275 | Save changes: Check user is exist.
+2020/09/16 12:09:35.759 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 12:09:35.759 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/16 12:09:38.133 [WARN] [Microsoft.AspNetCore.Identity.UserManager]   | User adminidtempfortestsystem2020 is already in role User.
+2020/09/16 12:09:38.133 [INFO] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:156 | User created a new account with password.
+2020/09/16 12:09:38.147 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:157 | Generating provider key.
+2020/09/16 12:09:38.190 [WARN] [Microsoft.AspNetCore.Identity.UserManager]   | User 1b223a6d-89ce-482d-b228-1693dfa88a66 validation failed: DuplicateUserName.
+2020/09/16 12:09:38.195 [ERROR] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:171 | User name 'usermanagement2020@gmail.com' is already taken.
+2020/09/16 12:14:04.490 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 12:14:04.689 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 12:14:04.689 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 12:14:04.697 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 12:14:05.195 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 12:14:05.228 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 12:14:07.178 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 12:14:07.178 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/16 12:14:07.352 [DEBUG] [UMS.Models.AccountContext]  checkUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/16 12:14:07.352 [DEBUG] [UMS.Models.EditAccountContext]  checkUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 12:14:07.978 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:268 | Check user is exist.
+2020/09/16 12:14:07.978 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:275 | Save changes: Check user is exist.
+2020/09/16 12:14:11.121 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 12:14:11.121 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/16 12:14:55.133 [INFO] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:154 | User created a new account with password.
+2020/09/16 12:14:55.819 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:155 | Generating provider key.
+2020/09/16 12:15:00.038 [WARN] [Microsoft.AspNetCore.Identity.UserManager]   | User 9a37f885-03f5-4a50-b482-4f4f240e2bce validation failed: DuplicateUserName.
+2020/09/16 12:15:21.319 [ERROR] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:172 | User name 'usermanagement2020@gmail.com' is already taken.
+2020/09/16 12:16:47.125 [DEBUG] [UMS.Models.AccountContext]  checkUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/16 12:16:47.125 [DEBUG] [UMS.Models.EditAccountContext]  checkUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 12:16:47.181 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:268 | Check user is exist.
+2020/09/16 12:16:47.181 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:275 | Save changes: Check user is exist.
+2020/09/16 12:16:47.994 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 12:16:47.994 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/16 12:17:04.207 [INFO] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:154 | User created a new account with password.
+2020/09/16 12:17:04.975 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:155 | Generating provider key.
+2020/09/16 12:17:06.895 [WARN] [Microsoft.AspNetCore.Identity.UserManager]   | User 2dfefd60-89fd-4eb1-8230-ebdf130bc02e validation failed: DuplicateUserName.
+2020/09/16 12:17:12.027 [ERROR] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:172 | User name '2@gmail.com' is already taken.
+2020/09/16 12:17:38.835 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/16 12:45:54.004 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 12:45:54.224 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 12:45:54.228 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 12:45:54.228 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 12:45:54.632 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 12:45:54.654 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 13:53:40.598 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 13:53:40.795 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 13:53:40.795 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 13:53:40.806 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 13:53:41.327 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 13:53:41.350 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 13:54:06.875 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 13:54:06.885 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/16 13:54:07.078 [DEBUG] [UMS.Models.AccountContext]  checkUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/16 13:54:07.089 [DEBUG] [UMS.Models.EditAccountContext]  checkUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 13:54:07.788 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:268 | Check user is exist.
+2020/09/16 13:54:07.788 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:275 | Save changes: Check user is exist.
+2020/09/16 13:54:50.290 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/16 14:24:42.416 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 14:24:42.628 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 14:24:42.632 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 14:24:42.632 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 14:24:43.046 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 14:24:43.074 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 14:24:45.882 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 14:24:45.882 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/16 14:24:46.057 [DEBUG] [UMS.Models.AccountContext]  checkUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/16 14:24:46.057 [DEBUG] [UMS.Models.EditAccountContext]  checkUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 14:24:46.660 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:268 | Check user is exist.
+2020/09/16 14:24:46.671 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:275 | Save changes: Check user is exist.
+2020/09/16 14:24:50.538 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 14:24:50.538 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/16 14:24:59.526 [WARN] [Microsoft.AspNetCore.Identity.UserManager]   | User 25702810-5a5e-4502-acde-311331ce8147 validation failed: DuplicateUserName.
+2020/09/16 14:25:41.871 [ERROR] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:185 | User name 'usermanagement2020@gmail.com' is already taken. (DuplicateUserName). 
+2020/09/16 14:26:18.080 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 14:26:18.088 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/16 14:26:20.073 [WARN] [Microsoft.AspNetCore.Identity.UserManager]   | User 62d31922-e1ad-4e78-9abf-1e0d7994efa6 validation failed: DuplicateUserName.
+2020/09/16 14:26:20.073 [ERROR] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:185 | User name 'usermanagement2020@gmail.com' is already taken. (DuplicateUserName). 
+2020/09/16 14:26:24.260 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 14:26:24.260 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/16 14:26:28.414 [WARN] [Microsoft.AspNetCore.Identity.UserManager]   | User 27d1d649-cbb9-4d57-980e-73ca5baf928b validation failed: DuplicateUserName.
+2020/09/16 14:26:35.299 [ERROR] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:185 | User name 'usermanagement2020@gmail.com' is already taken. (DuplicateUserName). 
+2020/09/16 14:26:39.967 [DEBUG] [UMS.Models.AccountContext]  checkUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/16 14:26:39.967 [DEBUG] [UMS.Models.EditAccountContext]  checkUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 14:26:39.991 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:268 | Check user is exist.
+2020/09/16 14:26:39.991 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:275 | Save changes: Check user is exist.
+2020/09/16 14:26:56.521 [DEBUG] [UMS.Models.AccountContext]  checkUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/16 14:26:56.530 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 14:26:56.997 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/16 14:27:06.492 [DEBUG] [UMS.Models.EditAccountContext]  checkUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 14:27:23.478 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:268 | Check user is exist.
+2020/09/16 14:27:23.478 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:275 | Save changes: Check user is exist.
+2020/09/16 14:27:23.509 [WARN] [Microsoft.AspNetCore.Identity.UserManager]   | User 124780e0-a43a-447e-9c1d-141063b3b2fa validation failed: DuplicateUserName.
+2020/09/16 14:27:26.171 [ERROR] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:185 | User name '2@gmail.com' is already taken. (DuplicateUserName). 
+2020/09/16 14:28:06.533 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/16 14:53:10.385 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 14:53:10.587 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 14:53:10.587 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 14:53:10.600 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 14:53:11.076 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 14:53:11.103 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 14:53:13.959 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 14:53:13.959 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/16 14:53:14.125 [DEBUG] [UMS.Models.AccountContext]  checkUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/16 14:53:14.132 [DEBUG] [UMS.Models.EditAccountContext]  checkUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 14:53:14.715 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:268 | Check user is exist.
+2020/09/16 14:53:14.726 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:275 | Save changes: Check user is exist.
+2020/09/16 14:53:18.601 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 14:53:18.601 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/16 14:53:53.858 [ERROR] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:150 | The operation was canceled.
+2020/09/16 14:54:02.328 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/16 14:54:44.195 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 14:54:44.400 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 14:54:44.400 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 14:54:44.400 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 14:54:44.999 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 14:54:45.023 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 14:54:59.088 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 14:54:59.088 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/16 14:54:59.281 [DEBUG] [UMS.Models.AccountContext]  checkUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/16 14:54:59.281 [DEBUG] [UMS.Models.EditAccountContext]  checkUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 14:54:59.879 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:268 | Check user is exist.
+2020/09/16 14:54:59.890 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:275 | Save changes: Check user is exist.
+2020/09/16 14:55:04.946 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 14:55:04.946 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/16 14:55:29.967 [WARN] [Microsoft.AspNetCore.Identity.UserManager]   | User a17ce3f0-9fd0-49f2-9ceb-2b63c16a8d7e validation failed: DuplicateUserName.
+2020/09/16 14:55:52.609 [ERROR] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:185 | User name 'usermanagement2020@gmail.com' is already taken. (DuplicateUserName). 
+2020/09/16 14:57:33.287 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/16 15:04:44.455 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/16 15:04:44.632 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 15:04:44.632 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 15:04:44.632 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/16 15:04:45.611 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:36 | Starting Login model.
+2020/09/16 15:04:45.631 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Getting external authentication scheme.
+2020/09/16 15:05:09.273 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 15:05:09.273 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/16 15:05:09.478 [DEBUG] [UMS.Models.AccountContext]  checkUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/16 15:05:09.478 [DEBUG] [UMS.Models.EditAccountContext]  checkUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/16 15:05:10.066 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:268 | Check user is exist.
+2020/09/16 15:05:10.082 [DEBUG] [UMS.Controllers.ManageUserController]  checkUserExist:ManageUserController.cs:275 | Save changes: Check user is exist.
+2020/09/16 15:05:13.330 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/16 15:05:13.338 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/16 15:06:00.948 [ERROR] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:185 | User name usermanagement2020@gmail.com is already taken. (). 
+2020/09/16 15:06:25.437 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...

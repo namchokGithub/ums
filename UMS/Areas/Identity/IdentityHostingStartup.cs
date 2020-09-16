@@ -30,7 +30,7 @@ namespace UMS.Areas.Identity
                 services.AddDbContext<AuthDbContext>(options =>
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("AuthDbContextConnection")));
-
+                
                 services.AddDefaultIdentity<ApplicationUser>(options =>
                 {
                     options.SignIn.RequireConfirmedAccount = false;
@@ -40,6 +40,7 @@ namespace UMS.Areas.Identity
                     options.Password.RequireUppercase = false;
                 })
                     .AddRoles<IdentityRole>()
+                    .AddUserManager<UserManagerUMS>()
                     .AddEntityFrameworkStores<AuthDbContext>();
             });
         } // End Configure

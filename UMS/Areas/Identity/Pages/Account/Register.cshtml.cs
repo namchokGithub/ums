@@ -28,6 +28,7 @@ namespace UMS.Areas.Identity.Pages.Account
         // Service
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly UserManagerUMS _userManagerUms;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
         private readonly AccountContext _accountContext;
@@ -47,14 +48,26 @@ namespace UMS.Areas.Identity.Pages.Account
             SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
             AccountContext accountContext,
+            UserManagerUMS userManagerUms,
             IEmailSender emailSender)
         {
-            _userManager = userManager;
-            _signInManager = signInManager;
-            _logger = logger;
-            _emailSender = emailSender;
-            _accountContext = accountContext;
-            _logger.LogDebug("Register model.");
+            try
+            {
+                _userManagerUms = userManagerUms;
+                _userManager = userManager;
+                _signInManager = signInManager;
+                _logger = logger;
+                _emailSender = emailSender;
+                _accountContext = accountContext;
+                _logger.LogDebug("Starting Register model.");
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.Message.ToString());
+                _logger.LogTrace("End Register model Constructor.");
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `"+e.Message.ToString()+"`, showConfirmButton: true })";
+                RedirectToPage("Register");
+            }// End try catch
         } // End Constructor
 
         /*
@@ -134,12 +147,10 @@ namespace UMS.Areas.Identity.Pages.Account
                         acc_IsActive = 'Y'
                     }; // New user
                     _logger.LogTrace("Creating user.");
-                    var result = await _userManager.CreateAsync(user, Input.Password);
+                    var result = await _userManagerUms.NewCreateAsync(user, Input.Password);
                     // Check if create success
                     if (result.Succeeded)
                     {
-                        ApplicationUser userId = await _userManager.FindByEmailAsync(Input.Email);
-                        await _userManager.AddToRoleAsync(userId, "User");
                         _logger.LogInformation("User created a new account with password.");
                         _logger.LogDebug("Generating provider key.");
                         var info = new UserLoginInfo("Email", RandomString(50).ToString(), "Email");
@@ -147,21 +158,23 @@ namespace UMS.Areas.Identity.Pages.Account
                         _logger.LogTrace("Add login.");
                         if (result.Succeeded)
                         {
+                            ApplicationUser userId = await _userManager.FindByEmailAsync(Input.Email);
+                            _logger.LogTrace("Add default role to user.");
+                            await _userManager.AddToRoleAsync(userId, "User");
                             _logger.LogInformation("User created a new login.");
+                            _logger.LogTrace("Signing in.");
                             await _signInManager.SignInAsync(user, false);
                             _logger.LogTrace("End register on post.");
                             return LocalRedirect(returnUrl);
                         }
                         else
                         {
-                            _logger.LogWarning("login Already Associated. A user with this login already exists.");
+                            _logger.LogError(result.Errors.First().Description.ToString());
                             TempData["Exception"] =
-                                @"Swal.fire({ icon: 'warning', title: 'Error !', text: 'login Already Associated. A user with this login already exists.', showConfirmButton: true })";
+                                @"Swal.fire({ icon: 'error', title: 'Error !', text: `"+ result.Errors.First().Description.ToString() + "`, showConfirmButton: true })";
+                            _logger.LogTrace("End register on post.");
+                            return Page();
                         } // End Check if add login success
-                        _logger.LogTrace("Signing in.");
-                        await _signInManager.SignInAsync(user, isPersistent: false);
-                        _logger.LogTrace("End register on post.");
-                        return LocalRedirect(returnUrl);
                     } // End if create success
                     string errorStr = "";
                     foreach (var error in result.Errors)
