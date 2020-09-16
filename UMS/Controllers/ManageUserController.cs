@@ -13,9 +13,9 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity;
 
 /*
- * Name: MangeUserController.cs
+ * Name: ManageUserController.cs
  * Namespace: Controllers
- * Author: Namchok
+ * Author: Namchok Singhachai
  */
 
 namespace UMS.Controllers
@@ -73,7 +73,7 @@ namespace UMS.Controllers
 
                 var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Get user ID
                 _logger.LogTrace("Find first value from user.");
-                ViewData["UserId"] = UserId ?? throw new Exception("The user ID not found !.");
+                ViewData["UserId"] = UserId ?? throw new Exception("The user ID not found !");
 
                 string sqltext = "EXEC [dbo].ums_Get_all_active_user"; // Set sql text for execute
                 // Query data from "dbo.Account" and Convert to List<Account>
@@ -174,7 +174,7 @@ namespace UMS.Controllers
                         {
                             _editaccountContext.SaveChanges();
                             _logger.LogDebug("Save changes: Update user.");
-                            TempData["UpdateResult"] = @"toastr.success('Update user succeeded!.')";
+                            TempData["UpdateResult"] = @"toastr.success('Update user account successfully!')";
                             result = true;
                         }
                         catch (Exception e)
@@ -298,7 +298,7 @@ namespace UMS.Controllers
 
         /*
          * Name: objectJSON
-         * Author: Namchok Snghachai
+         * Author: Namchok Singhachai
          * Description: For create json object result to view and check response
          */
         public class objectJSON
