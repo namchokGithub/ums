@@ -14,7 +14,7 @@
 }
 
 <!-- Content -->
-<div class="mx-auto col-md-10">
+<div class="mx-auto">
     <br />
     <!--Start Card-->
     <div class="card card-info">
@@ -34,8 +34,8 @@
                             <thead class="text-center">
                                 <tr>
                                     <th>No.</th>
-                                    <th>Firstname</th>
-                                    <th>Lastname</th>
+                                    <th>First name</th>
+                                    <th>Last name</th>
                                     <th>Email</th>
                                     <th>Roles</th>
                                     <th>Type Account</th>
@@ -166,15 +166,15 @@
         // Check value
         if ($('#acc_Id').val() == '') toastr.error('ID not found.')
         if ($('#acc_IsActive').val() == '') toastr.error('User not Active.')
-        if ($('#acc_Firstname').val() == '') toastr.error('Please enter firstname.')
-        if ($('#acc_Lastname').val() == '') toastr.error('Please enter lastname.')
-        if ($('#acc_RoleId').val() == '') toastr.error('Please select role.')
+        if ($('#acc_Firstname').val() == '') toastr.warning('The First name can not be blank and must only character.')
+        if ($('#acc_Lastname').val() == '') toastr.warning('The Last name can not be blank and must only character.')
+        if ($('#acc_RoleId').val() == '') toastr.warning('Please select role.')
 
         // Check regex
         let regex = /^(([a-zA-Z])?[a-zA-Z]*)*$/;
 
-        if (!regex.test($('#acc_Firstname').val())) toastr.error('Firstname has only character.')
-        if (!regex.test($('#acc_Lastname').val())) toastr.error('Lastname has only character.')
+        if (!regex.test($('#acc_Firstname').val())) toastr.warning('The First name can not be blank and must only character.')
+        if (!regex.test($('#acc_Lastname').val())) toastr.warning('The Last name can not be blank and must only character.')
     } // End updateUser
 
     /**
@@ -205,8 +205,8 @@
                         data: { id: id },
                         method: "POST",
                         success: () => {
-                            console.log('Inactive user succeeded.')
-                            toastr.success('Inactive user succeeded.')
+                            console.log('Delete user account successfully!')
+                            toastr.success('Delete user account successfully!')
                         },
                         error: function (result) {
                             // Set message status
