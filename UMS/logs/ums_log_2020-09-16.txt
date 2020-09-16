@@ -1,0 +1,22 @@
+############################################## User Management System log ##############################################
+2020/09/16 15:35:53.170 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/16 15:35:59.350 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/16 15:35:59.366 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/16 15:35:59.383 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Wannapa\source\repos\ums\UMS
+2020/09/16 15:35:59.768 [TRACE] [UMS.Data.AuthDbContext]  Index:Home:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/16 15:35:59.865 [TRACE] [UMS.Controllers.HomeController] [testuser@gmail.com] Index:Home:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/16 15:35:59.865 [TRACE] [UMS.Controllers.HomeController] [testuser@gmail.com] Index:Home:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/16 15:35:59.865 [TRACE] [UMS.Controllers.HomeController] [testuser@gmail.com] Index:Home:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/16 15:35:59.865 [TRACE] [UMS.Controllers.HomeController] [testuser@gmail.com] Index:Home:HomeController.cs:59 | Start Index.
+2020/09/16 15:35:59.880 [INFO] [UMS.Controllers.HomeController] [testuser@gmail.com] Index:Home:HomeController.cs:60 | Welcome testuser@gmail.com to UMS.
+2020/09/16 15:35:59.880 [TRACE] [UMS.Controllers.HomeController] [testuser@gmail.com] Index:Home:HomeController.cs:65 | Find first value from user.
+2020/09/16 15:35:59.880 [TRACE] [UMS.Controllers.HomeController] [testuser@gmail.com] Index:Home:HomeController.cs:69 | End Index.
+2020/09/16 15:36:03.197 [TRACE] [UMS.Data.AuthDbContext]  Index:EditProfile:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/16 15:36:03.208 [TRACE] [UMS.Models.EditProfileContext] [testuser@gmail.com] Index:EditProfile:EditProfileContext.cs:24 | Start Edit Profile Context.
+2020/09/16 15:36:03.208 [TRACE] [UMS.Controllers.EditProfileController] [testuser@gmail.com] Index:EditProfile:EditProfileController.cs:40 | NLog injected into EditProfileController.
+2020/09/16 15:36:03.208 [TRACE] [UMS.Controllers.EditProfileController] [testuser@gmail.com] Index:EditProfile:EditProfileController.cs:42 | Edit Profile Context injected into EditProfileController.
+2020/09/16 15:36:03.208 [TRACE] [UMS.Controllers.EditProfileController] [testuser@gmail.com] Index:EditProfile:EditProfileController.cs:44 | Sign In Manager injected into EditProfileController.
+2020/09/16 15:36:03.221 [TRACE] [UMS.Controllers.EditProfileController] [testuser@gmail.com] Index:EditProfile:EditProfileController.cs:45 | Start EditProfileController Constructor.
+2020/09/16 15:36:03.221 [TRACE] [UMS.Controllers.EditProfileController] [testuser@gmail.com] Index:EditProfile:EditProfileController.cs:64 | Start Index
+2020/09/16 15:36:04.768 [DEBUG] [UMS.Controllers.EditProfileController] [testuser@gmail.com] Index:EditProfile:EditProfileController.cs:71 | Get user by ID.
+2020/09/16 15:36:04.771 [TRACE] [UMS.Controllers.EditProfileController] [testuser@gmail.com] Index:EditProfile:EditProfileController.cs:74 | End Index

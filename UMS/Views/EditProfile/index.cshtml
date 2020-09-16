@@ -51,21 +51,16 @@
                 </div>
                 <!--End Input change password-->
 
-                <!--Start Button save password-->
-                <button id="btn_SavePassword" type="button" class="btn btn-success btn-block d-none" onclick="SavePassword()">Save</button>
-                <button id="btn_NotSavePassword" type="button" class="btn btn-secondary btn-block d-none">Back</button>
-                <!--End Button save password-->
-
                 <!--End Input edit profile-->
                 <!--Start Button save profile-->
                 <div class="row">
                     <!--If Login ProviderLogin is Email can change password-->
                     @if (editProfile.acc_TypeAccoutname == "Email")
                     {
-                        <div class="col-8">
+                        <div class="col-9">
                             <p id="href_ChangePassword">Change password</p>
                         </div>
-                        <div class="col-4">
+                        <div class="col-3">
                             <button id="btn_SaveProfile" type="button" class="btn btn-success btn-block float-right" onclick="SaveProfile()">Save</button>
                         </div>
                     }
@@ -81,8 +76,16 @@
             <!--End Form profile-->
         </div>
         <!--End Card body-->
+
+        <!--Start Card footer-->
+        <div id="card_Footer" class="card-footer d-none">
+            <button id="btn_NotSavePassword" type="button" class="btn btn-secondary float-left d-none">Back</button>
+            <button id="btn_SavePassword" type="button" class="btn btn-success float-right d-none" onclick="SavePassword()">Save</button>
+        </div>
+        <!--End Card footer-->
+
     </div>
-    <!--Stop Card-->
+    <!--End Card-->
 </div>
 
 <!--Start Script-->
@@ -175,6 +178,7 @@
         $("#href_ChangePassword").click(function () {
             $("#href_ChangePassword").hide();
             $("#btn_SaveProfile").hide();
+            $("#card_Footer").removeClass('d-none');
             $("#acc_CurrentPassword").removeClass('d-none');
             $("#acc_NewPassword").removeClass('d-none');
             $("#acc_ConfirmPassword").removeClass('d-none');
@@ -182,9 +186,11 @@
             $("#btn_NotSavePassword").removeClass('d-none');
         });
 
+        //Show href and button SaveProfile for Change password
         $('#btn_NotSavePassword').on('click', () => {
             $("#href_ChangePassword").show();
             $("#btn_SaveProfile").show();
+            $("#card_Footer").addClass('d-none');
             $("#btn_NotSavePassword").addClass('d-none');
             $("#acc_CurrentPassword").addClass('d-none');
             $("#acc_NewPassword").addClass('d-none');
