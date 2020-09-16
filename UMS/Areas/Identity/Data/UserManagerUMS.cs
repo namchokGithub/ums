@@ -25,18 +25,20 @@ namespace UMS.Areas.Identity.Data
     public class UserManagerUMS : UserManager<ApplicationUser>
     {
         private readonly AuthDbContext _authDbContext;
+        private readonly ILogger<UserManager<ApplicationUser>> _logger;
         public UserManagerUMS(AuthDbContext authDbContext, IUserStore<ApplicationUser> store, IOptions<IdentityOptions> optionsAccessor, IPasswordHasher<ApplicationUser> passwordHasher, IEnumerable<IUserValidator<ApplicationUser>> userValidators, IEnumerable<IPasswordValidator<ApplicationUser>> passwordValidators, ILookupNormalizer keyNormalizer, IdentityErrorDescriber errors, IServiceProvider services, ILogger<UserManager<ApplicationUser>> logger) 
             : base(store, optionsAccessor, passwordHasher, userValidators, passwordValidators, keyNormalizer, errors, services, logger)
         {
             try
             {
                 _authDbContext = authDbContext;
-                Logger.LogTrace("Starting Interface user manager UMS.");
+                _logger = logger;
+                _logger.LogTrace("Starting Interface user manager UMS.");
             }
             catch (Exception e)
             {
-                Logger.LogCritical(e.Message.ToString());
-                Logger.LogTrace("End Interface user manager UMS.");
+                _logger.LogCritical(e.Message.ToString());
+                _logger.LogTrace("End Interface user manager UMS.");
             } // End try catch
         } // End constructor
 
@@ -116,17 +118,17 @@ namespace UMS.Areas.Identity.Data
         }
 
         // New Add login
-        public virtual async Task<IdentityResult> AddLoginAsync(string userId, UserLoginInfo login)
+        public async Task<IdentityResult> NewAddLoginAsync(ApplicationUser userParam, UserLoginInfo login)
         {
             ThrowIfDisposed();
             if (login == null)
             {
                 throw new ArgumentNullException("login");
             }
-            var user = await FindByIdAsync(userId);
+            var user = await FindByIdAsync(userParam.Id);
             if (user == null)
             {
-                throw new InvalidOperationException("UserId Not Found.");
+                throw new InvalidOperationException("User Not Found.");
             }
             // Check existing user
             var existingUser = await FindByLoginAsync(login.LoginProvider, login.ProviderKey);
@@ -150,6 +152,7 @@ namespace UMS.Areas.Identity.Data
             {
                 return result;
             }
+            // ADD Normalize
             _authDbContext.Update(user);
             await _authDbContext.SaveChangesAsync();
             return IdentityResult.Success;
@@ -163,10 +166,6 @@ namespace UMS.Areas.Identity.Data
             }
             var errors = new List<string>();
             await ValidateUserName(item, errors);
-            if (true)
-            {
-                await ValidateEmailAsync(item, errors);
-            }
             if (errors.Count > 0)
             {
                 IdentityError err = new IdentityError
@@ -197,37 +196,18 @@ namespace UMS.Areas.Identity.Data
             {
                 // Create store procedure find active user status
                 var owner = await FindByNameAsync(user.UserName);
-                if (owner != null && !EqualityComparer<string>.Default.Equals(owner.Id, user.Id))
+                _logger.LogTrace("User ID: " + user.Id);
+                _logger.LogTrace("Owner ID: " + owner.Id);
+                _logger.LogTrace("Owner Status: " + owner.acc_IsActive);
+                _logger.LogTrace("Check ID: " + string.Equals(owner.Id, user.Id));
+                var checkStatus = EqualityComparer<string>.Default.Equals(owner.Id, user.Id);
+                if (owner != null && checkStatus && owner.acc_IsActive!= 'Y')
                 {
                     errors.Add($"User name {user.UserName} is already taken.");
                 }
             }
-        } // End ValidateUserName
+        } // End ValidateUserName !EqualityComparer<string>.Default.Equals(owner.Id, user.Id)
         // ------------------------------------------------------**************************************************--------------------------------------------
-
-        private async Task ValidateEmailAsync(ApplicationUser user, List<string> errors)
-        {
-            var email = await GetEmailAsync(user);
-            if (string.IsNullOrWhiteSpace(email))
-            {
-                errors.Add("Email too short.");
-                return;
-            }
-            try
-            {
-                var m = new MailAddress(email);
-            }
-            catch (FormatException)
-            {
-                errors.Add($"The {email} is not valid.");
-                return;
-            }
-            var owner = await FindByEmailAsync(email);
-            if (owner != null && !EqualityComparer<string>.Default.Equals(owner.Id, user.Id))
-            {
-                errors.Add($"User name {email} is already taken.");
-            }
-        } // End ValidateEmailAsync
 
         public Task AddLoginNewAsync(ApplicationUser user, UserLoginInfo login)
         {

@@ -342,6 +342,7 @@ var ums_Update_user = @"-- =============================================
                             WHERE [dbo].[Account].acc_Id = @param_Id;
                         END";
 
+migrationBuilder.Sql(ums_Add_user_login);
 migrationBuilder.Sql(ums_Check_user);
 migrationBuilder.Sql(ums_Delete_user);
 migrationBuilder.Sql(ums_Get_active_user);
