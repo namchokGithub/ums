@@ -179,7 +179,7 @@ namespace UMS.Areas.Identity.Pages.Account
                     string errorStr = "";
                     foreach (var error in result.Errors)
                     {
-                        errorStr += error.Description + " (" + error.Code + "). ";
+                        errorStr += error.Description + ((error.Code != "" && error.Code!=null) ? " ("+ error.Code+ ")." : ".");
                         ModelState.AddModelError(string.Empty, error.Description);
                     } // End loop get error
                     _logger.LogError(errorStr.ToString());

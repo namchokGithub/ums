@@ -29,16 +29,16 @@
             <div class="card-body register-card-body">
                 <p class="login-box-msg">Create new account.</p>
                 <!--Start Form register-->
-                <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                <form asp-route-returnUrl="@Model.ReturnUrl" method="post" id="formRegister">
                     <!--Start Input information for register-->
                     <div class="form-group">
                         <label asp-for="Input.acc_Firstname"></label><code>*</code>
-                        <input asp-for="Input.acc_Firstname" class="form-control" />
+                        <input asp-for="Input.acc_Firstname" id="acc_Firstname" class="form-control" />
                         <span asp-validation-for="Input.acc_Firstname" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Input.acc_Lastname"></label><code>*</code>
-                        <input asp-for="Input.acc_Lastname" class="form-control" />
+                        <input asp-for="Input.acc_Lastname" id="acc_Lastname" class="form-control" />
                         <span asp-validation-for="Input.acc_Lastname" class="text-danger"></span>
                     </div>
                     <div class="form-group">
@@ -49,12 +49,12 @@
                     </div>
                     <div class="form-group">
                         <label asp-for="Input.Password"></label><code>*</code>
-                        <input asp-for="Input.Password" class="form-control" />
+                        <input asp-for="Input.Password" id="Password" class="form-control" />
                         <span asp-validation-for="Input.Password" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Input.ConfirmPassword"></label><code>*</code>
-                        <input asp-for="Input.ConfirmPassword" class="form-control" />
+                        <input asp-for="Input.ConfirmPassword" id="ConfirmPassword" class="form-control" />
                         <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
                     </div>
                     <!--End Input information for Register-->
@@ -62,7 +62,7 @@
                     <a id="btn_back" class="btn btn-block btn-secondary float-left" href="./Login">
                         Back
                     </a>
-                    <button type="submit" class="btn btn-primary float-right">Register</button>
+                    <button onclick="register()" type="button" class="btn btn-primary float-right">Register</button>
                     <!--End Button-->
                 </form>
                 <!--End Form Register-->
@@ -75,6 +75,60 @@
     @section Scripts {
         <partial name="_ValidationScriptsPartial" />
         <script>
+            //Regular expression
+            var RegExName = /^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$/;
+            var RegExPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[#$!%@@*?&])[A-Za-z0-9#$!%@@*?&]+$/;
+            var RegEmail = /^[\w-\.]+@@([\w-]+\.)+[\w-]{2,4}$/;
+
+            /*
+             * Name: register
+             * Parameter: none
+             * Author: Namchok Singhachai
+             * Description: Check user is exist and input validation.
+             */
+            function register() {
+                let acc_Firstname = $('#acc_Firstname').val()
+                let acc_Lastname = $('#acc_Lastname').val()
+                let Email = $('#acc_Email').val()
+                let Password = $('#Password').val()
+                let ConfirmPassword = $('#ConfirmPassword').val()
+                if (!RegExName.test(acc_Firstname)) toastr.warning('The first name can not be blank and must only character.');
+                if (!RegExName.test(acc_Lastname)) toastr.warning('The last name can not be blank and must only character.');
+                if (!RegExPassword.test(Password)) toastr.warning('The password must contain at least 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
+                if (!RegExPassword.test(ConfirmPassword)) toastr.warning('The current password must contain at least 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
+                if (!RegEmail.test(Email)) toastr.warning('Invalid Emails.');
+                if (!Password.match(ConfirmPassword)) toastr.warning('The password and confirm password do not match.');
+                $.ajax({
+                    url: "@Url.Action("checkUserExist", "ManageUser")",
+                    data: { userStr: Email},
+                    type: "POST",
+                    dataType: "JSON",
+                    success: function (res) {
+                        // If res qual 1 is the user is exits
+                        if (res) {
+                            toastr.warning('This user is already taken.');
+                        } else {
+                            if (RegExName.test(acc_Firstname), RegExName.test(acc_Lastname), RegExPassword.test(Password)
+                                , RegExPassword.test(ConfirmPassword), RegEmail.test(Email), Password.match(ConfirmPassword)
+                            ) {
+                                console.log("Submitting.");
+                                $('#formRegister').submit()
+                            } else {
+                                console.log(userIsExist)
+                                console.log("Invalid Input.");
+                            }
+                        } // End if
+                    },
+                    error: function (result) {
+                        // Set message status
+                        let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
+                        let _text = 'Status : ' + result.status + statusResText
+                        console.log(result) // show log of error
+                        console.log(_text)
+                        toastr.error(_text)
+                    } // End error
+                }) // End ajax for check user exits
+            } // End register
 
             $(document).ready(() => {
                 // Check is has exception

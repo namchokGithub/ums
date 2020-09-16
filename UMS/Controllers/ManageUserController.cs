@@ -282,7 +282,7 @@ namespace UMS.Controllers
                         TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                     } // End try catch
                 } // Check if check succeeded
-
+                _logger.LogTrace($"User is exist {(int)checkExits.Value} items.");
                 _logger.LogTrace("End check user is exist.");
                 return (int)checkExits.Value;
             }
