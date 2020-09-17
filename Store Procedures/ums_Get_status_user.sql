@@ -3,7 +3,7 @@
 -- Create date: 2020-09-17
 -- Description:	 Get status of user and check if exist.
 -- =============================================
-ALTER PROCEDURE ums_Get_status_user
+CREATE PROCEDURE ums_Get_status_user
     @param_user nvarchar(max)
 AS
 BEGIN
