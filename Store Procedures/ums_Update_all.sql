@@ -1,7 +1,7 @@
 -- =============================================
--- Author:		Wannapa
+-- Author:		Wannapa Srijermtong
 -- Create date: 2020-09-02
--- Description:	Update name
+-- Description: Update name and password
 -- =============================================
 CREATE PROCEDURE ums_Update_all
    @param_id nvarchar(256) ,

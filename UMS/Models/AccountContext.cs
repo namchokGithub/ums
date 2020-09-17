@@ -21,7 +21,7 @@ namespace UMS.Models
             : base(options)
         {
             _logger = logger;
-            _logger.LogDebug("Account Context.");
+            _logger.LogDebug("Start Account Context.");
         } // End Constructor
 
         public DbSet<Account> Account { get; set; }

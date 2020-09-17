@@ -10,10 +10,11 @@
 @{
     ViewData["Title"] = "Manage User";                  // Set title
     Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";  // Set layout
+    var id = ViewData["UserId"];
 }
 
 <!-- Content -->
-<div class="mx-auto col-md-10">
+<div class="mx-auto">
     <br />
     <!--Start Card-->
     <div class="card card-info">
@@ -33,9 +34,10 @@
                             <thead class="text-center">
                                 <tr>
                                     <th>No.</th>
-                                    <th>Username</th>
-                                    <th>Name</th>
-                                    <th>Role</th>
+                                    <th>First name</th>
+                                    <th>Last name</th>
+                                    <th>Email</th>
+                                    <th>Roles</th>
                                     <th>Type Account</th>
                                     <th>Actions</th>
                                 </tr>
@@ -49,24 +51,28 @@
                                 {
                                     @foreach (var item in ViewData["User"] as List<Account>)
                                     {
-                                        <tr>
-                                            <td><center>@(index += 1)</center></td>
-                                            <td>@item.acc_Email</td>
-                                            <td>@(item.acc_Firstname + " " + item.acc_Lastname)</td>
-                                            <td><center> @((item.acc_Rolename != null) ? item.acc_Rolename : "-") </center></td>
-                                            <td><center> @((item.acc_TypeAccoutname != null) ? item.acc_TypeAccoutname : "-") </center></td>
-                                            <td class="text-center">
-                                                <input type="hidden" asp-for="acc_Id" value="@item.acc_Id">
-                                                <button class="btn btn-warning text-white" onclick="getUser('@item.acc_Id')"><i class="fa fa-pencil-alt"></i></button>
-                                                <button class="btn btn-danger" onclick="deleteUser('@item.acc_Id')"><i class="fa fa-times"></i></button>
-                                            </td>
-                                        </tr>
+                                        if (id.ToString() != item.acc_Id)
+                                        {
+                                            <tr>
+                                                <td><center>@(index += 1)</center></td>
+                                                <td>@item.acc_Firstname</td>
+                                                <td>@item.acc_Lastname</td>
+                                                <td>@item.acc_Email</td>
+                                                <td><center> @((item.acc_Rolename != null) ? item.acc_Rolename : "-") </center></td>
+                                                <td><center> @((item.acc_TypeAccoutname != null) ? item.acc_TypeAccoutname : "-") </center></td>
+                                                <td class="text-center">
+                                                    <input type="hidden" asp-for="acc_Id" value="@item.acc_Id">
+                                                    <button class="btn btn-warning text-white" onclick="getUser('@item.acc_Id')"><i class="fa fa-pencil-alt"></i></button>
+                                                    <button class="btn btn-danger" onclick="deleteUser('@item.acc_Id')"><i class="fa fa-times"></i></button>
+                                                </td>
+                                            </tr>
+                                        }
                                     }
                                 }
                                 else // If ViweData["User"] is null
                                 {
                                     <tr>
-                                        <td colspan="6"><center>No Users.</center></td>
+                                        <td colspan="6"><center>No results.</center></td>
                                     </tr>
                                 }
                             </tbody>
@@ -88,7 +94,7 @@
                     <div class="modal-content">
                         <!--Start Modal header edit user-->
                         <div class="modal-header bg-warning">
-                            <h4 class="modal-title  text-white">EDIT ACCOUNT</h4>
+                            <h4 class="modal-title  text-white">Edit user account.</h4>
                             <!--Start Button close-->
                             <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
@@ -121,11 +127,10 @@
                             </div>
 
                             <div class="form-group">
-                                <label asp-for="acc_Rolename">Role</label>
+                                <label asp-for="acc_Rolename">Roles</label> <code>*</code>
                                 <select class="form-control" id="acc_RoleId" name="acc_RoleId">
-                                    <option value="0" disabled selected>Choose</option>
                                     <option value="1">Admin</option>
-                                    <option value="2">User</option> <!-- Show option form data base-->
+                                    <option value="2" selected>User</option> <!-- Show option form data base-->
                                 </select>
                             </div>
                             <!--End Input Edit user-->
@@ -133,7 +138,7 @@
                         <!--End Modal body-->
                         <!--Start Modal footer-->
                         <div class="modal-footer justify-content-between">
-                            <button type="button" class="btn btn-default float-left" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-secondary float-left" data-dismiss="modal">Back</button>
                             <button onclick="updateUser()" class="btn btn-success float-right">Save</button>
                         </div>
                         <!--End Modal footer-->
@@ -161,15 +166,15 @@
         // Check value
         if ($('#acc_Id').val() == '') toastr.error('ID not found.')
         if ($('#acc_IsActive').val() == '') toastr.error('User not Active.')
-        if ($('#acc_Firstname').val() == '') toastr.error('Please enter firstname.')
-        if ($('#acc_Lastname').val() == '') toastr.error('Please enter lastname.')
-        if ($('#acc_RoleId').val() == '') toastr.error('Please select role.')
+        if ($('#acc_Firstname').val() == '') toastr.warning('The First name can not be blank and must only character.')
+        if ($('#acc_Lastname').val() == '') toastr.warning('The Last name can not be blank and must only character.')
+        if ($('#acc_RoleId').val() == '') toastr.warning('Please select role.')
 
         // Check regex
         let regex = /^(([a-zA-Z])?[a-zA-Z]*)*$/;
 
-        if (!regex.test($('#acc_Firstname').val())) toastr.error('Firstname has only character.')
-        if (!regex.test($('#acc_Lastname').val())) toastr.error('Lastname has only character.')
+        if (!regex.test($('#acc_Firstname').val())) toastr.warning('The First name can not be blank and must only character.')
+        if (!regex.test($('#acc_Lastname').val())) toastr.warning('The Last name can not be blank and must only character.')
     } // End updateUser
 
     /**
@@ -185,12 +190,13 @@
 
             // SweetAlert confirm delete
             Swal.fire({
-                title: 'Do you want to delete?',
+                title:'Are you sure to delete?',
                 icon: 'warning',
                 showCancelButton: true,
-                confirmButtonColor: '#28A745',
-                cancelButtonColor: '#DC3545',
-                confirmButtonText: 'Yes'
+                confirmButtonText: 'Yes',
+                confirmButtonColor: '#28a745',
+                cancelButtonText: 'Back',
+                cancelButtonColor: '#6c757d'
             }).then((result) => {
                 if (result.value) {
                     // Ajax for Inactive user
@@ -199,8 +205,8 @@
                         data: { id: id },
                         method: "POST",
                         success: () => {
-                            console.log('Inactive user succeeded.')
-                            toastr.success('Inactive user succeeded.')
+                            console.log('Delete user account successfully!')
+                            toastr.success('Delete user account successfully!')
                         },
                         error: function (result) {
                             // Set message status
@@ -208,11 +214,11 @@
                             let _text = 'Status : ' + result.status  + statusResText
                             // Alert message error
                             console.log(result) // Show log of error
-                            console.log(_text) 
+                            console.log(_text)
                             toastr.error(_text)
                         } // if error
                     }).done(function () {
-                        setTimeout(function () { location.reload(); }, 1000); // Reload pages
+                        setTimeout(function () { location.reload(); }, 900); // Reload pages
                     }) // End ajax for inactive user
                 } // End if result.value
             }) // End Swal function
@@ -258,7 +264,7 @@
                         $('#EditUser').modal(); // Show modal
                     } else {
                         eval(result['messages']) // Excute js
-                        console.log('Query Error!!!');
+                        console.log(`Error! ${result['text']}`);
                     } // End if result is not error
                 },
                 error: function (result) {

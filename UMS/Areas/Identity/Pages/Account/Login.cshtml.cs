@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using UMS.Areas.Identity.Data;
 using System;
+using UMS.Controllers;
+using UMS.Models;
 
 /*
  * Name: LoginModel.cs
@@ -25,15 +27,29 @@ namespace UMS.Areas.Identity.Pages.Account
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
+        private readonly ManageUserController _manageUser;
 
-        public LoginModel(SignInManager<ApplicationUser> signInManager, 
+        public LoginModel(
+            SignInManager<ApplicationUser> signInManager,
             ILogger<LoginModel> logger,
+            ILogger<ManageUserController> loggerManageUser,
+            EditAccountContext editaccountContext,
+            AccountContext accountContext,
             UserManager<ApplicationUser> userManager)
         {
-            _userManager = userManager;
-            _signInManager = signInManager;
-            _logger = logger;
-            _logger.LogDebug("Log in model.");
+            try
+            {
+                _userManager = userManager;
+                _signInManager = signInManager;
+                _logger = logger;
+                _manageUser = new ManageUserController(accountContext, editaccountContext, loggerManageUser, signInManager);
+                _logger.LogDebug("Starting Login model.");
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.Message.ToString());
+                _logger.LogTrace("End Login model Constructor.");
+            }// End try catch
         } // End constructor
 
         [BindProperty]
@@ -58,8 +74,8 @@ namespace UMS.Areas.Identity.Pages.Account
             public string Email { get; set; }
 
             [Required]
-            [DataType(DataType.Password)]
-            [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z0-9$@$!%*?&]+$"
+            //[DataType(DataType.Password)]
+            [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*#?&])[A-Za-z0-9$@$!%*#?&]+$"
                 , ErrorMessage = "The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.")]
             public string Password { get; set; }
 
@@ -78,10 +94,10 @@ namespace UMS.Areas.Identity.Pages.Account
         {
             try
             {
-                _logger.LogTrace("Start log in on get.");
+                _logger.LogTrace("Start login on get.");
                 if (User.Identity.IsAuthenticated)
                 {
-                    _logger.LogTrace("User is authenticated.");
+                    _logger.LogInformation("User is authenticated.");
                     Response.Redirect("/");
                 } // Check if logged in
                 if (!string.IsNullOrEmpty(ErrorMessage))
@@ -96,67 +112,67 @@ namespace UMS.Areas.Identity.Pages.Account
                 _logger.LogDebug("Getting external authentication scheme.");
                 ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
                 ReturnUrl = returnUrl;
-                _logger.LogTrace("End log in on get.");
+                _logger.LogTrace("End login on get.");
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 TempData["Exception"] = message;
-                _logger.LogTrace("End log in on get.");
+                _logger.LogTrace("End login on get.");
             } // End try catch
         } // End OnGetAsync
 
         /*
          * Name: OnPostAsync
          * Parameter: returnUrl(String)
-         * Description: for log in to system
+         * Description: for login to system
          */
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             try
             {
-                _logger.LogTrace("Start log in on post.");
+                _logger.LogTrace("Start login on post.");
                 returnUrl = returnUrl ?? Url.Content("~/");
                 if (ModelState.IsValid)
                 {
-                    // This doesn't count login failures towards account lockout
-                    // To enable password failures to trigger account lockout, set lockoutOnFailure: true
+                    ApplicationUser user = await _userManager.FindByEmailAsync(Input.Email.ToString());
+                    if (user.acc_IsActive == 'N')
+                    {
+                        _manageUser.deleteUser(user.Id);
+                    }// End check status
+                    _logger.LogTrace("Signing in with password.");
                     var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
-
                     if (result.Succeeded)
                     {
                         _logger.LogInformation("User logged in.");
-                        _logger.LogTrace("End log in on post.");
+                        _logger.LogTrace("End login on post.");
                         return LocalRedirect(returnUrl);
                     } // If login success
-
-                    if (result.IsLockedOut)
+                    else if (result.IsLockedOut)
                     {
                         _logger.LogWarning("User account locked out.");
-                        _logger.LogTrace("End log in on post.");
+                        _logger.LogTrace("End login on post.");
                         return RedirectToPage("./Lockout");
                     }
                     else
                     {
                         _logger.LogError("Your email or password is not valid.");
                         ModelState.AddModelError(string.Empty, "Your email or password is not valid.");
-                        // Set sweet alert with error messages
-                        string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: 'Your email or password is not valid.', showConfirmButton: true })";
                         // Send alert to home pages
-                        TempData["Exception"] = message;
-                        _logger.LogTrace("End log in on post.");
+                        TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: 'Your email or password is not valid.', showConfirmButton: true })";
+                        _logger.LogTrace("End login on post.");
                         return Page();
                     } // If Loged out
                 } // End if check modelState
-                _logger.LogTrace("End log in on post.");
+                _logger.LogTrace("End login on post.");
                 return Page();
             } catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 TempData["Exception"] = message;
-                _logger.LogTrace("End log in on post.");
+                _logger.LogTrace("End login on post.");
                 return Page();
             } // End try catch
         } // End OnPostAsync

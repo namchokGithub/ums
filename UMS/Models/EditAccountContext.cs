@@ -21,7 +21,7 @@ namespace UMS.Models
             : base(options)
         {
             _logger = logger;
-            _logger.LogDebug("Edit Account Context.");
+            _logger.LogDebug("Start Edit Account Context.");
         } // End Constructor
 
         public DbSet<EditAccount> EditAccount { get; set; }

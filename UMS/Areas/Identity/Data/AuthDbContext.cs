@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using Org.BouncyCastle.Tsp;
 using UMS.Areas.Identity.Data;
 using UMS.Models;
 
@@ -24,7 +25,7 @@ namespace UMS.Data
             : base(options)
         {
             _logger = logger;
-            _logger.LogDebug("Auth Database Context.");
+            _logger.LogTrace("Start Auth Database Context.");
         } // End contructor
 
         /*
@@ -35,7 +36,7 @@ namespace UMS.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-
+            
             builder.Entity<ApplicationUser>(entity =>
                 {
                     entity.Property(e => e.Id).HasColumnName("acc_Id");
@@ -49,9 +50,20 @@ namespace UMS.Data
                     entity.Property(e => e.acc_Firstname).HasColumnName("acc_Firstname");
                     entity.Property(e => e.acc_Lastname).HasColumnName("acc_Lastname");
                     entity.Property(e => e.acc_IsActive).HasColumnName("acc_IsActive");
+
+                    entity.Property(e => e.Id).HasComment("User ID");
+                    entity.Property(e => e.UserName).HasComment("Username");
+                    entity.Property(e => e.NormalizedUserName).HasComment("Normalized UserName");
+                    entity.Property(e => e.PasswordHash).HasComment("Password hash");
+                    entity.Property(e => e.SecurityStamp).HasComment("Security Stamp");
+                    entity.Property(e => e.ConcurrencyStamp).HasComment("Concurrency Stamp");
+                    entity.Property(e => e.Email).HasComment("User email");
+                    entity.Property(e => e.NormalizedEmail).HasComment("Normalized user email");
+                    entity.Property(e => e.acc_Firstname).HasComment("Firstname");
+                    entity.Property(e => e.acc_Lastname).HasComment("Lastname");
+                    entity.Property(e => e.acc_IsActive).HasComment("Status of account");
                 }
             );
-
             builder.Entity<ApplicationUser>()
                 .Ignore(entity => entity.LockoutEnd)
                 .Ignore(entity => entity.LockoutEnabled)
@@ -61,6 +73,7 @@ namespace UMS.Data
                 .Ignore(entity => entity.AccessFailedCount)
                 .Ignore(entity => entity.PhoneNumberConfirmed)
                 .ToTable(name: "Account");
+            _logger.LogTrace("Creating applications user models.");
 
             builder.Entity<IdentityRole>().ToTable("Roles");
             builder.Entity<IdentityUserRole<string>>().ToTable("UserRoles");
@@ -68,17 +81,33 @@ namespace UMS.Data
             builder.Entity<IdentityUserToken<string>>().ToTable("UserTokens");
             builder.Entity<IdentityUserClaim<string>>().ToTable("UserClaims");
             builder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaims");
+            _logger.LogTrace("Creating Identity models.");
 
-            builder.Entity<Log>(entity => {
+            builder.Entity<Logs>(entity =>
+            {
                 entity.Property(e => e.log_Id).HasColumnName("log_Id");
                 entity.Property(e => e.log_datetime).HasColumnName("log_datetime");
+                entity.Property(e => e.log_datetime).HasColumnType("datetime");
+                entity.Property(e => e.log_level).HasColumnName("log_level");
+                entity.Property(e => e.log_logger).HasColumnName("log_logger");
+                entity.Property(e => e.log_user_identity).HasColumnName("log_user_identity");
+                entity.Property(e => e.log_mvc_action).HasColumnName("log_mvc_action");
+                entity.Property(e => e.log_filename).HasColumnName("log_filename");
+                entity.Property(e => e.log_linenumber).HasColumnName("log_linenumber");
+                entity.Property(e => e.log_message).HasColumnName("log_message");
+                entity.Property(e => e.log_exception).HasColumnName("log_exception");
+                entity.Property(e => e.log_datetime).HasComment("Date time");
+                entity.Property(e => e.log_level).HasComment("Level of log");
+                entity.Property(e => e.log_exception).HasComment("Exception");
+                entity.Property(e => e.log_logger).HasComment("A computer program to keep track of events.");
             });
 
-            builder.Entity<LogAccount>(entity => {
-                entity.Property(e => e.la_Id).HasColumnName("la_Id");
-                entity.Property(e => e.la_log_Id).HasColumnName("la_log_Id");
-                entity.Property(e => e.la_acc_Id).HasColumnName("la_acc_Id");
-            });
+            builder.Entity<Logs>()
+                .Ignore(e => e.log_date)
+                .Ignore(e => e.log_time);
+            _logger.LogTrace("Creating log models.");
+
+            _logger.LogTrace("End creating on model.");
         } // End OnModelCreating
     } // End AuthDbContext
 }

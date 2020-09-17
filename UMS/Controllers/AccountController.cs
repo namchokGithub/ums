@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
@@ -9,9 +10,9 @@ using UMS.Areas.Identity.Data;
 using static UMS.Areas.Identity.Pages.Account.LoginModel;
 
 /*
- * Name: HomeController.cs
+ * Name: AccountController.cs
  * Namespace: Controllers
- * Author: Wannapa
+ * Author: Wannapa Srijermtong
  */
 
 namespace UMS.Controllers
@@ -29,12 +30,12 @@ namespace UMS.Controllers
             try
             {
                 _logger = logger;
-                _logger.LogDebug(1, "NLog injected into AccountController.");
+                _logger.LogTrace("NLog injected into AccountController.");
                 _signInManager = signInManager;
-                _logger.LogDebug(1, "Sign In Manager injected into AccountController.");
+                _logger.LogTrace("Sign In Manager injected into AccountController.");
                 _userManager = userManager;
-                _logger.LogDebug(1, "User Manager manager injected into AccountController.");
-                _logger.LogTrace("End AccountController Constructor.");
+                _logger.LogTrace("User Manager manager injected into AccountController.");
+                _logger.LogTrace("Start AccountController Constructor.");
             }
             catch (Exception e)
             {
@@ -69,7 +70,7 @@ namespace UMS.Controllers
         /*
          * Name: InputModel (Overload)
          * Parameter: login(InputModel)
-         * Description: for log in
+         * Description: for login
          */
         [HttpPost]
         [AllowAnonymous]
@@ -107,7 +108,7 @@ namespace UMS.Controllers
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 TempData["Exception"] = message;
                 _logger.LogTrace("End Input Model.");
-                return RedirectToPage("./Login");
+                return RedirectToPage("/Login");
             } // End try catch
         } // End InputModel
 
@@ -122,14 +123,14 @@ namespace UMS.Controllers
             {
                 await _signInManager.SignOutAsync();
                 _logger.LogInformation("Logged out.");
-                return RedirectToPage("./Login");
+                return RedirectToPage("/Login");
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 TempData["Exception"] = message;
-                return RedirectToPage("./Login");
+                return RedirectToPage("/Login");
             } // End try catch
         } // End Logout
 
@@ -167,7 +168,7 @@ namespace UMS.Controllers
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 TempData["Exception"] = message;
                 _logger.LogTrace("End Google Login.");
-                return RedirectToPage("./Login");
+                return RedirectToPage("/Login");
             } // End try catch
             
         } // End GoogleLogin
@@ -184,15 +185,16 @@ namespace UMS.Controllers
             {
                 _logger.LogTrace("Start Google Response.");
                 ExternalLoginInfo info = await _signInManager.GetExternalLoginInfoAsync();
-                _logger.LogDebug("Get external log in info.");
+                _logger.LogDebug("Get external login info.");
                 if (info == null)
                 {
                     _logger.LogWarning("User info is null.");
                     _logger.LogTrace("End Google Response.");
                     return RedirectToAction(nameof(InputModel));
                 }
-                _logger.LogDebug("Getting external log in and sign in.");
+                _logger.LogDebug("Getting external login and sign in.");
                 var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, false);
+                _logger.LogDebug($"Result: {result}");
                 _logger.LogTrace("Creating user info.");
                 string[] userInfo = {
                     info.Principal.FindFirst(ClaimTypes.Name).Value,
@@ -203,7 +205,7 @@ namespace UMS.Controllers
 
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("Log In Successfully.");
+                    _logger.LogInformation("login Successfully.");
                     _logger.LogTrace("End Google Response.");
                     return RedirectToAction("Index", "Home");
                 }// If had account
@@ -222,6 +224,8 @@ namespace UMS.Controllers
                     IdentityResult identResult = await _userManager.CreateAsync(user);
                     if (identResult.Succeeded)
                     {
+                        ApplicationUser userId = await _userManager.FindByEmailAsync(user.Email);
+                        await _userManager.AddToRoleAsync(userId, "User");
                         _logger.LogInformation("Create user succeeded.");
                         _logger.LogDebug("Adding login.");
                         identResult = await _userManager.AddLoginAsync(user, info);
@@ -233,9 +237,22 @@ namespace UMS.Controllers
                             _logger.LogTrace("End Google Response.");
                             return RedirectToAction("Index", "Home");
                         }
-                    } // If success add login info
+                    }
+                    _logger.LogError(identResult.Errors.First().Description.ToString());
+                    string message = @"Swal.fire({
+                                        title: 'The "+ user.Email + @" is already registered.',
+                                        text: 'Would you like to try login instead?',
+                                        icon: 'warning',
+                                        showCancelButton: false,
+                                        confirmButtonColor: '#3085d6',
+                                        confirmButtonText: 'Login'
+                                    }).then((res) => {
+                                        console.log('Confirmed')
+                                        window.location.href = '/'
+                                    })";
+                    TempData["Exception"] = message;
                     _logger.LogTrace("End Google Response.");
-                    return AccessDenied();
+                    return View();
                 } // End if signed in success
             }
             catch (Exception e)
@@ -244,7 +261,7 @@ namespace UMS.Controllers
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 TempData["Exception"] = message;
                 _logger.LogTrace("End Google Response.");
-                return RedirectToPage("./Login");
+                return RedirectToPage("/Login");
             } // End try catch
         } // End GoogleResponse
 
@@ -271,7 +288,7 @@ namespace UMS.Controllers
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 TempData["Exception"] = message;
                 _logger.LogTrace("End Facebook Login");
-                return RedirectToPage("./Login");
+                return RedirectToPage("/Login");
             } // End try catch
         } // End FacebookLogin
 
@@ -294,8 +311,9 @@ namespace UMS.Controllers
                     _logger.LogTrace("End Facebook Response.");
                     return RedirectToAction(nameof(InputModel));
                 }
-                _logger.LogDebug("Getting result external log in and sign in.");
+                _logger.LogDebug("Getting result external login and sign in.");
                 var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, false);
+                _logger.LogDebug($"Result: {result}");
                 _logger.LogTrace("Craete user info.");
                 string[] userInfo = {
                     info.Principal.FindFirst(ClaimTypes.Name).Value,
@@ -305,7 +323,7 @@ namespace UMS.Controllers
                 }; // Crate new user info
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("Log in succeeded.");
+                    _logger.LogInformation("login succeeded.");
                     _logger.LogTrace("End Facebook Response.");
                     return RedirectToAction("Index", "Home");
                 }
@@ -324,6 +342,8 @@ namespace UMS.Controllers
                     IdentityResult identResult = await _userManager.CreateAsync(user);
                     if (identResult.Succeeded)
                     {
+                        ApplicationUser userId = await _userManager.FindByEmailAsync(user.Email);
+                        await _userManager.AddToRoleAsync(userId, "User");
                         _logger.LogTrace("Create user succeeded.");
                         _logger.LogDebug("Craeting user.");
                         identResult = await _userManager.AddLoginAsync(user, info);
@@ -331,13 +351,26 @@ namespace UMS.Controllers
                         {
                             _logger.LogDebug("Signing in.");
                             await _signInManager.SignInAsync(user, false);
-                            _logger.LogInformation("Add log in succeeded.");
+                            _logger.LogInformation("Add login succeeded.");
                             _logger.LogTrace("End Facebook Response.");
                             return RedirectToAction("Index", "Home");
                         }
-                    } // create and add login info
+                    } // If create and add login info
+                    _logger.LogError(identResult.Errors.First().Description.ToString());
+                    string message = @"Swal.fire({
+                                        title: 'The " + user.Email + @" is already registered.',
+                                        text: 'Would you like to try login instead?',
+                                        icon: 'warning',
+                                        showCancelButton: false,
+                                        confirmButtonColor: '#3085d6',
+                                        confirmButtonText: 'Login'
+                                    }).then((res) => {
+                                        console.log('Confirmed')
+                                        window.location.href = '/'
+                                    })";
+                    TempData["Exception"] = message;
                     _logger.LogTrace("End Facebook Response.");
-                    return AccessDenied();
+                    return View();
                 } // End if signed in success
             }
             catch (Exception e)
@@ -346,7 +379,7 @@ namespace UMS.Controllers
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 TempData["Exception"] = message;
                 _logger.LogTrace("End Facebook Response.");
-                return RedirectToPage("./Login");
+                return RedirectToPage("/Login");
             } // End try catch
         } // End FacebookResponse
 
@@ -373,7 +406,7 @@ namespace UMS.Controllers
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 TempData["Exception"] = message;
                 _logger.LogTrace("End Microsoft Login.");
-                return RedirectToPage("./Login");
+                return RedirectToPage("/Login");
             } // End try catch
         } // End MicrosoftLogin
 
@@ -389,15 +422,16 @@ namespace UMS.Controllers
             {
                 _logger.LogTrace("Start Microsoft Response.");
                 ExternalLoginInfo info = await _signInManager.GetExternalLoginInfoAsync();
-                _logger.LogDebug("Get external log in.");
+                _logger.LogDebug("Get external login.");
                 if (info == null)
                 {
                     _logger.LogWarning("User info is null.");
                     _logger.LogTrace("End Microsoft Response.");
                     return RedirectToAction(nameof(InputModel));
                 }
-                _logger.LogDebug("Getting External log in and sign in.");
+                _logger.LogDebug("Getting External login and sign in.");
                 var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, false);
+                _logger.LogDebug($"Result: {result}");
                 _logger.LogTrace("Creating user info object.");
                 string[] userInfo = {
                     info.Principal.FindFirst(ClaimTypes.Name).Value,
@@ -407,7 +441,7 @@ namespace UMS.Controllers
                 }; // Create new user info
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("Log in succeeded.");
+                    _logger.LogInformation("login succeeded.");
                     _logger.LogTrace("End Microsoft Response.");
                     return RedirectToAction("Index", "Home");
                 }
@@ -429,18 +463,33 @@ namespace UMS.Controllers
                     {
                         _logger.LogInformation("Create user succeeded.");
                         identResult = await _userManager.AddLoginAsync(user, info);
-                        _logger.LogDebug("Adding log in.");
+                        _logger.LogDebug("Adding login.");
                         if (identResult.Succeeded)
                         {
+                            ApplicationUser userId = await _userManager.FindByEmailAsync(user.Email);
+                            await _userManager.AddToRoleAsync(userId, "User");
                             _logger.LogDebug("Singing in.");
                             await _signInManager.SignInAsync(user, false);
-                            _logger.LogInformation("Add log in succeeded.");
+                            _logger.LogInformation("Add login succeeded.");
                             _logger.LogTrace("End Microsoft Response.");
                             return RedirectToAction("Index", "Home");
                         }
                     } // Crate user and add login info
+                    _logger.LogError(identResult.Errors.First().Description.ToString());
+                    string message = @"Swal.fire({
+                                        title: 'The " + user.Email + @" is already registered.',
+                                        text: 'Would you like to try login instead?',
+                                        icon: 'warning',
+                                        showCancelButton: false,
+                                        confirmButtonColor: '#3085d6',
+                                        confirmButtonText: 'Login'
+                                    }).then((res) => {
+                                        console.log('Confirmed')
+                                        window.location.href = '/'
+                                    })";
+                    TempData["Exception"] = message;
                     _logger.LogTrace("End Microsoft Response.");
-                    return AccessDenied();
+                    return View();
                 } // End if signed in success
             }
             catch (Exception e)
@@ -449,7 +498,7 @@ namespace UMS.Controllers
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 TempData["Exception"] = message;
                 _logger.LogTrace("End Microsoft Response.");
-                return RedirectToPage("./Login");
+                return RedirectToPage("/Login");
             } // End try catch
         } // End MicrosoftResponse
     } // End AccountController

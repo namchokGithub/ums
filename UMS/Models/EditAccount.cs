@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 /*
  * Namspace: ~/Models/EditAccount
@@ -22,18 +17,18 @@ namespace UMS.Models
 
         public string acc_Email { set; get; } // อีเมล
 
-        [Required(ErrorMessage = "Please enter firstname")]
-        [DataType(DataType.Text, ErrorMessage = "The firstname have only text. No number, digit and special charactor")]
+        [Required(ErrorMessage = "The First name can not be blank and must only character.")]
+        [DataType(DataType.Text, ErrorMessage = "The First name can not be blank and must only character.")]
         [Display(Name = "First Name")]
         [RegularExpression(@"^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$"
-                , ErrorMessage = "The first name have only text. No number no space digit and special charactor")]
+                , ErrorMessage = "The First name can not be blank and must only character.")]
         public string acc_Firstname { set; get; } // ชื่อจริง
 
-        [Required(ErrorMessage = "Please enter lastname")]
-        [DataType(DataType.Text, ErrorMessage = "The lastname have only text. No number no space, digit and special charactor")]
+        [Required(ErrorMessage = "The Last name can not be blank and must only character.")]
+        [DataType(DataType.Text, ErrorMessage = "The Last name can not be blank and must only character.")]
         [Display(Name = "Last Name")]
         [RegularExpression(@"^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$"
-                , ErrorMessage = "The last name have only text. No number no space digit and special charactor")]
+                , ErrorMessage = "The Last name can not be blank and must only character.")]
         public string acc_Lastname { set; get; } // นามสกุล
 
         public char acc_IsActive { set; get; } // สถานะของบัญชีผู้ใช้

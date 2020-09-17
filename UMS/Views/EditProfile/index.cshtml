@@ -37,39 +37,52 @@
                 </div>
 
                 <!--Start Input change password-->
-                <div id="acc_OldPassword" class="input-group mb-3 col-12 d-none">
-                    <input class="form-control" id="acc_Old" type="password" name="acc_OldPassword" placeholder="Old password" />
-                    <span id="validation_acc_OldPassword" class="text-danger col-12"></span>
+                <div id="acc_CurrentPassword" class="input-group mb-3 col-12 d-none">
+                    <input class="form-control" style="border-right:0px;" id="acc_Current" type="password" name="acc_CurrentPassword" placeholder="Current password" />
+                    <div class="input-group-append" style="border-left:0px; background-color:white;" onclick="toggleCurrentPasword()">
+                        <div class="input-group-text" style="border-left:0px; background-color:white;">
+                            <span id="icon_CurrentPassword" class="fas fa-eye-slash" style="cursor:pointer"></span>
+                        </div>
+                    </div>
+                    <span id="validation_acc_CurrentPassword" class="text-danger col-12"></span>
                 </div>
                 <div id="acc_NewPassword" class="input-group mb-3 col-12 d-none">
-                    <input class="form-control" id="acc_New" type="password" name="acc_NewPassword" placeholder="New password" />
+                    <input class="form-control" style="border-right:0px;" id="acc_New" type="password" name="acc_NewPassword" placeholder="New password" />
+                    <div class="input-group-append" style="border-left:0px; background-color:white;" onclick="toggleNewPasword()">
+                        <div class="input-group-text" style="border-left:0px; background-color:white;">
+                            <span id="icon_NewPassword" class="fas fa-eye-slash" style="cursor:pointer"></span>
+                        </div>
+                    </div>
                     <span id="validation_acc_NewPassword" class="text-danger col-12"></span>
                 </div>
                 <div id="acc_ConfirmPassword" class="input-group mb-3 col-12 d-none">
-                    <input class="form-control" id="acc_Con" type="password" name="acc_ConfirmPassword" placeholder="Confirm password" />
+                    <input class="form-control" style="border-right:0px;" id="acc_Con" type="password" name="acc_ConfirmPassword" placeholder="Confirm password" />
+                    <div class="input-group-append" style="border-left:0px; background-color:white;" onclick="toggleConfirmPasword()" >
+                        <div class="input-group-text" style="border-left:0px; background-color:white;">
+                            <span id="icon_ConfirmPassword" class="fas fa-eye-slash" style="cursor:pointer"></span>
+                        </div>
+                    </div>
                     <span id="validation_acc_ConfirmPassword" class="text-danger col-12"></span>
                 </div>
                 <!--End Input change password-->
-                <!--Start Button save password-->
-                <button id="btn_SavePassword" type="submit" class="btn btn-success btn-block d-none">Save</button>
-                <!--End Button save password-->
+
                 <!--End Input edit profile-->
                 <!--Start Button save profile-->
                 <div class="row">
                     <!--If Login ProviderLogin is Email can change password-->
                     @if (editProfile.acc_TypeAccoutname == "Email")
                     {
-                        <div class="col-8">
+                        <div class="col-9">
                             <p id="href_ChangePassword">Change password</p>
                         </div>
-                        <div class="col-4">
-                            <button id="btn_SaveProfile" type="submit" class="btn btn-success btn-block float-right">Save</button>
+                        <div class="col-3">
+                            <button id="btn_SaveProfile" type="button" class="btn btn-success btn-block float-right" onclick="SaveProfile()">Save</button>
                         </div>
                     }
                     else
                     {
                         <div class="col-12">
-                            <button id="btn_SaveProfile" type="submit" class="btn btn-success btn-block float-right">Save</button>
+                            <button id="btn_SaveProfile" type="button" class="btn btn-success btn-block float-right" onclick="SaveProfile()">Save</button>
                         </div>
                     }
                 </div>
@@ -78,26 +91,187 @@
             <!--End Form profile-->
         </div>
         <!--End Card body-->
+
+        <!--Start Card footer-->
+        <div id="card_Footer" class="card-footer d-none">
+            <button id="btn_NotSavePassword" type="button" class="btn btn-secondary float-left d-none">Back</button>
+            <button id="btn_SavePassword" type="button" class="btn btn-success float-right d-none" onclick="SavePassword()">Save</button>
+        </div>
+        <!--End Card footer-->
+
     </div>
-    <!--Stop Card-->
+    <!--End Card-->
 </div>
 
 <!--Start Script-->
 <script>
+    //Regular expression
+    var RegExName = /^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$/;
+    var RegExPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[#$!%@@*?&])[A-Za-z0-9#$!%@@*?&]+$/;
+
+    /*
+    * Name: toggleCurrentPasword()
+    * Parameter: none
+    * Author: Wannapa Srijermtong
+    * Description: For change type of current password.
+    */
+    function toggleCurrentPasword() {
+        // Get id from input
+        var password = document.getElementById("acc_Current")
+        if (password.type === "password") {
+            document.getElementById("icon_CurrentPassword").classList.remove('fa-eye-slash')
+            document.getElementById("icon_CurrentPassword").classList.add('fa-eye')
+            password.type = "text";
+        } else {
+            document.getElementById("icon_CurrentPassword").classList.remove('fa-eye')
+            document.getElementById("icon_CurrentPassword").classList.add('fa-eye-slash')
+            password.type = "password";
+        }
+    }
+
+    /*
+    * Name: toggleNewPasword()
+    * Parameter: none
+    * Author: Wannapa Srijermtong
+    * Description: For change type of new password.
+    */
+    function toggleNewPasword() {
+        // Get id from input
+        var password = document.getElementById("acc_New")
+        if (password.type === "password") {
+            document.getElementById("icon_NewPassword").classList.remove('fa-eye-slash')
+            document.getElementById("icon_NewPassword").classList.add('fa-eye')
+            password.type = "text";
+        } else {
+            document.getElementById("icon_NewPassword").classList.remove('fa-eye')
+            document.getElementById("icon_NewPassword").classList.add('fa-eye-slash')
+            password.type = "password";
+        }
+    }
+
+    /*
+    * Name: toggleConfirmPasword()
+    * Parameter: none
+    * Author: Wannapa Srijermtong
+    * Description: For change type of confirm password.
+    */
+    function toggleConfirmPasword() {
+        // Get id from input
+        var password = document.getElementById("acc_Con")
+        if (password.type === "password") {
+            document.getElementById("icon_ConfirmPassword").classList.remove('fa-eye-slash')
+            document.getElementById("icon_ConfirmPassword").classList.add('fa-eye')
+            password.type = "text";
+        } else {
+            document.getElementById("icon_ConfirmPassword").classList.remove('fa-eye')
+            document.getElementById("icon_ConfirmPassword").classList.add('fa-eye-slash')
+            password.type = "password";
+        }
+    }
+
+    /*
+    * Name: SaveProfile
+    * Parameter: none
+    * Author: Wannapa Srijermtong
+    * Description: Check validation acc_Firstname and acc_Lastname from input.
+    */
+    function SaveProfile() {
+        // Get id from input
+        var acc_Firstname = $('#acc_Fname').val();
+        var acc_Lastname = $('#acc_Lname').val();
+
+        // Validation if acc_Firstname do not math with Regular expression.
+        if (RegExName.test(acc_Firstname) && acc_Firstname != "" && RegExName.test(acc_Lastname) && acc_Lastname != "") {
+            $("#FormProfile").submit();
+            $('#validation_acc_Firstname').html('');
+            $('#validation_acc_Lastname').html('');
+        } else {
+            if (!RegExName.test(acc_Firstname)) {
+                $('#validation_acc_Firstname').html('The First name can not be blank and must only character.');
+                toastr.warning('The First name can not be blank and must only character.')
+            }
+            else if (!RegExName.test(acc_Lastname)) {
+                $('#validation_acc_Lastname').html('The Last name can not be blank and must only character.');
+                toastr.warning('The Last name can not be blank and must only character.')
+            }
+        }
+    }
+
+    /*
+    * Name: SavePassword
+    * Parameter: none
+    * Author: Wannapa Srijermtong
+    * Description: Check validation acc_Firstname, acc_Lastname, acc_CurrentPassword, acc_NewPassword and acc_ConfirmPassword from input.
+    */
+    function SavePassword() {
+        // Get id from input
+        var acc_Firstname = $('#acc_Fname').val();
+        var acc_Lastname = $('#acc_Lname').val();
+        var acc_CurrentPassword = $('#acc_Current').val();
+        var acc_NewPassword = $('#acc_New').val();
+        var acc_ConfirmPassword = $('#acc_Con').val();
+
+        // Validation if acc_Firstname do not math with Regular expression.
+        if (RegExName.test(acc_Firstname) && acc_Firstname != ""
+            && RegExName.test(acc_Lastname) && acc_Lastname != ""
+            && RegExPassword.test(acc_CurrentPassword) && acc_CurrentPassword != ""
+            && RegExPassword.test(acc_NewPassword) && acc_NewPassword != ""
+            && RegExPassword.test(acc_ConfirmPassword) && acc_ConfirmPassword != ""
+        ){
+            $("#FormProfile").submit();
+            $('#validation_acc_Firstname').html('');
+            $('#validation_acc_Lastname').html('');
+            $('#validation_acc_CurrentPassword').html('');
+            $('#validation_acc_NewPassword').html('');
+            $('#validation_acc_ConfirmPassword').html('');
+        } else {
+            if (!RegExName.test(acc_Firstname)) {
+                $('#validation_acc_Firstname').html('The First name can not be blank and must only character.');
+                toastr.warning('The First name can not be blank and must only character.')
+            }
+            else if (!RegExName.test(acc_Lastname)) {
+                $('#validation_acc_Lastname').html('The Last name can not be blank and must only character.');
+                toastr.warning('The Last name can not be blank and must only character.')
+            }
+            else if (!RegExPassword.test(acc_CurrentPassword)) {
+                $('#validation_acc_CurrentPassword').html('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
+                toastr.warning('The current password must contain at least 1 uppercase, 1 lowercase, 1 digit and 1 special character.')
+            }
+            else if (!RegExPassword.test(acc_NewPassword)) {
+                $('#validation_acc_NewPassword').html('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
+                toastr.warning('The new password must contain at least 1 uppercase, 1 lowercase, 1 digit and 1 special character.')
+            }
+            else if (!RegExPassword.test(acc_ConfirmPassword)) {
+                $('#validation_acc_ConfirmPassword').html('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
+                toastr.warning('The confirm password must contain at least 1 uppercase, 1 lowercase, 1 digit and 1 special character.')
+            }
+        }
+    }
+
     $(document).ready(function () {
         //Hide href and button SaveProfile for Change password
         $("#href_ChangePassword").click(function () {
             $("#href_ChangePassword").hide();
             $("#btn_SaveProfile").hide();
-            $("#acc_OldPassword").removeClass('d-none');
+            $("#card_Footer").removeClass('d-none');
+            $("#acc_CurrentPassword").removeClass('d-none');
             $("#acc_NewPassword").removeClass('d-none');
             $("#acc_ConfirmPassword").removeClass('d-none');
             $("#btn_SavePassword").removeClass('d-none');
+            $("#btn_NotSavePassword").removeClass('d-none');
         });
 
-        //Regular expression
-        var RegExName = /^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$/;
-        var RegExPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$!%*?&])[A-Za-z0-9$!%*?&]+$/;
+        //Show href and button SaveProfile for Change password
+        $('#btn_NotSavePassword').on('click', () => {
+            $("#href_ChangePassword").show();
+            $("#btn_SaveProfile").show();
+            $("#card_Footer").addClass('d-none');
+            $("#btn_NotSavePassword").addClass('d-none');
+            $("#acc_CurrentPassword").addClass('d-none');
+            $("#acc_NewPassword").addClass('d-none');
+            $("#acc_ConfirmPassword").addClass('d-none');
+            $("#btn_SavePassword").addClass('d-none');
+        })
 
         //Validation for acc_Firstname
         $("#acc_Firstname").keyup(function (e) {
@@ -108,7 +282,7 @@
 
             // Validation if acc_Firstname do not math with Regular expression.
             if(!RegExName.test(acc_Firstname)) {
-                $('#validation_acc_Firstname').html('The First name must only character.');
+                $('#validation_acc_Firstname').html('The First name can not be blank and must only character.');
             } else {
                 $('#validation_acc_Firstname').html('');
             }
@@ -123,7 +297,7 @@
 
             // Validation if acc_Lastname do not math with Regular expression.
             if(!RegExName.test(acc_Lastname)) {
-                $('#validation_acc_Lastname').html('The Last name must contain only character.');
+                $('#validation_acc_Lastname').html('The Last name can not be blank and must only character.');
             } else {
                 $('#validation_acc_Lastname').html('');
             }
@@ -139,24 +313,24 @@
 
             // Validation if acc_NewPassword do not match with acc_ConfirmPassword.
             if (acc_NewPassword != acc_ConfirmPassword) {
-                $('#validation_acc_ConfirmPassword').html('The password and confirmation password do not match.');
+                $('#validation_acc_ConfirmPassword').html('The new password and confirmation password do not match.');
             } else {
                 $('#validation_acc_ConfirmPassword').html('');
             }
         });
 
-        //Validation for acc_OldPassword
-        $("#acc_OldPassword").keyup(function (e) {
+        //Validation for acc_CurrentPassword
+        $("#acc_CurrentPassword").keyup(function (e) {
             e.preventDefault();
 
             // Get id from input
-            var acc_OldPassword = $('#acc_Old').val();
+            var acc_CurrentPassword = $('#acc_Current').val();
 
-            // Validation if acc_OldPassword do not math with Regular expression.
-            if (!RegExPassword.test(acc_OldPassword)) {
-                $('#validation_acc_OldPassword').html('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
+            // Validation if acc_CurrentPassword do not math with Regular expression.
+            if (!RegExPassword.test(acc_CurrentPassword)) {
+                $('#validation_acc_CurrentPassword').html('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
             } else {
-                $('#validation_acc_OldPassword').html('');
+                $('#validation_acc_CurrentPassword').html('');
             }
         });
 
@@ -175,7 +349,7 @@
             }
         });
 
-        // Toastr if old password is not match with password hash in database.
+        // Toastr if current password is not match with password hash in database.
         @if (TempData["EditProfileErrorResult"] != null) { @Html.Raw(TempData["EditProfileErrorResult"])}
         // Toastr if EditProfile (Firstname, Lastname and Change password) Success.
         @if (TempData["EditProfileSuccessResult"] != null) { @Html.Raw(TempData["EditProfileSuccessResult"])}
@@ -184,14 +358,17 @@
     })
 </script>
 <!--End Script-->
+
 <!--Start Style-->
 <style>
+    @*Style for hyperlink Change password*@
     #href_ChangePassword {
         text-align: left;
         color: blue;
         cursor: pointer;
     }
 
+    @*Style for validation*@
     .text-danger {
         text-align: left;
     }

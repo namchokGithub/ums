@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Security.Claims;
-using System.Threading.Tasks;
-using EmailService;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -30,7 +26,7 @@ namespace UMS.Controllers
         /*
          * Name: HomeController(Controller)
          * Parameter: emailSender(IEmailSender), logger(ILogger<HomeController>), userManager(UserManager<ApplicationUser)
-         * Author: Wannapa
+         * Author: Wannapa Srijermtong
          * Description: First page of UMS
          */
         public HomeController(ILogger<HomeController> logger, UserManager<ApplicationUser> userManager)
@@ -38,10 +34,10 @@ namespace UMS.Controllers
             try
             {
                 _logger = logger;
-                _logger.LogDebug(1, "NLog injected into HomeController.");
+                _logger.LogTrace("NLog injected into HomeController.");
                 _userManager = userManager;
-                _logger.LogDebug(1, "User manager injected into HomeController.");
-                _logger.LogTrace("End HomeController Constructor.");
+                _logger.LogTrace("User manager injected into HomeController.");
+                _logger.LogTrace("Start HomeController Constructor.");
             }
             catch (Exception e)
             {
@@ -53,7 +49,7 @@ namespace UMS.Controllers
         /*
          * Name: Index
          * Parameter: none
-         * Author: Wannapa
+         * Author: Wannapa Srijermtong
          * Description: First page of UMS
          */
         public IActionResult Index()
@@ -61,7 +57,7 @@ namespace UMS.Controllers
             try
             {
                 _logger.LogTrace("Start Index.");
-                _logger.LogInformation("Welcome to UMS.");
+                _logger.LogInformation($"Welcome {User.Identity.Name} to UMS.");
                 // Console.WriteLine(User.IsInRole("Admin")); // Check Role of users
                 TempData["UpdateResult"] = null;
                 // Get ID of user
