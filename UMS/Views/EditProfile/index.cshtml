@@ -159,12 +159,12 @@
         // Get id from input
         var password = document.getElementById("acc_Con")
         if (password.type === "password") {
-            document.getElementById("icon_NewPassword").classList.remove('fa-eye-slash')
-            document.getElementById("icon_NewPassword").classList.add('fa-eye')
+            document.getElementById("icon_ConfirmPassword").classList.remove('fa-eye-slash')
+            document.getElementById("icon_ConfirmPassword").classList.add('fa-eye')
             password.type = "text";
         } else {
-            document.getElementById("icon_NewPassword").classList.remove('fa-eye')
-            document.getElementById("icon_NewPassword").classList.add('fa-eye-slash')
+            document.getElementById("icon_ConfirmPassword").classList.remove('fa-eye')
+            document.getElementById("icon_ConfirmPassword").classList.add('fa-eye-slash')
             password.type = "password";
         }
     }
