@@ -36,10 +36,10 @@
                     <!--Start Input password-->
                     <span asp-validation-for="Input.Password" class="text-danger small"></span>
                     <div class="input-group mb-3">
-                        <input asp-for="Input.Password" class="form-control" placeholder="Password" />
+                        <input type="password" asp-for="Input.Password" id="acc_Password" class="form-control" placeholder="Password" />
                         <div class="input-group-append">
                             <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
+                                <span id="icon_Password" class="fas fa-eye-slash" style="cursor:pointer" onclick="togglePasword()"></span>
                             </div>
                         </div>
                     </div>
@@ -93,12 +93,33 @@
     <!--Start Script-->
     @section Scripts {
         <partial name="_ValidationScriptsPartial" />    
-        <script>
-            // Check is has exception
-            @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ }
-            @if (TempData["ExceptionLoggedOut"] != null) { @Html.Raw(TempData["ExceptionLoggedOut"]) /* Swal funciton */ }
-        </script>
     }
+<script>
+        // Check is has exception
+        @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ }
+        @if (TempData["ExceptionLoggedOut"] != null) { @Html.Raw(TempData["ExceptionLoggedOut"]) /* Swal funciton */ }
+
+        /*
+        * Name: togglePasword()
+        * Parameter: none
+        * Author: Wannapa Srijermtong
+        * Description: For change type of password.
+        */
+        function togglePasword() {
+            // Get id from input
+            var password = document.getElementById("acc_Password")
+            if (password.type === "password") {
+                document.getElementById("icon_Password").classList.remove('fa-eye-slash')
+                document.getElementById("icon_Password").classList.add('fa-eye')
+                password.type = "text";
+            } else {
+                document.getElementById("icon_Password").classList.remove('fa-eye')
+                document.getElementById("icon_Password").classList.add('fa-eye-slash')
+                password.type = "password";
+            }
+        }
+
+</script>
     <!--End Script-->
 
 </div>
