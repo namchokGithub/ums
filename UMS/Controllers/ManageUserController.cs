@@ -11,6 +11,7 @@ using System.Security.Claims;
 using System.Data;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.CodeAnalysis.FlowAnalysis;
 
 /*
  * Name: ManageUserController.cs
@@ -128,7 +129,7 @@ namespace UMS.Controllers
                     messages = message,
                     text = e.Message
                 }; // Object for set alert
-                _logger.LogDebug("Create new objectJSON.");
+                _logger.LogTrace("Create new objectJSON.");
                 _logger.LogTrace("End get user.");
                 return new JsonResult(er);
             } // End try catch
@@ -248,22 +249,23 @@ namespace UMS.Controllers
         } // End deleteUser
 
         /*
-         * Name: checkUserExist
-         * Parameter: user(string)
+         * Name: CheckUserExist
+         * Parameter: userStr(string)
          * Author: Namchok Singhachai
          * Description: Check if user is exist and return 1
          */
         [AllowAnonymous] // For register
-        public int checkUserExist(string userStr = "")
+        public int CheckUserExist(string userStr = "", string status = "Y")
         {
             try
             {
                 _logger.LogTrace("Start check user is exist.");
-                // Set parameter for get value
-                var checkExits = new SqlParameter("@returnVal", SqlDbType.Int);
-                checkExits.Direction = ParameterDirection.Output;
-                // Return value from sture procudure
-                var sqlText = $"EXEC @returnVal=[dbo].ums_Check_user '{userStr}'";
+                if (userStr == null) throw new Exception("Calling a method on a null object reference.");
+                var checkExits = new SqlParameter("@returnVal", SqlDbType.Int)
+                {
+                    Direction = ParameterDirection.Output
+                }; // Set parameter for get value
+                var sqlText = $"EXEC @returnVal=[dbo].ums_Check_user '{userStr}', '{status}'";// Return value from sture procudure
                 _accountContext.Database.ExecuteSqlRaw(sqlText, checkExits);
                 _logger.LogDebug("Check user is exist.");
                 var result = false;
@@ -282,7 +284,7 @@ namespace UMS.Controllers
                         TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                     } // End try catch
                 } // Check if check succeeded
-
+                _logger.LogTrace($"User is exist {(int)checkExits.Value} items.");
                 _logger.LogTrace("End check user is exist.");
                 return (int)checkExits.Value;
             }
@@ -294,7 +296,52 @@ namespace UMS.Controllers
                 _logger.LogTrace("End check user is exist.");
                 return 0;
             } // End try catch
-        } // End checkUserExist
+        } // End CheckUserExist
+
+        /*
+         * Name: GetStatusUser
+         * Parameter: username(string)
+         * Author: Namchok Singhachai
+         * Description: Get status of user and check if exist.
+         */
+        [AllowAnonymous] // For register
+        public JsonResult GetStatusUser(string username = "")
+        {
+            try
+            {
+                _logger.LogTrace("Start Get status user.");
+                if (username == null) throw new Exception("Calling a method on a null object reference.");
+                var status = new SqlParameter("@paramout_status", SqlDbType.Int)
+                {
+                    IsNullable = true,
+                    Direction = ParameterDirection.Output,
+                    Size = 10,
+                    Value = DBNull.Value
+                }; // Set parameter for get value
+                string sqlGetStatusUser = $@"EXEC @paramout_status=[dbo].ums_Get_status_user '{username}'";
+                _logger.LogTrace($"Executing sql stored procedure ({sqlGetStatusUser}).");
+                _accountContext.Database.ExecuteSqlRaw(sqlGetStatusUser, status);
+                if (status.Value == null) throw new Exception("Calling a method on a null object reference.");
+                if (!int.TryParse(status.Value.ToString(), out _)) throw new Exception("Uncorrect type.");
+                if((int)status.Value == 1) status.Value = "ACTIVE";
+                else if ((int)status.Value == 0) status.Value = "INACTIVE";
+                _logger.LogTrace("End Get status user.");
+                return new JsonResult(status.Value);
+            } catch (Exception e)
+            {
+                _logger.LogError(e.Message.ToString());
+                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
+                var er = new objectJSON
+                {
+                    condition = "error",
+                    messages = message,
+                    text = e.Message
+                }; // Object for set alert
+                _logger.LogTrace(message: "Create new objectJSON.");
+                _logger.LogTrace("End Get status user.");
+                return new JsonResult(er);
+            }
+        } // End GetStatusUser
 
         /*
          * Name: objectJSON
