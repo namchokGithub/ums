@@ -23,7 +23,7 @@ namespace UMS.Areas.Identity.Data
         [Column(TypeName = "nvarchar(256)")]
         public string acc_Lastname { set; get; }
 
-        [Column(TypeName = "char(10)")]
+        [Column(TypeName = "char(1)")]
         public char acc_IsActive { set; get; } // For check status user
     } // End ApplicationUser
 }

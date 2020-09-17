@@ -142,14 +142,27 @@ var ums_Get_status_user = @"-- =============================================
                                             FROM [dbo].[Account]
                                             WHERE [dbo].[Account].acc_User = @param_user)
                                 BEGIN
-                                    SELECT [dbo].[Account].acc_IsActive
-                                    FROM [dbo].[Account]
-                                    WHERE [dbo].[Account].acc_User = @param_user
+                                    IF (SELECT [dbo].[Account].acc_IsActive
+                                            FROM [dbo].[Account]
+                                            WHERE [dbo].[Account].acc_User = @param_user) = 'Y'
+                                        BEGIN
+                                            RETURN 1;
+                                        END
+                                    ELSE IF (SELECT [dbo].[Account].acc_IsActive
+                                            FROM [dbo].[Account]
+                                            WHERE [dbo].[Account].acc_User = @param_user) = 'N'
+                                        BEGIN
+                                            RETURN 0;
+                                        END
+                                    ELSE
+                                        BEGIN
+                                            RETURN 9;
+                                        END	
                                 END
                                 ELSE
-                                BEGIN
-                                    SELECT 'X';
-                                END
+                                    BEGIN
+                                        RETURN 9;
+                                    END	
                             END";
 var ums_Get_all_user = @"-- =============================================
                         -- Author:		Namchok Singhachai

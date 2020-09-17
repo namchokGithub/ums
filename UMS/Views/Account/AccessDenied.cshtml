@@ -1,15 +1,14 @@
-﻿@page
-@model AccessDeniedModel
+﻿
 @{
     ViewData["Title"] = "Access Denied";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <!--
-    Namespace: ~/Areas/Identity/Pages/Account/Access Denied.cshtml
+    Namespace: ~/Views/Account/AccessDenied.cshtml
     Author: Namchok Singhachai
     Description: Access Denied page
 -->
-
 <!-- Content -->
 <div class="hold-transition login-page">
     <div class="login-box mx-auto mt-2 mt-lg-3">
@@ -23,8 +22,8 @@
                 <br><br>
                     <h4 class="text-black-50">You do not have access to this site.</h4>
                 <!-- Back to home -->
-                <form method="post">
-                    <button type="submit" class="btn btn-block btn-default btn-flat">Back</button>
+                <form method="post" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home")">
+                    <button type="submit" class="btn btn-block btn-">Back</button>
                 </form>
             </div>
             <!--End Card body-->
@@ -34,6 +33,9 @@
 
     <!--Start Script-->
     @section Scripts {
+        <script>
+            @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ }
+        </script>
         <partial name="_ValidationScriptsPartial" />
     }
     <!--End Script-->

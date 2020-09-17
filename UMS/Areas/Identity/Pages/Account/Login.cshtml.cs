@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using UMS.Areas.Identity.Data;
 using System;
+using UMS.Controllers;
+using UMS.Models;
 
 /*
  * Name: LoginModel.cs
@@ -25,14 +27,22 @@ namespace UMS.Areas.Identity.Pages.Account
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
+        private readonly ManageUserController _manageUser;
 
-        public LoginModel(SignInManager<ApplicationUser> signInManager, ILogger<LoginModel> logger, UserManager<ApplicationUser> userManager)
+        public LoginModel(
+            SignInManager<ApplicationUser> signInManager,
+            ILogger<LoginModel> logger,
+            ILogger<ManageUserController> loggerManageUser,
+            EditAccountContext editaccountContext,
+            AccountContext accountContext,
+            UserManager<ApplicationUser> userManager)
         {
             try
             {
                 _userManager = userManager;
                 _signInManager = signInManager;
                 _logger = logger;
+                _manageUser = new ManageUserController(accountContext, editaccountContext, loggerManageUser, signInManager);
                 _logger.LogDebug("Starting Login model.");
             }
             catch (Exception e)
@@ -126,45 +136,34 @@ namespace UMS.Areas.Identity.Pages.Account
                 returnUrl = returnUrl ?? Url.Content("~/");
                 if (ModelState.IsValid)
                 {
-                    // This doesn't count login failures towards account lockout
-                    // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                    // -------------------- Create storeprocedure for check | Find by id
                     ApplicationUser user = await _userManager.FindByEmailAsync(Input.Email.ToString());
                     if (user.acc_IsActive == 'N')
                     {
-                        _logger.LogTrace("Active status is 'N'.");
-                        _logger.LogDebug("Your email or password is not valid.");
-                        ModelState.AddModelError(string.Empty, "Your email or password is not valid.");
-                        TempData["ExceptionLoggedOut"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: 'Your email or password is not valid.', showConfirmButton: true })";
+                        _manageUser.deleteUser(user.Id);
+                    }// End check status
+                    _logger.LogTrace("Signing in with password.");
+                    var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+                    if (result.Succeeded)
+                    {
+                        _logger.LogInformation("User logged in.");
                         _logger.LogTrace("End login on post.");
-                        return RedirectToPage("./Login");
+                        return LocalRedirect(returnUrl);
+                    } // If login success
+                    else if (result.IsLockedOut)
+                    {
+                        _logger.LogWarning("User account locked out.");
+                        _logger.LogTrace("End login on post.");
+                        return RedirectToPage("./Lockout");
                     }
                     else
                     {
-                        _logger.LogTrace("Signing in with password.");
-                        var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
-                        if (result.Succeeded)
-                        {
-                            _logger.LogInformation("User logged in.");
-                            _logger.LogTrace("End login on post.");
-                            return LocalRedirect(returnUrl);
-                        } // If login success
-                        else if (result.IsLockedOut)
-                        {
-                            _logger.LogWarning("User account locked out.");
-                            _logger.LogTrace("End login on post.");
-                            return RedirectToPage("./Lockout");
-                        }
-                        else
-                        {
-                            _logger.LogError("Your email or password is not valid.");
-                            ModelState.AddModelError(string.Empty, "Your email or password is not valid.");
-                            // Send alert to home pages
-                            TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: 'Your email or password is not valid.', showConfirmButton: true })";
-                            _logger.LogTrace("End login on post.");
-                            return Page();
-                        } // If Loged out
-                    } // End check status
+                        _logger.LogError("Your email or password is not valid.");
+                        ModelState.AddModelError(string.Empty, "Your email or password is not valid.");
+                        // Send alert to home pages
+                        TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: 'Your email or password is not valid.', showConfirmButton: true })";
+                        _logger.LogTrace("End login on post.");
+                        return Page();
+                    } // If Loged out
                 } // End if check modelState
                 _logger.LogTrace("End login on post.");
                 return Page();

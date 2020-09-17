@@ -32,7 +32,6 @@ namespace UMS.Areas.Identity.Pages.Account
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
-        private readonly UserManagerUMS _userManagerUms;
         private readonly IEmailSender _emailSender;
         private readonly AccountContext _accountContext;
         // Attribute
@@ -51,12 +50,10 @@ namespace UMS.Areas.Identity.Pages.Account
             SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
             AccountContext accountContext,
-            UserManagerUMS userManagerUms,
             IEmailSender emailSender)
         {
             try
             {
-                _userManagerUms = userManagerUms;
                 _userManager = userManager;
                 _signInManager = signInManager;
                 _logger = logger;
