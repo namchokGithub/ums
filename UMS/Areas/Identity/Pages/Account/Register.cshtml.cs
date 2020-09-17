@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
@@ -12,6 +14,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using UMS.Areas.Identity.Data;
+using UMS.Controllers;
 using UMS.Models;
 
 /*
@@ -28,8 +31,8 @@ namespace UMS.Areas.Identity.Pages.Account
         // Service
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly UserManager<ApplicationUser> _userManager;
-        private readonly UserManagerUMS _userManagerUms;
         private readonly ILogger<RegisterModel> _logger;
+        private readonly UserManagerUMS _userManagerUms;
         private readonly IEmailSender _emailSender;
         private readonly AccountContext _accountContext;
         // Attribute
@@ -138,54 +141,54 @@ namespace UMS.Areas.Identity.Pages.Account
                 if (ModelState.IsValid)
                 {
                     _logger.LogTrace("Creating application user.");
-                    var user = new ApplicationUser
                     {
-                        UserName = Input.Email,
-                        Email = Input.Email,
-                        acc_Firstname = Input.acc_Firstname,
-                        acc_Lastname = Input.acc_Lastname,
-                        acc_IsActive = 'Y'
-                    }; // New user
-                    _logger.LogTrace("Creating user.");
-                    var result = await _userManagerUms.NewCreateAsync(user, Input.Password);
-                    // Check if create success
-                    if (result.Succeeded)
-                    {
-                        _logger.LogInformation("User created a new account with password.");
-                        _logger.LogDebug("Generating provider key.");
-                        var info = new UserLoginInfo("Email", RandomString(50).ToString(), "Email");
-                        result = await _userManagerUms.NewAddLoginAsync(user, info);
-                        _logger.LogTrace("Add login.");
+                        var user = new ApplicationUser
+                        {
+                            UserName = Input.Email,
+                            Email = Input.Email,
+                            acc_Firstname = Input.acc_Firstname,
+                            acc_Lastname = Input.acc_Lastname,
+                            acc_IsActive = 'Y'
+                        }; // New user
+                        _logger.LogTrace("Creating user.");
+                        var result = await _userManager.CreateAsync(user, Input.Password);
+                        // Check if create success
                         if (result.Succeeded)
                         {
-                            // Find by ID
-                            ApplicationUser userId = await _userManager.FindByEmailAsync(Input.Email);
-                            _logger.LogTrace("Add default role to user.");
-                            // Use ums_Update_role_user
-                            await _userManager.AddToRoleAsync(userId, "User");
-                            _logger.LogInformation("User created a new login.");
-                            _logger.LogTrace("Signing in.");
-                            await _signInManager.SignInAsync(user, false);
-                            _logger.LogTrace("End register on post.");
-                            return LocalRedirect(returnUrl);
-                        }
-                        else
+                            _logger.LogInformation("User created a new account with password.");
+                            _logger.LogDebug("Generating provider key.");
+                            var info = new UserLoginInfo("Email", RandomString(50).ToString(), "Email");
+                            result = await _userManager.AddLoginAsync(user, info);
+                            _logger.LogTrace("Add login.");
+                            if (result.Succeeded)
+                            {
+                                ApplicationUser userId = await _userManager.FindByEmailAsync(Input.Email); // Find by ID
+                                _logger.LogTrace("Add default role to user.");
+                                await _userManager.AddToRoleAsync(userId, "User");
+                                _logger.LogInformation("User created a new login.");
+                                _logger.LogTrace("Signing in.");
+                                await _signInManager.SignInAsync(user, false);
+                                _logger.LogTrace("End register on post.");
+                                return LocalRedirect(returnUrl);
+                            }
+                            else
+                            {
+                                _logger.LogError(result.Errors.First().Description.ToString());
+                                TempData["Exception"] =
+                                    @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + result.Errors.First().Description.ToString() + "`, showConfirmButton: true })";
+                                _logger.LogTrace("End register on post.");
+                                return Page();
+                            } // End Check if add login success
+                        } // End if create success
+                        string errorStr = "";
+                        foreach (var error in result.Errors)
                         {
-                            _logger.LogError(result.Errors.First().Description.ToString());
-                            TempData["Exception"] =
-                                @"Swal.fire({ icon: 'error', title: 'Error !', text: `"+ result.Errors.First().Description.ToString() + "`, showConfirmButton: true })";
-                            _logger.LogTrace("End register on post.");
-                            return Page();
-                        } // End Check if add login success
-                    } // End if create success
-                    string errorStr = "";
-                    foreach (var error in result.Errors)
-                    {
-                        errorStr += error.Description + ((error.Code != "" && error.Code!=null) ? " ("+ error.Code+ ")." : ".");
-                        ModelState.AddModelError(string.Empty, error.Description);
-                    } // End loop get error
-                    _logger.LogError(errorStr.ToString());
-                    TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + errorStr + @"`, showConfirmButton: true })";
+                            errorStr += error.Description + ((error.Code != "" && error.Code != null) ? " (" + error.Code + ")." : ".");
+                            ModelState.AddModelError(string.Empty, error.Description);
+                        } // End loop get error
+                        _logger.LogError(errorStr.ToString());
+                        TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + errorStr + @"`, showConfirmButton: true })";
+                    } // End if user exist
                 } // End if model is valid
                 _logger.LogTrace("End register on post.");
                 return Page();

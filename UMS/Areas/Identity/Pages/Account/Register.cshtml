@@ -43,9 +43,9 @@
                     </div>
                     <div class="form-group">
                         <label asp-for="Input.Email"></label><code>*</code>
-                        <input asp-for="Input.Email" class="form-control" onblur="checkUser()" id="acc_Email" />
+                        <input asp-for="Input.Email" class="form-control" onblur="checkUser()" onmouseout="checkUser()" id="acc_Email" />
                         <span asp-validation-for="Input.Email" class="text-danger"></span>
-                        <span class="text-danger d-none" id="alert_acc_email">This email is already exist.</span>
+                        <span class="text-danger d-none" id="alert_acc_email">This email has been  exist.</span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Input.Password"></label><code>*</code>
@@ -87,47 +87,76 @@
              * Description: Check user is exist and input validation.
              */
             function register() {
-                let acc_Firstname = $('#acc_Firstname').val()
-                let acc_Lastname = $('#acc_Lastname').val()
-                let Email = $('#acc_Email').val()
-                let Password = $('#Password').val()
-                let ConfirmPassword = $('#ConfirmPassword').val()
-                if (!RegExName.test(acc_Firstname)) toastr.warning('The first name can not be blank and must only character.');
-                if (!RegExName.test(acc_Lastname)) toastr.warning('The last name can not be blank and must only character.');
-                if (!RegExPassword.test(Password)) toastr.warning('The password must contain at least 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
-                if (!RegExPassword.test(ConfirmPassword)) toastr.warning('The current password must contain at least 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
-                if (!RegEmail.test(Email)) toastr.warning('Invalid Emails.');
-                if (!Password.match(ConfirmPassword)) toastr.warning('The password and confirm password do not match.');
-                $.ajax({
-                    url: "@Url.Action("checkUserExist", "ManageUser")",
-                    data: { userStr: Email},
-                    type: "POST",
-                    dataType: "JSON",
-                    success: function (res) {
-                        // If res qual 1 is the user is exits
-                        if (res) {
-                            toastr.warning('This user is already taken.');
-                        } else {
-                            if (RegExName.test(acc_Firstname), RegExName.test(acc_Lastname), RegExPassword.test(Password)
-                                , RegExPassword.test(ConfirmPassword), RegEmail.test(Email), Password.match(ConfirmPassword)
-                            ) {
-                                console.log("Submitting.");
-                                $('#formRegister').submit()
+                try {
+                    let acc_Firstname = $('#acc_Firstname').val()
+                    let acc_Lastname = $('#acc_Lastname').val()
+                    let Email = $('#acc_Email').val()
+                    let Password = $('#Password').val()
+                    let ConfirmPassword = $('#ConfirmPassword').val()
+                    if (!RegExName.test(acc_Firstname)) toastr.warning('The first name can not be blank and must only character.');
+                    if (!RegExName.test(acc_Lastname)) toastr.warning('The last name can not be blank and must only character.');
+                    if (!RegExPassword.test(Password)) toastr.warning('The password must contain at least 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
+                    if (!RegExPassword.test(ConfirmPassword)) toastr.warning('The current password must contain at least 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
+                    if (!RegEmail.test(Email)) toastr.warning('Invalid Emails.');
+                    if (Password !== ConfirmPassword) toastr.warning('The password and confirm password do not match.');
+                    $.ajax({
+                        url: "@Url.Action("GetStatusUser", "ManageUser")",
+                        data: { username: Email},
+                        type: "POST",
+                        dataType: "JSON",
+                        success: function (res) {
+                            if (res['condition'] != "error") {
+                                if (res == 'ACTIVE') {
+                                    toastr.warning('This user has been taken.');
+                                } else if (res == 'INACTIVE') {
+                                    Swal.fire({
+                                        title: 'The email is already registered.',
+                                        text: "Would you like to try login instead?",
+                                        icon: 'warning',
+                                        showCancelButton: true,
+                                        confirmButtonColor: '#3085d6',
+                                        cancelButtonColor: '#6c757d',
+                                        confirmButtonText: 'Login'
+                                    }).then((res) => {
+                                        if (res.value) {
+                                            console.log('Confirmed')
+                                            location.href = "@Url.Action("Index")"
+                                        } else {
+                                            Swal.fire({
+                                                icon: 'error',
+                                                title: 'This user has been taken.',
+                                            })
+                                            $('#formRegister').trigger("reset");
+                                        }
+                                    })
+                                } else if (res != 9) {
+                                    if (RegExName.test(acc_Firstname), RegExName.test(acc_Lastname), RegExPassword.test(Password)
+                                        , RegExPassword.test(ConfirmPassword), RegEmail.test(Email), Password === ConfirmPassword
+                                    ) {
+                                        console.log("Submitting.");
+                                        $('#formRegister').submit()
+                                    } else {
+                                        console.log(userIsExist)
+                                        console.log("Invalid Input.");
+                                    } // End check input
+                                }
                             } else {
-                                console.log(userIsExist)
-                                console.log("Invalid Input.");
-                            }
-                        } // End if
-                    },
-                    error: function (result) {
-                        // Set message status
-                        let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
-                        let _text = 'Status : ' + result.status + statusResText
-                        console.log(result) // show log of error
-                        console.log(_text)
-                        toastr.error(_text)
-                    } // End error
-                }) // End ajax for check user exits
+                                eval(res['messages']) // Excute js
+                                console.log(`Error! ${res['text']}`);
+                            } // End if result is not error
+                        },
+                        error: function (result) {
+                            let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : '' // Set message status
+                            let _text = 'Status : ' + result.status + statusResText
+                            console.log(result) // show log of error
+                            console.log(_text)
+                            toastr.error(_text)
+                        } // End error
+                    }) // End ajax for check user exits
+                } catch {
+                    console.log(err.message)
+                    toastr.error(err.message)
+                }
             } // End register
 
             $(document).ready(() => {
@@ -145,7 +174,7 @@
                     let userStr = $('#acc_Email').val()
                     // Ajax for check user exits
                     $.ajax({
-                        url: "@Url.Action("checkUserExist", "ManageUser")",
+                        url: "@Url.Action("CheckUserExist", "ManageUser")",
                         data: { userStr: userStr},
                         type: "POST",
                         dataType: "JSON",
@@ -153,7 +182,7 @@
                             // If res qual 1 is the user is exits
                             if (res) {
                                 $('#alert_acc_email').removeClass('d-none')
-                                console.log('This email is already exist.')
+                                console.log('This email has been  exist.')
                             } else {
                                 $('#alert_acc_email').addClass('d-none')
                                 console.log('No user name is exits.')

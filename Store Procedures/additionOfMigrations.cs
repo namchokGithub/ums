@@ -18,13 +18,13 @@ var ums_Check_user = @"-- =============================================
                         -- Description:	Check user if exist return 1
                         -- =============================================
                         CREATE PROCEDURE ums_Check_user
-                            @param_user nvarchar(max)
+                            @param_user nvarchar(max), @param_status char(1)
                         AS
                         BEGIN
                             IF EXISTS (
                                         SELECT [dbo].[Account].acc_Id
-                            FROM [dbo].[Account]
-                            WHERE [dbo].[Account].acc_User = @param_user AND [dbo].[Account].acc_IsActive = 'Y')
+                                        FROM [dbo].[Account]
+                                        WHERE [dbo].[Account].acc_User = @param_user AND [dbo].[Account].acc_IsActive = @param_status)
                             BEGIN
                                 RETURN 1;
                             END
@@ -128,6 +128,29 @@ var ums_Get_all_log = @"-- =============================================
                             ORDER BY [dbo].[Logs].[log_Id] DESC
                         END
                         GO";
+var ums_Get_status_user = @"-- =============================================
+                            -- Author:		Namchok Singhachai
+                            -- Create date: 2020-09-17
+                            -- Description:	 Get status of user and check if exist.
+                            -- =============================================
+                            CREATE PROCEDURE ums_Get_status_user
+                                @param_user nvarchar(max)
+                            AS
+                            BEGIN
+                                IF EXISTS (
+                                            SELECT [dbo].[Account].acc_Id
+                                            FROM [dbo].[Account]
+                                            WHERE [dbo].[Account].acc_User = @param_user)
+                                BEGIN
+                                    SELECT [dbo].[Account].acc_IsActive
+                                    FROM [dbo].[Account]
+                                    WHERE [dbo].[Account].acc_User = @param_user
+                                END
+                                ELSE
+                                BEGIN
+                                    SELECT 'X';
+                                END
+                            END";
 var ums_Get_all_user = @"-- =============================================
                         -- Author:		Namchok Singhachai
                         -- Create date: 2020-08-29
@@ -349,6 +372,7 @@ migrationBuilder.Sql(ums_Get_active_user);
 migrationBuilder.Sql(ums_Get_all_active_user);
 migrationBuilder.Sql(ums_Get_all_log);
 migrationBuilder.Sql(ums_Get_all_user);
+migrationBuilder.Sql(ums_Get_status_user);
 migrationBuilder.Sql(ums_Get_user_by_Id);
 migrationBuilder.Sql(ums_Get_user);
 migrationBuilder.Sql(ums_Search_log);

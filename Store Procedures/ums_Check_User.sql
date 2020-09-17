@@ -4,13 +4,13 @@
 -- Description:	Check user if exist return 1
 -- =============================================
 CREATE PROCEDURE ums_Check_user
-    @param_user nvarchar(max)
+    @param_user nvarchar(max), @param_status char(1)
 AS
 BEGIN
     IF EXISTS (
 				SELECT [dbo].[Account].acc_Id
                 FROM [dbo].[Account]
-                WHERE [dbo].[Account].acc_User = @param_user AND [dbo].[Account].acc_IsActive = 'Y')
+                WHERE [dbo].[Account].acc_User = @param_user AND [dbo].[Account].acc_IsActive = @param_status)
     BEGIN
         RETURN 1;
     END

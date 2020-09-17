@@ -203,7 +203,7 @@ namespace UMS.Areas.Identity.Data
                 var checkStatus = EqualityComparer<string>.Default.Equals(owner.Id, user.Id);
                 if (owner != null && checkStatus && owner.acc_IsActive!= 'Y')
                 {
-                    errors.Add($"User name {user.UserName} is already taken.");
+                    errors.Add($"User name {user.UserName} has been taken.");
                 }
             }
         } // End ValidateUserName !EqualityComparer<string>.Default.Equals(owner.Id, user.Id)
