@@ -38,15 +38,30 @@
 
                 <!--Start Input change password-->
                 <div id="acc_CurrentPassword" class="input-group mb-3 col-12 d-none">
-                    <input class="form-control" id="acc_Current" type="password" name="acc_CurrentPassword" placeholder="Current password" />
+                    <input class="form-control" style="border-right:0px;" id="acc_Current" type="password" name="acc_CurrentPassword" placeholder="Current password" />
+                    <div class="input-group-append" style="border-left:0px; background-color:white;" onclick="toggleCurrentPasword()">
+                        <div class="input-group-text" style="border-left:0px; background-color:white;">
+                            <span id="icon_CurrentPassword" class="fas fa-eye-slash" style="cursor:pointer"></span>
+                        </div>
+                    </div>
                     <span id="validation_acc_CurrentPassword" class="text-danger col-12"></span>
                 </div>
                 <div id="acc_NewPassword" class="input-group mb-3 col-12 d-none">
-                    <input class="form-control" id="acc_New" type="password" name="acc_NewPassword" placeholder="New password" />
+                    <input class="form-control" style="border-right:0px;" id="acc_New" type="password" name="acc_NewPassword" placeholder="New password" />
+                    <div class="input-group-append" style="border-left:0px; background-color:white;" onclick="toggleNewPasword()">
+                        <div class="input-group-text" style="border-left:0px; background-color:white;">
+                            <span id="icon_NewPassword" class="fas fa-eye-slash" style="cursor:pointer"></span>
+                        </div>
+                    </div>
                     <span id="validation_acc_NewPassword" class="text-danger col-12"></span>
                 </div>
                 <div id="acc_ConfirmPassword" class="input-group mb-3 col-12 d-none">
-                    <input class="form-control" id="acc_Con" type="password" name="acc_ConfirmPassword" placeholder="Confirm password" />
+                    <input class="form-control" style="border-right:0px;" id="acc_Con" type="password" name="acc_ConfirmPassword" placeholder="Confirm password" />
+                    <div class="input-group-append" style="border-left:0px; background-color:white;" onclick="toggleConfirmPasword()" >
+                        <div class="input-group-text" style="border-left:0px; background-color:white;">
+                            <span id="icon_ConfirmPassword" class="fas fa-eye-slash" style="cursor:pointer"></span>
+                        </div>
+                    </div>
                     <span id="validation_acc_ConfirmPassword" class="text-danger col-12"></span>
                 </div>
                 <!--End Input change password-->
@@ -93,6 +108,66 @@
     //Regular expression
     var RegExName = /^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$/;
     var RegExPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[#$!%@@*?&])[A-Za-z0-9#$!%@@*?&]+$/;
+
+    /*
+    * Name: toggleCurrentPasword()
+    * Parameter: none
+    * Author: Wannapa Srijermtong
+    * Description: For change type of current password.
+    */
+    function toggleCurrentPasword() {
+        // Get id from input
+        var password = document.getElementById("acc_Current")
+        if (password.type === "password") {
+            document.getElementById("icon_CurrentPassword").classList.remove('fa-eye-slash')
+            document.getElementById("icon_CurrentPassword").classList.add('fa-eye')
+            password.type = "text";
+        } else {
+            document.getElementById("icon_CurrentPassword").classList.remove('fa-eye')
+            document.getElementById("icon_CurrentPassword").classList.add('fa-eye-slash')
+            password.type = "password";
+        }
+    }
+
+    /*
+    * Name: toggleNewPasword()
+    * Parameter: none
+    * Author: Wannapa Srijermtong
+    * Description: For change type of new password.
+    */
+    function toggleNewPasword() {
+        // Get id from input
+        var password = document.getElementById("acc_New")
+        if (password.type === "password") {
+            document.getElementById("icon_NewPassword").classList.remove('fa-eye-slash')
+            document.getElementById("icon_NewPassword").classList.add('fa-eye')
+            password.type = "text";
+        } else {
+            document.getElementById("icon_NewPassword").classList.remove('fa-eye')
+            document.getElementById("icon_NewPassword").classList.add('fa-eye-slash')
+            password.type = "password";
+        }
+    }
+
+    /*
+    * Name: toggleConfirmPasword()
+    * Parameter: none
+    * Author: Wannapa Srijermtong
+    * Description: For change type of confirm password.
+    */
+    function toggleConfirmPasword() {
+        // Get id from input
+        var password = document.getElementById("acc_Con")
+        if (password.type === "password") {
+            document.getElementById("icon_NewPassword").classList.remove('fa-eye-slash')
+            document.getElementById("icon_NewPassword").classList.add('fa-eye')
+            password.type = "text";
+        } else {
+            document.getElementById("icon_NewPassword").classList.remove('fa-eye')
+            document.getElementById("icon_NewPassword").classList.add('fa-eye-slash')
+            password.type = "password";
+        }
+    }
 
     /*
     * Name: SaveProfile
