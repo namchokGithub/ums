@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
@@ -107,7 +108,7 @@ namespace UMS.Controllers
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 TempData["Exception"] = message;
                 _logger.LogTrace("End Input Model.");
-                return RedirectToPage("./Login");
+                return RedirectToPage("/Login");
             } // End try catch
         } // End InputModel
 
@@ -122,14 +123,14 @@ namespace UMS.Controllers
             {
                 await _signInManager.SignOutAsync();
                 _logger.LogInformation("Logged out.");
-                return RedirectToPage("./Login");
+                return RedirectToPage("/Login");
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 TempData["Exception"] = message;
-                return RedirectToPage("./Login");
+                return RedirectToPage("/Login");
             } // End try catch
         } // End Logout
 
@@ -167,7 +168,7 @@ namespace UMS.Controllers
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 TempData["Exception"] = message;
                 _logger.LogTrace("End Google Login.");
-                return RedirectToPage("./Login");
+                return RedirectToPage("/Login");
             } // End try catch
             
         } // End GoogleLogin
@@ -193,6 +194,7 @@ namespace UMS.Controllers
                 }
                 _logger.LogDebug("Getting external login and sign in.");
                 var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, false);
+                _logger.LogDebug($"Result: {result}");
                 _logger.LogTrace("Creating user info.");
                 string[] userInfo = {
                     info.Principal.FindFirst(ClaimTypes.Name).Value,
@@ -235,9 +237,22 @@ namespace UMS.Controllers
                             _logger.LogTrace("End Google Response.");
                             return RedirectToAction("Index", "Home");
                         }
-                    } // If success add login info
+                    }
+                    _logger.LogError(identResult.Errors.First().Description.ToString());
+                    string message = @"Swal.fire({
+                                        title: 'The "+ user.Email + @" is already registered.',
+                                        text: 'Would you like to try login instead?',
+                                        icon: 'warning',
+                                        showCancelButton: false,
+                                        confirmButtonColor: '#3085d6',
+                                        confirmButtonText: 'Login'
+                                    }).then((res) => {
+                                        console.log('Confirmed')
+                                        window.location.href = '/'
+                                    })";
+                    TempData["Exception"] = message;
                     _logger.LogTrace("End Google Response.");
-                    return AccessDenied();
+                    return View();
                 } // End if signed in success
             }
             catch (Exception e)
@@ -246,7 +261,7 @@ namespace UMS.Controllers
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 TempData["Exception"] = message;
                 _logger.LogTrace("End Google Response.");
-                return RedirectToPage("./Login");
+                return RedirectToPage("/Login");
             } // End try catch
         } // End GoogleResponse
 
@@ -273,7 +288,7 @@ namespace UMS.Controllers
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 TempData["Exception"] = message;
                 _logger.LogTrace("End Facebook Login");
-                return RedirectToPage("./Login");
+                return RedirectToPage("/Login");
             } // End try catch
         } // End FacebookLogin
 
@@ -298,6 +313,7 @@ namespace UMS.Controllers
                 }
                 _logger.LogDebug("Getting result external login and sign in.");
                 var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, false);
+                _logger.LogDebug($"Result: {result}");
                 _logger.LogTrace("Craete user info.");
                 string[] userInfo = {
                     info.Principal.FindFirst(ClaimTypes.Name).Value,
@@ -339,9 +355,22 @@ namespace UMS.Controllers
                             _logger.LogTrace("End Facebook Response.");
                             return RedirectToAction("Index", "Home");
                         }
-                    } // create and add login info
+                    } // If create and add login info
+                    _logger.LogError(identResult.Errors.First().Description.ToString());
+                    string message = @"Swal.fire({
+                                        title: 'The " + user.Email + @" is already registered.',
+                                        text: 'Would you like to try login instead?',
+                                        icon: 'warning',
+                                        showCancelButton: false,
+                                        confirmButtonColor: '#3085d6',
+                                        confirmButtonText: 'Login'
+                                    }).then((res) => {
+                                        console.log('Confirmed')
+                                        window.location.href = '/'
+                                    })";
+                    TempData["Exception"] = message;
                     _logger.LogTrace("End Facebook Response.");
-                    return AccessDenied();
+                    return View();
                 } // End if signed in success
             }
             catch (Exception e)
@@ -350,7 +379,7 @@ namespace UMS.Controllers
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 TempData["Exception"] = message;
                 _logger.LogTrace("End Facebook Response.");
-                return RedirectToPage("./Login");
+                return RedirectToPage("/Login");
             } // End try catch
         } // End FacebookResponse
 
@@ -377,7 +406,7 @@ namespace UMS.Controllers
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 TempData["Exception"] = message;
                 _logger.LogTrace("End Microsoft Login.");
-                return RedirectToPage("./Login");
+                return RedirectToPage("/Login");
             } // End try catch
         } // End MicrosoftLogin
 
@@ -402,6 +431,7 @@ namespace UMS.Controllers
                 }
                 _logger.LogDebug("Getting External login and sign in.");
                 var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, false);
+                _logger.LogDebug($"Result: {result}");
                 _logger.LogTrace("Creating user info object.");
                 string[] userInfo = {
                     info.Principal.FindFirst(ClaimTypes.Name).Value,
@@ -445,8 +475,21 @@ namespace UMS.Controllers
                             return RedirectToAction("Index", "Home");
                         }
                     } // Crate user and add login info
+                    _logger.LogError(identResult.Errors.First().Description.ToString());
+                    string message = @"Swal.fire({
+                                        title: 'The " + user.Email + @" is already registered.',
+                                        text: 'Would you like to try login instead?',
+                                        icon: 'warning',
+                                        showCancelButton: false,
+                                        confirmButtonColor: '#3085d6',
+                                        confirmButtonText: 'Login'
+                                    }).then((res) => {
+                                        console.log('Confirmed')
+                                        window.location.href = '/'
+                                    })";
+                    TempData["Exception"] = message;
                     _logger.LogTrace("End Microsoft Response.");
-                    return AccessDenied();
+                    return View();
                 } // End if signed in success
             }
             catch (Exception e)
@@ -455,7 +498,7 @@ namespace UMS.Controllers
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 TempData["Exception"] = message;
                 _logger.LogTrace("End Microsoft Response.");
-                return RedirectToPage("./Login");
+                return RedirectToPage("/Login");
             } // End try catch
         } // End MicrosoftResponse
     } // End AccountController

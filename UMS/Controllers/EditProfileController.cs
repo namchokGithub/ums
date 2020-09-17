@@ -42,7 +42,7 @@ namespace UMS.Controllers
                 _logger.LogTrace("Edit Profile Context injected into EditProfileController.");
                 _signInManager = signInManager;
                 _logger.LogTrace("Sign In Manager injected into EditProfileController.");
-                _logger.LogTrace("Start EditProfileController Constructor.");
+                _logger.LogTrace("Start EditProfile Controller Constructor.");
             }
             catch (Exception e)
             {

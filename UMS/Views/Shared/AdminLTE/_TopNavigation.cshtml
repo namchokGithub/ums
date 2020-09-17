@@ -7,7 +7,6 @@
 @using Microsoft.AspNetCore.Identity
 @using UMS.Areas.Identity.Data
 
-<!--  It allows us to develop loosely-coupled code. !!!! NOT SURE !!!! -->
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 <!-- Navbar -->
@@ -22,7 +21,7 @@
             @if (User.Identity.IsAuthenticated)
             {
                 <li class="nav-item" id="user_email">
-                    <a id="manage" class="nav-link text-dark" asp-action="Index" asp-controller="Home" title="Manage">Hello @UserManager.GetUserName(User)!</a>
+                    <a id="manage" class="nav-link text-dark" asp-action="Index" asp-controller="Home">Hello @UserManager.GetUserName(User)!</a>
                 </li>
             }
         </ul>

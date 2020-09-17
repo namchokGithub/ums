@@ -29,7 +29,7 @@
                 <!-- If Authenticated then show name's user -->
                 @if (User.Identity.IsAuthenticated)
                 {
-                    <p class="d-block text-white">Hi!, @User.Identity.Name </p>
+                    <p class="d-block text-white" data-toggle="tooltip" title="@User.Identity.Name">Hi!, @User.Identity.Name </p>
                 }
                 else
                 {
