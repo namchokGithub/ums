@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Identity;
 /*
  * Name: ApplicationUser (Extend: IdentityUser)
  * Namespace: ~/Area/Identity/Data
+ * Description: User Identity for this application.
  */
 
 namespace UMS.Areas.Identity.Data

@@ -112,13 +112,13 @@ namespace UMS.Controllers
                 // Check if query is null
                 if (id == null) throw new Exception("Calling a method on a null object reference.");
                 string sqltext = $"EXEC [dbo].ums_Get_user_by_Id '{id}'";
-                // Query data from "dbo.Account" and Convert to List<Account>
+                // Query data from "dbo.Account" and Convert to List<EditAccount>
                 var user = _editaccountContext.EditAccount.FromSqlRaw(sqltext).ToList().FirstOrDefault<EditAccount>();
                 _logger.LogDebug("Get user by ID");
                 if (user == null) throw new Exception("Calling a method on a null object reference.");
                 _logger.LogTrace("End get user.");
-                // Return JSON by Ajax
-                return new JsonResult(user);
+                
+                return new JsonResult(user); // Return JSON by Ajax
             } catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
@@ -322,7 +322,7 @@ namespace UMS.Controllers
                 _logger.LogTrace($"Executing sql stored procedure ({sqlGetStatusUser}).");
                 _accountContext.Database.ExecuteSqlRaw(sqlGetStatusUser, status);
                 if (status.Value == null) throw new Exception("Calling a method on a null object reference.");
-                if (!int.TryParse(status.Value.ToString(), out _)) throw new Exception("Uncorrect type.");
+                if (!int.TryParse(status.Value.ToString(), out _)) throw new Exception("Uncorrect type."); // If status if not integer
                 if((int)status.Value == 1) status.Value = "ACTIVE";
                 else if ((int)status.Value == 0) status.Value = "INACTIVE";
                 _logger.LogTrace("End Get status user.");

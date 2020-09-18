@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
-//using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
@@ -35,7 +34,7 @@ namespace UMS.Areas.Identity.Pages.Account
             _userManager = userManager;
             _emailSender = emailSender;
             _logger = logger;
-            _logger.LogDebug("Forgot Password model.");
+            _logger.LogDebug("Start Forgot Password model.");
         } // End contructor
 
         [BindProperty]

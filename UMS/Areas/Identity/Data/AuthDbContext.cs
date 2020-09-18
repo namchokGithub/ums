@@ -13,6 +13,7 @@ using UMS.Models;
 /*
  * Name: AuthDbContext (Extend: IdentityDbContext<ApplicationUser>)
  * Namespace: ~/Area/Identity/Data
+ * Description: Code first for create database.
  */
 
 namespace UMS.Data
@@ -20,7 +21,6 @@ namespace UMS.Data
     public class AuthDbContext : IdentityDbContext<ApplicationUser>
     {
         private readonly ILogger<AuthDbContext> _logger;
-
         public AuthDbContext(DbContextOptions<AuthDbContext> options, ILogger<AuthDbContext> logger)
             : base(options)
         {

@@ -1,8 +1,8 @@
 ﻿using System;
 
 /*
- * Name : EmailConfiguration
- * Author: Namchok
+ * Name : EmailConfiguration.cs
+ * Author: Namchok Singhachai
  * Description: Configuration of Email service
  */
 

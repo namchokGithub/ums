@@ -27,7 +27,7 @@ namespace UMS.Areas.Identity.Pages.Account
         public ResetPasswordModel(UserManager<ApplicationUser> userManager, ILogger<ResetPasswordModel> logger)
         {
             _logger = logger;
-            _logger.LogDebug("Reset password model.");
+            _logger.LogDebug("Start Reset password model.");
             _userManager = userManager;
         } // End constructor
 
@@ -79,7 +79,7 @@ namespace UMS.Areas.Identity.Pages.Account
                     {
                         Code = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(code))
                     };
-                    _logger.LogTrace("Encoding to input model.");
+                    _logger.LogDebug("Encoding to input model.");
                     _logger.LogTrace("End reset password on get.");
                     return Page();
                 }
@@ -109,7 +109,7 @@ namespace UMS.Areas.Identity.Pages.Account
                     _logger.LogTrace("End reset password on post.");
                     return Page();
                 }
-                _logger.LogTrace("Finding by email.");
+                _logger.LogDebug("Finding by email.");
                 var user = await _userManager.FindByEmailAsync(Input.Email);
                 if (user == null)
                 {
