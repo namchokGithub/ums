@@ -260,7 +260,7 @@ namespace UMS.Controllers
             try
             {
                 _logger.LogTrace("Start check user is exist.");
-                if (userStr == null) throw new Exception("Calling a method on a null object reference.");
+                if (userStr == null && status == null) throw new Exception("Calling a method on a null object reference.");
                 var checkExits = new SqlParameter("@returnVal", SqlDbType.Int)
                 {
                     Direction = ParameterDirection.Output
@@ -280,8 +280,8 @@ namespace UMS.Controllers
                     }
                     catch (Exception e)
                     {
-                        _logger.LogError(e.Message.ToString());
-                        TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
+                        _logger.LogWarning(e.Message.ToString());
+                        // TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                     } // End try catch
                 } // Check if check succeeded
                 _logger.LogTrace($"User is exist {(int)checkExits.Value} items.");
@@ -290,9 +290,9 @@ namespace UMS.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogError(e.Message.ToString());
+                _logger.LogWarning(e.Message.ToString());
                 // Send alert to home pages
-                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
+                // TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End check user is exist.");
                 return 0;
             } // End try catch
