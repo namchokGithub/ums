@@ -74,8 +74,7 @@ namespace UMS.Controllers
             }
             catch (Exception e)
             {
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                TempData["Exception"] = message;
+                TempData["EditProfileException"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End Index.");
                 return View();
             } // End try catch
@@ -97,7 +96,7 @@ namespace UMS.Controllers
                 
                 //Get data from Form Input
                 var acc_Id = HttpContext.Request.Form["acc_Id"];
-                if(acc_Id.ToString() == null) throw new Exception("Calling a method on a null object reference.");
+                if(acc_Id.ToString() == null || acc_Id.ToString() == "") throw new Exception("Calling a method on a null object reference.");
                 var acc_Firstname = HttpContext.Request.Form["acc_Firstname"];
                 var acc_Lastname = HttpContext.Request.Form["acc_Lastname"];
                 var acc_CurrentPassword = HttpContext.Request.Form["acc_CurrentPassword"];
@@ -274,7 +273,7 @@ namespace UMS.Controllers
                 _logger.LogError(e.Message.ToString());
                 TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End Edit Profile.");
-                return View();
+                return RedirectToAction("Index", "EditProfile");
             } // End try catch
         } // End editProfile
     } // End EditProfileContrller
