@@ -110,7 +110,7 @@ namespace UMS.Controllers
             {
                 _logger.LogTrace("Start get user.");
                 // Check if query is null
-                if (id == null) throw new Exception("Calling a method on a null object reference.");
+                if (id == null || id.ToString() == "") throw new Exception("Calling a method on a null object reference.");
                 string sqltext = $"EXEC [dbo].ums_Get_user_by_Id '{id}'";
                 // Query data from "dbo.Account" and Convert to List<EditAccount>
                 var user = _editaccountContext.EditAccount.FromSqlRaw(sqltext).ToList().FirstOrDefault<EditAccount>();
@@ -217,7 +217,7 @@ namespace UMS.Controllers
             try
             {
                 _logger.LogTrace("Start delete user.");
-                if (id == null) throw new Exception("Calling a method on a null object reference.");
+                if (id == null || id.ToString() == "") throw new Exception("Calling a method on a null object reference.");
                 string sqlText = $"ums_Delete_user '{id}'";
                 _accountContext.Database.ExecuteSqlRaw(sqlText);
                 _logger.LogDebug("Execute sql inactive user.");
@@ -281,7 +281,6 @@ namespace UMS.Controllers
                     catch (Exception e)
                     {
                         _logger.LogWarning(e.Message.ToString());
-                        // TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                     } // End try catch
                 } // Check if check succeeded
                 _logger.LogTrace($"User is exist {(int)checkExits.Value} items.");
@@ -291,8 +290,6 @@ namespace UMS.Controllers
             catch (Exception e)
             {
                 _logger.LogWarning(e.Message.ToString());
-                // Send alert to home pages
-                // TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End check user is exist.");
                 return 0;
             } // End try catch
@@ -310,7 +307,7 @@ namespace UMS.Controllers
             try
             {
                 _logger.LogTrace("Start Get status user.");
-                if (username == null) throw new Exception("Calling a method on a null object reference.");
+                if (username == null || username.ToString() == "") throw new Exception("Calling a method on a null object reference.");
                 var status = new SqlParameter("@paramout_status", SqlDbType.Int)
                 {
                     IsNullable = true,
@@ -321,10 +318,12 @@ namespace UMS.Controllers
                 string sqlGetStatusUser = $@"EXEC @paramout_status=[dbo].ums_Get_status_user '{username}'";
                 _logger.LogTrace($"Executing sql stored procedure ({sqlGetStatusUser}).");
                 _accountContext.Database.ExecuteSqlRaw(sqlGetStatusUser, status);
+                
                 if (status.Value == null) throw new Exception("Calling a method on a null object reference.");
                 if (!int.TryParse(status.Value.ToString(), out _)) throw new Exception("Uncorrect type."); // If status if not integer
                 if((int)status.Value == 1) status.Value = "ACTIVE";
                 else if ((int)status.Value == 0) status.Value = "INACTIVE";
+                
                 _logger.LogTrace("End Get status user.");
                 return new JsonResult(status.Value);
             } catch (Exception e)
