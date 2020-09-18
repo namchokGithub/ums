@@ -90,7 +90,7 @@ namespace UMS.Controllers
                 if ((dateInput == null && messageInput == null) || (dateInput == "" && messageInput == "")) throw new Exception("Please input information for searching."); // End if param both is null 
                 _logger.LogDebug("Input Date Input: " + ((dateInput != null && dateInput != "") ? dateInput : "-"));
                 _logger.LogDebug("Input Message: " + ((messageInput != null && messageInput != "") ? messageInput : "-"));
-                if (dateInput!=null || dateInput != "")
+                if (dateInput!=null && dateInput != "")
                 {
                     _logger.LogTrace("Set dete from dateIinput.");
                     DateTime dateInputStart = Convert.ToDateTime(dateInput.Substring(0, (dateInput.IndexOf("-"))).ToString());
