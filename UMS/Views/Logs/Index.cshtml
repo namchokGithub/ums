@@ -250,13 +250,11 @@
         try {
             let regex = /^[a-zA-Z0-9 ]+[a-zA-Z0-9 ]|(^$)$/
             if (!regex.test($('#message').val())) {
-                toastr.error('No symbols or special chars.')
+                toastr.warning('No symbols or special chars.')
                 $('#messageErrorInput').text('No symbols or special chars.')
                 console.log('Error')
             }
             else if ($('#message').val() == '' && $('#logstime').val() == '') {
-                $('#message').addClass('is-invalid')
-                $('#logstime').addClass('is-invalid')
                 throw new Error('Please input information for searching.')
             }
             else
@@ -364,7 +362,7 @@
             } // End if else
         } catch (e) {
             console.log(e.message)
-            toastr.error(e.message)
+            toastr.warning(e.message)
         }
     } // End checkSearchInput
 

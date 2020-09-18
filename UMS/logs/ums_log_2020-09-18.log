@@ -650,3 +650,494 @@
 2020/09/18 11:25:23.505 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:91 | Input Date Input: 09/18/2020 11:25 AM - 09/18/2020 12:55 PM
 2020/09/18 11:25:23.505 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:92 | Input Message: -
 2020/09/18 11:25:23.623 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:104 | Getting log by 09/18/2020 11:25 AM - 09/18/2020 12:55 PM.
+2020/09/18 11:38:32.106 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/18 11:38:32.835 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/18 11:38:32.853 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Wannapa\source\repos\ums\UMS
+2020/09/18 11:38:33.202 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:38:33.213 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:38:33.226 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 11:38:33.284 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:112 | Getting external authentication scheme.
+2020/09/18 11:38:38.246 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:38:38.262 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:38:38.269 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 11:38:38.287 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:112 | Getting external authentication scheme.
+2020/09/18 11:38:52.491 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/18 11:38:53.126 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/18 11:38:53.156 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Wannapa\source\repos\ums\UMS
+2020/09/18 11:38:53.305 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:38:53.305 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:38:53.314 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 11:38:53.379 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:112 | Getting external authentication scheme.
+2020/09/18 11:38:57.851 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:38:57.879 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/18 11:39:01.472 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:39:01.472 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:39:03.359 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:39:03.373 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:39:05.582 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:39:05.582 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:39:17.448 [ERROR] [Microsoft.EntityFrameworkCore.Database.Connection]  CheckUserExist: | An error occurred using the connection to database 'UMS' on server 'localhost\SQLEXPRESSMHEE'.
+2020/09/18 11:39:17.448 [ERROR] [Microsoft.EntityFrameworkCore.Database.Connection]  CheckUserExist: | An error occurred using the connection to database 'UMS' on server 'localhost\SQLEXPRESSMHEE'.
+2020/09/18 11:39:17.448 [ERROR] [Microsoft.EntityFrameworkCore.Database.Connection]  CheckUserExist: | An error occurred using the connection to database 'UMS' on server 'localhost\SQLEXPRESSMHEE'.
+2020/09/18 11:39:17.862 [WARN] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:269 | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+2020/09/18 11:39:17.862 [WARN] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:269 | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+2020/09/18 11:39:17.898 [WARN] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:269 | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+2020/09/18 11:39:22.204 [DEBUG] [UMS.Models.AccountContext]  GetStatusUser:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:39:22.211 [DEBUG] [UMS.Models.EditAccountContext]  GetStatusUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:39:22.253 [ERROR] [Microsoft.EntityFrameworkCore.Database.Connection]  GetStatusUser: | An error occurred using the connection to database 'UMS' on server 'localhost\SQLEXPRESSMHEE'.
+2020/09/18 11:39:22.308 [ERROR] [UMS.Controllers.ManageUserController]  GetStatusUser:ManageUserController.cs:323 | A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+2020/09/18 11:39:50.534 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/18 11:39:51.098 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/18 11:39:51.133 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Wannapa\source\repos\ums\UMS
+2020/09/18 11:39:51.295 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:39:51.302 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:39:51.315 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 11:39:51.367 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:112 | Getting external authentication scheme.
+2020/09/18 11:41:02.135 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:41:02.153 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/18 11:41:03.581 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:41:03.581 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:41:04.774 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:41:04.801 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:41:09.796 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:41:09.821 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:41:09.888 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:41:09.897 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:41:10.859 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:41:10.881 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:41:10.999 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:41:11.005 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:41:30.326 [DEBUG] [UMS.Models.AccountContext]  GetStatusUser:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:41:30.366 [DEBUG] [UMS.Models.EditAccountContext]  GetStatusUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:41:33.212 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:41:33.212 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:41:33.238 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:41:33.258 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:42:04.316 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:42:04.316 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:42:04.390 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:42:04.403 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:42:05.867 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:42:05.867 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:42:05.910 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:42:05.910 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:42:07.556 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:42:07.556 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:42:07.580 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:42:07.611 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:42:08.869 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:42:08.869 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:42:08.895 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:42:08.895 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:42:08.942 [DEBUG] [UMS.Models.AccountContext]  GetStatusUser:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:42:08.942 [DEBUG] [UMS.Models.EditAccountContext]  GetStatusUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:42:16.222 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:42:16.222 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:42:16.256 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:42:16.268 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:42:17.553 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:42:17.553 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:42:17.581 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:42:17.603 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:42:19.514 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:42:19.520 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:42:19.553 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:42:19.553 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:42:21.502 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:42:21.502 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:42:21.566 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:42:21.566 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:42:29.416 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:42:29.416 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:42:29.444 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:42:29.458 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:42:29.550 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:42:29.550 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:42:29.612 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:42:29.627 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:42:30.201 [DEBUG] [UMS.Models.AccountContext]  GetStatusUser:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:42:30.201 [DEBUG] [UMS.Models.EditAccountContext]  GetStatusUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:42:31.336 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:42:31.350 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:42:31.364 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 11:42:31.384 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:112 | Getting external authentication scheme.
+2020/09/18 11:42:42.695 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:42:42.695 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:42:42.724 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 11:42:43.665 [DEBUG] [UMS.Controllers.ManageUserController]  ManageUserController.cs:223 | Execute sql inactive user.
+2020/09/18 11:42:43.665 [DEBUG] [UMS.Controllers.ManageUserController]  ManageUserController.cs:230 | Save changes: Inactive user.
+2020/09/18 11:42:44.051 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/18 11:42:44.148 [INFO] [UMS.Controllers.HomeController] [waSR@hotmail.com] Index:HomeController.cs:60 | Welcome waSR@hotmail.com to UMS.
+2020/09/18 11:42:45.933 [DEBUG] [UMS.Controllers.EditProfileController] [waSR@hotmail.com] Index:EditProfileController.cs:71 | Get user by ID.
+2020/09/18 11:42:47.069 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [waSR@hotmail.com] Logout.cshtml.cs:30 | Starting Log out model.
+2020/09/18 11:42:47.084 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [waSR@hotmail.com] Logout.cshtml.cs:50 | User logged out.
+2020/09/18 11:42:47.124 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:42:47.129 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:42:47.144 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 11:42:47.144 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:112 | Getting external authentication scheme.
+2020/09/18 11:42:55.412 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:42:55.437 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:42:55.470 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 11:42:55.529 [WARN] [Microsoft.AspNetCore.Identity.UserManager]   | Invalid password for user adminidtempfortestsystem2020.
+2020/09/18 11:42:55.551 [WARN] [Microsoft.AspNetCore.Identity.SignInManager]   | User adminidtempfortestsystem2020 failed to provide the correct password.
+2020/09/18 11:42:55.575 [ERROR] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:160 | Your email or password is not valid.
+2020/09/18 11:43:02.096 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:43:02.096 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:43:02.174 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 11:43:02.226 [WARN] [Microsoft.AspNetCore.Identity.UserManager]   | Invalid password for user adminidtempfortestsystem2020.
+2020/09/18 11:43:02.262 [WARN] [Microsoft.AspNetCore.Identity.SignInManager]   | User adminidtempfortestsystem2020 failed to provide the correct password.
+2020/09/18 11:43:02.281 [ERROR] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:160 | Your email or password is not valid.
+2020/09/18 11:44:02.965 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:44:02.999 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:44:03.033 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 11:44:03.114 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/18 11:44:03.143 [INFO] [UMS.Controllers.HomeController] [waSR@hotmail.com] Index:HomeController.cs:60 | Welcome waSR@hotmail.com to UMS.
+2020/09/18 11:44:05.181 [DEBUG] [UMS.Controllers.EditProfileController] [waSR@hotmail.com] Index:EditProfileController.cs:71 | Get user by ID.
+2020/09/18 11:44:10.583 [DEBUG] [UMS.Controllers.EditProfileController] [waSR@hotmail.com] editProfile:EditProfileController.cs:98 | Getting value from httpcontext request.
+2020/09/18 11:44:10.661 [DEBUG] [UMS.Controllers.EditProfileController] [waSR@hotmail.com] editProfile:EditProfileController.cs:158 | Update name's user.
+2020/09/18 11:44:10.661 [DEBUG] [UMS.Controllers.EditProfileController] [waSR@hotmail.com] editProfile:EditProfileController.cs:165 | Save changes: Check update user.
+2020/09/18 11:44:10.712 [DEBUG] [UMS.Controllers.EditProfileController] [waSR@hotmail.com] Index:EditProfileController.cs:71 | Get user by ID.
+2020/09/18 11:44:30.692 [DEBUG] [UMS.Controllers.EditProfileController] [waSR@hotmail.com] Index:EditProfileController.cs:71 | Get user by ID.
+2020/09/18 11:44:37.246 [DEBUG] [UMS.Models.AccountContext] [waSR@hotmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:44:37.255 [DEBUG] [UMS.Models.EditAccountContext] [waSR@hotmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:44:37.309 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/18 11:44:46.599 [DEBUG] [UMS.Controllers.EditProfileController] [waSR@hotmail.com] Index:EditProfileController.cs:71 | Get user by ID.
+2020/09/18 11:44:47.628 [DEBUG] [UMS.Models.AccountContext] [waSR@hotmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:44:47.628 [DEBUG] [UMS.Models.EditAccountContext] [waSR@hotmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:44:47.660 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/18 11:44:54.818 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Index:LogsController.cs:64 | Getting top 100 from all logs.
+2020/09/18 11:44:59.801 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Search:LogsController.cs:91 | Input Date Input: 09/18/2020 12:00 AM - 09/18/2020 11:59 PM
+2020/09/18 11:44:59.853 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Search:LogsController.cs:92 | Input Message: -
+2020/09/18 11:44:59.868 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Search:LogsController.cs:104 | Getting log by 09/18/2020 12:00 AM - 09/18/2020 11:59 PM.
+2020/09/18 11:45:00.387 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Search:LogsController.cs:91 | Input Date Input: 09/18/2020 12:00 AM - 09/18/2020 11:59 PM
+2020/09/18 11:45:00.419 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Search:LogsController.cs:92 | Input Message: -
+2020/09/18 11:45:00.427 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Search:LogsController.cs:104 | Getting log by 09/18/2020 12:00 AM - 09/18/2020 11:59 PM.
+2020/09/18 11:45:08.903 [DEBUG] [UMS.Models.AccountContext] [waSR@hotmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:45:08.920 [DEBUG] [UMS.Models.EditAccountContext] [waSR@hotmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:45:08.957 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/18 11:45:12.306 [DEBUG] [UMS.Models.AccountContext] [waSR@hotmail.com] getUser:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:45:12.315 [DEBUG] [UMS.Models.EditAccountContext] [waSR@hotmail.com] getUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:45:12.390 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] getUser:ManageUserController.cs:117 | Get user by ID
+2020/09/18 11:45:13.483 [DEBUG] [UMS.Models.AccountContext] [waSR@hotmail.com] editUser:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:45:13.521 [DEBUG] [UMS.Models.EditAccountContext] [waSR@hotmail.com] editUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:45:13.565 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] editUser:ManageUserController.cs:155 | Set role ID.
+2020/09/18 11:45:13.594 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] editUser:ManageUserController.cs:167 | Update name'user.
+2020/09/18 11:45:13.614 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] editUser:ManageUserController.cs:169 | Update role'user.
+2020/09/18 11:45:13.614 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] editUser:ManageUserController.cs:177 | Save changes: Update user.
+2020/09/18 11:45:13.635 [DEBUG] [UMS.Models.AccountContext] [waSR@hotmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:45:13.635 [DEBUG] [UMS.Models.EditAccountContext] [waSR@hotmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:45:13.660 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/18 11:45:15.384 [DEBUG] [UMS.Models.AccountContext] [waSR@hotmail.com] getUser:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:45:15.384 [DEBUG] [UMS.Models.EditAccountContext] [waSR@hotmail.com] getUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:45:15.394 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] getUser:ManageUserController.cs:117 | Get user by ID
+2020/09/18 11:45:34.974 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Index:LogsController.cs:64 | Getting top 100 from all logs.
+2020/09/18 11:45:55.759 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Search:LogsController.cs:91 | Input Date Input: 09/18/2020 12:00 AM - 09/18/2020 11:59 PM
+2020/09/18 11:45:55.787 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Search:LogsController.cs:92 | Input Message: Get
+2020/09/18 11:45:55.787 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Search:LogsController.cs:104 | Getting log by 09/18/2020 12:00 AM - 09/18/2020 11:59 PM or Get.
+2020/09/18 11:46:06.957 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Search:LogsController.cs:91 | Input Date Input: 09/18/2020 12:00 AM - 09/18/2020 11:59 PM
+2020/09/18 11:46:06.972 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Search:LogsController.cs:92 | Input Message: active
+2020/09/18 11:46:06.972 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Search:LogsController.cs:104 | Getting log by 09/18/2020 12:00 AM - 09/18/2020 11:59 PM or active.
+2020/09/18 11:46:23.302 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Search:LogsController.cs:91 | Input Date Input: -
+2020/09/18 11:46:23.302 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Search:LogsController.cs:92 | Input Message: active
+2020/09/18 11:46:45.486 [ERROR] [UMS.Controllers.LogsController] [waSR@hotmail.com] Search:LogsController.cs:96 | Error: Object reference not set to an instance of an object.
+2020/09/18 11:46:45.550 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Search:LogsController.cs:91 | Input Date Input: -
+2020/09/18 11:46:45.550 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Search:LogsController.cs:91 | Input Date Input: 09/18/2020 11:46 AM - 09/18/2020 1:16 PM
+2020/09/18 11:46:45.570 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Search:LogsController.cs:92 | Input Message: active
+2020/09/18 11:46:45.615 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Search:LogsController.cs:92 | Input Message: active
+2020/09/18 11:47:19.940 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/18 11:47:20.586 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/18 11:47:20.630 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Wannapa\source\repos\ums\UMS
+2020/09/18 11:47:20.821 [INFO] [UMS.Controllers.HomeController] [waSR@hotmail.com] Index:HomeController.cs:60 | Welcome waSR@hotmail.com to UMS.
+2020/09/18 11:47:25.680 [DEBUG] [UMS.Models.AccountContext] [waSR@hotmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:47:25.707 [DEBUG] [UMS.Models.EditAccountContext] [waSR@hotmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:47:27.178 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/18 11:49:39.534 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/18 11:49:40.004 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/18 11:49:40.023 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Wannapa\source\repos\ums\UMS
+2020/09/18 11:49:40.112 [INFO] [UMS.Controllers.HomeController] [waSR@hotmail.com] Index:HomeController.cs:60 | Welcome waSR@hotmail.com to UMS.
+2020/09/18 11:49:43.296 [DEBUG] [UMS.Models.AccountContext] [waSR@hotmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:49:43.309 [DEBUG] [UMS.Models.EditAccountContext] [waSR@hotmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:49:44.770 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/18 11:49:54.815 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Index:LogsController.cs:64 | Getting top 100 from all logs.
+2020/09/18 11:50:28.674 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Index:LogsController.cs:64 | Getting top 100 from all logs.
+2020/09/18 11:50:31.243 [DEBUG] [UMS.Models.AccountContext] [waSR@hotmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:50:31.243 [DEBUG] [UMS.Models.EditAccountContext] [waSR@hotmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:50:31.287 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/18 11:50:32.864 [DEBUG] [UMS.Models.AccountContext] [waSR@hotmail.com] getUser:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:50:32.864 [DEBUG] [UMS.Models.EditAccountContext] [waSR@hotmail.com] getUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:50:32.970 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] getUser:ManageUserController.cs:117 | Get user by ID
+2020/09/18 11:50:53.819 [DEBUG] [UMS.Models.AccountContext] [waSR@hotmail.com] getUser:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:50:53.845 [DEBUG] [UMS.Models.EditAccountContext] [waSR@hotmail.com] getUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:50:53.914 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] getUser:ManageUserController.cs:117 | Get user by ID
+2020/09/18 11:51:16.771 [DEBUG] [UMS.Models.AccountContext] [waSR@hotmail.com] getUser:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:51:16.771 [DEBUG] [UMS.Models.EditAccountContext] [waSR@hotmail.com] getUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:51:16.815 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] getUser:ManageUserController.cs:117 | Get user by ID
+2020/09/18 11:51:22.879 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Index:LogsController.cs:64 | Getting top 100 from all logs.
+2020/09/18 11:51:24.492 [DEBUG] [UMS.Controllers.EditProfileController] [waSR@hotmail.com] Index:EditProfileController.cs:71 | Get user by ID.
+2020/09/18 11:51:26.128 [INFO] [UMS.Controllers.HomeController] [waSR@hotmail.com] Index:HomeController.cs:60 | Welcome waSR@hotmail.com to UMS.
+2020/09/18 11:51:27.803 [DEBUG] [UMS.Controllers.EditProfileController] [waSR@hotmail.com] Index:EditProfileController.cs:71 | Get user by ID.
+2020/09/18 11:51:28.872 [DEBUG] [UMS.Models.AccountContext] [waSR@hotmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:51:28.880 [DEBUG] [UMS.Models.EditAccountContext] [waSR@hotmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:51:28.912 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/18 11:51:32.017 [DEBUG] [UMS.Controllers.EditProfileController] [waSR@hotmail.com] Index:EditProfileController.cs:71 | Get user by ID.
+2020/09/18 11:51:33.425 [DEBUG] [UMS.Models.AccountContext] [waSR@hotmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:51:33.425 [DEBUG] [UMS.Models.EditAccountContext] [waSR@hotmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:51:33.458 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/18 11:51:37.083 [DEBUG] [UMS.Models.AccountContext] [waSR@hotmail.com] getUser:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:51:37.083 [DEBUG] [UMS.Models.EditAccountContext] [waSR@hotmail.com] getUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:51:37.139 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] getUser:ManageUserController.cs:117 | Get user by ID
+2020/09/18 11:53:39.695 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/18 11:53:40.911 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/18 11:53:40.935 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Wannapa\source\repos\ums\UMS
+2020/09/18 11:53:41.143 [INFO] [UMS.Controllers.HomeController] [waSR@hotmail.com] Index:HomeController.cs:60 | Welcome waSR@hotmail.com to UMS.
+2020/09/18 11:53:46.147 [DEBUG] [UMS.Models.AccountContext] [waSR@hotmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:53:46.165 [DEBUG] [UMS.Models.EditAccountContext] [waSR@hotmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:53:48.329 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/18 11:53:50.531 [DEBUG] [UMS.Models.AccountContext] [waSR@hotmail.com] getUser:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:53:50.595 [DEBUG] [UMS.Models.EditAccountContext] [waSR@hotmail.com] getUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:53:50.779 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] getUser:ManageUserController.cs:117 | Get user by ID
+2020/09/18 11:54:02.954 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [waSR@hotmail.com] Logout.cshtml.cs:30 | Starting Log out model.
+2020/09/18 11:54:02.987 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [waSR@hotmail.com] Logout.cshtml.cs:50 | User logged out.
+2020/09/18 11:54:03.128 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:54:03.128 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:54:03.147 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 11:54:03.208 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:112 | Getting external authentication scheme.
+2020/09/18 11:54:06.738 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:54:06.738 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/18 11:54:09.180 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:54:09.180 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:54:09.366 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:54:09.382 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:54:10.077 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:54:10.086 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:54:10.149 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:54:10.149 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:54:14.622 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:54:14.634 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:54:14.677 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:54:14.677 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:54:17.209 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:54:17.209 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:54:17.239 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:54:17.254 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:54:18.823 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:54:18.835 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:54:18.866 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:54:18.879 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:54:21.203 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:54:21.209 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:54:21.239 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:54:21.239 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:54:28.335 [DEBUG] [UMS.Models.AccountContext]  GetStatusUser:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:54:28.335 [DEBUG] [UMS.Models.EditAccountContext]  GetStatusUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:54:28.951 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:54:28.964 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:54:29.004 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:54:29.023 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:54:31.220 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:54:31.257 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:54:31.402 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:54:31.402 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:54:31.846 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:54:31.846 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:54:31.882 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:54:31.882 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:54:32.804 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:54:32.818 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:54:32.846 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:54:32.870 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:54:33.402 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:54:33.402 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:54:33.441 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:54:33.466 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:54:38.440 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:54:38.440 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:54:38.549 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:54:38.630 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:54:50.262 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:54:50.262 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:54:50.316 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:54:50.335 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:54:51.114 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:54:51.132 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:54:51.197 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:54:51.197 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:54:55.266 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:54:55.277 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:54:55.354 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:54:55.364 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:54:56.161 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:54:56.161 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Starting Register model.
+2020/09/18 11:54:57.131 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:54:57.145 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:54:57.246 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:54:57.252 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:54:57.479 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:54:57.479 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:54:57.519 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:54:57.519 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:55:00.206 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:55:00.206 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:55:00.237 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:55:00.260 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:55:01.547 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:55:01.553 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:55:01.566 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:55:01.581 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:55:06.918 [DEBUG] [UMS.Models.AccountContext]  GetStatusUser:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:55:06.931 [DEBUG] [UMS.Models.EditAccountContext]  GetStatusUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:55:07.966 [DEBUG] [UMS.Models.AccountContext]  GetStatusUser:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:55:07.985 [DEBUG] [UMS.Models.EditAccountContext]  GetStatusUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:55:08.357 [DEBUG] [UMS.Models.AccountContext]  GetStatusUser:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:55:08.362 [DEBUG] [UMS.Models.EditAccountContext]  GetStatusUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:55:09.263 [DEBUG] [UMS.Models.AccountContext]  GetStatusUser:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:55:09.263 [DEBUG] [UMS.Models.EditAccountContext]  GetStatusUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:55:10.251 [DEBUG] [UMS.Models.AccountContext]  GetStatusUser:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:55:10.259 [DEBUG] [UMS.Models.EditAccountContext]  GetStatusUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:55:11.548 [DEBUG] [UMS.Models.AccountContext]  GetStatusUser:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:55:11.559 [DEBUG] [UMS.Models.EditAccountContext]  GetStatusUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:55:33.592 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:55:33.607 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:55:33.628 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:55:33.628 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:55:34.654 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:55:34.654 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:55:34.676 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:55:34.691 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:55:36.054 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:55:36.054 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:55:36.084 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:55:36.084 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:55:36.724 [DEBUG] [UMS.Models.AccountContext]  GetStatusUser:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:55:36.724 [DEBUG] [UMS.Models.EditAccountContext]  GetStatusUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:55:39.905 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:55:39.908 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:55:39.939 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:55:39.939 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:55:45.116 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:55:45.116 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:55:45.176 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:55:45.192 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:55:46.205 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:55:46.208 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:55:46.237 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:55:46.237 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:55:47.636 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:55:47.636 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:55:47.660 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:55:47.660 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:55:50.092 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:55:50.097 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:55:50.114 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:55:50.136 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:55:55.935 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:55:55.951 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:55:56.036 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:55:56.036 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:56:01.846 [DEBUG] [UMS.Models.AccountContext]  GetStatusUser:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:56:01.846 [DEBUG] [UMS.Models.EditAccountContext]  GetStatusUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:56:11.801 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:56:11.801 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:56:11.849 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:56:11.849 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:56:11.914 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:56:11.914 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:56:11.955 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:56:11.955 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:56:14.614 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:56:14.614 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:56:14.707 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:56:14.707 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:56:19.580 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:56:21.507 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:56:22.686 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:56:22.752 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:56:22.786 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:56:22.802 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:56:22.802 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/18 11:56:22.802 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/18 11:56:27.062 [DEBUG] [UMS.Models.AccountContext]  GetStatusUser:AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:56:27.067 [DEBUG] [UMS.Models.EditAccountContext]  GetStatusUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:56:28.003 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:56:28.028 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:56:28.113 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 11:56:28.161 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:112 | Getting external authentication scheme.
+2020/09/18 11:56:36.879 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:56:36.900 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:56:36.940 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 11:57:12.237 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/18 11:57:12.896 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/18 11:57:12.918 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Wannapa\source\repos\ums\UMS
+2020/09/18 11:57:13.199 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:57:13.219 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:57:13.236 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 11:57:13.315 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:112 | Getting external authentication scheme.
+2020/09/18 11:57:24.712 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:57:24.755 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:57:24.785 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 11:59:13.914 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/18 11:59:14.635 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/18 11:59:14.655 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Wannapa\source\repos\ums\UMS
+2020/09/18 11:59:14.942 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:59:14.960 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:59:14.971 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 11:59:15.044 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:112 | Getting external authentication scheme.
+2020/09/18 11:59:38.659 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 11:59:38.684 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 11:59:38.706 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 11:59:41.588 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/18 11:59:41.863 [INFO] [UMS.Controllers.HomeController] [waSR@hotmail.com] Index:HomeController.cs:60 | Welcome waSR@hotmail.com to UMS.
+2020/09/18 11:59:44.223 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Index:LogsController.cs:64 | Getting top 100 from all logs.
+2020/09/18 12:01:39.620 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/18 12:01:42.202 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/18 12:01:42.275 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Wannapa\source\repos\ums\UMS
+2020/09/18 12:01:43.021 [INFO] [UMS.Controllers.HomeController] [waSR@hotmail.com] Index:HomeController.cs:60 | Welcome waSR@hotmail.com to UMS.
+2020/09/18 12:01:47.054 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Index:LogsController.cs:64 | Getting top 100 from all logs.
+2020/09/18 12:03:03.193 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/18 12:03:04.177 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/18 12:03:04.236 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Wannapa\source\repos\ums\UMS
+2020/09/18 12:03:04.399 [INFO] [UMS.Controllers.HomeController] [waSR@hotmail.com] Index:HomeController.cs:60 | Welcome waSR@hotmail.com to UMS.
+2020/09/18 12:03:10.595 [DEBUG] [UMS.Models.AccountContext] [waSR@hotmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/18 12:03:10.629 [DEBUG] [UMS.Models.EditAccountContext] [waSR@hotmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 12:03:11.958 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Index:LogsController.cs:64 | Getting top 100 from all logs.
+2020/09/18 12:03:13.065 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/18 12:03:23.556 [DEBUG] [UMS.Models.AccountContext] [waSR@hotmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/18 12:03:23.636 [DEBUG] [UMS.Models.EditAccountContext] [waSR@hotmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 12:03:23.876 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/18 12:03:25.539 [DEBUG] [UMS.Controllers.EditProfileController] [waSR@hotmail.com] Index:EditProfileController.cs:71 | Get user by ID.
+2020/09/18 12:03:33.009 [DEBUG] [UMS.Models.AccountContext] [waSR@hotmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/18 12:03:33.060 [DEBUG] [UMS.Models.EditAccountContext] [waSR@hotmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 12:03:33.162 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/18 12:03:35.207 [DEBUG] [UMS.Models.AccountContext] [waSR@hotmail.com] getUser:AccountContext.cs:24 | Start Account Context.
+2020/09/18 12:03:35.207 [DEBUG] [UMS.Models.EditAccountContext] [waSR@hotmail.com] getUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 12:03:35.399 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] getUser:ManageUserController.cs:117 | Get user by ID
+2020/09/18 12:03:51.428 [DEBUG] [UMS.Controllers.EditProfileController] [waSR@hotmail.com] Index:EditProfileController.cs:71 | Get user by ID.
+2020/09/18 12:04:00.058 [DEBUG] [UMS.Models.AccountContext] [waSR@hotmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/18 12:04:00.139 [DEBUG] [UMS.Models.EditAccountContext] [waSR@hotmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 12:04:00.320 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/18 12:04:02.831 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Index:LogsController.cs:64 | Getting top 100 from all logs.
+2020/09/18 12:04:23.169 [DEBUG] [UMS.Models.AccountContext] [waSR@hotmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/18 12:04:23.187 [DEBUG] [UMS.Models.EditAccountContext] [waSR@hotmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 12:04:23.299 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/18 12:04:24.993 [DEBUG] [UMS.Controllers.EditProfileController] [waSR@hotmail.com] Index:EditProfileController.cs:71 | Get user by ID.
+2020/09/18 12:04:26.715 [INFO] [UMS.Controllers.HomeController] [waSR@hotmail.com] Index:HomeController.cs:60 | Welcome waSR@hotmail.com to UMS.
+2020/09/18 12:04:28.299 [DEBUG] [UMS.Controllers.LogsController] [waSR@hotmail.com] Index:LogsController.cs:64 | Getting top 100 from all logs.
+2020/09/18 12:04:32.367 [DEBUG] [UMS.Models.AccountContext] [waSR@hotmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/18 12:04:32.385 [DEBUG] [UMS.Models.EditAccountContext] [waSR@hotmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 12:04:32.499 [DEBUG] [UMS.Controllers.ManageUserController] [waSR@hotmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/18 12:04:38.825 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [waSR@hotmail.com] Logout.cshtml.cs:30 | Starting Log out model.
+2020/09/18 12:04:38.950 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [waSR@hotmail.com] Logout.cshtml.cs:50 | User logged out.
+2020/09/18 12:04:39.090 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 12:04:39.099 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 12:04:39.158 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 12:04:39.191 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:112 | Getting external authentication scheme.
+2020/09/18 12:04:41.078 [DEBUG] [EmailService.EmailSender]  EmailSender.cs:35 | Start Email sender.
+2020/09/18 12:04:41.208 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:38 | Forgot Password model.
+2020/09/18 12:04:46.527 [DEBUG] [EmailService.EmailSender]  EmailSender.cs:35 | Start Email sender.
+2020/09/18 12:04:46.579 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:38 | Forgot Password model.
+2020/09/18 12:04:47.794 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:77 | Generating code.
+2020/09/18 12:04:54.392 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordConfirmation]  ForgotPasswordConfirmation.cshtml.cs:25 | Forgot Password Confirmation.
+2020/09/18 12:06:03.482 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:30 | Reset password model.
+2020/09/18 12:06:32.460 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:30 | Reset password model.
+2020/09/18 12:06:33.695 [INFO] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:126 | User reseted password.
+2020/09/18 12:06:33.817 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordConfirmationModel]  ResetPasswordConfirmation.cshtml.cs:26 | Reset Password Confirmation model.
