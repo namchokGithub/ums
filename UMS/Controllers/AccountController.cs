@@ -105,8 +105,7 @@ namespace UMS.Controllers
             } catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                TempData["Exception"] = message;
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End Input Model.");
                 return RedirectToPage("/Login");
             } // End try catch
@@ -115,7 +114,7 @@ namespace UMS.Controllers
         /*
          * Name: Logout
          * Parameter: none
-         * Description: log out
+         * Description: for logout of the system
          */
         public async Task<IActionResult> Logout()
         {
@@ -165,8 +164,7 @@ namespace UMS.Controllers
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                TempData["Exception"] = message;
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End Google Login.");
                 return RedirectToPage("/Login");
             } // End try catch
@@ -202,7 +200,6 @@ namespace UMS.Controllers
                     info.Principal.FindFirst(ClaimTypes.GivenName).Value,
                     info.Principal.FindFirst(ClaimTypes.Surname).Value
                 }; // Craete user info
-
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("login Successfully.");
@@ -258,8 +255,7 @@ namespace UMS.Controllers
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                TempData["Exception"] = message;
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End Google Response.");
                 return RedirectToPage("/Login");
             } // End try catch
@@ -285,8 +281,7 @@ namespace UMS.Controllers
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                TempData["Exception"] = message;
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End Facebook Login");
                 return RedirectToPage("/Login");
             } // End try catch
@@ -376,8 +371,7 @@ namespace UMS.Controllers
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                TempData["Exception"] = message;
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End Facebook Response.");
                 return RedirectToPage("/Login");
             } // End try catch
@@ -403,8 +397,7 @@ namespace UMS.Controllers
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                TempData["Exception"] = message;
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End Microsoft Login.");
                 return RedirectToPage("/Login");
             } // End try catch
@@ -495,8 +488,7 @@ namespace UMS.Controllers
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                TempData["Exception"] = message;
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End Microsoft Response.");
                 return RedirectToPage("/Login");
             } // End try catch
