@@ -8,7 +8,6 @@ using System.Globalization;
 using System.Net.Mail;
 using System.Text.RegularExpressions;
 using UMS.Data;
-using System.Data.Entity;
 using Microsoft.EntityFrameworkCore;
 using System.Threading;
 

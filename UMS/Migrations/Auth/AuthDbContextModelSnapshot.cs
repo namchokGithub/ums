@@ -209,7 +209,7 @@ namespace UMS.Migrations.Auth
                     b.Property<string>("acc_IsActive")
                         .IsRequired()
                         .HasColumnName("acc_IsActive")
-                        .HasColumnType("char(10)")
+                        .HasColumnType("char(1)")
                         .HasComment("Status of account");
 
                     b.Property<string>("acc_Lastname")

@@ -1,0 +1,310 @@
+############################################## User Management System log ##############################################
+2020/09/18 09:58:30.362 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/18 09:58:39.435 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/18 09:58:41.562 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/18 09:58:41.633 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/18 09:58:41.680 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/18 09:58:41.731 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/18 09:58:42.296 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:76 | Creating applications user models.
+2020/09/18 09:58:42.301 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:84 | Creating Identity models.
+2020/09/18 09:58:42.326 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:108 | Creating log models.
+2020/09/18 09:58:42.326 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:110 | End creating on model.
+2020/09/18 09:58:51.281 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/18 09:58:57.522 [ERROR] [UMS.Program]  Program.cs:28 | Stopped program because of exception.System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at System.Threading.CancellationToken.ThrowIfCancellationRequested()
+   at Microsoft.Extensions.Hosting.Internal.Host.StopAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.WaitForShutdownAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at UMS.Program.Main(String[] args) in C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Program.cs:line 28
+2020/09/18 10:06:11.765 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/18 10:06:12.329 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:76 | Creating applications user models.
+2020/09/18 10:06:12.335 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:84 | Creating Identity models.
+2020/09/18 10:06:12.350 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:108 | Creating log models.
+2020/09/18 10:06:12.350 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:110 | End creating on model.
+2020/09/18 10:08:59.414 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/18 10:08:59.922 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:76 | Creating applications user models.
+2020/09/18 10:08:59.928 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:84 | Creating Identity models.
+2020/09/18 10:08:59.946 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:108 | Creating log models.
+2020/09/18 10:08:59.946 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:110 | End creating on model.
+2020/09/18 10:09:58.713 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/18 10:09:59.226 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:76 | Creating applications user models.
+2020/09/18 10:09:59.226 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:84 | Creating Identity models.
+2020/09/18 10:09:59.246 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:108 | Creating log models.
+2020/09/18 10:09:59.246 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:110 | End creating on model.
+2020/09/18 10:11:39.187 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/18 10:11:39.697 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:76 | Creating applications user models.
+2020/09/18 10:11:39.697 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:84 | Creating Identity models.
+2020/09/18 10:11:39.727 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:108 | Creating log models.
+2020/09/18 10:11:39.727 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:110 | End creating on model.
+2020/09/18 10:13:07.325 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/18 10:13:09.806 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/18 10:13:10.215 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/18 10:13:10.254 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/18 10:13:10.308 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/18 10:13:11.552 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/18 10:13:12.187 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:76 | Creating applications user models.
+2020/09/18 10:13:12.209 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:84 | Creating Identity models.
+2020/09/18 10:13:12.228 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:108 | Creating log models.
+2020/09/18 10:13:12.228 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:110 | End creating on model.
+2020/09/18 10:13:13.840 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/18 10:13:13.885 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 10:13:13.897 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 10:13:13.919 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/18 10:13:13.919 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/18 10:13:13.926 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/18 10:13:13.926 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/18 10:13:13.926 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/18 10:13:13.943 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 10:13:14.049 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:97 | Start login on get.
+2020/09/18 10:13:14.074 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:110 | Signing out.
+2020/09/18 10:13:14.080 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:112 | Getting external authentication scheme.
+2020/09/18 10:13:14.106 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | End login on get.
+2020/09/18 10:13:27.556 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/18 10:13:27.566 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 10:13:27.566 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 10:13:27.590 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/18 10:13:27.590 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/18 10:13:27.599 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/18 10:13:27.599 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/18 10:13:27.599 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/18 10:13:27.613 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 10:13:27.708 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:135 | Start login on post.
+2020/09/18 10:13:27.952 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:144 | Signing in with password.
+2020/09/18 10:13:28.235 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/18 10:13:28.269 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:149 | End login on post.
+2020/09/18 10:13:28.308 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/18 10:13:28.321 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/18 10:13:28.321 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/18 10:13:28.333 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/18 10:13:28.333 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/18 10:13:28.357 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/18 10:13:28.369 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/18 10:13:28.369 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:69 | End Index.
+2020/09/18 10:13:30.369 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/18 10:13:30.413 [TRACE] [UMS.Models.LogsContext] [usermanagement2020@gmail.com] Index:LogsContext.cs:24 | Start Edit Profile Context.
+2020/09/18 10:13:30.413 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:37 | Logs Context injected into LogsController.
+2020/09/18 10:13:30.431 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:38 | Start LogsControllerl.
+2020/09/18 10:13:30.446 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:56 | Start Index.
+2020/09/18 10:13:30.463 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:58 | Find ID from first value.
+2020/09/18 10:13:30.463 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:64 | Getting top 100 from all logs.
+2020/09/18 10:13:30.624 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:68 | End Index.
+2020/09/18 10:13:33.535 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/18 10:13:33.561 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/18 10:13:34.116 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 10:13:34.149 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/18 10:13:34.149 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/18 10:13:34.165 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/18 10:13:34.178 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/18 10:13:34.178 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/18 10:13:34.193 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:70 | Start Index.
+2020/09/18 10:13:34.193 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:76 | Find first value from user.
+2020/09/18 10:13:34.343 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/18 10:13:34.373 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:87 | End Index.
+2020/09/18 10:13:36.301 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/18 10:13:36.319 [TRACE] [UMS.Models.EditProfileContext] [usermanagement2020@gmail.com] Index:EditProfileContext.cs:24 | Start Edit Profile Context.
+2020/09/18 10:13:36.330 [TRACE] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:40 | NLog injected into EditProfileController.
+2020/09/18 10:13:36.330 [TRACE] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:42 | Edit Profile Context injected into EditProfileController.
+2020/09/18 10:13:36.355 [TRACE] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:44 | Sign In Manager injected into EditProfileController.
+2020/09/18 10:13:36.362 [TRACE] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:45 | Start EditProfile Controller Constructor.
+2020/09/18 10:13:36.362 [TRACE] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:64 | Start Index
+2020/09/18 10:13:36.400 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:71 | Get user by ID.
+2020/09/18 10:13:36.413 [TRACE] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:74 | End Index
+2020/09/18 10:13:37.876 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/18 10:13:37.887 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/18 10:13:37.896 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/18 10:13:37.896 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/18 10:13:37.913 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/18 10:13:37.913 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/18 10:13:37.932 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/18 10:13:37.942 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:69 | End Index.
+2020/09/18 10:13:39.061 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/18 10:13:39.074 [TRACE] [UMS.Models.EditProfileContext] [usermanagement2020@gmail.com] Index:EditProfileContext.cs:24 | Start Edit Profile Context.
+2020/09/18 10:13:39.088 [TRACE] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:40 | NLog injected into EditProfileController.
+2020/09/18 10:13:39.095 [TRACE] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:42 | Edit Profile Context injected into EditProfileController.
+2020/09/18 10:13:39.114 [TRACE] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:44 | Sign In Manager injected into EditProfileController.
+2020/09/18 10:13:39.114 [TRACE] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:45 | Start EditProfile Controller Constructor.
+2020/09/18 10:13:39.136 [TRACE] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:64 | Start Index
+2020/09/18 10:13:39.146 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:71 | Get user by ID.
+2020/09/18 10:13:39.159 [TRACE] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:74 | End Index
+2020/09/18 10:13:40.619 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/18 10:13:40.634 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Log out model.
+2020/09/18 10:13:40.651 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:47 | Start Log out model On Post.
+2020/09/18 10:13:40.651 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:48 | Signing out.
+2020/09/18 10:13:40.664 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:50 | User logged out.
+2020/09/18 10:13:40.675 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:53 | End Log out model On Post.
+2020/09/18 10:13:40.712 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/18 10:13:40.712 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 10:13:40.733 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 10:13:40.745 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/18 10:13:40.753 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/18 10:13:40.753 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/18 10:13:40.771 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/18 10:13:40.771 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/18 10:13:40.788 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 10:13:40.806 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:97 | Start login on get.
+2020/09/18 10:13:40.806 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:110 | Signing out.
+2020/09/18 10:13:40.818 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:112 | Getting external authentication scheme.
+2020/09/18 10:13:40.818 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | End login on get.
+2020/09/18 10:13:42.186 [TRACE] [UMS.Data.AuthDbContext]  GoogleLogin:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/18 10:13:42.194 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:33 | NLog injected into AccountController.
+2020/09/18 10:13:42.194 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:35 | Sign In Manager injected into AccountController.
+2020/09/18 10:13:42.206 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:37 | User Manager manager injected into AccountController.
+2020/09/18 10:13:42.206 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:38 | Start AccountController Constructor.
+2020/09/18 10:13:42.223 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:158 | Start Google Login.
+2020/09/18 10:13:42.223 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:161 | Get properties from google.
+2020/09/18 10:13:42.238 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:162 | End Google Login.
+2020/09/18 10:14:06.708 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]   | An unhandled exception has occurred while executing the request.System.Exception: An error was encountered while handling the remote login.
+ ---> System.Net.Http.HttpRequestException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+ ---> System.Net.Sockets.SocketException (10060): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.EstablishProxyTunnel(HttpRequestHeaders headers, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Microsoft.AspNetCore.Authentication.OAuth.OAuthHandler`1.ExchangeCodeAsync(OAuthCodeExchangeContext context)
+   at Microsoft.AspNetCore.Authentication.OAuth.OAuthHandler`1.HandleRemoteAuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/09/18 10:14:29.605 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/18 10:14:29.613 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 10:14:29.613 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]   | An unhandled exception has occurred while executing the request.System.Exception: An error was encountered while handling the remote login.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.EstablishProxyTunnel(HttpRequestHeaders headers, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Microsoft.AspNetCore.Authentication.OAuth.OAuthHandler`1.ExchangeCodeAsync(OAuthCodeExchangeContext context)
+   at Microsoft.AspNetCore.Authentication.OAuth.OAuthHandler`1.HandleRemoteAuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/09/18 10:14:29.652 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 10:14:29.695 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/18 10:14:29.695 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/18 10:14:29.716 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/18 10:14:29.722 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/18 10:14:29.722 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/18 10:14:29.738 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 10:14:29.762 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:97 | Start login on get.
+2020/09/18 10:14:29.771 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:110 | Signing out.
+2020/09/18 10:14:29.790 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:112 | Getting external authentication scheme.
+2020/09/18 10:14:29.806 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | End login on get.
+2020/09/18 10:14:32.972 [TRACE] [UMS.Data.AuthDbContext]  FacebookLogin:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/18 10:14:32.972 [TRACE] [UMS.Controllers.AccountController]  FacebookLogin:AccountController.cs:33 | NLog injected into AccountController.
+2020/09/18 10:14:32.972 [TRACE] [UMS.Controllers.AccountController]  FacebookLogin:AccountController.cs:35 | Sign In Manager injected into AccountController.
+2020/09/18 10:14:32.994 [TRACE] [UMS.Controllers.AccountController]  FacebookLogin:AccountController.cs:37 | User Manager manager injected into AccountController.
+2020/09/18 10:14:32.994 [TRACE] [UMS.Controllers.AccountController]  FacebookLogin:AccountController.cs:38 | Start AccountController Constructor.
+2020/09/18 10:14:33.008 [TRACE] [UMS.Controllers.AccountController]  FacebookLogin:AccountController.cs:278 | Start Facebook Login
+2020/09/18 10:14:33.008 [TRACE] [UMS.Controllers.AccountController]  FacebookLogin:AccountController.cs:281 | Get properties from properties.
+2020/09/18 10:14:33.017 [TRACE] [UMS.Controllers.AccountController]  FacebookLogin:AccountController.cs:282 | End Facebook Login
+2020/09/18 10:14:55.285 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]   | An unhandled exception has occurred while executing the request.System.Exception: An error was encountered while handling the remote login.
+ ---> System.Net.Http.HttpRequestException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+ ---> System.Net.Sockets.SocketException (10060): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.EstablishProxyTunnel(HttpRequestHeaders headers, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Microsoft.AspNetCore.Authentication.OAuth.OAuthHandler`1.ExchangeCodeAsync(OAuthCodeExchangeContext context)
+   at Microsoft.AspNetCore.Authentication.OAuth.OAuthHandler`1.HandleRemoteAuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/09/18 10:15:29.270 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/18 10:15:29.270 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 10:15:29.296 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 10:15:29.326 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/18 10:15:29.333 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/18 10:15:29.333 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/18 10:15:29.351 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/18 10:15:29.365 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/18 10:15:29.365 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 10:15:29.418 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:97 | Start login on get.
+2020/09/18 10:15:29.432 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:110 | Signing out.
+2020/09/18 10:15:29.432 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:112 | Getting external authentication scheme.
+2020/09/18 10:15:29.465 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | End login on get.
+2020/09/18 10:15:31.599 [TRACE] [UMS.Data.AuthDbContext]  MicrosoftLogin:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/18 10:15:31.599 [TRACE] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:33 | NLog injected into AccountController.
+2020/09/18 10:15:31.613 [TRACE] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:35 | Sign In Manager injected into AccountController.
+2020/09/18 10:15:31.627 [TRACE] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:37 | User Manager manager injected into AccountController.
+2020/09/18 10:15:31.627 [TRACE] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:38 | Start AccountController Constructor.
+2020/09/18 10:15:31.651 [TRACE] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:396 | Start Microsoft Login.
+2020/09/18 10:15:31.666 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:398 | Getting properties from Microsoft.
+2020/09/18 10:15:31.740 [TRACE] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:400 | End Microsoft Login.
+2020/09/18 10:15:55.137 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]   | An unhandled exception has occurred while executing the request.System.Exception: An error was encountered while handling the remote login.
+ ---> System.Net.Http.HttpRequestException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+ ---> System.Net.Sockets.SocketException (10060): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.EstablishProxyTunnel(HttpRequestHeaders headers, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Microsoft.AspNetCore.Authentication.OAuth.OAuthHandler`1.ExchangeCodeAsync(OAuthCodeExchangeContext context)
+   at Microsoft.AspNetCore.Authentication.OAuth.OAuthHandler`1.HandleRemoteAuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/09/18 10:16:02.593 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/18 10:16:02.598 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 10:16:02.623 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 10:16:02.641 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/18 10:16:02.649 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/18 10:16:02.662 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/18 10:16:02.662 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/18 10:16:02.677 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/18 10:16:02.677 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 10:16:02.699 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:97 | Start login on get.
+2020/09/18 10:16:02.708 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:110 | Signing out.
+2020/09/18 10:16:02.708 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:112 | Getting external authentication scheme.
+2020/09/18 10:16:02.724 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | End login on get.
