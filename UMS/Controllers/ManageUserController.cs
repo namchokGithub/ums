@@ -323,7 +323,7 @@ namespace UMS.Controllers
                 if (!int.TryParse(status.Value.ToString(), out _)) throw new Exception("Uncorrect type."); // If status if not integer
                 if((int)status.Value == 1) status.Value = "ACTIVE";
                 else if ((int)status.Value == 0) status.Value = "INACTIVE";
-                
+                else if ((int)status.Value == 9) throw new Exception("Calling a method on a null object reference.");
                 _logger.LogTrace("End Get status user.");
                 return new JsonResult(status.Value);
             } catch (Exception e)

@@ -85,45 +85,45 @@ namespace UMS.Areas.Identity.Pages.Account
                     var us = _editprofileContext.EditProfile.FromSqlRaw(sqltext).ToList().FirstOrDefault<EditProfile>();
                     if (us.acc_TypeAccoutname.ToString().ToLower() != "Email".ToLower())
                     {
-                        _logger.LogWarning("This user can not change password.");
-                        TempData["Exception"] = @"Swal.fire({ icon: 'warning', title: 'Warning !', text: 'This user can not change password.'})";
+                        _logger.LogWarning("This user can not change password (Social Account).");
+                        TempData["Exception"] = @"Swal.fire({ icon: 'warning', title: 'Warning !', text: 'This user can not change password (Social Account).'})";
                         return Page();
                     }
-                    //_logger.LogDebug("Generating code.");
-                    //var code = await _userManager.GeneratePasswordResetTokenAsync(user); // Gen token for this user
-                    //code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+                    _logger.LogDebug("Generating code.");
+                    var code = await _userManager.GeneratePasswordResetTokenAsync(user); // Gen token for this user
+                    code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
 
-                    //var callbackUrl = Url.Page(
-                    //    "/Account/ResetPassword",
-                    //    pageHandler: null,
-                    //    values: new { area = "Identity", code },
-                    //    protocol: Request.Scheme); // Craete call back url
+                    var callbackUrl = Url.Page(
+                        "/Account/ResetPassword",
+                        pageHandler: null,
+                        values: new { area = "Identity", code },
+                        protocol: Request.Scheme); // Craete call back url
 
-                    //var message = new Message(
-                    //    new string[] { Input.Email },
-                    //        "Reset Password",
-                    //        @$"
-                    //        <h2>Hello!, {Input.Email} </h2>
-                    //        <br>
-                    //        We got a request to reset your UMS password.
-                    //        <br>
-                    //        You can change your password by clicking the link 
-                    //        <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'asp-route-Email='{Input.Email}'>
-                    //            <b>Change password</b>
-                    //        </a>.
-                    //        <br>
-                    //        If you ignore this message, your password won't be changed.
-                    //        <br><br><br>
-                    //        <hr>
-                    //        Best regards,
-                    //        <br>
-                    //        User Management System.
-                    //      "
-                    //    ); // End craete message 
-                    //_logger.LogTrace("Sending email.");
-                    //await _emailSender.SendEmailAsync(message);
-                    //_logger.LogTrace("End forgot password on post.");
-                    //return RedirectToPage("./ForgotPasswordConfirmation");
+                    var message = new Message(
+                        new string[] { Input.Email },
+                            "Reset Password",
+                            @$"
+                            <h2>Hello!, {Input.Email} </h2>
+                            <br>
+                            We got a request to reset your UMS password.
+                            <br>
+                            You can change your password by clicking the link 
+                            <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'asp-route-Email='{Input.Email}'>
+                                <b>Change password</b>
+                            </a>.
+                            <br>
+                            If you ignore this message, your password won't be changed.
+                            <br><br><br>
+                            <hr>
+                            Best regards,
+                            <br>
+                            User Management System.
+                          "
+                        ); // End craete message 
+                    _logger.LogTrace("Sending email.");
+                    await _emailSender.SendEmailAsync(message);
+                    _logger.LogTrace("End forgot password on post.");
+                    return RedirectToPage("./ForgotPasswordConfirmation");
                 }
                 _logger.LogTrace("End forgot password on post.");
                 return Page();
