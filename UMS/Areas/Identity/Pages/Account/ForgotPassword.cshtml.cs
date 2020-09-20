@@ -13,6 +13,8 @@ using UMS.Areas.Identity.Data;
 using EmailService;
 using System.Linq;
 using Microsoft.Extensions.Logging;
+using UMS.Models;
+using Microsoft.EntityFrameworkCore;
 
 /*
  * Name: ForgotPasswordModel.cs
@@ -26,12 +28,17 @@ namespace UMS.Areas.Identity.Pages.Account
     public class ForgotPasswordModel : PageModel
     {
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly EditProfileContext _editprofileContext;
         private readonly IEmailSender _emailSender;
         private readonly ILogger<ForgotPasswordModel> _logger;
 
-        public ForgotPasswordModel(UserManager<ApplicationUser> userManager, IEmailSender emailSender, ILogger<ForgotPasswordModel> logger)
+        public ForgotPasswordModel(UserManager<ApplicationUser> userManager,
+            EditProfileContext editprofileContext, 
+            IEmailSender emailSender, 
+            ILogger<ForgotPasswordModel> logger)
         {
             _userManager = userManager;
+            _editprofileContext = editprofileContext;
             _emailSender = emailSender;
             _logger = logger;
             _logger.LogDebug("Start Forgot Password model.");
@@ -72,41 +79,51 @@ namespace UMS.Areas.Identity.Pages.Account
                         TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: 'The user was not found.'})";
                         return Page();
                     } // End check user is null
-                    _logger.LogDebug("Generating code.");
-                    var code = await _userManager.GeneratePasswordResetTokenAsync(user); // Gen token for this user
-                    code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
 
-                    var callbackUrl = Url.Page(
-                        "/Account/ResetPassword",
-                        pageHandler: null,
-                        values: new { area = "Identity", code },
-                        protocol: Request.Scheme); // Craete call back url
+                    string sqltext = $"EXEC [dbo].ums_Get_user '{user.Id}'";
+                    // Query data from "dbo.Account" and Convert to List<EditAccount>
+                    var us = _editprofileContext.EditProfile.FromSqlRaw(sqltext).ToList().FirstOrDefault<EditProfile>();
+                    if (us.acc_TypeAccoutname.ToString().ToLower() != "Email".ToLower())
+                    {
+                        _logger.LogWarning("This user can not change password.");
+                        TempData["Exception"] = @"Swal.fire({ icon: 'warning', title: 'Warning !', text: 'This user can not change password.'})";
+                        return Page();
+                    }
+                    //_logger.LogDebug("Generating code.");
+                    //var code = await _userManager.GeneratePasswordResetTokenAsync(user); // Gen token for this user
+                    //code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
 
-                    var message = new Message(
-                        new string[] { Input.Email },
-                            "Reset Password",
-                            @$"
-                            <h2>Hello!, {Input.Email} </h2>
-                            <br>
-                            We got a request to reset your UMS password.
-                            <br>
-                            You can change your password by clicking the link 
-                            <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'asp-route-Email='{Input.Email}'>
-                                <b>Change password</b>
-                            </a>.
-                            <br>
-                            If you ignore this message, your password won't be changed.
-                            <br><br><br>
-                            <hr>
-                            Best regards,
-                            <br>
-                            User Management System.
-                          "
-                        ); // End craete message 
-                    _logger.LogTrace("Sending email.");
-                    await _emailSender.SendEmailAsync(message);
-                    _logger.LogTrace("End forgot password on post.");
-                    return RedirectToPage("./ForgotPasswordConfirmation");
+                    //var callbackUrl = Url.Page(
+                    //    "/Account/ResetPassword",
+                    //    pageHandler: null,
+                    //    values: new { area = "Identity", code },
+                    //    protocol: Request.Scheme); // Craete call back url
+
+                    //var message = new Message(
+                    //    new string[] { Input.Email },
+                    //        "Reset Password",
+                    //        @$"
+                    //        <h2>Hello!, {Input.Email} </h2>
+                    //        <br>
+                    //        We got a request to reset your UMS password.
+                    //        <br>
+                    //        You can change your password by clicking the link 
+                    //        <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'asp-route-Email='{Input.Email}'>
+                    //            <b>Change password</b>
+                    //        </a>.
+                    //        <br>
+                    //        If you ignore this message, your password won't be changed.
+                    //        <br><br><br>
+                    //        <hr>
+                    //        Best regards,
+                    //        <br>
+                    //        User Management System.
+                    //      "
+                    //    ); // End craete message 
+                    //_logger.LogTrace("Sending email.");
+                    //await _emailSender.SendEmailAsync(message);
+                    //_logger.LogTrace("End forgot password on post.");
+                    //return RedirectToPage("./ForgotPasswordConfirmation");
                 }
                 _logger.LogTrace("End forgot password on post.");
                 return Page();
