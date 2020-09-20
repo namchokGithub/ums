@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using UMS.Areas.Identity.Data;
+using UMS.Models;
 using static UMS.Areas.Identity.Pages.Account.LoginModel;
 
 /*
@@ -24,17 +25,21 @@ namespace UMS.Controllers
         private readonly ILogger<AccountController> _logger;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly ManageUserController _manageUserController;
 
-        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, ILogger<AccountController> logger)
+        public AccountController(UserManager<ApplicationUser> userManager,
+            AccountContext accountContext,
+            EditAccountContext editaccountContext,
+            ILogger<ManageUserController> loggerManager, 
+            SignInManager<ApplicationUser> signInManager,
+            ILogger<AccountController> logger)
         {
             try
             {
                 _logger = logger;
-                _logger.LogTrace("NLog injected into AccountController.");
                 _signInManager = signInManager;
-                _logger.LogTrace("Sign In Manager injected into AccountController.");
                 _userManager = userManager;
-                _logger.LogTrace("User Manager manager injected into AccountController.");
+                _manageUserController = new ManageUserController(accountContext, editaccountContext, loggerManager, _signInManager);
                 _logger.LogTrace("Start AccountController Constructor.");
             }
             catch (Exception e)
@@ -105,8 +110,7 @@ namespace UMS.Controllers
             } catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                TempData["Exception"] = message;
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End Input Model.");
                 return RedirectToPage("/Login");
             } // End try catch
@@ -115,7 +119,7 @@ namespace UMS.Controllers
         /*
          * Name: Logout
          * Parameter: none
-         * Description: log out
+         * Description: for logout of the system
          */
         public async Task<IActionResult> Logout()
         {
@@ -165,8 +169,7 @@ namespace UMS.Controllers
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                TempData["Exception"] = message;
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End Google Login.");
                 return RedirectToPage("/Login");
             } // End try catch
@@ -202,12 +205,27 @@ namespace UMS.Controllers
                     info.Principal.FindFirst(ClaimTypes.GivenName).Value,
                     info.Principal.FindFirst(ClaimTypes.Surname).Value
                 }; // Craete user info
-
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("login Successfully.");
-                    _logger.LogTrace("End Google Response.");
-                    return RedirectToAction("Index", "Home");
+                    var IsActive = _manageUserController.GetStatusUser(info.Principal.FindFirst(ClaimTypes.Email).Value);
+                    if (IsActive.Value.ToString() == "ACTIVE")
+                    {
+                        _logger.LogInformation("login Successfully.");
+                        _logger.LogTrace("End Google Response.");
+                        return RedirectToAction("Index", "Home");
+                    } else if (IsActive.Value.ToString() == "INACTIVE")
+                    {
+                        _logger.LogInformation("This user is not active.");
+                        ApplicationUser user = await _userManager.FindByEmailAsync(info.Principal.FindFirst(ClaimTypes.Email).Value);
+                        if (user == null) throw new Exception("Calling a method on a null object reference.");
+                        _manageUserController.deleteUser(user.Id);
+                        _logger.LogInformation("Change status Inactive to active user.");
+                        _logger.LogTrace("End Google Response.");
+                        return RedirectToAction("Index", "Home");
+                    } else
+                    {
+                        throw new Exception("Cannot find this user.");
+                    } // End check user is inactive
                 }// If had account
                 else
                 {
@@ -258,8 +276,7 @@ namespace UMS.Controllers
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                TempData["Exception"] = message;
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End Google Response.");
                 return RedirectToPage("/Login");
             } // End try catch
@@ -285,8 +302,7 @@ namespace UMS.Controllers
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                TempData["Exception"] = message;
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End Facebook Login");
                 return RedirectToPage("/Login");
             } // End try catch
@@ -323,9 +339,27 @@ namespace UMS.Controllers
                 }; // Crate new user info
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("login succeeded.");
-                    _logger.LogTrace("End Facebook Response.");
-                    return RedirectToAction("Index", "Home");
+                    var IsActive = _manageUserController.GetStatusUser(info.Principal.FindFirst(ClaimTypes.Email).Value);
+                    if (IsActive.Value.ToString() == "ACTIVE")
+                    {
+                        _logger.LogInformation("login Successfully.");
+                        _logger.LogTrace("End Facebook Response.");
+                        return RedirectToAction("Index", "Home");
+                    }
+                    else if (IsActive.Value.ToString() == "INACTIVE")
+                    {
+                        _logger.LogInformation("This user is not active.");
+                        ApplicationUser user = await _userManager.FindByEmailAsync(info.Principal.FindFirst(ClaimTypes.Email).Value);
+                        if (user == null) throw new Exception("Calling a method on a null object reference.");
+                        _manageUserController.deleteUser(user.Id);
+                        _logger.LogInformation("Change status Inactive to active user.");
+                        _logger.LogTrace("End Facebook Response.");
+                        return RedirectToAction("Index", "Home");
+                    }
+                    else
+                    {
+                        throw new Exception("Cannot find this user.");
+                    } // End check user is inactive
                 }
                 else
                 {
@@ -376,8 +410,7 @@ namespace UMS.Controllers
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                TempData["Exception"] = message;
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End Facebook Response.");
                 return RedirectToPage("/Login");
             } // End try catch
@@ -403,8 +436,7 @@ namespace UMS.Controllers
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                TempData["Exception"] = message;
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End Microsoft Login.");
                 return RedirectToPage("/Login");
             } // End try catch
@@ -441,9 +473,27 @@ namespace UMS.Controllers
                 }; // Create new user info
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("login succeeded.");
-                    _logger.LogTrace("End Microsoft Response.");
-                    return RedirectToAction("Index", "Home");
+                    var IsActive = _manageUserController.GetStatusUser(info.Principal.FindFirst(ClaimTypes.Email).Value);
+                    if (IsActive.Value.ToString() == "ACTIVE")
+                    {
+                        _logger.LogInformation("login Successfully.");
+                        _logger.LogTrace("End Microsoft Response.");
+                        return RedirectToAction("Index", "Home");
+                    }
+                    else if (IsActive.Value.ToString() == "INACTIVE")
+                    {
+                        _logger.LogInformation("This user is not active.");
+                        ApplicationUser user = await _userManager.FindByEmailAsync(info.Principal.FindFirst(ClaimTypes.Email).Value);
+                        if (user == null) throw new Exception("Calling a method on a null object reference.");
+                        _manageUserController.deleteUser(user.Id);
+                        _logger.LogInformation("Change status Inactive to active user.");
+                        _logger.LogTrace("End Microsoft Response.");
+                        return RedirectToAction("Index", "Home");
+                    }
+                    else
+                    {
+                        throw new Exception("Cannot find this user.");
+                    } // End check user is inactive
                 }
                 else
                 {
@@ -495,8 +545,7 @@ namespace UMS.Controllers
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                TempData["Exception"] = message;
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End Microsoft Response.");
                 return RedirectToPage("/Login");
             } // End try catch

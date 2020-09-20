@@ -9,7 +9,11 @@
     ViewData["Title"] = "Edit Profile";
     Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
 
-    var editProfile = ViewData["User"] as EditProfile;
+    var editProfile = new EditProfile();
+    if(ViewData["User"] != null)
+    {
+        editProfile = ViewData["User"] as EditProfile;
+    }
 }
 
 <div class="mx-auto col-5">
@@ -105,6 +109,9 @@
 
 <!--Start Script-->
 <script>
+    // Exeception
+        @if (TempData["EditProfileException"] != null) { @Html.Raw(TempData["EditProfileException"])}
+
     //Regular expression
     var RegExName = /^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$/;
     var RegExPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[#$!%@@*?&])[A-Za-z0-9#$!%@@*?&]+$/;
@@ -127,7 +134,7 @@
             document.getElementById("icon_CurrentPassword").classList.add('fa-eye-slash')
             password.type = "password";
         }
-    }
+    } // toggleCurrentPasword
 
     /*
     * Name: toggleNewPasword()
@@ -147,7 +154,7 @@
             document.getElementById("icon_NewPassword").classList.add('fa-eye-slash')
             password.type = "password";
         }
-    }
+    } // toggleNewPasword
 
     /*
     * Name: toggleConfirmPasword()
@@ -167,7 +174,7 @@
             document.getElementById("icon_ConfirmPassword").classList.add('fa-eye-slash')
             password.type = "password";
         }
-    }
+    } // toggleConfirmPasword
 
     /*
     * Name: SaveProfile
@@ -179,9 +186,11 @@
         // Get id from input
         var acc_Firstname = $('#acc_Fname').val();
         var acc_Lastname = $('#acc_Lname').val();
+        var acc_Id = $('#acc_Id').val();
 
         // Validation if acc_Firstname do not math with Regular expression.
-        if (RegExName.test(acc_Firstname) && acc_Firstname != "" && RegExName.test(acc_Lastname) && acc_Lastname != "") {
+        if (RegExName.test(acc_Firstname) && acc_Firstname != "" && RegExName.test(acc_Lastname) && acc_Lastname != ""
+            ) {
             $("#FormProfile").submit();
             $('#validation_acc_Firstname').html('');
             $('#validation_acc_Lastname').html('');
@@ -193,9 +202,11 @@
             else if (!RegExName.test(acc_Lastname)) {
                 $('#validation_acc_Lastname').html('The Last name can not be blank and must only character.');
                 toastr.warning('The Last name can not be blank and must only character.')
+            } else if (acc_Id != null || acc_Id != "") {
+                toastr.warning('The user ID not found !. Calling a method on a null object reference.')
             }
         }
-    }
+    } // End SaveProfile
 
     /*
     * Name: SavePassword
@@ -353,8 +364,6 @@
         @if (TempData["EditProfileErrorResult"] != null) { @Html.Raw(TempData["EditProfileErrorResult"])}
         // Toastr if EditProfile (Firstname, Lastname and Change password) Success.
         @if (TempData["EditProfileSuccessResult"] != null) { @Html.Raw(TempData["EditProfileSuccessResult"])}
-        // Exeception
-        @if (TempData["Exeception"] != null) { @Html.Raw(TempData["Exeception"])}
     })
 </script>
 <!--End Script-->

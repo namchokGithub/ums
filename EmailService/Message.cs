@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 
 /*
- * Namspace: EmailService
+ * Namspace: EmailService/Message.cs
  * Author: Namchok Singhachai
  * Description: Service for send email
  */

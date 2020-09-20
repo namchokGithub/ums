@@ -63,21 +63,18 @@ namespace UMS.Controllers
             {
                 _logger.LogTrace("Start Index");
                 var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                if (UserId == null) throw new Exception("The user ID not found !.");
-                ViewData["UserId"] = UserId;
+                ViewData["UserId"] = UserId ?? throw new Exception("The user ID not found !.");
                 string sqltext = $"EXEC [dbo].ums_Get_user '{UserId}'";
                 // Query data from "dbo.EditProfile" and Convert to List<EditProfile>
                 var user = _editprofileContext.EditProfile.FromSqlRaw(sqltext).ToList<EditProfile>().FirstOrDefault();
                 _logger.LogDebug("Get user by ID.");
-                if (user == null ) throw new Exception("Calling a method on a null object reference.");
-                ViewData["User"] = user;
+                ViewData["User"] = user ?? throw new Exception("Calling a method on a null object reference.");
                 _logger.LogTrace("End Index");
                 return View();
             }
             catch (Exception e)
             {
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                TempData["Exception"] = message;
+                TempData["EditProfileException"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End Index.");
                 return View();
             } // End try catch
@@ -96,16 +93,17 @@ namespace UMS.Controllers
             {
                 _logger.LogTrace("Start Edit Profile.");
                 _logger.LogDebug("Getting value from httpcontext request.");
-
+                
                 //Get data from Form Input
                 var acc_Id = HttpContext.Request.Form["acc_Id"];
+                if(acc_Id.ToString() == null || acc_Id.ToString() == "") throw new Exception("Calling a method on a null object reference.");
                 var acc_Firstname = HttpContext.Request.Form["acc_Firstname"];
                 var acc_Lastname = HttpContext.Request.Form["acc_Lastname"];
                 var acc_CurrentPassword = HttpContext.Request.Form["acc_CurrentPassword"];
                 var acc_NewPassword = HttpContext.Request.Form["acc_NewPassword"];
                 var acc_ConfirmPassword = HttpContext.Request.Form["acc_ConfirmPassword"];
                 _logger.LogTrace("Check regular expression.");
-
+               
                 // Regular expression
                 var RegExName = @"^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$";
                 var RegExPassword = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[#$!%@*?&])[A-Za-z0-9#$!%@*?&]+$";
@@ -272,10 +270,10 @@ namespace UMS.Controllers
             }
             catch (Exception e)
             {
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                TempData["Exception"] = message;
+                _logger.LogError(e.Message.ToString());
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End Edit Profile.");
-                return View();
+                return RedirectToAction("Index", "EditProfile");
             } // End try catch
         } // End editProfile
     } // End EditProfileContrller

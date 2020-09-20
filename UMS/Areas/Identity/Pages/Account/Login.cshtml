@@ -96,35 +96,34 @@
     <partial name="_ValidationScriptsPartial" />
 }
 <script>
-        // Check is has exception
-        @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ }
-        @if (TempData["ExceptionLoggedOut"] != null) { @Html.Raw(TempData["ExceptionLoggedOut"]) /* Swal funciton */ }
-        @{ var IsInValid = TempData["ExceptionInValid"] as String;}
-        @if (IsInValid == "InValid")
-        {
-            @Html.Raw("$('#inValidUser').html('Your email or password is not valid.<br>');");
-        }else
-        {
-            @Html.Raw("$('#inValidUser').html('');");
+    // Check is has exception
+    @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ }
+    @if (TempData["ExceptionLoggedOut"] != null) { @Html.Raw(TempData["ExceptionLoggedOut"]) /* Swal funciton */ }
+    @{ var IsInValid = TempData["ExceptionInValid"] as String;}
+    @if (IsInValid == "InValid")
+    {
+        @Html.Raw("$('#inValidUser').html('Your email or password is not valid.<br>');");
+    }else
+    {
+        @Html.Raw("$('#inValidUser').html('');");
+    } // For alert when invalid user
+    /*
+    * Name: togglePasword()
+    * Parameter: none
+    * Author: Wannapa Srijermtong
+    * Description: For change type of password.
+    */
+    function togglePasword() {
+        var password = document.getElementById("acc_Password") // Get id from input
+        if (password.type === "password") {
+            document.getElementById("icon_Password").classList.remove('fa-eye-slash')
+            document.getElementById("icon_Password").classList.add('fa-eye')
+            password.type = "text";
+        } else {
+            document.getElementById("icon_Password").classList.remove('fa-eye')
+            document.getElementById("icon_Password").classList.add('fa-eye-slash')
+            password.type = "password";
         }
-        /*
-        * Name: togglePasword()
-        * Parameter: none
-        * Author: Wannapa Srijermtong
-        * Description: For change type of password.
-        */
-        function togglePasword() {
-            // Get id from input
-            var password = document.getElementById("acc_Password")
-            if (password.type === "password") {
-                document.getElementById("icon_Password").classList.remove('fa-eye-slash')
-                document.getElementById("icon_Password").classList.add('fa-eye')
-                password.type = "text";
-            } else {
-                document.getElementById("icon_Password").classList.remove('fa-eye')
-                document.getElementById("icon_Password").classList.add('fa-eye-slash')
-                password.type = "password";
-            }
     } // togglePasword
     $(document).on('click',() => {
         $('#inValidUser').html('');

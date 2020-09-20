@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
  * Name: AccessDeniedModel.cs
  * Namespace: UMS.Areas.Identity.Pages.Account
  * Author: Idenity system
+ * Description: Page for access site
  */
 
 namespace UMS.Areas.Identity.Pages.Account
@@ -17,11 +18,10 @@ namespace UMS.Areas.Identity.Pages.Account
     public class AccessDeniedModel : PageModel
     {
         private readonly ILogger<AccessDeniedModel> _logger;
-
         public AccessDeniedModel(ILogger<AccessDeniedModel> logger)
         {
             _logger = logger;
-            _logger.LogDebug("Access Denined model.");
+            _logger.LogDebug("Start Access Denined model.");
         } // End constructor
 
         /*

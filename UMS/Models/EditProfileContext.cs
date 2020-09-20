@@ -25,5 +25,5 @@ namespace UMS.Models
         } // End Constructor
 
         public DbSet<EditProfile> EditProfile { get; set; }
-    }
+    } // End EditProfileContext
 }

@@ -40,7 +40,6 @@ namespace UMS.Areas.Identity
                     options.Password.RequireUppercase = false;
                 })
                     .AddRoles<IdentityRole>()
-                    .AddUserManager<UserManagerUMS>()
                     .AddEntityFrameworkStores<AuthDbContext>();
             });
         } // End Configure
