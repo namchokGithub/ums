@@ -35,7 +35,7 @@ namespace UMS.Areas.Identity.Pages.Account
         private readonly IEmailSender _emailSender;
         private readonly AccountContext _accountContext;
         // Attribute
-        [BindProperty]
+        [BindProperty] 
         public InputModel Input { get; set; } // Model input 
         public string ReturnUrl { get; set; } // for url when redirect
         public IList<AuthenticationScheme> ExternalLogins { get; set; } // External info of login
@@ -119,6 +119,7 @@ namespace UMS.Areas.Identity.Pages.Account
         public async Task OnGetAsync(string returnUrl = null)
         {
             ReturnUrl = returnUrl;
+            _logger.LogTrace("Getting external login.");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             _logger.LogTrace("Register on get.");
         } // End OnGetAsync
@@ -146,8 +147,8 @@ namespace UMS.Areas.Identity.Pages.Account
                             acc_Firstname = Input.acc_Firstname,
                             acc_Lastname = Input.acc_Lastname,
                             acc_IsActive = 'Y'
-                        }; // New user
-                        _logger.LogTrace("Creating user.");
+                        }; // Create new user
+                        _logger.LogTrace("Creating new user.");
                         var result = await _userManager.CreateAsync(user, Input.Password);
                         // Check if create success
                         if (result.Succeeded)
@@ -160,10 +161,10 @@ namespace UMS.Areas.Identity.Pages.Account
                             if (result.Succeeded)
                             {
                                 ApplicationUser userId = await _userManager.FindByEmailAsync(Input.Email); // Find by ID
-                                _logger.LogTrace("Add default role to user.");
+                                _logger.LogDebug("Add default role to user.");
                                 await _userManager.AddToRoleAsync(userId, "User");
                                 _logger.LogInformation("User created a new login.");
-                                _logger.LogTrace("Signing in.");
+                                _logger.LogDebug("Signing in.");
                                 await _signInManager.SignInAsync(user, false);
                                 _logger.LogTrace("End register on post.");
                                 return LocalRedirect(returnUrl);

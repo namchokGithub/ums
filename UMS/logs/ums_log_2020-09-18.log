@@ -1608,3 +1608,309 @@
 2020/09/18 14:30:36.534 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
 2020/09/18 14:30:36.567 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
 2020/09/18 14:30:36.598 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:112 | Getting external authentication scheme.
+2020/09/18 16:51:26.027 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/18 16:51:28.378 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/18 16:51:28.421 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/18 16:51:28.433 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/18 16:51:29.422 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 16:51:29.438 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 16:51:29.456 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 16:51:29.607 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:111 | Getting external authentication scheme.
+2020/09/18 16:51:44.957 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 16:51:44.977 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 16:51:45.003 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 16:51:48.504 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:142 | User logged in.
+2020/09/18 16:51:48.714 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/18 16:51:52.364 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/18 16:51:52.386 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 16:51:52.712 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/18 16:52:07.899 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Log out model.
+2020/09/18 16:52:07.929 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:50 | User logged out.
+2020/09/18 16:52:07.987 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 16:52:08.076 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 16:52:08.111 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 16:52:08.127 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:111 | Getting external authentication scheme.
+2020/09/18 16:52:20.815 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:186 | Get external login info.
+2020/09/18 16:52:20.815 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | Getting external login and sign in.
+2020/09/18 16:52:20.890 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:195 | Result: Failed
+2020/09/18 16:52:21.508 [INFO] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:226 | Create user succeeded.
+2020/09/18 16:52:21.562 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:227 | Adding login.
+2020/09/18 16:52:21.603 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:231 | Signing in.
+2020/09/18 16:52:21.639 [INFO] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:233 | Add login succeeded.
+2020/09/18 16:52:21.726 [INFO] [UMS.Controllers.HomeController] [60160169@go.buu.ac.th] Index:HomeController.cs:60 | Welcome 60160169@go.buu.ac.th to UMS.
+2020/09/18 16:52:24.256 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [60160169@go.buu.ac.th] Logout.cshtml.cs:30 | Starting Log out model.
+2020/09/18 16:52:24.299 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [60160169@go.buu.ac.th] Logout.cshtml.cs:50 | User logged out.
+2020/09/18 16:52:24.399 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 16:52:24.447 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 16:52:24.489 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 16:52:24.551 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:111 | Getting external authentication scheme.
+2020/09/18 16:52:28.335 [DEBUG] [UMS.Controllers.AccountController]  FacebookResponse:AccountController.cs:301 | Getting user info.
+2020/09/18 16:52:28.354 [DEBUG] [UMS.Controllers.AccountController]  FacebookResponse:AccountController.cs:309 | Getting result external login and sign in.
+2020/09/18 16:52:28.371 [DEBUG] [UMS.Controllers.AccountController]  FacebookResponse:AccountController.cs:311 | Result: Failed
+2020/09/18 16:52:28.396 [DEBUG] [UMS.Controllers.AccountController]  FacebookResponse:AccountController.cs:336 | Creating user.
+2020/09/18 16:52:28.450 [WARN] [Microsoft.AspNetCore.Identity.UserManager]  FacebookResponse: | User bfd2a153-8fc5-4feb-9d8c-064d5fcf2d85 validation failed: DuplicateUserName.
+2020/09/18 16:52:28.470 [ERROR] [UMS.Controllers.AccountController]  FacebookResponse:AccountController.cs:354 | User name 'singhachaipes@hotmail.com' is already taken.
+2020/09/18 16:52:30.236 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 16:52:30.256 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 16:52:30.304 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 16:52:30.333 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:111 | Getting external authentication scheme.
+2020/09/18 16:52:39.223 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:186 | Get external login info.
+2020/09/18 16:52:39.247 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | Getting external login and sign in.
+2020/09/18 16:52:39.272 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:195 | Result: Failed
+2020/09/18 16:52:39.347 [INFO] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:226 | Create user succeeded.
+2020/09/18 16:52:39.347 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:227 | Adding login.
+2020/09/18 16:52:39.393 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:231 | Signing in.
+2020/09/18 16:52:39.414 [INFO] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:233 | Add login succeeded.
+2020/09/18 16:52:39.473 [INFO] [UMS.Controllers.HomeController] [pech4751@gmail.com] Index:HomeController.cs:60 | Welcome pech4751@gmail.com to UMS.
+2020/09/18 16:52:45.238 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [pech4751@gmail.com] Logout.cshtml.cs:30 | Starting Log out model.
+2020/09/18 16:52:45.283 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [pech4751@gmail.com] Logout.cshtml.cs:50 | User logged out.
+2020/09/18 16:52:45.347 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 16:52:45.347 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 16:52:45.379 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 16:52:45.414 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:111 | Getting external authentication scheme.
+2020/09/18 16:52:46.929 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 16:52:46.948 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 16:52:47.021 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 16:52:47.125 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:142 | User logged in.
+2020/09/18 16:52:47.189 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/18 16:52:55.919 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/18 16:52:55.944 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 16:52:56.011 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/18 16:53:25.046 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] deleteUser:AccountContext.cs:24 | Start Account Context.
+2020/09/18 16:53:25.058 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] deleteUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 16:53:25.226 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] deleteUser:ManageUserController.cs:223 | Execute sql inactive user.
+2020/09/18 16:53:25.240 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] deleteUser:ManageUserController.cs:230 | Save changes: Inactive user.
+2020/09/18 16:53:26.277 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/18 16:53:26.372 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 16:53:26.485 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/18 16:53:28.083 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Log out model.
+2020/09/18 16:53:28.099 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:50 | User logged out.
+2020/09/18 16:53:28.138 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/18 16:53:28.151 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/18 16:53:28.176 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/18 16:53:28.207 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:111 | Getting external authentication scheme.
+2020/09/18 16:53:34.597 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:186 | Get external login info.
+2020/09/18 16:53:34.615 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | Getting external login and sign in.
+2020/09/18 16:53:34.686 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:195 | Result: Succeeded
+2020/09/18 16:53:34.711 [INFO] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:205 | login Successfully.
+2020/09/18 16:53:34.809 [INFO] [UMS.Controllers.HomeController] [60160169@go.buu.ac.th] Index:HomeController.cs:60 | Welcome 60160169@go.buu.ac.th to UMS.
+2020/09/18 16:53:40.071 [INFO] [UMS.Controllers.HomeController] [60160169@go.buu.ac.th] Index:HomeController.cs:60 | Welcome 60160169@go.buu.ac.th to UMS.
+2020/09/18 16:53:41.588 [INFO] [UMS.Controllers.HomeController] [60160169@go.buu.ac.th] Index:HomeController.cs:60 | Welcome 60160169@go.buu.ac.th to UMS.
+2020/09/18 16:53:43.166 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/18 16:54:43.878 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] [60160169@go.buu.ac.th] Index: | An unhandled exception has occurred while executing the request.System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_EditProfile_index.<>c__DisplayClass23_0.<<ExecuteAsync>b__0>d.MoveNext() in C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Views\EditProfile\index.cshtml:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCore.Views_EditProfile_index.ExecuteAsync() in C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Views\EditProfile\index.cshtml:line 12
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/09/18 16:54:49.397 [INFO] [UMS.Controllers.HomeController] [60160169@go.buu.ac.th] Index:HomeController.cs:60 | Welcome 60160169@go.buu.ac.th to UMS.
+2020/09/18 16:55:15.460 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/18 16:55:24.384 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] [60160169@go.buu.ac.th] Index: | An unhandled exception has occurred while executing the request.System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_EditProfile_index.<>c__DisplayClass23_0.<<ExecuteAsync>b__0>d.MoveNext() in C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Views\EditProfile\index.cshtml:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCore.Views_EditProfile_index.ExecuteAsync() in C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Views\EditProfile\index.cshtml:line 12
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/09/18 16:55:27.461 [INFO] [UMS.Controllers.HomeController] [60160169@go.buu.ac.th] Index:HomeController.cs:60 | Welcome 60160169@go.buu.ac.th to UMS.
+2020/09/18 16:55:31.909 [INFO] [UMS.Controllers.HomeController] [60160169@go.buu.ac.th] Index:HomeController.cs:60 | Welcome 60160169@go.buu.ac.th to UMS.
+2020/09/18 16:55:44.076 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/18 16:55:53.191 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] [60160169@go.buu.ac.th] Index: | An unhandled exception has occurred while executing the request.System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_EditProfile_index.<>c__DisplayClass23_0.<<ExecuteAsync>b__0>d.MoveNext() in C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Views\EditProfile\index.cshtml:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCore.Views_EditProfile_index.ExecuteAsync() in C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Views\EditProfile\index.cshtml:line 12
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/09/18 16:57:21.685 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/18 16:57:22.160 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/18 16:57:22.178 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/18 16:57:22.178 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/18 16:57:24.083 [INFO] [UMS.Controllers.HomeController] [60160169@go.buu.ac.th] Index:HomeController.cs:60 | Welcome 60160169@go.buu.ac.th to UMS.
+2020/09/18 16:58:30.126 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] [60160169@go.buu.ac.th] Index: | An unhandled exception has occurred while executing the request.System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_EditProfile_index.<>c__DisplayClass23_0.<<ExecuteAsync>b__0>d.MoveNext() in C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Views\EditProfile\index.cshtml:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCore.Views_EditProfile_index.ExecuteAsync() in C:\Users\Namchok\Desktop\สหกิจ\ums\UMS\Views\EditProfile\index.cshtml:line 12
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/09/18 17:00:26.485 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/18 17:00:26.816 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/18 17:00:26.875 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/18 17:00:26.890 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/18 17:00:28.776 [INFO] [UMS.Controllers.HomeController] [60160169@go.buu.ac.th] Index:HomeController.cs:60 | Welcome 60160169@go.buu.ac.th to UMS.
+2020/09/18 17:03:10.167 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/18 17:03:10.733 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/18 17:03:10.744 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/18 17:03:10.762 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/18 17:03:12.417 [INFO] [UMS.Controllers.HomeController] [60160169@go.buu.ac.th] Index:HomeController.cs:60 | Welcome 60160169@go.buu.ac.th to UMS.
+2020/09/18 17:03:43.981 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/18 17:04:00.746 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/18 17:04:57.198 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/18 17:04:57.533 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/18 17:04:57.572 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/18 17:04:57.642 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/18 17:05:00.050 [INFO] [UMS.Controllers.HomeController] [60160169@go.buu.ac.th] Index:HomeController.cs:60 | Welcome 60160169@go.buu.ac.th to UMS.
+2020/09/18 17:05:15.477 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/18 17:05:28.543 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/18 17:05:38.159 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/18 17:05:46.794 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] editProfile:EditProfileController.cs:95 | Getting value from httpcontext request.
+2020/09/18 17:05:46.907 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] editProfile:EditProfileController.cs:156 | Update name's user.
+2020/09/18 17:05:46.943 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] editProfile:EditProfileController.cs:163 | Save changes: Check update user.
+2020/09/18 17:05:47.025 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/18 17:06:20.366 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] editProfile:EditProfileController.cs:95 | Getting value from httpcontext request.
+2020/09/18 17:06:20.436 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] editProfile:EditProfileController.cs:156 | Update name's user.
+2020/09/18 17:06:20.445 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] editProfile:EditProfileController.cs:163 | Save changes: Check update user.
+2020/09/18 17:06:20.524 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/18 17:09:16.090 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/18 17:09:16.558 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/18 17:09:16.576 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/18 17:09:16.606 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/18 17:09:18.035 [INFO] [UMS.Controllers.HomeController] [60160169@go.buu.ac.th] Index:HomeController.cs:60 | Welcome 60160169@go.buu.ac.th to UMS.
+2020/09/18 17:09:37.744 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/18 17:09:44.031 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/18 17:10:55.524 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/18 17:10:56.043 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/18 17:10:56.062 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/18 17:10:56.088 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/18 17:10:58.723 [INFO] [UMS.Controllers.HomeController] [60160169@go.buu.ac.th] Index:HomeController.cs:60 | Welcome 60160169@go.buu.ac.th to UMS.
+2020/09/18 17:11:09.876 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/18 17:11:26.436 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] editProfile:EditProfileController.cs:95 | Getting value from httpcontext request.
+2020/09/18 17:12:23.840 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] editProfile: | Update name's user.
+2020/09/18 17:12:37.515 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] editProfile: | Save changes: Check update user.
+2020/09/18 17:12:48.627 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] Index: | Get user by ID.
+2020/09/18 17:13:12.848 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/18 17:13:13.194 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/18 17:13:13.215 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/18 17:13:13.255 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/18 17:13:15.346 [INFO] [UMS.Controllers.HomeController] [60160169@go.buu.ac.th] Index:HomeController.cs:60 | Welcome 60160169@go.buu.ac.th to UMS.
+2020/09/18 17:13:33.500 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/18 17:13:47.020 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] editProfile:EditProfileController.cs:95 | Getting value from httpcontext request.
+2020/09/18 17:13:53.303 [ERROR] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] editProfile:EditProfileController.cs:100 | Calling a method on a null object reference.
+2020/09/18 17:13:53.340 [ERROR] [Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor] [60160169@go.buu.ac.th] editProfile: | The view 'editProfile' was not found. Searched locations: /Views/EditProfile/editProfile.cshtml, /Views/Shared/editProfile.cshtml, /Pages/Shared/editProfile.cshtml
+2020/09/18 17:13:53.408 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] [60160169@go.buu.ac.th] editProfile: | An unhandled exception has occurred while executing the request.System.InvalidOperationException: The view 'editProfile' was not found. The following locations were searched:
+/Views/EditProfile/editProfile.cshtml
+/Views/Shared/editProfile.cshtml
+/Pages/Shared/editProfile.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/09/18 17:14:52.166 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/18 17:14:52.798 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/18 17:14:53.704 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/18 17:14:53.927 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/18 17:14:55.350 [INFO] [UMS.Controllers.HomeController] [60160169@go.buu.ac.th] Index:HomeController.cs:60 | Welcome 60160169@go.buu.ac.th to UMS.
+2020/09/18 17:15:02.384 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/18 17:15:12.069 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] editProfile:EditProfileController.cs:95 | Getting value from httpcontext request.
+2020/09/18 17:15:12.182 [ERROR] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] editProfile:EditProfileController.cs:100 | Calling a method on a null object reference.
+2020/09/18 17:15:12.341 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/18 17:15:16.254 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/18 17:15:19.342 [DEBUG] [UMS.Controllers.EditProfileController] [60160169@go.buu.ac.th] Index:EditProfileController.cs:70 | Get user by ID.
