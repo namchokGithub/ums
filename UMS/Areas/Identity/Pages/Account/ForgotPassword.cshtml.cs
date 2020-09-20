@@ -65,13 +65,12 @@ namespace UMS.Areas.Identity.Pages.Account
                 if (ModelState.IsValid)
                 {
                     var user = await _userManager.FindByEmailAsync(Input.Email); // Find user
-                    _logger.LogTrace("Finding user.");
+                    _logger.LogDebug("Finding user.");
                     if (user == null)
                     {
-                        string mes = @"Swal.fire({ icon: 'error', title: 'Error !', text: 'User Not found.', showConfirmButton: true })";
-                        TempData["Exception"] = mes;
-                        _logger.LogWarning("User Not found.");
-                        return RedirectToPage("Login");
+                        _logger.LogWarning("The user was not found.");
+                        TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: 'The user was not found.'})";
+                        return Page();
                     } // End check user is null
                     _logger.LogDebug("Generating code.");
                     var code = await _userManager.GeneratePasswordResetTokenAsync(user); // Gen token for this user
@@ -85,24 +84,24 @@ namespace UMS.Areas.Identity.Pages.Account
 
                     var message = new Message(
                         new string[] { Input.Email },
-                        "Reset Password",
-                        @$"
-                        <h2>Hello!, {Input.Email} </h2>
-                        <br>
-                        We got a request to reset your UMS password.
-                        <br>
-                        You can change your password by clicking the link 
-                        <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'asp-route-Email='{Input.Email}'>
-                            <b>Change password</b>
-                        </a>.
-                        <br>
-                        If you ignore this message, your password won't be changed.
-                        <br><br><br>
-                        <hr>
-                        Best regards,
-                        <br>
-                        User Management System.
-                      "
+                            "Reset Password",
+                            @$"
+                            <h2>Hello!, {Input.Email} </h2>
+                            <br>
+                            We got a request to reset your UMS password.
+                            <br>
+                            You can change your password by clicking the link 
+                            <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'asp-route-Email='{Input.Email}'>
+                                <b>Change password</b>
+                            </a>.
+                            <br>
+                            If you ignore this message, your password won't be changed.
+                            <br><br><br>
+                            <hr>
+                            Best regards,
+                            <br>
+                            User Management System.
+                          "
                         ); // End craete message 
                     _logger.LogTrace("Sending email.");
                     await _emailSender.SendEmailAsync(message);

@@ -70,7 +70,6 @@ namespace UMS.Areas.Identity.Pages.Account
                 _logger.LogTrace("Start reset password on get.");
                 if (code == null)
                 {
-                    _logger.LogError("A code must be supplied for password reset.");
                     throw new Exception("A code must be supplied for password reset.");
                 }
                 else
@@ -86,8 +85,7 @@ namespace UMS.Areas.Identity.Pages.Account
             } catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                TempData["Exception"] = message;
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End reset password on get.");
                 return Page();
             } // End try catch
