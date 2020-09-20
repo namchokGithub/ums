@@ -63,17 +63,15 @@ namespace UMS.Controllers
                 // Get ID of user
                 var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
                 _logger.LogTrace("Find first value from user.");
-                if (UserId == null) throw new Exception("The user ID not found !.");
                 // Set Data to view
-                ViewData["UserId"] = UserId;
+                ViewData["UserId"] = UserId ?? throw new Exception("The user ID not found !.");
                 _logger.LogTrace("End Index.");
                 return View();
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                TempData["nullException"] = message;
+                TempData["nullException"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End Index.");
                 return View();
             } // End try catch

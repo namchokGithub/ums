@@ -10,8 +10,8 @@ using UMS.Data;
 namespace UMS.Migrations.Auth
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20200915175859_ums-log")]
-    partial class umslog
+    [Migration("20200918030959_ums_log")]
+    partial class ums_log
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -211,7 +211,7 @@ namespace UMS.Migrations.Auth
                     b.Property<string>("acc_IsActive")
                         .IsRequired()
                         .HasColumnName("acc_IsActive")
-                        .HasColumnType("char(10)")
+                        .HasColumnType("char(1)")
                         .HasComment("Status of account");
 
                     b.Property<string>("acc_Lastname")

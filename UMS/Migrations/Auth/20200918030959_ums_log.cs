@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace UMS.Migrations.Auth
 {
-    public partial class umslog : Migration
+    public partial class ums_log : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -21,7 +21,7 @@ namespace UMS.Migrations.Auth
                     acc_ConcurrencyStamp = table.Column<string>(nullable: true, comment: "Concurrency Stamp"),
                     acc_Firstname = table.Column<string>(type: "nvarchar(256)", nullable: true, comment: "Firstname"),
                     acc_Lastname = table.Column<string>(type: "nvarchar(256)", nullable: true, comment: "Lastname"),
-                    acc_IsActive = table.Column<string>(type: "char(10)", nullable: false, comment: "Status of account")
+                    acc_IsActive = table.Column<string>(type: "char(1)", nullable: false, comment: "Status of account")
                 },
                 constraints: table =>
                 {
@@ -207,20 +207,33 @@ namespace UMS.Migrations.Auth
                 name: "IX_UserRoles_RoleId",
                 table: "UserRoles",
                 column: "RoleId");
-
+            var ums_Add_user_login = @"-- =============================================
+                        -- Author:		Namchok Singhachai
+                        -- Create date: 2020-09-03
+                        -- Description:	Add log in
+                        -- =============================================
+                        CREATE PROCEDURE ums_Add_user_login
+                            @param_LoginProvider nvarchar(max), @param_ProviderDisplayName nvarchar(max), @param_ProviderKey nvarchar(max), @param_userId nvarchar(max)
+                        AS
+                        BEGIN
+                            INSERT INTO [dbo].[UserLogins]
+                                ([LoginProvider], [ProviderKey], [ProviderDisplayName], [UserId])
+                            VALUES
+                                (@param_LoginProvider, @param_ProviderKey, @param_ProviderDisplayName, @param_userId)
+                        END";
             var ums_Check_user = @"-- =============================================
                         -- Author:		Namchok Singhachai
                         -- Create date: 2020-09-03
                         -- Description:	Check user if exist return 1
                         -- =============================================
                         CREATE PROCEDURE ums_Check_user
-                            @param_user nvarchar(max)
+                            @param_user nvarchar(max), @param_status char(1)
                         AS
                         BEGIN
                             IF EXISTS (
                                         SELECT [dbo].[Account].acc_Id
-                            FROM [dbo].[Account]
-                            WHERE [dbo].[Account].acc_User = @param_user AND [dbo].[Account].acc_IsActive = 'Y')
+                                        FROM [dbo].[Account]
+                                        WHERE [dbo].[Account].acc_User = @param_user AND [dbo].[Account].acc_IsActive = @param_status)
                             BEGIN
                                 RETURN 1;
                             END
@@ -324,6 +337,42 @@ namespace UMS.Migrations.Auth
                             ORDER BY [dbo].[Logs].[log_Id] DESC
                         END
                         GO";
+            var ums_Get_status_user = @"-- =============================================
+                            -- Author:		Namchok Singhachai
+                            -- Create date: 2020-09-17
+                            -- Description:	 Get status of user and check if exist.
+                            -- =============================================
+                            CREATE PROCEDURE ums_Get_status_user
+                                @param_user nvarchar(max)
+                            AS
+                            BEGIN
+                                IF EXISTS (
+                                            SELECT [dbo].[Account].acc_Id
+                                            FROM [dbo].[Account]
+                                            WHERE [dbo].[Account].acc_User = @param_user)
+                                BEGIN
+                                    IF (SELECT [dbo].[Account].acc_IsActive
+                                            FROM [dbo].[Account]
+                                            WHERE [dbo].[Account].acc_User = @param_user) = 'Y'
+                                        BEGIN
+                                            RETURN 1;
+                                        END
+                                    ELSE IF (SELECT [dbo].[Account].acc_IsActive
+                                            FROM [dbo].[Account]
+                                            WHERE [dbo].[Account].acc_User = @param_user) = 'N'
+                                        BEGIN
+                                            RETURN 0;
+                                        END
+                                    ELSE
+                                        BEGIN
+                                            RETURN 9;
+                                        END	
+                                END
+                                ELSE
+                                    BEGIN
+                                        RETURN 9;
+                                    END	
+                            END";
             var ums_Get_all_user = @"-- =============================================
                         -- Author:		Namchok Singhachai
                         -- Create date: 2020-08-29
@@ -538,12 +587,14 @@ namespace UMS.Migrations.Auth
                             WHERE [dbo].[Account].acc_Id = @param_Id;
                         END";
 
+            migrationBuilder.Sql(ums_Add_user_login);
             migrationBuilder.Sql(ums_Check_user);
             migrationBuilder.Sql(ums_Delete_user);
             migrationBuilder.Sql(ums_Get_active_user);
             migrationBuilder.Sql(ums_Get_all_active_user);
             migrationBuilder.Sql(ums_Get_all_log);
             migrationBuilder.Sql(ums_Get_all_user);
+            migrationBuilder.Sql(ums_Get_status_user);
             migrationBuilder.Sql(ums_Get_user_by_Id);
             migrationBuilder.Sql(ums_Get_user);
             migrationBuilder.Sql(ums_Search_log);

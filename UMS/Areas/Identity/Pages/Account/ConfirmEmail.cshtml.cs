@@ -15,6 +15,7 @@ using UMS.Areas.Identity.Data;
  * Name: ConfirmEmailModel.cs
  * Namespace: UMS.Areas.Identity.Pages.Account
  * Author: Idenity system
+ * Description: Confirmation of email
  */
 
 namespace UMS.Areas.Identity.Pages.Account
@@ -28,7 +29,7 @@ namespace UMS.Areas.Identity.Pages.Account
         {
             _userManager = userManager;
             _logger = logger;
-            _logger.LogDebug("Confirm email model.");
+            _logger.LogDebug("Start Confirm email model.");
         } // End constructor
 
         [TempData]

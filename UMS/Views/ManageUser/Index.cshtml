@@ -163,18 +163,16 @@
      * Description: Check value input
      */
     function updateUser() {
-        // Check value
-        if ($('#acc_Id').val() == '') toastr.error('ID not found.')
-        if ($('#acc_IsActive').val() == '') toastr.error('User not Active.')
-        if ($('#acc_Firstname').val() == '') toastr.warning('The First name can not be blank and must only character.')
-        if ($('#acc_Lastname').val() == '') toastr.warning('The Last name can not be blank and must only character.')
-        if ($('#acc_RoleId').val() == '') toastr.warning('Please select role.')
-
         // Check regex
         let regex = /^(([a-zA-Z])?[a-zA-Z]*)*$/;
-
-        if (!regex.test($('#acc_Firstname').val())) toastr.warning('The First name can not be blank and must only character.')
-        if (!regex.test($('#acc_Lastname').val())) toastr.warning('The Last name can not be blank and must only character.')
+        // Check value
+        if ($('#acc_Id').val() == '') toastr.error('ID not found.')
+        else if ($('#acc_Firstname').val() == '') toastr.warning('The First name can not be blank and must only character.')
+        else if ($('#acc_Lastname').val() == '') toastr.warning('The Last name can not be blank and must only character.')
+        else if (!regex.test($('#acc_Firstname').val())) toastr.warning('The First name can not be blank and must only character.')
+        else if (!regex.test($('#acc_Lastname').val())) toastr.warning('The Last name can not be blank and must only character.')
+        else if ($('#acc_RoleId').val() == '') toastr.warning('Please select role.')
+        else if ($('#acc_IsActive').val() == '') toastr.error('User not Active.')
     } // End updateUser
 
     /**

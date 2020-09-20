@@ -9,7 +9,6 @@
     Name: Register.cshtml
     Namespace: ~/Area/Identity/Pages/Account
 -->
-
 <!--Start Style-->
 <style>
     #btn_back {
@@ -45,7 +44,7 @@
                         <label asp-for="Input.Email"></label><code>*</code>
                         <input asp-for="Input.Email" class="form-control" onblur="checkUser()" onmouseout="checkUser()" id="acc_Email" />
                         <span asp-validation-for="Input.Email" class="text-danger"></span>
-                        <span class="text-danger d-none" id="alert_acc_email">This email has been  exist.</span>
+                        <span class="text-danger d-none" id="alert_acc_email">This email has been exist.</span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Input.Password"></label><code>*</code>
@@ -84,35 +83,37 @@
         </div>
         <!--End Card-->
     </div>
-    <!--Start Script-->
+</div>
+<!--Start Script-->
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        //Regular expression
+        var RegExName = /^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$/;
+        var RegExPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[#$!%@@*?&])[A-Za-z0-9#$!%@@*?&]+$/;
+        var RegEmail = /^[\w-\.]+@@([\w-]+\.)+[\w-]{2,4}$/;
 
-    @section Scripts {
-        <partial name="_ValidationScriptsPartial" />
-        <script>
-            //Regular expression
-            var RegExName = /^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$/;
-            var RegExPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[#$!%@@*?&])[A-Za-z0-9#$!%@@*?&]+$/;
-            var RegEmail = /^[\w-\.]+@@([\w-]+\.)+[\w-]{2,4}$/;
-
-            /*
-             * Name: register
-             * Parameter: none
-             * Author: Namchok Singhachai
-             * Description: Check user is exist and input validation.
-             */
-            function register() {
-                try {
-                    let acc_Firstname = $('#acc_Firstname').val()
-                    let acc_Lastname = $('#acc_Lastname').val()
-                    let Email = $('#acc_Email').val()
-                    let Password = $('#acc_Password').val()
-                    let ConfirmPassword = $('#acc_ConfirmPassword').val()
-                    if (!RegExName.test(acc_Firstname)) toastr.warning('The first name can not be blank and must only character.');
-                    if (!RegExName.test(acc_Lastname)) toastr.warning('The last name can not be blank and must only character.');
-                    if (!RegExPassword.test(Password)) toastr.warning('The password must contain at least 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
-                    if (!RegExPassword.test(ConfirmPassword)) toastr.warning('The current password must contain at least 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
-                    if (!RegEmail.test(Email)) toastr.warning('Invalid Emails.');
-                    if (Password !== ConfirmPassword) toastr.warning('The password and confirm password do not match.');
+        /*
+        * Name: register
+        * Parameter: none
+        * Author: Namchok Singhachai
+        * Description: Check user is exist and input validation.
+        */
+        function register() {
+            try {
+                let acc_Firstname = $('#acc_Firstname').val()
+                let acc_Lastname = $('#acc_Lastname').val()
+                let Email = $('#acc_Email').val()
+                let Password = $('#acc_Password').val()
+                let ConfirmPassword = $('#acc_ConfirmPassword').val()
+                if (!RegExName.test(acc_Firstname)) toastr.warning('The first name can not be blank and must only character.');
+                else if (!RegExName.test(acc_Lastname)) toastr.warning('The last name can not be blank and must only character.');
+                else if (Email == "" || Email == null) toastr.warning('The Email field is required.');
+                else if (!RegEmail.test(Email)) toastr.warning('Invalid Emails.');
+                else if (!RegExPassword.test(Password)) toastr.warning('The password must contain at least 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
+                else if (!RegExPassword.test(ConfirmPassword)) toastr.warning('The current password must contain at least 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
+                else if (Password !== ConfirmPassword) toastr.warning('The password and confirm password do not match.');
+                else {
                     $.ajax({
                         url: "@Url.Action("GetStatusUser", "ManageUser")",
                         data: { username: Email},
@@ -167,98 +168,95 @@
                             toastr.error(_text)
                         } // End error
                     }) // End ajax for check user exits
-                } catch {
-                    console.log(err.message)
-                    toastr.error(err.message)
-                }
-            } // End register
-
-            $(document).ready(() => {
-                // Check is has exception
-                @if (TempData["Exception"] != null) {@Html.Raw(TempData["Exception"])/* Swal funciton */ }
-            });
-
-            /*
-            * Name: togglePasword()
-            * Parameter: none
-            * Author: Wannapa Srijermtong
-            * Description: For change type of password.
-            */
-            function togglePasword() {
-                // Get id from input
-                var password = document.getElementById("acc_Password")
-                if (password.type === "password") {
-                    document.getElementById("icon_Password").classList.remove('fa-eye-slash')
-                    document.getElementById("icon_Password").classList.add('fa-eye')
-                    password.type = "text";
-                } else {
-                    document.getElementById("icon_Password").classList.remove('fa-eye')
-                    document.getElementById("icon_Password").classList.add('fa-eye-slash')
-                    password.type = "password";
-                }
+                } // End if check input
+            } catch {
+                console.log(err.message)
+                toastr.error(err.message)
             }
+        } // End register
 
-            /*
-            * Name: toggleConfirmPasword()
-            * Parameter: none
-            * Author: Wannapa Srijermtong
-            * Description: For change type of confirm password.
-            */
-            function toggleConfirmPasword() {
-                // Get id from input
-                var password = document.getElementById("acc_ConfirmPassword")
-                if (password.type === "password") {
-                    document.getElementById("icon_ConfirmPassword").classList.remove('fa-eye-slash')
-                    document.getElementById("icon_ConfirmPassword").classList.add('fa-eye')
-                    password.type = "text";
-                } else {
-                    document.getElementById("icon_ConfirmPassword").classList.remove('fa-eye')
-                    document.getElementById("icon_ConfirmPassword").classList.add('fa-eye-slash')
-                    password.type = "password";
-                }
+        $(document).ready(() => {
+            // Check is has exception
+            @if (TempData["Exception"] != null) {@Html.Raw(TempData["Exception"])/* Swal funciton */ }
+        });
+
+        /*
+        * Name: togglePasword()
+        * Parameter: none
+        * Author: Wannapa Srijermtong
+        * Description: For change type of password.
+        */
+        function togglePasword() {
+            // Get id from input
+            var password = document.getElementById("acc_Password")
+            if (password.type === "password") {
+                document.getElementById("icon_Password").classList.remove('fa-eye-slash')
+                document.getElementById("icon_Password").classList.add('fa-eye')
+                password.type = "text";
+            } else {
+                document.getElementById("icon_Password").classList.remove('fa-eye')
+                document.getElementById("icon_Password").classList.add('fa-eye-slash')
+                password.type = "password";
             }
+        } // End togglePasword
 
-            /*
-             * Name: checkUser()
-             * Parameter: none
-             * Author: Namchok Singhachai
-             */
-            function checkUser() {
-                try {
-                    let userStr = $('#acc_Email').val()
-                    // Ajax for check user exits
-                    $.ajax({
-                        url: "@Url.Action("CheckUserExist", "ManageUser")",
-                        data: { userStr: userStr},
-                        type: "POST",
-                        dataType: "JSON",
-                        success: function (res) {
-                            // If res qual 1 is the user is exits
-                            if (res) {
-                                $('#alert_acc_email').removeClass('d-none')
-                                console.log('This email has been  exist.')
-                            } else {
-                                $('#alert_acc_email').addClass('d-none')
-                                console.log('No user name is exits.')
-                            } // End if
-                        },
-                        error: function (result) {
-                            // Set message status
-                            let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
-                            let _text = 'Status : ' + result.status + statusResText
-                            console.log(result) // show log of error
-                            console.log(_text)
-                            toastr.error(_text)
-                        } // End error
-                    }) // End ajax for check user exits
-                } catch (err) {
-                    console.log(err.message)
-                    toastr.error(err.message)
-                } // End try catch
+        /*
+        * Name: toggleConfirmPasword()
+        * Parameter: none
+        * Author: Wannapa Srijermtong
+        * Description: For change type of confirm password.
+        */
+        function toggleConfirmPasword() {
+            // Get id from input
+            var password = document.getElementById("acc_ConfirmPassword")
+            if (password.type === "password") {
+                document.getElementById("icon_ConfirmPassword").classList.remove('fa-eye-slash')
+                document.getElementById("icon_ConfirmPassword").classList.add('fa-eye')
+                password.type = "text";
+            } else {
+                document.getElementById("icon_ConfirmPassword").classList.remove('fa-eye')
+                document.getElementById("icon_ConfirmPassword").classList.add('fa-eye-slash')
+                password.type = "password";
+            }
+        } // End toggleConfirmPasword
 
-            } // End checkUser
-
-        </script>
-    }
-    <!--Ed Script-->
-</div>
+        /*
+        * Name: checkUser()
+        * Parameter: none
+        * Author: Namchok Singhachai
+        */
+        function checkUser() {
+            try {
+                let userStr = $('#acc_Email').val()
+                // Ajax for check user exits
+                $.ajax({
+                    url: "@Url.Action("CheckUserExist", "ManageUser")",
+                    data: { userStr: userStr},
+                    type: "POST",
+                    dataType: "JSON",
+                    success: function (res) {
+                        // If res qual 1 is the user is exits
+                        if (res) {
+                            $('#alert_acc_email').removeClass('d-none')
+                            console.log('This email has been  exist.')
+                        } else {
+                            $('#alert_acc_email').addClass('d-none')
+                            console.log('No user name is exits.')
+                        } // End if
+                    },
+                    error: function (result) {
+                        let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
+                        let _text = 'Status : ' + result.status + statusResText
+                        console.log(result) // show log of error
+                        console.log(_text)
+                        toastr.error(_text)
+                    } // End error
+                }) // End ajax for check user exits
+            } catch (err) {
+                console.log(err.message)
+                toastr.error(err.message)
+            } // End try catch
+        } // End checkUser
+    </script>
+}
+<!--End Script-->

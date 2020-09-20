@@ -105,8 +105,7 @@ namespace UMS.Areas.Identity.Pages.Account
                     _logger.LogError(ErrorMessage.ToString());
                     ModelState.AddModelError(string.Empty, ErrorMessage);
                 } // check if has error message
-                returnUrl = returnUrl ?? Url.Content("~/");
-                // Clear the existing external cookie to ensure a clean login process
+                returnUrl = returnUrl ?? Url.Content("~/");  // Clear the existing external cookie to ensure a clean login process
                 _logger.LogTrace("Signing out.");
                 await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
                 _logger.LogDebug("Getting external authentication scheme.");
@@ -136,16 +135,17 @@ namespace UMS.Areas.Identity.Pages.Account
                 returnUrl = returnUrl ?? Url.Content("~/");
                 if (ModelState.IsValid)
                 {
-                    ApplicationUser user = await _userManager.FindByEmailAsync(Input.Email.ToString());
-                    if (user.acc_IsActive == 'N')
-                    {
-                        _manageUser.deleteUser(user.Id);
-                    }// End check status
                     _logger.LogTrace("Signing in with password.");
                     var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                     if (result.Succeeded)
                     {
                         _logger.LogInformation("User logged in.");
+                        ApplicationUser user = await _userManager.FindByEmailAsync(Input.Email.ToString());
+                        if (user.acc_IsActive == 'N')
+                        {
+                            _manageUser.deleteUser(user.Id);
+                            _logger.LogInformation("Change status Inactive to active user.");
+                        }// End check status
                         _logger.LogTrace("End login on post.");
                         return LocalRedirect(returnUrl);
                     } // If login success
@@ -153,14 +153,15 @@ namespace UMS.Areas.Identity.Pages.Account
                     {
                         _logger.LogWarning("User account locked out.");
                         _logger.LogTrace("End login on post.");
-                        return RedirectToPage("./Lockout");
+                        return RedirectToPage("/Lockout");
                     }
                     else
                     {
                         _logger.LogError("Your email or password is not valid.");
                         ModelState.AddModelError(string.Empty, "Your email or password is not valid.");
                         // Send alert to home pages
-                        TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: 'Your email or password is not valid.', showConfirmButton: true })";
+                        TempData["ExceptionInValid"] = "InValid";
+                        // TempData["Exception"] = @"toastr.error('Your email or password is not valid.')";
                         _logger.LogTrace("End login on post.");
                         return Page();
                     } // If Loged out

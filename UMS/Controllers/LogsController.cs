@@ -34,13 +34,13 @@ namespace UMS.Controllers
             {
                 _logger = logger;
                 _logsContext = logsContext;
-                _logger.LogTrace("Logs Context injected into LogsController.");
-                _logger.LogTrace("Start LogsControllerl.");
+                _logger.LogTrace("Logs Context injected into Logs Controller.");
+                _logger.LogTrace("Start Logs Controllerl.");
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                _logger.LogTrace("End LogsControllerl.");
+                _logger.LogTrace("End Logs Controllerl.");
             }// End try catch
         } // End Consturctor
 
@@ -90,7 +90,7 @@ namespace UMS.Controllers
                 if ((dateInput == null && messageInput == null) || (dateInput == "" && messageInput == "")) throw new Exception("Please input information for searching."); // End if param both is null 
                 _logger.LogDebug("Input Date Input: " + ((dateInput != null && dateInput != "") ? dateInput : "-"));
                 _logger.LogDebug("Input Message: " + ((messageInput != null && messageInput != "") ? messageInput : "-"));
-                if (dateInput!=null || dateInput != "")
+                if (dateInput!=null && dateInput != "")
                 {
                     _logger.LogTrace("Set dete from dateIinput.");
                     DateTime dateInputStart = Convert.ToDateTime(dateInput.Substring(0, (dateInput.IndexOf("-"))).ToString());
@@ -110,15 +110,15 @@ namespace UMS.Controllers
             catch (Exception e)
             {
                 _logger.LogError("Error: " + e.Message.ToString());
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })"; // Message to html view
+                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })"; 
                 var er = new objectJSON
                 {
                     condition = "error",
                     messages = message,
                     text = e.Message
-                }; // Object for set alert
+                }; // Object for set alert 
                 _logger.LogTrace("End search logs.");
-                return new JsonResult(er);
+                return new JsonResult(er); // Message to html view
             } // End try catch
         } // End searchLogs
     } // End Logs
