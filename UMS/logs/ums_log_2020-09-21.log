@@ -1,0 +1,408 @@
+############################################## User Management System log ##############################################
+2020/09/21 09:30:32.091 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/21 09:30:36.853 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:30:40.149 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/21 09:30:40.149 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:30:40.160 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Wannapa\source\repos\ums\UMS
+2020/09/21 09:30:40.173 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/21 09:30:40.496 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:111 | Getting external authentication scheme.
+2020/09/21 09:32:38.880 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:44 | Start Forgot Password model.
+2020/09/21 09:33:55.844 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/21 09:33:57.510 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:33:57.627 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/21 09:33:57.627 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:33:57.627 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Wannapa\source\repos\ums\UMS
+2020/09/21 09:33:57.643 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/21 09:33:57.720 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:111 | Getting external authentication scheme.
+2020/09/21 09:35:29.909 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:44 | Start Forgot Password model.
+2020/09/21 09:35:37.611 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:35:37.623 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:35:42.057 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/21 09:35:42.136 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/21 09:36:00.868 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:36:00.887 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:36:00.925 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/21 09:36:00.948 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/21 09:36:07.132 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:36:07.168 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:36:07.435 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/21 09:36:07.442 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/21 09:36:09.201 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:36:09.206 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:36:09.222 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/21 09:36:09.222 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/21 09:36:13.995 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:36:14.013 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:36:14.080 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/21 09:36:14.096 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/21 09:36:14.611 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:36:14.611 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:36:14.661 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/21 09:36:14.679 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/21 09:36:17.020 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:36:17.036 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:36:17.082 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/21 09:36:17.082 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/21 09:36:38.629 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:36:38.656 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:36:38.874 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/21 09:36:38.879 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/21 09:36:45.814 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:36:45.845 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:36:45.893 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/21 09:36:45.910 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:111 | Getting external authentication scheme.
+2020/09/21 09:37:08.837 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:37:08.854 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:37:40.331 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:37:40.351 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:37:40.519 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:191 | Get external login info.
+2020/09/21 09:37:40.519 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:198 | Getting external login and sign in.
+2020/09/21 09:37:42.699 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:200 | Result: Failed
+2020/09/21 09:37:46.627 [INFO] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:247 | Create user succeeded.
+2020/09/21 09:37:46.903 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:248 | Adding login.
+2020/09/21 09:37:47.029 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:252 | Signing in.
+2020/09/21 09:37:48.012 [INFO] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:254 | Add login succeeded.
+2020/09/21 09:37:48.474 [INFO] [UMS.Controllers.HomeController] [wannapasjt@gmail.com] Index:HomeController.cs:60 | Welcome wannapasjt@gmail.com to UMS.
+2020/09/21 09:38:01.166 [DEBUG] [UMS.Controllers.EditProfileController] [wannapasjt@gmail.com] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/21 09:38:04.152 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [wannapasjt@gmail.com] Logout.cshtml.cs:30 | Starting Log out model.
+2020/09/21 09:38:04.346 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [wannapasjt@gmail.com] Logout.cshtml.cs:50 | User logged out.
+2020/09/21 09:38:04.729 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:38:04.813 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:38:04.830 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/21 09:38:05.021 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:111 | Getting external authentication scheme.
+2020/09/21 09:38:06.988 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:44 | Start Forgot Password model.
+2020/09/21 09:38:13.925 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:38:13.963 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:38:14.052 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/21 09:38:14.152 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/21 09:38:19.852 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:38:19.938 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:38:20.068 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/21 09:38:20.083 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/21 09:38:21.241 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:38:21.253 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:38:21.284 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/21 09:38:21.284 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/21 09:38:21.350 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:44 | Start Forgot Password model.
+2020/09/21 09:38:21.678 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:75 | Finding user.
+2020/09/21 09:38:21.718 [WARN] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:88 | This user can not change password (Social Account).
+2020/09/21 09:38:38.525 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:38:38.543 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:38:38.564 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/21 09:38:38.581 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:111 | Getting external authentication scheme.
+2020/09/21 09:38:44.270 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:38:44.339 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:38:44.423 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/21 09:38:44.871 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:142 | User logged in.
+2020/09/21 09:38:44.955 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/21 09:38:47.036 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:38:47.072 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:38:47.134 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/21 09:38:51.037 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] deleteUser:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:38:51.057 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] deleteUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:38:51.225 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] deleteUser:ManageUserController.cs:223 | Execute sql inactive user.
+2020/09/21 09:38:51.332 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] deleteUser:ManageUserController.cs:230 | Save changes: Inactive user.
+2020/09/21 09:38:52.381 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:38:52.396 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:38:52.432 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/21 09:38:54.436 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Log out model.
+2020/09/21 09:38:54.474 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:50 | User logged out.
+2020/09/21 09:38:54.522 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:38:54.533 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:38:54.549 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/21 09:38:54.570 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:111 | Getting external authentication scheme.
+2020/09/21 09:38:57.254 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:38:57.270 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:39:22.524 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:39:22.539 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:39:22.549 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:191 | Get external login info.
+2020/09/21 09:39:22.565 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:198 | Getting external login and sign in.
+2020/09/21 09:39:22.618 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:200 | Result: Succeeded
+2020/09/21 09:39:22.655 [INFO] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:218 | This user is not active.
+2020/09/21 09:39:22.734 [DEBUG] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:223 | Execute sql inactive user.
+2020/09/21 09:39:22.831 [DEBUG] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:230 | Save changes: Inactive user.
+2020/09/21 09:39:22.909 [INFO] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:222 | Change status Inactive to active user.
+2020/09/21 09:39:23.189 [INFO] [UMS.Controllers.HomeController] [wannapasjt@gmail.com] Index:HomeController.cs:60 | Welcome wannapasjt@gmail.com to UMS.
+2020/09/21 09:39:26.065 [DEBUG] [UMS.Controllers.EditProfileController] [wannapasjt@gmail.com] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/21 09:39:33.241 [DEBUG] [UMS.Controllers.EditProfileController] [wannapasjt@gmail.com] editProfile:EditProfileController.cs:95 | Getting value from httpcontext request.
+2020/09/21 09:39:33.369 [DEBUG] [UMS.Controllers.EditProfileController] [wannapasjt@gmail.com] editProfile:EditProfileController.cs:156 | Update name's user.
+2020/09/21 09:39:33.369 [DEBUG] [UMS.Controllers.EditProfileController] [wannapasjt@gmail.com] editProfile:EditProfileController.cs:163 | Save changes: Check update user.
+2020/09/21 09:39:33.486 [DEBUG] [UMS.Controllers.EditProfileController] [wannapasjt@gmail.com] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/21 09:39:37.408 [DEBUG] [UMS.Controllers.EditProfileController] [wannapasjt@gmail.com] editProfile:EditProfileController.cs:95 | Getting value from httpcontext request.
+2020/09/21 09:39:37.452 [DEBUG] [UMS.Controllers.EditProfileController] [wannapasjt@gmail.com] editProfile:EditProfileController.cs:156 | Update name's user.
+2020/09/21 09:39:37.461 [DEBUG] [UMS.Controllers.EditProfileController] [wannapasjt@gmail.com] editProfile:EditProfileController.cs:163 | Save changes: Check update user.
+2020/09/21 09:39:37.564 [DEBUG] [UMS.Controllers.EditProfileController] [wannapasjt@gmail.com] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/21 09:39:39.658 [DEBUG] [UMS.Controllers.EditProfileController] [wannapasjt@gmail.com] editProfile:EditProfileController.cs:95 | Getting value from httpcontext request.
+2020/09/21 09:39:39.693 [DEBUG] [UMS.Controllers.EditProfileController] [wannapasjt@gmail.com] editProfile:EditProfileController.cs:156 | Update name's user.
+2020/09/21 09:39:39.693 [DEBUG] [UMS.Controllers.EditProfileController] [wannapasjt@gmail.com] editProfile:EditProfileController.cs:163 | Save changes: Check update user.
+2020/09/21 09:39:39.736 [DEBUG] [UMS.Controllers.EditProfileController] [wannapasjt@gmail.com] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/21 09:39:41.664 [DEBUG] [UMS.Controllers.EditProfileController] [wannapasjt@gmail.com] editProfile:EditProfileController.cs:95 | Getting value from httpcontext request.
+2020/09/21 09:39:41.729 [DEBUG] [UMS.Controllers.EditProfileController] [wannapasjt@gmail.com] editProfile:EditProfileController.cs:156 | Update name's user.
+2020/09/21 09:39:41.777 [DEBUG] [UMS.Controllers.EditProfileController] [wannapasjt@gmail.com] editProfile:EditProfileController.cs:163 | Save changes: Check update user.
+2020/09/21 09:39:41.818 [DEBUG] [UMS.Controllers.EditProfileController] [wannapasjt@gmail.com] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/21 09:39:49.926 [INFO] [UMS.Controllers.HomeController] [wannapasjt@gmail.com] Index:HomeController.cs:60 | Welcome wannapasjt@gmail.com to UMS.
+2020/09/21 09:39:51.431 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [wannapasjt@gmail.com] Logout.cshtml.cs:30 | Starting Log out model.
+2020/09/21 09:39:51.459 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [wannapasjt@gmail.com] Logout.cshtml.cs:50 | User logged out.
+2020/09/21 09:39:51.504 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:39:51.504 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:39:51.534 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/21 09:39:51.554 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:111 | Getting external authentication scheme.
+2020/09/21 09:40:13.096 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:40:13.130 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:40:13.174 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/21 09:40:13.247 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:142 | User logged in.
+2020/09/21 09:40:13.284 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/21 09:40:15.650 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:40:15.688 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:40:15.784 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/21 09:40:25.222 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Log out model.
+2020/09/21 09:40:25.239 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:50 | User logged out.
+2020/09/21 09:40:25.286 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:40:25.286 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:40:25.300 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/21 09:40:25.317 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:111 | Getting external authentication scheme.
+2020/09/21 09:40:36.570 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:40:36.615 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:40:36.705 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:431 | Getting properties from Microsoft.
+2020/09/21 09:41:53.856 [DEBUG] [UMS.Models.AccountContext]  MicrosoftResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:41:53.886 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:41:53.908 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftResponse:AccountController.cs:457 | Get external login.
+2020/09/21 09:41:53.908 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftResponse:AccountController.cs:464 | Getting External login and sign in.
+2020/09/21 09:41:53.936 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftResponse:AccountController.cs:466 | Result: Succeeded
+2020/09/21 09:41:53.956 [INFO] [UMS.Controllers.AccountController]  MicrosoftResponse:AccountController.cs:479 | login Successfully.
+2020/09/21 09:41:53.970 [INFO] [UMS.Controllers.HomeController] [60160097@my.buu.ac.th] Index:HomeController.cs:60 | Welcome 60160097@my.buu.ac.th to UMS.
+2020/09/21 09:41:56.210 [DEBUG] [UMS.Controllers.EditProfileController] [60160097@my.buu.ac.th] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/21 09:42:04.317 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [60160097@my.buu.ac.th] Logout.cshtml.cs:30 | Starting Log out model.
+2020/09/21 09:42:04.368 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [60160097@my.buu.ac.th] Logout.cshtml.cs:50 | User logged out.
+2020/09/21 09:42:04.634 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:42:04.704 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:42:04.771 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/21 09:42:04.863 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:111 | Getting external authentication scheme.
+2020/09/21 09:42:06.784 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:44 | Start Forgot Password model.
+2020/09/21 09:42:15.509 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:42:15.522 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:42:15.564 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/21 09:42:15.564 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/21 09:42:15.608 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:42:15.618 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:42:15.628 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/21 09:42:15.848 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/21 09:42:15.885 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:44 | Start Forgot Password model.
+2020/09/21 09:42:15.943 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:75 | Finding user.
+2020/09/21 09:42:16.003 [WARN] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:88 | This user can not change password (Social Account).
+2020/09/21 09:42:19.310 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:42:19.330 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:42:19.377 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/21 09:42:19.429 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:111 | Getting external authentication scheme.
+2020/09/21 09:42:31.310 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:42:31.339 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:42:31.378 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/21 09:42:31.436 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:142 | User logged in.
+2020/09/21 09:42:31.486 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/21 09:42:33.380 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:42:33.380 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:42:33.392 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/21 09:42:37.395 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] deleteUser:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:42:37.407 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] deleteUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:42:37.425 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] deleteUser:ManageUserController.cs:223 | Execute sql inactive user.
+2020/09/21 09:42:37.442 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] deleteUser:ManageUserController.cs:230 | Save changes: Inactive user.
+2020/09/21 09:42:38.381 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:42:38.381 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:42:38.410 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/21 09:42:39.965 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Log out model.
+2020/09/21 09:42:40.004 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:50 | User logged out.
+2020/09/21 09:42:40.115 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:42:40.115 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:42:40.173 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/21 09:42:40.207 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:111 | Getting external authentication scheme.
+2020/09/21 09:42:41.846 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:42:41.846 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:42:41.876 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:431 | Getting properties from Microsoft.
+2020/09/21 09:42:44.489 [DEBUG] [UMS.Models.AccountContext]  MicrosoftResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:42:44.489 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:42:44.517 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftResponse:AccountController.cs:457 | Get external login.
+2020/09/21 09:42:44.517 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftResponse:AccountController.cs:464 | Getting External login and sign in.
+2020/09/21 09:42:44.542 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftResponse:AccountController.cs:466 | Result: Succeeded
+2020/09/21 09:42:44.549 [INFO] [UMS.Controllers.AccountController]  MicrosoftResponse:AccountController.cs:485 | This user is not active.
+2020/09/21 09:42:44.584 [DEBUG] [UMS.Controllers.ManageUserController]  MicrosoftResponse:ManageUserController.cs:223 | Execute sql inactive user.
+2020/09/21 09:42:44.584 [DEBUG] [UMS.Controllers.ManageUserController]  MicrosoftResponse:ManageUserController.cs:230 | Save changes: Inactive user.
+2020/09/21 09:42:44.598 [INFO] [UMS.Controllers.AccountController]  MicrosoftResponse:AccountController.cs:489 | Change status Inactive to active user.
+2020/09/21 09:42:44.643 [INFO] [UMS.Controllers.HomeController] [60160097@my.buu.ac.th] Index:HomeController.cs:60 | Welcome 60160097@my.buu.ac.th to UMS.
+2020/09/21 09:42:49.144 [DEBUG] [UMS.Controllers.EditProfileController] [60160097@my.buu.ac.th] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/21 09:42:51.898 [DEBUG] [UMS.Controllers.EditProfileController] [60160097@my.buu.ac.th] editProfile:EditProfileController.cs:95 | Getting value from httpcontext request.
+2020/09/21 09:42:52.018 [DEBUG] [UMS.Controllers.EditProfileController] [60160097@my.buu.ac.th] editProfile:EditProfileController.cs:156 | Update name's user.
+2020/09/21 09:42:52.042 [DEBUG] [UMS.Controllers.EditProfileController] [60160097@my.buu.ac.th] editProfile:EditProfileController.cs:163 | Save changes: Check update user.
+2020/09/21 09:42:52.083 [DEBUG] [UMS.Controllers.EditProfileController] [60160097@my.buu.ac.th] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/21 09:42:54.349 [DEBUG] [UMS.Controllers.EditProfileController] [60160097@my.buu.ac.th] editProfile:EditProfileController.cs:95 | Getting value from httpcontext request.
+2020/09/21 09:42:54.458 [DEBUG] [UMS.Controllers.EditProfileController] [60160097@my.buu.ac.th] editProfile:EditProfileController.cs:156 | Update name's user.
+2020/09/21 09:42:54.529 [DEBUG] [UMS.Controllers.EditProfileController] [60160097@my.buu.ac.th] editProfile:EditProfileController.cs:163 | Save changes: Check update user.
+2020/09/21 09:42:54.582 [DEBUG] [UMS.Controllers.EditProfileController] [60160097@my.buu.ac.th] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/21 09:42:57.081 [DEBUG] [UMS.Controllers.EditProfileController] [60160097@my.buu.ac.th] editProfile:EditProfileController.cs:95 | Getting value from httpcontext request.
+2020/09/21 09:42:57.134 [DEBUG] [UMS.Controllers.EditProfileController] [60160097@my.buu.ac.th] editProfile:EditProfileController.cs:156 | Update name's user.
+2020/09/21 09:42:57.149 [DEBUG] [UMS.Controllers.EditProfileController] [60160097@my.buu.ac.th] editProfile:EditProfileController.cs:163 | Save changes: Check update user.
+2020/09/21 09:42:57.189 [DEBUG] [UMS.Controllers.EditProfileController] [60160097@my.buu.ac.th] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/21 09:43:00.519 [DEBUG] [UMS.Controllers.EditProfileController] [60160097@my.buu.ac.th] editProfile:EditProfileController.cs:95 | Getting value from httpcontext request.
+2020/09/21 09:43:00.585 [DEBUG] [UMS.Controllers.EditProfileController] [60160097@my.buu.ac.th] editProfile:EditProfileController.cs:156 | Update name's user.
+2020/09/21 09:43:00.651 [DEBUG] [UMS.Controllers.EditProfileController] [60160097@my.buu.ac.th] editProfile:EditProfileController.cs:163 | Save changes: Check update user.
+2020/09/21 09:43:00.705 [DEBUG] [UMS.Controllers.EditProfileController] [60160097@my.buu.ac.th] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/21 09:43:07.180 [INFO] [UMS.Controllers.HomeController] [60160097@my.buu.ac.th] Index:HomeController.cs:60 | Welcome 60160097@my.buu.ac.th to UMS.
+2020/09/21 09:43:08.322 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [60160097@my.buu.ac.th] Logout.cshtml.cs:30 | Starting Log out model.
+2020/09/21 09:43:08.334 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [60160097@my.buu.ac.th] Logout.cshtml.cs:50 | User logged out.
+2020/09/21 09:43:08.398 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:43:08.398 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:43:08.409 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/21 09:43:08.424 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:111 | Getting external authentication scheme.
+2020/09/21 09:43:16.122 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:43:16.134 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:43:16.162 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/21 09:43:16.234 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:142 | User logged in.
+2020/09/21 09:43:16.283 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/21 09:43:18.122 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:43:18.127 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:43:18.145 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/21 09:43:21.584 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Log out model.
+2020/09/21 09:43:21.596 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:50 | User logged out.
+2020/09/21 09:43:21.630 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:43:21.630 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:43:21.643 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/21 09:43:21.659 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:111 | Getting external authentication scheme.
+2020/09/21 09:51:30.384 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/21 09:51:31.146 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/21 09:51:31.182 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Wannapa\source\repos\ums\UMS
+2020/09/21 09:51:31.379 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:51:31.379 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:51:31.409 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/21 09:51:31.492 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:111 | Getting external authentication scheme.
+2020/09/21 09:51:40.565 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:44 | Start Forgot Password model.
+2020/09/21 09:52:11.785 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/21 09:52:12.266 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/21 09:52:12.282 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Wannapa\source\repos\ums\UMS
+2020/09/21 09:52:12.474 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:52:12.635 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:52:12.862 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/21 09:52:12.909 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:111 | Getting external authentication scheme.
+2020/09/21 09:52:15.896 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:44 | Start Forgot Password model.
+2020/09/21 09:52:26.732 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:52:26.748 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:52:27.527 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:52:27.539 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:52:27.819 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/21 09:52:27.819 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/21 09:52:27.835 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/21 09:52:27.835 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/21 09:52:34.556 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:52:34.581 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:52:34.822 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/21 09:52:34.822 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/21 09:52:40.502 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:52:40.502 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:52:40.538 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/21 09:52:40.538 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/21 09:52:41.493 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:52:41.493 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:52:41.521 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/21 09:52:41.521 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/21 09:52:41.597 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:44 | Start Forgot Password model.
+2020/09/21 09:52:42.499 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:75 | Finding user.
+2020/09/21 09:52:42.531 [WARN] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:88 | This user can not change password (Social Account).
+2020/09/21 09:52:58.128 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:52:58.128 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:52:58.143 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/21 09:52:58.163 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:111 | Getting external authentication scheme.
+2020/09/21 09:56:48.529 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/21 09:56:48.999 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/21 09:56:49.026 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Wannapa\source\repos\ums\UMS
+2020/09/21 09:56:49.175 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:56:49.175 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:56:49.189 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/21 09:56:49.240 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:111 | Getting external authentication scheme.
+2020/09/21 09:56:51.818 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:44 | Start Forgot Password model.
+2020/09/21 09:56:54.464 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:56:54.543 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:56:55.676 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/21 09:56:55.698 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/21 09:56:57.335 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:56:57.335 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:56:57.408 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/21 09:56:57.408 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/21 09:57:00.093 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:57:00.114 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:57:00.232 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/21 09:57:00.237 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/21 09:57:00.740 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:57:00.740 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:57:00.802 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/21 09:57:00.802 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/21 09:57:00.850 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:44 | Start Forgot Password model.
+2020/09/21 09:57:01.608 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:75 | Finding user.
+2020/09/21 09:57:01.633 [WARN] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:88 | This user can not change password (Social Account).
+2020/09/21 09:57:06.112 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:57:06.112 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:57:06.129 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/21 09:57:06.144 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:111 | Getting external authentication scheme.
+2020/09/21 09:57:26.956 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:57:26.956 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:57:27.069 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/21 09:57:27.577 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:142 | User logged in.
+2020/09/21 09:57:27.674 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/21 09:57:31.286 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/21 09:57:51.990 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] editProfile:EditProfileController.cs:95 | Getting value from httpcontext request.
+2020/09/21 09:57:52.112 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/21 09:58:04.549 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] editProfile:EditProfileController.cs:95 | Getting value from httpcontext request.
+2020/09/21 09:58:04.617 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] editProfile:EditProfileController.cs:194 | Signing in with password.
+2020/09/21 09:58:04.668 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] editProfile:EditProfileController.cs:206 | Hasing password.
+2020/09/21 09:58:04.730 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] editProfile:EditProfileController.cs:223 | Update name's user and password.
+2020/09/21 09:58:04.736 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] editProfile:EditProfileController.cs:230 | Save changes: Check update user.
+2020/09/21 09:58:04.770 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/21 09:58:08.213 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:58:08.213 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:58:08.269 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/21 09:58:17.664 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] getUser:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:58:17.679 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] getUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:58:17.749 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] getUser:ManageUserController.cs:117 | Get user by ID
+2020/09/21 09:58:20.233 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] editUser:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:58:20.249 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] editUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:58:20.300 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] editUser:ManageUserController.cs:155 | Set role ID.
+2020/09/21 09:58:20.300 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] editUser:ManageUserController.cs:167 | Update name'user.
+2020/09/21 09:58:20.378 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] editUser:ManageUserController.cs:169 | Update role'user.
+2020/09/21 09:58:20.378 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] editUser:ManageUserController.cs:177 | Save changes: Update user.
+2020/09/21 09:58:20.411 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:58:20.411 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:58:20.425 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/21 09:58:23.300 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/21 09:58:26.255 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Log out model.
+2020/09/21 09:58:26.273 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:50 | User logged out.
+2020/09/21 09:58:26.319 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:58:26.319 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:58:26.347 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/21 09:58:26.347 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:111 | Getting external authentication scheme.
+2020/09/21 09:58:28.716 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:58:28.732 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:58:39.021 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:58:39.041 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:58:39.065 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:191 | Get external login info.
+2020/09/21 09:58:39.065 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:198 | Getting external login and sign in.
+2020/09/21 09:58:39.187 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:200 | Result: Succeeded
+2020/09/21 09:58:39.215 [INFO] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:213 | login Successfully.
+2020/09/21 09:58:39.239 [INFO] [UMS.Controllers.HomeController] [wannapasjt@gmail.com] Index:HomeController.cs:60 | Welcome wannapasjt@gmail.com to UMS.
+2020/09/21 09:58:42.504 [DEBUG] [UMS.Controllers.EditProfileController] [wannapasjt@gmail.com] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/21 09:58:45.552 [DEBUG] [UMS.Models.AccountContext] [wannapasjt@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:58:45.552 [DEBUG] [UMS.Models.EditAccountContext] [wannapasjt@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:58:45.580 [DEBUG] [UMS.Controllers.ManageUserController] [wannapasjt@gmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/21 09:58:50.318 [DEBUG] [UMS.Controllers.LogsController] [wannapasjt@gmail.com] Index:LogsController.cs:64 | Getting top 100 from all logs.
+2020/09/21 09:58:53.580 [DEBUG] [UMS.Controllers.EditProfileController] [wannapasjt@gmail.com] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/21 09:58:55.292 [DEBUG] [UMS.Models.AccountContext] [wannapasjt@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:58:55.300 [DEBUG] [UMS.Models.EditAccountContext] [wannapasjt@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:58:55.319 [DEBUG] [UMS.Controllers.ManageUserController] [wannapasjt@gmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/21 09:58:57.003 [DEBUG] [UMS.Controllers.LogsController] [wannapasjt@gmail.com] Index:LogsController.cs:64 | Getting top 100 from all logs.
+2020/09/21 09:59:01.117 [DEBUG] [UMS.Models.AccountContext] [wannapasjt@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:59:01.117 [DEBUG] [UMS.Models.EditAccountContext] [wannapasjt@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:59:01.143 [DEBUG] [UMS.Controllers.ManageUserController] [wannapasjt@gmail.com] Index:ManageUserController.cs:82 | Get all active user.
+2020/09/21 09:59:02.925 [DEBUG] [UMS.Controllers.EditProfileController] [wannapasjt@gmail.com] Index:EditProfileController.cs:70 | Get user by ID.
+2020/09/21 09:59:03.939 [INFO] [UMS.Controllers.HomeController] [wannapasjt@gmail.com] Index:HomeController.cs:60 | Welcome wannapasjt@gmail.com to UMS.
+2020/09/21 09:59:05.555 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [wannapasjt@gmail.com] Logout.cshtml.cs:30 | Starting Log out model.
+2020/09/21 09:59:05.565 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [wannapasjt@gmail.com] Logout.cshtml.cs:50 | User logged out.
+2020/09/21 09:59:05.603 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/21 09:59:05.603 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/21 09:59:05.612 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:46 | Starting Login model.
+2020/09/21 09:59:05.626 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:111 | Getting external authentication scheme.

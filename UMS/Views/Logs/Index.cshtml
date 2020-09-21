@@ -259,8 +259,8 @@
         try {
             let regex = /^[a-zA-Z0-9 ]+[a-zA-Z0-9 ]|(^$)$/
             if (!regex.test($('#message').val())) {
-                toastr.warning('The messages no symbols, special chars and can not be blank.')
-                $('#messageErrorInput').text('The messages no symbols, special chars and can not be blank.')
+                toastr.warning('The messages no symbols, special chars')
+                $('#messageErrorInput').text('The messages no symbols, special chars.')
                 console.log('error')
             }
             else if ($('#message').val() == '' && $('#logstime').val() == '') {
