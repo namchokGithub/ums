@@ -86,7 +86,7 @@ namespace UMS.Areas.Identity.Pages.Account
                     if (us.acc_TypeAccoutname.ToString().ToLower() != "Email".ToLower())
                     {
                         _logger.LogWarning("This user can not change password (Social Account).");
-                        TempData["Exception"] = @"Swal.fire({ icon: 'warning', title: 'Warning !', text: 'This user can not change password (Social Account).'})";
+                        TempData["Exception"] = @"Swal.fire({ icon: 'warning', title: 'Can not change password!', text: 'This email is login with social media'})"; // เป็น Social media ไม่สามารถเปลี่ยน Password ได้
                         return Page();
                     }
                     _logger.LogDebug("Generating code.");
