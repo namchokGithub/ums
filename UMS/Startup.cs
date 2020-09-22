@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using EmailService;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -42,6 +44,14 @@ namespace UMS
          */
         public void ConfigureServices(IServiceCollection services)
         {
+            // Cookies
+            services.ConfigureApplicationCookie(o =>
+            {
+                o.ExpireTimeSpan = TimeSpan.FromDays(14);
+                o.SlidingExpiration = true;
+                o.ReturnUrlParameter = "/";
+            });
+
             // Set connect database
             services.AddDbContext<AccountContext>(options =>
                     options.UseSqlServer(
