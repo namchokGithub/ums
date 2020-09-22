@@ -39,8 +39,8 @@ namespace UMS.Areas.Identity
                     options.Password.RequireNonAlphanumeric = false;
                     options.Password.RequireUppercase = false;
                 })
-                    .AddRoles<IdentityRole>()
-                    .AddEntityFrameworkStores<AuthDbContext>();
+                .AddRoles<IdentityRole>()
+                .AddEntityFrameworkStores<AuthDbContext>();
             });
         } // End Configure
     } // End IdentityHostingStartup
