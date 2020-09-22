@@ -114,7 +114,7 @@
 
     //Regular expression
     var RegExName = /^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$/;
-    var RegExPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[#$!%@@*?&])[A-Za-z0-9#$!%@@*?&]+$/;
+    var RegExPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\:\;\[\]\\\|\/\.\,\'\"\()\{}\<>_#$!%@@^฿*?&\-\+\=])[A-Za-z0-9\:\;\[\]\\\|\/\.\,\'\"\()\{}\<>_#$!%@@^฿*?&\-\+\=]+$/;
 
     /*
     * Name: toggleCurrentPasword()
@@ -324,7 +324,7 @@
 
             // Validation if acc_NewPassword do not match with acc_ConfirmPassword.
             if (acc_NewPassword != acc_ConfirmPassword) {
-                $('#validation_acc_ConfirmPassword').html('The new password and confirmation password do not match.');
+                $('#validation_acc_ConfirmPassword').html('The password and confirmation password do not match.');
             } else {
                 $('#validation_acc_ConfirmPassword').html('');
             }

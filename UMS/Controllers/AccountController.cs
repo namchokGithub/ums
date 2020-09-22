@@ -196,7 +196,7 @@ namespace UMS.Controllers
                     return RedirectToAction(nameof(InputModel));
                 }
                 _logger.LogDebug("Getting external login and sign in.");
-                var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, false);
+                var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, true);
                 _logger.LogDebug($"Result: {result}");
                 _logger.LogTrace("Creating user info.");
                 string[] userInfo = {
@@ -328,7 +328,7 @@ namespace UMS.Controllers
                     return RedirectToAction(nameof(InputModel));
                 }
                 _logger.LogDebug("Getting result external login and sign in.");
-                var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, false);
+                var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, true);
                 _logger.LogDebug($"Result: {result}");
                 _logger.LogTrace("Craete user info.");
                 string[] userInfo = {
@@ -462,7 +462,7 @@ namespace UMS.Controllers
                     return RedirectToAction(nameof(InputModel));
                 }
                 _logger.LogDebug("Getting External login and sign in.");
-                var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, false);
+                var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, true);
                 _logger.LogDebug($"Result: {result}");
                 _logger.LogTrace("Creating user info object.");
                 string[] userInfo = {
