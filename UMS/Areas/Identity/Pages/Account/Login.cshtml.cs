@@ -152,6 +152,7 @@ namespace UMS.Areas.Identity.Pages.Account
                             _logger.LogInformation("Change status Inactive to active user.");
                         } // End check status
 
+                        string nameCookies = StringEncryptor.EncryptString("usermanagementsystem2020", "umsrememberme");
                         if (Input.RememberMe)
                         {
                             CookieOptions option = new CookieOptions
@@ -162,9 +163,8 @@ namespace UMS.Areas.Identity.Pages.Account
                                 SameSite = SameSiteMode.Lax
                             };
                             string cookies = StringEncryptor.EncryptString("usermanagementsystem2020", "UMS.Cookies%" + Input.Email.ToString() + "%" + Input.Password.ToString());
-                            string nameCookies = StringEncryptor.EncryptString("usermanagementsystem2020", "umsrememberme");
-                            Response.Cookies.Delete(nameCookies);
-                            HttpContext.Response.Cookies.Append(nameCookies, cookies, option);
+                            Response.Cookies.Delete(nameCookies.ToString());
+                            HttpContext.Response.Cookies.Append(nameCookies.ToString(), cookies, option);
                         } // Remember email and password
 
                         _logger.LogTrace("End login on post.");

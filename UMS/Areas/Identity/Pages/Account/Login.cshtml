@@ -6,7 +6,8 @@
     Layout = "~/Areas/Identity/Pages/_AuthLayout.cshtml";
 
     string nameCookies = LoginModel.StringEncryptor.EncryptString("usermanagementsystem2020", "umsrememberme");
-    var cookiesRememberme = HttpContext.Request.Cookies[nameCookies];
+    var cookiesRememberme = "none";
+    cookiesRememberme = HttpContext.Request.Cookies[nameCookies.ToString()];
     var email = "";
     var pass = "";
     if (cookiesRememberme != null && cookiesRememberme != "")
@@ -142,8 +143,9 @@
         @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ }
         $('#acc_Email').val(`@(email.ToString())`);
         $('#acc_Password').val(`@(pass.ToString())`);
-        if (`@cookiesRememberme.ToString()` != null && `@cookiesRememberme.ToString()` != "") {
-            $('#RememberMe').prop('checked', true);
+        @if(cookiesRememberme != null && cookiesRememberme != "")
+        {
+            @Html.Raw("$('#RememberMe').prop('checked', true);");
         }
     });
 </script>
