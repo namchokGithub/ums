@@ -47,6 +47,7 @@ namespace UMS.Areas.Identity.Pages.Account
             _logger.LogTrace("Start Log out model On Post.");
             _logger.LogTrace("Signing out.");
             await _signInManager.SignOutAsync();
+            Response.Cookies.Delete(".AspNetCore.Identity.Application");
             _logger.LogInformation("User logged out.");
             if (returnUrl != null)
             {

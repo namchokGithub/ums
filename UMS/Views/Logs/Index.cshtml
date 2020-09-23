@@ -100,16 +100,37 @@
                                         {
                                             if (item.log_filename != null && item.log_filename != "")
                                             {
-                                                locations = item.log_mvc_action + "-" + item.log_filename + ":" + item.log_linenumber;
+                                                if (item.log_user_identity != null && item.log_user_identity != "")
+                                                {
+                                                    locations = item.log_mvc_action + "-" + item.log_filename + ":" + item.log_linenumber + " [" + item.log_user_identity + "]";
+                                                }
+                                                else
+                                                {
+                                                    locations = item.log_mvc_action + "-" + item.log_filename + ":" + item.log_linenumber;
+                                                }
                                             }
                                             else
                                             {
-                                                locations = item.log_mvc_action + ":" + item.log_linenumber;
+                                                if (item.log_user_identity != null && item.log_user_identity != "")
+                                                {
+                                                    locations = item.log_mvc_action + ":" + item.log_linenumber + " [" + item.log_user_identity + "]";
+                                                }
+                                                else
+                                                {
+                                                    locations = item.log_mvc_action + ":" + item.log_linenumber;
+                                                }
                                             }
                                         }
                                         else if (item.log_filename != null && item.log_filename != "")
                                         {
-                                            locations = item.log_linenumber;
+                                            if (item.log_user_identity != null && item.log_user_identity != "")
+                                            {
+                                                locations = item.log_linenumber + " [" + item.log_user_identity + "]";
+                                            }
+                                            else
+                                            {
+                                                locations = item.log_linenumber;
+                                            }
                                         }
                                         else
                                         {
@@ -259,8 +280,8 @@
         try {
             let regex = /^[a-zA-Z0-9 ]+[a-zA-Z0-9 ]|(^$)$/
             if (!regex.test($('#message').val())) {
-                toastr.warning('The messages no symbols, special chars and can not be blank.')
-                $('#messageErrorInput').text('The messages no symbols, special chars and can not be blank.')
+                toastr.warning('The messages no symbols, special chars')
+                $('#messageErrorInput').text('The messages no symbols, special chars.')
                 console.log('error')
             }
             else if ($('#message').val() == '' && $('#logstime').val() == '') {
@@ -297,14 +318,26 @@
                                 let locations = "";
                                 if (result[i].log_mvc_action != null && result[i].log_mvc_action != "") {
                                     if (result[i].log_filename != null && result[i].log_filename != "") {
-                                        locations = result[i].log_mvc_action + "-" + result[i].log_filename + ":" + result[i].log_linenumber;
+                                        if (result[i].log_user_identity != null && result[i].log_user_identity != "") {
+                                            locations = result[i].log_mvc_action + "-" + result[i].log_filename + ":" + result[i].log_linenumber + " [" + result[i].log_user_identity + "]";
+                                        } else {
+                                            locations = result[i].log_mvc_action + "-" + result[i].log_filename + ":" + result[i].log_linenumber;
+                                        }
                                     }
                                     else {
-                                        locations = result[i].log_mvc_action + ":" + result[i].log_linenumber;
+                                        if (result[i].log_user_identity != null && result[i].log_user_identity != "") {
+                                            locations = result[i].log_mvc_action + ":" + result[i].log_linenumber + " [" + result[i].log_user_identity + "]";
+                                        } else {
+                                            locations = result[i].log_mvc_action + ":" + result[i].log_linenumber;
+                                        }
                                     }
                                 }
                                 else if (result[i].log_filename != null && result[i].log_filename != "") {
-                                    locations = result[i].log_linenumber;
+                                    if (result[i].log_user_identity != null && result[i].log_user_identity != "") {
+                                        locations = result[i].log_linenumber + " [" + result[i].log_user_identity + "]";
+                                    } else {
+                                        locations = result[i].log_linenumber;
+                                    }
                                 }
                                 else {
                                     locations = "N/A";

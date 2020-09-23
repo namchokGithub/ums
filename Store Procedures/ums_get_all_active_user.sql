@@ -23,6 +23,7 @@ BEGIN
 		LEFT JOIN [dbo].[UserRoles] ON [dbo].[UserRoles].UserId = [dbo].[Account].acc_Id
 		LEFT JOIN [dbo].[Roles] ON [dbo].[Roles].Id = [dbo].[UserRoles].RoleId
 		LEFT JOIN [dbo].[UserLogins] ON [dbo].[UserLogins].UserId = [dbo].[Account].acc_Id
-	WHERE [dbo].[Account].[acc_IsActive] = 'Y';
+	WHERE [dbo].[Account].[acc_IsActive] = 'Y'
+	ORDER BY [dbo].[Account].[acc_Firstname];
 END
 GO

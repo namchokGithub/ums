@@ -106,8 +106,7 @@ namespace UMS.Controllers
                
                 // Regular expression
                 var RegExName = @"^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$";
-                var RegExPassword = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[#$!%@*?&])[A-Za-z0-9#$!%@*?&]+$";
-
+                var RegExPassword = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\:\;\[\]\\\|\/\.\,\'\""\()\{}\<>_#$!%@@^฿*?&\-\+\=])[A-Za-z0-9\:\;\[\]\\\|\/\.\,\'\""\()\{}\<>_#$!%@@^฿*?&\-\+\=]+$";
                 // Validation if acc_Firstname do not math with Regular expression.
                 if (!Regex.IsMatch(acc_Firstname, RegExName) && acc_Firstname != "")
                 {

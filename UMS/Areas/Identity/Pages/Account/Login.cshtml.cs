@@ -7,11 +7,16 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using UMS.Areas.Identity.Data;
 using System;
 using UMS.Controllers;
 using UMS.Models;
+using SendGrid.Helpers.Mail;
+using System.Text;
+using System.Security.Cryptography;
+using System.IO;
 
 /*
  * Name: LoginModel.cs
@@ -75,7 +80,7 @@ namespace UMS.Areas.Identity.Pages.Account
 
             [Required]
             //[DataType(DataType.Password)]
-            [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*#?&])[A-Za-z0-9$@$!%*#?&]+$"
+            [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\:\;\[\]\\\|\/\.\,\'\""\()\{}\<>_#$!%@@^฿*?&\-\+\=])[A-Za-z0-9\:\;\[\]\\\|\/\.\,\'\""\()\{}\<>_#$!%@@^฿*?&\-\+\=]+$"
                 , ErrorMessage = "The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.")]
             public string Password { get; set; }
 
@@ -145,7 +150,23 @@ namespace UMS.Areas.Identity.Pages.Account
                         {
                             _manageUser.deleteUser(user.Id);
                             _logger.LogInformation("Change status Inactive to active user.");
-                        }// End check status
+                        } // End check status
+
+                        string nameCookies = StringEncryptor.EncryptString("usermanagementsystem2020", "umsrememberme");
+                        if (Input.RememberMe)
+                        {
+                            CookieOptions option = new CookieOptions
+                            {
+                                Expires = DateTime.Now.AddDays(14),
+                                Path = "/Identity/Account/Login",
+                                HttpOnly = true,
+                                SameSite = SameSiteMode.Lax
+                            };
+                            string cookies = StringEncryptor.EncryptString("usermanagementsystem2020", "UMS.Cookies%" + Input.Email.ToString() + "%" + Input.Password.ToString());
+                            Response.Cookies.Delete(nameCookies.ToString());
+                            HttpContext.Response.Cookies.Append(nameCookies.ToString(), cookies, option);
+                        } // Remember email and password
+
                         _logger.LogTrace("End login on post.");
                         return LocalRedirect(returnUrl);
                     } // If login success
@@ -157,7 +178,7 @@ namespace UMS.Areas.Identity.Pages.Account
                     }
                     else
                     {
-                        _logger.LogError("Your email or password is not valid.");
+                        _logger.LogWarning("Your email or password is not valid.");
                         ModelState.AddModelError(string.Empty, "Your email or password is not valid.");
                         // Send alert to home pages
                         TempData["ExceptionInValid"] = "InValid";
@@ -177,5 +198,85 @@ namespace UMS.Areas.Identity.Pages.Account
                 return Page();
             } // End try catch
         } // End OnPostAsync
+
+        public class StringEncryptor
+        {
+            /*
+             * Name: EncryptString
+             * Parameter: key(string), plainText(string)
+             * Description: encrypt sting with key
+             */
+            public static string EncryptString(string key, string plainText)
+            {
+                byte[] iv = new byte[16];
+                byte[] array;
+
+                using (Aes aes = Aes.Create())
+                {
+                    aes.Key = Encoding.UTF8.GetBytes(key);
+                    aes.IV = iv;
+
+                    ICryptoTransform encryptor = aes.CreateEncryptor(aes.Key, aes.IV);
+
+                    using MemoryStream memoryStream = new MemoryStream();
+                    using CryptoStream cryptoStream = new CryptoStream((Stream)memoryStream, encryptor, CryptoStreamMode.Write);
+                    using (StreamWriter streamWriter = new StreamWriter((Stream)cryptoStream))
+                    {
+                        streamWriter.Write(plainText);
+                    }
+
+                    array = memoryStream.ToArray();
+                }
+
+                return Convert.ToBase64String(array);
+            } // End EncryptString
+
+            /*
+             * Name: DecryptString
+             * Parameter: key(string), cipherText(string)
+             * Description: decrypt sting with key
+             */
+            public static string DecryptString(string key, string cipherText)
+            {
+                byte[] iv = new byte[16];
+                byte[] buffer = Convert.FromBase64String(cipherText);
+
+                using Aes aes = Aes.Create();
+                aes.Key = Encoding.UTF8.GetBytes(key);
+                aes.IV = iv;
+                ICryptoTransform decryptor = aes.CreateDecryptor(aes.Key, aes.IV);
+
+                using MemoryStream memoryStream = new MemoryStream(buffer);
+                using CryptoStream cryptoStream = new CryptoStream((Stream)memoryStream, decryptor, CryptoStreamMode.Read);
+                using StreamReader streamReader = new StreamReader((Stream)cryptoStream);
+                return streamReader.ReadToEnd();
+            } // End DecryptString
+
+            /*
+             * Name: DecryptStringToEmail
+             * Parameter: cipherText(string)
+             * Description: decrypt sting with key
+             */
+            public static string DecryptStringToEmail(string key, string cipherText)
+            {
+                string text = DecryptString(key, cipherText);
+                string t = text.Substring(text.IndexOf('%') + 1);
+                string e = t.Substring(0, t.IndexOf('%'));
+                return e;
+            } // End DecryptStringToEmail
+
+            /*
+             * Name: DecryptStringToPass
+             * Parameter: cipherText(string)
+             * Description: decrypt sting with key
+             */
+            public static string DecryptStringToPass(string key, string cipherText)
+            {
+                string text = DecryptString(key, cipherText);
+                string t = text.Substring(text.IndexOf('%') + 1);
+                string p = t.Substring(t.IndexOf('%') + 1);
+                return p;
+            } // End 
+        }
     } // End login
 }
