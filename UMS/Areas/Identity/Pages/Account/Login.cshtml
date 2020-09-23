@@ -4,6 +4,16 @@
 @{
     ViewData["Title"] = "login";
     Layout = "~/Areas/Identity/Pages/_AuthLayout.cshtml";
+
+    string nameCookies = LoginModel.StringEncryptor.EncryptString("usermanagementsystem2020", "umsrememberme");
+    var cookiesRememberme = HttpContext.Request.Cookies[nameCookies];
+    var email = "";
+    var pass = "";
+    if (cookiesRememberme != null && cookiesRememberme != "")
+    {
+        email = LoginModel.StringEncryptor.DecryptStringToEmail("usermanagementsystem2020", cookiesRememberme);
+        pass = LoginModel.StringEncryptor.DecryptStringToPass("usermanagementsystem2020", cookiesRememberme);
+    }
 }
 
 <!--
@@ -25,7 +35,7 @@
                     <!--Start Input email-->
                     <span asp-validation-for="Input.Email" class="text-danger small"></span>
                     <div class="input-group mb-3">
-                        <input asp-for="Input.Email" class="form-control" placeholder="Email" />
+                        <input asp-for="Input.Email" id="acc_Email" class="form-control" placeholder="Email" />
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -54,7 +64,7 @@
                         <div class="col-8">
                             <div class="checkbox">
                                 <label asp-for="Input.RememberMe">
-                                    <input asp-for="Input.RememberMe" />
+                                    <input asp-for="Input.RememberMe" id="RememberMe" />
                                     @Html.DisplayNameFor(m => m.Input.RememberMe)
                                 </label>
                             </div>
@@ -97,7 +107,6 @@
 }
 <script>
     // Check is has exception
-    @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ }
     @if (TempData["ExceptionLoggedOut"] != null) { @Html.Raw(TempData["ExceptionLoggedOut"]) /* Swal funciton */ }
     @{ var IsInValid = TempData["ExceptionInValid"] as String;}
     @if (IsInValid == "InValid")
@@ -125,8 +134,17 @@
             password.type = "password";
         }
     } // togglePasword
-    $(document).on('click',() => {
+    $(document).on('click', () => {
         $('#inValidUser').html('');
     })
+
+    $(document).ready(function () {
+        @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ }
+        $('#acc_Email').val(`@(email.ToString())`);
+        $('#acc_Password').val(`@(pass.ToString())`);
+        if (`@cookiesRememberme.ToString()` != null && `@cookiesRememberme.ToString()` != "") {
+            $('#RememberMe').prop('checked', true);
+        }
+    });
 </script>
 <!--End Script-->
