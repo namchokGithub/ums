@@ -140,7 +140,7 @@
     })
 
     $(document).ready(function () {
-        @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ }
+        @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ };
         $('#acc_Email').val(`@(email.ToString())`);
         $('#acc_Password').val(`@(pass.ToString())`);
         @if(cookiesRememberme != null && cookiesRememberme != "")

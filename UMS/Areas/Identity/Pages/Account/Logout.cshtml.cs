@@ -27,7 +27,7 @@ namespace UMS.Areas.Identity.Pages.Account
         {
             _signInManager = signInManager;
             _logger = logger;
-            _logger.LogDebug("Starting Log out model.");
+            _logger.LogDebug("Starting Logout model.");
         } // End constructor
 
         /*
@@ -35,30 +35,23 @@ namespace UMS.Areas.Identity.Pages.Account
          * Parameter: none
          * Description: 
          */
-        public void OnGet() { _logger.LogTrace("Log out model On get."); } // End OnGet
+        public void OnGet() { _logger.LogTrace("Logout model On get."); } // End OnGet
 
         /*
          * Name: OnPost
          * Parameter: returnUrl(String)
          * Description: For log out user
          */
-        public async Task<IActionResult> OnPost(string returnUrl = null)
+        public async Task<IActionResult> OnPost()
         {
-            _logger.LogTrace("Start Log out model On Post.");
+            _logger.LogTrace("Start Logout model On Post.");
             _logger.LogTrace("Signing out.");
             await _signInManager.SignOutAsync();
-            Response.Cookies.Delete(".AspNetCore.Identity.Application");
             _logger.LogInformation("User logged out.");
-            if (returnUrl != null)
-            {
-                _logger.LogTrace("End Log out model On Post.");
-                return LocalRedirect(returnUrl);
-            }
-            else
-            {
-                _logger.LogTrace("End Log out model On Post.");
-                return RedirectToPage();
-            }
+            Response.Cookies.Delete(".AspNetCore.Identity.Application");
+            _logger.LogTrace("Clear cookies AspNetCore Identity Application.");
+            _logger.LogTrace("End Log out model On Post.");
+            return RedirectToPage("./Login");
         } // End OnPost
     } // End LogoutModel
 }

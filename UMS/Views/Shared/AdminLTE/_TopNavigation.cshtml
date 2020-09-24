@@ -31,8 +31,7 @@
             @if (User.Identity.IsAuthenticated)
             {
                 <li class="nav-item d-none d-sm-inline-block">
-                    <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout"
-                            asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                    <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout">
                         <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
                     </form>
                 </li>

@@ -33,7 +33,6 @@
             </div>
         </div>
         <!-- /.card-header -->
-        <form>
             <div class="card-body">
                 <div class="col-md-6 offset-3">
                     <div class="form-group">
@@ -62,7 +61,6 @@
                 <button type="reset" class="float-left btn btn-default">Clear</button>
                 <button type="button" class="float-right btn btn-success" onclick="checkSearchInput()">Search</button>
             </div> <!-- /.card-footer -->
-        </form>
     </div>
     <!--End Search logs Card-->
     <!--Start table logs Card-->
@@ -226,11 +224,9 @@
     <!--End table logs by ajax Card-->
 </div>
 <!-- End content -->
-<script src="~/lib/jquery/dist/jquery-3.5.1.min.js"></script>
+<script src="~/plugins/jquery/jquery.min.js"></script>
 <script>
     $(document).ready(() => {
-        $('#DataWidget').CardWidget('collapse')
-
         // Check is has exception
         @if (ViewData["INFO"] != null) { @Html.Raw(ViewData["INFO"]) /* Swal funciton */ }
         @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ }
@@ -303,7 +299,6 @@
                         if (result['condition'] != "error") {
                             $('#logsByIndex').hide() // Hide first table
                             $('#logsByAjax').show() // Hide table for result of ajax
-                            $('#searchLogs').CardWidget('collapse') // Hide panel search
                             $('#TbLogs').empty() // Clear tbody
                             $('#showSearchLogs').DataTable().destroy() // Clear datatables
                             console.log(result.length)
