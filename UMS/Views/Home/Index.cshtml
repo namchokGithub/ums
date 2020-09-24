@@ -8,10 +8,12 @@
     ViewData["Title"] = "Home";
     Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
 }
+@using Microsoft.AspNetCore.Http.Extensions
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <a href="@Context.Request.GetEncodedUrl()">Link to myself</a>
 </div>
 
 
