@@ -35,8 +35,18 @@ namespace UMS.Areas.Identity.Pages.Account
          * Parameter: none
          * Description: 
          */
-        public void OnGet() {
+        public async void OnGet() {
             ViewData["URL"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
+            _logger.LogTrace("Signing out.");
+            await _signInManager.SignOutAsync();
+            _logger.LogInformation("User logged out.");
+
+            //Response.Cookies.Delete(".AspNetCore.Identity.Application");
+            foreach (var cookie in HttpContext.Request.Cookies)
+            {
+                Response.Cookies.Delete(cookie.Key);
+            }
+            _logger.LogTrace("Clear cookies AspNetCore Identity Application.");
             _logger.LogTrace("Logout model On get."); 
         } // End OnGet
 

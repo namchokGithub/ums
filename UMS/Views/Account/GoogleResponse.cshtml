@@ -1,6 +1,8 @@
 ﻿@{
     ViewData["Title"] = "Google Response";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    string URL = ViewData["URL"].ToString();
+    string URLHOME = ViewData["URLHOME"].ToString();
 }
 <!--
     Namespace: ~/Views/Account/GoogleResponse.cshtml
@@ -20,7 +22,7 @@
                 <br><br>
                     <h4 class="text-black-50">You do not have access to this sitesite.</h4>
                 <!-- Back to home -->
-                <form method="post" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home")">
+                <form method="post" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@URLHOME">
                     <button type="submit" class="btn btn-block btn-secondary btn-flat">Back</button>
                 </form>
             </div>

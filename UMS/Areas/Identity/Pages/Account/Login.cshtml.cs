@@ -153,7 +153,7 @@ namespace UMS.Areas.Identity.Pages.Account
                             _logger.LogInformation("Change status Inactive to active user.");
                         } // End check status
 
-                        string nameCookies = StringEncryptor.EncryptString("usermanagementsystem2020", "umsrememberme");
+                        string nameCookies = StringEncryptor.EncryptString("usermanagementsystem2020", "remembermeums");
                         if (Input.RememberMe)
                         {
                             CookieOptions option = new CookieOptions

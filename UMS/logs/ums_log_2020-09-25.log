@@ -1303,3 +1303,326 @@
 2020/09/25 11:10:58.944 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
 2020/09/25 11:10:58.944 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
 2020/09/25 11:11:05.087 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/25 11:18:41.060 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 11:18:41.340 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 11:18:41.340 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 11:18:41.349 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 11:18:41.757 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:18:41.757 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:18:41.771 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:18:41.802 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:18:48.006 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:18:48.006 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:18:48.022 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:18:48.035 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:19:46.277 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 11:19:46.538 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 11:19:46.538 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 11:19:46.538 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 11:19:46.936 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:19:46.942 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:19:46.942 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:19:46.976 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:19:53.999 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:19:54.008 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:19:54.020 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:19:55.308 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:19:55.381 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:19:57.005 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:19:57.020 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:54 | User logged out.
+2020/09/25 11:19:57.040 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:19:57.053 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:19:57.067 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:19:57.083 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:20:19.757 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:20:19.757 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:20:19.791 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:20:19.850 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:20:19.883 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:20:22.555 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:20:22.575 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:54 | User logged out.
+2020/09/25 11:20:22.604 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:20:22.604 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:20:22.631 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:20:22.645 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:20:25.503 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/25 11:21:02.804 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 11:21:03.068 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 11:21:03.068 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 11:21:03.068 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 11:21:03.478 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:21:03.478 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:21:03.488 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:21:03.523 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:21:09.265 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:21:09.273 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:21:09.273 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:21:09.287 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:21:14.036 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:21:14.053 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:21:14.053 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:21:15.253 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:21:15.302 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:21:16.459 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:21:16.473 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:54 | User logged out.
+2020/09/25 11:21:16.504 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:21:16.504 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:21:16.535 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:21:16.552 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:21:57.899 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:21:57.899 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:21:57.930 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:21:57.990 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:22:03.270 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:22:07.169 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:22:07.193 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:54 | User logged out.
+2020/09/25 11:22:07.227 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:22:07.227 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:22:07.255 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:22:07.255 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:23:08.554 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/25 11:32:54.095 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 11:32:54.313 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 11:32:54.321 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 11:32:54.321 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 11:32:54.798 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:32:54.803 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:32:54.803 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:32:54.837 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:32:56.370 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:32:56.370 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:32:56.381 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:32:57.531 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:32:57.584 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:32:58.742 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:32:58.742 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:54 | User logged out.
+2020/09/25 11:32:58.774 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:32:58.786 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:32:58.786 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:32:58.804 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:33:03.606 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:33:03.620 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:33:03.648 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:33:03.711 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:33:03.743 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:33:05.366 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:33:05.381 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:54 | User logged out.
+2020/09/25 11:33:05.413 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:33:05.413 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:33:05.431 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:33:05.446 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:33:17.117 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:33:17.117 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:33:17.132 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:33:17.182 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:33:17.208 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:33:18.905 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:33:18.916 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:54 | User logged out.
+2020/09/25 11:33:18.950 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:33:18.950 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:33:18.976 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:33:18.991 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:33:23.771 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:33:23.771 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:33:23.787 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:33:23.803 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:33:35.744 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:33:35.744 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:33:35.757 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:33:35.796 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:33:35.834 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:33:36.890 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:33:36.899 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:33:36.927 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:33:36.942 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:106 | User is authenticated.
+2020/09/25 11:33:36.942 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:33:36.975 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:33:38.715 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:33:38.723 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:54 | User logged out.
+2020/09/25 11:33:38.749 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:33:38.755 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:33:38.776 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:33:38.786 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:33:46.434 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/25 11:40:37.979 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 11:40:38.249 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 11:40:38.255 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 11:40:38.255 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 11:40:38.618 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:40:38.618 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:40:38.630 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:40:38.665 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:40:41.940 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/25 11:46:28.639 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 11:46:28.907 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 11:46:28.913 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 11:46:28.913 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 11:46:29.348 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:46:29.348 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:46:29.366 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:46:29.386 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:46:31.022 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:46:31.022 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:46:31.036 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:46:32.188 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:46:32.241 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:46:33.319 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:46:33.335 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:54 | User logged out.
+2020/09/25 11:46:33.355 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:46:33.368 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:46:33.382 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:46:33.382 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:46:35.575 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:46:35.589 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:46:35.615 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:46:35.684 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:46:35.728 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:47:51.006 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:47:52.778 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:47:56.645 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:54 | User logged out.
+2020/09/25 11:47:56.662 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:47:56.662 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:47:56.677 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:47:56.695 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:48:06.344 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:48:39.197 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 11:48:39.436 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 11:48:39.436 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 11:48:39.446 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 11:48:39.902 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:48:39.902 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:48:39.912 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:48:39.944 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:48:42.245 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:48:42.255 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:48:45.070 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:48:45.086 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:48:45.086 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:48:45.103 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:48:45.895 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:48:45.895 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:48:45.911 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:48:47.061 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:48:47.115 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:49:15.490 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:49:17.214 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:49:32.043 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:49:32.057 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:49:32.069 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:49:32.134 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:106 | User is authenticated.
+2020/09/25 11:49:32.146 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:49:32.193 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:49:44.538 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:49:45.211 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:49:48.273 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:49:56.005 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:49:56.005 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:49:56.036 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:49:56.036 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:106 | User is authenticated.
+2020/09/25 11:49:56.051 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:49:56.088 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:50:04.552 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:52:17.653 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 11:52:17.906 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 11:52:17.906 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 11:52:17.914 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 11:52:18.318 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:52:20.213 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:52:21.864 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:64 | User logged out.
+2020/09/25 11:52:21.912 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:52:21.912 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:52:21.927 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:52:21.944 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:52:25.600 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:52:25.600 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:52:25.615 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:52:26.799 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:52:26.835 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:52:27.993 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:52:29.162 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:64 | User logged out.
+2020/09/25 11:52:29.182 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:52:29.193 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:52:29.209 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:52:29.223 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:52:30.958 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:52:30.958 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:52:30.977 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:52:31.040 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:52:31.071 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:52:45.760 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:52:47.668 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:42 | User logged out.
+2020/09/25 11:52:49.976 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:52:49.976 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:52:50.006 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:52:50.021 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:52:57.773 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:52:57.773 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:52:57.801 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:52:57.839 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:52:57.869 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:53:27.842 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:53:30.560 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:42 | User logged out.
+2020/09/25 11:53:37.257 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:53:37.257 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:53:37.286 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:53:37.302 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:54:25.779 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 11:54:26.016 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 11:54:26.020 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 11:54:26.020 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 11:54:26.757 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:54:26.757 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:54:26.771 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:54:26.804 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:55:42.727 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:55:42.727 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:55:42.740 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:55:43.896 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:55:43.942 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:55:49.649 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:55:49.649 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:42 | User logged out.
+2020/09/25 11:55:50.946 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:55:50.946 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:55:50.974 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:55:50.991 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:55:55.242 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:55:55.242 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:55:55.254 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:55:55.272 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:55:57.802 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:55:57.802 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:55:57.817 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:55:57.836 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:56:00.671 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:56:00.680 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:56:00.694 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:56:00.759 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:56:00.787 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:56:15.334 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/25 12:01:41.759 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 12:01:41.999 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 12:01:41.999 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 12:01:42.009 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 12:01:42.457 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 12:01:44.315 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 12:01:44.335 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:64 | User logged out.
+2020/09/25 12:01:44.381 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:01:44.396 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:01:44.396 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:01:44.421 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:01:45.724 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:01:45.724 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:01:49.326 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:01:49.336 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:01:49.350 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:197 | Get external login info.
+2020/09/25 12:01:49.350 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:204 | Getting external login and sign in.
+2020/09/25 12:01:50.525 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:206 | Result: Succeeded
+2020/09/25 12:01:50.587 [INFO] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:219 | login Successfully.
+2020/09/25 12:01:50.631 [INFO] [UMS.Controllers.HomeController] [60160169@go.buu.ac.th] Index:HomeController.cs:60 | Welcome 60160169@go.buu.ac.th to UMS.
+2020/09/25 12:01:53.166 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [60160169@go.buu.ac.th] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 12:01:53.177 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [60160169@go.buu.ac.th] Logout.cshtml.cs:64 | User logged out.
+2020/09/25 12:01:53.193 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:01:53.210 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:01:53.224 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:01:53.240 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:02:11.759 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...

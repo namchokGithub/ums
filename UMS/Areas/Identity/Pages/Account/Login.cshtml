@@ -3,9 +3,9 @@
 @using Microsoft.AspNetCore.Http.Extensions
 @{
     ViewData["Title"] = "login";
-    string URL = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
+    string URL = ViewData["URL"].ToString();
     Layout = "~/Areas/Identity/Pages/_AuthLayout.cshtml";
-    string nameCookies = LoginModel.StringEncryptor.EncryptString("usermanagementsystem2020", "umsrememberme");
+    string nameCookies = LoginModel.StringEncryptor.EncryptString("usermanagementsystem2020", "remembermeums");
     var cookiesRememberme = "none";
     cookiesRememberme = HttpContext.Request.Cookies[nameCookies.ToString()];
     var email = "";

@@ -1,5 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Access Denied";
+    string URL = ViewData["URLLOGOUT"].ToString();
 }
 @model ErrorViewModel
 <!--
@@ -27,9 +28,7 @@
                     </p>
                 }
                 <!-- Back to home -->
-                <form method="post" asp-action="Index">
-                    <button type="submit" class="btn btn-block btn-secondary btn-flat">Back</button>
-                </form>
+                <a href="@URL" class="btn btn-block btn-secondary btn-flat">Back</a>
             </div>
             <!--End Card body-->
         </div>

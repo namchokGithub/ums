@@ -101,7 +101,7 @@ namespace UMS.Controllers
                         {
                             _logger.LogInformation("Logged In.");
                             _logger.LogTrace("End Input Model.");
-                            return Redirect(login.ReturnUrl ?? "/");
+                            return Redirect(login.ReturnUrl ?? $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/");
                         } // If logged in
                     }
                     Console.WriteLine("Login Failed: Invalid Email or password.");
@@ -147,6 +147,8 @@ namespace UMS.Controllers
          */
         public IActionResult AccessDenied()
         {
+            ViewData["URL"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
+            ViewData["URLHOME"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Home";
             _logger.LogWarning("Access Denied.");
             return View();
         } // End AccessDenied
@@ -189,6 +191,8 @@ namespace UMS.Controllers
             try
             {
                 _logger.LogTrace("Start Google Response.");
+                ViewData["URL"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
+                ViewData["URLHOME"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Home";
                 ExternalLoginInfo info = await _signInManager.GetExternalLoginInfoAsync();
                 _logger.LogDebug("Get external login info.");
                 if (info == null)
@@ -268,8 +272,8 @@ namespace UMS.Controllers
                                         confirmButtonText: 'Login'
                                     }).then((res) => {
                                         console.log('Confirmed')
-                                        window.location.href = '/'
-                                    })";
+                                        window.location.href = '"+ $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Login" 
+                                        + "'})";
                     TempData["Exception"] = message;
                     _logger.LogTrace("End Google Response.");
                     return View();
@@ -323,6 +327,8 @@ namespace UMS.Controllers
                 _logger.LogTrace("Start Facebook Response.");
                 _logger.LogDebug("Getting user info.");
                 ExternalLoginInfo info = await _signInManager.GetExternalLoginInfoAsync();
+                ViewData["URL"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
+                ViewData["URLHOME"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Home";
                 if (info == null)
                 {
                     _logger.LogWarning("User info is null.");
@@ -402,8 +408,8 @@ namespace UMS.Controllers
                                         confirmButtonText: 'Login'
                                     }).then((res) => {
                                         console.log('Confirmed')
-                                        window.location.href = '/'
-                                    })";
+                                        window.location.href = '" + $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Login"
+                                        + "'})";
                     TempData["Exception"] = message;
                     _logger.LogTrace("End Facebook Response.");
                     return View();
@@ -455,6 +461,8 @@ namespace UMS.Controllers
             try
             {
                 _logger.LogTrace("Start Microsoft Response.");
+                ViewData["URL"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
+                ViewData["URLHOME"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Home";
                 ExternalLoginInfo info = await _signInManager.GetExternalLoginInfoAsync();
                 _logger.LogDebug("Get external login.");
                 if (info == null)
@@ -537,8 +545,8 @@ namespace UMS.Controllers
                                         confirmButtonText: 'Login'
                                     }).then((res) => {
                                         console.log('Confirmed')
-                                        window.location.href = '/'
-                                    })";
+                                        window.location.href = '" + $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Login"
+                                        + "'})";
                     TempData["Exception"] = message;
                     _logger.LogTrace("End Microsoft Response.");
                     return View();

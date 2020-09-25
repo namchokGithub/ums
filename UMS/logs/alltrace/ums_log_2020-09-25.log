@@ -3363,3 +3363,1161 @@
 2020/09/25 11:10:58.944 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
 2020/09/25 11:10:58.961 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
 2020/09/25 11:11:05.087 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/25 11:18:39.922 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/25 11:18:41.060 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 11:18:41.340 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 11:18:41.340 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 11:18:41.349 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 11:18:41.744 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:18:41.757 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:18:41.757 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:18:41.757 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:18:41.757 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:18:41.771 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:18:41.771 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:18:41.771 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:18:41.771 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:18:41.793 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:18:41.793 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:18:41.802 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:18:41.802 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:18:48.006 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:18:48.006 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:18:48.006 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:18:48.006 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:18:48.006 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:18:48.022 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:18:48.022 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:18:48.022 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:18:48.022 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:18:48.022 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:18:48.022 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:18:48.035 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:18:48.035 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:19:45.096 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/25 11:19:46.277 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 11:19:46.538 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 11:19:46.538 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 11:19:46.538 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 11:19:46.924 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:19:46.936 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:19:46.942 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:19:46.942 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:19:46.942 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:19:46.942 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:19:46.942 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:19:46.942 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:19:46.942 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:19:46.976 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:19:46.976 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:19:46.976 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:19:46.990 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:19:53.999 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:19:53.999 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:19:54.008 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:19:54.008 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:19:54.008 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:19:54.008 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:19:54.008 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:19:54.020 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:19:54.020 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:19:54.044 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:140 | Start login on post.
+2020/09/25 11:19:54.044 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:144 | Signing in with password.
+2020/09/25 11:19:54.422 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:76 | Creating applications user models.
+2020/09/25 11:19:54.427 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:84 | Creating Identity models.
+2020/09/25 11:19:54.427 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:108 | Creating log models.
+2020/09/25 11:19:54.427 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:110 | End creating on model.
+2020/09/25 11:19:55.308 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:19:55.344 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:171 | End login on post.
+2020/09/25 11:19:55.360 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:19:55.372 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:19:55.372 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:19:55.372 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:19:55.372 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/25 11:19:55.381 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:19:55.381 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/25 11:19:55.381 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:68 | End Index.
+2020/09/25 11:19:57.005 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:19:57.005 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:19:57.005 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:50 | Start Logout model On Post.
+2020/09/25 11:19:57.020 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:52 | Signing out.
+2020/09/25 11:19:57.020 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:54 | User logged out.
+2020/09/25 11:19:57.020 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:61 | Clear cookies AspNetCore Identity Application.
+2020/09/25 11:19:57.020 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:63 | End Log out model On Post.
+2020/09/25 11:19:57.040 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:19:57.040 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:19:57.053 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:19:57.053 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:19:57.053 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:19:57.053 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:19:57.053 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:19:57.067 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:19:57.067 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:19:57.067 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:19:57.083 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:19:57.083 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:19:57.083 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:20:19.753 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:20:19.757 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:20:19.757 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:20:19.757 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:20:19.775 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:20:19.775 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:20:19.775 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:20:19.775 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:20:19.791 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:20:19.791 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:140 | Start login on post.
+2020/09/25 11:20:19.791 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:144 | Signing in with password.
+2020/09/25 11:20:19.850 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:20:19.850 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:171 | End login on post.
+2020/09/25 11:20:19.871 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:20:19.871 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:20:19.883 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:20:19.883 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:20:19.883 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/25 11:20:19.883 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:20:19.896 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/25 11:20:19.896 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:68 | End Index.
+2020/09/25 11:20:22.555 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:20:22.555 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:20:22.555 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:50 | Start Logout model On Post.
+2020/09/25 11:20:22.575 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:52 | Signing out.
+2020/09/25 11:20:22.575 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:54 | User logged out.
+2020/09/25 11:20:22.586 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:61 | Clear cookies AspNetCore Identity Application.
+2020/09/25 11:20:22.586 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:63 | End Log out model On Post.
+2020/09/25 11:20:22.604 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:20:22.604 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:20:22.604 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:20:22.616 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:20:22.616 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:20:22.616 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:20:22.631 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:20:22.631 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:20:22.631 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:20:22.631 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:20:22.645 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:20:22.645 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:20:22.645 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:20:25.503 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/25 11:21:01.634 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/25 11:21:02.804 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 11:21:03.068 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 11:21:03.068 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 11:21:03.068 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 11:21:03.466 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:21:03.478 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:21:03.478 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:21:03.488 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:21:03.488 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:21:03.488 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:21:03.488 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:21:03.488 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:21:03.488 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:21:03.514 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:21:03.514 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:21:03.523 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:21:03.523 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:21:09.265 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:21:09.265 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:21:09.273 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:21:09.273 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:21:09.273 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:21:09.273 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:21:09.273 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:21:09.273 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:21:09.273 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:21:09.287 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:21:09.287 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:21:09.287 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:21:09.287 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:21:14.036 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:21:14.036 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:21:14.053 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:21:14.053 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:21:14.053 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:21:14.053 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:21:14.053 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:21:14.053 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:21:14.053 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:21:14.083 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:140 | Start login on post.
+2020/09/25 11:21:14.083 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:144 | Signing in with password.
+2020/09/25 11:21:14.409 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:76 | Creating applications user models.
+2020/09/25 11:21:14.413 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:84 | Creating Identity models.
+2020/09/25 11:21:14.413 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:108 | Creating log models.
+2020/09/25 11:21:14.413 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:110 | End creating on model.
+2020/09/25 11:21:15.253 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:21:15.274 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:171 | End login on post.
+2020/09/25 11:21:15.291 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:21:15.302 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:21:15.302 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:21:15.302 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:21:15.302 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/25 11:21:15.302 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:21:15.317 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/25 11:21:15.317 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:68 | End Index.
+2020/09/25 11:21:16.459 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:21:16.459 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:21:16.473 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:50 | Start Logout model On Post.
+2020/09/25 11:21:16.473 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:52 | Signing out.
+2020/09/25 11:21:16.473 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:54 | User logged out.
+2020/09/25 11:21:16.473 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:61 | Clear cookies AspNetCore Identity Application.
+2020/09/25 11:21:16.492 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:63 | End Log out model On Post.
+2020/09/25 11:21:16.504 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:21:16.504 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:21:16.504 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:21:16.504 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:21:16.524 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:21:16.524 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:21:16.524 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:21:16.535 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:21:16.535 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:21:16.535 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:21:16.535 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:21:16.552 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:21:16.552 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:21:57.899 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:21:57.899 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:21:57.899 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:21:57.912 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:21:57.912 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:21:57.912 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:21:57.912 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:21:57.912 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:21:57.930 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:21:57.930 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:140 | Start login on post.
+2020/09/25 11:21:57.930 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:144 | Signing in with password.
+2020/09/25 11:21:57.990 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:22:03.246 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:171 | End login on post.
+2020/09/25 11:22:03.260 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:22:03.260 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:22:03.260 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:22:03.260 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:22:03.270 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/25 11:22:03.270 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:22:03.336 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/25 11:22:03.336 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:68 | End Index.
+2020/09/25 11:22:07.169 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:22:07.169 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:22:07.185 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:50 | Start Logout model On Post.
+2020/09/25 11:22:07.185 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:52 | Signing out.
+2020/09/25 11:22:07.193 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:54 | User logged out.
+2020/09/25 11:22:07.193 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:61 | Clear cookies AspNetCore Identity Application.
+2020/09/25 11:22:07.207 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:63 | End Log out model On Post.
+2020/09/25 11:22:07.207 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:22:07.227 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:22:07.227 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:22:07.227 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:22:07.247 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:22:07.247 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:22:07.247 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:22:07.247 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:22:07.255 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:22:07.255 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:22:07.255 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:22:07.255 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:22:07.255 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:23:08.554 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/25 11:32:52.985 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/25 11:32:54.095 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 11:32:54.313 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 11:32:54.321 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 11:32:54.321 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 11:32:54.785 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:32:54.798 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:32:54.803 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:32:54.803 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:32:54.803 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:32:54.803 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:32:54.803 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:32:54.803 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:32:54.803 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:32:54.837 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:32:54.837 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:32:54.837 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:32:54.851 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:32:56.370 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:32:56.370 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:32:56.370 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:32:56.381 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:32:56.381 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:32:56.381 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:32:56.381 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:32:56.381 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:32:56.381 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:32:56.412 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:140 | Start login on post.
+2020/09/25 11:32:56.412 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:144 | Signing in with password.
+2020/09/25 11:32:56.743 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:76 | Creating applications user models.
+2020/09/25 11:32:56.743 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:84 | Creating Identity models.
+2020/09/25 11:32:56.757 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:108 | Creating log models.
+2020/09/25 11:32:56.757 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:110 | End creating on model.
+2020/09/25 11:32:57.531 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:32:57.550 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:171 | End login on post.
+2020/09/25 11:32:57.565 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:32:57.576 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:32:57.576 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:32:57.576 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:32:57.576 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/25 11:32:57.584 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:32:57.584 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/25 11:32:57.584 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:68 | End Index.
+2020/09/25 11:32:58.734 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:32:58.742 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:32:58.742 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:50 | Start Logout model On Post.
+2020/09/25 11:32:58.742 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:52 | Signing out.
+2020/09/25 11:32:58.742 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:54 | User logged out.
+2020/09/25 11:32:58.757 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:61 | Clear cookies AspNetCore Identity Application.
+2020/09/25 11:32:58.757 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:63 | End Log out model On Post.
+2020/09/25 11:32:58.774 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:32:58.774 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:32:58.786 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:32:58.786 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:32:58.786 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:32:58.786 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:32:58.786 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:32:58.786 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:32:58.786 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:32:58.804 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:32:58.804 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:32:58.804 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:32:58.804 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:33:03.606 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:33:03.606 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:33:03.620 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:33:03.620 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:33:03.634 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:33:03.634 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:33:03.634 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:33:03.648 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:33:03.648 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:33:03.648 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:140 | Start login on post.
+2020/09/25 11:33:03.664 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:144 | Signing in with password.
+2020/09/25 11:33:03.711 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:33:03.711 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:171 | End login on post.
+2020/09/25 11:33:03.733 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:33:03.733 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:33:03.743 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:33:03.743 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:33:03.743 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/25 11:33:03.743 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:33:03.754 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/25 11:33:03.754 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:68 | End Index.
+2020/09/25 11:33:05.361 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:33:05.366 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:33:05.366 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:50 | Start Logout model On Post.
+2020/09/25 11:33:05.381 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:52 | Signing out.
+2020/09/25 11:33:05.381 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:54 | User logged out.
+2020/09/25 11:33:05.381 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:61 | Clear cookies AspNetCore Identity Application.
+2020/09/25 11:33:05.395 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:63 | End Log out model On Post.
+2020/09/25 11:33:05.413 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:33:05.413 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:33:05.413 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:33:05.413 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:33:05.431 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:33:05.431 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:33:05.431 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:33:05.431 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:33:05.431 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:33:05.446 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:33:05.446 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:33:05.446 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:33:05.446 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:33:17.113 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:33:17.117 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:33:17.117 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:33:17.117 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:33:17.117 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:33:17.132 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:33:17.132 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:33:17.132 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:33:17.132 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:33:17.148 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:140 | Start login on post.
+2020/09/25 11:33:17.148 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:144 | Signing in with password.
+2020/09/25 11:33:17.182 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:33:17.182 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:171 | End login on post.
+2020/09/25 11:33:17.200 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:33:17.200 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:33:17.200 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:33:17.200 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:33:17.208 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/25 11:33:17.208 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:33:17.208 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/25 11:33:17.208 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:68 | End Index.
+2020/09/25 11:33:18.905 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:33:18.905 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:33:18.916 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:50 | Start Logout model On Post.
+2020/09/25 11:33:18.916 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:52 | Signing out.
+2020/09/25 11:33:18.916 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:54 | User logged out.
+2020/09/25 11:33:18.927 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:61 | Clear cookies AspNetCore Identity Application.
+2020/09/25 11:33:18.927 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:63 | End Log out model On Post.
+2020/09/25 11:33:18.950 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:33:18.950 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:33:18.950 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:33:18.960 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:33:18.960 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:33:18.960 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:33:18.960 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:33:18.976 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:33:18.976 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:33:18.976 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:33:18.976 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:33:18.991 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:33:18.991 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:33:23.768 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:33:23.771 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:33:23.771 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:33:23.771 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:33:23.771 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:33:23.787 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:33:23.787 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:33:23.787 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:33:23.787 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:33:23.803 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:33:23.803 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:33:23.803 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:33:23.803 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:33:35.738 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:33:35.744 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:33:35.744 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:33:35.744 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:33:35.744 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:33:35.757 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:33:35.757 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:33:35.757 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:33:35.757 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:33:35.757 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:140 | Start login on post.
+2020/09/25 11:33:35.775 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:144 | Signing in with password.
+2020/09/25 11:33:35.796 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:33:35.796 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:171 | End login on post.
+2020/09/25 11:33:35.815 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:33:35.815 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:33:35.824 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:33:35.824 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:33:35.824 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/25 11:33:35.834 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:33:35.834 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/25 11:33:35.834 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:68 | End Index.
+2020/09/25 11:33:36.890 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:33:36.890 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:33:36.899 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:33:36.899 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:33:36.915 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:33:36.915 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:33:36.927 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:33:36.927 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:33:36.927 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:33:36.927 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:33:36.942 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:106 | User is authenticated.
+2020/09/25 11:33:36.942 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:33:36.942 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:33:36.942 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:33:36.967 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:33:36.975 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:33:36.975 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:33:36.975 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:33:36.975 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/25 11:33:36.975 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:33:36.991 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/25 11:33:36.991 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:68 | End Index.
+2020/09/25 11:33:38.715 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:33:38.715 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:33:38.723 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:50 | Start Logout model On Post.
+2020/09/25 11:33:38.723 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:52 | Signing out.
+2020/09/25 11:33:38.723 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:54 | User logged out.
+2020/09/25 11:33:38.723 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:61 | Clear cookies AspNetCore Identity Application.
+2020/09/25 11:33:38.723 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:63 | End Log out model On Post.
+2020/09/25 11:33:38.749 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:33:38.749 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:33:38.755 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:33:38.755 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:33:38.755 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:33:38.755 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:33:38.755 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:33:38.776 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:33:38.776 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:33:38.776 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:33:38.786 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:33:38.786 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:33:38.786 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:33:46.434 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/25 11:40:36.761 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/25 11:40:37.979 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 11:40:38.249 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 11:40:38.255 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 11:40:38.255 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 11:40:38.606 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:40:38.618 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:40:38.618 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:40:38.618 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:40:38.630 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:40:38.630 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:40:38.630 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:40:38.630 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:40:38.630 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:40:38.656 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:40:38.656 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:40:38.665 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:40:38.665 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:40:41.940 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/25 11:46:27.480 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/25 11:46:28.639 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 11:46:28.907 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 11:46:28.913 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 11:46:28.913 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 11:46:29.333 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:46:29.348 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:46:29.348 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:46:29.348 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:46:29.348 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:46:29.348 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:46:29.348 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:46:29.366 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:46:29.366 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:46:29.386 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:46:29.386 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:46:29.386 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:46:29.399 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:46:31.019 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:46:31.022 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:46:31.022 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:46:31.022 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:46:31.022 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:46:31.022 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:46:31.036 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:46:31.036 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:46:31.036 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:46:31.060 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:140 | Start login on post.
+2020/09/25 11:46:31.060 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:144 | Signing in with password.
+2020/09/25 11:46:31.391 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:76 | Creating applications user models.
+2020/09/25 11:46:31.396 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:84 | Creating Identity models.
+2020/09/25 11:46:31.396 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:108 | Creating log models.
+2020/09/25 11:46:31.396 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:110 | End creating on model.
+2020/09/25 11:46:32.188 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:46:32.207 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:171 | End login on post.
+2020/09/25 11:46:32.224 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:46:32.224 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:46:32.224 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:46:32.224 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:46:32.241 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/25 11:46:32.241 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:46:32.241 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/25 11:46:32.241 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:68 | End Index.
+2020/09/25 11:46:33.319 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:46:33.319 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:46:33.319 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:50 | Start Logout model On Post.
+2020/09/25 11:46:33.335 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:52 | Signing out.
+2020/09/25 11:46:33.335 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:54 | User logged out.
+2020/09/25 11:46:33.335 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:61 | Clear cookies AspNetCore Identity Application.
+2020/09/25 11:46:33.335 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:63 | End Log out model On Post.
+2020/09/25 11:46:33.355 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:46:33.355 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:46:33.368 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:46:33.368 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:46:33.368 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:46:33.368 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:46:33.368 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:46:33.368 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:46:33.382 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:46:33.382 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:46:33.382 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:46:33.382 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:46:33.382 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:46:35.575 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:46:35.575 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:46:35.589 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:46:35.589 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:46:35.589 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:46:35.608 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:46:35.608 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:46:35.615 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:46:35.615 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:46:35.615 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:140 | Start login on post.
+2020/09/25 11:46:35.630 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:144 | Signing in with password.
+2020/09/25 11:46:35.684 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:46:35.692 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:171 | End login on post.
+2020/09/25 11:46:35.708 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:46:35.708 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:46:35.708 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:46:35.708 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:46:35.708 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/25 11:46:35.728 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:46:35.728 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/25 11:46:35.728 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:68 | End Index.
+2020/09/25 11:46:39.545 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:46:44.375 [TRACE] [UMS.Data.AuthDbContext]  Error:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:46:44.382 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Error:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:46:44.382 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Error:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:46:44.382 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Error:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:46:48.813 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:47:38.617 [TRACE] [UMS.Data.AuthDbContext]  Error:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:47:38.617 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Error:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:47:38.617 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Error:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:47:38.632 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Error:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:47:40.382 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:47:48.499 [TRACE] [UMS.Data.AuthDbContext]  Error:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:47:48.499 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Error:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:47:48.508 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Error:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:47:48.508 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Error:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:47:50.999 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:47:50.999 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:47:51.006 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:47:51.006 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:47:51.006 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/25 11:47:51.006 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:47:51.024 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/25 11:47:51.024 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:68 | End Index.
+2020/09/25 11:47:52.778 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:47:52.778 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:47:52.787 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:50 | Start Logout model On Post.
+2020/09/25 11:47:56.642 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:52 | Signing out.
+2020/09/25 11:47:56.645 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:54 | User logged out.
+2020/09/25 11:47:56.645 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:61 | Clear cookies AspNetCore Identity Application.
+2020/09/25 11:47:56.645 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:63 | End Log out model On Post.
+2020/09/25 11:47:56.662 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:47:56.662 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:47:56.662 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:47:56.662 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:47:56.677 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:47:56.677 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:47:56.677 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:47:56.677 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:47:56.677 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:47:56.695 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:47:56.695 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:47:56.695 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:47:56.710 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:48:06.344 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:48:06.344 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:48:07.843 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:40 | Logout model On get.
+2020/09/25 11:48:38.005 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/25 11:48:39.197 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 11:48:39.436 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 11:48:39.436 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 11:48:39.446 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 11:48:39.889 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:48:39.902 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:48:39.902 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:48:39.912 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:48:39.912 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:48:39.912 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:48:39.912 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:48:39.912 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:48:39.912 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:48:39.941 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:48:39.944 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:48:39.944 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:48:39.944 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:48:42.245 [TRACE] [UMS.Data.AuthDbContext]  GoogleLogin:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:48:42.245 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:48:42.255 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:48:42.255 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:48:42.255 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:48:42.255 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:48:42.255 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:48:42.255 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:48:42.271 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 11:48:42.271 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:166 | Start Google Login.
+2020/09/25 11:48:42.271 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:169 | Get properties from google.
+2020/09/25 11:48:42.271 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:170 | End Google Login.
+2020/09/25 11:48:45.070 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:48:45.070 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:48:45.086 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:48:45.086 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:48:45.086 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:48:45.086 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:48:45.086 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:48:45.086 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:48:45.086 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:48:45.103 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:48:45.103 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:48:45.103 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:48:45.103 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:48:45.895 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:48:45.895 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:48:45.895 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:48:45.895 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:48:45.895 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:48:45.895 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:48:45.895 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:48:45.911 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:48:45.911 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:48:45.930 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:140 | Start login on post.
+2020/09/25 11:48:45.930 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:144 | Signing in with password.
+2020/09/25 11:48:46.261 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:76 | Creating applications user models.
+2020/09/25 11:48:46.261 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:84 | Creating Identity models.
+2020/09/25 11:48:46.281 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:108 | Creating log models.
+2020/09/25 11:48:46.281 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:110 | End creating on model.
+2020/09/25 11:48:47.061 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:48:47.081 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:171 | End login on post.
+2020/09/25 11:48:47.098 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:48:47.115 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:48:47.115 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:48:47.115 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:48:47.115 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/25 11:48:47.115 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:48:47.115 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/25 11:48:47.138 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:68 | End Index.
+2020/09/25 11:48:55.882 [TRACE] [UMS.Data.AuthDbContext]  Error:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:48:55.882 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Error:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:48:55.896 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Error:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:48:55.896 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Error:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:49:04.681 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:49:14.645 [TRACE] [UMS.Data.AuthDbContext]  Error:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:49:14.649 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Error:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:49:14.649 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Error:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:49:14.649 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Error:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:49:15.476 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:49:15.476 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:49:15.490 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:49:15.490 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:49:15.490 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/25 11:49:15.490 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:49:15.506 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/25 11:49:15.506 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:68 | End Index.
+2020/09/25 11:49:17.214 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:49:17.214 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:49:29.830 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:40 | Logout model On get.
+2020/09/25 11:49:32.043 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:49:32.043 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:49:32.057 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:49:32.057 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:49:32.057 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:49:32.069 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:49:32.069 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:49:32.069 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:49:32.069 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:49:32.134 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:49:32.134 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:106 | User is authenticated.
+2020/09/25 11:49:32.146 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:49:32.146 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:49:32.146 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:49:32.176 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:49:32.180 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:49:32.180 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:49:32.180 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:49:32.180 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/25 11:49:32.193 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:49:32.193 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/25 11:49:32.193 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:68 | End Index.
+2020/09/25 11:49:44.519 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:49:44.529 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:49:44.529 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:49:44.529 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:49:44.529 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/25 11:49:44.538 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:49:44.538 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/25 11:49:44.538 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:68 | End Index.
+2020/09/25 11:49:45.192 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:49:45.192 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:49:45.192 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:49:45.192 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:49:45.192 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/25 11:49:45.211 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:49:45.211 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/25 11:49:45.211 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:68 | End Index.
+2020/09/25 11:49:48.273 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:49:48.273 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:49:51.167 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:40 | Logout model On get.
+2020/09/25 11:49:56.001 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:49:56.005 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:49:56.005 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:49:56.005 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:49:56.024 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:49:56.024 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:49:56.024 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:49:56.024 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:49:56.036 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:49:56.036 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:49:56.036 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:106 | User is authenticated.
+2020/09/25 11:49:56.051 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:49:56.051 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:49:56.051 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel] [usermanagement2020@gmail.com] Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:49:56.080 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:49:56.080 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:49:56.088 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:49:56.088 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:49:56.088 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/25 11:49:56.088 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:49:56.102 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/25 11:49:56.102 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:68 | End Index.
+2020/09/25 11:50:04.548 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:50:04.552 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:50:07.467 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:40 | Logout model On get.
+2020/09/25 11:52:16.460 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/25 11:52:17.653 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 11:52:17.906 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 11:52:17.906 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 11:52:17.914 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 11:52:18.273 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:52:18.310 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:52:18.310 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:52:18.310 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:52:18.318 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/25 11:52:18.318 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:52:18.318 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/25 11:52:18.318 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:68 | End Index.
+2020/09/25 11:52:20.190 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:52:20.213 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:52:20.213 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:60 | Start Logout model On Post.
+2020/09/25 11:52:21.858 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:62 | Signing out.
+2020/09/25 11:52:21.864 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:64 | User logged out.
+2020/09/25 11:52:21.864 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:71 | Clear cookies AspNetCore Identity Application.
+2020/09/25 11:52:21.864 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:73 | End Log out model On Post.
+2020/09/25 11:52:21.903 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:52:21.912 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:52:21.912 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:52:21.912 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:52:21.912 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:52:21.912 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:52:21.927 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:52:21.927 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:52:21.927 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:52:21.944 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:52:21.944 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:52:21.944 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:52:21.944 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:52:25.597 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:52:25.600 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:52:25.600 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:52:25.600 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:52:25.600 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:52:25.600 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:52:25.600 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:52:25.600 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:52:25.615 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:52:25.640 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:140 | Start login on post.
+2020/09/25 11:52:25.640 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:144 | Signing in with password.
+2020/09/25 11:52:25.962 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:76 | Creating applications user models.
+2020/09/25 11:52:25.962 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:84 | Creating Identity models.
+2020/09/25 11:52:25.978 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:108 | Creating log models.
+2020/09/25 11:52:25.978 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:110 | End creating on model.
+2020/09/25 11:52:26.799 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:52:26.819 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:171 | End login on post.
+2020/09/25 11:52:26.835 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:52:26.835 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:52:26.835 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:52:26.835 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:52:26.835 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/25 11:52:26.835 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:52:26.850 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/25 11:52:26.850 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:68 | End Index.
+2020/09/25 11:52:27.979 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:52:27.993 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:52:27.993 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:60 | Start Logout model On Post.
+2020/09/25 11:52:29.157 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:62 | Signing out.
+2020/09/25 11:52:29.162 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:64 | User logged out.
+2020/09/25 11:52:29.162 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:71 | Clear cookies AspNetCore Identity Application.
+2020/09/25 11:52:29.162 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:73 | End Log out model On Post.
+2020/09/25 11:52:29.182 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:52:29.182 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:52:29.193 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:52:29.193 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:52:29.193 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:52:29.193 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:52:29.209 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:52:29.209 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:52:29.209 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:52:29.209 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:52:29.223 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:52:29.223 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:52:29.223 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:52:30.955 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:52:30.958 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:52:30.958 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:52:30.958 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:52:30.958 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:52:30.958 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:52:30.977 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:52:30.977 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:52:30.977 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:52:30.989 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:140 | Start login on post.
+2020/09/25 11:52:30.989 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:144 | Signing in with password.
+2020/09/25 11:52:31.040 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:52:31.040 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:171 | End login on post.
+2020/09/25 11:52:31.058 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:52:31.058 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:52:31.058 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:52:31.071 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:52:31.071 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/25 11:52:31.071 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:52:31.071 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/25 11:52:31.086 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:68 | End Index.
+2020/09/25 11:52:37.084 [TRACE] [UMS.Data.AuthDbContext]  Error:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:52:37.084 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Error:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:52:37.084 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Error:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:52:37.101 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Error:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:52:39.154 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:52:45.760 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:52:45.760 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:52:47.668 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:40 | Signing out.
+2020/09/25 11:52:47.668 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:42 | User logged out.
+2020/09/25 11:52:47.678 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:49 | Clear cookies AspNetCore Identity Application.
+2020/09/25 11:52:47.678 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:50 | Logout model On get.
+2020/09/25 11:52:49.971 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:52:49.976 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:52:49.976 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:52:49.976 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:52:49.990 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:52:49.990 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:52:49.990 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:52:49.990 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:52:50.006 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:52:50.006 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:52:50.006 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:52:50.021 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:52:50.021 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:52:57.769 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:52:57.773 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:52:57.773 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:52:57.773 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:52:57.787 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:52:57.787 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:52:57.787 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:52:57.787 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:52:57.801 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:52:57.801 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:140 | Start login on post.
+2020/09/25 11:52:57.801 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:144 | Signing in with password.
+2020/09/25 11:52:57.839 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:52:57.852 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:171 | End login on post.
+2020/09/25 11:52:57.852 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:52:57.869 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:52:57.869 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:52:57.869 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:52:57.869 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/25 11:52:57.869 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:52:57.884 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/25 11:52:57.884 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:68 | End Index.
+2020/09/25 11:53:01.874 [TRACE] [UMS.Data.AuthDbContext]  Error:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:53:01.874 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Error:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:53:01.887 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Error:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:53:01.887 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Error:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:53:07.537 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:53:27.842 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:53:27.842 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:53:30.519 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:40 | Signing out.
+2020/09/25 11:53:30.560 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:42 | User logged out.
+2020/09/25 11:53:30.560 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:49 | Clear cookies AspNetCore Identity Application.
+2020/09/25 11:53:30.569 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:50 | Logout model On get.
+2020/09/25 11:53:37.254 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:53:37.257 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:53:37.257 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:53:37.257 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:53:37.257 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:53:37.276 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:53:37.276 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:53:37.276 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:53:37.286 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:53:37.286 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:53:37.286 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:53:37.302 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:53:37.302 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:54:24.630 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/25 11:54:25.779 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 11:54:26.016 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 11:54:26.020 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 11:54:26.020 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 11:54:26.744 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:54:26.757 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:54:26.757 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:54:26.757 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:54:26.757 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:54:26.771 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:54:26.771 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:54:26.771 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:54:26.771 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:54:26.795 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:54:26.795 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:54:26.804 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:54:26.804 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:55:42.720 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:55:42.727 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:55:42.727 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:55:42.727 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:55:42.727 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:55:42.740 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:55:42.740 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:55:42.740 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:55:42.740 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:55:42.766 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:140 | Start login on post.
+2020/09/25 11:55:42.766 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:144 | Signing in with password.
+2020/09/25 11:55:43.092 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:76 | Creating applications user models.
+2020/09/25 11:55:43.092 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:84 | Creating Identity models.
+2020/09/25 11:55:43.106 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:108 | Creating log models.
+2020/09/25 11:55:43.106 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:110 | End creating on model.
+2020/09/25 11:55:43.896 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:55:43.914 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:171 | End login on post.
+2020/09/25 11:55:43.931 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:55:43.942 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:55:43.942 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:55:43.942 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:55:43.942 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/25 11:55:43.942 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:55:43.942 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/25 11:55:43.957 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:68 | End Index.
+2020/09/25 11:55:48.259 [TRACE] [UMS.Data.AuthDbContext]  Error:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:55:48.259 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Error:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:55:48.270 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Error:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:55:48.270 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Error:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:55:49.636 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:55:49.649 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 11:55:49.649 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:40 | Signing out.
+2020/09/25 11:55:49.649 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:42 | User logged out.
+2020/09/25 11:55:49.664 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:49 | Clear cookies AspNetCore Identity Application.
+2020/09/25 11:55:49.664 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:50 | Logout model On get.
+2020/09/25 11:55:50.941 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:55:50.946 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:55:50.946 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:55:50.946 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:55:50.959 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:55:50.959 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:55:50.959 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:55:50.974 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:55:50.974 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:55:50.974 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:55:50.991 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:55:50.991 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:55:50.991 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:55:55.239 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:55:55.242 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:55:55.242 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:55:55.242 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:55:55.254 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:55:55.254 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:55:55.254 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:55:55.254 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:55:55.254 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:55:55.254 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:55:55.272 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:55:55.272 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:55:55.272 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:55:57.802 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:55:57.802 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:55:57.802 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:55:57.802 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:55:57.817 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:55:57.817 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:55:57.817 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:55:57.817 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:55:57.817 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:55:57.836 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 11:55:57.836 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 11:55:57.836 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 11:55:57.836 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 11:56:00.671 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:56:00.671 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 11:56:00.680 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 11:56:00.680 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 11:56:00.680 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 11:56:00.694 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 11:56:00.694 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 11:56:00.694 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 11:56:00.694 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 11:56:00.709 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:140 | Start login on post.
+2020/09/25 11:56:00.709 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:144 | Signing in with password.
+2020/09/25 11:56:00.759 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:148 | User logged in.
+2020/09/25 11:56:00.759 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:171 | End login on post.
+2020/09/25 11:56:00.778 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 11:56:00.787 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 11:56:00.787 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 11:56:00.787 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 11:56:00.787 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/25 11:56:00.787 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 11:56:00.802 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/25 11:56:00.802 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:68 | End Index.
+2020/09/25 11:56:15.334 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/25 12:01:40.598 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/25 12:01:41.759 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 12:01:41.999 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 12:01:41.999 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 12:01:42.009 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 12:01:42.415 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:01:42.454 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 12:01:42.457 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 12:01:42.457 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 12:01:42.457 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:59 | Start Index.
+2020/09/25 12:01:42.457 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:60 | Welcome usermanagement2020@gmail.com to UMS.
+2020/09/25 12:01:42.457 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:65 | Find first value from user.
+2020/09/25 12:01:42.457 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:68 | End Index.
+2020/09/25 12:01:44.292 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:01:44.315 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 12:01:44.326 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:60 | Start Logout model On Post.
+2020/09/25 12:01:44.326 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:62 | Signing out.
+2020/09/25 12:01:44.335 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:64 | User logged out.
+2020/09/25 12:01:44.335 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:71 | Clear cookies AspNetCore Identity Application.
+2020/09/25 12:01:44.335 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:73 | End Log out model On Post.
+2020/09/25 12:01:44.381 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:01:44.381 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:01:44.396 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:01:44.396 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:01:44.396 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:01:44.396 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:01:44.396 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:01:44.396 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:01:44.396 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:01:44.421 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 12:01:44.421 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 12:01:44.421 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:01:44.430 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 12:01:45.724 [TRACE] [UMS.Data.AuthDbContext]  GoogleLogin:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:01:45.724 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:01:45.724 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:01:45.739 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:01:45.739 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:01:45.739 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:01:45.739 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:01:45.739 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:01:45.739 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:01:45.739 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:166 | Start Google Login.
+2020/09/25 12:01:45.739 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:169 | Get properties from google.
+2020/09/25 12:01:45.739 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:170 | End Google Login.
+2020/09/25 12:01:49.326 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:01:49.326 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:01:49.336 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:01:49.336 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:01:49.336 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:01:49.336 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:01:49.336 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:01:49.336 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:01:49.350 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:01:49.350 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | Start Google Response.
+2020/09/25 12:01:49.350 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:197 | Get external login info.
+2020/09/25 12:01:49.350 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:204 | Getting external login and sign in.
+2020/09/25 12:01:49.698 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:76 | Creating applications user models.
+2020/09/25 12:01:49.698 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:84 | Creating Identity models.
+2020/09/25 12:01:49.718 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:108 | Creating log models.
+2020/09/25 12:01:49.718 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:110 | End creating on model.
+2020/09/25 12:01:50.525 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:206 | Result: Succeeded
+2020/09/25 12:01:50.525 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:207 | Creating user info.
+2020/09/25 12:01:50.540 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:309 | Start Get status user.
+2020/09/25 12:01:50.540 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:319 | Executing sql stored procedure (EXEC @paramout_status=[dbo].ums_Get_status_user '60160169@go.buu.ac.th').
+2020/09/25 12:01:50.587 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:326 | End Get status user.
+2020/09/25 12:01:50.587 [INFO] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:219 | login Successfully.
+2020/09/25 12:01:50.587 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:220 | End Google Response.
+2020/09/25 12:01:50.612 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:01:50.619 [TRACE] [UMS.Controllers.HomeController] [60160169@go.buu.ac.th] Index:HomeController.cs:37 | NLog injected into HomeController.
+2020/09/25 12:01:50.619 [TRACE] [UMS.Controllers.HomeController] [60160169@go.buu.ac.th] Index:HomeController.cs:39 | User manager injected into HomeController.
+2020/09/25 12:01:50.619 [TRACE] [UMS.Controllers.HomeController] [60160169@go.buu.ac.th] Index:HomeController.cs:40 | Start HomeController Constructor.
+2020/09/25 12:01:50.631 [TRACE] [UMS.Controllers.HomeController] [60160169@go.buu.ac.th] Index:HomeController.cs:59 | Start Index.
+2020/09/25 12:01:50.631 [INFO] [UMS.Controllers.HomeController] [60160169@go.buu.ac.th] Index:HomeController.cs:60 | Welcome 60160169@go.buu.ac.th to UMS.
+2020/09/25 12:01:50.631 [TRACE] [UMS.Controllers.HomeController] [60160169@go.buu.ac.th] Index:HomeController.cs:65 | Find first value from user.
+2020/09/25 12:01:50.631 [TRACE] [UMS.Controllers.HomeController] [60160169@go.buu.ac.th] Index:HomeController.cs:68 | End Index.
+2020/09/25 12:01:53.160 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:01:53.166 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [60160169@go.buu.ac.th] Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 12:01:53.166 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [60160169@go.buu.ac.th] Logout.cshtml.cs:60 | Start Logout model On Post.
+2020/09/25 12:01:53.177 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [60160169@go.buu.ac.th] Logout.cshtml.cs:62 | Signing out.
+2020/09/25 12:01:53.177 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [60160169@go.buu.ac.th] Logout.cshtml.cs:64 | User logged out.
+2020/09/25 12:01:53.177 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [60160169@go.buu.ac.th] Logout.cshtml.cs:71 | Clear cookies AspNetCore Identity Application.
+2020/09/25 12:01:53.193 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [60160169@go.buu.ac.th] Logout.cshtml.cs:73 | End Log out model On Post.
+2020/09/25 12:01:53.193 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:01:53.193 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:01:53.210 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:01:53.210 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:01:53.210 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:01:53.210 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:01:53.224 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:01:53.224 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:01:53.224 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:01:53.224 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 12:01:53.224 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 12:01:53.240 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:01:53.240 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 12:02:11.759 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...

@@ -86,6 +86,7 @@ namespace UMS.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
+            ViewData["URLLOGOUT"] = $"{this.Request.Scheme}://{this.Request.Host}/Identity/Account/Logout";
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         } // End Error
     } // End Home controller
