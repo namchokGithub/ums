@@ -29,7 +29,7 @@ namespace UMS.Areas.Identity.Pages.Account
         {
             _userManager = userManager;
             _logger = logger;
-            _logger.LogDebug("Start Confirm email model.");
+            _logger.LogDebug("Start Confirm Email model.");
         } // End constructor
 
         [TempData]

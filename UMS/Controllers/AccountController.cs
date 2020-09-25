@@ -67,8 +67,10 @@ namespace UMS.Controllers
         [AllowAnonymous]
         public IActionResult InputModel(string returnUrl)
         {
-            InputModel login = new InputModel();
-            login.ReturnUrl = returnUrl;
+            InputModel login = new InputModel
+            {
+                ReturnUrl = returnUrl
+            };
             return View(login);
         } // End InputModel
 

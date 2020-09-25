@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Access Denied";
 }
-
+@model ErrorViewModel
 <!--
     Namespace: ~/Areas/Identity/Pages/Account/Access Denied.cshtml
     Author: Namchok Singhachai
@@ -19,9 +19,16 @@
                 <i id="checkicon" class="fas fa-exclamation-circle text-danger"></i>
                 <br><br>
                 <h4 class="text-black-50">You do not have access to this resource.</h4>
+                <!-- If has model error -->
+                @if (Model.ShowRequestId)
+                {
+                    <p>
+                        <strong>Request ID:</strong> <code>@Model.RequestId</code>
+                    </p>
+                }
                 <!-- Back to home -->
                 <form method="post" asp-action="Index">
-                    <button type="submit" class="btn btn-block btn-default btn-flat">Back</button>
+                    <button type="submit" class="btn btn-block btn-secondary btn-flat">Back</button>
                 </form>
             </div>
             <!--End Card body-->

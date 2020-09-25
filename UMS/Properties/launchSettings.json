@@ -19,12 +19,16 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "UMS": {
-      "commandName": "Project",
+    "ums": {
+      "commandName": "IIS",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      },
+      }
+    },
+    "console": {
+      "commandName": "Project",
+      "launchBrowser": true,
       "applicationUrl": "https://localhost:44346/"
     }
   }

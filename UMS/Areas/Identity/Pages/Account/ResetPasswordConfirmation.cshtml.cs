@@ -20,10 +20,14 @@ namespace UMS.Areas.Identity.Pages.Account
 
         private readonly ILogger<ResetPasswordConfirmationModel> _logger;
 
+        /*
+         * Name: ResetPasswordConfirmationModel
+         * Parameter: logger(ILogger)
+         */
         public ResetPasswordConfirmationModel(ILogger<ResetPasswordConfirmationModel> logger)
         {
             _logger = logger;
-            _logger.LogDebug("Reset Password Confirmation model.");
+            _logger.LogDebug("Start Reset Password Confirmation model.");
         } // End constructor
 
         /*

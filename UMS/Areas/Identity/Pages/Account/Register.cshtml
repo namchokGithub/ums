@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Register";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    string URL = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
 }
 
 <!--
@@ -72,9 +73,7 @@
                     </div>
                     <!--End Input information for Register-->
                     <!--Start Button-->
-                    <a id="btn_back" class="btn btn-block btn-secondary float-left" href="./Login">
-                        Back
-                    </a>
+                    <a id="btn_back" class="btn btn-block btn-secondary float-left" href="@URL/Identity/Account/Login"> Back </a>
                     <button onclick="register()" type="button" class="btn btn-primary float-right">Register</button>
                     <!--End Button-->
                 </form>

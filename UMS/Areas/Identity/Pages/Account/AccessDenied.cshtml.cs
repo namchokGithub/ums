@@ -39,7 +39,13 @@ namespace UMS.Areas.Identity.Pages.Account
         public IActionResult OnPost()
         {
             _logger.LogTrace("Access Denined On post.");
-            return LocalRedirect("/");
+            //Response.Cookies.Delete(".AspNetCore.Identity.Application");
+            foreach (var cookie in HttpContext.Request.Cookies)
+            {
+                Response.Cookies.Delete(cookie.Key);
+            }
+            _logger.LogTrace("Clear cookies AspNetCore Identity Application.");
+            return RedirectToPage("/Login");
         } // End OnPost
     } // End AccessDeniedModel
 }

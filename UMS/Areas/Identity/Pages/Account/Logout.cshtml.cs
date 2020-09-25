@@ -35,7 +35,10 @@ namespace UMS.Areas.Identity.Pages.Account
          * Parameter: none
          * Description: 
          */
-        public void OnGet() { _logger.LogTrace("Logout model On get."); } // End OnGet
+        public void OnGet() {
+            ViewData["URL"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
+            _logger.LogTrace("Logout model On get."); 
+        } // End OnGet
 
         /*
          * Name: OnPost
@@ -45,13 +48,20 @@ namespace UMS.Areas.Identity.Pages.Account
         public async Task<IActionResult> OnPost()
         {
             _logger.LogTrace("Start Logout model On Post.");
+            ViewData["URL"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
             _logger.LogTrace("Signing out.");
             await _signInManager.SignOutAsync();
             _logger.LogInformation("User logged out.");
-            Response.Cookies.Delete(".AspNetCore.Identity.Application");
+
+            //Response.Cookies.Delete(".AspNetCore.Identity.Application");
+            foreach (var cookie in HttpContext.Request.Cookies)
+            {
+                Response.Cookies.Delete(cookie.Key);
+            }
             _logger.LogTrace("Clear cookies AspNetCore Identity Application.");
+
             _logger.LogTrace("End Log out model On Post.");
-            return RedirectToPage("./Login");
+            return RedirectToPage("Login");
         } // End OnPost
     } // End LogoutModel
 }

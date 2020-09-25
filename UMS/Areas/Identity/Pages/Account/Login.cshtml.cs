@@ -48,7 +48,7 @@ namespace UMS.Areas.Identity.Pages.Account
                 _signInManager = signInManager;
                 _logger = logger;
                 _manageUser = new ManageUserController(accountContext, editaccountContext, loggerManageUser, signInManager);
-                _logger.LogDebug("Starting Login model.");
+                _logger.LogDebug("Start Login model.");
             }
             catch (Exception e)
             {
@@ -100,6 +100,7 @@ namespace UMS.Areas.Identity.Pages.Account
             try
             {
                 _logger.LogTrace("Start login on get.");
+                ViewData["URL"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
                 if (User.Identity.IsAuthenticated)
                 {
                     _logger.LogInformation("User is authenticated.");
@@ -110,7 +111,7 @@ namespace UMS.Areas.Identity.Pages.Account
                     _logger.LogError(ErrorMessage.ToString());
                     ModelState.AddModelError(string.Empty, ErrorMessage);
                 } // check if has error message
-                returnUrl = returnUrl ?? Url.Content("~/");  // Clear the existing external cookie to ensure a clean login process
+                returnUrl ??= Url.Content($"{this.Request.Host}{Request.PathBase}");  // Clear the existing external cookie to ensure a clean login process
                 _logger.LogTrace("Signing out.");
                 await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
                 _logger.LogDebug("Getting external authentication scheme.");
@@ -129,7 +130,7 @@ namespace UMS.Areas.Identity.Pages.Account
 
         /*
          * Name: OnPostAsync
-         * Parameter: returnUrl(String)
+         * Parameter: returnUrl(string)
          * Description: for login to system
          */
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
@@ -158,7 +159,7 @@ namespace UMS.Areas.Identity.Pages.Account
                             CookieOptions option = new CookieOptions
                             {
                                 Expires = DateTime.Now.AddDays(14),
-                                Path = "/Identity/Account/Login",
+                                Path = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Login",
                                 HttpOnly = true,
                                 SameSite = SameSiteMode.Lax
                             };
@@ -182,7 +183,6 @@ namespace UMS.Areas.Identity.Pages.Account
                         ModelState.AddModelError(string.Empty, "Your email or password is not valid.");
                         // Send alert to home pages
                         TempData["ExceptionInValid"] = "InValid";
-                        // TempData["Exception"] = @"toastr.error('Your email or password is not valid.')";
                         _logger.LogTrace("End login on post.");
                         return Page();
                     } // If Loged out

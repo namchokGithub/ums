@@ -59,7 +59,7 @@ namespace UMS.Areas.Identity.Pages.Account
                 _logger = logger;
                 _emailSender = emailSender;
                 _accountContext = accountContext;
-                _logger.LogDebug("Starting Register model.");
+                _logger.LogDebug("Start Register model.");
             }
             catch (Exception e)
             {
@@ -150,8 +150,8 @@ namespace UMS.Areas.Identity.Pages.Account
                         }; // Create new user
                         _logger.LogTrace("Creating new user.");
                         var result = await _userManager.CreateAsync(user, Input.Password);
-                        // Check if create success
-                        if (result.Succeeded)
+                        
+                        if (result.Succeeded) // Check if create success
                         {
                             _logger.LogInformation("User created a new account with password.");
                             _logger.LogDebug("Generating provider key.");
@@ -167,7 +167,7 @@ namespace UMS.Areas.Identity.Pages.Account
                                 _logger.LogDebug("Signing in.");
                                 await _signInManager.SignInAsync(user, false);
                                 _logger.LogTrace("End register on post.");
-                                return LocalRedirect(returnUrl);
+                                return LocalRedirect(Url.Content("~/").ToString());
                             }
                             else
                             {

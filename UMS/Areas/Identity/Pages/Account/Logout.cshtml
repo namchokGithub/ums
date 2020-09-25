@@ -2,6 +2,11 @@
 @model LogoutModel
 @{
     ViewData["Title"] = "Log out";
+    string URL = "~/";
+    if (ViewData["URL"].ToString()!=null&& ViewData["URL"].ToString() != "")
+    {
+        URL = ViewData["URL"].ToString();
+    }
     Layout = "~/Areas/Identity/Pages/_AuthLayout.cshtml";
 }
 
@@ -21,12 +26,12 @@
                 <br>
                 <i id="checkicon" class="fa fa-check-circle"></i>
                 <br><br>
-                <h3 id="success">Log out!</h3>
+                <h3 id="success">Logout!</h3>
                 <p>
                     You have successfully logged out of the application.
                     <br><br>
                     <!--Start Button  Back to login-->
-                    <a class="btn btn-block btn-primary" asp-action="Index" asp-controller="Home">
+                    <a class="btn btn-block btn-primary" href="@URL/Identity/Account/Login">
                         Back to Login
                     </a>
                     <!--End Button  Back to login-->

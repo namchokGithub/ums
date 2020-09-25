@@ -1,10 +1,10 @@
 ﻿@page
 @model LoginModel
-
+@using Microsoft.AspNetCore.Http.Extensions
 @{
     ViewData["Title"] = "login";
+    string URL = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
     Layout = "~/Areas/Identity/Pages/_AuthLayout.cshtml";
-
     string nameCookies = LoginModel.StringEncryptor.EncryptString("usermanagementsystem2020", "umsrememberme");
     var cookiesRememberme = "none";
     cookiesRememberme = HttpContext.Request.Cookies[nameCookies.ToString()];
@@ -57,8 +57,8 @@
                     <span id="inValidUser" class="text-danger small"></span>
                     <!--End Input password-->
                     <!--Start Hyperlink-->
-                    <a href="/Identity/Account/ForgotPassword" class="text-center">I forgot my password</a><br>
-                    <a href="/Identity/Account/Register" class="text-center">Register a new membership</a>
+                    <a href="@URL/Identity/Account/ForgotPassword" class="text-center">I forgot my password</a><br>
+                    <a href="@URL/Identity/Account/Register" class="text-center">Register a new membership</a>
                     <!--End Hyperlink-->
                     <div class="row">
                         <!--Start Checkbox remember Me-->
@@ -73,7 +73,7 @@
                         <!--End Checkbox remember Me-->
                         <!--Start Button login-->
                         <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block">Login</button>
+                            <button type="submit" class="btn btn-primary btn-block" onclick="click()">Login</button>
                         </div>
                         <!--Endt Button login-->
                     </div>
@@ -117,6 +117,7 @@
     {
         @Html.Raw("$('#inValidUser').html('');");
     } // For alert when invalid user
+
     /*
     * Name: togglePasword()
     * Parameter: none
@@ -138,6 +139,10 @@
     $(document).on('click', () => {
         $('#inValidUser').html('');
     })
+
+    function click() {
+        $('#account').submit()
+    }
 
     $(document).ready(function () {
         @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ };

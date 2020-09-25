@@ -41,7 +41,7 @@ namespace UMS.Areas.Identity.Pages.Account
             _userManager = userManager;
             _logger = logger;
             _emailSender = emailSender;
-            _logger.LogDebug("External login model.");
+            _logger.LogDebug("Start External Login model.");
         }
 
         [BindProperty]
