@@ -4521,3 +4521,1271 @@
 2020/09/25 12:01:53.240 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
 2020/09/25 12:01:53.240 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
 2020/09/25 12:02:11.759 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/25 12:03:54.014 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/25 12:03:55.202 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 12:03:55.487 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 12:03:55.493 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 12:03:55.493 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 12:03:55.827 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:03:55.841 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:03:55.841 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:03:55.851 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:03:55.851 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:03:55.851 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:03:55.851 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:03:55.851 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:03:55.851 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:03:55.878 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 12:03:55.882 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 12:03:55.882 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:03:55.882 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 12:03:59.659 [TRACE] [UMS.Data.AuthDbContext]  GoogleLogin:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:03:59.667 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:03:59.667 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:03:59.667 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:03:59.677 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:03:59.677 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:03:59.677 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:03:59.677 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:03:59.677 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:03:59.677 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:166 | Start Google Login.
+2020/09/25 12:03:59.693 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:169 | Get properties from google.
+2020/09/25 12:03:59.693 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:170 | End Google Login.
+2020/09/25 12:04:04.684 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:04.684 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:04.697 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:04.697 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:04.697 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:04.707 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:04.707 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:04.707 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:04.707 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:04.768 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:04.773 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:04.773 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:04.773 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:04.788 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:04.788 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:04.788 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:04.788 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:04.788 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:04.788 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:04.788 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:04.825 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:04.825 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:04.837 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:04.837 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:04.837 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:04.837 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:04.837 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:04.837 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:04.850 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:04.850 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:04.850 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:04.879 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:04.885 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:04.897 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:04.897 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:04.897 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:04.897 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:04.897 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:04.912 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:04.912 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:04.912 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:04.912 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:04.950 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:04.950 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:04.969 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:04.969 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:04.974 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:04.974 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:04.974 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:04.974 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:04.974 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:04.991 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:04.991 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:05.021 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.021 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:05.043 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:05.043 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.052 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.052 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:05.052 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:05.052 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:05.067 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:05.067 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:05.067 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:05.100 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.100 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:05.120 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:05.120 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.120 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.129 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:05.129 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:05.129 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:05.129 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:05.129 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:05.129 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:05.170 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.170 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:05.184 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:05.184 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.184 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.184 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:05.193 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:05.193 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:05.193 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:05.193 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:05.209 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:05.234 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.239 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:05.239 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:05.239 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.256 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.256 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:05.256 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:05.256 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:05.271 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:05.271 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:05.271 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:05.306 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.306 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:05.324 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:05.324 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.324 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.333 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:05.333 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:05.333 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:05.333 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:05.333 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:05.333 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:05.374 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.374 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:05.393 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:05.396 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.396 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.396 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:05.396 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:05.396 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:05.396 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:05.413 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:05.413 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:05.446 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.446 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:05.464 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:05.464 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.464 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.464 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:05.476 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:05.476 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:05.476 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:05.476 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:05.476 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:05.516 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.521 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:05.521 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:05.521 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.521 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.538 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:05.538 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:05.538 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:05.538 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:05.538 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:05.553 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:05.584 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.584 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:05.602 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:05.602 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.602 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.602 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:05.602 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:05.602 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:05.622 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:05.622 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:05.622 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:05.652 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.652 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:05.669 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:05.669 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.669 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.669 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:05.679 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:05.679 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:05.679 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:05.679 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:05.679 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:05.719 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.723 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:05.723 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:05.723 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.740 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.740 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:05.740 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:05.740 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:05.740 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:05.755 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:05.755 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:05.790 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.790 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:05.808 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:05.808 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.808 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.808 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:05.817 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:05.817 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:05.817 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:05.817 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:05.817 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:05.855 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.855 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:05.875 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:05.875 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.883 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.883 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:05.883 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:05.883 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:05.883 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:05.897 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:05.897 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:05.931 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.931 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:05.950 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:05.950 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.950 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.959 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:05.959 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:05.959 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:05.959 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:05.959 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:05.974 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:06.004 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:06.009 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:06.128 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:06.131 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:06.131 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:06.131 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:06.131 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:06.131 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:06.152 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:06.152 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:06.152 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:06.185 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:06.185 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:06.202 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:06.202 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:06.202 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:06.211 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:06.211 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:06.211 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:06.211 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:06.211 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:06.211 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:06.250 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:06.256 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:06.256 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:06.272 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:06.272 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:06.272 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:06.272 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:06.286 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:06.286 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:06.286 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:06.286 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:06.328 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:06.334 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:06.334 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:06.355 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:06.355 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:06.355 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:06.366 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:06.366 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:06.366 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:06.366 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:06.366 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:06.406 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:06.411 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:06.411 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:06.411 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:06.429 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:06.429 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:06.429 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:06.429 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:06.443 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:06.443 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:06.443 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:06.473 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:06.473 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:06.492 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:06.492 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:06.492 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:06.492 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:06.507 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:06.507 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:06.507 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:06.507 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:06.521 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:06.550 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:06.555 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:06.567 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:06.567 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:06.567 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:06.567 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:06.583 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:06.583 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:06.583 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:06.583 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:06.583 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:06.622 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:06.622 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:06.642 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:06.642 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:06.647 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:06.647 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:06.647 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:06.647 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:06.661 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:06.661 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:06.661 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:06.693 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:06.693 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:06.709 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:06.709 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:06.709 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:06.709 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:06.709 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:06.723 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:06.723 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:06.723 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:06.723 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:06.762 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:06.762 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:06.780 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:06.780 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:06.785 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:06.785 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:06.785 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:06.785 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:06.785 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:06.785 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:06.803 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:06.828 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:06.839 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:06.839 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:06.850 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:06.850 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:06.850 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:06.850 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:06.850 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:06.866 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:06.866 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:06.866 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:06.902 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:06.902 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:06.920 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:06.920 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:06.926 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:06.926 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:06.926 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:06.926 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:06.926 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:06.926 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:06.943 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:06.969 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:06.973 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:06.973 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:06.973 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:06.992 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:06.992 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:06.992 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:06.992 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:06.992 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:07.004 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:07.004 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:07.038 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:07.038 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:07.055 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:07.055 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:07.055 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:07.055 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:07.055 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:07.055 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:07.070 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:07.070 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:07.070 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:07.103 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:07.103 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:07.117 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:07.117 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:07.117 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:07.117 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:07.117 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:07.117 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:07.132 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:07.132 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:07.132 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:07.165 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:07.165 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:07.182 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:07.182 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:07.182 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:07.182 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:07.182 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:07.194 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:07.194 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:07.194 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:07.194 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:07.229 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:07.229 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:07.246 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:07.246 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:07.246 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:07.246 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:07.257 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:07.257 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:07.257 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:07.257 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:07.257 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:07.292 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:07.292 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:07.309 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:07.309 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:07.309 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:07.309 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:07.321 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:07.321 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:07.321 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:07.321 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:07.333 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:07.359 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:07.359 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:07.381 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:07.381 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:07.381 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:07.381 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:07.398 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:07.398 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:07.398 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:07.398 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:07.412 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:07.441 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:07.446 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:07.459 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:07.459 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:07.459 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:07.459 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:07.459 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:07.474 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:07.474 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:07.474 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:07.474 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:07.511 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:07.511 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:12.557 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:12.557 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:12.557 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:12.568 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:12.568 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:12.568 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:12.568 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:12.585 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:12.585 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:12.616 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:12.616 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:12.635 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:12.635 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:12.635 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:12.635 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:12.645 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:12.645 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:12.645 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:12.645 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:12.645 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:12.682 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:12.682 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:12.699 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:12.699 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:12.710 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:12.710 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:12.710 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:12.710 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:12.723 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:12.723 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:12.723 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:12.752 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:12.757 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:12.757 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:12.757 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:12.771 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:12.771 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:12.771 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:12.771 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:12.771 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:12.771 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:12.788 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:12.813 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:12.823 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:12.823 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:12.835 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:12.835 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:12.835 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:12.835 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:12.835 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:12.849 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:12.849 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:12.849 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:12.884 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:12.896 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:12.896 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:12.896 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:12.911 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:12.911 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:12.911 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:12.911 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:12.911 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:12.927 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:12.927 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:12.957 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:12.963 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:12.975 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:12.975 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:12.975 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:12.975 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:12.975 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:12.975 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:12.989 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:12.989 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:12.989 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:13.027 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.027 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:13.045 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:13.045 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:13.045 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.053 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:13.053 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:13.053 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:13.053 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:13.053 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:13.053 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:13.094 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.094 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:13.111 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:13.111 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:13.117 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.117 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:13.117 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:13.129 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:13.129 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:13.129 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:13.129 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:13.167 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.167 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:13.186 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:13.186 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:13.186 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.193 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:13.193 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:13.193 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:13.193 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:13.193 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:13.193 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:13.232 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.232 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:13.248 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:13.248 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:13.248 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.256 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:13.256 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:13.256 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:13.256 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:13.256 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:13.271 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:13.297 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.297 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:13.320 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:13.320 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:13.320 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.320 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:13.320 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:13.334 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:13.334 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:13.334 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:13.334 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:13.370 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.370 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:13.387 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:13.387 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:13.387 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.387 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:13.397 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:13.397 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:13.397 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:13.397 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:13.397 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:13.436 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.436 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:13.454 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:13.454 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:13.458 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.458 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:13.458 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:13.458 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:13.458 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:13.458 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:13.475 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:13.505 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.505 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:13.523 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:13.523 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:13.523 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.523 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:13.523 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:13.536 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:13.536 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:13.536 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:13.536 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:13.573 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.573 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:13.590 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:13.590 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:13.590 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.590 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:13.604 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:13.604 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:13.604 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:13.604 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:13.604 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:13.639 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.639 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:13.652 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:13.652 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:13.652 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.652 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:13.666 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:13.666 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:13.666 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:13.666 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:13.666 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:13.708 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.708 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:13.726 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:13.726 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:13.726 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.726 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:13.726 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:13.726 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:13.743 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:13.743 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:13.743 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:13.775 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.775 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:13.790 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:13.790 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:13.790 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.790 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:13.805 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:13.805 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:13.805 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:13.805 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:13.805 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:13.840 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.840 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:13.852 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:13.852 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:13.852 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.852 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:13.852 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:13.867 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:13.867 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:13.867 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:13.867 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:13.899 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.899 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:43.935 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:43.949 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:43.949 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:43.949 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:43.949 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:43.959 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:43.959 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:43.959 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:43.959 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:43.995 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:43.995 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:44.011 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:44.011 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.011 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.011 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:44.023 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:44.023 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:44.023 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:44.023 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:44.023 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:44.055 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.055 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:44.071 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:44.071 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.071 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.071 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:44.086 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:44.086 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:44.086 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:44.086 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:44.086 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:44.125 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.135 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:44.135 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:44.146 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.146 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.146 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:44.146 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:44.146 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:44.146 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:44.164 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:44.164 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:44.189 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.194 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:44.194 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:44.194 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.210 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.210 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:44.210 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:44.210 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:44.210 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:44.225 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:44.225 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:44.251 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.256 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:44.256 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:44.256 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.256 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.273 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:44.273 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:44.273 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:44.273 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:44.273 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:44.287 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:44.311 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.311 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:44.328 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:44.335 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.335 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.335 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:44.350 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:44.350 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:44.350 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:44.350 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:44.350 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:44.382 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.382 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:44.395 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:44.395 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.395 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.413 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:44.413 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:44.413 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:44.413 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:44.413 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:44.428 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:44.452 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.469 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:44.481 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:44.481 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.481 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.489 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:44.489 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:44.489 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:44.489 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:44.489 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:44.489 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:44.526 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.526 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:44.545 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:44.552 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.552 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.552 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:44.552 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:44.566 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:44.566 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:44.566 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:44.566 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:44.599 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.599 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:44.599 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:44.599 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.615 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.615 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:44.615 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:44.615 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:44.615 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:44.631 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:44.631 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:44.656 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.661 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:44.661 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:44.661 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.677 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.677 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:44.677 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:44.677 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:44.677 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:44.692 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:44.692 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:44.718 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.723 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:44.723 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:44.723 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.723 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.740 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:44.740 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:44.740 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:44.740 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:44.740 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:44.740 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:44.776 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.776 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:44.792 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:44.792 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.792 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.792 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:44.802 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:44.802 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:44.802 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:44.802 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:44.802 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:44.836 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.836 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:44.853 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:44.853 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.853 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.853 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:44.853 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:44.865 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:44.865 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:44.865 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:44.865 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:44.898 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.898 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:44.915 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:44.915 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.915 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.915 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:44.915 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:44.927 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:44.927 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:44.927 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:44.927 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:44.960 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.974 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:44.974 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:44.974 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.974 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.990 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:44.990 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:44.990 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:44.990 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:44.990 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:45.004 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:45.028 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:45.028 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:45.045 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:45.045 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:45.045 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:45.053 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:45.053 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:45.053 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:45.053 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:45.053 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:45.053 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:45.089 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:45.089 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:45.108 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:45.108 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:45.108 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:45.115 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:45.115 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:45.115 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:45.115 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:45.115 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:45.115 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:45.150 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:45.150 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:04:45.167 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:04:45.167 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:45.167 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:45.167 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:04:45.167 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:04:45.178 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:04:45.178 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:04:45.178 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:04:45.178 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:04:45.212 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:45.212 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:05:40.573 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/25 12:05:41.837 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 12:05:42.114 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 12:05:42.114 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 12:05:42.114 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 12:05:42.459 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:05:42.476 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:05:42.476 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:05:42.476 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:05:42.476 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:05:42.491 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:05:42.491 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:05:42.491 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:05:42.491 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:05:42.515 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 12:05:42.515 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 12:05:42.525 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:05:42.525 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 12:05:48.623 [TRACE] [UMS.Data.AuthDbContext]  GoogleLogin:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:05:48.623 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:05:48.631 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:05:48.631 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:05:48.631 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:05:48.631 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:05:48.631 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:05:48.631 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:05:48.646 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:05:48.646 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:166 | Start Google Login.
+2020/09/25 12:05:48.646 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:169 | Get properties from google.
+2020/09/25 12:05:48.646 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:170 | End Google Login.
+2020/09/25 12:05:51.552 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:05:51.552 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:05:51.552 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:05:51.572 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:05:51.572 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:05:51.572 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:05:51.572 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:05:51.572 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:05:51.572 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:05:51.636 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:05:51.636 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:05:51.659 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:05:51.662 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 12:05:51.662 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:40 | Signing out.
+2020/09/25 12:05:51.662 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:42 | User logged out.
+2020/09/25 12:05:51.662 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:49 | Clear cookies AspNetCore Identity Application.
+2020/09/25 12:05:51.662 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:50 | Logout model On get.
+2020/09/25 12:05:53.666 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:05:53.666 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:05:53.666 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:05:53.677 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:05:53.677 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:05:53.677 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:05:53.677 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:05:53.677 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:05:53.677 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:05:53.677 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 12:05:53.677 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 12:05:53.694 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:05:53.694 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 12:05:55.349 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:05:55.349 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:05:55.349 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:05:55.367 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:05:55.367 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:05:55.367 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:05:55.380 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:05:55.380 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:05:55.380 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:05:55.380 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 12:05:55.398 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 12:05:55.398 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:05:55.398 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 12:05:56.162 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:05:56.162 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:05:56.162 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:05:56.162 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:05:56.162 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:05:56.177 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:05:56.177 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:05:56.177 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:05:56.177 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:05:56.177 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 12:05:56.177 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 12:05:56.194 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:05:56.194 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 12:05:56.671 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:05:56.680 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:05:56.680 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:05:56.680 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:05:56.680 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:05:56.680 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:05:56.694 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:05:56.694 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:05:56.694 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:05:56.694 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 12:05:56.694 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 12:05:56.712 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:05:56.712 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 12:06:04.360 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/25 12:06:05.657 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 12:06:05.901 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 12:06:05.901 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 12:06:05.901 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 12:06:06.617 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:06:06.617 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:06:06.635 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:06:06.635 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:06:06.635 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:06:06.635 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:06:06.635 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:06:06.635 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:06:06.647 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:06:06.665 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 12:06:06.665 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 12:06:06.665 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:06:06.678 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 12:06:10.767 [TRACE] [UMS.Data.AuthDbContext]  GoogleLogin:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:06:10.770 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:06:10.770 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:06:10.770 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:06:10.787 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:06:10.787 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:06:10.787 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:06:10.787 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:06:10.787 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:06:10.787 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:166 | Start Google Login.
+2020/09/25 12:06:10.787 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:169 | Get properties from google.
+2020/09/25 12:06:10.802 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:170 | End Google Login.
+2020/09/25 12:06:13.967 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:06:13.973 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:06:13.973 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:06:13.973 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:06:13.989 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:06:13.989 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:06:13.989 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:06:13.989 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:06:13.989 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:06:14.056 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:06:14.056 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | End Google Response.
+2020/09/25 12:06:14.080 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:06:14.083 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 12:06:14.083 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:40 | Signing out.
+2020/09/25 12:06:14.083 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:42 | User logged out.
+2020/09/25 12:06:14.083 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:49 | Clear cookies AspNetCore Identity Application.
+2020/09/25 12:06:14.083 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:50 | Logout model On get.
+2020/09/25 12:06:17.244 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:06:17.244 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:06:17.244 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:06:17.254 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:06:17.254 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:06:17.254 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:06:17.254 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:06:17.254 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:06:17.254 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:06:17.254 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 12:06:17.271 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 12:06:17.271 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:06:17.271 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 12:06:24.088 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/25 12:07:34.880 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/25 12:07:36.148 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 12:07:36.386 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 12:07:36.386 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 12:07:36.386 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 12:07:37.181 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:07:37.193 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:07:37.193 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:07:37.193 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:07:37.193 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:07:37.207 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:07:37.207 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:07:37.207 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:07:37.207 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:07:37.237 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 12:07:37.240 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 12:07:37.240 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:07:37.240 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 12:08:01.641 [TRACE] [UMS.Data.AuthDbContext]  GoogleLogin:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:08:01.647 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:08:01.647 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:08:01.647 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:08:01.647 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:08:01.662 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:08:01.662 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:08:01.662 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:08:01.662 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:08:01.662 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:166 | Start Google Login.
+2020/09/25 12:08:01.662 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:169 | Get properties from google.
+2020/09/25 12:08:01.677 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:170 | End Google Login.
+2020/09/25 12:08:06.468 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:08:06.476 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:08:06.476 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:08:06.476 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:08:06.490 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:08:06.490 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:08:06.490 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:08:06.490 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:08:06.490 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:08:06.490 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:194 | Start Google Response.
+2020/09/25 12:08:06.506 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:198 | Get external login info.
+2020/09/25 12:08:06.506 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:205 | Getting external login and sign in.
+2020/09/25 12:08:06.846 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:76 | Creating applications user models.
+2020/09/25 12:08:06.850 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:84 | Creating Identity models.
+2020/09/25 12:08:06.850 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:108 | Creating log models.
+2020/09/25 12:08:06.850 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:110 | End creating on model.
+2020/09/25 12:08:07.486 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:207 | Result: Failed
+2020/09/25 12:08:07.492 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:208 | Creating user info.
+2020/09/25 12:08:07.492 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:239 | Creating appliction user.
+2020/09/25 12:08:07.492 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:248 | Creating user info.
+2020/09/25 12:08:07.572 [WARN] [Microsoft.AspNetCore.Identity.UserManager]  GoogleResponse: | User c38f2b59-35a4-4a0a-93f1-e5ccddacc661 validation failed: DuplicateUserName.
+2020/09/25 12:08:07.572 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:266 | User name 'pech4751@gmail.com' is already taken.
+2020/09/25 12:08:07.587 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:279 | End Google Response.
+2020/09/25 12:08:22.454 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:08:22.454 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:08:22.462 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:08:22.462 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:08:22.462 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:08:22.462 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:08:22.462 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:08:22.475 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:08:22.475 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:08:22.475 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 12:08:22.475 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 12:08:22.489 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:08:22.489 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 12:08:32.531 [TRACE] [UMS.Data.AuthDbContext]  GoogleLogin:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:08:32.538 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:08:32.538 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:08:32.554 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:08:32.554 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:08:32.554 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:08:32.570 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:08:32.570 [TRACE] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:08:32.570 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:08:32.570 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:166 | Start Google Login.
+2020/09/25 12:08:32.587 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:169 | Get properties from google.
+2020/09/25 12:08:32.587 [TRACE] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:170 | End Google Login.
+2020/09/25 12:08:57.012 [TRACE] [UMS.Data.AuthDbContext]  GoogleResponse:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:08:57.012 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:08:57.020 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:08:57.020 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:08:57.020 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:08:57.040 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:08:57.040 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:08:57.040 [TRACE] [UMS.Controllers.ManageUserController]  GoogleResponse:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:08:57.057 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:43 | Start AccountController Constructor.
+2020/09/25 12:08:57.070 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:194 | Start Google Response.
+2020/09/25 12:08:57.070 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:198 | Get external login info.
+2020/09/25 12:08:57.070 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:205 | Getting external login and sign in.
+2020/09/25 12:08:57.113 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:207 | Result: Failed
+2020/09/25 12:08:57.117 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:208 | Creating user info.
+2020/09/25 12:08:57.117 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:239 | Creating appliction user.
+2020/09/25 12:08:57.117 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:248 | Creating user info.
+2020/09/25 12:08:57.135 [WARN] [Microsoft.AspNetCore.Identity.UserManager]  GoogleResponse: | User 7fb67cc4-e7e5-432d-9605-91e17c79662a validation failed: DuplicateUserName.
+2020/09/25 12:08:57.135 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:266 | User name 'pech4751@gmail.com' is already taken.
+2020/09/25 12:08:57.152 [TRACE] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:279 | End Google Response.
+2020/09/25 12:10:46.310 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:10:46.310 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:10:46.320 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:10:46.320 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:10:46.320 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:10:46.333 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:10:46.333 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:10:46.333 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:10:46.350 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:10:46.350 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 12:10:46.365 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 12:10:46.381 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:10:46.381 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/09/25 12:10:51.041 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:10:51.041 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:10:51.054 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Start Register model.
+2020/09/25 12:10:51.054 [TRACE] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:122 | Getting external login.
+2020/09/25 12:10:51.054 [TRACE] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:124 | Register on get.
+2020/09/25 12:10:52.541 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:10:52.554 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:10:52.554 [TRACE] [UMS.Data.AuthDbContext]  CheckUserExist:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:10:52.554 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:10:52.554 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:10:52.568 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:10:52.568 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:10:52.568 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:10:52.584 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:262 | Start check user is exist.
+2020/09/25 12:10:52.610 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/25 12:10:52.622 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/25 12:10:52.622 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:278 | Query succeeded.
+2020/09/25 12:10:52.622 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:286 | User is exist 1 items.
+2020/09/25 12:10:52.631 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:287 | End check user is exist.
+2020/09/25 12:10:52.826 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:10:52.826 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:10:52.835 [TRACE] [UMS.Data.AuthDbContext]  CheckUserExist:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:10:52.835 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:10:52.835 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:10:52.849 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:10:52.849 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:10:52.849 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:10:52.849 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:262 | Start check user is exist.
+2020/09/25 12:10:52.865 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/25 12:10:52.865 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/25 12:10:52.865 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:278 | Query succeeded.
+2020/09/25 12:10:52.880 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:286 | User is exist 1 items.
+2020/09/25 12:10:52.880 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:287 | End check user is exist.
+2020/09/25 12:10:59.828 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:10:59.828 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:10:59.836 [TRACE] [UMS.Data.AuthDbContext]  CheckUserExist:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:10:59.836 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:10:59.836 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:10:59.849 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:10:59.849 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:10:59.849 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:10:59.849 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:262 | Start check user is exist.
+2020/09/25 12:10:59.871 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/25 12:10:59.871 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/25 12:10:59.871 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:278 | Query succeeded.
+2020/09/25 12:10:59.883 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:286 | User is exist 1 items.
+2020/09/25 12:10:59.883 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:287 | End check user is exist.
+2020/09/25 12:11:09.783 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:11:09.787 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:11:09.787 [TRACE] [UMS.Data.AuthDbContext]  CheckUserExist:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:11:09.787 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:11:09.787 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:11:09.801 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:11:09.801 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:11:09.801 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:11:09.801 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:262 | Start check user is exist.
+2020/09/25 12:11:09.819 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/25 12:11:09.819 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/25 12:11:09.819 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:278 | Query succeeded.
+2020/09/25 12:11:09.833 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:286 | User is exist 1 items.
+2020/09/25 12:11:09.833 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:287 | End check user is exist.
+2020/09/25 12:11:09.956 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:11:09.960 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:11:09.960 [TRACE] [UMS.Data.AuthDbContext]  CheckUserExist:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:11:09.960 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:11:09.960 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:11:09.975 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:11:09.975 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:11:09.975 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:11:09.975 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:262 | Start check user is exist.
+2020/09/25 12:11:09.992 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/25 12:11:09.992 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/25 12:11:09.992 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:278 | Query succeeded.
+2020/09/25 12:11:10.006 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:286 | User is exist 1 items.
+2020/09/25 12:11:10.006 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:287 | End check user is exist.
+2020/09/25 12:11:10.549 [DEBUG] [UMS.Models.AccountContext]  GetStatusUser:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:11:10.554 [DEBUG] [UMS.Models.EditAccountContext]  GetStatusUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:11:10.554 [TRACE] [UMS.Data.AuthDbContext]  GetStatusUser:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:11:10.554 [TRACE] [UMS.Controllers.ManageUserController]  GetStatusUser:ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:11:10.554 [TRACE] [UMS.Controllers.ManageUserController]  GetStatusUser:ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:11:10.567 [TRACE] [UMS.Controllers.ManageUserController]  GetStatusUser:ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:11:10.567 [TRACE] [UMS.Controllers.ManageUserController]  GetStatusUser:ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:11:10.567 [TRACE] [UMS.Controllers.ManageUserController]  GetStatusUser:ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:11:10.567 [TRACE] [UMS.Controllers.ManageUserController]  GetStatusUser:ManageUserController.cs:309 | Start Get status user.
+2020/09/25 12:11:10.567 [TRACE] [UMS.Controllers.ManageUserController]  GetStatusUser:ManageUserController.cs:319 | Executing sql stored procedure (EXEC @paramout_status=[dbo].ums_Get_status_user '60160169@go.buu.ac.th').
+2020/09/25 12:11:10.590 [TRACE] [UMS.Controllers.ManageUserController]  GetStatusUser:ManageUserController.cs:326 | End Get status user.
+2020/09/25 12:11:16.704 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 12:11:16.710 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:11:16.710 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:11:16.710 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:44 | NLog injected into EditProfileController.
+2020/09/25 12:11:16.710 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:46 | Account Context injected into EditProfileController.
+2020/09/25 12:11:16.723 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:48 | Edit Profile Context injected into EditProfileController.
+2020/09/25 12:11:16.723 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:50 | Sign In Manager injected into EditProfileController.
+2020/09/25 12:11:16.723 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:51 | Start EditProfileController Constructor.
+2020/09/25 12:11:16.739 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:11:16.739 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 12:11:16.739 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 12:11:16.755 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:11:16.755 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.

@@ -175,7 +175,7 @@ namespace UMS.Controllers
                 _logger.LogError(e.Message.ToString());
                 TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End Google Login.");
-                return RedirectToPage("/Login");
+                return Redirect($"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Logout");
             } // End try catch
             
         } // End GoogleLogin
@@ -190,6 +190,7 @@ namespace UMS.Controllers
         {
             try
             {
+                //throw new Exception("One Above all.");
                 _logger.LogTrace("Start Google Response.");
                 ViewData["URL"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
                 ViewData["URLHOME"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Home";
@@ -284,7 +285,7 @@ namespace UMS.Controllers
                 _logger.LogError(e.Message.ToString());
                 TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End Google Response.");
-                return RedirectToPage("/Login");
+                return Redirect($"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Logout");
             } // End try catch
         } // End GoogleResponse
 
@@ -310,7 +311,7 @@ namespace UMS.Controllers
                 _logger.LogError(e.Message.ToString());
                 TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End Facebook Login");
-                return RedirectToPage("/Login");
+                return Redirect($"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Logout");
             } // End try catch
         } // End FacebookLogin
 
@@ -420,7 +421,7 @@ namespace UMS.Controllers
                 _logger.LogError(e.Message.ToString());
                 TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End Facebook Response.");
-                return RedirectToPage("/Login");
+                return Redirect($"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Logout");
             } // End try catch
         } // End FacebookResponse
 
@@ -446,7 +447,7 @@ namespace UMS.Controllers
                 _logger.LogError(e.Message.ToString());
                 TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End Microsoft Login.");
-                return RedirectToPage("/Login");
+                return Redirect($"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Logout");
             } // End try catch
         } // End MicrosoftLogin
 
@@ -557,7 +558,7 @@ namespace UMS.Controllers
                 _logger.LogError(e.Message.ToString());
                 TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End Microsoft Response.");
-                return RedirectToPage("/Login");
+                return Redirect($"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Logout");
             } // End try catch
         } // End MicrosoftResponse
     } // End AccountController

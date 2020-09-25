@@ -1626,3 +1626,363 @@
 2020/09/25 12:01:53.224 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
 2020/09/25 12:01:53.240 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
 2020/09/25 12:02:11.759 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/25 12:03:55.202 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 12:03:55.487 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 12:03:55.493 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 12:03:55.493 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 12:03:55.841 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:03:55.841 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:03:55.851 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:03:55.882 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:03:59.667 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:03:59.667 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:04.684 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:04.697 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:04.768 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:04.773 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:04.788 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:04.825 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:04.837 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:04.837 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:04.879 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:04.897 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:04.897 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:04.950 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:04.969 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:04.974 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.021 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.043 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.052 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.100 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.120 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.120 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.170 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.184 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.184 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.234 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.239 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.256 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.306 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.324 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.324 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.374 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.396 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.396 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.446 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.464 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.464 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.516 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.521 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.521 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.584 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.602 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.602 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.652 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.669 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.669 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.719 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.723 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.740 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.790 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.808 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.808 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.855 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.875 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.883 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:05.931 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:05.950 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:05.950 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:06.004 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:06.131 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:06.131 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:06.185 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:06.202 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:06.202 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:06.250 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:06.272 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:06.272 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:06.328 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:06.355 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:06.355 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:06.406 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:06.411 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:06.429 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:06.473 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:06.492 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:06.492 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:06.550 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:06.567 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:06.567 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:06.622 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:06.642 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:06.647 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:06.693 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:06.709 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:06.709 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:06.762 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:06.780 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:06.785 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:06.828 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:06.850 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:06.850 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:06.902 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:06.920 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:06.926 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:06.969 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:06.973 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:06.992 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:07.038 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:07.055 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:07.055 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:07.103 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:07.117 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:07.117 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:07.165 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:07.182 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:07.182 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:07.229 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:07.246 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:07.246 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:07.292 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:07.309 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:07.309 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:07.359 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:07.381 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:07.381 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:07.441 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:07.459 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:07.459 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:07.511 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:12.557 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:12.557 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:12.616 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:12.635 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:12.635 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:12.682 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:12.699 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:12.710 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:12.752 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:12.757 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:12.771 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:12.813 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:12.835 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:12.835 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:12.884 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:12.896 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:12.911 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:12.957 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:12.975 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:12.975 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.027 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.045 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:13.045 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.094 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.111 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:13.117 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.167 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.186 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:13.186 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.232 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.248 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:13.248 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.297 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.320 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:13.320 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.370 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.387 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:13.387 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.436 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.454 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:13.458 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.505 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.523 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:13.523 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.573 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.590 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:13.590 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.639 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.652 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:13.652 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.708 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.726 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:13.726 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.775 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.790 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:13.790 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.840 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:13.852 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:13.852 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:13.899 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:43.949 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:43.949 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:43.995 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.011 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.011 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.055 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.071 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.071 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.125 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.146 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.146 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.189 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.194 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.210 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.251 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.256 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.256 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.311 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.335 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.335 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.382 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.395 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.395 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.452 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.481 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.481 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.526 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.552 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.552 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.599 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.599 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.615 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.656 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.661 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.677 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.718 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.723 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.723 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.776 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.792 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.792 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.836 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.853 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.853 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.898 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.915 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.915 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:44.960 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:44.974 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:44.974 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:45.028 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:45.045 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:45.045 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:45.089 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:45.108 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:45.108 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:45.150 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:04:45.167 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:04:45.167 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:04:45.212 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:05:41.837 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 12:05:42.114 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 12:05:42.114 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 12:05:42.114 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 12:05:42.476 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:05:42.476 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:05:42.491 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:05:42.525 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:05:48.623 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:05:48.631 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:05:51.552 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:05:51.552 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:05:51.636 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:05:51.662 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 12:05:51.662 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:42 | User logged out.
+2020/09/25 12:05:53.666 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:05:53.666 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:05:53.677 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:05:53.694 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:05:55.349 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:05:55.349 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:05:55.380 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:05:55.398 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:05:56.162 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:05:56.162 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:05:56.177 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:05:56.194 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:05:56.680 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:05:56.680 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:05:56.694 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:05:56.712 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:06:05.657 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 12:06:05.901 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 12:06:05.901 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 12:06:05.901 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 12:06:06.617 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:06:06.635 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:06:06.647 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:06:06.665 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:06:10.770 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:06:10.770 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:06:13.973 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:06:13.973 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:06:14.056 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:193 | One Above all.
+2020/09/25 12:06:14.083 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:30 | Starting Logout model.
+2020/09/25 12:06:14.083 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:42 | User logged out.
+2020/09/25 12:06:17.244 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:06:17.244 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:06:17.254 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:06:17.271 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:06:24.088 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/25 12:07:36.148 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 12:07:36.386 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 12:07:36.386 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Production
+2020/09/25 12:07:36.386 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 12:07:37.193 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:07:37.193 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:07:37.207 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:07:37.240 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:08:01.647 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:08:01.647 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:08:06.476 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:08:06.476 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:08:06.506 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:198 | Get external login info.
+2020/09/25 12:08:06.506 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:205 | Getting external login and sign in.
+2020/09/25 12:08:07.486 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:207 | Result: Failed
+2020/09/25 12:08:07.572 [WARN] [Microsoft.AspNetCore.Identity.UserManager]  GoogleResponse: | User c38f2b59-35a4-4a0a-93f1-e5ccddacc661 validation failed: DuplicateUserName.
+2020/09/25 12:08:07.572 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:266 | User name 'pech4751@gmail.com' is already taken.
+2020/09/25 12:08:22.454 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:08:22.462 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:08:22.475 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:08:22.489 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:08:32.538 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:08:32.538 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:08:57.012 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:08:57.020 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:08:57.070 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:198 | Get external login info.
+2020/09/25 12:08:57.070 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:205 | Getting external login and sign in.
+2020/09/25 12:08:57.113 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:207 | Result: Failed
+2020/09/25 12:08:57.135 [WARN] [Microsoft.AspNetCore.Identity.UserManager]  GoogleResponse: | User 7fb67cc4-e7e5-432d-9605-91e17c79662a validation failed: DuplicateUserName.
+2020/09/25 12:08:57.135 [ERROR] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:266 | User name 'pech4751@gmail.com' is already taken.
+2020/09/25 12:10:46.310 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:10:46.320 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:10:46.350 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:10:46.381 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 12:10:51.041 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:10:51.054 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Start Register model.
+2020/09/25 12:10:52.541 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:10:52.554 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:10:52.610 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/25 12:10:52.622 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/25 12:10:52.826 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:10:52.826 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:10:52.865 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/25 12:10:52.865 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/25 12:10:59.828 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:10:59.828 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:10:59.871 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/25 12:10:59.871 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/25 12:11:09.783 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:11:09.787 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:11:09.819 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/25 12:11:09.819 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/25 12:11:09.956 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:11:09.960 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:11:09.992 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:270 | Check user is exist.
+2020/09/25 12:11:09.992 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:277 | Save changes: Check user is exist.
+2020/09/25 12:11:10.549 [DEBUG] [UMS.Models.AccountContext]  GetStatusUser:AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:11:10.554 [DEBUG] [UMS.Models.EditAccountContext]  GetStatusUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:11:16.710 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 12:11:16.710 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 12:11:16.739 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 12:11:16.755 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
