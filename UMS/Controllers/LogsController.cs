@@ -34,7 +34,6 @@ namespace UMS.Controllers
             {
                 _logger = logger;
                 _logsContext = logsContext;
-                _logger.LogTrace("Logs Context injected into Logs Controller.");
                 _logger.LogTrace("Start Logs Controllerl.");
             }
             catch (Exception e)

@@ -34,9 +34,7 @@ namespace UMS.Controllers
             try
             {
                 _logger = logger;
-                _logger.LogTrace("NLog injected into HomeController.");
                 _userManager = userManager;
-                _logger.LogTrace("User manager injected into HomeController.");
                 _logger.LogTrace("Start HomeController Constructor.");
             }
             catch (Exception e)
