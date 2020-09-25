@@ -71,7 +71,7 @@ namespace UMS.Areas.Identity.Pages.Account
             _logger.LogTrace("Clear cookies AspNetCore Identity Application.");
 
             _logger.LogTrace("End Log out model On Post.");
-            return RedirectToPage("Login");
+            return Redirect($"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Logout");
         } // End OnPost
     } // End LogoutModel
 }

@@ -129,14 +129,14 @@ namespace UMS.Controllers
             {
                 await _signInManager.SignOutAsync();
                 _logger.LogInformation("Logged out.");
-                return RedirectToPage("/Login");
+                return Redirect($"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Logout");
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 TempData["Exception"] = message;
-                return RedirectToPage("/Login");
+                return Redirect($"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Logout");
             } // End try catch
         } // End Logout
 

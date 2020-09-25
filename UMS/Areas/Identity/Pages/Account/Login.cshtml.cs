@@ -139,6 +139,7 @@ namespace UMS.Areas.Identity.Pages.Account
             {
                 _logger.LogTrace("Start login on post.");
                 returnUrl = returnUrl ?? Url.Content("~/");
+                ViewData["URL"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
                 if (ModelState.IsValid)
                 {
                     _logger.LogTrace("Signing in with password.");
@@ -193,7 +194,7 @@ namespace UMS.Areas.Identity.Pages.Account
             {
                 _logger.LogError(e.Message.ToString());
                 string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                TempData["Exception"] = message;
+                TempData["Exception"] = message.Replace("\\", "/");
                 _logger.LogTrace("End login on post.");
                 return Page();
             } // End try catch
