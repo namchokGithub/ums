@@ -8413,3 +8413,17 @@ Login failed for user 'IIS APPPOOL\ums AppPool'.
 2020/09/25 15:15:23.129 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
 2020/09/25 15:15:23.129 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
 2020/09/25 15:15:35.022 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/09/25 17:24:54.503 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/09/25 17:24:55.822 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/09/25 17:24:56.149 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/09/25 17:24:56.161 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/09/25 17:24:56.161 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/09/25 17:24:56.820 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:28 | Start Auth Database Context.
+2020/09/25 17:24:56.839 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/09/25 17:24:56.839 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/09/25 17:24:56.850 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:47 | Start EditProfileController Constructor.
+2020/09/25 17:24:56.850 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/09/25 17:24:56.873 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/09/25 17:24:56.873 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/09/25 17:24:56.883 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/09/25 17:24:56.883 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
