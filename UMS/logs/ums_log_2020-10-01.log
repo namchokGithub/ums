@@ -1332,3 +1332,569 @@
 2020/10/01 16:48:35.529 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:91 | Input Message: Welcome
 2020/10/01 16:48:35.538 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:103 | Getting log by 10/01/2020 12:00 AM - 10/01/2020 11:59 PM or Welcome.
 2020/10/01 17:03:37.961 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/10/01 11:59:33.643 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/01 11:59:36.662 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 11:59:40.593 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/01 11:59:40.637 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 11:59:40.660 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Wannapa\source\repos\ums\UMS
+2020/10/01 11:59:40.677 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 11:59:40.883 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 12:07:57.772 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:07:57.799 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:07:57.839 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:07:57.896 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 12:08:29.050 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:08:29.123 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:08:29.134 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:08:34.859 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:149 | User logged in.
+2020/10/01 12:08:35.343 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:58 | Welcome usermanagement2020@gmail.com to UMS.
+2020/10/01 12:08:42.749 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Starting Logout model.
+2020/10/01 12:08:42.790 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:64 | User logged out.
+2020/10/01 12:08:42.890 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:30 | Starting Logout model.
+2020/10/01 12:08:42.995 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:42 | User logged out.
+2020/10/01 12:08:47.663 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:08:47.792 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:08:47.826 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:08:47.882 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 12:11:21.111 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:11:21.148 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:11:21.163 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:11:21.215 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 12:11:24.757 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:11:24.757 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:11:24.781 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:11:24.990 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:149 | User logged in.
+2020/10/01 12:11:25.113 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:58 | Welcome usermanagement2020@gmail.com to UMS.
+2020/10/01 12:15:18.366 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:15:18.458 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:15:18.830 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:15:18.885 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 12:15:25.331 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:15:25.392 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:15:25.423 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:15:25.797 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:149 | User logged in.
+2020/10/01 12:15:25.895 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:58 | Welcome usermanagement2020@gmail.com to UMS.
+2020/10/01 12:27:02.242 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:27:02.320 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:27:02.370 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:27:02.423 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 12:27:29.019 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:27:29.265 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:27:29.304 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:27:29.500 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 12:27:53.557 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:27:53.634 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:27:53.693 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:27:53.765 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 12:27:58.023 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:27:58.113 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:27:58.125 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:27:58.353 [WARN] [Microsoft.AspNetCore.Identity.UserManager]   | Invalid password for user adminidtempfortestsystem2020.
+2020/10/01 12:27:58.353 [WARN] [Microsoft.AspNetCore.Identity.SignInManager]   | User adminidtempfortestsystem2020 failed to provide the correct password.
+2020/10/01 12:27:58.391 [WARN] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:183 | Your email or password is not valid.
+2020/10/01 12:28:27.989 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:28:28.013 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:28:28.101 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:28:28.262 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 12:28:52.457 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:28:52.519 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:28:52.571 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:28:52.703 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 12:29:15.025 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:29:15.092 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:29:15.161 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:29:15.263 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 12:29:31.454 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:29:31.484 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:29:31.544 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:29:31.685 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 12:30:02.387 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:30:02.472 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:30:02.520 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:30:02.593 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 12:30:05.601 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:30:05.619 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:30:05.630 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:30:05.701 [WARN] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:183 | Your email or password is not valid.
+2020/10/01 12:32:40.732 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:32:40.801 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:32:42.670 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:32:42.736 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:32:42.792 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:198 | Get external login info.
+2020/10/01 12:32:42.805 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:205 | Getting external login and sign in.
+2020/10/01 12:32:43.099 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:207 | Result: Failed
+2020/10/01 12:32:45.319 [INFO] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:254 | Create user succeeded.
+2020/10/01 12:32:45.361 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:255 | Adding login.
+2020/10/01 12:32:45.555 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:259 | Signing in.
+2020/10/01 12:32:46.304 [INFO] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:261 | Add login succeeded.
+2020/10/01 12:32:46.569 [INFO] [UMS.Controllers.HomeController] [60160097@go.buu.ac.th] Index:HomeController.cs:58 | Welcome 60160097@go.buu.ac.th to UMS.
+2020/10/01 12:33:03.866 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [60160097@go.buu.ac.th] Logout.cshtml.cs:30 | Starting Logout model.
+2020/10/01 12:33:03.959 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [60160097@go.buu.ac.th] Logout.cshtml.cs:64 | User logged out.
+2020/10/01 12:33:04.024 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:30 | Starting Logout model.
+2020/10/01 12:33:04.092 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:42 | User logged out.
+2020/10/01 12:33:08.265 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:33:08.319 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:33:08.361 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:33:08.460 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 12:37:38.058 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:37:38.122 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:42:13.099 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:42:13.141 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:42:13.201 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:42:13.308 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 12:42:46.892 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:42:46.994 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:42:47.168 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:42:47.323 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 12:42:51.299 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:42:51.332 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:44:38.703 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:44:38.722 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:44:38.788 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:44:38.821 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 12:45:35.990 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:45:36.025 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:45:36.058 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:45:36.116 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 12:46:56.964 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:46:57.020 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:46:57.060 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:46:57.192 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 12:47:03.063 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:47:03.161 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:47:03.491 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:47:03.682 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 12:47:06.156 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:47:06.194 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:47:08.425 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:47:08.493 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:47:08.524 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:47:08.544 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 12:48:22.412 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:48:22.490 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:48:22.554 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:48:22.600 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 12:49:38.797 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:49:38.821 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:49:38.833 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:49:38.855 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 12:50:22.003 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 12:50:22.038 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 12:50:22.235 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 12:50:22.302 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 13:39:35.201 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 13:39:35.228 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 13:39:35.290 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 13:39:35.573 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 13:40:27.152 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 13:40:27.163 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 13:40:27.195 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 13:40:27.216 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 13:41:49.911 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 13:41:49.927 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 13:41:49.987 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 13:41:50.077 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 13:44:00.480 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 13:44:00.492 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 13:44:00.560 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 13:44:00.583 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 13:44:23.291 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 13:44:23.331 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 13:44:23.487 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 13:44:23.563 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 13:47:21.090 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/01 13:47:23.543 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/01 13:47:23.641 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Wannapa\source\repos\ums\UMS
+2020/10/01 13:47:23.691 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 13:47:23.722 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 13:47:23.731 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 13:47:23.857 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 13:47:45.637 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 13:47:45.687 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 13:47:45.695 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 13:47:45.731 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 13:47:48.234 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 13:47:48.283 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 13:48:41.906 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 13:48:41.967 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 13:49:38.639 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 13:49:38.660 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 13:49:38.695 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 13:49:38.710 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 13:49:42.262 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 13:49:42.294 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 13:52:29.731 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 13:52:29.757 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 13:52:29.757 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 13:52:29.788 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 13:52:31.927 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 13:52:31.948 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 13:56:15.382 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 13:56:15.409 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 13:56:15.420 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 13:56:15.433 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 13:56:17.500 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 13:56:17.530 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 13:57:06.432 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/10/01 13:57:06.457 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 13:57:06.556 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:198 | Get external login info.
+2020/10/01 13:57:06.587 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:205 | Getting external login and sign in.
+2020/10/01 13:57:11.650 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:207 | Result: Succeeded
+2020/10/01 13:57:12.372 [INFO] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:220 | login Successfully.
+2020/10/01 13:58:02.862 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 13:58:02.887 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 13:58:02.921 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 13:58:02.977 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 13:58:05.225 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 13:58:05.272 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 13:58:27.917 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/10/01 13:58:27.954 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 13:58:27.974 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:198 | Get external login info.
+2020/10/01 13:58:27.974 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:205 | Getting external login and sign in.
+2020/10/01 13:58:28.190 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:207 | Result: Succeeded
+2020/10/01 13:58:28.286 [INFO] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:220 | login Successfully.
+2020/10/01 13:58:28.383 [INFO] [UMS.Controllers.HomeController] [60160097@go.buu.ac.th] Index:HomeController.cs:58 | Welcome 60160097@go.buu.ac.th to UMS.
+2020/10/01 13:59:09.097 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 13:59:09.126 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 13:59:09.262 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 13:59:09.435 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 13:59:12.816 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 13:59:12.866 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 13:59:24.825 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 13:59:24.890 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 13:59:24.916 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 13:59:25.090 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 13:59:46.616 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 13:59:46.616 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 13:59:46.634 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 13:59:46.649 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 13:59:48.325 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 13:59:48.368 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:00:07.665 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:00:07.697 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:00:07.727 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:198 | Get external login info.
+2020/10/01 14:00:07.739 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:205 | Getting external login and sign in.
+2020/10/01 14:00:07.835 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:207 | Result: Succeeded
+2020/10/01 14:00:07.934 [INFO] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:220 | login Successfully.
+2020/10/01 14:00:08.008 [INFO] [UMS.Controllers.HomeController] [60160097@go.buu.ac.th] Index:HomeController.cs:58 | Welcome 60160097@go.buu.ac.th to UMS.
+2020/10/01 14:02:35.022 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:02:35.067 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:02:35.082 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 14:02:35.118 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 14:02:37.907 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:02:37.957 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:03:01.880 [DEBUG] [UMS.Models.AccountContext]  GoogleResponse:AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:03:01.962 [DEBUG] [UMS.Models.EditAccountContext]  GoogleResponse:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:03:02.024 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:198 | Get external login info.
+2020/10/01 14:03:02.049 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:205 | Getting external login and sign in.
+2020/10/01 14:03:02.236 [DEBUG] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:207 | Result: Succeeded
+2020/10/01 14:03:02.318 [INFO] [UMS.Controllers.AccountController]  GoogleResponse:AccountController.cs:220 | login Successfully.
+2020/10/01 14:03:02.418 [INFO] [UMS.Controllers.HomeController] [60160097@go.buu.ac.th] Index:HomeController.cs:58 | Welcome 60160097@go.buu.ac.th to UMS.
+2020/10/01 14:04:08.835 [DEBUG] [UMS.Models.AccountContext]  FacebookLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:04:08.901 [DEBUG] [UMS.Models.EditAccountContext]  FacebookLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:09:16.188 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:09:16.291 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:09:16.319 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 14:09:16.368 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 14:09:19.052 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:09:19.111 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:14:18.031 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:14:18.080 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:14:18.095 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 14:14:18.116 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 14:14:22.199 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:14:22.325 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:16:39.565 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:16:39.597 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:16:39.637 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 14:16:39.699 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 14:16:41.586 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:16:41.603 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:18:44.804 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:18:44.829 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:18:44.841 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 14:18:44.879 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 14:22:21.211 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:22:21.242 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:22:21.289 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 14:22:21.302 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 14:22:23.229 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:22:23.318 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:25:48.840 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:25:48.981 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:25:49.017 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 14:25:49.110 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 14:25:51.086 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:25:51.119 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:26:51.621 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:26:51.648 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:26:51.762 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 14:26:51.819 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 14:26:55.657 [DEBUG] [UMS.Models.AccountContext]  GoogleLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:26:55.693 [DEBUG] [UMS.Models.EditAccountContext]  GoogleLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:29:31.192 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:29:31.265 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:29:31.361 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 14:29:31.423 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 14:29:36.325 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:29:36.361 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:29:36.500 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 14:35:13.658 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:35:13.692 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:35:13.753 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 14:35:13.773 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 14:35:16.588 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:35:16.658 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:35:16.724 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 14:35:46.138 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:35:46.587 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:35:46.698 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 14:35:46.723 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 14:35:50.935 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:35:51.156 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:35:51.196 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 14:36:02.149 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:36:02.203 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:36:02.228 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 14:36:02.361 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 14:36:11.194 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:36:11.368 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:36:11.662 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 14:38:33.820 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:38:33.886 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:38:33.927 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 14:38:33.948 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 14:38:36.264 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:38:36.333 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:38:36.349 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 14:39:35.658 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:39:35.717 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:39:35.784 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 14:39:35.820 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 14:39:40.307 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:39:40.398 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:39:40.441 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 14:40:43.924 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:40:44.217 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:40:44.314 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 14:40:44.350 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 14:40:47.856 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:40:47.888 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:40:47.927 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 14:41:54.725 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:41:54.748 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:41:54.780 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 14:41:54.805 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 14:41:57.728 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:41:57.759 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:41:57.788 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 14:48:11.839 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:48:11.866 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:48:11.895 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 14:48:11.925 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 14:48:14.597 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:48:14.639 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:48:14.693 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 14:49:36.401 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:49:36.425 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:49:36.530 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 14:49:36.701 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 14:49:41.934 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:49:42.004 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:49:42.226 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 14:50:29.117 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:50:29.154 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:50:29.254 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 14:50:29.423 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 14:50:34.298 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:50:34.440 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:50:34.703 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 14:53:28.938 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:53:28.995 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:53:29.135 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 14:53:29.239 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 14:53:32.968 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:53:33.123 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:53:33.229 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 14:56:25.413 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:56:25.437 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:56:25.493 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 14:56:25.566 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 14:56:28.396 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:56:28.436 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:56:28.496 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 14:58:07.123 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:58:07.258 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:58:07.514 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 14:58:07.556 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 14:58:09.927 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 14:58:09.992 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 14:58:10.024 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 15:00:47.017 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 15:00:47.061 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 15:00:47.100 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 15:00:47.250 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 15:00:50.332 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 15:00:50.457 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 15:00:50.548 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 15:01:59.567 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 15:01:59.600 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 15:01:59.632 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 15:01:59.662 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 15:02:02.128 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 15:02:02.236 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 15:02:02.316 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 15:03:19.964 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 15:03:19.987 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 15:03:20.063 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 15:03:20.098 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 15:03:23.030 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 15:03:23.259 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 15:03:23.516 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 15:04:44.929 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 15:04:45.025 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 15:04:45.125 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 15:04:45.229 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 15:04:47.596 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 15:04:47.632 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 15:04:47.661 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 15:05:51.024 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 15:05:51.067 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 15:05:51.135 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 15:05:51.294 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 15:05:54.303 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 15:05:54.418 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 15:05:54.473 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 15:10:51.927 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 15:10:52.027 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 15:10:52.119 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 15:10:52.176 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 15:11:06.556 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 15:11:06.753 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 15:11:07.152 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 15:14:24.487 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 15:14:24.529 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 15:14:24.568 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 15:14:24.583 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 15:14:37.046 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 15:14:37.067 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 15:14:37.150 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 15:16:26.919 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 15:16:26.940 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 15:16:26.954 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 15:16:26.990 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 15:16:29.224 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 15:16:29.260 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 15:16:29.287 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 15:17:13.835 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 15:17:13.857 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 15:17:13.865 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 15:17:13.885 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 15:17:16.037 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 15:17:16.113 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 15:17:16.148 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 15:18:44.793 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 15:18:44.813 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 15:18:44.842 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 15:18:44.849 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 15:18:51.148 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 15:18:51.231 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 15:18:51.257 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 15:20:17.785 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 15:20:17.796 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 15:20:17.824 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 15:20:17.852 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 15:20:20.161 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 15:20:20.230 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 15:20:20.289 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 15:22:58.346 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 15:22:58.376 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 15:22:58.487 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 15:22:58.524 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 15:23:02.089 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 15:23:02.228 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 15:23:02.307 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 15:24:34.557 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 15:24:34.617 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 15:24:34.754 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 15:24:34.825 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 15:24:39.944 [DEBUG] [UMS.Models.AccountContext]  MicrosoftLogin:AccountContext.cs:24 | Start Account Context.
+2020/10/01 15:24:39.991 [DEBUG] [UMS.Models.EditAccountContext]  MicrosoftLogin:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 15:24:40.123 [DEBUG] [UMS.Controllers.AccountController]  MicrosoftLogin:AccountController.cs:440 | Getting properties from Microsoft.
+2020/10/01 16:03:53.955 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 16:03:53.985 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 16:03:54.044 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 16:03:54.084 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 16:04:01.685 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:44 | Start Forgot Password model.
+2020/10/01 16:04:08.351 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 16:04:08.397 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 16:04:08.455 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 16:04:08.664 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 16:06:42.584 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:44 | Start Forgot Password model.
+2020/10/01 16:10:36.524 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 16:10:36.683 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 16:10:36.716 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 16:10:36.782 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 16:10:38.837 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:44 | Start Forgot Password model.
+2020/10/01 16:10:49.835 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/10/01 16:10:49.848 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/10/01 16:10:49.906 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 16:10:49.977 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 16:10:50.886 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:266 | Check user is exist.
+2020/10/01 16:10:50.920 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:266 | Check user is exist.
+2020/10/01 16:10:51.034 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:273 | Save changes: Check user is exist.
+2020/10/01 16:10:51.040 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:273 | Save changes: Check user is exist.
+2020/10/01 16:10:51.507 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:44 | Start Forgot Password model.
+2020/10/01 16:10:51.901 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:75 | Finding user.
+2020/10/01 16:10:52.218 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:92 | Generating code.
+2020/10/01 16:10:53.037 [DEBUG] [EmailService.EmailSender]  EmailSender.cs:84 | Creating message.
+2020/10/01 16:10:56.847 [INFO] [EmailService.EmailSender]  EmailSender.cs:177 | Sending email.
+2020/10/01 16:13:04.322 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:30 | Start Reset password model.
+2020/10/01 16:13:04.470 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:81 | Encoding to input model.
+2020/10/01 16:17:11.053 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 16:17:11.087 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 16:17:11.087 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 16:17:11.117 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 16:17:14.790 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:44 | Start Forgot Password model.
+2020/10/01 16:17:26.081 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/10/01 16:17:26.221 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 16:17:26.715 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:266 | Check user is exist.
+2020/10/01 16:17:26.754 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:273 | Save changes: Check user is exist.
+2020/10/01 16:17:50.777 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 16:17:50.823 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 16:17:50.945 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 16:17:50.985 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 16:17:53.122 [DEBUG] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:44 | Start Forgot Password model.
+2020/10/01 16:28:51.402 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:30 | Start Reset password model.
+2020/10/01 16:28:51.620 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:81 | Encoding to input model.
+2020/10/01 16:31:59.264 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/01 16:32:02.427 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/01 16:32:02.898 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/01 16:32:02.918 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/01 16:32:02.918 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Wannapa\source\repos\ums\UMS
+2020/10/01 16:32:02.928 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/01 16:32:03.064 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/01 16:32:15.726 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:30 | Start Reset password model.
+2020/10/01 16:32:15.789 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:81 | Encoding to input model.
+2020/10/01 16:32:19.624 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:30 | Start Reset password model.
+2020/10/01 16:32:19.711 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:110 | Finding by email.
+2020/10/01 16:32:27.484 [INFO] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:124 | User reseted password.
+2020/10/01 16:32:27.738 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordConfirmationModel]  ResetPasswordConfirmation.cshtml.cs:30 | Start Reset Password Confirmation model.
+2020/10/01 16:40:47.957 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:30 | Start Reset password model.
+2020/10/01 16:40:48.319 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:81 | Encoding to input model.
+2020/10/01 16:41:35.312 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:30 | Start Reset password model.
+2020/10/01 16:41:35.433 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:81 | Encoding to input model.
+2020/10/01 16:42:24.751 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:30 | Start Reset password model.
+2020/10/01 16:42:24.878 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:81 | Encoding to input model.
+2020/10/01 16:43:14.226 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:30 | Start Reset password model.
+2020/10/01 16:43:14.494 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:81 | Encoding to input model.
+2020/10/01 16:43:47.353 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:30 | Start Reset password model.
+2020/10/01 16:43:47.611 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:81 | Encoding to input model.
+2020/10/01 16:44:26.331 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:30 | Start Reset password model.
+2020/10/01 16:44:26.513 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:81 | Encoding to input model.
+2020/10/01 16:44:59.550 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:30 | Start Reset password model.
+2020/10/01 16:44:59.641 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:81 | Encoding to input model.
+2020/10/01 16:45:30.232 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:30 | Start Reset password model.
+2020/10/01 16:45:30.364 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:81 | Encoding to input model.
+2020/10/01 16:46:42.134 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:30 | Start Reset password model.
+2020/10/01 16:46:42.253 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:81 | Encoding to input model.

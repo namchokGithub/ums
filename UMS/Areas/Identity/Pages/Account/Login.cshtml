@@ -73,7 +73,7 @@
                         <!--End Checkbox remember Me-->
                         <!--Start Button login-->
                         <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block" onclick="click()">Login</button>
+                            <button type="submit" id="btn_Login" class="btn btn-primary btn-block" onclick="click()">Login</button>
                         </div>
                         <!--Endt Button login-->
                     </div>
@@ -82,15 +82,15 @@
                 <!--Start Social media login-->
                 <div class="social-auth-links text-center">
                     <p>- OR -</p>
-                    <a class="btn btn-block btn-danger" asp-controller="Account" asp-action="GoogleLogin">
+                    <a id="btn_Google" class="btn btn-block btn-danger" asp-controller="Account" asp-action="GoogleLogin">
                         <i class="fab fa-google-plus mr-2"></i>
                         Login With Google
                     </a>
-                    <a class="btn btn-block btn-primary" asp-controller="Account" asp-action="FacebookLogin">
+                    <a id="btn_Facebook" class="btn btn-block btn-primary" asp-controller="Account" asp-action="FacebookLogin">
                         <i class="fab fa-facebook mr-2"></i>
                         Login With Facebook
                     </a>
-                    <a class="btn btn-block btn-secondary" asp-controller="Account" asp-action="MicrosoftLogin">
+                    <a id="btn_Microsoft" class="btn btn-block btn-secondary" asp-controller="Account" asp-action="MicrosoftLogin">
                         <i class="fas fa-th-large mr-2"></i>
                         Login With Microsoft
                     </a>
