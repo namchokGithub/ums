@@ -82,9 +82,9 @@
                                 <tr>
                                     <th data-toggle="tooltip" title="Logged time">Time</th>
                                     <th data-toggle="tooltip" title="Level of Logs">Serveity</th>
+                                    <th data-toggle="tooltip" title="Message and Exceptions">Messages</th>
                                     <th data-toggle="tooltip" title="Logged location">Loggers</th>
                                     <th data-toggle="tooltip" title="Logged location">Locations</th>
-                                    <th data-toggle="tooltip" title="Message and Exceptions">Messages</th>
                                 </tr>
                             </thead>
                             <!--End Logs Monitor table head-->
@@ -163,9 +163,9 @@
                                                     <td class="text-center"><span class="logslevel"><span class="bg-gray-light">@item.log_level</span></span></td>
                                                 }
                                             }
+                                            <td>@item.log_message</td>
                                             <td>@item.log_logger</td>
                                             <td>@locations</td>
-                                            <td>@item.log_message</td>
                                         </tr>
                                     }
                                 }
@@ -207,9 +207,9 @@
                                 <tr>
                                     <th class="disabled-sorting" data-toggle="tooltip" title="Logged time">Time</th>
                                     <th data-toggle="tooltip" title="Level of Logs">Serveity</th>
+                                    <th data-toggle="tooltip" title="Message and Exceptions">Messages</th>
                                     <th data-toggle="tooltip" title="Logged location">Loggers</th>
                                     <th data-toggle="tooltip" title="Logged location">Locations</th>
-                                    <th data-toggle="tooltip" title="Message and Exceptions">Messages</th>
                                 </tr>
                             </thead>
                             <!--End Logs Monitor table head-->
@@ -369,9 +369,9 @@
                                 time = (result[i].log_datetime).substring((result[i].log_datetime).indexOf('T') + 1) // Calculate datetime
                                 myArr[i][0] = replaceDate(date) + ' ' + convertTime(time)
                                 myArr[i][1] = levelLable
-                                myArr[i][2] = result[i].log_logger
-                                myArr[i][3] = locations
-                                myArr[i][4] = result[i].log_message
+                                myArr[i][2] = result[i].log_message
+                                myArr[i][3] = result[i].log_logger
+                                myArr[i][4] = locations
                             } // add data to array for add to datatables // console.log(myArr)
                             $('#showSearchLogs').DataTable({
                                 "paging": true,
@@ -391,7 +391,7 @@
                                 ], "columnDefs": [
                                     { "className": "text-center", "targets": [0, 1] },
                                     { "width": "15%", "targets": 0 }, { "width": "10%", "targets": 1 }
-                                    , { "width": "10%", "targets": 2 }, { "width": "25%", "targets": 3 }, { "width": "40%", "targets": 4 }
+                                    , { "width": "40%", "targets": 2 }, { "width": "10%", "targets": 3 }, { "width": "25%", "targets": 4 }
                                 ]
                             }); // Set datatables
                             console.log(`Successfully. ${result.length} items found.`)
