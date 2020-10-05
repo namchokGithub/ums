@@ -235,7 +235,10 @@
     $(document).ready(() => {
 
         $('#clear-search-input').on('click', () => {
-            $(this).reset();
+            $('#messageErrorInput').empty();
+            $('#dateErrorInput').empty();
+            $('#message').val('');
+            $('#logstime').val('');
         });
         // Check is has exception
         @if (ViewData["INFO"] != null) { @Html.Raw(ViewData["INFO"]) /* Swal funciton */ }
@@ -316,6 +319,7 @@
                             for (var i = 0; i < myArr.length; i++) {
                                 myArr[i] = new Array(6);
                             } // Create array
+                            console.log(result)
                             for (let i = 0; i < result.length; i++) {
                                 let locations = "";
                                 if (result[i].log_mvc_action != null && result[i].log_mvc_action != "") {
@@ -396,7 +400,7 @@
                             }); // Set datatables
                             console.log(`Successfully. ${result.length} items found.`)
                             toastr.success(`Successfully. ${result.length} items found.`)
-                            $('#showSearchLogs > thead > tr > th.disabled-sorting.sorting_asc.sorting_disabled.text-center').removeClass('sorting_as');
+                            $('#showSearchLogs > thead > tr > th').removeClass('sorting_asc');
                         } else {
                             eval(result['messages']) // Excute js
                             console.log(`Error! ${result['text']}`);
