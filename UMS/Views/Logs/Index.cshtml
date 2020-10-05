@@ -59,7 +59,11 @@
             </div> <!-- /.card-body -->
             <div class="card-footer">
                 <button type="reset" class="float-left btn btn-default" id="clear-search-input">Clear</button>
-                <button type="button" class="float-right btn btn-success" onclick="checkSearchInput()">Search</button>
+                <button id="btnSearch" type="button" class="float-right btn btn-success" onclick="checkSearchInput()">Search</button>
+                <button id ="loader" class="float-right btn btn-success d-none" type="button" disabled>
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Loading...
+                </button>
             </div> <!-- /.card-footer -->
     </div>
     <!--End Search logs Card-->
@@ -213,6 +217,7 @@
 <!-- End content -->
 <script src="~/plugins/jquery/jquery.min.js"></script>
 <script>
+    $(document).ajaxStart(function () { Pace.restart(); });
     $(document).ready(() => {
 
         $('#clear-search-input').on('click', () => {
@@ -286,6 +291,10 @@
                     data: { messageInput: $('#message').val(), dateInput: $('#logstime').val() },
                     type: "POST",
                     dataType: "JSON",
+                    beforeSend: function () {
+                        $("#btnSearch").hide();
+                        $("#loader").removeClass('d-none');
+                    },
                     success: function (result) {
                         // Check if id is null will return error
                         if (result['condition'] != "error") {
@@ -374,6 +383,9 @@
                             eval(result['messages']) // Excute js
                             console.log(`Error! ${result['text']}`);
                         } // End if result is not error// End if result is not error
+                    }, complete: function (data) {
+                        $("#btnSearch").show();
+                        $("#loader").addClass('d-none');
                     },
                     error: function (result) {
                         // Set message status
