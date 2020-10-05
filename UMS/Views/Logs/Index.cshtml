@@ -217,7 +217,6 @@
 <!-- End content -->
 <script src="~/plugins/jquery/jquery.min.js"></script>
 <script>
-    $(document).ajaxStart(function () { Pace.restart(); });
     $(document).ready(() => {
 
         $('#clear-search-input').on('click', () => {
@@ -383,7 +382,7 @@
                             eval(result['messages']) // Excute js
                             console.log(`Error! ${result['text']}`);
                         } // End if result is not error// End if result is not error
-                    }, complete: function (data) {
+                    }, complete: function () {
                         $("#btnSearch").show();
                         $("#loader").addClass('d-none');
                     },
