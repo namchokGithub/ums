@@ -823,3 +823,134 @@ Error Number:-1,State:0,Class:20
 2020/10/05 14:41:26.568 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:78 | Get all active user.
 2020/10/05 14:41:26.568 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:83 | End Index.
 2020/10/05 14:41:37.752 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/10/05 16:25:47.383 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/10/05 16:25:52.950 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/05 16:25:53.604 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/05 16:25:53.657 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/05 16:25:53.657 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/05 16:25:56.793 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/10/05 16:25:58.469 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:76 | Creating applications user models.
+2020/10/05 16:25:58.549 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:84 | Creating Identity models.
+2020/10/05 16:25:58.578 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:108 | Creating log models.
+2020/10/05 16:25:58.586 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:110 | End creating on model.
+2020/10/05 16:26:00.461 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:38 | Start HomeController Constructor.
+2020/10/05 16:26:00.499 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:57 | Start Index.
+2020/10/05 16:26:00.509 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:58 | Welcome usermanagement2020@gmail.com to UMS.
+2020/10/05 16:26:00.521 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:63 | Find first value from user.
+2020/10/05 16:26:00.521 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:66 | End Index.
+2020/10/05 16:26:11.430 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/10/05 16:26:11.452 [TRACE] [UMS.Models.LogsContext] [usermanagement2020@gmail.com] Index:LogsContext.cs:24 | Start Edit Profile Context.
+2020/10/05 16:26:11.461 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:37 | Start LogsController Constructor.
+2020/10/05 16:26:11.471 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:55 | Start Index.
+2020/10/05 16:26:11.471 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:57 | Find ID from first value.
+2020/10/05 16:26:11.471 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:63 | Getting top 100 from all logs.
+2020/10/05 16:26:11.658 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:67 | End Index.
+2020/10/05 16:26:29.283 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/10/05 16:26:29.320 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/10/05 16:26:29.332 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/05 16:26:29.332 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:47 | Start ManageUserController Constructor.
+2020/10/05 16:26:29.344 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:66 | Start Index.
+2020/10/05 16:26:29.344 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:72 | Find first value from user.
+2020/10/05 16:26:29.411 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:78 | Get all active user.
+2020/10/05 16:26:29.411 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:83 | End Index.
+2020/10/05 16:26:31.068 [TRACE] [UMS.Data.AuthDbContext]  getUser:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/10/05 16:26:31.085 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] getUser:AccountContext.cs:24 | Start Account Context.
+2020/10/05 16:26:31.102 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] getUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/05 16:26:31.102 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] getUser:ManageUserController.cs:47 | Start ManageUserController Constructor.
+2020/10/05 16:26:31.165 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] getUser:ManageUserController.cs:107 | Start get user.
+2020/10/05 16:26:31.243 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] getUser:ManageUserController.cs:113 | Get user by ID
+2020/10/05 16:26:31.243 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] getUser:ManageUserController.cs:115 | End get user.
+2020/10/05 16:31:30.851 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/10/05 16:31:36.143 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/05 16:31:36.630 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/05 16:31:36.659 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/05 16:31:36.681 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/05 16:31:37.463 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/10/05 16:31:37.616 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:38 | Start HomeController Constructor.
+2020/10/05 16:31:37.668 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:57 | Start Index.
+2020/10/05 16:31:37.703 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:58 | Welcome usermanagement2020@gmail.com to UMS.
+2020/10/05 16:31:37.732 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:63 | Find first value from user.
+2020/10/05 16:31:37.746 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:66 | End Index.
+2020/10/05 16:43:11.616 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/10/05 16:43:11.642 [TRACE] [UMS.Models.EditProfileContext] [usermanagement2020@gmail.com] Index:EditProfileContext.cs:24 | Start Edit Profile Context.
+2020/10/05 16:43:11.659 [TRACE] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:42 | Start EditProfile Controller Constructor.
+2020/10/05 16:43:11.659 [TRACE] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:61 | Start Index
+2020/10/05 16:43:23.182 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:67 | Get user by ID.
+2020/10/05 16:43:23.195 [TRACE] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:69 | End Index
+2020/10/05 16:43:34.403 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/10/05 16:43:34.431 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/10/05 16:43:34.453 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/05 16:43:34.492 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:47 | Start ManageUserController Constructor.
+2020/10/05 16:43:34.492 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:66 | Start Index.
+2020/10/05 16:43:34.492 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:72 | Find first value from user.
+2020/10/05 16:43:34.627 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:78 | Get all active user.
+2020/10/05 16:43:34.627 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:83 | End Index.
+2020/10/05 16:43:35.698 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/10/05 16:43:35.738 [TRACE] [UMS.Models.LogsContext] [usermanagement2020@gmail.com] Index:LogsContext.cs:24 | Start Edit Profile Context.
+2020/10/05 16:43:35.792 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:37 | Start LogsController Constructor.
+2020/10/05 16:43:35.809 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:55 | Start Index.
+2020/10/05 16:43:35.826 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:57 | Find ID from first value.
+2020/10/05 16:43:35.846 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:63 | Getting top 100 from all logs.
+2020/10/05 16:43:36.014 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:67 | End Index.
+2020/10/05 16:43:42.505 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/10/05 16:43:42.505 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/10/05 16:43:42.530 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/05 16:43:42.586 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:47 | Start ManageUserController Constructor.
+2020/10/05 16:43:42.586 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:66 | Start Index.
+2020/10/05 16:43:42.586 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:72 | Find first value from user.
+2020/10/05 16:43:42.620 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:78 | Get all active user.
+2020/10/05 16:43:42.629 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:83 | End Index.
+2020/10/05 16:43:44.460 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/10/05 16:43:44.471 [TRACE] [UMS.Models.LogsContext] [usermanagement2020@gmail.com] Index:LogsContext.cs:24 | Start Edit Profile Context.
+2020/10/05 16:43:44.471 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:37 | Start LogsController Constructor.
+2020/10/05 16:43:44.488 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:55 | Start Index.
+2020/10/05 16:43:44.488 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:57 | Find ID from first value.
+2020/10/05 16:43:44.503 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:63 | Getting top 100 from all logs.
+2020/10/05 16:43:44.527 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:67 | End Index.
+2020/10/05 16:43:52.493 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/10/05 16:43:52.493 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/10/05 16:43:52.511 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/05 16:43:52.561 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:47 | Start ManageUserController Constructor.
+2020/10/05 16:43:52.566 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:66 | Start Index.
+2020/10/05 16:43:52.566 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:72 | Find first value from user.
+2020/10/05 16:43:52.582 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:78 | Get all active user.
+2020/10/05 16:43:52.599 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:83 | End Index.
+2020/10/05 16:43:57.496 [TRACE] [UMS.Data.AuthDbContext]  getUser:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/10/05 16:43:57.522 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] getUser:AccountContext.cs:24 | Start Account Context.
+2020/10/05 16:43:57.532 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] getUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/05 16:43:57.532 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] getUser:ManageUserController.cs:47 | Start ManageUserController Constructor.
+2020/10/05 16:43:57.579 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] getUser:ManageUserController.cs:107 | Start get user.
+2020/10/05 16:43:57.616 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] getUser:ManageUserController.cs:113 | Get user by ID
+2020/10/05 16:43:57.629 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] getUser:ManageUserController.cs:115 | End get user.
+2020/10/05 16:44:00.901 [TRACE] [UMS.Data.AuthDbContext]  getUser:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/10/05 16:44:00.907 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] getUser:AccountContext.cs:24 | Start Account Context.
+2020/10/05 16:44:00.907 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] getUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/05 16:44:00.928 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] getUser:ManageUserController.cs:47 | Start ManageUserController Constructor.
+2020/10/05 16:44:00.928 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] getUser:ManageUserController.cs:107 | Start get user.
+2020/10/05 16:44:00.968 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] getUser:ManageUserController.cs:113 | Get user by ID
+2020/10/05 16:44:00.980 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] getUser:ManageUserController.cs:115 | End get user.
+2020/10/05 16:44:05.955 [TRACE] [UMS.Data.AuthDbContext]  editUser:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/10/05 16:44:05.955 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] editUser:AccountContext.cs:24 | Start Account Context.
+2020/10/05 16:44:05.997 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] editUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/05 16:44:06.006 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] editUser:ManageUserController.cs:47 | Start ManageUserController Constructor.
+2020/10/05 16:44:06.036 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] editUser:ManageUserController.cs:145 | Start edit user.
+2020/10/05 16:44:06.036 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] editUser:ManageUserController.cs:151 | Set role ID.
+2020/10/05 16:44:06.123 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] editUser:ManageUserController.cs:163 | Update name'user.
+2020/10/05 16:44:06.247 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] editUser:ManageUserController.cs:165 | Update role'user.
+2020/10/05 16:44:06.267 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] editUser:ManageUserController.cs:173 | Save changes: Update user.
+2020/10/05 16:44:06.267 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] editUser:ManageUserController.cs:192 | End edit user.
+2020/10/05 16:44:06.295 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/10/05 16:44:06.302 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/10/05 16:44:06.302 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/05 16:44:06.314 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:47 | Start ManageUserController Constructor.
+2020/10/05 16:44:06.314 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:66 | Start Index.
+2020/10/05 16:44:06.314 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:72 | Find first value from user.
+2020/10/05 16:44:06.333 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:78 | Get all active user.
+2020/10/05 16:44:06.333 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:83 | End Index.
+2020/10/05 16:44:15.484 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start Auth Database Context.
+2020/10/05 16:44:15.493 [TRACE] [UMS.Models.LogsContext] [usermanagement2020@gmail.com] Index:LogsContext.cs:24 | Start Edit Profile Context.
+2020/10/05 16:44:15.501 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:37 | Start LogsController Constructor.
+2020/10/05 16:44:15.501 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:55 | Start Index.
+2020/10/05 16:44:15.501 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:57 | Find ID from first value.
+2020/10/05 16:44:15.520 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:63 | Getting top 100 from all logs.
+2020/10/05 16:44:15.542 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:67 | End Index.
