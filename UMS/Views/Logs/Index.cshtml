@@ -58,7 +58,7 @@
                 </div>
             </div> <!-- /.card-body -->
             <div class="card-footer">
-                <button type="reset" class="float-left btn btn-default">Clear</button>
+                <button type="reset" class="float-left btn btn-default" id="clear-search-input">Clear</button>
                 <button type="button" class="float-right btn btn-success" onclick="checkSearchInput()">Search</button>
             </div> <!-- /.card-footer -->
     </div>
@@ -82,6 +82,7 @@
                                 <tr>
                                     <th data-toggle="tooltip" title="Logged time">Time</th>
                                     <th data-toggle="tooltip" title="Level of Logs">Serveity</th>
+                                    <th data-toggle="tooltip" title="Logged location">Loggers</th>
                                     <th data-toggle="tooltip" title="Logged location">Locations</th>
                                     <th data-toggle="tooltip" title="Message and Exceptions">Messages</th>
                                 </tr>
@@ -96,44 +97,47 @@
                                         var locations = "";
                                         if (item.log_mvc_action != null && item.log_mvc_action != "")
                                         {
-                                            if (item.log_filename != null && item.log_filename != "")
+                                            if (item.log_user_identity != null && item.log_user_identity!= "")
                                             {
-                                                if (item.log_user_identity != null && item.log_user_identity != "")
-                                                {
-                                                    locations = item.log_mvc_action + "-" + item.log_filename + ":" + item.log_linenumber + " [" + item.log_user_identity + "]";
-                                                }
-                                                else
-                                                {
-                                                    locations = item.log_mvc_action + "-" + item.log_filename + ":" + item.log_linenumber;
-                                                }
-                                            }
-                                            else
-                                            {
-                                                if (item.log_user_identity != null && item.log_user_identity != "")
+                                                if (item.log_linenumber != null && item.log_linenumber != "")
                                                 {
                                                     locations = item.log_mvc_action + ":" + item.log_linenumber + " [" + item.log_user_identity + "]";
-                                                }
-                                                else
+                                                } else
+                                                {
+                                                    locations = item.log_mvc_action + " [" + item.log_user_identity + "]";
+                                                } // check 3 variable
+                                            } else
+                                            {
+                                                if (item.log_linenumber != null && item.log_linenumber != "")
                                                 {
                                                     locations = item.log_mvc_action + ":" + item.log_linenumber;
                                                 }
-                                            }
+                                                else
+                                                {
+                                                    locations = "Action: " + item.log_mvc_action;
+                                                } // check 3 variable
+                                            } // check 2 variable
                                         }
-                                        else if (item.log_filename != null && item.log_filename != "")
+                                        else if (item.log_user_identity != null && item.log_user_identity != "")
                                         {
-                                            if (item.log_user_identity != null && item.log_user_identity != "")
+                                            if (item.log_linenumber != null && item.log_linenumber != "")
                                             {
-                                                locations = item.log_linenumber + " [" + item.log_user_identity + "]";
+                                                locations = "LOC: " + item.log_linenumber + " [" + item.log_user_identity + "]";
                                             }
                                             else
                                             {
-                                                locations = item.log_linenumber;
-                                            }
+                                                locations = "Identity User: " + item.log_user_identity;
+                                            } // check 2 variable
+                                        }
+                                        else if (item.log_linenumber != null && item.log_linenumber != "")
+                                        {
+                                            locations = "LOC: " + item.log_linenumber;
                                         }
                                         else
                                         {
                                             locations = "N/A";
-                                        } // For locations logs
+                                        } // end check locations
+
                                         <tr>
                                             <td><center>@item.log_datetime</center></td>
                                             @*<td><center>@(item.log_date + " " + item.log_time)</center></td>*@
@@ -159,6 +163,7 @@
                                                     <td class="text-center"><span class="logslevel"><span class="bg-gray-light">@item.log_level</span></span></td>
                                                 }
                                             }
+                                            <td>@item.log_logger</td>
                                             <td>@locations</td>
                                             <td>@item.log_message</td>
                                         </tr>
@@ -202,6 +207,7 @@
                                 <tr>
                                     <th class="disabled-sorting" data-toggle="tooltip" title="Logged time">Time</th>
                                     <th data-toggle="tooltip" title="Level of Logs">Serveity</th>
+                                    <th data-toggle="tooltip" title="Logged location">Loggers</th>
                                     <th data-toggle="tooltip" title="Logged location">Locations</th>
                                     <th data-toggle="tooltip" title="Message and Exceptions">Messages</th>
                                 </tr>
@@ -227,6 +233,10 @@
 <script src="~/plugins/jquery/jquery.min.js"></script>
 <script>
     $(document).ready(() => {
+
+        $('#clear-search-input').on('click', () => {
+            $(this).reset();
+        });
         // Check is has exception
         @if (ViewData["INFO"] != null) { @Html.Raw(ViewData["INFO"]) /* Swal funciton */ }
         @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ }
@@ -301,40 +311,40 @@
                             $('#showSearchLogs').DataTable().destroy() // Clear datatables
                             console.log(result.length)
                             let myArr = new Array(result.length)
-                            let dates = ''
                             let time = ''
                             var levelLable = ''
                             for (var i = 0; i < myArr.length; i++) {
-                                myArr[i] = new Array(5);
+                                myArr[i] = new Array(6);
                             } // Create array
                             for (let i = 0; i < result.length; i++) {
                                 let locations = "";
                                 if (result[i].log_mvc_action != null && result[i].log_mvc_action != "") {
-                                    if (result[i].log_filename != null && result[i].log_filename != "") {
-                                        if (result[i].log_user_identity != null && result[i].log_user_identity != "") {
-                                            locations = result[i].log_mvc_action + "-" + result[i].log_filename + ":" + result[i].log_linenumber + " [" + result[i].log_user_identity + "]";
-                                        } else {
-                                            locations = result[i].log_mvc_action + "-" + result[i].log_filename + ":" + result[i].log_linenumber;
-                                        }
-                                    }
-                                    else {
-                                        if (result[i].log_user_identity != null && result[i].log_user_identity != "") {
+                                    if (result[i].log_user_identity != null && result[i].log_user_identity != "") {
+                                        if (result[i].log_linenumber != null && result[i].log_linenumber != "") {
                                             locations = result[i].log_mvc_action + ":" + result[i].log_linenumber + " [" + result[i].log_user_identity + "]";
                                         } else {
-                                            locations = result[i].log_mvc_action + ":" + result[i].log_linenumber;
-                                        }
-                                    }
-                                }
-                                else if (result[i].log_filename != null && result[i].log_filename != "") {
-                                    if (result[i].log_user_identity != null && result[i].log_user_identity != "") {
-                                        locations = result[i].log_linenumber + " [" + result[i].log_user_identity + "]";
+                                            locations = result[i].log_mvc_action + " [" + result[i].log_user_identity + "]";
+                                        } // check 3 variable
                                     } else {
-                                        locations = result[i].log_linenumber;
-                                    }
+                                        if (result[i].log_linenumber != null && result[i].log_linenumber != "") {
+                                            locations = result[i].log_mvc_action + ":" + result[i].log_linenumber;
+                                        } else {
+                                            locations = "Actions: " + result[i].log_mvc_action;
+                                        } // check 3 variable
+                                    } // check 2 variable
                                 }
-                                else {
+                                else if (result[i].log_user_identity != null && result[i].log_user_identity != "")
+                                {
+                                    if (result[i].log_linenumber != null && result[i].log_linenumber != "") {
+                                        locations = "LOC: " + result[i].log_linenumber + " [" + result[i].log_user_identity + "]";
+                                    } else {
+                                        locations = "Identity User: " + result[i].log_user_identity;
+                                    } // check 3 variable
+                                } if (result[i].log_linenumber != null && result[i].log_linenumber != "") {
+                                    locations = "LOC:" + result[i].log_linenumber;
+                                } else {
                                     locations = "N/A";
-                                } // For locations logs
+                                } // End check locations
                                 if (result[i].log_level == "FATAL")
                                 {
                                     levelLable = `<td><span class="logslevel"><span class="bg-gradient-purple">${result[i].log_level}</span></span></td>`
@@ -356,11 +366,12 @@
                                     levelLable = `<td> <span class="logslevel"><span class="bg-gray-light">${result[i].log_level}</span></span></td>`
                                 } // for check level
                                 date = (result[i].log_datetime).substring(0, (result[i].log_datetime).indexOf('T'))
-                                time = (result[i].log_datetime).substring((result[i].log_datetime).indexOf('T') + 1)
+                                time = (result[i].log_datetime).substring((result[i].log_datetime).indexOf('T') + 1) // Calculate datetime
                                 myArr[i][0] = replaceDate(date) + ' ' + convertTime(time)
                                 myArr[i][1] = levelLable
-                                myArr[i][2] = locations
-                                myArr[i][3] = result[i].log_message
+                                myArr[i][2] = result[i].log_logger
+                                myArr[i][3] = locations
+                                myArr[i][4] = result[i].log_message
                             } // add data to array for add to datatables // console.log(myArr)
                             $('#showSearchLogs').DataTable({
                                 "paging": true,
@@ -374,15 +385,18 @@
                                 columns: [
                                     { title: "Time" },
                                     { title: "Serverity" },
+                                    { title: "Loggers" },
                                     { title: "Locations" },
                                     { title: "Messages" }
                                 ], "columnDefs": [
                                     { "className": "text-center", "targets": [0, 1] },
-                                    { "width": "20%", "targets": 0 }, { "width": "10%", "targets": 1 }, { "width": "30%", "targets": 2 }, { "width": "40%", "targets": 3 }
+                                    { "width": "15%", "targets": 0 }, { "width": "10%", "targets": 1 }
+                                    , { "width": "10%", "targets": 2 }, { "width": "25%", "targets": 3 }, { "width": "40%", "targets": 4 }
                                 ]
                             }); // Set datatables
                             console.log(`Successfully. ${result.length} items found.`)
                             toastr.success(`Successfully. ${result.length} items found.`)
+                            $('#showSearchLogs > thead > tr > th.disabled-sorting.sorting_asc.sorting_disabled.text-center').removeClass('sorting_as');
                         } else {
                             eval(result['messages']) // Excute js
                             console.log(`Error! ${result['text']}`);
