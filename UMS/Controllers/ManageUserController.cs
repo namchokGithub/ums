@@ -44,12 +44,12 @@ namespace UMS.Controllers
                 _accountContext = accountContext;
                 _editaccountContext = editaccountContext;
                 _signInManager = signInManager;
-                _logger.LogTrace("Start EditProfileController Constructor.");
+                _logger.LogTrace("Start ManageUserController Constructor.");
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                _logger.LogTrace("End EditProfileController Constructor.");
+                _logger.LogTrace("End ManageUserController Constructor.");
             }// End try catch
         } // End constructor
 
