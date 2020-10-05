@@ -42,7 +42,7 @@ namespace UMS.Areas.Identity.Pages.Account
             _logger = logger;
             _emailSender = emailSender;
             _logger.LogDebug("Start External Login model.");
-        }
+        } // End contructor
 
         [BindProperty]
         public InputModel Input { get; set; }

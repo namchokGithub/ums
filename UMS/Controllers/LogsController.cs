@@ -34,14 +34,14 @@ namespace UMS.Controllers
             {
                 _logger = logger;
                 _logsContext = logsContext;
-                _logger.LogTrace("Start Logs Controllerl.");
+                _logger.LogTrace("Start LogsController Constructor.");
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                _logger.LogTrace("End Logs Controllerl.");
+                _logger.LogTrace("End LogsController Constructor.");
             }// End try catch
-        } // End Consturctor
+        } // End Constructor
 
         /*
          * Name: Index
