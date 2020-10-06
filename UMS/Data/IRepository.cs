@@ -17,5 +17,7 @@ namespace UMS.Data
         void Add(T entity);
         void Update(T entity);
         void Delete(T entity);
+        void Dispose();
+        int Complete();
     } // End interface IRepository
 }

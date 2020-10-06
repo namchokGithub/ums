@@ -13,7 +13,7 @@ using UMS.Models;
 
 namespace UMS.Data
 {
-    interface ILogsRepository : IRepository<Logs>
+    public interface ILogsRepository : IRepository<Logs>
     {
         List<Logs> GetAll(int numofrow);
     } // End ILogsRepository

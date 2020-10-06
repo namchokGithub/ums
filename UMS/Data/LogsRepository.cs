@@ -16,22 +16,22 @@ namespace UMS.Data
 {
     public class LogsRepository : Repository<Logs>, ILogsRepository
     {
-        protected readonly LogsContext _logContext;
-        protected readonly ILogger<Logs> _logger;
-        public LogsRepository(LogsContext context, ILogger<Logs> logger) : base(context)
+        protected readonly AuthDbContext _logContext;
+
+        public LogsRepository(AuthDbContext context) : base(context)
         {
-            _logger = logger;
-        }
+            _logContext = context;
+        } // End constructor
 
         /*
          * Name: GetAll
          * Parameter: numofrow(int)
          * Description: Get all logs top by numofrow(int)
          */
-        public List<Logs> GetAll(int numofrow = 100)
+        public List<Logs> GetAll(int numofrow)
         {
-            _logger.LogDebug($"Getting top {numofrow} from all logs.");
             return _logContext.Logs.FromSqlRaw(@$"Exec dbo.ums_Get_all_log {numofrow}").ToList<Logs>();
         } // End GetAll
+
     } // End LogsRepository
 }

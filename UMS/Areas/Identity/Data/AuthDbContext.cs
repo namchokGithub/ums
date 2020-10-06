@@ -109,5 +109,7 @@ namespace UMS.Data
 
             _logger.LogTrace("End creating on model.");
         } // End OnModelCreating
+
+        public DbSet<Logs> Logs { get; set; }
     } // End AuthDbContext
 }

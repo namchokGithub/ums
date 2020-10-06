@@ -40,5 +40,14 @@ namespace UMS.Data
         {
             Context.Update<T>(entity);
         } // Update entity
+        public int Complete()
+        {
+            return Context.SaveChanges();
+        } // End commit
+
+        public void Dispose()
+        {
+            Context.Dispose();
+        } // End dispose
     } // End Repository
 }

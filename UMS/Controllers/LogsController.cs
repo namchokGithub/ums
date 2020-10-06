@@ -8,6 +8,8 @@ using Microsoft.Extensions.Logging;
 using static UMS.Controllers.ManageUserController;
 using UMS.Models;
 using System.Threading;
+using UMS.Data;
+using System.Collections.Generic;
 
 /*
  * Name: UMS.Controllers.LogsController
@@ -22,18 +24,19 @@ namespace UMS.Controllers
     {
         private readonly ILogger<LogsController> _logger;
         private readonly LogsContext _logsContext;
-
+        private readonly IUnitOfWork _unitOfWork;
         /*
          * Name: Logs
          * Parametor: none
          * Description: Constructor
          */
-        public LogsController(ILogger<LogsController> logger, LogsContext logsContext)
+        public LogsController(ILogger<LogsController> logger, LogsContext logsContext, AuthDbContext authDbContext)
         {
             try
             {
                 _logger = logger;
                 _logsContext = logsContext;
+                _unitOfWork = new UnitOfWork(authDbContext);
                 _logger.LogTrace("Start LogsController Constructor.");
             }
             catch (Exception e)
@@ -56,12 +59,9 @@ namespace UMS.Controllers
                 var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Find id
                 _logger.LogTrace("Find ID from first value.");
                 ViewData["UserId"] = UserId ?? throw new Exception("The user ID not found !."); // Set Data to view
-
-                int numofrow = 100; // Get top log form database
-                string sqlGetallLog = @$"Exec dbo.ums_Get_all_log {numofrow}"; // Set sql text for get data
-                _logger.LogDebug($"Getting top {numofrow} from all logs.");
-                var item = _logsContext.Logs.FromSqlRaw(sqlGetallLog).ToList<Logs>();
-
+                _logger.LogDebug($"Getting top 100 from all logs.");
+                var item = _unitOfWork.Logs.GetAll(100);
+                _unitOfWork.Logs.Dispose();
                 ViewData["Logs"] = item ?? throw new Exception("Calling a method on a null object reference."); // Set result to view and check null value
                 ViewData["INFO"] = @$"toastr.info('Select lasted logs.');"; // Message for result query
                 _logger.LogTrace("End Index.");
