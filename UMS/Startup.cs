@@ -66,11 +66,6 @@ namespace UMS
             services.AddDbContext<EditAccountContext>(options =>
                     options.UseSqlServer(
                        Configuration.GetConnectionString("AuthDbContextConnection")));
-            services.AddDbContext<LogsContext>(options =>
-                    options.UseSqlServer(
-                       Configuration.GetConnectionString("AuthDbContextConnection")));
-
-            // Set connect database
             services.AddDbContext<EditProfileContext>(options =>
                     options.UseSqlServer(
                        Configuration.GetConnectionString("AuthDbContextConnection")));
