@@ -53,9 +53,18 @@ namespace UMS.Controllers
         } // End consturcter
 
         /*
+         * Name: ~AccountController
+         * Parametor: none
+         * Description: Deconstructor
+         */
+        ~AccountController()
+        {
+            _logger.LogTrace("End Account Controller.");
+        } // End Deconstructor
+
+        /*
          * Name: Index
          * Parameter: none
-         * Description: none
          */
         public IActionResult Index()
         {
