@@ -13,9 +13,9 @@ namespace UMS.Data
 {
     public interface IRepository<T> where T : class
     {
-        Task<T> Get(string id);
-        Task<T> Add(T entity);
-        Task<T> Update(T entity);
-        Task<T> Delete(string id);
+        T Get(string id);
+        void Add(T entity);
+        void Update(T entity);
+        void Delete(string id);
     } // End interface IRepository
 }
