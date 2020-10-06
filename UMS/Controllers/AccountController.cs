@@ -21,12 +21,15 @@ namespace UMS.Controllers
     [Authorize]
     public class AccountController : Controller
     {
-        // Variable for manager
         private readonly ILogger<AccountController> _logger;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly ManageUserController _manageUserController;
-
+        /*
+         * Name: AccountController
+         * Parameter: userManager, accountContext, editaccountContext, loggerManager, signInManager, logger
+         * Description: Constructor
+         */
         public AccountController(UserManager<ApplicationUser> userManager,
             AccountContext accountContext,
             EditAccountContext editaccountContext,
@@ -40,19 +43,28 @@ namespace UMS.Controllers
                 _signInManager = signInManager;
                 _userManager = userManager;
                 _manageUserController = new ManageUserController(accountContext, editaccountContext, loggerManager, _signInManager);
-                _logger.LogTrace("Start AccountController Constructor.");
+                _logger.LogTrace("Start Account Controller.");
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                _logger.LogTrace("End AccountController Constructor.");
+                _logger.LogTrace("End Account Controller.");
             }// End try catch
         } // End consturcter
 
         /*
+         * Name: ~AccountController
+         * Parametor: none
+         * Description: Deconstructor
+         */
+        ~AccountController()
+        {
+            _logger.LogTrace("End Account Controller.");
+        } // End Deconstructor
+
+        /*
          * Name: Index
          * Parameter: none
-         * Description: none
          */
         public IActionResult Index()
         {

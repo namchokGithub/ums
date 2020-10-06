@@ -311,3 +311,48 @@ Error Number:-1,State:0,Class:20
 2020/10/05 14:41:26.521 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
 2020/10/05 14:41:26.568 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:78 | Get all active user.
 2020/10/05 14:41:37.752 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/10/05 16:25:52.950 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/05 16:25:53.604 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/05 16:25:53.657 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/05 16:25:53.657 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/05 16:26:00.509 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:58 | Welcome usermanagement2020@gmail.com to UMS.
+2020/10/05 16:26:11.471 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:63 | Getting top 100 from all logs.
+2020/10/05 16:26:29.320 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/10/05 16:26:29.332 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/05 16:26:29.411 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:78 | Get all active user.
+2020/10/05 16:26:31.085 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] getUser:AccountContext.cs:24 | Start Account Context.
+2020/10/05 16:26:31.102 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] getUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/05 16:26:31.243 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] getUser:ManageUserController.cs:113 | Get user by ID
+2020/10/05 16:31:36.143 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/05 16:31:36.630 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/05 16:31:36.659 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/05 16:31:36.681 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/05 16:31:37.703 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:58 | Welcome usermanagement2020@gmail.com to UMS.
+2020/10/05 16:43:23.182 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:67 | Get user by ID.
+2020/10/05 16:43:34.431 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/10/05 16:43:34.453 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/05 16:43:34.627 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:78 | Get all active user.
+2020/10/05 16:43:35.846 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:63 | Getting top 100 from all logs.
+2020/10/05 16:43:42.505 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/10/05 16:43:42.530 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/05 16:43:42.620 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:78 | Get all active user.
+2020/10/05 16:43:44.503 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:63 | Getting top 100 from all logs.
+2020/10/05 16:43:52.493 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/10/05 16:43:52.511 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/05 16:43:52.582 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:78 | Get all active user.
+2020/10/05 16:43:57.522 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] getUser:AccountContext.cs:24 | Start Account Context.
+2020/10/05 16:43:57.532 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] getUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/05 16:43:57.616 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] getUser:ManageUserController.cs:113 | Get user by ID
+2020/10/05 16:44:00.907 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] getUser:AccountContext.cs:24 | Start Account Context.
+2020/10/05 16:44:00.907 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] getUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/05 16:44:00.968 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] getUser:ManageUserController.cs:113 | Get user by ID
+2020/10/05 16:44:05.955 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] editUser:AccountContext.cs:24 | Start Account Context.
+2020/10/05 16:44:05.997 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] editUser:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/05 16:44:06.036 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] editUser:ManageUserController.cs:151 | Set role ID.
+2020/10/05 16:44:06.123 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] editUser:ManageUserController.cs:163 | Update name'user.
+2020/10/05 16:44:06.247 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] editUser:ManageUserController.cs:165 | Update role'user.
+2020/10/05 16:44:06.267 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] editUser:ManageUserController.cs:173 | Save changes: Update user.
+2020/10/05 16:44:06.302 [DEBUG] [UMS.Models.AccountContext] [usermanagement2020@gmail.com] Index:AccountContext.cs:24 | Start Account Context.
+2020/10/05 16:44:06.302 [DEBUG] [UMS.Models.EditAccountContext] [usermanagement2020@gmail.com] Index:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/05 16:44:06.333 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:78 | Get all active user.
+2020/10/05 16:44:15.520 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:63 | Getting top 100 from all logs.

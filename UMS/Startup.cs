@@ -13,6 +13,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using UMS.Controllers;
+using UMS.Data;
 using UMS.Models;
 
 /*
@@ -44,6 +46,11 @@ namespace UMS
          */
         public void ConfigureServices(IServiceCollection services)
         {
+            // Repository
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped<ILogsRepository, LogsRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
             // Cookies
             services.ConfigureApplicationCookie(o =>
             {
@@ -59,11 +66,6 @@ namespace UMS
             services.AddDbContext<EditAccountContext>(options =>
                     options.UseSqlServer(
                        Configuration.GetConnectionString("AuthDbContextConnection")));
-            services.AddDbContext<LogsContext>(options =>
-                    options.UseSqlServer(
-                       Configuration.GetConnectionString("AuthDbContextConnection")));
-
-            // Set connect database
             services.AddDbContext<EditProfileContext>(options =>
                     options.UseSqlServer(
                        Configuration.GetConnectionString("AuthDbContextConnection")));

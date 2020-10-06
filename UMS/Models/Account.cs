@@ -32,8 +32,8 @@ namespace UMS.Models
 
         public string acc_SecurityStamp { set; get; } // ---
 
-        public string acc_ConcurrencyStamp { set; get; } // ---
-        
+        public string acc_ConcurrencyStamp { set; get; } // ตรวจสอบการแก้ไขว่าแก้ไขล่าสุดเมื่อใด
+
         [Required(ErrorMessage = "Please enter first name")]
         [DataType(DataType.Text, ErrorMessage = "The first name have only text. No number no space, digit and special charactor")]
         [Display(Name = "First Name")]
