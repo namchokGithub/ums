@@ -43,7 +43,7 @@
                     </div>
                     <div class="form-group">
                         <label asp-for="Input.Email"></label><code>*</code>
-                        <input asp-for="Input.Email" class="form-control" onblur="checkUser()" onmouseout="checkUser()" id="acc_Email" />
+                        <input asp-for="Input.Email" class="form-control" onblur="checkUser()" id="acc_Email" />
                         <span asp-validation-for="Input.Email" class="text-danger"></span>
                         <span class="text-danger d-none" id="alert_acc_email">This email has been exist.</span>
                     </div>

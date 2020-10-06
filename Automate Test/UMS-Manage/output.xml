@@ -1,0 +1,1147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.1 on win32)" generated="20201001 12:48:15.140" rpa="false">
+<suite id="s1" name="UMS-Manage" source="C:\Users\Namchok\Desktop\สหกิจ\ums\Automate Test\UMS-Manage\UMS-Manage.robot">
+<test id="s1-t1" name="UMS-Manage-01-01">
+<kw name="GIVEN Open web browser">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${ums_url}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20201001 12:48:15.325" level="INFO">Opening browser 'chrome' to base url 'https://localhost:44346/'.</msg>
+<status status="PASS" starttime="20201001 12:48:15.325" endtime="20201001 12:48:19.166"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201001 12:48:19.166" endtime="20201001 12:48:21.322"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:15.325" endtime="20201001 12:48:21.322"></status>
+</kw>
+<kw name="WHEN Login with &quot;usermanagement2020@gmail.com&quot; &quot;123qweQ!&quot;">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ums_login_input_email}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:21.324" level="INFO">Typing text 'usermanagement2020@gmail.com' into text field 'xpath=//*[@id="acc_Email"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:21.323" endtime="20201001 12:48:21.426"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ums_login_input_password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:21.426" level="INFO">Typing password into text field 'xpath=//*[@id="acc_Password"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:21.426" endtime="20201001 12:48:21.505"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201001 12:48:22.509" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:48:21.505" endtime="20201001 12:48:22.509"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ums_btn_login}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:22.509" level="INFO">Clicking element 'xpath=//*[@id="account"]/div[3]/div[2]/button'.</msg>
+<status status="PASS" starttime="20201001 12:48:22.509" endtime="20201001 12:48:22.796"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:21.323" endtime="20201001 12:48:22.796"></status>
+</kw>
+<kw name="AND Go to Manage User">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${ums_manage_url}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:22.797" level="INFO">Opening url 'https://localhost:44346/ManageUser'</msg>
+<status status="PASS" starttime="20201001 12:48:22.797" endtime="20201001 12:48:22.971"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:22.797" endtime="20201001 12:48:22.971"></status>
+</kw>
+<kw name="AND Edit">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_btn_edit}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:22.972" level="INFO">Clicking element 'xpath=//*[@id="showAllUserTable"]/tbody/tr[1]/td[7]/button[1]'.</msg>
+<status status="PASS" starttime="20201001 12:48:22.972" endtime="20201001 12:48:23.024"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201001 12:48:24.035" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:48:23.024" endtime="20201001 12:48:24.035"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:22.972" endtime="20201001 12:48:24.035"></status>
+</kw>
+<kw name="AND Fill firstname &quot;Athiruj&quot;">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_input_name}</arg>
+<arg>${firstname}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:24.036" level="INFO">Typing text 'Athiruj' into text field 'xpath=//*[@id="acc_Firstname"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:24.036" endtime="20201001 12:48:24.120"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:24.036" endtime="20201001 12:48:24.120"></status>
+</kw>
+<kw name="AND Fill lastname &quot;LastAthiruj&quot;">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_input_lastname}</arg>
+<arg>${lastname}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:24.121" level="INFO">Typing text 'LastAthiruj' into text field 'xpath=//*[@id="acc_Lastname"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:24.121" endtime="20201001 12:48:24.205"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:24.121" endtime="20201001 12:48:24.205"></status>
+</kw>
+<kw name="AND Select role &quot;2&quot;">
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>${manage_input_role}</arg>
+<arg>${role_value}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:24.206" level="INFO">Selecting options from selection list 'xpath=//*[@id="acc_RoleId"]' by value 2.</msg>
+<status status="PASS" starttime="20201001 12:48:24.206" endtime="20201001 12:48:24.244"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:24.205" endtime="20201001 12:48:24.244"></status>
+</kw>
+<kw name="AND Save edit user">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201001 12:48:25.257" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:48:24.245" endtime="20201001 12:48:25.257"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_btn_edit_save}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:25.257" level="INFO">Clicking element 'xpath=//*[@id="EditUser"]/div/div/div[3]/button[2]'.</msg>
+<status status="PASS" starttime="20201001 12:48:25.257" endtime="20201001 12:48:25.486"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:24.245" endtime="20201001 12:48:25.486"></status>
+</kw>
+<kw name="THEN The alert message must say &quot;Update user account successfully!&quot;">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${message}</arg>
+</arguments>
+<status status="PASS" starttime="20201001 12:48:25.487" endtime="20201001 12:48:25.499"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:25.486" endtime="20201001 12:48:25.499"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201001 12:48:25.500" endtime="20201001 12:48:27.619"></status>
+</kw>
+<doc>กรอกชื่อจริง นามสกุล และเลือกบทบาทผู้ใช้งานถูกต้อง</doc>
+<tags>
+<tag>PASS</tag>
+</tags>
+<status status="PASS" starttime="20201001 12:48:15.323" endtime="20201001 12:48:27.621" critical="yes"></status>
+</test>
+<test id="s1-t2" name="UMS-Manage-01-02">
+<kw name="GIVEN Open web browser">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${ums_url}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20201001 12:48:27.629" level="INFO">Opening browser 'chrome' to base url 'https://localhost:44346/'.</msg>
+<status status="PASS" starttime="20201001 12:48:27.629" endtime="20201001 12:48:31.276"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201001 12:48:31.276" endtime="20201001 12:48:33.414"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:27.629" endtime="20201001 12:48:33.414"></status>
+</kw>
+<kw name="WHEN Login with &quot;usermanagement2020@gmail.com&quot; &quot;123qweQ!&quot;">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ums_login_input_email}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:33.415" level="INFO">Typing text 'usermanagement2020@gmail.com' into text field 'xpath=//*[@id="acc_Email"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:33.415" endtime="20201001 12:48:33.510"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ums_login_input_password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:33.510" level="INFO">Typing password into text field 'xpath=//*[@id="acc_Password"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:33.510" endtime="20201001 12:48:33.584"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201001 12:48:34.598" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:48:33.584" endtime="20201001 12:48:34.598"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ums_btn_login}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:34.598" level="INFO">Clicking element 'xpath=//*[@id="account"]/div[3]/div[2]/button'.</msg>
+<status status="PASS" starttime="20201001 12:48:34.598" endtime="20201001 12:48:34.898"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:33.415" endtime="20201001 12:48:34.898"></status>
+</kw>
+<kw name="AND Go to Manage User">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${ums_manage_url}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:34.899" level="INFO">Opening url 'https://localhost:44346/ManageUser'</msg>
+<status status="PASS" starttime="20201001 12:48:34.899" endtime="20201001 12:48:35.060"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:34.899" endtime="20201001 12:48:35.061"></status>
+</kw>
+<kw name="AND Edit">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_btn_edit}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:35.062" level="INFO">Clicking element 'xpath=//*[@id="showAllUserTable"]/tbody/tr[1]/td[7]/button[1]'.</msg>
+<status status="PASS" starttime="20201001 12:48:35.062" endtime="20201001 12:48:35.108"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201001 12:48:36.109" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:48:35.108" endtime="20201001 12:48:36.109"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:35.061" endtime="20201001 12:48:36.109"></status>
+</kw>
+<kw name="AND Fill firstname &quot;!Athiruj&quot;">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_input_name}</arg>
+<arg>${firstname}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:36.110" level="INFO">Typing text '!Athiruj' into text field 'xpath=//*[@id="acc_Firstname"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:36.110" endtime="20201001 12:48:36.189"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:36.110" endtime="20201001 12:48:36.189"></status>
+</kw>
+<kw name="AND Fill lastname &quot;!LastAthiruj&quot;">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_input_lastname}</arg>
+<arg>${lastname}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:36.189" level="INFO">Typing text '!LastAthiruj' into text field 'xpath=//*[@id="acc_Lastname"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:36.189" endtime="20201001 12:48:36.270"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:36.189" endtime="20201001 12:48:36.271"></status>
+</kw>
+<kw name="AND Select role &quot;2&quot;">
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>${manage_input_role}</arg>
+<arg>${role_value}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:36.271" level="INFO">Selecting options from selection list 'xpath=//*[@id="acc_RoleId"]' by value 2.</msg>
+<status status="PASS" starttime="20201001 12:48:36.271" endtime="20201001 12:48:36.309"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:36.271" endtime="20201001 12:48:36.309"></status>
+</kw>
+<kw name="AND Save edit user">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201001 12:48:37.318" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:48:36.310" endtime="20201001 12:48:37.318"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_btn_edit_save}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:37.318" level="INFO">Clicking element 'xpath=//*[@id="EditUser"]/div/div/div[3]/button[2]'.</msg>
+<status status="PASS" starttime="20201001 12:48:37.318" endtime="20201001 12:48:37.360"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:36.310" endtime="20201001 12:48:37.360"></status>
+</kw>
+<kw name="THEN The alert message must say &quot;The First name can not be blank and must only character.&quot;">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${message}</arg>
+</arguments>
+<status status="PASS" starttime="20201001 12:48:37.361" endtime="20201001 12:48:37.373"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:37.361" endtime="20201001 12:48:37.374"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201001 12:48:37.374" endtime="20201001 12:48:39.487"></status>
+</kw>
+<doc>กรอกชื่อจริง นามสกุล และเลือกบทบาทผู้ใช้งานไม่ถูกต้อง</doc>
+<tags>
+<tag>FAILS</tag>
+</tags>
+<status status="PASS" starttime="20201001 12:48:27.626" endtime="20201001 12:48:39.488" critical="yes"></status>
+</test>
+<test id="s1-t3" name="UMS-Manage-01-03">
+<kw name="GIVEN Open web browser">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${ums_url}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20201001 12:48:39.495" level="INFO">Opening browser 'chrome' to base url 'https://localhost:44346/'.</msg>
+<status status="PASS" starttime="20201001 12:48:39.495" endtime="20201001 12:48:43.218"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201001 12:48:43.218" endtime="20201001 12:48:45.375"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:39.495" endtime="20201001 12:48:45.375"></status>
+</kw>
+<kw name="WHEN Login with &quot;usermanagement2020@gmail.com&quot; &quot;123qweQ!&quot;">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ums_login_input_email}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:45.376" level="INFO">Typing text 'usermanagement2020@gmail.com' into text field 'xpath=//*[@id="acc_Email"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:45.376" endtime="20201001 12:48:45.470"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ums_login_input_password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:45.470" level="INFO">Typing password into text field 'xpath=//*[@id="acc_Password"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:45.470" endtime="20201001 12:48:45.544"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201001 12:48:46.551" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:48:45.544" endtime="20201001 12:48:46.551"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ums_btn_login}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:46.551" level="INFO">Clicking element 'xpath=//*[@id="account"]/div[3]/div[2]/button'.</msg>
+<status status="PASS" starttime="20201001 12:48:46.551" endtime="20201001 12:48:46.820"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:45.376" endtime="20201001 12:48:46.820"></status>
+</kw>
+<kw name="AND Go to Manage User">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${ums_manage_url}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:46.821" level="INFO">Opening url 'https://localhost:44346/ManageUser'</msg>
+<status status="PASS" starttime="20201001 12:48:46.821" endtime="20201001 12:48:46.989"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:46.821" endtime="20201001 12:48:46.989"></status>
+</kw>
+<kw name="AND Edit">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_btn_edit}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:46.991" level="INFO">Clicking element 'xpath=//*[@id="showAllUserTable"]/tbody/tr[1]/td[7]/button[1]'.</msg>
+<status status="PASS" starttime="20201001 12:48:46.990" endtime="20201001 12:48:47.046"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201001 12:48:48.055" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:48:47.046" endtime="20201001 12:48:48.055"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:46.990" endtime="20201001 12:48:48.055"></status>
+</kw>
+<kw name="AND Fill firstname &quot;!Athiruj&quot;">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_input_name}</arg>
+<arg>${firstname}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:48.056" level="INFO">Typing text '!Athiruj' into text field 'xpath=//*[@id="acc_Firstname"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:48.056" endtime="20201001 12:48:48.138"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:48.056" endtime="20201001 12:48:48.138"></status>
+</kw>
+<kw name="AND Fill lastname &quot;LastAthiruj&quot;">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_input_lastname}</arg>
+<arg>${lastname}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:48.139" level="INFO">Typing text 'LastAthiruj' into text field 'xpath=//*[@id="acc_Lastname"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:48.139" endtime="20201001 12:48:48.218"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:48.138" endtime="20201001 12:48:48.218"></status>
+</kw>
+<kw name="AND Save edit user">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201001 12:48:49.219" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:48:48.219" endtime="20201001 12:48:49.219"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_btn_edit_save}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:49.219" level="INFO">Clicking element 'xpath=//*[@id="EditUser"]/div/div/div[3]/button[2]'.</msg>
+<status status="PASS" starttime="20201001 12:48:49.219" endtime="20201001 12:48:49.268"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:48.219" endtime="20201001 12:48:49.268"></status>
+</kw>
+<kw name="THEN The alert message must say &quot;The First name can not be blank and must only character.&quot;">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${message}</arg>
+</arguments>
+<status status="PASS" starttime="20201001 12:48:49.270" endtime="20201001 12:48:49.284"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:49.269" endtime="20201001 12:48:49.284"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201001 12:48:49.285" endtime="20201001 12:48:51.406"></status>
+</kw>
+<doc>กรอกชื่อจริงไม่ถูกต้อง</doc>
+<tags>
+<tag>FAILS</tag>
+</tags>
+<status status="PASS" starttime="20201001 12:48:39.493" endtime="20201001 12:48:51.407" critical="yes"></status>
+</test>
+<test id="s1-t4" name="UMS-Manage-01-04">
+<kw name="GIVEN Open web browser">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${ums_url}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20201001 12:48:51.413" level="INFO">Opening browser 'chrome' to base url 'https://localhost:44346/'.</msg>
+<status status="PASS" starttime="20201001 12:48:51.413" endtime="20201001 12:48:55.035"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201001 12:48:55.035" endtime="20201001 12:48:57.217"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:51.413" endtime="20201001 12:48:57.217"></status>
+</kw>
+<kw name="WHEN Login with &quot;usermanagement2020@gmail.com&quot; &quot;123qweQ!&quot;">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ums_login_input_email}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:57.219" level="INFO">Typing text 'usermanagement2020@gmail.com' into text field 'xpath=//*[@id="acc_Email"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:57.218" endtime="20201001 12:48:57.309"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ums_login_input_password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:57.309" level="INFO">Typing password into text field 'xpath=//*[@id="acc_Password"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:57.309" endtime="20201001 12:48:57.384"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201001 12:48:58.396" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:48:57.384" endtime="20201001 12:48:58.396"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ums_btn_login}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:58.396" level="INFO">Clicking element 'xpath=//*[@id="account"]/div[3]/div[2]/button'.</msg>
+<status status="PASS" starttime="20201001 12:48:58.396" endtime="20201001 12:48:58.675"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:57.218" endtime="20201001 12:48:58.675"></status>
+</kw>
+<kw name="AND Go to Manage User">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${ums_manage_url}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:58.677" level="INFO">Opening url 'https://localhost:44346/ManageUser'</msg>
+<status status="PASS" starttime="20201001 12:48:58.676" endtime="20201001 12:48:58.841"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:58.676" endtime="20201001 12:48:58.841"></status>
+</kw>
+<kw name="AND Edit">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_btn_edit}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:58.842" level="INFO">Clicking element 'xpath=//*[@id="showAllUserTable"]/tbody/tr[1]/td[7]/button[1]'.</msg>
+<status status="PASS" starttime="20201001 12:48:58.842" endtime="20201001 12:48:58.896"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201001 12:48:59.904" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:48:58.897" endtime="20201001 12:48:59.904"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:58.842" endtime="20201001 12:48:59.904"></status>
+</kw>
+<kw name="AND Fill firstname &quot;Athiruj&quot;">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_input_name}</arg>
+<arg>${firstname}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:59.906" level="INFO">Typing text 'Athiruj' into text field 'xpath=//*[@id="acc_Firstname"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:59.905" endtime="20201001 12:48:59.984"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:59.905" endtime="20201001 12:48:59.984"></status>
+</kw>
+<kw name="AND Fill lastname &quot;!LastAthiruj&quot;">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_input_lastname}</arg>
+<arg>${lastname}</arg>
+</arguments>
+<msg timestamp="20201001 12:48:59.985" level="INFO">Typing text '!LastAthiruj' into text field 'xpath=//*[@id="acc_Lastname"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:59.985" endtime="20201001 12:49:00.081"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:48:59.985" endtime="20201001 12:49:00.081"></status>
+</kw>
+<kw name="AND Save edit user">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201001 12:49:01.086" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:49:00.082" endtime="20201001 12:49:01.086"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_btn_edit_save}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:01.086" level="INFO">Clicking element 'xpath=//*[@id="EditUser"]/div/div/div[3]/button[2]'.</msg>
+<status status="PASS" starttime="20201001 12:49:01.086" endtime="20201001 12:49:01.127"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:00.081" endtime="20201001 12:49:01.127"></status>
+</kw>
+<kw name="THEN The alert message must say &quot;The Last name can not be blank and must only character.&quot;">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${message}</arg>
+</arguments>
+<status status="PASS" starttime="20201001 12:49:01.129" endtime="20201001 12:49:01.143"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:01.129" endtime="20201001 12:49:01.143"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201001 12:49:01.143" endtime="20201001 12:49:03.253"></status>
+</kw>
+<doc>กรอกนามสกุลไม่ถูกต้อง</doc>
+<tags>
+<tag>FAILS</tag>
+</tags>
+<status status="PASS" starttime="20201001 12:48:51.411" endtime="20201001 12:49:03.254" critical="yes"></status>
+</test>
+<test id="s1-t5" name="UMS-Manage-01-05">
+<kw name="GIVEN Open web browser">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${ums_url}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20201001 12:49:03.261" level="INFO">Opening browser 'chrome' to base url 'https://localhost:44346/'.</msg>
+<status status="PASS" starttime="20201001 12:49:03.261" endtime="20201001 12:49:07.097"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201001 12:49:07.097" endtime="20201001 12:49:09.254"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:03.261" endtime="20201001 12:49:09.254"></status>
+</kw>
+<kw name="WHEN Login with &quot;usermanagement2020@gmail.com&quot; &quot;123qweQ!&quot;">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ums_login_input_email}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:09.256" level="INFO">Typing text 'usermanagement2020@gmail.com' into text field 'xpath=//*[@id="acc_Email"]'.</msg>
+<status status="PASS" starttime="20201001 12:49:09.255" endtime="20201001 12:49:09.354"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ums_login_input_password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:09.354" level="INFO">Typing password into text field 'xpath=//*[@id="acc_Password"]'.</msg>
+<status status="PASS" starttime="20201001 12:49:09.354" endtime="20201001 12:49:09.433"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201001 12:49:10.440" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:49:09.433" endtime="20201001 12:49:10.440"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ums_btn_login}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:10.440" level="INFO">Clicking element 'xpath=//*[@id="account"]/div[3]/div[2]/button'.</msg>
+<status status="PASS" starttime="20201001 12:49:10.440" endtime="20201001 12:49:10.848"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:09.255" endtime="20201001 12:49:10.848"></status>
+</kw>
+<kw name="AND Go to Manage User">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${ums_manage_url}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:10.850" level="INFO">Opening url 'https://localhost:44346/ManageUser'</msg>
+<status status="PASS" starttime="20201001 12:49:10.850" endtime="20201001 12:49:11.015"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:10.849" endtime="20201001 12:49:11.015"></status>
+</kw>
+<kw name="AND Edit">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_btn_edit}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:11.016" level="INFO">Clicking element 'xpath=//*[@id="showAllUserTable"]/tbody/tr[1]/td[7]/button[1]'.</msg>
+<status status="PASS" starttime="20201001 12:49:11.016" endtime="20201001 12:49:11.065"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201001 12:49:12.074" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:49:11.065" endtime="20201001 12:49:12.074"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:11.016" endtime="20201001 12:49:12.074"></status>
+</kw>
+<kw name="AND Fill firstname &quot;Athiruj&quot;">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_input_name}</arg>
+<arg>${firstname}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:12.075" level="INFO">Typing text 'Athiruj' into text field 'xpath=//*[@id="acc_Firstname"]'.</msg>
+<status status="PASS" starttime="20201001 12:49:12.075" endtime="20201001 12:49:12.160"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:12.075" endtime="20201001 12:49:12.160"></status>
+</kw>
+<kw name="AND Fill lastname &quot; &quot;">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_input_lastname}</arg>
+<arg>${lastname}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:12.161" level="INFO">Typing text ' ' into text field 'xpath=//*[@id="acc_Lastname"]'.</msg>
+<status status="PASS" starttime="20201001 12:49:12.161" endtime="20201001 12:49:12.231"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:12.161" endtime="20201001 12:49:12.231"></status>
+</kw>
+<kw name="AND Save edit user">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201001 12:49:13.239" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:49:12.232" endtime="20201001 12:49:13.239"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_btn_edit_save}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:13.239" level="INFO">Clicking element 'xpath=//*[@id="EditUser"]/div/div/div[3]/button[2]'.</msg>
+<status status="PASS" starttime="20201001 12:49:13.239" endtime="20201001 12:49:13.278"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:12.231" endtime="20201001 12:49:13.278"></status>
+</kw>
+<kw name="THEN The alert message must say &quot;The Last name can not be blank and must only character.&quot;">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${message}</arg>
+</arguments>
+<status status="PASS" starttime="20201001 12:49:13.279" endtime="20201001 12:49:13.290"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:13.279" endtime="20201001 12:49:13.290"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201001 12:49:13.291" endtime="20201001 12:49:15.417"></status>
+</kw>
+<doc>กรอกชื่อจริง และเลือกบทบาทผู้ใช้งาน แต่ไม่กรอกนามสกุล</doc>
+<tags>
+<tag>FAILS</tag>
+</tags>
+<status status="PASS" starttime="20201001 12:49:03.258" endtime="20201001 12:49:15.418" critical="yes"></status>
+</test>
+<test id="s1-t6" name="UMS-Manage-01-06">
+<kw name="GIVEN Open web browser">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${ums_url}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20201001 12:49:15.424" level="INFO">Opening browser 'chrome' to base url 'https://localhost:44346/'.</msg>
+<status status="PASS" starttime="20201001 12:49:15.424" endtime="20201001 12:49:19.187"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201001 12:49:19.187" endtime="20201001 12:49:21.343"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:15.424" endtime="20201001 12:49:21.343"></status>
+</kw>
+<kw name="WHEN Login with &quot;usermanagement2020@gmail.com&quot; &quot;123qweQ!&quot;">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ums_login_input_email}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:21.344" level="INFO">Typing text 'usermanagement2020@gmail.com' into text field 'xpath=//*[@id="acc_Email"]'.</msg>
+<status status="PASS" starttime="20201001 12:49:21.344" endtime="20201001 12:49:21.441"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ums_login_input_password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:21.442" level="INFO">Typing password into text field 'xpath=//*[@id="acc_Password"]'.</msg>
+<status status="PASS" starttime="20201001 12:49:21.441" endtime="20201001 12:49:21.515"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201001 12:49:22.523" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:49:21.515" endtime="20201001 12:49:22.523"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ums_btn_login}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:22.523" level="INFO">Clicking element 'xpath=//*[@id="account"]/div[3]/div[2]/button'.</msg>
+<status status="PASS" starttime="20201001 12:49:22.523" endtime="20201001 12:49:22.824"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:21.344" endtime="20201001 12:49:22.824"></status>
+</kw>
+<kw name="AND Go to Manage User">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${ums_manage_url}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:22.825" level="INFO">Opening url 'https://localhost:44346/ManageUser'</msg>
+<status status="PASS" starttime="20201001 12:49:22.825" endtime="20201001 12:49:22.993"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:22.825" endtime="20201001 12:49:22.993"></status>
+</kw>
+<kw name="AND Edit">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_btn_edit}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:22.994" level="INFO">Clicking element 'xpath=//*[@id="showAllUserTable"]/tbody/tr[1]/td[7]/button[1]'.</msg>
+<status status="PASS" starttime="20201001 12:49:22.994" endtime="20201001 12:49:23.040"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201001 12:49:24.056" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:49:23.040" endtime="20201001 12:49:24.056"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:22.994" endtime="20201001 12:49:24.056"></status>
+</kw>
+<kw name="AND Fill firstname &quot; &quot;">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_input_name}</arg>
+<arg>${firstname}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:24.057" level="INFO">Typing text ' ' into text field 'xpath=//*[@id="acc_Firstname"]'.</msg>
+<status status="PASS" starttime="20201001 12:49:24.057" endtime="20201001 12:49:24.130"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:24.057" endtime="20201001 12:49:24.131"></status>
+</kw>
+<kw name="AND Fill lastname &quot;LastAthiruj&quot;">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_input_lastname}</arg>
+<arg>${lastname}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:24.132" level="INFO">Typing text 'LastAthiruj' into text field 'xpath=//*[@id="acc_Lastname"]'.</msg>
+<status status="PASS" starttime="20201001 12:49:24.132" endtime="20201001 12:49:24.213"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:24.131" endtime="20201001 12:49:24.213"></status>
+</kw>
+<kw name="AND Save edit user">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201001 12:49:25.216" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:49:24.214" endtime="20201001 12:49:25.216"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_btn_edit_save}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:25.216" level="INFO">Clicking element 'xpath=//*[@id="EditUser"]/div/div/div[3]/button[2]'.</msg>
+<status status="PASS" starttime="20201001 12:49:25.216" endtime="20201001 12:49:25.264"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:24.214" endtime="20201001 12:49:25.264"></status>
+</kw>
+<kw name="THEN The alert message must say &quot;The First name can not be blank and must only character.&quot;">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${message}</arg>
+</arguments>
+<status status="PASS" starttime="20201001 12:49:25.267" endtime="20201001 12:49:25.279"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:25.266" endtime="20201001 12:49:25.279"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201001 12:49:25.279" endtime="20201001 12:49:28.119"></status>
+</kw>
+<doc>กรอกนามสกุล และเลือกบทบาทผู้ใช้งาน แต่ไม่กรอกชื่อจริง</doc>
+<tags>
+<tag>FAILS</tag>
+</tags>
+<status status="PASS" starttime="20201001 12:49:15.421" endtime="20201001 12:49:28.120" critical="yes"></status>
+</test>
+<test id="s1-t7" name="UMS-Manage-02-01">
+<kw name="GIVEN Open web browser">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${ums_url}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20201001 12:49:28.127" level="INFO">Opening browser 'chrome' to base url 'https://localhost:44346/'.</msg>
+<status status="PASS" starttime="20201001 12:49:28.127" endtime="20201001 12:49:31.880"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201001 12:49:31.880" endtime="20201001 12:49:34.038"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:28.127" endtime="20201001 12:49:34.038"></status>
+</kw>
+<kw name="WHEN Login with &quot;usermanagement2020@gmail.com&quot; &quot;123qweQ!&quot;">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ums_login_input_email}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:34.039" level="INFO">Typing text 'usermanagement2020@gmail.com' into text field 'xpath=//*[@id="acc_Email"]'.</msg>
+<status status="PASS" starttime="20201001 12:49:34.039" endtime="20201001 12:49:34.134"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ums_login_input_password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:34.134" level="INFO">Typing password into text field 'xpath=//*[@id="acc_Password"]'.</msg>
+<status status="PASS" starttime="20201001 12:49:34.134" endtime="20201001 12:49:34.211"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201001 12:49:35.216" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:49:34.211" endtime="20201001 12:49:35.216"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ums_btn_login}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:35.216" level="INFO">Clicking element 'xpath=//*[@id="account"]/div[3]/div[2]/button'.</msg>
+<status status="PASS" starttime="20201001 12:49:35.216" endtime="20201001 12:49:35.515"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:34.039" endtime="20201001 12:49:35.515"></status>
+</kw>
+<kw name="AND Go to Manage User">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${ums_manage_url}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:35.516" level="INFO">Opening url 'https://localhost:44346/ManageUser'</msg>
+<status status="PASS" starttime="20201001 12:49:35.516" endtime="20201001 12:49:35.679"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:35.515" endtime="20201001 12:49:35.679"></status>
+</kw>
+<kw name="AND Delete">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_btn_delete}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:35.680" level="INFO">Clicking element 'xpath=//*[@id="showAllUserTable"]/tbody/tr[1]/td[7]/button[2]'.</msg>
+<status status="PASS" starttime="20201001 12:49:35.680" endtime="20201001 12:49:35.739"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201001 12:49:36.754" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:49:35.740" endtime="20201001 12:49:36.754"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:35.680" endtime="20201001 12:49:36.754"></status>
+</kw>
+<kw name="AND Confirm delete">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_delete_btn_confirm}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:36.755" level="INFO">Clicking element 'xpath=/html/body/div[2]/div/div[3]/button[1]'.</msg>
+<status status="PASS" starttime="20201001 12:49:36.755" endtime="20201001 12:49:36.798"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:36.755" endtime="20201001 12:49:36.798"></status>
+</kw>
+<kw name="THEN The alert message must say &quot;Delete user account successfully!&quot;">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${message}</arg>
+</arguments>
+<status status="PASS" starttime="20201001 12:49:36.799" endtime="20201001 12:49:36.812"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:36.799" endtime="20201001 12:49:36.812"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201001 12:49:36.812" endtime="20201001 12:49:39.878"></status>
+</kw>
+<doc>ลบข้อมูลผู้ใช้งานสำเร็จ</doc>
+<tags>
+<tag>PASS</tag>
+</tags>
+<status status="PASS" starttime="20201001 12:49:28.125" endtime="20201001 12:49:39.879" critical="yes"></status>
+</test>
+<test id="s1-t8" name="UMS-Manage-02-02">
+<kw name="GIVEN Open web browser">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${ums_url}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20201001 12:49:39.885" level="INFO">Opening browser 'chrome' to base url 'https://localhost:44346/'.</msg>
+<status status="PASS" starttime="20201001 12:49:39.885" endtime="20201001 12:49:43.674"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201001 12:49:43.674" endtime="20201001 12:49:45.833"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:39.884" endtime="20201001 12:49:45.833"></status>
+</kw>
+<kw name="WHEN Login with &quot;usermanagement2020@gmail.com&quot; &quot;123qweQ!&quot;">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ums_login_input_email}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:45.833" level="INFO">Typing text 'usermanagement2020@gmail.com' into text field 'xpath=//*[@id="acc_Email"]'.</msg>
+<status status="PASS" starttime="20201001 12:49:45.833" endtime="20201001 12:49:45.927"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ums_login_input_password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:45.928" level="INFO">Typing password into text field 'xpath=//*[@id="acc_Password"]'.</msg>
+<status status="PASS" starttime="20201001 12:49:45.927" endtime="20201001 12:49:46.002"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201001 12:49:47.007" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:49:46.002" endtime="20201001 12:49:47.007"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ums_btn_login}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:47.007" level="INFO">Clicking element 'xpath=//*[@id="account"]/div[3]/div[2]/button'.</msg>
+<status status="PASS" starttime="20201001 12:49:47.007" endtime="20201001 12:49:47.290"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:45.833" endtime="20201001 12:49:47.290"></status>
+</kw>
+<kw name="AND Go to Manage User">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${ums_manage_url}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:47.291" level="INFO">Opening url 'https://localhost:44346/ManageUser'</msg>
+<status status="PASS" starttime="20201001 12:49:47.291" endtime="20201001 12:49:47.444"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:47.291" endtime="20201001 12:49:47.444"></status>
+</kw>
+<kw name="AND Delete">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_btn_delete}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:47.445" level="INFO">Clicking element 'xpath=//*[@id="showAllUserTable"]/tbody/tr[1]/td[7]/button[2]'.</msg>
+<status status="PASS" starttime="20201001 12:49:47.445" endtime="20201001 12:49:47.518"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201001 12:49:48.529" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:49:47.518" endtime="20201001 12:49:48.529"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:47.445" endtime="20201001 12:49:48.529"></status>
+</kw>
+<kw name="THEN Cancle delete">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${manage_delete_btn_back}</arg>
+</arguments>
+<msg timestamp="20201001 12:49:48.530" level="INFO">Clicking element 'xpath=/html/body/div[2]/div/div[3]/button[2]'.</msg>
+<status status="PASS" starttime="20201001 12:49:48.530" endtime="20201001 12:49:48.567"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:48.530" endtime="20201001 12:49:48.567"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201001 12:49:48.568" endtime="20201001 12:49:50.692"></status>
+</kw>
+<doc>ยกเลิกการลบช้อมูลผู้ใช้งาน</doc>
+<tags>
+<tag>FAILS</tag>
+</tags>
+<status status="PASS" starttime="20201001 12:49:39.883" endtime="20201001 12:49:50.693" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20201001 12:48:15.141" endtime="20201001 12:49:50.698"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0">Critical Tests</stat>
+<stat pass="8" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="6" fail="0">FAILS</stat>
+<stat pass="2" fail="0">PASS</stat>
+</tag>
+<suite>
+<stat pass="8" fail="0" id="s1" name="UMS-Manage">UMS-Manage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

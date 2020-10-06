@@ -39,7 +39,7 @@ namespace UMS.Areas.Identity.Pages.Account
         public IActionResult OnPost()
         {
             _logger.LogTrace("Access Denined On post.");
-            //Response.Cookies.Delete(".AspNetCore.Identity.Application");
+            // Response.Cookies.Delete(".AspNetCore.Identity.Application");
             foreach (var cookie in HttpContext.Request.Cookies)
             {
                 Response.Cookies.Delete(cookie.Key);

@@ -16,4 +16,4 @@ namespace EmailService
         public string Username { set; get; } // Username of Email' sender
         public string Password { set; get; } // Password of Email' sender
     } // End EmainConfiguration 
-}
+} // End Email Service
