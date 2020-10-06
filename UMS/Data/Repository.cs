@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,6 @@ namespace UMS.Data
     public class Repository<T> : IRepository<T> where T : class
     {
         protected readonly DbContext Context;
-        
         public Repository(DbContext context)
         {
             Context = context;
@@ -26,9 +26,9 @@ namespace UMS.Data
             Context.Set<T>().Add(entity);
         } // Add entity
 
-        public void Delete(string id)
+        public void Delete(T entity)
         {
-            throw new NotImplementedException();
+            Context.Set<T>().Remove(entity);
         } // Delete entity
 
         public T Get(string id)
