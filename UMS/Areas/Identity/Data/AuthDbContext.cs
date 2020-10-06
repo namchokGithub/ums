@@ -25,7 +25,7 @@ namespace UMS.Data
             : base(options)
         {
             _logger = logger;
-            _logger.LogTrace("Start Auth Database Context.");
+            _logger.LogTrace("Start Application Database Context.");
         } // End contructor
 
         /*
@@ -110,6 +110,6 @@ namespace UMS.Data
             _logger.LogTrace("End creating on model.");
         } // End OnModelCreating
 
-        public DbSet<Logs> Logs { get; set; }
+        public DbSet<Logs> Logs { get; set; } // Set table Logs
     } // End AuthDbContext
 }

@@ -16,11 +16,11 @@ namespace UMS.Data
 {
     public class LogsRepository : Repository<Logs>, ILogsRepository
     {
-        protected readonly AuthDbContext _logsContext;
+        protected readonly AuthDbContext _context;
 
         public LogsRepository(AuthDbContext context) : base(context)
         {
-            _logsContext = context;
+            _context = context;
         } // End constructor
 
         /*
@@ -30,7 +30,7 @@ namespace UMS.Data
          */
         public List<Logs> GetAll(int numofrow)
         {
-            return _logsContext.Logs.FromSqlRaw(@$"Exec dbo.ums_Get_all_log {numofrow}").ToList<Logs>();
+            return _context.Logs.FromSqlRaw(@$"Exec dbo.ums_Get_all_log {numofrow}").ToList<Logs>();
         } // End GetAll
 
         /*
@@ -54,7 +54,7 @@ namespace UMS.Data
             {
                 sqlGetLog = @$"Exec dbo.ums_Search_log '', '', '{messageInput}'";
             } // End if date input not null
-            return _logsContext.Logs.FromSqlRaw(sqlGetLog).ToList() ?? throw new Exception("Calling a method on a null object reference.");
+            return _context.Logs.FromSqlRaw(sqlGetLog).ToList() ?? throw new Exception("Calling a method on a null object reference.");
         } // End Search
 
     } // End LogsRepository

@@ -1,20 +1,15 @@
 ﻿using System;
-using System.Linq;
-using System.Security.Claims;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-using static UMS.Controllers.ManageUserController;
-using UMS.Models;
-using System.Threading;
 using UMS.Data;
-using System.Collections.Generic;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
+using static UMS.Controllers.ManageUserController;
 
 /*
  * Name: UMS.Controllers.LogsController
  * Author: Namchok Singhachai
- * Description: For Logs monitor
+ * Description: Logs monitor controller
  */
 
 namespace UMS.Controllers
@@ -23,28 +18,37 @@ namespace UMS.Controllers
     public class LogsController : Controller
     {
         private readonly ILogger<LogsController> _logger;
-        private readonly LogsContext _logsContext;
         private readonly IUnitOfWork _unitOfWork;
         /*
-         * Name: Logs
-         * Parametor: none
+         * Name: LogsController
+         * Parametor: logger(ILogger<LogsController>), authDbContext(AuthDbContext)
          * Description: Constructor
          */
-        public LogsController(ILogger<LogsController> logger, LogsContext logsContext, AuthDbContext authDbContext)
+        public LogsController(ILogger<LogsController> logger, AuthDbContext authDbContext)
         {
             try
             {
                 _logger = logger;
-                _logsContext = logsContext;
                 _unitOfWork = new UnitOfWork(authDbContext);
-                _logger.LogTrace("Start LogsController Constructor.");
+                _logger.LogTrace("Start Logs Controller.");
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                _logger.LogTrace("End LogsController Constructor.");
+                _logger.LogTrace("End Logs Controller.");
             }// End try catch
         } // End Constructor
+
+        /*
+         * Name: ~LogsController
+         * Parametor: none
+         * Description: Deconstructor
+         */
+        ~LogsController()
+        {
+            _unitOfWork.Dispose();
+            _logger.LogTrace("End Logs Controller.");
+        } // End Deconstructor
 
         /*
          * Name: Index
@@ -55,21 +59,20 @@ namespace UMS.Controllers
         {
             try
             {
-                _logger.LogTrace("Start Index.");
-                _logger.LogTrace("Find ID from first value.");
-                ViewData["UserId"] = User.FindFirstValue(ClaimTypes.NameIdentifier) ?? throw new Exception("The user ID not found!."); // Get user ID
+                _logger.LogTrace("Start Logs Index.");
+                _logger.LogTrace("Finding user ID.");
+                ViewData["UserId"] = User.FindFirstValue(ClaimTypes.NameIdentifier) ?? throw new Exception("No user ID found!."); // Get user ID
                 _logger.LogDebug($"Getting top 100 from all logs.");
                 ViewData["Logs"] = _unitOfWork.Logs.GetAll(100) ?? throw new Exception("Calling a method on a null object reference."); // Set result to view and check null value
-                _unitOfWork.Logs.Dispose();
                 ViewData["INFO"] = @$"toastr.info('Select lasted logs.');"; // Message for result query
-                _logger.LogTrace("End Index.");
+                _logger.LogTrace("End Logs Index.");
                 return View();
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true });";
-                _logger.LogTrace("End Index.");
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'ERROR!', text: `" + e.Message + @"`, showConfirmButton: true });";
+                _logger.LogTrace("End Logs Index.");
                 return View();
             } // End try catch
         } // End Index
@@ -95,19 +98,13 @@ namespace UMS.Controllers
             catch (Exception e)
             {
                 _logger.LogError("Error: " + e.Message.ToString());
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                var er = new objectJSON
+                _logger.LogTrace("End search logs.");
+                return new JsonResult(new objectJSON
                 {
                     condition = "error",
-                    messages = message,
+                    messages = @"Swal.fire({ icon: 'error', title: 'ERROR!', text: `" + e.Message + @"`, showConfirmButton: true });",
                     text = e.Message
-                }; // Object for set alert 
-                _logger.LogTrace("End search logs.");
-                return new JsonResult(er); // Message to html view
-            }
-            finally
-            {
-                _unitOfWork.Logs.Dispose();
+                }); // Message to html view
             } // End try catch
         } // End searchLogs
     } // End Logs
