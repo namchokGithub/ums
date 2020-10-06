@@ -16,11 +16,11 @@ namespace UMS.Data
 {
     public class LogsRepository : Repository<Logs>, ILogsRepository
     {
-        protected readonly AuthDbContext _logContext;
+        protected readonly AuthDbContext _logsContext;
 
         public LogsRepository(AuthDbContext context) : base(context)
         {
-            _logContext = context;
+            _logsContext = context;
         } // End constructor
 
         /*
@@ -30,8 +30,32 @@ namespace UMS.Data
          */
         public List<Logs> GetAll(int numofrow)
         {
-            return _logContext.Logs.FromSqlRaw(@$"Exec dbo.ums_Get_all_log {numofrow}").ToList<Logs>();
+            return _logsContext.Logs.FromSqlRaw(@$"Exec dbo.ums_Get_all_log {numofrow}").ToList<Logs>();
         } // End GetAll
+
+        /*
+         * Name: Search
+         * Parameter: numofrow(int)
+         * Description: Get all logs top by numofrow(int)
+         */
+        public List<Logs> Search(string messageInput, string dateInput)
+        {
+            string sqlGetLog;
+            if (dateInput != null && dateInput != "")
+            {
+                DateTime dateInputStart = Convert.ToDateTime(dateInput.Substring(0, (dateInput.IndexOf("-"))).ToString());
+                DateTime dateInputEnd = Convert.ToDateTime(dateInput.Substring((dateInput.IndexOf("-")) + 1).ToString()); // Set date for query
+                if (messageInput != "")
+                    sqlGetLog = @$"Exec dbo.ums_Search_log '{dateInputStart}', '{dateInputEnd}', '{messageInput}'";
+                else
+                    sqlGetLog = @$"Exec dbo.ums_Search_log '{dateInputStart}', '{dateInputEnd}', ''";
+            }
+            else
+            {
+                sqlGetLog = @$"Exec dbo.ums_Search_log '', '', '{messageInput}'";
+            } // End if date input not null
+            return _logsContext.Logs.FromSqlRaw(sqlGetLog).ToList() ?? throw new Exception("Calling a method on a null object reference.");
+        } // End Search
 
     } // End LogsRepository
 }

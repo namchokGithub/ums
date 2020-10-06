@@ -5,7 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using UMS.Data;
+using System.Security.Claims;
 using UMS.Models;
+using Microsoft.AspNetCore.Mvc;
 
 /*
  * Name: IUnitOfWork
@@ -34,6 +36,6 @@ namespace UMS.Controllers
         public void Dispose()
         {
             _context.Dispose();
-        }
+        } // End Dispose
     } // End UnitOfWork
 }

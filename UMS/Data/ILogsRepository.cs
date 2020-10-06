@@ -16,5 +16,6 @@ namespace UMS.Data
     public interface ILogsRepository : IRepository<Logs>
     {
         List<Logs> GetAll(int numofrow);
+        List<Logs> Search(string messageInput, string dateInput);
     } // End ILogsRepository
 }
