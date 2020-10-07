@@ -40,14 +40,14 @@ namespace UMS.Controllers
         } // End Constructor
 
         /*
-         * Name: ~LogsController
+         * Name: Deconstruct
          * Parametor: none
-         * Description: Deconstructor
+         * Description: Deconstructor of logs controller.
          */
-        ~LogsController()
+        public void Deconstruct()
         {
             _unitOfWork.Dispose();
-            _logger.LogTrace("End Logs Controller.");
+            _logger.LogTrace("End logs controller.");
         } // End Deconstructor
 
         /*

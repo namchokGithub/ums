@@ -1,0 +1,26 @@
+######################################## User Management System log All Trace #########################################
+2020/10/07 10:40:35.228 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/10/07 10:40:43.522 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/07 10:40:45.547 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/07 10:40:45.558 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/07 10:40:45.564 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/07 10:40:45.964 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:33 | Start Application Database Context.
+2020/10/07 10:40:48.760 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:38 | Start HomeController Constructor.
+2020/10/07 10:40:48.807 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:57 | Start Index.
+2020/10/07 10:40:48.807 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:58 | Welcome usermanagement2020@gmail.com to UMS.
+2020/10/07 10:40:48.824 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:63 | Find first value from user.
+2020/10/07 10:40:48.824 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:66 | End Index.
+2020/10/07 10:40:52.973 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:33 | Start Application Database Context.
+2020/10/07 10:40:52.989 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:33 | Start Logs Controller.
+2020/10/07 10:40:52.989 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:62 | Start Logs Index.
+2020/10/07 10:40:52.989 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:63 | Finding user ID.
+2020/10/07 10:40:52.989 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:65 | Getting top 100 from all logs.
+2020/10/07 10:40:53.207 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:68 | End Logs Index.
+2020/10/07 10:41:02.169 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:33 | Start Application Database Context.
+2020/10/07 10:41:02.192 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:38 | Start HomeController Constructor.
+2020/10/07 10:41:02.192 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:57 | Start Index.
+2020/10/07 10:41:02.192 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:58 | Welcome usermanagement2020@gmail.com to UMS.
+2020/10/07 10:41:02.213 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:63 | Find first value from user.
+2020/10/07 10:41:02.213 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:66 | End Index.
+2020/10/07 10:41:13.583 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/10/07 11:11:47.120 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
