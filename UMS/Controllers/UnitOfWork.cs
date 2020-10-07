@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 /*
  * Name: IUnitOfWork
  * Author: Namchok Singhachai
- * Description: Class for control all.
+ * Description: The class for control all.
  */
 
 namespace UMS.Controllers
@@ -21,18 +21,33 @@ namespace UMS.Controllers
     {
         private AuthDbContext _context;
         public ILogsRepository Logs { get; private set; }
-
+        /*
+         * Name: UnitOfWork
+         * Parameter: context(AuthDbContext)
+         * Author: Namchok Singhachai
+         * Description: The constructor for manage all query.
+         */
         public UnitOfWork(AuthDbContext context)
         {
             _context = context;
             Logs = new LogsRepository(_context);
         } // End Constructor
 
+        /*
+         * Name: Commit
+         * Author: Namchok Singhachai
+         * Description: Saving changes.
+         */
         public int Commit()
         {
             return _context.SaveChanges();
-        }
+        } // End commit
 
+        /*
+         * Name: Dispose
+         * Author: Namchok Singhachai
+         * Description: Discardation all operation.
+         */
         public void Dispose()
         {
             _context.Dispose();

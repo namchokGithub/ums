@@ -12,8 +12,8 @@ using static UMS.Areas.Identity.Pages.Account.LoginModel;
 
 /*
  * Name: AccountController.cs
- * Namespace: Controllers
  * Author: Wannapa Srijermtong
+ * Description: The controller manages an account login.
  */
 
 namespace UMS.Controllers
@@ -28,12 +28,12 @@ namespace UMS.Controllers
         /*
          * Name: AccountController
          * Parameter: userManager, accountContext, editaccountContext, loggerManager, signInManager, logger
-         * Description: Constructor
+         * Description: Controller manages an account login.
          */
         public AccountController(UserManager<ApplicationUser> userManager,
             AccountContext accountContext,
             EditAccountContext editaccountContext,
-            ILogger<ManageUserController> loggerManager, 
+            ILogger<ManageUserController> loggerManager,
             SignInManager<ApplicationUser> signInManager,
             ILogger<AccountController> logger)
         {
@@ -43,53 +43,39 @@ namespace UMS.Controllers
                 _signInManager = signInManager;
                 _userManager = userManager;
                 _manageUserController = new ManageUserController(accountContext, editaccountContext, loggerManager, _signInManager);
-                _logger.LogTrace("Start Account Controller.");
+                _logger.LogTrace("Start account controller.");
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                _logger.LogTrace("End Account Controller.");
+                _logger.LogTrace("End account controller.");
             }// End try catch
         } // End consturcter
 
         /*
-         * Name: ~AccountController
-         * Parametor: none
-         * Description: Deconstructor
-         */
-        ~AccountController()
-        {
-            _logger.LogTrace("End Account Controller.");
-        } // End Deconstructor
-
-        /*
          * Name: Index
-         * Parameter: none
+         * Author: Wannapa Srijermtong
          */
-        public IActionResult Index()
-        {
-            return View();
-        } // End Index
+        public IActionResult Index() { return View(); } // End Index
 
         /*
          * Name: InputModel
          * Parameter: returnUrl(string)
-         * Description: set return url
+         * Author: Wannapa Srijermtong
+         * Description: Setting path url.
          */
         [AllowAnonymous]
         public IActionResult InputModel(string returnUrl)
         {
-            InputModel login = new InputModel
-            {
-                ReturnUrl = returnUrl
-            };
+            InputModel login = new InputModel { ReturnUrl = returnUrl };
             return View(login);
         } // End InputModel
 
         /*
          * Name: InputModel (Overload)
          * Parameter: login(InputModel)
-         * Description: for login
+         * Author: Wannapa Srijermtong
+         * Description: Function for login.
          */
         [HttpPost]
         [AllowAnonymous]
@@ -98,10 +84,10 @@ namespace UMS.Controllers
         {
             try
             {
-                _logger.LogTrace("Start Input Model.");
+                _logger.LogTrace("Start input model.");
                 if (ModelState.IsValid)
                 {
-                    _logger.LogDebug("Finding Email.");
+                    _logger.LogDebug("Finding an email.");
                     ApplicationUser appUser = await _userManager.FindByEmailAsync(login.Email);
                     if (appUser != null)
                     {
@@ -112,28 +98,28 @@ namespace UMS.Controllers
                         if (result.Succeeded)
                         {
                             _logger.LogInformation("Logged In.");
-                            _logger.LogTrace("End Input Model.");
+                            _logger.LogTrace("End input model.");
                             return Redirect(login.ReturnUrl ?? $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/");
                         } // If logged in
                     }
-                    Console.WriteLine("Login Failed: Invalid Email or password.");
-                    ModelState.AddModelError(nameof(login.Email), "Login Failed: Invalid Email or password.");
+                    ModelState.AddModelError(nameof(login.Email), "Login Failed: The input invalid an email or password.");
                 }
-                _logger.LogTrace("End Input Model.");
+                _logger.LogTrace("End input model.");
                 return View(login);
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                _logger.LogTrace("End Input Model.");
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });";
+                _logger.LogTrace("End input model.");
                 return RedirectToPage("/Login");
             } // End try catch
         } // End InputModel
 
         /*
          * Name: Logout
-         * Parameter: none
-         * Description: for logout of the system
+         * Author: Wannapa Srijermtong
+         * Description: Function for logout of the system and Redirect to login page.
          */
         public async Task<IActionResult> Logout()
         {
@@ -146,16 +132,15 @@ namespace UMS.Controllers
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                TempData["Exception"] = message;
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });";
                 return Redirect($"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Logout");
             } // End try catch
         } // End Logout
 
         /*
          * Name: AccessDenied
-         * Parameter: none
-         * Description: for authen page
+         * Author: Wannapa Srijermtong
+         * Description: Redirect to access denied page.
          */
         public IActionResult AccessDenied()
         {
@@ -167,88 +152,86 @@ namespace UMS.Controllers
 
         /*
          * Name: GoogleLogin
-         * Parameter: none
-         * Description: get properties
+         * Author: Wannapa Srijermtong
+         * Description: Get properties of authentication.
          */
         [AllowAnonymous]
         public IActionResult GoogleLogin()
         {
             try
             {
-                _logger.LogTrace("Start Google Login.");
+                _logger.LogTrace("Start google login.");
                 string redirectUrl = Url.Action("GoogleResponse", "Account");
                 var properties = _signInManager.ConfigureExternalAuthenticationProperties("Google", redirectUrl);
-                _logger.LogTrace("Get properties from google.");
-                _logger.LogTrace("End Google Login.");
+                _logger.LogTrace("Getting properties from google.");
+                _logger.LogTrace("End google login.");
                 return new ChallengeResult("Google", properties);
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                _logger.LogTrace("End Google Login.");
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true});";
+                _logger.LogTrace("End google login.");
                 return Redirect($"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Logout");
             } // End try catch
-            
         } // End GoogleLogin
 
         /*
          * Name: GoogleResponse
-         * Parameter: none
-         * Description: login or create new user
+         * Author: Wannapa Srijermtong
+         * Description: Creating an account or login to UMS.
          */
         [AllowAnonymous]
         public async Task<IActionResult> GoogleResponse()
         {
             try
             {
-                //throw new Exception("One Above all.");
-                _logger.LogTrace("Start Google Response.");
+                _logger.LogTrace("Start google response.");
                 ViewData["URL"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
                 ViewData["URLHOME"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Home";
+
+                _logger.LogDebug("Getting external login info.");
                 ExternalLoginInfo info = await _signInManager.GetExternalLoginInfoAsync();
-                _logger.LogDebug("Get external login info.");
-                if (info == null)
-                {
-                    _logger.LogWarning("User info is null.");
-                    _logger.LogTrace("End Google Response.");
-                    return RedirectToAction(nameof(InputModel));
-                }
-                _logger.LogDebug("Getting external login and sign in.");
+                if (info == null) throw new Exception("User information not found.");
+
+                _logger.LogDebug("Getting result external login and sign in.");
                 var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, true);
-                _logger.LogDebug($"Result: {result}");
-                _logger.LogTrace("Creating user info.");
+                _logger.LogTrace("Creating user information.");
                 string[] userInfo = {
                     info.Principal.FindFirst(ClaimTypes.Name).Value,
                     info.Principal.FindFirst(ClaimTypes.Email).Value,
                     info.Principal.FindFirst(ClaimTypes.GivenName).Value,
                     info.Principal.FindFirst(ClaimTypes.Surname).Value
                 }; // Craete user info
+
                 if (result.Succeeded)
                 {
                     var IsActive = _manageUserController.GetStatusUser(info.Principal.FindFirst(ClaimTypes.Email).Value);
                     if (IsActive.Value.ToString() == "ACTIVE")
                     {
-                        _logger.LogInformation("login Successfully.");
-                        _logger.LogTrace("End Google Response.");
+                        _logger.LogInformation("Login successfully.");
+                        _logger.LogTrace("End google response.");
                         return RedirectToAction("Index", "Home");
-                    } else if (IsActive.Value.ToString() == "INACTIVE")
+                    }
+                    else if (IsActive.Value.ToString() == "INACTIVE")
                     {
                         _logger.LogInformation("This user is not active.");
+                        _logger.LogDebug("Getting user by email.");
                         ApplicationUser user = await _userManager.FindByEmailAsync(info.Principal.FindFirst(ClaimTypes.Email).Value);
                         if (user == null) throw new Exception("Calling a method on a null object reference.");
-                        _manageUserController.deleteUser(user.Id);
-                        _logger.LogInformation("Change status Inactive to active user.");
-                        _logger.LogTrace("End Google Response.");
+                        _manageUserController.deleteUser(user.Id); // Toggle user status
+                        _logger.LogInformation("Change status inactive to active user.");
+                        _logger.LogTrace("End google response.");
                         return RedirectToAction("Index", "Home");
-                    } else
+                    }
+                    else
                     {
-                        throw new Exception("Cannot find this user.");
+                        throw new Exception("The user not found.");
                     } // End check user is inactive
-                }// If had account
+                } // If you had an account
                 else
                 {
-                    _logger.LogTrace("Creating appliction user.");
+                    _logger.LogTrace("Creating an application user.");
                     ApplicationUser user = new ApplicationUser
                     {
                         Email = info.Principal.FindFirst(ClaimTypes.Email).Value,
@@ -257,134 +240,134 @@ namespace UMS.Controllers
                         acc_Lastname = info.Principal.FindFirst(ClaimTypes.Surname).Value,
                         acc_IsActive = 'Y'
                     }; // create new user
-                    _logger.LogTrace("Creating user info.");
+
+                    _logger.LogDebug("Creating user information.");
                     IdentityResult identResult = await _userManager.CreateAsync(user);
                     if (identResult.Succeeded)
                     {
+                        _logger.LogDebug("Finding user by email.");
                         ApplicationUser userId = await _userManager.FindByEmailAsync(user.Email);
                         await _userManager.AddToRoleAsync(userId, "User");
-                        _logger.LogInformation("Create user succeeded.");
-                        _logger.LogDebug("Adding login.");
+                        _logger.LogInformation("User created successfully.");
+                        _logger.LogDebug("Creating an user information.");
+                        _logger.LogDebug("Adding login information.");
                         identResult = await _userManager.AddLoginAsync(user, info);
                         if (identResult.Succeeded)
                         {
                             _logger.LogDebug("Signing in.");
                             await _signInManager.SignInAsync(user, false);
-                            _logger.LogInformation("Add login succeeded.");
-                            _logger.LogTrace("End Google Response.");
+                            _logger.LogInformation("Login successfully added.");
+                            _logger.LogTrace("End google response.");
                             return RedirectToAction("Index", "Home");
-                        }
-                    }
+                        } // End logged in successfully
+                    } // End created successfully
                     _logger.LogError(identResult.Errors.First().Description.ToString());
-                    string message = @"Swal.fire({
-                                        title: 'The "+ user.Email + @" is already registered.',
-                                        text: 'Would you like to try login instead?',
-                                        icon: 'warning',
-                                        showCancelButton: false,
-                                        confirmButtonColor: '#3085d6',
-                                        confirmButtonText: 'Login'
-                                    }).then((res) => {
-                                        console.log('Confirmed')
-                                        window.location.href = '"+ $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Login" 
-                                        + "'})";
-                    TempData["Exception"] = message;
-                    _logger.LogTrace("End Google Response.");
+                    TempData["Exception"] = @"Swal.fire({
+                                                title: 'The " + user.Email + @" is already registered.',
+                                                text: 'Would you like to try login instead?',
+                                                icon: 'warning',
+                                                showCancelButton: false,
+                                                confirmButtonColor: '#3085d6',
+                                                confirmButtonText: 'Login'
+                                            }).then((res) => {
+                                                console.log('Confirmed');
+                                                window.location.href = '" + $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Login"
+                                                + "'});";
+                    _logger.LogTrace("End google response.");
                     return View();
-                } // End if signed in success
+                } // End signed in successfully
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                _logger.LogTrace("End Google Response.");
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });";
+                _logger.LogTrace("End google response.");
                 return Redirect($"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Logout");
             } // End try catch
         } // End GoogleResponse
 
         /*
          * Name: FacebookLogin
-         * Parameter: none
-         * Description: get properties
+         * Author: Wannapa Srijermtong
+         * Description: Getting properties of authentication.
          */
         [AllowAnonymous]
         public IActionResult FacebookLogin()
         {
             try
             {
-                _logger.LogTrace("Start Facebook Login");
+                _logger.LogTrace("Start facebook login");
                 string redirectUrl = Url.Action("FacebookResponse", "Account");
                 var properties = _signInManager.ConfigureExternalAuthenticationProperties("Facebook", redirectUrl);
-                _logger.LogTrace("Get properties from properties.");
-                _logger.LogTrace("End Facebook Login");
+                _logger.LogTrace("Getting properties from facebook.");
+                _logger.LogTrace("End facebook login");
                 return new ChallengeResult("Facebook", properties);
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                _logger.LogTrace("End Facebook Login");
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });";
+                _logger.LogTrace("End facebook login");
                 return Redirect($"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Logout");
             } // End try catch
         } // End FacebookLogin
 
         /*
          * Name: FacebookResponse
-         * Parameter: none
-         * Description: login or new user
+         * Author: Wannapa Srijermtong
+         * Description: Creating an account or login to UMS.
          */
         [AllowAnonymous]
         public async Task<IActionResult> FacebookResponse()
         {
             try
             {
-                _logger.LogTrace("Start Facebook Response.");
-                _logger.LogDebug("Getting user info.");
-                ExternalLoginInfo info = await _signInManager.GetExternalLoginInfoAsync();
+                _logger.LogTrace("Start facebook response.");
                 ViewData["URL"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
                 ViewData["URLHOME"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Home";
-                if (info == null)
-                {
-                    _logger.LogWarning("User info is null.");
-                    _logger.LogTrace("End Facebook Response.");
-                    return RedirectToAction(nameof(InputModel));
-                }
-                _logger.LogDebug("Getting result external login and sign in.");
+
+                _logger.LogDebug("Getting user information.");
+                ExternalLoginInfo info = await _signInManager.GetExternalLoginInfoAsync();
+                if (info == null) throw new Exception("User information not found.");
+
+                _logger.LogDebug("Getting external login and sign in.");
                 var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, true);
-                _logger.LogDebug($"Result: {result}");
-                _logger.LogTrace("Craete user info.");
+                _logger.LogTrace("Creating user information.");
                 string[] userInfo = {
                     info.Principal.FindFirst(ClaimTypes.Name).Value,
                     info.Principal.FindFirst(ClaimTypes.Email).Value,
                     info.Principal.FindFirst(ClaimTypes.GivenName).Value,
                     info.Principal.FindFirst(ClaimTypes.Surname).Value
                 }; // Crate new user info
+
                 if (result.Succeeded)
                 {
                     var IsActive = _manageUserController.GetStatusUser(info.Principal.FindFirst(ClaimTypes.Email).Value);
                     if (IsActive.Value.ToString() == "ACTIVE")
                     {
-                        _logger.LogInformation("login Successfully.");
-                        _logger.LogTrace("End Facebook Response.");
+                        _logger.LogInformation("Login successfully.");
+                        _logger.LogTrace("End facebook response.");
                         return RedirectToAction("Index", "Home");
                     }
                     else if (IsActive.Value.ToString() == "INACTIVE")
                     {
                         _logger.LogInformation("This user is not active.");
+                        _logger.LogDebug("Getting user by email.");
                         ApplicationUser user = await _userManager.FindByEmailAsync(info.Principal.FindFirst(ClaimTypes.Email).Value);
                         if (user == null) throw new Exception("Calling a method on a null object reference.");
-                        _manageUserController.deleteUser(user.Id);
-                        _logger.LogInformation("Change status Inactive to active user.");
-                        _logger.LogTrace("End Facebook Response.");
+                        _manageUserController.deleteUser(user.Id); // Toggle user status
+                        _logger.LogInformation("Change status inactive to active user.");
+                        _logger.LogTrace("End facebook response.");
                         return RedirectToAction("Index", "Home");
                     }
                     else
                     {
-                        throw new Exception("Cannot find this user.");
+                        throw new Exception("The user not found.");
                     } // End check user is inactive
-                }
+                } // If you had an account
                 else
                 {
-                    _logger.LogTrace("Creating application user.");
+                    _logger.LogTrace("Creating an application user.");
                     ApplicationUser user = new ApplicationUser
                     {
                         Email = info.Principal.FindFirst(ClaimTypes.Email).Value,
@@ -393,134 +376,135 @@ namespace UMS.Controllers
                         acc_Lastname = info.Principal.FindFirst(ClaimTypes.Surname).Value,
                         acc_IsActive = 'Y'
                     }; // Create new user
-                    _logger.LogDebug("Creating user.");
+
+                    _logger.LogDebug("Creating user information.");
                     IdentityResult identResult = await _userManager.CreateAsync(user);
                     if (identResult.Succeeded)
                     {
+                        _logger.LogDebug("Finding user by email.");
                         ApplicationUser userId = await _userManager.FindByEmailAsync(user.Email);
                         await _userManager.AddToRoleAsync(userId, "User");
-                        _logger.LogTrace("Create user succeeded.");
-                        _logger.LogDebug("Craeting user.");
+                        _logger.LogInformation("User created successfully.");
+                        _logger.LogDebug("Creating an user information.");
                         identResult = await _userManager.AddLoginAsync(user, info);
                         if (identResult.Succeeded)
                         {
                             _logger.LogDebug("Signing in.");
                             await _signInManager.SignInAsync(user, false);
-                            _logger.LogInformation("Add login succeeded.");
-                            _logger.LogTrace("End Facebook Response.");
+                            _logger.LogInformation("Login successfully added.");
+                            _logger.LogTrace("End facebook response.");
                             return RedirectToAction("Index", "Home");
-                        }
-                    } // If create and add login info
+                        } // End logged in successfully
+                    } // End created successfully
+
                     _logger.LogError(identResult.Errors.First().Description.ToString());
-                    string message = @"Swal.fire({
-                                        title: 'The " + user.Email + @" is already registered.',
-                                        text: 'Would you like to try login instead?',
-                                        icon: 'warning',
-                                        showCancelButton: false,
-                                        confirmButtonColor: '#3085d6',
-                                        confirmButtonText: 'Login'
-                                    }).then((res) => {
-                                        console.log('Confirmed')
-                                        window.location.href = '" + $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Login"
-                                        + "'})";
-                    TempData["Exception"] = message;
-                    _logger.LogTrace("End Facebook Response.");
+                    TempData["Exception"] = @"Swal.fire({
+                                                title: 'The " + user.Email + @" is already registered.',
+                                                text: 'Would you like to try login instead?',
+                                                icon: 'warning',
+                                                showCancelButton: false,
+                                                confirmButtonColor: '#3085d6',
+                                                confirmButtonText: 'Login'
+                                            }).then((res) => {
+                                                console.log('Confirmed');
+                                                window.location.href = '" + $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Login"
+                                                + "'});";
+                    _logger.LogTrace("End facebook response.");
                     return View();
-                } // End if signed in success
+                } // End signed in successfully
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                _logger.LogTrace("End Facebook Response.");
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });";
+                _logger.LogTrace("End facebook response.");
                 return Redirect($"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Logout");
             } // End try catch
         } // End FacebookResponse
 
         /*
          * Name: MicrosoftLogin
-         * Parameter: none
-         * Description: get properties
+         * Author: Wannapa Srijermtong
+         * Description: Getting properties of authentication.
          */
         [AllowAnonymous]
         public IActionResult MicrosoftLogin()
         {
             try
             {
-                _logger.LogTrace("Start Microsoft Login.");
+                _logger.LogTrace("Start microsoft login.");
                 string redirectUrl = Url.Action("MicrosoftResponse", "Account");
                 _logger.LogDebug("Getting properties from Microsoft.");
                 var properties = _signInManager.ConfigureExternalAuthenticationProperties("Microsoft", redirectUrl);
-                _logger.LogTrace("End Microsoft Login.");
+                _logger.LogTrace("End microsoft login.");
                 return new ChallengeResult("Microsoft", properties);
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                _logger.LogTrace("End Microsoft Login.");
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });";
+                _logger.LogTrace("End microsoft login.");
                 return Redirect($"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Logout");
             } // End try catch
         } // End MicrosoftLogin
 
         /*
          * Name: MicrosoftResponse
-         * Parameter: none
-         * Description: login or create new user
+         * Author: Wannapa Srijermtong
+         * Description: Creating an account or login to UMS.
          */
         [AllowAnonymous]
         public async Task<IActionResult> MicrosoftResponse()
         {
             try
             {
-                _logger.LogTrace("Start Microsoft Response.");
+                _logger.LogTrace("Start microsoft response.");
                 ViewData["URL"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
                 ViewData["URLHOME"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Home";
+
+                _logger.LogDebug("Getting external login info.");
                 ExternalLoginInfo info = await _signInManager.GetExternalLoginInfoAsync();
                 _logger.LogDebug("Get external login.");
-                if (info == null)
-                {
-                    _logger.LogWarning("User info is null.");
-                    _logger.LogTrace("End Microsoft Response.");
-                    return RedirectToAction(nameof(InputModel));
-                }
+                if (info == null) throw new Exception("User information not found.");
+
                 _logger.LogDebug("Getting External login and sign in.");
                 var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, true);
-                _logger.LogDebug($"Result: {result}");
-                _logger.LogTrace("Creating user info object.");
+                _logger.LogTrace("Creating user information .");
                 string[] userInfo = {
                     info.Principal.FindFirst(ClaimTypes.Name).Value,
                     info.Principal.FindFirst(ClaimTypes.Email).Value,
                     info.Principal.FindFirst(ClaimTypes.GivenName).Value,
                     info.Principal.FindFirst(ClaimTypes.Surname).Value
                 }; // Create new user info
+
                 if (result.Succeeded)
                 {
                     var IsActive = _manageUserController.GetStatusUser(info.Principal.FindFirst(ClaimTypes.Email).Value);
                     if (IsActive.Value.ToString() == "ACTIVE")
                     {
-                        _logger.LogInformation("login Successfully.");
-                        _logger.LogTrace("End Microsoft Response.");
+                        _logger.LogInformation("Login successfully.");
+                        _logger.LogTrace("End microsoft response.");
                         return RedirectToAction("Index", "Home");
                     }
                     else if (IsActive.Value.ToString() == "INACTIVE")
                     {
                         _logger.LogInformation("This user is not active.");
+                        _logger.LogDebug("Getting user by email.");
                         ApplicationUser user = await _userManager.FindByEmailAsync(info.Principal.FindFirst(ClaimTypes.Email).Value);
                         if (user == null) throw new Exception("Calling a method on a null object reference.");
-                        _manageUserController.deleteUser(user.Id);
-                        _logger.LogInformation("Change status Inactive to active user.");
-                        _logger.LogTrace("End Microsoft Response.");
+                        _manageUserController.deleteUser(user.Id); // Toggle user status
+                        _logger.LogInformation("Change status inactive to active user.");
+                        _logger.LogTrace("End microsoft response.");
                         return RedirectToAction("Index", "Home");
                     }
                     else
                     {
                         throw new Exception("Cannot find this user.");
                     } // End check user is inactive
-                }
+                } // If you had an account
                 else
                 {
-                    _logger.LogTrace("Creating Applicaiton user.");
+                    _logger.LogTrace("Creating an application user.");
                     ApplicationUser user = new ApplicationUser
                     {
                         Email = info.Principal.FindFirst(ClaimTypes.Email).Value,
@@ -530,46 +514,47 @@ namespace UMS.Controllers
                         acc_IsActive = 'Y'
                     }; // Create new user
 
-                    _logger.LogDebug("Creating user.");
+                    _logger.LogDebug("Creating user information.");
                     IdentityResult identResult = await _userManager.CreateAsync(user);
                     if (identResult.Succeeded)
                     {
-                        _logger.LogInformation("Create user succeeded.");
+                        _logger.LogDebug("Finding user by email.");
+                        ApplicationUser userId = await _userManager.FindByEmailAsync(user.Email);
+                        await _userManager.AddToRoleAsync(userId, "User");
+                        _logger.LogInformation("User created successfully.");
+                        _logger.LogDebug("Creating an user information.");
                         identResult = await _userManager.AddLoginAsync(user, info);
-                        _logger.LogDebug("Adding login.");
                         if (identResult.Succeeded)
                         {
-                            ApplicationUser userId = await _userManager.FindByEmailAsync(user.Email);
-                            await _userManager.AddToRoleAsync(userId, "User");
                             _logger.LogDebug("Singing in.");
                             await _signInManager.SignInAsync(user, false);
-                            _logger.LogInformation("Add login succeeded.");
-                            _logger.LogTrace("End Microsoft Response.");
+                            _logger.LogInformation("Login successfully added.");
+                            _logger.LogTrace("End microsoft response.");
                             return RedirectToAction("Index", "Home");
-                        }
-                    } // Crate user and add login info
+                        } // End logged in successfully
+                    } // End created successfully
+
                     _logger.LogError(identResult.Errors.First().Description.ToString());
-                    string message = @"Swal.fire({
-                                        title: 'The " + user.Email + @" is already registered.',
-                                        text: 'Would you like to try login instead?',
-                                        icon: 'warning',
-                                        showCancelButton: false,
-                                        confirmButtonColor: '#3085d6',
-                                        confirmButtonText: 'Login'
-                                    }).then((res) => {
-                                        console.log('Confirmed')
-                                        window.location.href = '" + $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Login"
-                                        + "'})";
-                    TempData["Exception"] = message;
-                    _logger.LogTrace("End Microsoft Response.");
+                    TempData["Exception"] = @"Swal.fire({
+                                                title: 'The " + user.Email + @" is already registered.',
+                                                text: 'Would you like to try login instead?',
+                                                icon: 'warning',
+                                                showCancelButton: false,
+                                                confirmButtonColor: '#3085d6',
+                                                confirmButtonText: 'Login'
+                                            }).then((res) => {
+                                                console.log('Confirmed');
+                                                window.location.href = '" + $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Login"
+                                                + "'});";
+                    _logger.LogTrace("End microsoft response.");
                     return View();
-                } // End if signed in success
+                } // End signed in successfully
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                _logger.LogTrace("End Microsoft Response.");
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });";
+                _logger.LogTrace("End microsoft response.");
                 return Redirect($"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Logout");
             } // End try catch
         } // End MicrosoftResponse

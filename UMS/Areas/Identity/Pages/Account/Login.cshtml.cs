@@ -193,8 +193,7 @@ namespace UMS.Areas.Identity.Pages.Account
             } catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                TempData["Exception"] = message.Replace("\\", "/");
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End login on post.");
                 return Page();
             } // End try catch
