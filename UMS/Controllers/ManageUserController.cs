@@ -1,17 +1,14 @@
 ﻿using System;
+using UMS.Models;
+using System.Data;
 using System.Linq;
+using System.Security.Claims;
+using Microsoft.Data.SqlClient;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore;
-using UMS.Areas.Identity.Data;
-using UMS.Models;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.Data.SqlClient;
-using System.Security.Claims;
-using System.Data;
 using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.CodeAnalysis.FlowAnalysis;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 /*
  * Name: ManageUserController.cs
