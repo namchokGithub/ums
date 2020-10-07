@@ -61,7 +61,7 @@ namespace UMS.Controllers
             {
                 _logger.LogTrace("Start Logs Index.");
                 _logger.LogTrace("Finding user ID.");
-                ViewData["UserId"] = User.FindFirstValue(ClaimTypes.NameIdentifier) ?? throw new Exception("No user ID found!."); // Get user ID
+                ViewData["UserId"] = User.FindFirstValue(ClaimTypes.NameIdentifier) ?? throw new Exception("User ID not found!."); // Get user ID
                 _logger.LogDebug($"Getting top 100 from all logs.");
                 ViewData["Logs"] = _unitOfWork.Logs.GetAll(100) ?? throw new Exception("Calling a method on a null object reference."); // Set result to view and check null value
                 ViewData["INFO"] = @$"toastr.info('Select lasted logs.');"; // Message for result query

@@ -12,9 +12,8 @@ using static UMS.Areas.Identity.Pages.Account.LoginModel;
 
 /*
  * Name: AccountController.cs
- * Namespace: Controllers
  * Author: Wannapa Srijermtong
- * Description: Controller manages an account login.
+ * Description: The controller manages an account login.
  */
 
 namespace UMS.Controllers
