@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 /*
  * Name : EmailSender (extend: IEmailSender)
  * Author: Namchok Singhachai
- * Description: Configuration of Email service
+ * Description: Configuration of Email service.
  */
 
 namespace EmailService
@@ -20,47 +20,46 @@ namespace EmailService
     public class EmailSender : IEmailSender
     {
         private readonly EmailConfiguration _emailConfig; // Email configuration
-        private readonly ILogger<EmailSender> _logger; // Email configuration
-
+        private readonly ILogger<EmailSender> _logger;
         /*
-         * Name: EmailSender(Constructor)
+         * Name: EmailSender
          * Parameter: emailConfig(EmailConfiguration)
          * Author: Namchok Singhachai
-         * Description: Set email config
+         * Description: Constructor for send an email.
          */
         public EmailSender(EmailConfiguration emailConfig, ILogger<EmailSender> logger)
         {
             try 
             {
-                _emailConfig = emailConfig; // Set config
+                _emailConfig = emailConfig; // Setting a config
                 _logger = logger;
                 _logger.LogTrace("Start Email sender.");
             } catch (Exception e)
             {
-                _logger.LogError(e.Message.ToString());
-                _logger.LogTrace("End Email sender constructor.");
+                _logger.LogTrace("End Email sender.");
+                throw e;
             } // End try catch
-        } // End EmailConfig
+        } // End email sender constructor
 
         /*
          * Name: SendEmail
          * Parameter: message(Message)
          * Author: Namchok Singhachai
-         * Description: Send the email
+         * Description: Sending an email.
          */
         public void SendEmail(Message message)
         {
             try
             {
-                _logger.LogTrace("Start Send Email.");
+                _logger.LogTrace("Start send an email.");
                 var emailMessage = CreateEmailMessage(message); // Create email messages
-                _logger.LogTrace("Email Sender: Sending email.");
+                _logger.LogTrace("Email Sender: Sending an email.");
                 Send(emailMessage);
             }
             catch (Exception e)
             {
-                _logger.LogError(e.Message.ToString());
-                _logger.LogTrace("End Email sender constructor.");
+                _logger.LogTrace("End send an email.");
+                throw e;
             } // End try catch
         } // End SendEmail
 
@@ -68,28 +67,27 @@ namespace EmailService
          * Name: CreateEmailMessage
          * Parameter: message(Message)
          * Author: Namchok Singhachai
-         * Description: Create the email messages
+         * Description: Creating an email messages and return message.
          */
         private MimeMessage CreateEmailMessage(Message message)
         {
             try
             {
-                _logger.LogTrace("Start Create Email Message.");
-                var emailMessage = new MimeMessage();                           // New messages form
-                _logger.LogTrace("Set email message.");
-                emailMessage.From.Add(new MailboxAddress(_emailConfig.From));   // Set sender 
-                emailMessage.To.AddRange(message.To);                           // Set reciver 
-                emailMessage.Subject = message.Subject;                         // Set subject of email
-                emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html) { Text = message.Content }; // Set content
+                _logger.LogTrace("Start create an email message.");
+                _logger.LogDebug("Setting email message.");
+                var emailMessage = new MimeMessage();                           // New messages
+                emailMessage.From.Add(new MailboxAddress(_emailConfig.From));   // Setting sender 
+                emailMessage.To.AddRange(message.To);                           // Setting reciver 
+                emailMessage.Subject = message.Subject;                         // Setting subject 
+                emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html) { Text = message.Content }; // Setting content
                 _logger.LogDebug("Creating message.");
-                _logger.LogTrace("End Create Email Message.");
+                _logger.LogTrace("End create an email message.");
                 return emailMessage;
             }
             catch (Exception e)
             {
-                _logger.LogError(e.Message.ToString());
-                _logger.LogTrace("End Create Email Message.");
-                return new MimeMessage();
+                _logger.LogTrace("End create an email message.");
+                throw e;
             } // End try catch
         } // End CreateEmailMessage
 
@@ -97,41 +95,37 @@ namespace EmailService
          * Name: Send
          * Parameter: mailMessage(MimeMessage)
          * Author: Namchok Singhachai
-         * Description: Send the email
+         * Description: Sending an email.
          */
         private void Send(MimeMessage mailMessage)
         {
             try
             {
-                using (var client = new SmtpClient())
+                using var client = new SmtpClient();
+                try
                 {
-                    try
-                    {
-                        _logger.LogTrace("Email Sender: Start Sending email.");
-                        client.Connect(_emailConfig.SmtpServer, _emailConfig.Port, true);   // Connect email sender
-                        client.AuthenticationMechanisms.Remove("XOAUTH2");                  // Remove authenication (OAUTH 2)
-                        client.Authenticate(_emailConfig.Username, _emailConfig.Password);  // Authen user 
-                        client.Send(mailMessage); // Send email
-                        _logger.LogInformation("Sending email.");
-                        _logger.LogTrace("Email Sender: End Sending email.");
-                    }
-                    catch (Exception e)
-                    {
-                        _logger.LogError(e.Message.ToString());
-                        _logger.LogTrace("Email Sender: End Sending email.");
-                        throw;
-                    }
-                    finally
-                    {
-                        client.Disconnect(true); // Disconnet email
-                        client.Dispose();
-                        _logger.LogTrace("Email Sender: End Sending email.");
-                    } // Edn try catch
+                    _logger.LogTrace("Email Sender: Start sending an email.");
+                    client.Connect(_emailConfig.SmtpServer, _emailConfig.Port, true);   // Connect email sender
+                    client.AuthenticationMechanisms.Remove("XOAUTH2");                  // Remove authenication (OAUTH 2)
+                    client.Authenticate(_emailConfig.Username, _emailConfig.Password);  // Authen an user 
+                    client.Send(mailMessage); // Send an email
+                    _logger.LogInformation("Sending an email.");
+                    _logger.LogTrace("Email Sender: End sending an email.");
                 }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+                finally
+                {
+                    client.Disconnect(true); // Disconnet email
+                    client.Dispose();
+                    _logger.LogTrace("Email Sender: End Sending email.");
+                } // End try catch
             } catch (Exception e)
             {
-                _logger.LogError(e.Message.ToString());
-                _logger.LogTrace("End Send Email.");
+                _logger.LogTrace("End sending an email.");
+                throw e;
             } // Edn try catch
         }// End Send
 
@@ -139,19 +133,19 @@ namespace EmailService
          * Name: SendEmailAsync
          * Parameter: message(Message)
          * Author: Namchok Singhachai
-         * Description: Create massage and send email
+         * Description: Creating message and send an email.
          */
         public async Task SendEmailAsync(Message message)
         {
             try
             {
                 var mailMessage = CreateEmailMessage(message);
-                _logger.LogTrace("Email Sender: Sending email (Async).");
+                _logger.LogTrace("Email Sender: Sending an email (Async).");
                 await SendAsync(mailMessage);
             } catch (Exception e)
             {
-                _logger.LogError(e.Message.ToString());
-                _logger.LogTrace("End Send Email (async).");
+                _logger.LogTrace("End send an email (Async).");
+                throw e;
             }
         } // End SendEmailAsync
 
@@ -159,7 +153,7 @@ namespace EmailService
          * Name: SendAsync
          * Parameter: mailMessage(MimeMessage)
          * Author: Namchok Singhachai
-         * Description: Send the email
+         * Description: Sending an email.
          */
         private async Task SendAsync(MimeMessage mailMessage)
         {
@@ -169,32 +163,30 @@ namespace EmailService
                 {
                     try
                     {
-                        _logger.LogTrace("Email Sender: Start Sending email (Async).");
+                        _logger.LogTrace("Email Sender: Start Sending an email (Async).");
                         await client.ConnectAsync(_emailConfig.SmtpServer, _emailConfig.Port, true);
                         client.AuthenticationMechanisms.Remove("XOAUTH2");
                         await client.AuthenticateAsync(_emailConfig.Username, _emailConfig.Password);
                         await client.SendAsync(mailMessage);
-                        _logger.LogInformation("Sending email.");
-                        _logger.LogTrace("Email Sender: End Sending email (Async).");
+                        _logger.LogInformation("Sending an email.");
+                        _logger.LogTrace("Email Sender: End sending an email (Async).");
                     }
                     catch (Exception e)
                     {
-                        _logger.LogError(e.Message.ToString());
-                        _logger.LogTrace("Email Sender: End Sending email (Async).");
-                        throw;
+                        throw e;
                     }
                     finally
                     {
                         await client.DisconnectAsync(true);
                         client.Dispose();
-                        _logger.LogTrace("Email Sender: End Sending email (Async).");
+                        _logger.LogTrace("Email Sender: End sending an email (Async).");
                     } // End try catch
                 }
             } catch (Exception e)
             {
-                _logger.LogError(e.Message.ToString());
-                _logger.LogTrace("End Send (async).");
-            }
+                _logger.LogTrace("End Send an email (Async).");
+                throw e; 
+            } // End try catch
         } // End SendAsync
     } // End Class EmailSender
 }
