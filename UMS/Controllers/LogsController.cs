@@ -9,7 +9,7 @@ using static UMS.Controllers.ManageUserController;
 /*
  * Name: UMS.Controllers.LogsController
  * Author: Namchok Singhachai
- * Description: Logs monitor controller
+ * Description: The controller manages log monitor page.
  */
 
 namespace UMS.Controllers
@@ -22,7 +22,7 @@ namespace UMS.Controllers
         /*
          * Name: LogsController
          * Parametor: logger(ILogger<LogsController>), authDbContext(AuthDbContext)
-         * Description: Constructor
+         * Description: The constructor for log monitor.
          */
         public LogsController(ILogger<LogsController> logger, AuthDbContext authDbContext)
         {
@@ -30,19 +30,18 @@ namespace UMS.Controllers
             {
                 _logger = logger;
                 _unitOfWork = new UnitOfWork(authDbContext);
-                _logger.LogTrace("Start Logs Controller.");
+                _logger.LogTrace("Start logs controller.");
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                _logger.LogTrace("End Logs Controller.");
+                _logger.LogTrace("End logs controller.");
             }// End try catch
         } // End Constructor
 
         /*
          * Name: Deconstruct
-         * Parametor: none
-         * Description: Deconstructor of logs controller.
+         * Description: The deconstructor of logs controller.
          */
         public void Deconstruct()
         {
@@ -52,27 +51,27 @@ namespace UMS.Controllers
 
         /*
          * Name: Index
-         * Parametor: log(Logs)
-         * Description: For Logs monitor
+         * Author: Namchok Singhachai
+         * Description: A show of logs.
          */
         public IActionResult Index()
         {
             try
             {
-                _logger.LogTrace("Start Logs Index.");
+                _logger.LogTrace("Start logs index.");
                 _logger.LogTrace("Finding user ID.");
-                ViewData["UserId"] = User.FindFirstValue(ClaimTypes.NameIdentifier) ?? throw new Exception("User ID not found!."); // Get user ID
+                ViewData["UserId"] = User.FindFirstValue(ClaimTypes.NameIdentifier) ?? throw new Exception("The user ID not found!."); // Get user ID
                 _logger.LogDebug($"Getting top 100 from all logs.");
                 ViewData["Logs"] = _unitOfWork.Logs.GetAll(100) ?? throw new Exception("Calling a method on a null object reference."); // Set result to view and check null value
-                ViewData["INFO"] = @$"toastr.info('Select lasted logs.');"; // Message for result query
-                _logger.LogTrace("End Logs Index.");
+                ViewData["INFO"] = @$"toastr.info('A show of last logs.');"; // Message for result query
+                _logger.LogTrace("End logs index.");
                 return View();
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'ERROR!', text: `" + e.Message + @"`, showConfirmButton: true });";
-                _logger.LogTrace("End Logs Index.");
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'ERROR!', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });";
+                _logger.LogTrace("End logs index.");
                 return View();
             } // End try catch
         } // End Index
@@ -80,31 +79,32 @@ namespace UMS.Controllers
         /*
          * Name: SearchLogs
          * Parametor: [POST] dateInput(string), message(string)
-         * Description: For Logs monitor
+         * Author: Namchok Singhachai
+         * Description: Searching a log.
          */
         public JsonResult Search(string messageInput, string dateInput)
         {
             try
             {
-                _logger.LogTrace("Start searching logs.");
+                _logger.LogTrace("Start searching a logs.");
                 if ((dateInput == null && messageInput == null) || (dateInput == "" && messageInput == ""))
                     throw new Exception("Please input information for searching."); // End if param both is null 
                 _logger.LogDebug("Input Date Input: " + ((dateInput != null && dateInput != "") ? dateInput : "-"));
                 _logger.LogDebug("Input Message: " + ((messageInput != null && messageInput != "") ? messageInput : "-"));
                 _logger.LogDebug($"Getting log by {(dateInput ?? "")}{(messageInput == null ? "" : " or " + messageInput)}.");
-                _logger.LogTrace("End searching logs.");
+                _logger.LogTrace("End searching a logs.");
                 return new JsonResult(_unitOfWork.Logs.Search(messageInput, dateInput)); // Return object JSON
             }
             catch (Exception e)
             {
                 _logger.LogError("Error: " + e.Message.ToString());
-                _logger.LogTrace("End search logs.");
+                _logger.LogTrace("End searching a logs.");
                 return new JsonResult(new objectJSON
                 {
                     condition = "error",
-                    messages = @"Swal.fire({ icon: 'error', title: 'ERROR!', text: `" + e.Message + @"`, showConfirmButton: true });",
+                    messages = @"Swal.fire({ icon: 'error', title: 'ERROR!', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });",
                     text = e.Message
-                }); // Message to html view
+                });
             } // End try catch
         } // End searchLogs
     } // End Logs

@@ -7,7 +7,7 @@ using UMS.Data;
 /*
  * Name: IUnitOfWork
  * Author: Namchok Singhachai
- * Description: interface class for control all.
+ * Description: The interface class for control all.
  */
 
 namespace UMS.Controllers
