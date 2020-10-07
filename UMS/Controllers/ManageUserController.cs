@@ -37,12 +37,12 @@ namespace UMS.Controllers
                 _logger = logger;
                 _accountContext = accountContext;
                 _editaccountContext = editaccountContext;
-                _logger.LogTrace("Start manageUser controller.");
+                _logger.LogTrace("Start manage user controller.");
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                _logger.LogTrace("End manageUser controller.");
+                _logger.LogTrace("End manage user controller.");
             }// End try catch
         } // End constructor
 
@@ -61,9 +61,11 @@ namespace UMS.Controllers
                 _logger.LogTrace("Finding user ID.");
                 ViewData["UserId"] = User.FindFirstValue(ClaimTypes.NameIdentifier) ?? throw new Exception("The user ID not found !");  // Get user ID
                 _logger.LogDebug("Getting all active users.");
+                
                 string sqltext = "EXEC [dbo].ums_Get_all_active_user"; // Set sql text for execute
                 var alluser = _accountContext.Account.FromSqlRaw(sqltext).ToList<Account>();
                 ViewData["User"] = alluser ?? throw new Exception("Calling a method on a null object reference."); // Send data to view Index.cshtml
+                
                 _logger.LogTrace("End manage user index.");
                 return View();
             }
@@ -89,12 +91,13 @@ namespace UMS.Controllers
             {
                 _logger.LogTrace("Start get user.");
                 if (id == null || id.ToString() == "") throw new Exception("Calling a method on a null object reference."); // Check if parameter is null
+                
+                _logger.LogDebug("Getting user by ID.");
                 string sqltext = $"EXEC [dbo].ums_Get_user_by_Id '{id}'";
                 var user = _editaccountContext.EditAccount.FromSqlRaw(sqltext).ToList().FirstOrDefault<EditAccount>();
-                _logger.LogDebug("Getting user by ID.");
-                if (user == null) throw new Exception("Calling a method on a null object reference.");
+               
                 _logger.LogTrace("End get user.");
-                return new JsonResult(user); // Return JSON by Ajax
+                return new JsonResult(user?? throw new Exception("Calling a method on a null object reference.")); // Return JSON by Ajax
             } catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
@@ -133,7 +136,6 @@ namespace UMS.Controllers
                     // SQL text for execute procedure
                     string sqlUpdateUser = $"ums_Update_name_user '{_account.acc_Id}', '{_account.acc_Firstname}', '{_account.acc_Lastname}'"; // Update name's user
                     string sqlUpdateRoleUser = $"ums_Update_role_user '{_account.acc_Id}', '{_account.acc_Rolename}'";              // Update role's user
-                    // Update Account add UserRoles
                     _logger.LogDebug("Updating name user.");
                     _editaccountContext.Database.ExecuteSqlRaw(sqlUpdateUser);
                     _logger.LogDebug("Updating role user.");
