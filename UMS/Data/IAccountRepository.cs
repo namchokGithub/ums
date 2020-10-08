@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
+using UMS.Areas.Identity.Data;
 using UMS.Models;
 
 /*
@@ -14,8 +15,8 @@ namespace UMS.Data
     {
         SqlParameter FindByUsername(string username, string status);
         List<Account> GetAll();
-        Account GetByID();
-        SqlParameter GetStatus(string username, string status);
+        Account GetByID(string id);
+        SqlParameter GetStatus(string username);
         void ToggleStatus(string id);
         void UpdateName(Account _account);
         void UpdateRole(Account _account);

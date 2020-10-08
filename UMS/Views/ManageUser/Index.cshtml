@@ -5,7 +5,7 @@
 -->
 
 <!-- Use Edit profile model -->
-@model UMS.Models.EditAccount
+@model UMS.Models.Account
 
 @{
     ViewData["Title"] = "Manage User";                  // Set title
@@ -51,8 +51,8 @@
                                 {
                                     @foreach (var item in ViewData["User"] as List<Account>)
                                     {
-                                        if (id.ToString() != item.acc_Id)
-                                        {
+                                            if (id.ToString() != item.acc_Id)
+                                            {
                                             <tr>
                                                 <td><center>@(index += 1)</center></td>
                                                 <td>@item.acc_Firstname</td>
@@ -244,6 +244,7 @@
                 type: "POST",
                 dataType: "JSON",
                 success: function (result) {
+                    console.log(result);
                     // Check if id is null will return error
                     if (result['condition'] != "error") {
                         // Set data to form
@@ -261,7 +262,7 @@
                         console.log('Set value success.');
                         $('#EditUser').modal(); // Show modal
                     } else {
-                        eval(result['messages']) // Excute js
+                        eval(result['messages']); // Excute js
                         console.log(`Error! ${result['text']}`);
                     } // End if result is not error
                 },

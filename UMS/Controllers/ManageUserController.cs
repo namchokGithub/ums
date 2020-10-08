@@ -64,11 +64,8 @@ namespace UMS.Controllers
                 _logger.LogTrace("Finding user ID.");
                 ViewData["UserId"] = User.FindFirstValue(ClaimTypes.NameIdentifier) ?? throw new Exception("The user ID not found !");  // Get user ID
                 _logger.LogDebug("Getting all active users.");
-                
-                string sqltext = "EXEC [dbo].ums_Get_all_active_user"; // Set sql text for execute
-                var alluser = _accountContext.Account.FromSqlRaw(sqltext).ToList<Account>();
-                ViewData["User"] = alluser ?? throw new Exception("Calling a method on a null object reference."); // Send data to view Index.cshtml
-                
+                ViewData["User"] = _unitOfWork.Account.GetAll() ?? throw new Exception("Calling a method on a null object reference."); // Send data to view Index.cshtml
+                _unitOfWork.Account.Dispose();
                 _logger.LogTrace("End manage user index.");
                 return View();
             }
@@ -94,25 +91,26 @@ namespace UMS.Controllers
             {
                 _logger.LogTrace("Start get user.");
                 if (id == null || id.ToString() == "") throw new Exception("Calling a method on a null object reference."); // Check if parameter is null
-                
-                _logger.LogDebug("Getting user by ID.");
-                string sqltext = $"EXEC [dbo].ums_Get_user_by_Id '{id}'";
-                var user = _editaccountContext.EditAccount.FromSqlRaw(sqltext).ToList().FirstOrDefault<EditAccount>();
-               
+                _logger.LogDebug($"Getting user by {id}.");
                 _logger.LogTrace("End get user.");
-                return new JsonResult(user?? throw new Exception("Calling a method on a null object reference.")); // Return JSON by Ajax
-            } catch (Exception e)
+                return new JsonResult(_unitOfWork.Account.GetByID(id) ?? throw new Exception("Calling a method on a null object reference.")); // Return JSON by Ajax
+            }
+            catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
                 var er = new objectJSON
                 {
                     condition = "error",
-                    messages = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });",
+                    messages = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/").Replace("`", "|") + @"`, showConfirmButton: true });",
                     text = e.Message
                 }; // Object for set alert
                 _logger.LogTrace("End get user.");
                 return new JsonResult(er);
-            } // End try catch
+            }
+            finally
+            {
+                _unitOfWork.Account.Dispose();
+            }// End try catch
         } // End get user
 
         /*
@@ -122,7 +120,7 @@ namespace UMS.Controllers
          * Description: User profile editing.
          */
         [HttpPost]
-        public IActionResult editUser(EditAccount _account)
+        public IActionResult editUser(Account _account)
         {
             try
             {
@@ -136,21 +134,18 @@ namespace UMS.Controllers
                 if (_account.acc_Id == null || _account.acc_Id == "") throw new Exception("Calling a method on a null object reference.");
                 if (ModelState.IsValid)
                 {
-                    // SQL text for execute procedure
-                    string sqlUpdateUser = $"ums_Update_name_user '{_account.acc_Id}', '{_account.acc_Firstname}', '{_account.acc_Lastname}'"; // Update name's user
-                    string sqlUpdateRoleUser = $"ums_Update_role_user '{_account.acc_Id}', '{_account.acc_Rolename}'";              // Update role's user
-                    _logger.LogDebug("Updating name user.");
-                    _editaccountContext.Database.ExecuteSqlRaw(sqlUpdateUser);
-                    _logger.LogDebug("Updating role user.");
-                    _editaccountContext.Database.ExecuteSqlRaw(sqlUpdateRoleUser);
+                    _unitOfWork.Account.UpdateName(_account);
+                    _unitOfWork.Account.UpdateRole(_account);
+                    TempData["UpdateResult"] = @"toastr.success('Update user successfully!');";
                     var result = false;
                     while (!result)
                     {
                         try
                         {
-                            _editaccountContext.SaveChanges();
+                            _unitOfWork.Account.Complete();
+                            _unitOfWork.Account.Dispose();
                             _logger.LogDebug("Save changes: User update successfully.");
-                            TempData["UpdateResult"] = @"toastr.success('Update user successfully!')";
+                            TempData["UpdateResult"] = @"toastr.success('Update user successfully!');";
                             result = true;
                         }
                         catch (Exception e)
@@ -161,10 +156,8 @@ namespace UMS.Controllers
                 }
                 else
                 {
-                    // return BadRequest(ModelState);
-                    _logger.LogError("ModelState is not valid!.");
-                    TempData["UpdateResult"] = @"Swal.fire({ icon: 'error', title: 'Error !', text 'ModelState is not valid!.', showConfirmButton: true });";
-                } // End if-else
+                    throw new Exception("ModelState is not valid!.");
+                } // End checking model state.
                 _logger.LogTrace("End user editing.");
                 return RedirectToAction("Index");
             }
@@ -190,14 +183,14 @@ namespace UMS.Controllers
                 _logger.LogTrace("Start account deactivation.");
                 if (id == null || id.ToString() == "") throw new Exception("Calling a method on a null object reference.");
                 _logger.LogDebug("Executing sql for user deactivation.");
-                string sqlText = $"ums_Delete_user '{id}'";
-                _accountContext.Database.ExecuteSqlRaw(sqlText);
+                _unitOfWork.Account.ToggleStatus(id);
                 var result = false;
                 while (!result)
                 {
                     try
                     {
-                        _accountContext.SaveChanges();
+                        _unitOfWork.Account.Complete();
+                        _unitOfWork.Account.Dispose();
                         _logger.LogTrace("Deactivation successful.");
                         result = true; // If deactivation successful
                     }
@@ -228,9 +221,9 @@ namespace UMS.Controllers
             {
                 _logger.LogTrace("Start checking user.");
                 if (username == null && status == null) throw new Exception("Calling a method on a null object reference.");
-                var checkExits = _unitOfWork.Account.FindByUsername(username, status);
+                SqlParameter checkExits = _unitOfWork.Account.FindByUsername(username, status);
                 _logger.LogDebug("Checking user.");
-                _logger.LogDebug($"Detected {(int)checkExits.Value} users.");
+                _logger.LogInformation($"Detected {(int)checkExits.Value} users.");
                 _logger.LogTrace("End check user is exist.");
                 return (int)checkExits.Value;
             }
@@ -238,7 +231,7 @@ namespace UMS.Controllers
             {
                 _logger.LogWarning(e.Message.ToString());
                 _logger.LogTrace("End checking user.");
-                return 0;
+                throw new Exception(e.Message.ToString());
             } // End try catch
         } // End CheckUserExist
 
@@ -255,16 +248,7 @@ namespace UMS.Controllers
             {
                 _logger.LogTrace("Start getting status user.");
                 if (username == null || username.ToString() == "") throw new Exception("Calling a method on a null object reference.");
-                var status = new SqlParameter("@paramout_status", SqlDbType.Int)
-                {
-                    IsNullable = true,
-                    Direction = ParameterDirection.Output,
-                    Size = 10,
-                    Value = DBNull.Value
-                }; // Set parameter for get value
-                string sqlGetStatusUser = $@"EXEC @paramout_status=[dbo].ums_Get_status_user '{username}'";
-                _logger.LogTrace($"Executing sql stored procedure ({sqlGetStatusUser}).");
-                _accountContext.Database.ExecuteSqlRaw(sqlGetStatusUser, status);
+                var status = _unitOfWork.Account.GetStatus(username);
                 if (status.Value == null) throw new Exception("Calling a method on a null object reference.");
                 if (!int.TryParse(status.Value.ToString(), out _)) throw new Exception("Uncorrect type."); // If status if not integer
                 if((int)status.Value == 1) status.Value = "ACTIVE";
@@ -278,7 +262,7 @@ namespace UMS.Controllers
                 var er = new objectJSON
                 {
                     condition = "error",
-                    messages = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });",
+                    messages = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/").Replace("`", "|") + @"`, showConfirmButton: true });",
                     text = e.Message.Replace("\\", "/")
                 }; // Object for set alert
                 _logger.LogTrace("End getting status user.");

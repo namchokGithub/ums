@@ -1,8 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc.Authorization;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
+using System.Linq;
+using UMS.Areas.Identity.Data;
 using UMS.Models;
 
 /*
@@ -29,57 +32,125 @@ namespace UMS.Data
         /*
          * Name: FindByUsername
          * Parametor: username(string), status(string)
-         * Description: The search for user by username and status.
+         * Author: Namchok Singhachai
+         * Description: The search for user by username and status (In controller is Function CheckIsExist).
          */
         public SqlParameter FindByUsername(string username, string status)
         {
-            var checkExits = new SqlParameter("@returnVal", SqlDbType.Int) { Direction = ParameterDirection.Output }; // Set parameter for get value
-            var sqlText = $"EXEC @returnVal=[dbo].ums_Check_user '{username}', '{status}'";// Return value from sture procudure
-            _context.Account.FromSqlRaw(sqlText, checkExits);
-            var result = false;
-            while (!result)
+            try
             {
-                try
+                var checkExits = new SqlParameter("@returnVal", SqlDbType.Int)
                 {
-                    _context.SaveChanges();
-                    result = true; // If successfully
-                }
-                catch (Exception e)
-                {
-                    throw e;
-                } // End try catch
-            } // Checking successfully
-            return checkExits;
+                    Direction = ParameterDirection.Output
+                }; // Set parameter for get value
+                _context.Database.ExecuteSqlRaw($"EXEC @returnVal=[dbo].ums_Check_user '{username}', '{status}'", checkExits);
+                _context.SaveChanges();
+                _context.Dispose();
+                return checkExits;
+            } catch (Exception e)
+            {
+                throw e;
+            } // End try catch
         } // End FindByUsername
 
+        /*
+         * Name: GetAll
+         * Author: Namchok Singhachai
+         * Description: The getting list of all users.
+         */
         public List<Account> GetAll()
         {
-            throw new System.NotImplementedException();
-        }
+            return _context.Account.FromSqlRaw("EXEC [dbo].ums_Get_all_active_user").ToList<Account>();
+        } // End get all
 
-        public Account GetByID()
+        /*
+         * Name: GetByID
+         * Parameter: id(string)
+         * Author: Namchok Singhachai
+         * Description: The getting a user is already active on the system by id.
+         */
+        public Account GetByID(string id)
         {
-            throw new System.NotImplementedException();
-        }
+            return _context.Account.FromSqlRaw($"EXEC [dbo].ums_Get_user_by_Id '{id}'").AsEnumerable<Account>().FirstOrDefault();
+        } // End GetByID
 
-        public SqlParameter GetStatus(string username, string status)
+        /*
+         * Name: GetStatus
+         * Parameter: username(string), status(string)
+         * Description: The checking user is already exist on system by username (GetStatusUser).
+         */
+        public SqlParameter GetStatus(string username)
         {
-            throw new System.NotImplementedException();
-        }
+            try
+            {
+                var status = new SqlParameter("@paramout_status", SqlDbType.Int)
+                {
+                    IsNullable = true,
+                    Direction = ParameterDirection.Output,
+                    Size = 10,
+                    Value = DBNull.Value
+                }; // Set parameter for get value
+                _context.Database.ExecuteSqlRaw($@"EXEC @paramout_status=[dbo].ums_Get_status_user '{username}'", status);
+                _context.SaveChanges();
+                _context.Dispose();
+                return status;
+            } catch (Exception e)
+            {
+                throw e;
+            } // End try catch
+        } // End GetStatus
 
+        /*
+         * Name: ToggleStatus
+         * Parameter: id(string)
+         * Description: Account deactivation.
+         */
         public void ToggleStatus(string id)
         {
-            throw new System.NotImplementedException();
-        }
+            try
+            {
+                _context.Database.ExecuteSqlRaw($"ums_Delete_user '{id}'");
+            } catch (Exception e)
+            {
+                throw e;
+            } // End try catch
+        } // End ToggleStatus
 
+        /*
+         * Name: UpdateName
+         * Parameter: _account(Account)
+         * Description: The user profile editing (Name).
+         */
         public void UpdateName(Account _account)
         {
-            throw new System.NotImplementedException();
-        }
+            try
+            {
+                // SQL text for execute procedure
+                string sqlUpdateUser = $"ums_Update_name_user '{_account.acc_Id}', '{_account.acc_Firstname}', '{_account.acc_Lastname}'"; // Update name's user
+                _context.Database.ExecuteSqlRaw(sqlUpdateUser);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            } // End try catch
+        } // End UpdateName
 
+        /*
+         * Name: UpdateRole
+         * Parameter: _account(Account)
+         * Description: The user profile editing (Role).
+         */
         public void UpdateRole(Account _account)
         {
-            throw new System.NotImplementedException();
-        }
+            try
+            {
+                string sqlUpdateRoleUser = $"ums_Update_role_user '{_account.acc_Id}', '{_account.acc_Rolename}'";              // Update role's user
+                _context.Database.ExecuteSqlRaw(sqlUpdateRoleUser);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            } // End try catch
+        } // End UpdateRole
     } // End AccountRepository
 }
