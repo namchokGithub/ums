@@ -35,6 +35,7 @@ namespace UMS.Areas.Identity.Pages.Account
         private readonly ManageUserController _manageUser;
 
         public LoginModel(
+            UMS.Data.AuthDbContext context,
             SignInManager<ApplicationUser> signInManager,
             ILogger<LoginModel> logger,
             ILogger<ManageUserController> loggerManageUser,
@@ -47,7 +48,7 @@ namespace UMS.Areas.Identity.Pages.Account
                 _userManager = userManager;
                 _signInManager = signInManager;
                 _logger = logger;
-                _manageUser = new ManageUserController(accountContext, editaccountContext, loggerManageUser, signInManager);
+                _manageUser = new ManageUserController(context, accountContext, editaccountContext, loggerManageUser);
                 _logger.LogDebug("Start Login model.");
             }
             catch (Exception e)

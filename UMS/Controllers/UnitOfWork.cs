@@ -21,6 +21,7 @@ namespace UMS.Controllers
     {
         private AuthDbContext _context;
         public ILogsRepository Logs { get; private set; }
+        public IAccountRepository Account { get; private set; }
         /*
          * Name: UnitOfWork
          * Parameter: context(AuthDbContext)
@@ -31,6 +32,7 @@ namespace UMS.Controllers
         {
             _context = context;
             Logs = new LogsRepository(_context);
+            Account = new AccountRepository(_context);
         } // End Constructor
 
         /*

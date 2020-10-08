@@ -115,6 +115,7 @@ namespace UMS.Data
             // _logger.LogTrace("End creating on model.");
         } // End OnModelCreating
 
-        public DbSet<Logs> Logs { get; set; } // Set table Logs
+        public DbSet<Logs> Logs { get; set; } // Set table logs
+        public DbSet<Account> Account { get; set; } // Set table account
     } // End AuthDbContext
 }

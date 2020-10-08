@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using UMS.Models;
 
@@ -23,10 +26,31 @@ namespace UMS.Data
             _context = context;
         } // End constructor
 
+        /*
+         * Name: FindByUsername
+         * Parametor: username(string), status(string)
+         * Description: The search for user by username and status.
+         */
         public SqlParameter FindByUsername(string username, string status)
         {
-            throw new System.NotImplementedException();
-        }
+            var checkExits = new SqlParameter("@returnVal", SqlDbType.Int) { Direction = ParameterDirection.Output }; // Set parameter for get value
+            var sqlText = $"EXEC @returnVal=[dbo].ums_Check_user '{username}', '{status}'";// Return value from sture procudure
+            _context.Account.FromSqlRaw(sqlText, checkExits);
+            var result = false;
+            while (!result)
+            {
+                try
+                {
+                    _context.SaveChanges();
+                    result = true; // If successfully
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                } // End try catch
+            } // Checking successfully
+            return checkExits;
+        } // End FindByUsername
 
         public List<Account> GetAll()
         {

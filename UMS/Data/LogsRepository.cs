@@ -44,7 +44,7 @@ namespace UMS.Data
          */
         public List<Logs> GetAll(int numofrow)
         {
-            return _context.Logs.FromSqlRaw(@$"Exec dbo.ums_Get_all_log {numofrow}").ToList();
+            return _context.Logs.Take(numofrow).ToList();
         } // End GetAll
 
         /*

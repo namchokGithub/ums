@@ -12,12 +12,12 @@ namespace UMS.Data
 {
     public interface IAccountRepository : IRepository<Account>
     {
+        SqlParameter FindByUsername(string username, string status);
         List<Account> GetAll();
         Account GetByID();
+        SqlParameter GetStatus(string username, string status);
+        void ToggleStatus(string id);
         void UpdateName(Account _account);
         void UpdateRole(Account _account);
-        void ToggleStatus(string id);
-        SqlParameter FindByUsername(string username, string status);
-        SqlParameter GetStatus(string username, string status);
     } // End Interface IAccount
 }

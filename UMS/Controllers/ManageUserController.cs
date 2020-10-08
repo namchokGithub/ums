@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
+using UMS.Data;
 
 /*
  * Name: ManageUserController.cs
@@ -24,19 +25,21 @@ namespace UMS.Controllers
         private readonly AccountContext _accountContext;
         private readonly EditAccountContext _editaccountContext;
         private readonly ILogger<ManageUserController> _logger;
+        private readonly IUnitOfWork _unitOfWork;
         /*
          * Name: ManageUserController
-         * Parameter: accountContext(AccountContext)
+         * Parameter: accountContext(AccountContext), editaccountContext(EditAccountContext), logger(ILogger<ManageUserController>)
          * Author: Namchok Singhachai
          * Description: The constructor for set context for database.
          */
-        public ManageUserController(AccountContext accountContext, EditAccountContext editaccountContext, ILogger<ManageUserController> logger)
+        public ManageUserController(AuthDbContext context, AccountContext accountContext, EditAccountContext editaccountContext, ILogger<ManageUserController> logger)
         {
             try
             {
                 _logger = logger;
                 _accountContext = accountContext;
                 _editaccountContext = editaccountContext;
+                _unitOfWork = new UnitOfWork(context);
                 _logger.LogTrace("Start manage user controller.");
             }
             catch (Exception e)
@@ -214,38 +217,19 @@ namespace UMS.Controllers
 
         /*
          * Name: CheckUserExist
-         * Parameter: userStr(string), status(string)
+         * Parameter: username(string), status(string)
          * Author: Namchok Singhachai
          * Description: Checking user is already exist on system.
          */
         [AllowAnonymous] // For register
-        public int CheckUserExist(string userStr = "", string status = "Y")
+        public int CheckUserExist(string username = "", string status = "Y")
         {
             try
             {
                 _logger.LogTrace("Start checking user.");
-                if (userStr == null && status == null) throw new Exception("Calling a method on a null object reference.");
-                var checkExits = new SqlParameter("@returnVal", SqlDbType.Int)
-                {
-                    Direction = ParameterDirection.Output
-                }; // Set parameter for get value
-                var sqlText = $"EXEC @returnVal=[dbo].ums_Check_user '{userStr}', '{status}'";// Return value from sture procudure
-                _accountContext.Database.ExecuteSqlRaw(sqlText, checkExits);
+                if (username == null && status == null) throw new Exception("Calling a method on a null object reference.");
+                var checkExits = _unitOfWork.Account.FindByUsername(username, status);
                 _logger.LogDebug("Checking user.");
-                var result = false;
-                while (!result)
-                {
-                    try
-                    {
-                        _accountContext.SaveChanges();
-                        _logger.LogTrace("Query successfully.");
-                        result = true; // If successfully
-                    }
-                    catch (Exception e)
-                    {
-                        throw e;
-                    } // End try catch
-                } // If checking successfully
                 _logger.LogDebug($"Detected {(int)checkExits.Value} users.");
                 _logger.LogTrace("End check user is exist.");
                 return (int)checkExits.Value;

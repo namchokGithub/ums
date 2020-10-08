@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using UMS.Areas.Identity.Data;
+using UMS.Data;
 using UMS.Models;
 using static UMS.Areas.Identity.Pages.Account.LoginModel;
 
@@ -30,7 +31,9 @@ namespace UMS.Controllers
          * Parameter: userManager, accountContext, editaccountContext, loggerManager, signInManager, logger
          * Description: Controller manages an account login.
          */
-        public AccountController(UserManager<ApplicationUser> userManager,
+        public AccountController(
+            AuthDbContext context,
+            UserManager<ApplicationUser> userManager,
             AccountContext accountContext,
             EditAccountContext editaccountContext,
             ILogger<ManageUserController> loggerManager,
@@ -42,7 +45,7 @@ namespace UMS.Controllers
                 _logger = logger;
                 _signInManager = signInManager;
                 _userManager = userManager;
-                _manageUserController = new ManageUserController(accountContext, editaccountContext, loggerManager, _signInManager);
+                _manageUserController = new ManageUserController(context, accountContext, editaccountContext, loggerManager);
                 _logger.LogTrace("Start account controller.");
             }
             catch (Exception e)

@@ -1,0 +1,108 @@
+######################################## User Management System log All Trace #########################################
+2020/10/08 08:34:01.237 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/10/08 08:34:49.260 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/10/08 08:35:16.097 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/10/08 08:35:19.472 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/08 08:35:21.080 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/08 08:35:21.080 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/08 08:35:21.109 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/08 08:35:21.510 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:33 | Start Application Database Context.
+2020/10/08 08:35:24.587 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:34 | Start home controller.
+2020/10/08 08:35:24.659 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:52 | Start home index.
+2020/10/08 08:35:24.659 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:53 | Welcome usermanagement2020@gmail.com to UMS.
+2020/10/08 08:35:24.680 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:54 | Finding user ID.
+2020/10/08 08:35:24.680 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:56 | End home index.
+2020/10/08 08:36:36.662 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:33 | Start Application Database Context.
+2020/10/08 08:36:36.704 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:33 | Start logs controller.
+2020/10/08 08:36:36.723 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:61 | Start logs index.
+2020/10/08 08:36:36.723 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:62 | Finding user ID.
+2020/10/08 08:36:36.741 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:64 | Getting top 100 from all logs.
+2020/10/08 08:36:36.953 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:67 | End logs index.
+2020/10/08 08:37:09.980 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/10/08 09:00:14.151 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/10/08 09:00:16.792 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/08 09:00:17.712 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/08 09:00:17.739 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/08 09:00:17.755 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/08 09:00:18.184 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:33 | Start Application Database Context.
+2020/10/08 09:00:18.262 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:34 | Start home controller.
+2020/10/08 09:00:18.270 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:52 | Start home index.
+2020/10/08 09:00:18.270 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:53 | Welcome usermanagement2020@gmail.com to UMS.
+2020/10/08 09:00:18.283 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:54 | Finding user ID.
+2020/10/08 09:00:18.283 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:56 | End home index.
+2020/10/08 09:00:21.996 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:33 | Start Application Database Context.
+2020/10/08 09:00:22.066 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:30 | Start Logout model.
+2020/10/08 09:00:22.102 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:60 | Start Logout model On Post.
+2020/10/08 09:00:22.102 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:62 | Signing out.
+2020/10/08 09:00:22.116 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:64 | User logged out.
+2020/10/08 09:00:22.116 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:71 | Clear cookies AspNetCore Identity Application.
+2020/10/08 09:00:22.116 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:73 | End Log out model On Post.
+2020/10/08 09:00:22.160 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:33 | Start Application Database Context.
+2020/10/08 09:00:22.176 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:30 | Start Logout model.
+2020/10/08 09:00:22.176 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:40 | Signing out.
+2020/10/08 09:00:22.192 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:42 | User logged out.
+2020/10/08 09:00:22.205 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:49 | Clear cookies AspNetCore Identity Application.
+2020/10/08 09:00:22.205 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:50 | Logout model On get.
+2020/10/08 09:00:23.998 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:33 | Start Application Database Context.
+2020/10/08 09:00:24.008 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/08 09:00:24.024 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/08 09:00:24.044 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:40 | Start manage user controller.
+2020/10/08 09:00:24.044 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/08 09:00:24.068 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/10/08 09:00:24.068 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/10/08 09:00:24.068 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/08 09:00:24.085 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
+2020/10/08 09:00:27.829 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:33 | Start Application Database Context.
+2020/10/08 09:00:27.834 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/08 09:00:27.834 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:62 | Start Register model.
+2020/10/08 09:00:27.872 [TRACE] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:122 | Getting external login.
+2020/10/08 09:00:27.872 [TRACE] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:124 | Register on get.
+2020/10/08 09:00:32.508 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/10/08 09:00:32.598 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/08 09:00:32.731 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:40 | Start manage user controller.
+2020/10/08 09:00:32.806 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:226 | Start checking user.
+2020/10/08 09:00:33.421 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/10/08 09:00:33.434 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/08 09:00:33.455 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:40 | Start manage user controller.
+2020/10/08 09:00:33.462 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:226 | Start checking user.
+2020/10/08 09:00:34.081 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:234 | Checking user.
+2020/10/08 09:00:34.081 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:234 | Checking user.
+2020/10/08 09:00:34.119 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:241 | Query successfully.
+2020/10/08 09:00:34.119 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:249 | Detected 1 users.
+2020/10/08 09:00:34.127 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:241 | Query successfully.
+2020/10/08 09:00:34.127 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:249 | Detected 1 users.
+2020/10/08 09:00:34.127 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:250 | End check user is exist.
+2020/10/08 09:00:34.127 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:250 | End check user is exist.
+2020/10/08 09:00:37.840 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/10/08 09:00:37.888 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/08 09:00:37.909 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:40 | Start manage user controller.
+2020/10/08 09:00:37.909 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:226 | Start checking user.
+2020/10/08 09:00:37.983 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:234 | Checking user.
+2020/10/08 09:00:37.994 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:241 | Query successfully.
+2020/10/08 09:00:37.994 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:249 | Detected 1 users.
+2020/10/08 09:00:38.007 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:250 | End check user is exist.
+2020/10/08 09:00:44.217 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/10/08 09:00:44.228 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/08 09:00:44.242 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:40 | Start manage user controller.
+2020/10/08 09:00:44.242 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:226 | Start checking user.
+2020/10/08 09:00:44.259 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:234 | Checking user.
+2020/10/08 09:00:44.269 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:241 | Query successfully.
+2020/10/08 09:00:44.269 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:249 | Detected 0 users.
+2020/10/08 09:00:44.288 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:250 | End check user is exist.
+2020/10/08 09:00:48.390 [DEBUG] [UMS.Models.AccountContext]  CheckUserExist:AccountContext.cs:24 | Start Account Context.
+2020/10/08 09:00:48.442 [DEBUG] [UMS.Models.EditAccountContext]  CheckUserExist:EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/08 09:00:48.469 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:40 | Start manage user controller.
+2020/10/08 09:00:48.475 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:226 | Start checking user.
+2020/10/08 09:00:48.475 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:234 | Checking user.
+2020/10/08 09:00:48.490 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:241 | Query successfully.
+2020/10/08 09:00:48.490 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:249 | Detected 1 users.
+2020/10/08 09:00:48.490 [TRACE] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:250 | End check user is exist.
+2020/10/08 09:00:50.863 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:33 | Start Application Database Context.
+2020/10/08 09:00:50.863 [DEBUG] [UMS.Models.EditAccountContext]  EditAccountContext.cs:24 | Start Edit Account Context.
+2020/10/08 09:00:50.889 [DEBUG] [UMS.Models.AccountContext]  AccountContext.cs:24 | Start Account Context.
+2020/10/08 09:00:50.911 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:40 | Start manage user controller.
+2020/10/08 09:00:50.911 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start Login model.
+2020/10/08 09:00:50.927 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:102 | Start login on get.
+2020/10/08 09:00:50.927 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:115 | Signing out.
+2020/10/08 09:00:50.943 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/08 09:00:50.943 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:120 | End login on get.
