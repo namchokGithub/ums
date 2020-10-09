@@ -217,7 +217,7 @@
         } // End register
 
         $(document).ready(() => {
-            @if (TempData["Exception"] != null) {@Html.Raw(TempData["Exception"])/* Swal funciton */ } // Check is has exception// Check is has exception
+            @if (TempData["Exception"] != null) {@Html.Raw(TempData["Exception"])/* Swal funciton */ }; // Check is has exception
         });
 
         /*
@@ -286,7 +286,7 @@
                         let _text = 'Status : ' + result.status + statusResText
                         console.log(result) // show log of error
                         Swal.fire({ icon: 'error', title: 'Error !', text: _text, showConfirmButton: true });
-                        toastr.error(_text)
+                        toastr.error(_text);
                     } // End error
                 }).done(function () {
                     setTimeout(function () {

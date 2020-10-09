@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -32,13 +33,23 @@ namespace UMS.Areas.Identity.Pages.Account
          */
         public IActionResult OnPost()
         {
-            _logger.LogTrace("Access denined on post.");
-            foreach (var cookie in HttpContext.Request.Cookies)
+            try
             {
-                Response.Cookies.Delete(cookie.Key);
+                _logger.LogTrace("Access denined on post.");
+                foreach (var cookie in HttpContext.Request.Cookies)
+                {
+                    Response.Cookies.Delete(cookie.Key);
+                }
+                _logger.LogTrace("Clear cookies AspNetCore Identity Application.");
+                return RedirectToPage("/Login");
             }
-            _logger.LogTrace("Clear cookies AspNetCore Identity Application.");
-            return RedirectToPage("/Login");
+            catch (Exception e)
+            {
+                _logger.LogError(e.Message.ToString());
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });";
+                _logger.LogTrace("End access denined on post.");
+                return Page();
+            } // End try catch
         } // End OnPost
     } // End AccessDeniedModel
 }

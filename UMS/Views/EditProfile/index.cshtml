@@ -1,9 +1,8 @@
-﻿<!--
+﻿@*
     Namspace: ~/View/EditProfile/Index.cshtml
     Author: Wannapa Srijermtong
     Description: View for edit profile
--->
-
+*@
 @model EditProfile
 @{
     ViewData["Title"] = "Edit Profile";
@@ -109,8 +108,7 @@
 
 <!--Start Script-->
 <script>
-    // Exeception
-        @if (TempData["EditProfileException"] != null) { @Html.Raw(TempData["EditProfileException"])}
+    @if (TempData["EditProfileException"] != null) { @Html.Raw(TempData["EditProfileException"])}; // Exeception
 
     //Regular expression
     var RegExName = /^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$/;
@@ -118,9 +116,8 @@
 
     /*
     * Name: toggleCurrentPasword()
-    * Parameter: none
     * Author: Wannapa Srijermtong
-    * Description: For change type of current password.
+    * Description: To changing show a current password.
     */
     function toggleCurrentPasword() {
         // Get id from input
@@ -138,9 +135,8 @@
 
     /*
     * Name: toggleNewPasword()
-    * Parameter: none
     * Author: Wannapa Srijermtong
-    * Description: For change type of new password.
+    * Description: For changing show a new password.
     */
     function toggleNewPasword() {
         // Get id from input
@@ -158,9 +154,8 @@
 
     /*
     * Name: toggleConfirmPasword()
-    * Parameter: none
     * Author: Wannapa Srijermtong
-    * Description: For change type of confirm password.
+    * Description: For change show a confirm password.
     */
     function toggleConfirmPasword() {
         // Get id from input
@@ -178,9 +173,8 @@
 
     /*
     * Name: SaveProfile
-    * Parameter: none
     * Author: Wannapa Srijermtong
-    * Description: Check validation acc_Firstname and acc_Lastname from input.
+    * Description: Checking validation of acc_Firstname and acc_Lastname from input.
     */
     function SaveProfile() {
         // Get id from input
@@ -210,9 +204,8 @@
 
     /*
     * Name: SavePassword
-    * Parameter: none
     * Author: Wannapa Srijermtong
-    * Description: Check validation acc_Firstname, acc_Lastname, acc_CurrentPassword, acc_NewPassword and acc_ConfirmPassword from input.
+    * Description: Checking validation of acc_Firstname, acc_Lastname, acc_CurrentPassword, acc_NewPassword and acc_ConfirmPassword from input.
     */
     function SavePassword() {
         // Get id from input
@@ -257,10 +250,10 @@
                 toastr.warning('The confirm password must contain at least 1 uppercase, 1 lowercase, 1 digit and 1 special character.')
             }
         }
-    }
+    } // End SavePassword
 
     $(document).ready(function () {
-        //Hide href and button SaveProfile for Change password
+        // Hide href and button SaveProfile for Change password
         $("#href_ChangePassword").click(function () {
             $("#href_ChangePassword").hide();
             $("#btn_SaveProfile").hide();
@@ -361,9 +354,9 @@
         });
 
         // Toastr if current password is not match with password hash in database.
-        @if (TempData["EditProfileErrorResult"] != null) { @Html.Raw(TempData["EditProfileErrorResult"])}
+        @if (TempData["EditProfileErrorResult"] != null) { @Html.Raw(TempData["EditProfileErrorResult"])};
         // Toastr if EditProfile (Firstname, Lastname and Change password) Success.
-        @if (TempData["EditProfileSuccessResult"] != null) { @Html.Raw(TempData["EditProfileSuccessResult"])}
+        @if (TempData["EditProfileSuccessResult"] != null) { @Html.Raw(TempData["EditProfileSuccessResult"])};
     })
 </script>
 <!--End Script-->

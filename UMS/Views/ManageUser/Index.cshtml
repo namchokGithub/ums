@@ -1,8 +1,8 @@
-﻿<!--
+﻿@*
     Namspace: ~/View/ManageUser/Index.cshtml
     Author: Namchok Singhachai
-    Description: The view for user management
--->
+    Description: The view for user management.
+*@
 @model UMS.Models.Account
 @{
     ViewData["Title"] = "Manage User";                  // Set title
@@ -163,7 +163,7 @@
         else if (!regex.test($('#acc_Lastname').val())) toastr.warning('The Last name can not be blank and must only character.')
         else if ($('#acc_RoleId').val() == '') toastr.warning('Please select role.')
         else if ($('#acc_IsActive').val() == '') toastr.error('User not Active.')
-        else $("#ModalEditUser").submit()
+        else $("#ModalEditUser").submit();
     } // End CheckUpdateUser
 
     /**
@@ -197,8 +197,8 @@
                         error: function (result) {
                             let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : '' // Set message status
                             let _text = 'Status : ' + result.status  + statusResText
-                            console.log(result) // Show log of error
-                            toastr.error(_text)
+                            console.log(result); // Show log of error
+                            toastr.error(_text);
                         } // if error
                     }).done(function () {
                         setTimeout(function () { location.reload(); }, 800); // Reload pages
@@ -206,8 +206,8 @@
                 } // End if result.value
             }) // End Swal function
         } catch (err) {
-            console.log(err.message)
-            toastr.error(err.message)
+            console.log(err.message);
+            toastr.error(err.message);
         }// End try catch
     } // End DeleteUser
 
@@ -250,23 +250,23 @@
                     // Set message status
                     let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
                     let _text = 'Status : ' + result.status + statusResText
-                    console.log(result) // show log of error
-                    toastr.error(_text)
+                    console.log(result); // show log of error
+                    toastr.error(_text);
                 } // End error
             }) // End ajax for get user by id and set to form
         } catch (err) {
-            console.log(err.message)
-            toastr.error(err.message)
+            console.log(err.message);
+            toastr.error(err.message);
         } // End try catch
     } // End getUser
 
     // Check is update user success
-    @if (TempData["UpdateResult"] != null) { @Html.Raw(TempData["UpdateResult"]) /* Swal funciton */ }
+    @if (TempData["UpdateResult"] != null) { @Html.Raw(TempData["UpdateResult"]) /* Swal funciton */ };
     // Check is has exception
-    @if (TempData["nullException"] != null) { @Html.Raw(TempData["nullException"]) /* Swal funciton */ }
+    @if (TempData["nullException"] != null) { @Html.Raw(TempData["nullException"]) /* Swal funciton */ };
     // Check is has exception
-    @if (TempData["SqlException"] != null) { @Html.Raw(TempData["SqlException"]) /* Swal funciton */ }
+    @if (TempData["SqlException"] != null) { @Html.Raw(TempData["SqlException"]) /* Swal funciton */ };
     // Check is has exception
-    @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ }
+    @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ };
 </script>
 <!-- End Index of Home controller -->

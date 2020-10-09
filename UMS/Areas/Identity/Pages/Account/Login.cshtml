@@ -106,7 +106,7 @@
 }
 <script>
     // Check is has exception
-    @if (TempData["ExceptionLoggedOut"] != null) { @Html.Raw(TempData["ExceptionLoggedOut"]) /* Swal funciton */ }
+    @if (TempData["ExceptionLoggedOut"] != null) { @Html.Raw(TempData["ExceptionLoggedOut"]) /* Swal funciton */ };
     @{ var IsInValid = TempData["ExceptionInValid"] as String;}
     @if (IsInValid == "InValid")
     {
