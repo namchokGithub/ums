@@ -1,12 +1,10 @@
 ﻿using System;
+using UMS.Models;
 using System.Diagnostics;
 using System.Security.Claims;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using UMS.Areas.Identity.Data;
-using UMS.Models;
+using Microsoft.AspNetCore.Authorization;
 
 /*
  * Name: HomeController.cs

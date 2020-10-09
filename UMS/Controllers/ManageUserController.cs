@@ -23,9 +23,8 @@ namespace UMS.Controllers
         private readonly ILogger<ManageUserController> _logger;
         /*
          * Name: ManageUserController
-         * Parameter: accountContext(AccountContext), editaccountContext(EditAccountContext), logger(ILogger<ManageUserController>)
+         * Parameter: context(AuthDbContext), logger(ILogger<ManageUserController>)
          * Author: Namchok Singhachai
-         * Description: The constructor for set context for database.
          */
         public ManageUserController(AuthDbContext context, ILogger<ManageUserController> logger)
         {
@@ -105,7 +104,7 @@ namespace UMS.Controllers
 
         /*
          * Name: EditUser
-         * Parameter: _account(EditAccount)
+         * Parameter: _account(Account)
          * Author: Namchok Singhachai
          * Description: User profile editing.
          */
@@ -242,11 +241,11 @@ namespace UMS.Controllers
                 var status = _unitOfWork.Account.GetStatus(username);
                 if (status.Value == null) throw new Exception("Calling a method on a null object reference.");
                 if (!int.TryParse(status.Value.ToString(), out _)) throw new Exception("Uncorrect type."); // If status if not integer
-                if((int)status.Value == 1) status.Value = "ACTIVE";
+                if ((int)status.Value == 1) status.Value = "ACTIVE";
                 else if ((int)status.Value == 0) status.Value = "INACTIVE";
                 _logger.LogTrace("End getting status user.");
                 return new JsonResult(status.Value);
-            } 
+            }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
@@ -274,4 +273,3 @@ namespace UMS.Controllers
         } // End objectJSON
     } // End class
 }
-    

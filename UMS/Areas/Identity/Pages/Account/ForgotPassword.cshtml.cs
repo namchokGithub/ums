@@ -35,8 +35,8 @@ namespace UMS.Areas.Identity.Pages.Account
          * Parameter: userManager(UserManager<ApplicationUser>), editprofileContext(EditProfileContext), emailSender(IEmailSender), logger(ILogger<ForgotPasswordModel>)
          */
         public ForgotPasswordModel(UserManager<ApplicationUser> userManager,
-            EditProfileContext editprofileContext, 
-            IEmailSender emailSender, 
+            EditProfileContext editprofileContext,
+            IEmailSender emailSender,
             ILogger<ForgotPasswordModel> logger)
         {
             _emailSender = emailSender;
@@ -82,7 +82,6 @@ namespace UMS.Areas.Identity.Pages.Account
                     } // End check user is null
 
                     string sqltext = $"EXEC [dbo].ums_Get_user '{user.Id}'";
-                    // Query data from "dbo.Account" and Convert to List<EditAccount>
                     var us = _editprofileContext.EditProfile.FromSqlRaw(sqltext).ToList().FirstOrDefault<EditProfile>();
                     if (us.acc_TypeAccoutname.ToString().ToLower() != "Email".ToLower())
                     {
@@ -128,7 +127,8 @@ namespace UMS.Areas.Identity.Pages.Account
                 }
                 _logger.LogTrace("End forgot password on post.");
                 return Page();
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
                 TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });";

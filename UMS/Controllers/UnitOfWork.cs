@@ -1,14 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using UMS.Data;
-using System.Security.Claims;
-using UMS.Models;
-using Microsoft.AspNetCore.Mvc;
-
+﻿using UMS.Data;
 /*
  * Name: IUnitOfWork
  * Author: Namchok Singhachai
@@ -26,7 +16,6 @@ namespace UMS.Controllers
          * Name: UnitOfWork
          * Parameter: context(AuthDbContext)
          * Author: Namchok Singhachai
-         * Description: The constructor for manage all query.
          */
         public UnitOfWork(AuthDbContext context)
         {

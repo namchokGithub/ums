@@ -20,7 +20,7 @@ using UMS.Models;
 /*
  * Name : Startup
  * Author: System
- * Description: For set up the project
+ * Description: Setting up the project.
  */
 
 namespace UMS
@@ -32,7 +32,6 @@ namespace UMS
         /*
          * Name: Startup
          * Parameter: configuration(IConfiguration)
-         * Description: Constructor
          */
         public Startup(IConfiguration configuration)
         {
@@ -49,6 +48,7 @@ namespace UMS
             // Repository
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<ILogsRepository, LogsRepository>();
+            services.AddScoped<IAccountRepository, AccountRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             // Cookies
@@ -59,17 +59,11 @@ namespace UMS
                 o.ReturnUrlParameter = "/";
             });
 
-            // Set connect database
-            services.AddDbContext<AccountContext>(options =>
-                    options.UseSqlServer(
-                       Configuration.GetConnectionString("AuthDbContextConnection")));            
-            services.AddDbContext<EditAccountContext>(options =>
-                    options.UseSqlServer(
-                       Configuration.GetConnectionString("AuthDbContextConnection")));
+            // Set connect database         
             services.AddDbContext<EditProfileContext>(options =>
                     options.UseSqlServer(
                        Configuration.GetConnectionString("AuthDbContextConnection")));
-            
+
             // Service for send email
             var emailConfig = Configuration
                 .GetSection("EmailConfiguration")

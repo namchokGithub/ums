@@ -1,15 +1,16 @@
 ﻿using System;
+using UMS.Models;
 using System.Linq;
 using System.Security.Claims;
-using System.Security.Cryptography;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 using UMS.Areas.Identity.Data;
-using UMS.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using System.Security.Cryptography;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using System.Text.RegularExpressions;
+using UMS.Data;
 
 /*
  * Name: EditProfileController.cs
@@ -24,26 +25,28 @@ namespace UMS.Controllers
         private readonly EditProfileContext _editprofileContext;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly ILogger<EditProfileController> _logger;
+        private readonly IUnitOfWork _unitOfWork;
         /*
          * Name: EditProfileController
          * Parameter: editprofileContext(EditProfileContext), signInManager(SignInManager<ApplicationUser>) , logger(ILogger<EditProfileController>)
          * Author: Wannapa Srijermtong
          * Description: Constructor for setting context of database.
          */
-        public EditProfileController(EditProfileContext editprofileContext, SignInManager<ApplicationUser> signInManager, ILogger<EditProfileController> logger)
+        public EditProfileController(AuthDbContext context, EditProfileContext editprofileContext, SignInManager<ApplicationUser> signInManager, ILogger<EditProfileController> logger)
         {
             try
             {
                 _logger = logger;
                 _editprofileContext = editprofileContext;
                 _signInManager = signInManager;
+                _unitOfWork = new UnitOfWork(context);
                 _logger.LogTrace("Start editProfile controller.");
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
                 _logger.LogTrace("End editProfile controller.");
-            }// End try catch
+            } // End try catch
         } // End Constructor
 
         /*
@@ -55,13 +58,14 @@ namespace UMS.Controllers
         {
             try
             {
-                _logger.LogTrace("Start edit profile controller index.");
+                _logger.LogTrace("Start edit profile index.");
                 var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
                 ViewData["UserId"] = UserId ?? throw new Exception("User ID not found!.");
 
                 string sqltext = $"EXEC [dbo].ums_Get_user '{UserId}'";
                 var user = _editprofileContext.EditProfile.FromSqlRaw(sqltext).ToList().FirstOrDefault();
                 _logger.LogDebug("Getting user by ID.");
+
                 ViewData["User"] = user ?? throw new Exception("Calling a method on a null object reference.");
                 _logger.LogTrace("End edit profile controller index.");
                 return View();
@@ -69,7 +73,7 @@ namespace UMS.Controllers
             catch (Exception e)
             {
                 TempData["EditProfileException"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });";
-                _logger.LogTrace("End edit profile controller index.");
+                _logger.LogTrace("End edit profile index.");
                 return View();
             } // End try catch
         } // End Index
@@ -216,7 +220,7 @@ namespace UMS.Controllers
                             {
                                 _editprofileContext.SaveChanges();
                                 _logger.LogTrace("Update successfully.");
-                                TempData["EditProfileSuccessResult"] = @"toastr.success('Edit profile successfully!')";
+                                TempData["EditProfileSuccessResult"] = @"toastr.success('Edit profile successfully!');";
                                 resultUpdate_all = true; // If successfull
                             }
                             catch (Exception e)
@@ -239,7 +243,7 @@ namespace UMS.Controllers
                         {
                             _editprofileContext.SaveChanges();
                             _logger.LogTrace("Update successfully.");
-                            TempData["EditProfileSuccessResult"] = @"toastr.success('Edit profile successfully!')";
+                            TempData["EditProfileSuccessResult"] = @"toastr.success('Edit profile successfully!');";
                             result = true; // If successful
                         }
                         catch (Exception e)

@@ -1,14 +1,14 @@
 ﻿using System;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using UMS.Areas.Identity.Data;
 using UMS.Data;
 using UMS.Models;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Security.Claims;
+using UMS.Areas.Identity.Data;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 using static UMS.Areas.Identity.Pages.Account.LoginModel;
 
 /*
@@ -28,14 +28,12 @@ namespace UMS.Controllers
         private readonly ManageUserController _manageUserController;
         /*
          * Name: AccountController
-         * Parameter: userManager, accountContext, editaccountContext, loggerManager, signInManager, logger
-         * Description: Controller manages an account login.
+         * Parameter: context(AuthDbContext), userManager(UserManager<ApplicationUser>), loggerManager(UserManager<ApplicationUser>)
+         *            , signInManager(ignInManager<ApplicationUser>), logger(ILogger<AccountController>)
          */
         public AccountController(
             AuthDbContext context,
             UserManager<ApplicationUser> userManager,
-            AccountContext accountContext,
-            EditAccountContext editaccountContext,
             ILogger<ManageUserController> loggerManager,
             SignInManager<ApplicationUser> signInManager,
             ILogger<AccountController> logger)
@@ -275,7 +273,7 @@ namespace UMS.Controllers
                                             }).then((res) => {
                                                 console.log('Confirmed');
                                                 window.location.href = '" + $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Login"
-                                                + "'});";
+                                                + "';});";
                     _logger.LogTrace("End google response.");
                     return View();
                 } // End signed in successfully

@@ -22,7 +22,6 @@ namespace UMS.Controllers
         /*
          * Name: LogsController
          * Parametor: logger(ILogger<LogsController>), authDbContext(AuthDbContext)
-         * Description: The constructor for log monitor.
          */
         public LogsController(ILogger<LogsController> logger, AuthDbContext authDbContext)
         {
