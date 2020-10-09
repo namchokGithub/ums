@@ -1,8 +1,9 @@
-﻿<!--
+﻿@*  
     Namespace: ~/View/Shared/AdminLTE
     File: _Scripts.cshtml
     Description: Section of script
--->
+*@
+
 <!-- REQUIRED SCRIPTS -->
 <!-- Bootstrap 4 -->
 <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -23,11 +24,9 @@
 <script src="~/plugins/pace-progress/pace.min.js"></script>
 <!-- page script -->
 <script>
-    // For show name in top bar
+    @*For showing name in top bar.*@
     $(document).ready(function () {
-
         $('[data-toggle="tooltip"]').tooltip();
-
         $(document).on('shown.lte.pushmenu', function () {
             $('#user_email').hide();
         });
@@ -37,17 +36,18 @@
     });
 
     $(function () {
-        // Set datatables in user mangement view
-        $('#showAllUserTable').DataTable({
-            "paging": true,
-            "lengthChange": true,
-            "searching": true,
-            // "info": true,
-            "autoWidth": true,
-            "responsive": true,
-            "lengthMenu": [5, 10, 25, 50]
-        });
-
+        $(function () {
+            // Set datatables in user mangement view
+            $('#showAllUserTable').DataTable({
+                "paging": true,
+                "lengthChange": true,
+                "searching": true,
+                "ordering": true,
+                "autoWidth": true,
+                "responsive": true,
+                "lengthMenu": [5, 10, 25, 50]
+            });
+        })
         // Set datatables in log monitor view
         $('#showAllLogs').DataTable({
             "paging": true,
@@ -66,12 +66,12 @@
         });
     })
 
-    /*
+    @*/*
      * Name: SwalAlert
      * Paremeter: icon(string), text(strinh)
      * Author: Namchok Singhachai
      * Description: sweet alert function reuse
-     */
+     */*@
     function SwalAlert(icon, text) {
         Swal.fire({
             icon: icon,

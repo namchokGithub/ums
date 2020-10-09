@@ -4,11 +4,11 @@
     ViewData["Title"] = "Log Monitor";
     Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
 }
-<!--
+@*
     Name: ~/Views/Logs/Index.cshtml
     Author: Namchok Singhachai
-    Description: View for log monitor
--->
+    Description: The View for log monitor.
+*@
 <!-- style -->
 <style>
     .logslevel > span {
@@ -226,8 +226,8 @@
             $('#logstime').val('');
         });
         // Check is has exception
-        @if (ViewData["INFO"] != null) { @Html.Raw(ViewData["INFO"]) /* Swal funciton */ }
-        @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ }
+        @if (ViewData["INFO"] != null) { @Html.Raw(ViewData["INFO"]) /* Swal funciton */ };
+        @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ };
         $('#message').on('change', () => {
             let regex = /^[a-zA-Z0-9 ]+[a-zA-Z0-9 ]|(^$)$/
             if ($('#message').val() != null && $('#message').val() != "" && !regex.test($('#message').val())) {
@@ -250,6 +250,13 @@
             if ($('#today').is(':checked')) {
                 $('#logstime').val(dateToNiceString(new Date()) + ' - ' + dateToNiceString(new Date(), 30));
             } else {
+                $('#logstime').daterangepicker({
+                    timePicker: true,
+                    timePickerIncrement: 15,
+                    locale: {
+                        format: 'MM/DD/YYYY hh:mm A'
+                    }
+                })
             }
         })
 
@@ -266,7 +273,7 @@
     /**
      * Name: checkSearchInput
      * Author: Namchok Singhachai
-     * Description: For check input before search
+     * Description: To checking input before search.
      */
     function checkSearchInput() {
         try {
@@ -390,21 +397,21 @@
                         // Set message status
                         let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
                         let _text = 'Status : ' + result.status + statusResText
-                        console.log(result) // show log of error
-                        toastr.error(_text) // Alert message error
+                        console.log(`${result}`) // show log of error
+                        toastr.error(`${_text}`) // Alert message error
                     } // End error
                 }) // End ajax
             } // End if else
         } catch (e) {
-            console.log(e.message)
-            toastr.warning(e.message)
+            console.log(`${e.message}`)
+            toastr.warning(`${e.message}`)
         }
     } // End checkSearchInput
 
     /**
      * Name: dateTONiceString
      * Parameter: myDate(Date), extra(Int)
-     * Description: Convert date to String
+     * Description: Converting date to string.
      */
     //usage ex: alert(dateToNiceString(new Date()));
     //returns this format: "09/14/2020 10:00 AM"
@@ -442,7 +449,7 @@
      * Name: convertTime
      * Parameter: time(string)(format: 10:13:00.053)
      * Author: Namchok Singhachai
-     * Description: return new format 10:13:10 AM
+     * Description: Converting new format 10:13:10 AM
      */
     function convertTime(time) {
         let hrs = time.substring(0, time.indexOf(':'))
@@ -460,7 +467,7 @@
      * Name: replaceDate
      * Parameter: date(string)(format: )
      * Author: Namchok Singhachai
-     * Description: return format date 09/15/2020
+     * Description: Converting format date 09/15/2020
      */
     function replaceDate(date) {
         let mm = date.substring(0, date.indexOf('-'))
