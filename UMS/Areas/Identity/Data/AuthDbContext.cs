@@ -78,6 +78,36 @@ namespace UMS.Data
                 .Ignore(entity => entity.AccessFailedCount)
                 .Ignore(entity => entity.PhoneNumberConfirmed)
                 .ToTable(name: "Account");
+            
+            builder.Entity<Account>(entity =>
+             {
+                 entity.ToTable(name: "Account");
+                 entity.Property(e => e.acc_User).HasColumnName("acc_User");
+                 entity.Property(e => e.acc_NormalizedUserName).HasColumnName("acc_NormalizedUserName");
+                 entity.Property(e => e.acc_PasswordHash).HasColumnName("acc_PasswordHash");
+                 entity.Property(e => e.acc_SecurityStamp).HasColumnName("acc_SecurityStamp");
+                 entity.Property(e => e.acc_ConcurrencyStamp).HasColumnName("acc_ConcurrencyStamp");
+                 entity.Property(e => e.acc_Email).HasColumnName("acc_Email");
+                 entity.Property(e => e.acc_NormalizedEmail).HasColumnName("acc_NormalizedEmail");
+                 entity.Property(e => e.acc_Firstname).HasColumnName("acc_Firstname");
+                 entity.Property(e => e.acc_Lastname).HasColumnName("acc_Lastname");
+                 entity.Property(e => e.acc_IsActive).HasColumnName("acc_IsActive");
+                 entity.Property(e => e.acc_Rolename).HasColumnName("acc_Rolename");
+                 entity.Property(e => e.acc_TypeAccoutname).HasColumnName("acc_TypeAccoutname");
+
+                 entity.Property(e => e.acc_Id).HasComment("User ID");
+                 entity.Property(e => e.acc_User).HasComment("Username");
+                 entity.Property(e => e.acc_NormalizedUserName).HasComment("Normalized UserName");
+                 entity.Property(e => e.acc_PasswordHash).HasComment("Password hash");
+                 entity.Property(e => e.acc_SecurityStamp).HasComment("Security Stamp");
+                 entity.Property(e => e.acc_ConcurrencyStamp).HasComment("For check edit state");
+                 entity.Property(e => e.acc_Email).HasComment("User email");
+                 entity.Property(e => e.acc_NormalizedEmail).HasComment("Normalized user email");
+                 entity.Property(e => e.acc_Firstname).HasComment("Firstname");
+                 entity.Property(e => e.acc_Lastname).HasComment("Lastname");
+                 entity.Property(e => e.acc_IsActive).HasComment("Status of account");
+                 entity.HasOne<ApplicationUser>().WithOne().HasForeignKey<ApplicationUser>(e => e.Id);
+             });
             // _logger.LogTrace("Creating applications user models.");
 
             builder.Entity<IdentityRole>().ToTable("Roles");
@@ -115,6 +145,7 @@ namespace UMS.Data
             // _logger.LogTrace("End creating on model.");
         } // End OnModelCreating
 
-        public DbSet<Logs> Logs { get; set; } // Set table Logs
+        public DbSet<Logs> Logs { get; set; } // Set table logs
+        public DbSet<Account> Account { get; set; } // Set table account
     } // End AuthDbContext
 }

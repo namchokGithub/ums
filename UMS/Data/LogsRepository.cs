@@ -9,7 +9,7 @@ using UMS.Models;
 /*
  * Name: LogsRepository
  * Author: Namchok Singhachai
- * Description: Logs to connect data layer.
+ * Description: Class of logs to connect data layer.
  */
 
 namespace UMS.Data
@@ -20,7 +20,7 @@ namespace UMS.Data
         /*
          * Name: LogsRepository
          * Parametor: context(AuthDbContext)
-         * Description: Constructor
+         * Description: The constructor for set context
          */
         public LogsRepository(AuthDbContext context) : base(context)
         {
@@ -44,7 +44,7 @@ namespace UMS.Data
          */
         public List<Logs> GetAll(int numofrow)
         {
-            return _context.Logs.FromSqlRaw(@$"Exec dbo.ums_Get_all_log {numofrow}").ToList();
+            return _context.Logs.Take(numofrow).ToList();
         } // End GetAll
 
         /*
