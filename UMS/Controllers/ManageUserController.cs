@@ -1,15 +1,12 @@
 ﻿using System;
+using UMS.Data;
 using UMS.Models;
-using System.Data;
-using System.Linq;
 using System.Security.Claims;
 using Microsoft.Data.SqlClient;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
-using UMS.Data;
 
 /*
  * Name: ManageUserController.cs
@@ -22,23 +19,19 @@ namespace UMS.Controllers
     [Authorize(Roles = "Admin")]
     public class ManageUserController : Controller
     {
-        private readonly AccountContext _accountContext;
-        private readonly EditAccountContext _editaccountContext;
-        private readonly ILogger<ManageUserController> _logger;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly ILogger<ManageUserController> _logger;
         /*
          * Name: ManageUserController
          * Parameter: accountContext(AccountContext), editaccountContext(EditAccountContext), logger(ILogger<ManageUserController>)
          * Author: Namchok Singhachai
          * Description: The constructor for set context for database.
          */
-        public ManageUserController(AuthDbContext context, AccountContext accountContext, EditAccountContext editaccountContext, ILogger<ManageUserController> logger)
+        public ManageUserController(AuthDbContext context, ILogger<ManageUserController> logger)
         {
             try
             {
                 _logger = logger;
-                _accountContext = accountContext;
-                _editaccountContext = editaccountContext;
                 _unitOfWork = new UnitOfWork(context);
                 _logger.LogTrace("Start manage user controller.");
             }
@@ -59,10 +52,8 @@ namespace UMS.Controllers
             try
             {
                 _logger.LogTrace("Start manage user index.");
-                TempData["nullException"] = null;
-                TempData["SqlException"] = null; // Set defalut exception message
                 _logger.LogTrace("Finding user ID.");
-                ViewData["UserId"] = User.FindFirstValue(ClaimTypes.NameIdentifier) ?? throw new Exception("The user ID not found !");  // Get user ID
+                ViewData["UserId"] = User.FindFirstValue(ClaimTypes.NameIdentifier) ?? throw new Exception("The user ID not found !.");  // Get user ID
                 _logger.LogDebug("Getting all active users.");
                 ViewData["User"] = _unitOfWork.Account.GetAll() ?? throw new Exception("Calling a method on a null object reference."); // Send data to view Index.cshtml
                 _unitOfWork.Account.Dispose();
@@ -85,27 +76,26 @@ namespace UMS.Controllers
          * Description: Getting a user is already active on the system.
          */
         [HttpPost]
-        public JsonResult getUser(string id)
+        public JsonResult GetUser(string id)
         {
             try
             {
                 _logger.LogTrace("Start get user.");
                 if (id == null || id.ToString() == "") throw new Exception("Calling a method on a null object reference."); // Check if parameter is null
-                _logger.LogDebug($"Getting user by {id}.");
+                _logger.LogInformation($"Getting user by {id}.");
                 _logger.LogTrace("End get user.");
                 return new JsonResult(_unitOfWork.Account.GetByID(id) ?? throw new Exception("Calling a method on a null object reference.")); // Return JSON by Ajax
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                var er = new objectJSON
+                _logger.LogTrace("End get user.");
+                return new JsonResult(new objectJSON
                 {
                     condition = "error",
                     messages = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/").Replace("`", "|") + @"`, showConfirmButton: true });",
-                    text = e.Message
-                }; // Object for set alert
-                _logger.LogTrace("End get user.");
-                return new JsonResult(er);
+                    text = e.Message.Replace("\\", "/")
+                });
             }
             finally
             {
@@ -114,17 +104,18 @@ namespace UMS.Controllers
         } // End get user
 
         /*
-         * Name: editUser
+         * Name: EditUser
          * Parameter: _account(EditAccount)
          * Author: Namchok Singhachai
          * Description: User profile editing.
          */
         [HttpPost]
-        public IActionResult editUser(Account _account)
+        public IActionResult EditUser(Account _account)
         {
             try
             {
                 _logger.LogTrace("Start user editing.");
+                TempData["UpdateResult"] = null;
                 _account.acc_Id = HttpContext.Request.Form["acc_Id"].ToString();
                 if (HttpContext.Request.Form["acc_RoleId"].ToString() != "0" || HttpContext.Request.Form["acc_RoleId"].ToString() != "")
                 {
@@ -167,16 +158,16 @@ namespace UMS.Controllers
                 TempData["UpdateResult"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });";
                 return RedirectToAction("Index");
             } // End try catch
-        } // End editUser
+        } // End EditUser
 
         /*
-         * Name: deleteUser
+         * Name: DeleteUser
          * Parameter: id(string)
          * Author: Namchok Singhachai
          * Description: Account deactivation.
          */
         [HttpPost]
-        public void deleteUser(string id)
+        public void DeleteUser(string id)
         {
             try
             {
@@ -206,7 +197,7 @@ namespace UMS.Controllers
                 TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });";
                 _logger.LogTrace("End account deactivation.");
             } // End try catch
-        } // End deleteUser
+        } // End DeleteUser
 
         /*
          * Name: CheckUserExist

@@ -144,7 +144,7 @@ namespace UMS.Data
         {
             try
             {
-                string sqlUpdateRoleUser = $"ums_Update_role_user '{_account.acc_Id}', '{_account.acc_Rolename}'";              // Update role's user
+                string sqlUpdateRoleUser = $"ums_Update_role_user '{_account.acc_Id}', '{_account.acc_Rolename}'"; // Update role's user
                 _context.Database.ExecuteSqlRaw(sqlUpdateRoleUser);
             }
             catch (Exception e)

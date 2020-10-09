@@ -45,7 +45,7 @@ namespace UMS.Controllers
                 _logger = logger;
                 _signInManager = signInManager;
                 _userManager = userManager;
-                _manageUserController = new ManageUserController(context, accountContext, editaccountContext, loggerManager);
+                _manageUserController = new ManageUserController(context, loggerManager);
                 _logger.LogTrace("Start account controller.");
             }
             catch (Exception e)
@@ -222,7 +222,7 @@ namespace UMS.Controllers
                         _logger.LogDebug("Getting user by email.");
                         ApplicationUser user = await _userManager.FindByEmailAsync(info.Principal.FindFirst(ClaimTypes.Email).Value);
                         if (user == null) throw new Exception("Calling a method on a null object reference.");
-                        _manageUserController.deleteUser(user.Id); // Toggle user status
+                        _manageUserController.DeleteUser(user.Id); // Toggle user status
                         _logger.LogInformation("Change status inactive to active user.");
                         _logger.LogTrace("End google response.");
                         return RedirectToAction("Index", "Home");
@@ -358,7 +358,7 @@ namespace UMS.Controllers
                         _logger.LogDebug("Getting user by email.");
                         ApplicationUser user = await _userManager.FindByEmailAsync(info.Principal.FindFirst(ClaimTypes.Email).Value);
                         if (user == null) throw new Exception("Calling a method on a null object reference.");
-                        _manageUserController.deleteUser(user.Id); // Toggle user status
+                        _manageUserController.DeleteUser(user.Id); // Toggle user status
                         _logger.LogInformation("Change status inactive to active user.");
                         _logger.LogTrace("End facebook response.");
                         return RedirectToAction("Index", "Home");
@@ -495,7 +495,7 @@ namespace UMS.Controllers
                         _logger.LogDebug("Getting user by email.");
                         ApplicationUser user = await _userManager.FindByEmailAsync(info.Principal.FindFirst(ClaimTypes.Email).Value);
                         if (user == null) throw new Exception("Calling a method on a null object reference.");
-                        _manageUserController.deleteUser(user.Id); // Toggle user status
+                        _manageUserController.DeleteUser(user.Id); // Toggle user status
                         _logger.LogInformation("Change status inactive to active user.");
                         _logger.LogTrace("End microsoft response.");
                         return RedirectToAction("Index", "Home");
