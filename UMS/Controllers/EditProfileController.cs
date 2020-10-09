@@ -22,22 +22,19 @@ namespace UMS.Controllers
 {
     public class EditProfileController : Controller
     {
-        private readonly EditProfileContext _editprofileContext;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly ILogger<EditProfileController> _logger;
         private readonly IUnitOfWork _unitOfWork;
         /*
          * Name: EditProfileController
-         * Parameter: editprofileContext(EditProfileContext), signInManager(SignInManager<ApplicationUser>) , logger(ILogger<EditProfileController>)
+         * Parameter: context(AuthDbContext), signInManager(SignInManager<ApplicationUser>) , logger(ILogger<EditProfileController>)
          * Author: Wannapa Srijermtong
-         * Description: Constructor for setting context of database.
          */
-        public EditProfileController(AuthDbContext context, EditProfileContext editprofileContext, SignInManager<ApplicationUser> signInManager, ILogger<EditProfileController> logger)
+        public EditProfileController(AuthDbContext context, SignInManager<ApplicationUser> signInManager, ILogger<EditProfileController> logger)
         {
             try
             {
                 _logger = logger;
-                _editprofileContext = editprofileContext;
                 _signInManager = signInManager;
                 _unitOfWork = new UnitOfWork(context);
                 _logger.LogTrace("Start editProfile controller.");
@@ -61,12 +58,9 @@ namespace UMS.Controllers
                 _logger.LogTrace("Start edit profile index.");
                 var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
                 ViewData["UserId"] = UserId ?? throw new Exception("User ID not found!.");
-
-                string sqltext = $"EXEC [dbo].ums_Get_user '{UserId}'";
-                var user = _editprofileContext.EditProfile.FromSqlRaw(sqltext).ToList().FirstOrDefault();
                 _logger.LogDebug("Getting user by ID.");
-
-                ViewData["User"] = user ?? throw new Exception("Calling a method on a null object reference.");
+                ViewData["User"] = _unitOfWork.Account.GetByID(UserId) ?? throw new Exception("Calling a method on a null object reference.");
+                _unitOfWork.Account.Dispose();
                 _logger.LogTrace("End edit profile controller index.");
                 return View();
             }
@@ -79,19 +73,19 @@ namespace UMS.Controllers
         } // End Index
 
         /*
-         * Name: editProfile
+         * Name: EditProfile
          * Author: Wannapa Srijermtong
          * Description: Edit user profile
          */
         [HttpPost]
-        public async Task<IActionResult> editProfile()
+        public async Task<IActionResult> EditProfile()
         {
             try
             {
                 _logger.LogTrace("Start edit profile.");
                 _logger.LogDebug("Getting value from httpcontext request.");
-                
                 //Get data from Form Input
+                var IsUpdatePassword = HttpContext.Request.Form["acc_IsActive"].ToString();
                 var acc_Id = HttpContext.Request.Form["acc_Id"];
                 var acc_Firstname = HttpContext.Request.Form["acc_Firstname"];
                 var acc_Lastname = HttpContext.Request.Form["acc_Lastname"];
@@ -138,42 +132,31 @@ namespace UMS.Controllers
                         _logger.LogTrace("End edit profile.");
                         return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
                 }
-
-                // Validation if acc_Firstname, acc_Lastname, acc_CurrentPassword, acc_NewPassword and acc_ConfirmPassword is blank.
-                if (acc_Firstname == "" || acc_Lastname == "" || acc_CurrentPassword == "" || acc_NewPassword == "" || acc_ConfirmPassword == "")
+                // Checking user update
+                if (IsUpdatePassword.ToString() == "f")
                 {
-                    // Validation if acc_Firstname and acc_Lastname is not blank.
-                    if (acc_Firstname != "" && acc_Lastname != "")
+                    _logger.LogDebug("Updating name user.");
+                    _unitOfWork.Account.UpdateName(new Account { acc_Id = acc_Id, acc_Firstname = acc_Firstname, acc_Lastname = acc_Lastname });
+                    var resultUpdate_user = false;
+                    while (!resultUpdate_user)
                     {
-                        // SQL text for execute procedure
-                        _logger.LogDebug("Updating name user.");
-                        string sqlUpdateUser = $"ums_Update_user '{acc_Id}', '{acc_Firstname}', '{acc_Lastname}'";
-                        _editprofileContext.Database.ExecuteSqlRaw(sqlUpdateUser);
-                        var resultUpdate_user = false;
-                        while (!resultUpdate_user)
+                        try
                         {
-                            try
-                            {
-                                _editprofileContext.SaveChanges();
-                                _logger.LogTrace("Update successfully.");
-                                TempData["EditProfileSuccessResult"] = @"toastr.success('Edit profile successfully!');";
-                                resultUpdate_user = true; // If update successful
-                            }
-                            catch (Exception e)
-                            {
-                                throw e;
-                            } // End try catch
-                        } // Check if update successfully
-                        _logger.LogTrace("End edit profile.");
-                        return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
-                    }
-                    // Alert if Edit profile blank.
-                    TempData["EditProfileErrorResult"] = @"toastr.warning('The input can not be blank!');";
+                            _unitOfWork.Account.Complete();
+                            _unitOfWork.Account.Dispose();
+                            _logger.LogInformation("Update successfully.");
+                            TempData["EditProfileSuccessResult"] = @"toastr.success('User profile update successfully!');";
+                            resultUpdate_user = true; // If update successful
+                        }
+                        catch (Exception e)
+                        {
+                            throw e;
+                        } // End try catch
+                    } // Check if update successfully
+
                     _logger.LogTrace("End edit profile.");
                     return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
-                } // End validate all input
-                // Validation if acc_CurrentPassword is not blank.
-                if (acc_CurrentPassword != "")
+                } else
                 {
                     // Validation if acc_NewPassword and acc_ConfirmPassword do not match.
                     if (acc_NewPassword != acc_ConfirmPassword)
@@ -195,7 +178,7 @@ namespace UMS.Controllers
                     {
                         if (acc_NewPassword == "") throw new Exception("New password is null.");
 
-                        _logger.LogDebug("Hasing password.");
+                        _logger.LogDebug("Hasing a password.");
                         // Change acc_NewPassword to Password Hash
                         byte[] salt;
                         byte[] buffer2;
@@ -211,17 +194,17 @@ namespace UMS.Controllers
 
                         // SQL text for execute procedure
                         _logger.LogDebug("Updating name user and password.");
-                        string sqlUpdateAll = $"ums_Update_all '{acc_Id}', '{acc_Firstname}', '{acc_Lastname}', '{acc_NewPasswordHashed}'";
-                        _editprofileContext.Database.ExecuteSqlRaw(sqlUpdateAll);
-                        var resultUpdate_all = false;
-                        while (!resultUpdate_all)
+                        _unitOfWork.Account.UpdateNameAndPassword(new Account { acc_Id = acc_Id, acc_Firstname = acc_Firstname, acc_Lastname = acc_Lastname, acc_PasswordHash = acc_NewPasswordHashed });
+                        var resultUpdate_user = false;
+                        while (!resultUpdate_user)
                         {
                             try
                             {
-                                _editprofileContext.SaveChanges();
-                                _logger.LogTrace("Update successfully.");
-                                TempData["EditProfileSuccessResult"] = @"toastr.success('Edit profile successfully!');";
-                                resultUpdate_all = true; // If successfull
+                                _unitOfWork.Account.Complete();
+                                _unitOfWork.Account.Dispose();
+                                _logger.LogInformation("Update successfully.");
+                                TempData["EditProfileSuccessResult"] = @"toastr.success('User profile update successfully!');";
+                                resultUpdate_user = true; // If update successful
                             }
                             catch (Exception e)
                             {
@@ -230,29 +213,6 @@ namespace UMS.Controllers
                         } // Check if update successfully
                     } // End if current password is correct
                 }
-                else
-                {
-                    // SQL text for execute procedure
-                    string sqlUpdateUser = $"ums_Update_user '{acc_Id}', '{acc_Firstname}', '{acc_Lastname}'";
-                    _editprofileContext.Database.ExecuteSqlRaw(sqlUpdateUser);
-                    _logger.LogDebug("Updating name user.");
-                    var result = false;
-                    while (!result)
-                    {
-                        try
-                        {
-                            _editprofileContext.SaveChanges();
-                            _logger.LogTrace("Update successfully.");
-                            TempData["EditProfileSuccessResult"] = @"toastr.success('Edit profile successfully!');";
-                            result = true; // If successful
-                        }
-                        catch (Exception e)
-                        {
-                            throw e;
-                        } // End try catch
-                    } // Check if update successful
-
-                } // If current password is not blank
                 _logger.LogTrace("End edit profile.");
                 return RedirectToAction("Index", "EditProfile", new { id = acc_Id });
             }
@@ -263,6 +223,6 @@ namespace UMS.Controllers
                 _logger.LogTrace("End edit profile.");
                 return RedirectToAction("Index", "EditProfile");
             } // End try catch
-        } // End editProfile
+        } // End EditProfile
     } // End EditProfileContrller
 }

@@ -136,6 +136,23 @@ namespace UMS.Data
         } // End UpdateName
 
         /*
+         * Name: UpdateNameAndPassword
+         * Parameter: _account(Account)
+         * Description: The user profile editing (Name and Password).
+         */
+        public void UpdateNameAndPassword(Account _account)
+        {
+            try
+            {
+                string sqlUpdateAll = $"ums_Update_all '{_account.acc_Id}', '{_account.acc_Firstname}', '{_account.acc_Lastname}', '{_account.acc_PasswordHash}'";
+                _context.Database.ExecuteSqlRaw(sqlUpdateAll);
+            } catch (Exception e)
+            {
+                throw e;
+            }
+        } // End UpdateNameAndPassword
+
+        /*
          * Name: UpdateRole
          * Parameter: _account(Account)
          * Description: The user profile editing (Role).

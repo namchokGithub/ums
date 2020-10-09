@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using UMS.Models;
 using Microsoft.Data.SqlClient;
-using UMS.Areas.Identity.Data;
-using UMS.Models;
+using System.Collections.Generic;
 
 /*
  * Name: IAccountRepository
@@ -20,5 +19,6 @@ namespace UMS.Data
         void ToggleStatus(string id);
         void UpdateName(Account _account);
         void UpdateRole(Account _account);
+        void UpdateNameAndPassword(Account _account);
     } // End Interface IAccount
 }
