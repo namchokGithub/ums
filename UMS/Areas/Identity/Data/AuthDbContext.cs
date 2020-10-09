@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using UMS.Models;
+using UMS.Areas.Identity.Data;
+using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-using Org.BouncyCastle.Tsp;
-using UMS.Areas.Identity.Data;
-using UMS.Models;
 
 /*
  * Name: AuthDbContext (Extend: IdentityDbContext<ApplicationUser>)
  * Namespace: ~/Area/Identity/Data
- * Description: Code first for create database.
+ * Description: The context for application.
  */
 
 namespace UMS.Data
@@ -30,13 +25,13 @@ namespace UMS.Data
             : base(options)
         {
             _logger = logger;
-            _logger.LogTrace("Start Application Database Context.");
+            _logger.LogTrace("Start application context.");
         } // End Contructor
 
         /*
          * Name: OnModelCreating
          * Parametor: builder(ModelBuilder)
-         * Description: For config the modal before creat database
+         * Description: Configuration for this application context.
          */
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -141,7 +136,6 @@ namespace UMS.Data
                 .Ignore(e => e.log_date)
                 .Ignore(e => e.log_time);
             // _logger.LogTrace("Creating log models.");
-
             // _logger.LogTrace("End creating on model.");
         } // End OnModelCreating
 

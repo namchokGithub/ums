@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Identity;
+using System.Diagnostics.CodeAnalysis;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
 
 /*
  * Name: ApplicationUser (Extend: IdentityUser)
  * Namespace: ~/Area/Identity/Data
- * Description: User Identity for this application.
+ * Description: User Identity model for this application.
  */
 
 namespace UMS.Areas.Identity.Data

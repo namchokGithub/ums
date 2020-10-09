@@ -1,24 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI.Services;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 using UMS.Areas.Identity.Data;
-using UMS.Controllers;
-using UMS.Models;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Authentication;
+using System.ComponentModel.DataAnnotations;
 
 /*
- * Name: RegisterModel.cs
+ * Name: RegisterModel.cs (Extend : PageModel)
  * Namespace: UMS.Areas.Identity.Pages.Account
  * Author: Idenity system
  */
@@ -32,8 +27,6 @@ namespace UMS.Areas.Identity.Pages.Account
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
-        private readonly IEmailSender _emailSender;
-        private readonly AccountContext _accountContext;
         // Attribute
         [BindProperty] 
         public InputModel Input { get; set; } // Model input 
@@ -42,23 +35,18 @@ namespace UMS.Areas.Identity.Pages.Account
 
         /*
          * Name: RegisterMode
-         * Parametor: userManager(UserManager), signInManager(SignInManager), logger(ILogger), emailSender(IEmailSender), accountContext(AccountContext)
-         * Description: constructor
+         * Parametor: userManager(UserManager), signInManager(SignInManager), logger(ILogger)
          */
         public RegisterModel(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
-            ILogger<RegisterModel> logger,
-            AccountContext accountContext,
-            IEmailSender emailSender)
+            ILogger<RegisterModel> logger)
         {
             try
             {
                 _userManager = userManager;
                 _signInManager = signInManager;
                 _logger = logger;
-                _emailSender = emailSender;
-                _accountContext = accountContext;
                 _logger.LogDebug("Start Register model.");
             }
             catch (Exception e)
@@ -72,7 +60,7 @@ namespace UMS.Areas.Identity.Pages.Account
 
         /*
          * Name: InputModel
-         * Description: Model for register
+         * Description: The model for registration.
          */
         public class InputModel
         {
@@ -114,20 +102,29 @@ namespace UMS.Areas.Identity.Pages.Account
         /*
          * Name: OnGetAsync
          * Parameter: returnUrl(string)
-         * Description: Set return url and get external login
+         * Description: Setting a direction and getting information external login.
          */
         public async Task OnGetAsync(string returnUrl = null)
         {
-            ReturnUrl = returnUrl;
-            _logger.LogTrace("Getting external login.");
-            ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
-            _logger.LogTrace("Register on get.");
+            try
+            {
+                ReturnUrl = returnUrl;
+                _logger.LogTrace("Getting external login.");
+                ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+                _logger.LogTrace("Register on get.");
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.Message.ToString());
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });";
+                _logger.LogTrace("Register on get.");
+            }
         } // End OnGetAsync
 
         /*
          * Name: OnPostAsync
          * Parameter: returnUrl(string)
-         * Description: Set return url and get external login
+         * Description: The registration of this system.
          */
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
@@ -150,20 +147,19 @@ namespace UMS.Areas.Identity.Pages.Account
                         }; // Create new user
                         _logger.LogTrace("Creating new user.");
                         var result = await _userManager.CreateAsync(user, Input.Password);
-                        
                         if (result.Succeeded) // Check if create success
                         {
-                            _logger.LogInformation("User created a new account with password.");
-                            _logger.LogDebug("Generating provider key.");
+                            _logger.LogInformation("User created with a password.");
+                            _logger.LogDebug("Creating a provider key.");
                             var info = new UserLoginInfo("Email", RandomString(50).ToString(), "Email");
                             result = await _userManager.AddLoginAsync(user, info);
                             _logger.LogTrace("Add login.");
                             if (result.Succeeded)
                             {
                                 ApplicationUser userId = await _userManager.FindByEmailAsync(Input.Email); // Find by ID
-                                _logger.LogDebug("Add default role to user.");
+                                _logger.LogDebug("Adding a default role for users.");
                                 await _userManager.AddToRoleAsync(userId, "User");
-                                _logger.LogInformation("User created a new login.");
+                                _logger.LogInformation("Add user successfully.");
                                 _logger.LogDebug("Signing in.");
                                 await _signInManager.SignInAsync(user, false);
                                 _logger.LogTrace("End register on post.");
@@ -173,11 +169,11 @@ namespace UMS.Areas.Identity.Pages.Account
                             {
                                 _logger.LogError(result.Errors.First().Description.ToString());
                                 TempData["Exception"] =
-                                    @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + result.Errors.First().Description.ToString() + "`, showConfirmButton: true })";
+                                    @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + result.Errors.First().Description.ToString().Replace("\\", "/") + "`, showConfirmButton: true });";
                                 _logger.LogTrace("End register on post.");
                                 return Page();
-                            } // End Check if add login success
-                        } // End if create success
+                            } // End Checking if add login successful
+                        } // End if user create successful
                         string errorStr = "";
                         foreach (var error in result.Errors)
                         {
@@ -185,7 +181,7 @@ namespace UMS.Areas.Identity.Pages.Account
                             ModelState.AddModelError(string.Empty, error.Description);
                         } // End loop get error
                         _logger.LogError(errorStr.ToString());
-                        TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + errorStr + @"`, showConfirmButton: true })";
+                        TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + errorStr.Replace("\\", "/") + @"`, showConfirmButton: true });";
                     } // End if user exist
                 } // End if model is valid
                 _logger.LogTrace("End register on post.");
@@ -194,7 +190,7 @@ namespace UMS.Areas.Identity.Pages.Account
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });";
                 _logger.LogTrace("End register on post.");
                 return Page();
             } // End Try Catch
@@ -205,7 +201,7 @@ namespace UMS.Areas.Identity.Pages.Account
         /*
          * Name: RandomString
          * Parameter: length(int)
-         * Description: For random provider key
+         * Description: The randomization of a provider key
          */
         public static string RandomString(int length)
         {

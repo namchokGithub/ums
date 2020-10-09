@@ -1,27 +1,27 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System;
+using UMS.Data;
+using System.IO;
+using UMS.Models;
 using System.Linq;
+using System.Text;
+using UMS.Controllers;
 using System.Threading.Tasks;
+using UMS.Areas.Identity.Data;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using System.Collections.Generic;
+using Microsoft.Extensions.Logging;
+using System.Security.Cryptography;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Logging;
-using UMS.Areas.Identity.Data;
-using System;
-using UMS.Controllers;
-using UMS.Models;
-using SendGrid.Helpers.Mail;
-using System.Text;
-using System.Security.Cryptography;
-using System.IO;
+using System.ComponentModel.DataAnnotations;
 
 /*
- * Name: LoginModel.cs
+ * Name: LoginModel.cs (Extend: PageModel)
  * Namespace: UMS.Areas.Identity.Pages.Account
- * Author: Idenity system
+ * Description : The authentication for login.
  */
 
 namespace UMS.Areas.Identity.Pages.Account
@@ -33,14 +33,14 @@ namespace UMS.Areas.Identity.Pages.Account
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
         private readonly ManageUserController _manageUser;
-
+        /*
+         * Name: LoginModel
+         * Parameter: context (AuthDbContext), signInManager (SignInManager<ApplicationUser>), logger (ILogger<LoginModel>), 
+         *            loggerManageUser (ILogger<ManageUserController>), userManager (UserManager<ApplicationUser>)
+         */
         public LoginModel(
-            UMS.Data.AuthDbContext context,
-            SignInManager<ApplicationUser> signInManager,
-            ILogger<LoginModel> logger,
-            ILogger<ManageUserController> loggerManageUser,
-            EditAccountContext editaccountContext,
-            AccountContext accountContext,
+            AuthDbContext context, SignInManager<ApplicationUser> signInManager,
+            ILogger<LoginModel> logger, ILogger<ManageUserController> loggerManageUser,
             UserManager<ApplicationUser> userManager)
         {
             try
@@ -49,12 +49,12 @@ namespace UMS.Areas.Identity.Pages.Account
                 _signInManager = signInManager;
                 _logger = logger;
                 _manageUser = new ManageUserController(context, loggerManageUser);
-                _logger.LogDebug("Start Login model.");
+                _logger.LogDebug("Start login model.");
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                _logger.LogTrace("End Login model Constructor.");
+                _logger.LogTrace("End login model.");
             }// End try catch
         } // End constructor
 
@@ -70,7 +70,7 @@ namespace UMS.Areas.Identity.Pages.Account
 
         /*
          * Name: InputModel
-         * Description: for input
+         * Description: The recording of input.
          */
         public class InputModel
         {
@@ -94,7 +94,7 @@ namespace UMS.Areas.Identity.Pages.Account
         /*
          * Name: OnGetAsync
          * Parameter: returnUrl(String)
-         * Description: Check if logged in.
+         * Description: Checking user logged in and getting user information.
          */
         public async Task OnGetAsync(string returnUrl = null)
         {
@@ -123,8 +123,7 @@ namespace UMS.Areas.Identity.Pages.Account
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
-                TempData["Exception"] = message;
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End login on get.");
             } // End try catch
         } // End OnGetAsync
@@ -132,14 +131,14 @@ namespace UMS.Areas.Identity.Pages.Account
         /*
          * Name: OnPostAsync
          * Parameter: returnUrl(string)
-         * Description: for login to system
+         * Description: The log into this system.
          */
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             try
             {
                 _logger.LogTrace("Start login on post.");
-                returnUrl = returnUrl ?? Url.Content("~/");
+                returnUrl ??= Url.Content("~/");
                 ViewData["URL"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
                 if (ModelState.IsValid)
                 {
@@ -147,13 +146,13 @@ namespace UMS.Areas.Identity.Pages.Account
                     var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                     if (result.Succeeded)
                     {
-                        _logger.LogInformation("User logged in.");
                         ApplicationUser user = await _userManager.FindByEmailAsync(Input.Email.ToString());
                         if (user.acc_IsActive == 'N')
                         {
                             _manageUser.DeleteUser(user.Id);
                             _logger.LogInformation("Change status Inactive to active user.");
                         } // End check status
+                        _logger.LogInformation("User logged in.");
 
                         string nameCookies = StringEncryptor.EncryptString("usermanagementsystem2020", "remembermeums");
                         if (Input.RememberMe)
@@ -168,6 +167,7 @@ namespace UMS.Areas.Identity.Pages.Account
                             string cookies = StringEncryptor.EncryptString("usermanagementsystem2020", "UMS.Cookies%" + Input.Email.ToString() + "%" + Input.Password.ToString());
                             Response.Cookies.Delete(nameCookies.ToString());
                             HttpContext.Response.Cookies.Append(nameCookies.ToString(), cookies, option);
+                            _logger.LogInformation("Adding cookie into the browser.");
                         } // Remember email and password
 
                         _logger.LogTrace("End login on post.");
@@ -205,7 +205,7 @@ namespace UMS.Areas.Identity.Pages.Account
             /*
              * Name: EncryptString
              * Parameter: key(string), plainText(string)
-             * Description: encrypt sting with key
+             * Description: The encryption of string with key.
              */
             public static string EncryptString(string key, string plainText)
             {
@@ -235,7 +235,7 @@ namespace UMS.Areas.Identity.Pages.Account
             /*
              * Name: DecryptString
              * Parameter: key(string), cipherText(string)
-             * Description: decrypt sting with key
+             * Description: The decryption of string with key.
              */
             public static string DecryptString(string key, string cipherText)
             {
@@ -256,7 +256,7 @@ namespace UMS.Areas.Identity.Pages.Account
             /*
              * Name: DecryptStringToEmail
              * Parameter: cipherText(string)
-             * Description: decrypt sting with key
+             * Description: The decryption of sting with key.
              */
             public static string DecryptStringToEmail(string key, string cipherText)
             {
@@ -269,7 +269,7 @@ namespace UMS.Areas.Identity.Pages.Account
             /*
              * Name: DecryptStringToPass
              * Parameter: cipherText(string)
-             * Description: decrypt sting with key
+             * Description: The decryption of sting with key.
              */
             public static string DecryptStringToPass(string key, string cipherText)
             {
@@ -277,7 +277,7 @@ namespace UMS.Areas.Identity.Pages.Account
                 string t = text.Substring(text.IndexOf('%') + 1);
                 string p = t.Substring(t.IndexOf('%') + 1);
                 return p;
-            } // End 
+            } // End DecryptStringToPass
         }
     } // End login
 }
