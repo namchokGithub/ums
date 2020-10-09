@@ -397,14 +397,14 @@
                         // Set message status
                         let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
                         let _text = 'Status : ' + result.status + statusResText
-                        console.log(result) // show log of error
-                        toastr.error(_text) // Alert message error
+                        console.log(`${result}`) // show log of error
+                        toastr.error(`${_text}`) // Alert message error
                     } // End error
                 }) // End ajax
             } // End if else
         } catch (e) {
-            console.log(e.message)
-            toastr.warning(e.message)
+            console.log(`${e.message}`)
+            toastr.warning(`${e.message}`)
         }
     } // End checkSearchInput
 

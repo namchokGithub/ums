@@ -258,3 +258,18 @@
 2020/10/09 17:04:52.731 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:196 | Updating name user and password.
 2020/10/09 17:04:52.751 [INFO] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:205 | Update successfully.
 2020/10/09 17:04:52.797 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:61 | Getting user by ID.
+2020/10/09 17:22:23.240 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/09 17:22:26.268 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:51 | Welcome usermanagement2020@gmail.com to UMS.
+2020/10/09 17:22:26.375 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/09 17:22:26.397 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/09 17:22:26.408 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/09 17:22:47.188 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:61 | Getting user by ID.
+2020/10/09 17:22:51.261 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:56 | Getting all active users.
+2020/10/09 17:22:57.853 [ERROR] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:82 | I love you
+2020/10/09 17:23:32.408 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/09 17:23:34.124 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:51 | Welcome usermanagement2020@gmail.com to UMS.
+2020/10/09 17:23:34.153 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/09 17:23:34.180 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/09 17:23:34.180 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/09 17:23:36.361 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:56 | Getting all active users.
+2020/10/09 17:23:43.165 [ERROR] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:82 | I` l`ove y`ou`

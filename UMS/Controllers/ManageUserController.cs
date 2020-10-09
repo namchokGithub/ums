@@ -62,7 +62,7 @@ namespace UMS.Controllers
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                TempData["nullException"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });";
+                TempData["nullException"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("`", "'").Replace("\\", "/") + @"`, showConfirmButton: true });";
                 _logger.LogTrace("End manage user index.");
                 return View();
             } // End try catch
@@ -92,8 +92,8 @@ namespace UMS.Controllers
                 return new JsonResult(new objectJSON
                 {
                     condition = "error",
-                    messages = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/").Replace("`", "|") + @"`, showConfirmButton: true });",
-                    text = e.Message.Replace("\\", "/")
+                    messages = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/").Replace("`", "'") + @"`, showConfirmButton: true });",
+                    text = e.Message.Replace("\\", "/").Replace("`", "'")
                 });
             }
             finally
@@ -154,7 +154,7 @@ namespace UMS.Controllers
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                TempData["UpdateResult"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });";
+                TempData["UpdateResult"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/").Replace("`", "'") + @"`, showConfirmButton: true });";
                 return RedirectToAction("Index");
             } // End try catch
         } // End EditUser
@@ -193,7 +193,7 @@ namespace UMS.Controllers
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });";
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/").Replace("`", "'") + @"`, showConfirmButton: true });";
                 _logger.LogTrace("End account deactivation.");
             } // End try catch
         } // End DeleteUser
@@ -252,8 +252,8 @@ namespace UMS.Controllers
                 var er = new objectJSON
                 {
                     condition = "error",
-                    messages = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/").Replace("`", "|") + @"`, showConfirmButton: true });",
-                    text = e.Message.Replace("\\", "/")
+                    messages = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/").Replace("`", "'") + @"`, showConfirmButton: true });",
+                    text = e.Message.Replace("\\", "/").Replace("`", "'")
                 }; // Object for set alert
                 _logger.LogTrace("End getting status user.");
                 return new JsonResult(er);

@@ -69,7 +69,7 @@ namespace UMS.Controllers
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'ERROR!', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });";
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'ERROR!', text: `" + e.Message.Replace("\\", "/").Replace("`", "'") + @"`, showConfirmButton: true });";
                 _logger.LogTrace("End logs index.");
                 return View();
             } // End try catch
@@ -101,7 +101,7 @@ namespace UMS.Controllers
                 return new JsonResult(new objectJSON
                 {
                     condition = "error",
-                    messages = @"Swal.fire({ icon: 'error', title: 'ERROR!', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });",
+                    messages = @"Swal.fire({ icon: 'error', title: 'ERROR!', text: `" + e.Message.Replace("\\", "/").Replace("`", "'") + @"`, showConfirmButton: true });",
                     text = e.Message
                 });
             } // End try catch
