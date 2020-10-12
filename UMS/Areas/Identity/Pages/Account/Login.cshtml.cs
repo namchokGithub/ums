@@ -1,7 +1,6 @@
 ﻿using System;
 using UMS.Data;
 using System.IO;
-using UMS.Models;
 using System.Linq;
 using System.Text;
 using UMS.Controllers;
@@ -149,7 +148,7 @@ namespace UMS.Areas.Identity.Pages.Account
                         ApplicationUser user = await _userManager.FindByEmailAsync(Input.Email.ToString());
                         if (user.acc_IsActive == 'N')
                         {
-                            _manageUser.DeleteUser(user.Id);
+                            await _manageUser.DeleteUser(user.Id);
                             _logger.LogInformation("Change status Inactive to active user.");
                         } // End check status
                         _logger.LogInformation("User logged in.");

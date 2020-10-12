@@ -1,10 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System;
 using UMS.Models;
+using System.Linq;
+using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 
 /*
  * Name: LogsRepository
@@ -48,6 +47,16 @@ namespace UMS.Data
         } // End GetAll
 
         /*
+         * Name: GetAllAsync
+         * Parameter: numofrow(int)
+         * Description: Get all logs top by numofrow(int)
+         */
+        public async Task<List<Logs>> GetAllAsync(int numofrow)
+        {
+            return await _context.Logs.Take(numofrow).ToListAsync();
+        } // End GetAllAsync
+
+        /*
          * Name: Search
          * Parameter: messageInput(string), dateInput(string)
          * Description: Search log by message or date
@@ -70,5 +79,29 @@ namespace UMS.Data
             } // End if date input not null
             return _context.Logs.FromSqlRaw(sqlGetLog).ToList() ?? throw new Exception("Calling a method on a null object reference.");
         } // End Search
+
+        /*
+         * Name: SearchAsync
+         * Parameter: messageInput(string), dateInput(string)
+         * Description: Search log by message or date
+         */
+        public async Task<List<Logs>> SearchAsync(string messageInput, string dateInput)
+        {
+            string sqlGetLog;
+            if (dateInput != null && dateInput != "")
+            {
+                DateTime dateInputStart = Convert.ToDateTime(dateInput.Substring(0, (dateInput.IndexOf("-"))).ToString());
+                DateTime dateInputEnd = Convert.ToDateTime(dateInput.Substring((dateInput.IndexOf("-")) + 1).ToString()); // Set date for query
+                if (messageInput != "")
+                    sqlGetLog = @$"Exec dbo.ums_Search_log '{dateInputStart}', '{dateInputEnd}', '{messageInput}'";
+                else
+                    sqlGetLog = @$"Exec dbo.ums_Search_log '{dateInputStart}', '{dateInputEnd}', ''";
+            }
+            else
+            {
+                sqlGetLog = @$"Exec dbo.ums_Search_log '', '', '{messageInput}'";
+            } // End if date input not null
+            return await _context.Logs.FromSqlRaw(sqlGetLog).ToListAsync() ?? throw new Exception("Calling a method on a null object reference.");
+        } // End SearchAsync
     } // End LogsRepository
 }

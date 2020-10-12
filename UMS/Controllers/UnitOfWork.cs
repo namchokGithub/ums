@@ -1,4 +1,5 @@
-﻿using UMS.Data;
+﻿using System.Threading.Tasks;
+using UMS.Data;
 /*
  * Name: IUnitOfWork
  * Author: Namchok Singhachai
@@ -35,6 +36,16 @@ namespace UMS.Controllers
         } // End commit
 
         /*
+         * Name: CommitAsync
+         * Author: Namchok Singhachai
+         * Description: Saving changes.
+         */
+        public async Task<int> CommitAsync()
+        {
+            return await _context.SaveChangesAsync();
+        } // End CommitAsync
+
+        /*
          * Name: Dispose
          * Author: Namchok Singhachai
          * Description: Discardation all operation.
@@ -43,5 +54,15 @@ namespace UMS.Controllers
         {
             _context.Dispose();
         } // End Dispose
+
+        /*
+         * Name: DisposeAsync
+         * Author: Namchok Singhachai
+         * Description: Discardation all operation.
+         */
+        public async Task DisposeAsync()
+        {
+            await _context.DisposeAsync();
+        } // End DisposeAsync
     } // End UnitOfWork
 }
