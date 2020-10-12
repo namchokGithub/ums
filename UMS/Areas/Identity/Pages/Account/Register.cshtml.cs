@@ -131,7 +131,7 @@ namespace UMS.Areas.Identity.Pages.Account
             try
             {
                 _logger.LogTrace("Start register on post.");
-                returnUrl = returnUrl ?? Url.Content("~/");
+                returnUrl ??= Url.Content("~/");
                 ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
                 if (ModelState.IsValid)
                 {

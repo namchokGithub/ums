@@ -91,7 +91,7 @@ namespace UMS.Controllers
             {
                 _logger.LogError("Error: " + e.Message.ToString());
                 _logger.LogTrace("End searching a logs.");
-                return new JsonResult(new objectJSON
+                return new JsonResult(new ObjectJSON
                 {
                     condition = "error",
                     messages = @"Swal.fire({ icon: 'error', title: 'ERROR!', text: `" + e.Message.Replace("\\", "/").Replace("`", "'") + @"`, showConfirmButton: true });",
