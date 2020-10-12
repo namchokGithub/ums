@@ -1,12 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc.Authorization;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using Microsoft.Data.SqlClient;
-using System.Linq;
-using UMS.Areas.Identity.Data;
+﻿using System;
 using UMS.Models;
+using System.Linq;
+using System.Data;
+using System.Threading.Tasks;
+using Microsoft.Data.SqlClient;
+using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 
 /*
  * Name: AccountRepository
@@ -37,21 +36,33 @@ namespace UMS.Data
          */
         public SqlParameter FindByUsername(string username, string status)
         {
-            try
+            var checkExits = new SqlParameter("@returnVal", SqlDbType.Int)
             {
-                var checkExits = new SqlParameter("@returnVal", SqlDbType.Int)
-                {
-                    Direction = ParameterDirection.Output
-                }; // Set parameter for get value
-                _context.Database.ExecuteSqlRaw($"EXEC @returnVal=[dbo].ums_Check_user '{username}', '{status}'", checkExits);
-                _context.SaveChanges();
-                _context.Dispose();
-                return checkExits;
-            } catch (Exception e)
-            {
-                throw e;
-            } // End try catch
+                Direction = ParameterDirection.Output
+            }; // Set parameter for get value
+            _context.Database.ExecuteSqlRaw($"EXEC @returnVal=[dbo].ums_Check_user '{username}', '{status}'", checkExits);
+            _context.SaveChanges();
+            _context.Dispose();
+            return checkExits;
         } // End FindByUsername
+
+        /*
+         * Name: FindByUsernameAsync
+         * Parametor: username(string), status(string)
+         * Author: Namchok Singhachai
+         * Description: The search for user by username and status (In controller is Function CheckIsExist).
+         */
+        public async Task<SqlParameter> FindByUsernameAsync(string username, string status)
+        {
+            var checkExits = new SqlParameter("@returnVal", SqlDbType.Int)
+            {
+                Direction = ParameterDirection.Output
+            }; // Set parameter for get value
+            await _context.Database.ExecuteSqlRawAsync($"EXEC @returnVal=[dbo].ums_Check_user '{username}', '{status}'", checkExits);
+            await _context.SaveChangesAsync();
+            await _context.DisposeAsync();
+            return checkExits;
+        } // End FindByUsernameAsync
 
         /*
          * Name: GetAll
@@ -62,6 +73,16 @@ namespace UMS.Data
         {
             return _context.Account.FromSqlRaw("EXEC [dbo].ums_Get_all_active_user").ToList<Account>();
         } // End get all
+
+        /*
+         * Name: GetAllAsync
+         * Author: Namchok Singhachai
+         * Description: The getting list of all users.
+         */
+        public async Task<List<Account>> GetAllAsync()
+        {
+            return await _context.Account.FromSqlRaw("EXEC [dbo].ums_Get_all_active_user").ToListAsync<Account>();
+        } // End GetAllAsync
 
         /*
          * Name: GetByID
@@ -75,30 +96,55 @@ namespace UMS.Data
         } // End GetByID
 
         /*
+         * Name: GetByIDAsync
+         * Parameter: id(string)
+         * Author: Namchok Singhachai
+         * Description: The getting a user is already active on the system by id.
+         */
+        public async Task<Account> GetByIDAsync(string id)
+        {
+            return await _context.Account.FromSqlRaw($"EXEC [dbo].ums_Get_user_by_Id '{id}'").FirstOrDefaultAsync();
+        } // End GetByIDAsync
+
+        /*
          * Name: GetStatus
          * Parameter: username(string), status(string)
          * Description: The checking user is already exist on system by username (GetStatusUser).
          */
         public SqlParameter GetStatus(string username)
         {
-            try
+            var status = new SqlParameter("@paramout_status", SqlDbType.Int)
             {
-                var status = new SqlParameter("@paramout_status", SqlDbType.Int)
-                {
-                    IsNullable = true,
-                    Direction = ParameterDirection.Output,
-                    Size = 10,
-                    Value = DBNull.Value
-                }; // Set parameter for get value
-                _context.Database.ExecuteSqlRaw($@"EXEC @paramout_status=[dbo].ums_Get_status_user '{username}'", status);
-                _context.SaveChanges();
-                _context.Dispose();
-                return status;
-            } catch (Exception e)
-            {
-                throw e;
-            } // End try catch
+                IsNullable = true,
+                Direction = ParameterDirection.Output,
+                Size = 10,
+                Value = DBNull.Value
+            }; // Set parameter for get value
+            _context.Database.ExecuteSqlRaw($@"EXEC @paramout_status=[dbo].ums_Get_status_user '{username}'", status);
+            _context.SaveChanges();
+            _context.Dispose();
+            return status;
         } // End GetStatus
+
+        /*
+         * Name: GetStatusAsync
+         * Parameter: username(string), status(string)
+         * Description: The checking user is already exist on system by username (GetStatusUser).
+         */
+        public async Task<SqlParameter> GetStatusAsync(string username)
+        {
+            var status = new SqlParameter("@paramout_status", SqlDbType.Int)
+            {
+                IsNullable = true,
+                Direction = ParameterDirection.Output,
+                Size = 10,
+                Value = DBNull.Value
+            }; // Set parameter for get value
+            await _context.Database.ExecuteSqlRawAsync($@"EXEC @paramout_status=[dbo].ums_Get_status_user '{username}'", status);
+            await _context.SaveChangesAsync();
+            await _context.DisposeAsync();
+            return status;
+        } // End GetStatusAsync
 
         /*
          * Name: ToggleStatus
@@ -107,14 +153,18 @@ namespace UMS.Data
          */
         public void ToggleStatus(string id)
         {
-            try
-            {
-                _context.Database.ExecuteSqlRaw($"ums_Delete_user '{id}'");
-            } catch (Exception e)
-            {
-                throw e;
-            } // End try catch
+            _context.Database.ExecuteSqlRaw($"ums_Delete_user '{id}'");
         } // End ToggleStatus
+
+        /*
+         * Name: ToggleStatusAsync
+         * Parameter: id(string)
+         * Description: Account deactivation.
+         */
+        public async Task ToggleStatusAsync(string id)
+        {
+            await _context.Database.ExecuteSqlRawAsync($"ums_Delete_user '{id}'");
+        } // End ToggleStatusAsync
 
         /*
          * Name: UpdateName
@@ -123,17 +173,18 @@ namespace UMS.Data
          */
         public void UpdateName(Account _account)
         {
-            try
-            {
-                // SQL text for execute procedure
-                string sqlUpdateUser = $"ums_Update_name_user '{_account.acc_Id}', '{_account.acc_Firstname}', '{_account.acc_Lastname}'"; // Update name's user
-                _context.Database.ExecuteSqlRaw(sqlUpdateUser);
-            }
-            catch (Exception e)
-            {
-                throw e;
-            } // End try catch
+            _context.Database.ExecuteSqlRaw($"ums_Update_name_user '{_account.acc_Id}', '{_account.acc_Firstname}', '{_account.acc_Lastname}'");
         } // End UpdateName
+
+        /*
+         * Name: UpdateNameAsync
+         * Parameter: _account(Account)
+         * Description: The user profile editing (Name).
+         */
+        public async Task UpdateNameAsync(Account _account)
+        {
+            await _context.Database.ExecuteSqlRawAsync($"ums_Update_name_user '{ _account.acc_Id}', '{ _account.acc_Firstname}', '{ _account.acc_Lastname}'");
+        } // End UpdateNameAsync
 
         /*
          * Name: UpdateNameAndPassword
@@ -142,15 +193,18 @@ namespace UMS.Data
          */
         public void UpdateNameAndPassword(Account _account)
         {
-            try
-            {
-                string sqlUpdateAll = $"ums_Update_all '{_account.acc_Id}', '{_account.acc_Firstname}', '{_account.acc_Lastname}', '{_account.acc_PasswordHash}'";
-                _context.Database.ExecuteSqlRaw(sqlUpdateAll);
-            } catch (Exception e)
-            {
-                throw e;
-            }
+            _context.Database.ExecuteSqlRaw($"ums_Update_all '{ _account.acc_Id}', '{ _account.acc_Firstname}', '{ _account.acc_Lastname}', '{ _account.acc_PasswordHash}'");
         } // End UpdateNameAndPassword
+
+        /*
+         * Name: UpdateNameAndPasswordAsync
+         * Parameter: _account(Account)
+         * Description: The user profile editing (Name and Password).
+         */
+        public async Task UpdateNameAndPasswordAsync(Account _account)
+        {
+            await _context.Database.ExecuteSqlRawAsync($"ums_Update_all '{ _account.acc_Id}', '{ _account.acc_Firstname}', '{ _account.acc_Lastname}', '{ _account.acc_PasswordHash}'");
+        } // End UpdateNameAndPasswordAsync
 
         /*
          * Name: UpdateRole
@@ -159,15 +213,17 @@ namespace UMS.Data
          */
         public void UpdateRole(Account _account)
         {
-            try
-            {
-                string sqlUpdateRoleUser = $"ums_Update_role_user '{_account.acc_Id}', '{_account.acc_Rolename}'"; // Update role's user
-                _context.Database.ExecuteSqlRaw(sqlUpdateRoleUser);
-            }
-            catch (Exception e)
-            {
-                throw e;
-            } // End try catch
+            _context.Database.ExecuteSqlRaw($"ums_Update_role_user '{_account.acc_Id}', '{_account.acc_Rolename}'");
         } // End UpdateRole
+
+        /*
+         * Name: UpdateRoleAsync
+         * Parameter: _account(Account)
+         * Description: The user profile editing (Role).
+         */
+        public async Task UpdateRoleAsync(Account _account)
+        {
+            await _context.Database.ExecuteSqlRawAsync($"ums_Update_role_user '{_account.acc_Id}', '{_account.acc_Rolename}'");
+        } // End UpdateRoleAsync
     } // End AccountRepository
 }
