@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Security.Cryptography;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using System.Text.RegularExpressions;
 using UMS.Data;
 
@@ -32,18 +31,10 @@ namespace UMS.Controllers
          */
         public EditProfileController(AuthDbContext context, SignInManager<ApplicationUser> signInManager, ILogger<EditProfileController> logger)
         {
-            try
-            {
-                _logger = logger;
-                _signInManager = signInManager;
-                _unitOfWork = new UnitOfWork(context);
-                _logger.LogTrace("Start editProfile controller.");
-            }
-            catch (Exception e)
-            {
-                _logger.LogError(e.Message.ToString());
-                _logger.LogTrace("End editProfile controller.");
-            } // End try catch
+            _logger = logger;
+            _signInManager = signInManager;
+            _unitOfWork = new UnitOfWork(context);
+            _logger.LogTrace("Start editProfile controller.");
         } // End Constructor
 
         /*
@@ -51,7 +42,7 @@ namespace UMS.Controllers
          * Author: Wannapa Srijermtong
          * Description: Get Firstname, Lastname and LoginProvider by UserId.
          */
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             try
             {
@@ -59,8 +50,8 @@ namespace UMS.Controllers
                 var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
                 ViewData["UserId"] = UserId ?? throw new Exception("User ID not found!.");
                 _logger.LogDebug("Getting user by ID.");
-                ViewData["User"] = _unitOfWork.Account.GetByID(UserId) ?? throw new Exception("Calling a method on a null object reference.");
-                _unitOfWork.Account.Dispose();
+                ViewData["User"] = await _unitOfWork.Account.GetByIDAsync(UserId) ?? throw new Exception("Calling a method on a null object reference.");
+                await _unitOfWork.Account.DisposeAsync();
                 _logger.LogTrace("End edit profile controller index.");
                 return View();
             }

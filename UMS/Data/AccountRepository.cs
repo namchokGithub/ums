@@ -103,7 +103,8 @@ namespace UMS.Data
          */
         public async Task<Account> GetByIDAsync(string id)
         {
-            return await _context.Account.FromSqlRaw($"EXEC [dbo].ums_Get_user_by_Id '{id}'").FirstOrDefaultAsync();
+            var result = await _context.Account.FromSqlRaw($"EXEC [dbo].ums_Get_user_by_Id '{id}'").ToListAsync();
+            return result.FirstOrDefault<Account>();
         } // End GetByIDAsync
 
         /*

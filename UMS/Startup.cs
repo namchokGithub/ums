@@ -59,11 +59,6 @@ namespace UMS
                 o.ReturnUrlParameter = "/";
             });
 
-            // Set connect database         
-            services.AddDbContext<EditProfileContext>(options =>
-                    options.UseSqlServer(
-                       Configuration.GetConnectionString("AuthDbContextConnection")));
-
             // Service for send email
             var emailConfig = Configuration
                 .GetSection("EmailConfiguration")

@@ -119,7 +119,6 @@ namespace UMS.Controllers
                 {
                     await _unitOfWork.Account.UpdateNameAsync(_account);
                     await _unitOfWork.Account.UpdateRoleAsync(_account);
-                    TempData["UpdateResult"] = @"toastr.success('Update user successfully!');";
                     var result = false;
                     while (!result)
                     {
