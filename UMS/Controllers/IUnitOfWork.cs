@@ -1,5 +1,6 @@
 ﻿using System;
 using UMS.Data;
+using System.Threading.Tasks;
 
 /*
  * Name: IUnitOfWork
@@ -14,6 +15,8 @@ namespace UMS.Controllers
         ILogsRepository Logs { get; }
         IAccountRepository Account { get; }
         int Commit();
+        Task<int> CommitAsync();
         new void Dispose();
+        Task DisposeAsync();
     } // End IUnitOfWork
 }

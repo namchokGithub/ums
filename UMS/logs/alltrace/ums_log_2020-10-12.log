@@ -1,0 +1,230 @@
+######################################## User Management System log All Trace #########################################
+2020/10/12 09:20:37.540 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/10/12 09:20:44.118 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/12 09:20:45.358 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/12 09:20:45.446 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/12 09:20:45.509 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/12 09:20:46.904 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start application context.
+2020/10/12 09:20:49.338 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:32 | Start home controller.
+2020/10/12 09:20:49.384 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:50 | Start home index.
+2020/10/12 09:20:49.384 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:51 | Welcome usermanagement2020@gmail.com to UMS.
+2020/10/12 09:20:49.398 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:52 | Finding user ID.
+2020/10/12 09:20:49.398 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:54 | End home index.
+2020/10/12 09:21:03.936 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start application context.
+2020/10/12 09:21:03.983 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:31 | Start logs controller.
+2020/10/12 09:21:03.991 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:53 | Start logs index.
+2020/10/12 09:21:03.991 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:54 | Finding user ID.
+2020/10/12 09:21:03.991 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:56 | Getting top 100 from all logs.
+2020/10/12 09:21:04.182 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:59 | End logs index.
+2020/10/12 09:21:10.929 [TRACE] [UMS.Data.AuthDbContext]  Search:AuthDbContext.cs:28 | Start application context.
+2020/10/12 09:21:10.995 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:31 | Start logs controller.
+2020/10/12 09:21:11.092 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:81 | Start searching a logs.
+2020/10/12 09:21:11.095 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:84 | Input Date Input: 10/12/2020 9:21 AM - 10/12/2020 10:51 AM
+2020/10/12 09:21:11.111 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:85 | Input Message: -
+2020/10/12 09:21:11.111 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:86 | Getting log by 10/12/2020 9:21 AM - 10/12/2020 10:51 AM.
+2020/10/12 09:21:11.111 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:87 | End searching a logs.
+2020/10/12 09:21:27.225 [TRACE] [UMS.Data.AuthDbContext]  Search:AuthDbContext.cs:28 | Start application context.
+2020/10/12 09:21:27.225 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:31 | Start logs controller.
+2020/10/12 09:21:27.241 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:81 | Start searching a logs.
+2020/10/12 09:21:27.241 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:84 | Input Date Input: 10/12/2020 9:21 AM - 10/12/2020 10:51 AM
+2020/10/12 09:21:27.254 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:85 | Input Message: Welcome 
+2020/10/12 09:21:27.280 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:86 | Getting log by 10/12/2020 9:21 AM - 10/12/2020 10:51 AM or Welcome .
+2020/10/12 09:21:27.289 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:87 | End searching a logs.
+2020/10/12 09:21:58.729 [TRACE] [UMS.Data.AuthDbContext]  Search:AuthDbContext.cs:28 | Start application context.
+2020/10/12 09:21:58.743 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:31 | Start logs controller.
+2020/10/12 09:21:58.743 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:81 | Start searching a logs.
+2020/10/12 09:21:58.752 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:84 | Input Date Input: 10/12/2020 08:00 AM - 10/12/2020 09:30 PM
+2020/10/12 09:21:58.752 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:85 | Input Message: Welcome 
+2020/10/12 09:21:58.770 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:86 | Getting log by 10/12/2020 08:00 AM - 10/12/2020 09:30 PM or Welcome .
+2020/10/12 09:21:58.791 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:87 | End searching a logs.
+2020/10/12 09:23:55.812 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start application context.
+2020/10/12 09:23:55.827 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:31 | Start logs controller.
+2020/10/12 09:24:05.198 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:53 | Start logs index.
+2020/10/12 09:24:05.607 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:54 | Finding user ID.
+2020/10/12 09:24:07.039 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:56 | Getting top 100 from all logs.
+2020/10/12 09:24:11.660 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:59 | End logs index.
+2020/10/12 09:27:33.730 [TRACE] [UMS.Data.AuthDbContext]  Search:AuthDbContext.cs:28 | Start application context.
+2020/10/12 09:27:33.749 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:31 | Start logs controller.
+2020/10/12 09:27:33.758 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:81 | Start searching a logs.
+2020/10/12 09:27:33.758 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:84 | Input Date Input: -
+2020/10/12 09:27:33.775 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:85 | Input Message: Welcome
+2020/10/12 09:27:33.787 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:86 | Getting log by  or Welcome.
+2020/10/12 09:27:33.787 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:87 | End searching a logs.
+2020/10/12 09:27:43.502 [TRACE] [UMS.Data.AuthDbContext]  Search:AuthDbContext.cs:28 | Start application context.
+2020/10/12 09:27:43.502 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:31 | Start logs controller.
+2020/10/12 09:27:43.532 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:81 | Start searching a logs.
+2020/10/12 09:27:43.544 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:84 | Input Date Input: 10/12/2020 9:27 AM - 10/12/2020 10:57 AM
+2020/10/12 09:27:43.562 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:85 | Input Message: Welcome
+2020/10/12 09:27:43.576 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:86 | Getting log by 10/12/2020 9:27 AM - 10/12/2020 10:57 AM or Welcome.
+2020/10/12 09:27:43.594 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:87 | End searching a logs.
+2020/10/12 09:32:50.173 [TRACE] [UMS.Data.AuthDbContext]  Search:AuthDbContext.cs:28 | Start application context.
+2020/10/12 09:32:50.173 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:31 | Start logs controller.
+2020/10/12 09:32:50.196 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:81 | Start searching a logs.
+2020/10/12 09:32:50.196 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:84 | Input Date Input: -
+2020/10/12 09:32:50.213 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:85 | Input Message: Welcome
+2020/10/12 09:32:50.234 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:86 | Getting log by  or Welcome.
+2020/10/12 09:32:50.244 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:87 | End searching a logs.
+2020/10/12 09:48:43.597 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/10/12 09:48:46.774 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/12 09:48:47.243 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/12 09:48:47.262 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/12 09:48:47.282 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/12 09:48:50.255 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start application context.
+2020/10/12 09:48:52.915 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:32 | Start home controller.
+2020/10/12 09:48:53.458 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:50 | Start home index.
+2020/10/12 09:48:53.620 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:51 | Welcome usermanagement2020@gmail.com to UMS.
+2020/10/12 09:48:54.042 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:52 | Finding user ID.
+2020/10/12 09:48:54.042 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:54 | End home index.
+2020/10/12 09:50:05.780 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start application context.
+2020/10/12 09:50:05.817 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:31 | Start logs controller.
+2020/10/12 09:50:05.839 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:53 | Start logs index.
+2020/10/12 09:50:05.851 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:54 | Finding user ID.
+2020/10/12 09:50:05.865 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:56 | Getting top 100 from all logs.
+2020/10/12 09:50:07.633 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:59 | End logs index.
+2020/10/12 09:50:17.341 [TRACE] [UMS.Data.AuthDbContext]  Search:AuthDbContext.cs:28 | Start application context.
+2020/10/12 09:50:17.391 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:31 | Start logs controller.
+2020/10/12 09:50:17.436 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:81 | Start searching a logs.
+2020/10/12 09:50:17.448 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:84 | Input Date Input: 10/12/2020 09:45 AM - 10/12/2020 11:15 AM
+2020/10/12 09:50:17.463 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:85 | Input Message: -
+2020/10/12 09:50:17.463 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:86 | Getting log by 10/12/2020 09:45 AM - 10/12/2020 11:15 AM.
+2020/10/12 09:50:17.474 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:87 | End searching a logs.
+2020/10/12 10:03:06.090 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/10/12 10:03:10.466 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/12 10:03:10.802 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/12 10:03:10.836 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/12 10:03:10.874 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/12 10:03:12.302 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start application context.
+2020/10/12 10:03:14.309 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:32 | Start home controller.
+2020/10/12 10:03:14.351 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:50 | Start home index.
+2020/10/12 10:03:14.368 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:51 | Welcome usermanagement2020@gmail.com to UMS.
+2020/10/12 10:03:14.390 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:52 | Finding user ID.
+2020/10/12 10:03:14.395 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:54 | End home index.
+2020/10/12 10:03:16.350 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start application context.
+2020/10/12 10:03:16.382 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:31 | Start logs controller.
+2020/10/12 10:03:16.394 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:53 | Start logs index.
+2020/10/12 10:03:16.394 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:54 | Finding user ID.
+2020/10/12 10:03:16.408 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:56 | Getting top 100 from all logs.
+2020/10/12 10:03:16.505 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:59 | End logs index.
+2020/10/12 10:03:21.494 [TRACE] [UMS.Data.AuthDbContext]  Search:AuthDbContext.cs:28 | Start application context.
+2020/10/12 10:03:21.545 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:31 | Start logs controller.
+2020/10/12 10:03:21.600 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:81 | Start searching a logs.
+2020/10/12 10:03:21.600 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:84 | Input Date Input: 10/12/2020 10:03 AM - 10/12/2020 11:33 AM
+2020/10/12 10:03:21.675 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:85 | Input Message: -
+2020/10/12 10:03:21.675 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:86 | Getting log by 10/12/2020 10:03 AM - 10/12/2020 11:33 AM.
+2020/10/12 10:03:21.675 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:87 | End searching a logs.
+2020/10/12 10:03:31.972 [TRACE] [UMS.Data.AuthDbContext]  Search:AuthDbContext.cs:28 | Start application context.
+2020/10/12 10:03:31.972 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:31 | Start logs controller.
+2020/10/12 10:03:31.972 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:81 | Start searching a logs.
+2020/10/12 10:03:31.991 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:84 | Input Date Input: -
+2020/10/12 10:03:32.013 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:85 | Input Message: Welcome
+2020/10/12 10:03:32.034 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:86 | Getting log by  or Welcome.
+2020/10/12 10:03:32.034 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:87 | End searching a logs.
+2020/10/12 10:03:37.543 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/10/12 10:05:57.319 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/10/12 10:05:59.458 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/12 10:05:59.763 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/12 10:05:59.779 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/12 10:05:59.791 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/12 10:06:01.447 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start application context.
+2020/10/12 10:06:01.537 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:32 | Start home controller.
+2020/10/12 10:06:01.554 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:50 | Start home index.
+2020/10/12 10:06:01.574 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:51 | Welcome usermanagement2020@gmail.com to UMS.
+2020/10/12 10:06:01.580 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:52 | Finding user ID.
+2020/10/12 10:06:01.580 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:54 | End home index.
+2020/10/12 10:06:08.505 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start application context.
+2020/10/12 10:06:08.539 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:31 | Start logs controller.
+2020/10/12 10:06:08.563 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:53 | Start logs index.
+2020/10/12 10:06:08.582 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:54 | Finding user ID.
+2020/10/12 10:06:08.603 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:56 | Getting top 100 from all logs.
+2020/10/12 10:06:10.559 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:59 | End logs index.
+2020/10/12 10:06:20.755 [TRACE] [UMS.Data.AuthDbContext]  Search:AuthDbContext.cs:28 | Start application context.
+2020/10/12 10:06:20.835 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:31 | Start logs controller.
+2020/10/12 10:06:20.905 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:81 | Start searching a logs.
+2020/10/12 10:06:20.929 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:84 | Input Date Input: -
+2020/10/12 10:06:20.956 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:85 | Input Message: Welcome 
+2020/10/12 10:06:20.956 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:86 | Getting log by  or Welcome .
+2020/10/12 10:06:20.974 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:87 | End searching a logs.
+2020/10/12 10:06:33.536 [TRACE] [UMS.Data.AuthDbContext]  Search:AuthDbContext.cs:28 | Start application context.
+2020/10/12 10:06:33.536 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:31 | Start logs controller.
+2020/10/12 10:06:33.554 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:81 | Start searching a logs.
+2020/10/12 10:06:33.554 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:84 | Input Date Input: -
+2020/10/12 10:06:33.572 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:85 | Input Message: Welcome
+2020/10/12 10:06:33.586 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:86 | Getting log by  or Welcome.
+2020/10/12 10:06:33.586 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:87 | End searching a logs.
+2020/10/12 10:06:51.154 [TRACE] [UMS.Data.AuthDbContext]  Search:AuthDbContext.cs:28 | Start application context.
+2020/10/12 10:06:51.163 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:31 | Start logs controller.
+2020/10/12 10:06:51.163 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:81 | Start searching a logs.
+2020/10/12 10:06:51.177 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:84 | Input Date Input: 10/12/2020 12:00 AM - 10/12/2020 11:59 PM
+2020/10/12 10:06:51.177 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:85 | Input Message: -
+2020/10/12 10:06:51.195 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:86 | Getting log by 10/12/2020 12:00 AM - 10/12/2020 11:59 PM.
+2020/10/12 10:06:51.205 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:87 | End searching a logs.
+2020/10/12 10:07:29.294 [TRACE] [UMS.Data.AuthDbContext]  Search:AuthDbContext.cs:28 | Start application context.
+2020/10/12 10:07:29.305 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:31 | Start logs controller.
+2020/10/12 10:07:29.327 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:81 | Start searching a logs.
+2020/10/12 10:07:29.337 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:84 | Input Date Input: 10/12/2020 01:00 PM - 10/12/2020 11:59 PM
+2020/10/12 10:07:29.364 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:85 | Input Message: -
+2020/10/12 10:07:29.379 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:86 | Getting log by 10/12/2020 01:00 PM - 10/12/2020 11:59 PM.
+2020/10/12 10:07:29.379 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:87 | End searching a logs.
+2020/10/12 10:07:49.672 [TRACE] [UMS.Data.AuthDbContext]  Search:AuthDbContext.cs:28 | Start application context.
+2020/10/12 10:07:49.689 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:31 | Start logs controller.
+2020/10/12 10:07:49.689 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:81 | Start searching a logs.
+2020/10/12 10:07:49.689 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:84 | Input Date Input: 10/12/2020 01:00 AM - 10/12/2020 09:00 AM
+2020/10/12 10:07:49.717 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:85 | Input Message: -
+2020/10/12 10:07:49.747 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:86 | Getting log by 10/12/2020 01:00 AM - 10/12/2020 09:00 AM.
+2020/10/12 10:07:49.756 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:87 | End searching a logs.
+2020/10/12 10:08:08.462 [TRACE] [UMS.Data.AuthDbContext]  Search:AuthDbContext.cs:28 | Start application context.
+2020/10/12 10:08:08.502 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:31 | Start logs controller.
+2020/10/12 10:08:08.502 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:81 | Start searching a logs.
+2020/10/12 10:08:08.518 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:84 | Input Date Input: 10/12/2020 01:00 AM - 10/12/2020 09:00 AM
+2020/10/12 10:08:08.536 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:85 | Input Message: Welcome
+2020/10/12 10:08:08.550 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:86 | Getting log by 10/12/2020 01:00 AM - 10/12/2020 09:00 AMWelcome.
+2020/10/12 10:08:08.574 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:87 | End searching a logs.
+2020/10/12 10:10:29.404 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/10/12 10:10:31.481 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/12 10:10:31.833 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/12 10:10:31.855 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/12 10:10:31.872 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/12 10:10:32.922 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start application context.
+2020/10/12 10:10:32.991 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:32 | Start home controller.
+2020/10/12 10:10:33.007 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:50 | Start home index.
+2020/10/12 10:10:33.019 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:51 | Welcome usermanagement2020@gmail.com to UMS.
+2020/10/12 10:10:33.019 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:52 | Finding user ID.
+2020/10/12 10:10:33.019 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:54 | End home index.
+2020/10/12 10:10:37.947 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start application context.
+2020/10/12 10:10:38.009 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:31 | Start logs controller.
+2020/10/12 10:10:38.030 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:53 | Start logs index.
+2020/10/12 10:10:38.045 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:54 | Finding user ID.
+2020/10/12 10:10:38.061 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:56 | Getting top 100 from all logs.
+2020/10/12 10:10:39.792 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:59 | End logs index.
+2020/10/12 10:11:30.555 [TRACE] [UMS.Data.AuthDbContext]  Search:AuthDbContext.cs:28 | Start application context.
+2020/10/12 10:11:30.608 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:31 | Start logs controller.
+2020/10/12 10:11:30.685 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:81 | Start searching a logs.
+2020/10/12 10:11:30.705 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:84 | Input Date Input: 10/12/2020 09:30 AM - 10/13/2020 11:00 AM
+2020/10/12 10:11:30.725 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:85 | Input Message: -
+2020/10/12 10:11:30.746 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:86 | Getting log by 10/12/2020 09:30 AM - 10/13/2020 11:00 AM.
+2020/10/12 10:11:30.751 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:87 | End searching a logs.
+2020/10/12 10:12:07.702 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start application context.
+2020/10/12 10:12:07.718 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:31 | Start logs controller.
+2020/10/12 10:12:07.721 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:53 | Start logs index.
+2020/10/12 10:12:07.721 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:54 | Finding user ID.
+2020/10/12 10:12:07.721 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:56 | Getting top 100 from all logs.
+2020/10/12 10:12:07.764 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:59 | End logs index.
+2020/10/12 10:12:10.769 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start application context.
+2020/10/12 10:12:10.769 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:32 | Start home controller.
+2020/10/12 10:12:10.786 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:50 | Start home index.
+2020/10/12 10:12:10.786 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:51 | Welcome usermanagement2020@gmail.com to UMS.
+2020/10/12 10:12:10.786 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:52 | Finding user ID.
+2020/10/12 10:12:10.800 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:54 | End home index.
+2020/10/12 10:12:11.735 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:28 | Start application context.
+2020/10/12 10:12:11.735 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:31 | Start logs controller.
+2020/10/12 10:12:11.735 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:53 | Start logs index.
+2020/10/12 10:12:11.752 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:54 | Finding user ID.
+2020/10/12 10:12:11.752 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:56 | Getting top 100 from all logs.
+2020/10/12 10:12:11.812 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:59 | End logs index.
+2020/10/12 10:12:20.040 [TRACE] [UMS.Data.AuthDbContext]  Search:AuthDbContext.cs:28 | Start application context.
+2020/10/12 10:12:20.056 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:31 | Start logs controller.
+2020/10/12 10:12:20.056 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:81 | Start searching a logs.
+2020/10/12 10:12:20.071 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:84 | Input Date Input: 10/12/2020 12:00 AM - 10/13/2020 12:00 AM
+2020/10/12 10:12:20.083 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:85 | Input Message: -
+2020/10/12 10:12:20.095 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:86 | Getting log by 10/12/2020 12:00 AM - 10/13/2020 12:00 AM.
+2020/10/12 10:12:20.095 [TRACE] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Search:LogsController.cs:87 | End searching a logs.

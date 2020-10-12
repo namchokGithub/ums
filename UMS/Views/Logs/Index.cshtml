@@ -224,6 +224,7 @@
             $('#dateErrorInput').empty();
             $('#message').val('');
             $('#logstime').val('');
+            $('#today').prop('checked', false);
         });
         // Check is has exception
         @if (ViewData["INFO"] != null) { @Html.Raw(ViewData["INFO"]) /* Swal funciton */ };
@@ -243,6 +244,7 @@
         $('#logstime').on('change', () => {
             $('#messageErrorInput').empty();
             $('#dateErrorInput').empty();
+            $('#today').prop('checked', false);
         })
 
         // On click on today checkbok and set today to input daterange
@@ -311,6 +313,7 @@
                             console.log(result.length)
                             let myArr = new Array(result.length)
                             let time = ''
+                            let date = ''
                             var levelLable = ''
                             for (var i = 0; i < myArr.length; i++) {
                                 myArr[i] = new Array(7);
@@ -353,6 +356,10 @@
                                 } // for check level
                                 date = (result[i].log_datetime).substring(0, (result[i].log_datetime).indexOf('T'))
                                 time = (result[i].log_datetime).substring((result[i].log_datetime).indexOf('T') + 1) // Calculate datetime
+                                console.log(date);
+                                console.log(time);
+                                console.log(replaceDate(date));
+                                console.log(convertTime(time));
                                 myArr[i][0] = replaceDate(date) + ' ' + convertTime(time);
                                 myArr[i][1] = levelLable;
                                 myArr[i][2] = result[i].log_message;
@@ -383,7 +390,7 @@
                                 ]
                             }); // Set datatables
                             console.log(`Successfully. ${result.length} items found.`)
-                            toastr.success(`Successfully. ${result.length} items found.`)
+                            toastr.success(`Successfully. ${result.length} items found.`);
                             $('#showSearchLogs > thead > tr > th').removeClass('sorting_asc');
                         } else {
                             eval(result['messages']) // Excute js
@@ -470,10 +477,10 @@
      * Description: Converting format date 09/15/2020
      */
     function replaceDate(date) {
-        let mm = date.substring(0, date.indexOf('-'))
+        let yy = date.substring(0, date.indexOf('-'))
         let temp = date.substring(date.indexOf('-') + 1)
-        let dd = temp.substring(0, temp.indexOf('-'))
-        let yy = temp.substring(temp.indexOf('-') + 1)
+        let mm = temp.substring(0, temp.indexOf('-'))
+        let dd = temp.substring(temp.indexOf('-') + 1)
         return dd + '/' + mm + '/' + yy
     } // End replaceDate
 </script>
