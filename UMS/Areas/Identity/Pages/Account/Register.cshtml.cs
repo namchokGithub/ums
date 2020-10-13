@@ -137,7 +137,7 @@ namespace UMS.Areas.Identity.Pages.Account
                 {
                     _logger.LogTrace("Creating application user.");
                     {
-                        var user = new ApplicationUser
+                        var newuser = new ApplicationUser
                         {
                             UserName = Input.Email,
                             Email = Input.Email,
@@ -146,33 +146,32 @@ namespace UMS.Areas.Identity.Pages.Account
                             acc_IsActive = 'Y'
                         }; // Create new user
                         _logger.LogTrace("Creating new user.");
-                        var result = await _userManager.CreateAsync(user, Input.Password);
+                        var result = await _userManager.CreateAsync(newuser, Input.Password);
                         if (result.Succeeded) // Check if create success
                         {
                             _logger.LogInformation("User created with a password.");
-                            _logger.LogDebug("Creating a provider key.");
-                            var info = new UserLoginInfo("Email", RandomString(50).ToString(), "Email");
-                            result = await _userManager.AddLoginAsync(user, info);
-                            _logger.LogTrace("Add login.");
+                            _logger.LogDebug("Adding a default role for users.");
+                            result = await _userManager.AddToRoleAsync(newuser, "User"); // Add role
                             if (result.Succeeded)
                             {
-                                ApplicationUser userId = await _userManager.FindByEmailAsync(Input.Email); // Find by ID
-                                _logger.LogDebug("Adding a default role for users.");
-                                await _userManager.AddToRoleAsync(userId, "User");
-                                _logger.LogInformation("Add user successfully.");
-                                _logger.LogDebug("Signing in.");
-                                await _signInManager.SignInAsync(user, false);
-                                _logger.LogTrace("End register on post.");
-                                return LocalRedirect(Url.Content("~/").ToString());
-                            }
-                            else
-                            {
-                                _logger.LogError(result.Errors.First().Description.ToString());
-                                TempData["Exception"] =
-                                    @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + result.Errors.First().Description.ToString().Replace("\\", "/") + "`, showConfirmButton: true });";
-                                _logger.LogTrace("End register on post.");
-                                return Page();
-                            } // End Checking if add login successful
+                                _logger.LogDebug("Creating a provider key.");
+                                var info = new UserLoginInfo("Email", RandomString(50).ToString(), "Email");
+                                result = await _userManager.AddLoginAsync(newuser, info);
+                                _logger.LogTrace("Add login.");
+                                if (result.Succeeded)
+                                {
+                                    _logger.LogInformation("User added successfully.");
+                                    _logger.LogDebug("Signing in.");
+                                    await _signInManager.SignInAsync(newuser, false);
+                                    _logger.LogTrace("End register on post.");
+                                    return LocalRedirect(Url.Content("~/").ToString());
+                                } // Add login
+                            } // Add role
+                            _logger.LogError(result.Errors.First().Description.ToString());
+                            TempData["Exception"] =
+                                @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + result.Errors.First().Description.ToString().Replace("\\", "/") + "`, showConfirmButton: true });";
+                            _logger.LogTrace("End register on post.");
+                            return Page();
                         } // End if user create successful
                         string errorStr = "";
                         foreach (var error in result.Errors)

@@ -25,7 +25,7 @@
 				commandType="text">
 			<connectionString>
 				<!-- SQLEXPRESSMHEE , SQLEXPRESS-->
-				Server=localhost\SQLEXPRESSMHEE;Database=UMS;Trusted_Connection=True;
+				Server=localhost\SQLEXPRESS;Database=UMS;Trusted_Connection=True;
 			</connectionString>
 			<commandText>
 				INSERT INTO [dbo].[Logs]
@@ -48,12 +48,11 @@
 				name="logfilealltrace"
 				filename="${aspnet-appbasepath}/logs/alltrace/ums_log_${shortdate}.log"
 				keepfileopen="false"
-				maxarchivefiles="500"
+				maxarchivefiles="50"
 				archivefilename="${aspnet-appbasepath}/logs/alltrace/archive/ums_log_{#}.zip"
 				archivenumbering="sequence"
 				archiveEvery="Monday"
-				archiveoldfileonstartup="false"
-				archiveabovesize="10000000"
+				archiveabovesize="1000000"
 				createdirs="true"
 				enablearchivefilecompression="true"
 				deleteOldFileOnStartup="false"
@@ -66,12 +65,11 @@
 				name="logfile"
 				filename="${aspnet-appbasepath}/logs/ums_log_${shortdate}.log"
 				keepfileopen="false"
-				maxarchivefiles="500"
+				maxarchivefiles="50"
 				archivefilename="${aspnet-appbasepath}/logs/archive/ums_log_{#}.zip"
 				archivenumbering="sequence"
 				archiveEvery="Monday"
-				archiveoldfileonstartup="false"
-				archiveabovesize="10000000"
+				archiveabovesize="1000000"
 				createdirs="true"
 				enablearchivefilecompression="true"
 				deleteOldFileOnStartup="false"

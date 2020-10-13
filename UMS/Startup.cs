@@ -1,21 +1,14 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using UMS.Data;
 using EmailService;
-using Microsoft.AspNetCore.Authentication.Cookies;
+using UMS.Controllers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using UMS.Controllers;
-using UMS.Data;
-using UMS.Models;
 
 /*
  * Name : Startup
@@ -50,6 +43,8 @@ namespace UMS
             services.AddScoped<ILogsRepository, LogsRepository>();
             services.AddScoped<IAccountRepository, AccountRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddDbContext<AuthDbContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("AuthDbContextConnection")));
 
             // Cookies
             services.ConfigureApplicationCookie(o =>
