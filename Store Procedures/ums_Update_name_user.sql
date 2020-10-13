@@ -1,7 +1,7 @@
 -- =============================================
 -- Author:		Namchok Singhachai
 -- Create date: 2020-08-28
--- Description:	Update firstname and lastname
+-- Description:	Updating firstname and lastname
 -- =============================================
 CREATE PROCEDURE ums_Update_name_user
 	@param_Id nvarchar(256),

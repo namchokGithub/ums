@@ -1,7 +1,7 @@
 -- =============================================
 -- Author:		Wannapa Srijermtong
 -- Create date: 2020-09-02
--- Description:	For update name and last name
+-- Description:	For updating name and last name
 -- =============================================
 CREATE PROCEDURE ums_Update_user
    @param_Id nvarchar(256),

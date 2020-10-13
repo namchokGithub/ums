@@ -1,9 +1,9 @@
 -- =============================================
 -- Author:		Namchok Singhachai
 -- Create date: 2020-09-14
--- Description:	Search log by text or date
+-- Description:	Searching log by text or date.
 -- =============================================
-ALTER PROCEDURE ums_Search_log
+CREATE PROCEDURE ums_Search_log
     @param_dateFirst Date,
     @param_dateEnd Date,
     @param_text NVARCHAR(MAX)

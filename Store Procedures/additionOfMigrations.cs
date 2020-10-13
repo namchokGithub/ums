@@ -1,21 +1,21 @@
 var ums_Add_user_login = @"-- =============================================
-                        -- Author:		Namchok Singhachai
-                        -- Create date: 2020-09-03
-                        -- Description:	Add log in
-                        -- =============================================
-                        CREATE PROCEDURE ums_Add_user_login
-                            @param_LoginProvider nvarchar(max), @param_ProviderDisplayName nvarchar(max), @param_ProviderKey nvarchar(max), @param_userId nvarchar(max)
-                        AS
-                        BEGIN
-                            INSERT INTO [dbo].[UserLogins]
-                                ([LoginProvider], [ProviderKey], [ProviderDisplayName], [UserId])
-                            VALUES
-                                (@param_LoginProvider, @param_ProviderKey, @param_ProviderDisplayName, @param_userId)
-                        END";
+                            -- Author:		Namchok Singhachai
+                            -- Create date: 2020-09-03
+                            -- Description:	Adding log in.
+                            -- =============================================
+                            CREATE PROCEDURE ums_Add_user_login
+                                @param_LoginProvider nvarchar(max), @param_ProviderDisplayName nvarchar(max), @param_ProviderKey nvarchar(max), @param_userId nvarchar(max)
+                            AS
+                            BEGIN
+                                INSERT INTO [dbo].[UserLogins]
+                                    ([LoginProvider], [ProviderKey], [ProviderDisplayName], [UserId])
+                                VALUES
+                                    (@param_LoginProvider, @param_ProviderKey, @param_ProviderDisplayName, @param_userId)
+                            END";
 var ums_Check_user = @"-- =============================================
                         -- Author:		Namchok Singhachai
                         -- Create date: 2020-09-03
-                        -- Description:	Check user if exist return 1
+                        -- Description:	Checking user if exist return 1.
                         -- =============================================
                         CREATE PROCEDURE ums_Check_user
                             @param_user nvarchar(max), @param_status char(1)
@@ -36,7 +36,7 @@ var ums_Check_user = @"-- =============================================
 var ums_Delete_user = @"-- =============================================
                         -- Author:		Namchok Singhachai
                         -- Create date: 2020-08-31
-                        -- Description:	Inactive user 
+                        -- Description:	User deactivation.
                         -- =============================================
                         CREATE PROCEDURE ums_Delete_user
                             @param_Id nvarchar(max)
@@ -50,7 +50,7 @@ var ums_Delete_user = @"-- =============================================
 var ums_Get_active_user = @"-- =============================================
                             -- Author:		Namchok Singhachai
                             -- Create date: 2020-08-29
-                            -- Description:	Get all user for management
+                            -- Description:	Getting user for management.
                             -- =============================================
                             CREATE PROCEDURE ums_Get_active_user
                             AS
@@ -77,7 +77,7 @@ var ums_Get_active_user = @"-- =============================================
 var ums_Get_all_active_user = @"-- =============================================
                                 -- Author:		Namchok Singhachai
                                 -- Create date: 2020-08-29
-                                -- Description:	Get all active user for management
+                                -- Description:	Getting all active user for management.
                                 -- =============================================
                                 CREATE PROCEDURE ums_Get_all_active_user
                                 AS
@@ -106,7 +106,7 @@ var ums_Get_all_active_user = @"-- =============================================
 var ums_Get_all_log = @"-- =============================================
                         -- Author:		Namchok Singhachai
                         -- Create date: 2020-09-11
-                        -- Description:	Get all log top ?(parameter)
+                        -- Description:	Getting all log top ?(parameter).
                         -- =============================================
                         CREATE PROCEDURE ums_Get_all_log
                             @param_num int
@@ -132,7 +132,7 @@ var ums_Get_all_log = @"-- =============================================
 var ums_Get_all_user = @"-- =============================================
                         -- Author:		Namchok Singhachai
                         -- Create date: 2020-08-29
-                        -- Description:	Get all user for management
+                        -- Description:	Getting all user for management.
                         -- =============================================
                         CREATE PROCEDURE ums_Get_all_user
                         AS
@@ -160,7 +160,7 @@ var ums_Get_all_user = @"-- =============================================
 var ums_Get_status_user = @"-- =============================================
                             -- Author:		Namchok Singhachai
                             -- Create date: 2020-09-17
-                            -- Description:	 Get status of user and check if exist.
+                            -- Description:	 Getting status of user and check if exist.
                             -- =============================================
                             CREATE PROCEDURE ums_Get_status_user
                                 @param_user nvarchar(max)
@@ -170,24 +170,24 @@ var ums_Get_status_user = @"-- =============================================
                                             SELECT [dbo].[Account].acc_Id
                                             FROM [dbo].[Account]
                                             WHERE [dbo].[Account].acc_User = @param_user)
-                                BEGIN
-                                    IF (SELECT [dbo].[Account].acc_IsActive
-                                            FROM [dbo].[Account]
-                                            WHERE [dbo].[Account].acc_User = @param_user) = 'Y'
-                                        BEGIN
-                                            RETURN 1;
-                                        END
-                                    ELSE IF (SELECT [dbo].[Account].acc_IsActive
-                                            FROM [dbo].[Account]
-                                            WHERE [dbo].[Account].acc_User = @param_user) = 'N'
-                                        BEGIN
-                                            RETURN 0;
-                                        END
-                                    ELSE
-                                        BEGIN
-                                            RETURN 9;
-                                        END	
-                                END
+                                    BEGIN
+                                        IF (SELECT [dbo].[Account].acc_IsActive
+                                                FROM [dbo].[Account]
+                                                WHERE [dbo].[Account].acc_User = @param_user) = 'Y'
+                                            BEGIN
+                                                RETURN 1;
+                                            END
+                                        ELSE IF (SELECT [dbo].[Account].acc_IsActive
+                                                FROM [dbo].[Account]
+                                                WHERE [dbo].[Account].acc_User = @param_user) = 'N'
+                                            BEGIN
+                                                RETURN 0;
+                                            END
+                                        ELSE
+                                            BEGIN
+                                                RETURN 9;
+                                            END	
+                                    END
                                 ELSE
                                     BEGIN
                                         RETURN 9;
@@ -196,7 +196,7 @@ var ums_Get_status_user = @"-- =============================================
 var ums_Get_user_by_Id = @"-- =============================================
                             -- Author:		Namchok Singhachai
                             -- Create date: 2020-08-29
-                            -- Description: Get Active User by ID
+                            -- Description: Getting Active User by ID.
                             -- =============================================
                             CREATE PROCEDURE ums_Get_user_by_Id
                                 @param_Id nvarchar(max)
@@ -225,7 +225,7 @@ var ums_Get_user_by_Id = @"-- =============================================
 var ums_Get_user = @"-- =============================================
                     -- Author:		Wannapa Srijermtong
                     -- Create date: 2020-09-02
-                    -- Description:	Get user for edit profile
+                    -- Description:	Getting user for edit profile.
                     -- =============================================
                     CREATE PROCEDURE ums_Get_user
                         @param_Id nvarchar(256)
@@ -239,7 +239,7 @@ var ums_Get_user = @"-- =============================================
 var ums_Search_log = @"-- =============================================
                         -- Author:		Namchok Singhachai
                         -- Create date: 2020-09-14
-                        -- Description:	Search log by text or date
+                        -- Description:	Searching log by text or date.
                         -- =============================================
                         CREATE PROCEDURE ums_Search_log
                             @param_dateFirst Date,
@@ -307,44 +307,43 @@ var ums_Search_log = @"-- =============================================
 var ums_Update_all = @"-- =============================================
                         -- Author:		Wannapa Srijermtong
                         -- Create date: 2020-09-02
-                        -- Description:	Update name and password
+                        -- Description: Updating name and password
                         -- =============================================
-                        CREATE procedure ums_Update_all
-                            @id nvarchar(256) ,   
-                            @fname nvarchar(256),    
-                            @lname nvarchar(256),
-                            @newpw nvarchar(256)  
-                        AS     
-                        BEGIN     
-                            UPDATE [dbo].[Account]    
-                            SET [dbo].[Account].acc_Firstname = @fname,     
-                                [dbo].[Account].acc_Lastname = @lname,
-                                [dbo].[Account].acc_PasswordHash = @newpw
-                            WHERE [dbo].[Account].acc_Id = @id
+                        CREATE PROCEDURE ums_Update_all
+                        @param_id nvarchar(256) ,
+                        @param_fname nvarchar(256),
+                        @param_lname nvarchar(256),
+                        @param_newpw nvarchar(256)
+                        AS
+                        BEGIN
+                        UPDATE [dbo].[Account]    
+                        SET [dbo].[Account].acc_Firstname = @param_fname,     
+                                [dbo].[Account].acc_Lastname = @param_lname,
+                                [dbo].[Account].acc_PasswordHash = @param_newpw
+                        WHERE [dbo].[Account].acc_Id = @param_id
                         END";
 var ums_Update_name_user = @"-- =============================================
-                        -- Author:		Namchok Singhachai
-                        -- Create date: 2020-08-28
-                        -- Description:	Update firstname and lastname
-                        -- =============================================
-                        CREATE PROCEDURE ums_Update_name_user
-                            @param_Id nvarchar(256),
-                            @param_fname nvarchar(256),
-                            @param_lname nvarchar(256)
-                        AS
-                        IF (SELECT [dbo].[Account].acc_Id FROM [dbo].[Account] WHERE [dbo].[Account].acc_Id = @param_Id) != ''
-                                BEGIN
-                            UPDATE [dbo].[Account] SET 
-                                    [dbo].[Account].acc_Firstname = @param_fname,
-                                    [dbo].[Account].acc_Lastname = @param_lname
-                            WHERE [dbo].[Account].acc_Id = @param_Id
-                        END
-                        GO
-                        ";
+                            -- Author:		Namchok Singhachai
+                            -- Create date: 2020-08-28
+                            -- Description:	Updating firstname and lastname
+                            -- =============================================
+                            CREATE PROCEDURE ums_Update_name_user
+                                @param_Id nvarchar(256),
+                                @param_fname nvarchar(256),
+                                @param_lname nvarchar(256)
+                            AS
+                            IF (SELECT [dbo].[Account].acc_Id FROM [dbo].[Account] WHERE [dbo].[Account].acc_Id = @param_Id) != ''
+                                    BEGIN
+                                UPDATE [dbo].[Account] SET 
+                                        [dbo].[Account].acc_Firstname = @param_fname,
+                                        [dbo].[Account].acc_Lastname = @param_lname
+                                WHERE [dbo].[Account].acc_Id = @param_Id
+                            END
+                            GO";
 var ums_Update_role_user = @"-- =============================================
                             -- Author:		Namchok Singhachai
                             -- Create date: 2020-08-28
-                            -- Description:	Update role user
+                            -- Description:	Updating role user
                             -- =============================================
                             CREATE PROCEDURE ums_Update_role_user
                                 @param_Id nvarchar(256),
@@ -372,17 +371,17 @@ var ums_Update_role_user = @"-- =============================================
 var ums_Update_user = @"-- =============================================
                         -- Author:		Wannapa Srijermtong
                         -- Create date: 2020-09-02
-                        -- Description:	For update fistname and lastname
+                        -- Description:	For updating name and last name
                         -- =============================================
-                        CREATE procedure ums_Update_user
-                            @param_Id nvarchar(256),   
-                            @param_fname nvarchar(256),    
-                            @param_lname nvarchar(256)   
-                        AS     
-                        BEGIN     
-                            UPDATE [dbo].[Account]    
-                            SET [dbo].[Account].acc_Firstname = @param_fname, [dbo].[Account].acc_Lastname = @param_lname  
-                            WHERE [dbo].[Account].acc_Id = @param_Id;
+                        CREATE PROCEDURE ums_Update_user
+                        @param_Id nvarchar(256),
+                        @param_fname nvarchar(256),
+                        @param_lname nvarchar(256)
+                        AS
+                        BEGIN
+                        UPDATE [dbo].[Account]    
+                        SET [dbo].[Account].acc_Firstname = @param_fname, [dbo].[Account].acc_Lastname = @param_lname  
+                        WHERE [dbo].[Account].acc_Id = @param_Id;
                         END";
 
 migrationBuilder.Sql(ums_Add_user_login);

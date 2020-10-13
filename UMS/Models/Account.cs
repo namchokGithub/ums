@@ -15,24 +15,31 @@ namespace UMS.Models
     {
         [Key]
         public string acc_Id { set; get; } // ไอดี
+        
         [AllowNull]
         [Column(TypeName = "nvarchar(256)")]
         public string acc_User { set; get; } // ชื่อผู้ใช้งานที่เป็นอีเมล หรือ เบอร์โทรศัพท์
+        
         [AllowNull]
         [Column(TypeName = "nvarchar(256)")]
         public string acc_NormalizedUserName { set; get; } // ชื่อผู้ใช้งานที่เป็นอีเมล หรือ เบอร์โทรศัพท์
+        
         [AllowNull]
         [Column(TypeName = "nvarchar(256)")]
         public string acc_Email { set; get; } // อีเมล
+        
         [AllowNull]
         [Column(TypeName = "nvarchar(256)")]
         public string acc_NormalizedEmail { set; get; } // อีเมลแบบธรรมดา
+        
         [AllowNull]
         [Column(TypeName = "nvarchar(MAX)")]
         public string acc_PasswordHash { set; get; } // รหัสผ่านแบบแฮช
+        
         [AllowNull]
         [Column(TypeName = "nvarchar(MAX)")]
         public string acc_SecurityStamp { set; get; } // ---
+        
         [AllowNull]
         [Column(TypeName = "nvarchar(MAX)")]
         public string acc_ConcurrencyStamp { set; get; } // ตรวจสอบการแก้ไขว่าแก้ไขล่าสุดเมื่อใด
@@ -54,12 +61,15 @@ namespace UMS.Models
         [RegularExpression(@"^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$"
                 , ErrorMessage = "The last name have only text. No number no space digit and special charactor")]
         public string acc_Lastname { set; get; } // นามสกุล
+        
         [AllowNull]
         [Column(TypeName = "char(1)")]
         public char acc_IsActive { set; get; } // สถานะของบัญชีผู้ใช้
+        
         [AllowNull]
         [NotMapped]
         public string acc_Rolename { set; get; } // ชื่อตำแหน่งของผู้ใช้งาน
+        
         [AllowNull]
         [NotMapped]
         public string acc_TypeAccoutname { set; get; } // ชื่อประเภทของผู้ใช้งาน

@@ -1,7 +1,7 @@
 -- =============================================
 -- Author:		Namchok Singhachai
 -- Create date: 2020-08-29
--- Description: Get Active User by ID
+-- Description: Getting Active User by ID.
 -- =============================================
 CREATE PROCEDURE ums_Get_user_by_Id
 	@param_Id nvarchar(max)

@@ -1,7 +1,7 @@
 -- =============================================
 -- Author:		Namchok Singhachai
 -- Create date: 2020-08-29
--- Description:	Get all user for management
+-- Description:	Getting user for management.
 -- =============================================
 CREATE PROCEDURE ums_Get_active_user
 AS

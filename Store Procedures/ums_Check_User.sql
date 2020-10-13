@@ -1,7 +1,7 @@
 -- =============================================
 -- Author:		Namchok Singhachai
 -- Create date: 2020-09-03
--- Description:	Check user if exist return 1
+-- Description:	Checking user if exist return 1.
 -- =============================================
 CREATE PROCEDURE ums_Check_user
     @param_user nvarchar(max), @param_status char(1)

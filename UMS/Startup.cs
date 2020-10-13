@@ -43,8 +43,6 @@ namespace UMS
             services.AddScoped<ILogsRepository, LogsRepository>();
             services.AddScoped<IAccountRepository, AccountRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
-            services.AddDbContext<AuthDbContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("AuthDbContextConnection")));
 
             // Cookies
             services.ConfigureApplicationCookie(o =>
@@ -53,6 +51,14 @@ namespace UMS
                 o.SlidingExpiration = true;
                 o.ReturnUrlParameter = "/";
             });
+
+            // Set connect database
+            services.AddDbContext<AuthDbContext>(options =>
+                    options.UseSqlServer(
+                       Configuration.GetConnectionString("AuthDbContextConnection")));            
+            services.AddDbContext<AccountContext>(options =>
+                    options.UseSqlServer(
+                       Configuration.GetConnectionString("AuthDbContextConnection")));
 
             // Service for send email
             var emailConfig = Configuration
