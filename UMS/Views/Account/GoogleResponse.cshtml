@@ -4,11 +4,11 @@
     string URL = ViewData["URL"].ToString();
     string URLHOME = ViewData["URLHOME"].ToString();
 }
-<!--
+@*
     Namespace: ~/Views/Account/GoogleResponse.cshtml
     Author: Namchok Singhachai
-    Description: Google response page
--->
+    Description: Google response page.
+*@
 <!-- Content -->
 <div class="hold-transition login-page">
     <div class="login-box mx-auto mt-2 mt-lg-3">
@@ -30,26 +30,13 @@
         </div>
         <!--End Card-->
     </div>
-
-    <!--Start Script-->
-    @section Scripts {
-        <script>
-            @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ }
-        </script>
-        <partial name="_ValidationScriptsPartial" />
-    }
-    <!--End Script-->
-    <!--Start Style-->
-    <style>
-        .login-box {
-            width: 400px;
-        }
-
-        #checkicon {
-            font-size: 5em;
-        }
-    </style>
-    <!--End Style-->
-
 </div>
 <!-- End Content -->
+<!--Start Script-->
+@section Scripts {
+    <script>
+        @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ };
+    </script>
+    <partial name="_ValidationScriptsPartial" />
+}
+<!--End Script-->

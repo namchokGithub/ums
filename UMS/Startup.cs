@@ -1,24 +1,19 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using UMS.Data;
 using EmailService;
-using Microsoft.AspNetCore.Authentication.Cookies;
+using UMS.Controllers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using UMS.Models;
 
 /*
  * Name : Startup
  * Author: System
- * Description: For set up the project
+ * Description: Setting up the project.
  */
 
 namespace UMS
@@ -30,7 +25,6 @@ namespace UMS
         /*
          * Name: Startup
          * Parameter: configuration(IConfiguration)
-         * Description: Constructor
          */
         public Startup(IConfiguration configuration)
         {
@@ -44,6 +38,14 @@ namespace UMS
          */
         public void ConfigureServices(IServiceCollection services)
         {
+            // Repository
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped<ILogsRepository, LogsRepository>();
+            services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddDbContext<AuthDbContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("AuthDbContextConnection")));
+
             // Cookies
             services.ConfigureApplicationCookie(o =>
             {
@@ -52,22 +54,6 @@ namespace UMS
                 o.ReturnUrlParameter = "/";
             });
 
-            // Set connect database
-            services.AddDbContext<AccountContext>(options =>
-                    options.UseSqlServer(
-                       Configuration.GetConnectionString("AuthDbContextConnection")));            
-            services.AddDbContext<EditAccountContext>(options =>
-                    options.UseSqlServer(
-                       Configuration.GetConnectionString("AuthDbContextConnection")));
-            services.AddDbContext<LogsContext>(options =>
-                    options.UseSqlServer(
-                       Configuration.GetConnectionString("AuthDbContextConnection")));
-
-            // Set connect database
-            services.AddDbContext<EditProfileContext>(options =>
-                    options.UseSqlServer(
-                       Configuration.GetConnectionString("AuthDbContextConnection")));
-            
             // Service for send email
             var emailConfig = Configuration
                 .GetSection("EmailConfiguration")

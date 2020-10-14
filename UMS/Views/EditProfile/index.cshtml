@@ -1,18 +1,17 @@
-﻿<!--
+﻿@*
     Namspace: ~/View/EditProfile/Index.cshtml
     Author: Wannapa Srijermtong
-    Description: View for edit profile
--->
-
-@model EditProfile
+    Description: The profile edit page.
+*@
+@model Account
 @{
     ViewData["Title"] = "Edit Profile";
     Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
 
-    var editProfile = new EditProfile();
+    var editProfile = new Account();
     if(ViewData["User"] != null)
     {
-        editProfile = ViewData["User"] as EditProfile;
+        editProfile = ViewData["User"] as Account;
     }
 }
 
@@ -28,9 +27,10 @@
         <!--Start Card body-->
         <div class="card-body">
             <!--Start Form profile-->
-            <form id="FormProfile" method="post" asp-action="editProfile" asp-controller="EditProfile">
+            <form id="FormProfile" method="post" asp-action="EditProfile" asp-controller="EditProfile">
                 <!--Start Input edit profile-->
                 <input type="hidden" asp-for="acc_Id" id="acc_Id" value="@editProfile.acc_Id" />
+                <input type="hidden" asp-for="acc_IsActive" id="acc_IsActive" value="f" />
                 <div id="acc_Firstname" class="input-group mb-3 col-12">
                     <input class="form-control" id="acc_Fname" type="text" name="acc_Firstname" placeholder="First name" asp-for="acc_Firstname" value="@editProfile.acc_Firstname" />
                     <span id="validation_acc_Firstname" class="text-danger col-12"></span>
@@ -43,8 +43,8 @@
                 <!--Start Input change password-->
                 <div id="acc_CurrentPassword" class="input-group mb-3 col-12 d-none">
                     <input class="form-control" style="border-right:0px;" id="acc_Current" type="password" name="acc_CurrentPassword" placeholder="Current password" />
-                    <div class="input-group-append" style="border-left:0px; background-color:white;" onclick="toggleCurrentPasword()">
-                        <div class="input-group-text" style="border-left:0px; background-color:white;">
+                    <div class="input-group-append toggle-password" onclick="toggleCurrentPasword()">
+                        <div class="input-group-text toggle-password">
                             <span id="icon_CurrentPassword" class="fas fa-eye-slash" style="cursor:pointer"></span>
                         </div>
                     </div>
@@ -52,8 +52,8 @@
                 </div>
                 <div id="acc_NewPassword" class="input-group mb-3 col-12 d-none">
                     <input class="form-control" style="border-right:0px;" id="acc_New" type="password" name="acc_NewPassword" placeholder="New password" />
-                    <div class="input-group-append" style="border-left:0px; background-color:white;" onclick="toggleNewPasword()">
-                        <div class="input-group-text" style="border-left:0px; background-color:white;">
+                    <div class="input-group-append toggle-password" onclick="toggleNewPasword()">
+                        <div class="input-group-text toggle-password">
                             <span id="icon_NewPassword" class="fas fa-eye-slash" style="cursor:pointer"></span>
                         </div>
                     </div>
@@ -61,8 +61,8 @@
                 </div>
                 <div id="acc_ConfirmPassword" class="input-group mb-3 col-12 d-none">
                     <input class="form-control" style="border-right:0px;" id="acc_Con" type="password" name="acc_ConfirmPassword" placeholder="Confirm password" />
-                    <div class="input-group-append" style="border-left:0px; background-color:white;" onclick="toggleConfirmPasword()" >
-                        <div class="input-group-text" style="border-left:0px; background-color:white;">
+                    <div class="input-group-append toggle-password" onclick="toggleConfirmPasword()" >
+                        <div class="input-group-text toggle-password">
                             <span id="icon_ConfirmPassword" class="fas fa-eye-slash" style="cursor:pointer"></span>
                         </div>
                     </div>
@@ -109,8 +109,7 @@
 
 <!--Start Script-->
 <script>
-    // Exeception
-        @if (TempData["EditProfileException"] != null) { @Html.Raw(TempData["EditProfileException"])}
+    @if (TempData["EditProfileException"] != null) { @Html.Raw(TempData["EditProfileException"])}; // Exeception
 
     //Regular expression
     var RegExName = /^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$/;
@@ -118,9 +117,8 @@
 
     /*
     * Name: toggleCurrentPasword()
-    * Parameter: none
     * Author: Wannapa Srijermtong
-    * Description: For change type of current password.
+    * Description: To changing show a current password.
     */
     function toggleCurrentPasword() {
         // Get id from input
@@ -138,9 +136,8 @@
 
     /*
     * Name: toggleNewPasword()
-    * Parameter: none
     * Author: Wannapa Srijermtong
-    * Description: For change type of new password.
+    * Description: For changing show a new password.
     */
     function toggleNewPasword() {
         // Get id from input
@@ -158,9 +155,8 @@
 
     /*
     * Name: toggleConfirmPasword()
-    * Parameter: none
     * Author: Wannapa Srijermtong
-    * Description: For change type of confirm password.
+    * Description: For change show a confirm password.
     */
     function toggleConfirmPasword() {
         // Get id from input
@@ -178,9 +174,8 @@
 
     /*
     * Name: SaveProfile
-    * Parameter: none
     * Author: Wannapa Srijermtong
-    * Description: Check validation acc_Firstname and acc_Lastname from input.
+    * Description: Checking validation of acc_Firstname and acc_Lastname from input.
     */
     function SaveProfile() {
         // Get id from input
@@ -189,11 +184,11 @@
         var acc_Id = $('#acc_Id').val();
 
         // Validation if acc_Firstname do not math with Regular expression.
-        if (RegExName.test(acc_Firstname) && acc_Firstname != "" && RegExName.test(acc_Lastname) && acc_Lastname != ""
-            ) {
-            $("#FormProfile").submit();
+        if (RegExName.test(acc_Firstname) && acc_Firstname != "" && RegExName.test(acc_Lastname) && acc_Lastname != "") {
             $('#validation_acc_Firstname').html('');
             $('#validation_acc_Lastname').html('');
+            $('#acc_IsActive').val('f');
+            $("#FormProfile").submit();
         } else {
             if (!RegExName.test(acc_Firstname)) {
                 $('#validation_acc_Firstname').html('The First name can not be blank and must only character.');
@@ -210,9 +205,8 @@
 
     /*
     * Name: SavePassword
-    * Parameter: none
     * Author: Wannapa Srijermtong
-    * Description: Check validation acc_Firstname, acc_Lastname, acc_CurrentPassword, acc_NewPassword and acc_ConfirmPassword from input.
+    * Description: Checking validation of acc_Firstname, acc_Lastname, acc_CurrentPassword, acc_NewPassword and acc_ConfirmPassword from input.
     */
     function SavePassword() {
         // Get id from input
@@ -229,12 +223,13 @@
             && RegExPassword.test(acc_NewPassword) && acc_NewPassword != ""
             && RegExPassword.test(acc_ConfirmPassword) && acc_ConfirmPassword != ""
         ){
-            $("#FormProfile").submit();
             $('#validation_acc_Firstname').html('');
             $('#validation_acc_Lastname').html('');
             $('#validation_acc_CurrentPassword').html('');
             $('#validation_acc_NewPassword').html('');
             $('#validation_acc_ConfirmPassword').html('');
+            $('#acc_IsActive').val('t');
+            $("#FormProfile").submit();
         } else {
             if (!RegExName.test(acc_Firstname)) {
                 $('#validation_acc_Firstname').html('The First name can not be blank and must only character.');
@@ -257,10 +252,10 @@
                 toastr.warning('The confirm password must contain at least 1 uppercase, 1 lowercase, 1 digit and 1 special character.')
             }
         }
-    }
+    } // End SavePassword
 
     $(document).ready(function () {
-        //Hide href and button SaveProfile for Change password
+        // Hide href and button SaveProfile for Change password
         $("#href_ChangePassword").click(function () {
             $("#href_ChangePassword").hide();
             $("#btn_SaveProfile").hide();
@@ -361,9 +356,9 @@
         });
 
         // Toastr if current password is not match with password hash in database.
-        @if (TempData["EditProfileErrorResult"] != null) { @Html.Raw(TempData["EditProfileErrorResult"])}
+        @if (TempData["EditProfileErrorResult"] != null) { @Html.Raw(TempData["EditProfileErrorResult"])};
         // Toastr if EditProfile (Firstname, Lastname and Change password) Success.
-        @if (TempData["EditProfileSuccessResult"] != null) { @Html.Raw(TempData["EditProfileSuccessResult"])}
+        @if (TempData["EditProfileSuccessResult"] != null) { @Html.Raw(TempData["EditProfileSuccessResult"])};
     })
 </script>
 <!--End Script-->
@@ -371,6 +366,10 @@
 <!--Start Style-->
 <style>
     @*Style for hyperlink Change password*@
+    .toggle-password {
+        border-left: 0px;
+        background-color: white;
+    }
     #href_ChangePassword {
         text-align: left;
         color: blue;

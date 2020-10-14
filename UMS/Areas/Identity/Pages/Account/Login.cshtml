@@ -16,13 +16,11 @@
         pass = LoginModel.StringEncryptor.DecryptStringToPass("usermanagementsystem2020", cookiesRememberme);
     }
 }
-
-<!--
+@*
     Namespace: ~/Areas/Identity/Pages/Account/Login.cshtml
     Author: Wannapa Srijermtong
-    Description: For login.
--->
-
+    Description: The login ioto this system.
+*@
 <div class="hold-transition login-page">
     <div class="login-box">
         <h3 class="login-box-msg">User Management System</h3>
@@ -73,7 +71,7 @@
                         <!--End Checkbox remember Me-->
                         <!--Start Button login-->
                         <div class="col-4">
-                            <button type="submit" id="btn_Login" class="btn btn-primary btn-block" onclick="click()">Login</button>
+                            <button type="submit" id="btn_Login" class="btn btn-primary btn-block">Login</button>
                         </div>
                         <!--Endt Button login-->
                     </div>
@@ -108,7 +106,7 @@
 }
 <script>
     // Check is has exception
-    @if (TempData["ExceptionLoggedOut"] != null) { @Html.Raw(TempData["ExceptionLoggedOut"]) /* Swal funciton */ }
+    @if (TempData["ExceptionLoggedOut"] != null) { @Html.Raw(TempData["ExceptionLoggedOut"]) /* Swal funciton */ };
     @{ var IsInValid = TempData["ExceptionInValid"] as String;}
     @if (IsInValid == "InValid")
     {
@@ -119,11 +117,10 @@
     } // For alert when invalid user
 
     /*
-    * Name: togglePasword()
-    * Parameter: none
-    * Author: Wannapa Srijermtong
-    * Description: For change type of password.
-    */
+     * Name: togglePasword()
+     * Author: Wannapa Srijermtong
+     * Description: Changing show of password.
+     */
     function togglePasword() {
         var password = document.getElementById("acc_Password") // Get id from input
         if (password.type === "password") {
@@ -139,10 +136,6 @@
     $(document).on('click', () => {
         $('#inValidUser').html('');
     })
-
-    function click() {
-        $('#account').submit()
-    }
 
     $(document).ready(function () {
         @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ };
