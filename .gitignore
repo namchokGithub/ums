@@ -1,36 +1,23 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
-
+﻿##################
+# This .gitignore.
+##################
+published
 UMS/obj
 EmailService/obj
 *.cache
 UMS/obj/Debug/netcoreapp3.1/*.cache
 /.vs/UMS
-EmailService/obj/Debug/netcoreapp3.1/EmailService.csprojAssemblyReference.cache
-UMS/bin/Debug/netcoreapp3.1/UMS.dll
-UMS/bin/Debug/netcoreapp3.1/UMS.pdb
-UMS/bin/Debug/netcoreapp3.1/UMS.Views.dll
-UMS/bin/Debug/netcoreapp3.1/UMS.Views.pdb
-UMS/obj/Debug/netcoreapp3.1/UMS.csprojAssemblyReference.cache
+/.vs
 UMS/obj/Debug/netcoreapp3.1/UMS.dll
 UMS/obj/Debug/netcoreapp3.1/UMS.pdb
 UMS/obj/Debug/netcoreapp3.1/UMS.Views.dll
 UMS/obj/Debug/netcoreapp3.1/UMS.Views.pdb
-EmailService/obj/Debug/netcoreapp3.1/EmailService.csprojAssemblyReference.cache
 UMS/bin/Debug/netcoreapp3.1/UMS.dll
 UMS/bin/Debug/netcoreapp3.1/UMS.pdb
 UMS/bin/Debug/netcoreapp3.1/UMS.Views.dll
 UMS/bin/Debug/netcoreapp3.1/UMS.Views.pdb
-UMS/obj/Debug/netcoreapp3.1/UMS.csprojAssemblyReference.cache
-UMS/obj/Debug/netcoreapp3.1/UMS.dll
-UMS/obj/Debug/netcoreapp3.1/UMS.pdb
-UMS/obj/Debug/netcoreapp3.1/UMS.Views.dll
-UMS/obj/Debug/netcoreapp3.1/UMS.Views.pdb
 EmailService/obj/Debug/netcoreapp3.1/EmailService.assets.cache
 EmailService/obj/Debug/netcoreapp3.1/EmailService.csprojAssemblyReference.cache
-UMS/obj/Debug/netcoreapp3.1/UMS.assets.cache
-UMS/obj/Debug/netcoreapp3.1/UMS.csprojAssemblyReference.cache
 UMS/obj/Debug/netcoreapp3.1/UMS.assets.cache
 UMS/obj/Debug/netcoreapp3.1/UMS.csprojAssemblyReference.cache
 
@@ -75,6 +62,4 @@ UMS/obj/project.assets.json
 UMS/obj/project.nuget.cache
 UMS/obj/UMS.csproj.nuget.dgspec.json
 UMS/obj/Debug/netcoreapp3.1/UMS.assets.cache
-UMS/obj/Debug/netcoreapp3.1/UMS.csprojAssemblyReference.cache
 EmailService/obj/Debug/netcoreapp3.1/EmailService.assets.cache
-UMS/obj/Debug/netcoreapp3.1/UMS.assets.cache
