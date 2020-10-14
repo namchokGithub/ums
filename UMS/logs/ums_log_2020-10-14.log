@@ -1,0 +1,35 @@
+############################################## User Management System log ##############################################
+2020/10/14 09:23:48.904 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/14 09:23:49.079 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/14 09:23:49.084 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/14 09:23:49.084 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/14 09:23:50.530 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start login model.
+2020/10/14 09:23:50.556 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/14 09:23:55.815 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:50 | Start Register model.
+2020/10/14 09:23:57.643 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:207 | Checking user.
+2020/10/14 09:23:57.643 [INFO] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:208 | Detected 0 users.
+2020/10/14 09:24:02.545 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:207 | Checking user.
+2020/10/14 09:24:02.551 [INFO] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:208 | Detected 0 users.
+2020/10/14 09:24:07.741 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:207 | Checking user.
+2020/10/14 09:24:07.741 [INFO] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:208 | Detected 0 users.
+2020/10/14 09:24:17.762 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:50 | Start Register model.
+2020/10/14 09:24:18.196 [INFO] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:152 | User created a new account with password.
+2020/10/14 09:24:18.196 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:153 | Generating provider key.
+2020/10/14 09:24:18.286 [ERROR] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:180 | Optimistic concurrency failure, object has been modified.
+2020/10/14 09:32:29.878 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/14 09:32:30.060 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/14 09:32:30.060 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/14 09:32:30.069 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/14 09:32:30.895 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start login model.
+2020/10/14 09:32:30.927 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/14 09:32:32.988 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:50 | Start Register model.
+2020/10/14 09:32:34.584 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:207 | Checking user.
+2020/10/14 09:32:34.584 [INFO] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:208 | Detected 0 users.
+2020/10/14 09:32:37.656 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:207 | Checking user.
+2020/10/14 09:32:37.661 [INFO] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:208 | Detected 0 users.
+2020/10/14 09:32:40.657 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:207 | Checking user.
+2020/10/14 09:32:40.663 [INFO] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:208 | Detected 0 users.
+2020/10/14 09:32:42.080 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:50 | Start Register model.
+2020/10/14 09:32:42.554 [INFO] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:150 | User created a new account with password.
+2020/10/14 09:32:42.554 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:151 | Generating provider key.
+2020/10/14 09:32:42.645 [ERROR] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:168 | Optimistic concurrency failure, object has been modified.
