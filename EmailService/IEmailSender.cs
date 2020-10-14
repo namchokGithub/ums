@@ -7,15 +7,27 @@ using System.Threading.Tasks;
  * Name: IEmailSender
  * Namspace: EmailService
  * Author: Namchok Singhachai
- * Description: Interface for send email.
+ * Description: Interface for send email
  */
 
 namespace EmailService
 {
     public interface IEmailSender
     {
-        void SendEmail(Message message);
+        /*
+         * Name: SendEmail
+         * Parameter: message(Message)
+         * Author: Namchok Singhachai
+         * Description: Send email with your messages
+         */
+        void SendEmail(Message message); // End SendEmail
 
-        Task SendEmailAsync(Message message);
-    } // End Interface of EmailSender
+        /*
+         * Name: SendEmailAsync
+         * Parameter: message(Message)
+         * Author: Namchok Singhachai
+         * Description: Send email with your messages (Async)
+         */
+        Task SendEmailAsync(Message message); // End SendEmailAsync
+    } // End IEmailSender
 }

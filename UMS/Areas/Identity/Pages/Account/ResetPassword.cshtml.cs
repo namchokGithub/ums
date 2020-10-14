@@ -1,19 +1,19 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Threading.Tasks;
-using UMS.Areas.Identity.Data;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.WebUtilities;
+using Microsoft.Extensions.Logging;
+using UMS.Areas.Identity.Data;
 
 /*
- * Name: ResetPasswordModel.cs (Extend : PageModel)
+ * Name: ResetPasswordModel.cs
  * Namespace: UMS.Areas.Identity.Pages.Account
- * Author: Idenity system.
+ * Author: Idenity system
  */
 
 namespace UMS.Areas.Identity.Pages.Account
@@ -23,23 +23,17 @@ namespace UMS.Areas.Identity.Pages.Account
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<ResetPasswordModel> _logger;
-        /*
-         * Name: ResetPasswordModel
-         * Parameter: userManager(UserManager<ApplicationUser>), logger(ILogger<ResetPasswordModel>)
-         */
+
         public ResetPasswordModel(UserManager<ApplicationUser> userManager, ILogger<ResetPasswordModel> logger)
         {
             _logger = logger;
-            _logger.LogDebug("Start reset password model.");
+            _logger.LogDebug("Start Reset password model.");
             _userManager = userManager;
         } // End constructor
 
         [BindProperty]
         public InputModel Input { get; set; }
-        /*
-         * Name: InputModel
-         * Description: The recording of input.
-         */
+
         public class InputModel
         {
             [Required]
@@ -62,12 +56,12 @@ namespace UMS.Areas.Identity.Pages.Account
             public string ConfirmPassword { get; set; }
 
             public string Code { get; set; }
-        } // End input model
+        }
 
         /*
          * Name: OnGet
          * Parameter: code(String)
-         * Description: To check the password setting code.
+         * Description: Check code for set password
          */
         public IActionResult OnGet(string code = null)
         {
@@ -91,7 +85,7 @@ namespace UMS.Areas.Identity.Pages.Account
             } catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });";
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End reset password on get.");
                 return Page();
             } // End try catch
@@ -100,7 +94,7 @@ namespace UMS.Areas.Identity.Pages.Account
         /*
          * Name: OnPostAsync
          * Parameter: none
-         * Description: Resetting a password.
+         * Description: Check code for set password
          */
         public async Task<IActionResult> OnPostAsync()
         {
@@ -113,7 +107,7 @@ namespace UMS.Areas.Identity.Pages.Account
                     _logger.LogTrace("End reset password on post.");
                     return Page();
                 }
-                _logger.LogDebug("Finding user by email.");
+                _logger.LogDebug("Finding by email.");
                 var user = await _userManager.FindByEmailAsync(Input.Email);
                 if (user == null)
                 {
@@ -122,12 +116,12 @@ namespace UMS.Areas.Identity.Pages.Account
                     _logger.LogTrace("End reset password on post.");
                     return RedirectToPage("./Login");
                 }
-                _logger.LogDebug("Resettinng password.");
+                _logger.LogTrace("Resetign password.");
                 var result = await _userManager.ResetPasswordAsync(user, Input.Code, Input.Password);
 
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("User reset password successfully.");
+                    _logger.LogInformation("User reseted password.");
                     _logger.LogTrace("End reset password on post.");
                     return RedirectToPage("./ResetPasswordConfirmation");
                 }
@@ -138,14 +132,15 @@ namespace UMS.Areas.Identity.Pages.Account
                     ModelState.AddModelError(string.Empty, error.Description);
                 } // End loop get error
                 _logger.LogError(errorStr.ToString());
-                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + errorStr.Replace("\\", "/") + @"`, showConfirmButton: true });";
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + errorStr + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End reset password on post.");
                 return Page();
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });";
+                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
+                TempData["Exception"] = message;
                 _logger.LogTrace("End reset password on post.");
                 return Page();
             } // End try catch

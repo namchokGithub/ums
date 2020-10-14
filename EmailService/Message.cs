@@ -14,16 +14,16 @@ namespace EmailService
 {
     public class Message
     {
-        public List<MailboxAddress> To { set; get; } // An email for sending
-        public string Subject { set; get; } // The subject of an email
-        public string Content { set; get; } // The conten of an email
-        public string htmlText { set; get; } // The html in an email (Optional)
+        public List<MailboxAddress> To { set; get; } // Email to send
+        public string Subject { set; get; } // Subject of email
+        public string Content { set; get; } // Conten of email
+        public string htmlText { set; get; } // Html in email (Optional)
 
         /*
-         * Name: Message
+         * Name: Message (Constructor)
          * Parametor: to(String), subject(string), content(String)
          * Author: Namchok Singhachai
-         * Description: Constructor for set a messages.
+         * Description: Set messages
          */
         public Message(IEnumerable<string> to, string subject, string content)
         {

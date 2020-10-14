@@ -1,21 +1,24 @@
-﻿using System.Text;
-using System.Threading.Tasks;
-using System.Security.Claims;
-using UMS.Areas.Identity.Data;
-using Microsoft.AspNetCore.Mvc;
-using System.Text.Encodings.Web;
-using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.WebUtilities;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Security.Claims;
+using System.Text;
+using System.Text.Encodings.Web;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.WebUtilities;
+using Microsoft.Extensions.Logging;
+using UMS.Areas.Identity.Data;
 
 /*
- * Name: ExternalLoginModel.cs (Extend: PageModel)
+ * Name: ExternalLoginModel.cs
  * Namespace: UMS.Areas.Identity.Pages.Account
- * Author: Idenity system.
+ * Author: Idenity system
  */
 
 namespace UMS.Areas.Identity.Pages.Account
@@ -27,10 +30,7 @@ namespace UMS.Areas.Identity.Pages.Account
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IEmailSender _emailSender;
         private readonly ILogger<ExternalLoginModel> _logger;
-        /*
-         * Name: ExternalLoginModel
-         * Parameter: signInManager(SignInManager<ApplicationUser>), userManager(UserManager<ApplicationUser>), logger(ILogger<ExternalLoginModel>), emailSender(IEmailSender)
-         */
+
         public ExternalLoginModel(
             SignInManager<ApplicationUser> signInManager,
             UserManager<ApplicationUser> userManager,
@@ -46,8 +46,11 @@ namespace UMS.Areas.Identity.Pages.Account
 
         [BindProperty]
         public InputModel Input { get; set; }
+
         public string ProviderDisplayName { get; set; }
+
         public string ReturnUrl { get; set; }
+
         [TempData]
         public string ErrorMessage { get; set; }
 
@@ -60,23 +63,24 @@ namespace UMS.Areas.Identity.Pages.Account
 
         /*
          * Name: OnGetAsync
-         * Description: The direction to to login page.
+         * Parameter: none
+         * Description: go to login page
          */
         public IActionResult OnGetAsync()
         {
-            _logger.LogTrace("External login on get.");
+            _logger.LogTrace("External login On get.");
             return RedirectToPage("./Login");
         } // End OnGetAsync
 
         /*
          * Name: OnPost
          * Parameter: provider(string), returnUrl(string)
-         * Description: Getting properties of external authenใ
+         * Description: get properties of external authen
          */
         public IActionResult OnPost(string provider, string returnUrl = null)
         {
             // Request a redirect to the external login provider.
-            _logger.LogTrace("External login on post.");
+            _logger.LogTrace("External login On post.");
             var redirectUrl = Url.Page("./ExternalLogin", pageHandler: "Callback", values: new { returnUrl });
             var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
             return new ChallengeResult(provider, properties);
@@ -89,7 +93,7 @@ namespace UMS.Areas.Identity.Pages.Account
          */
         public async Task<IActionResult> OnGetCallbackAsync(string returnUrl = null, string remoteError = null)
         {
-            _logger.LogTrace("External Log on call back.");
+            _logger.LogTrace("External Log On call back.");
             returnUrl = returnUrl ?? Url.Content("~/");
             if (remoteError != null)
             {

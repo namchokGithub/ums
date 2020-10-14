@@ -1,24 +1,23 @@
 ﻿using System;
-using UMS.Data;
-using UMS.Models;
-using System.Text;
-using System.Linq;
-using EmailService;
-using UMS.Controllers;
-using System.Threading.Tasks;
-using UMS.Areas.Identity.Data;
-using Microsoft.AspNetCore.Mvc;
-using System.Text.Encodings.Web;
-using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.WebUtilities;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Encodings.Web;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.WebUtilities;
+using UMS.Areas.Identity.Data;
+using EmailService;
+using System.Linq;
+using Microsoft.Extensions.Logging;
+using UMS.Models;
+using Microsoft.EntityFrameworkCore;
 
 /*
- * Name: ForgotPasswordModel.cs (Extend: PageModel)
+ * Name: ForgotPasswordModel.cs
  * Namespace: UMS.Areas.Identity.Pages.Account
  * Author: Idenity system
  */
@@ -29,23 +28,20 @@ namespace UMS.Areas.Identity.Pages.Account
     public class ForgotPasswordModel : PageModel
     {
         private readonly UserManager<ApplicationUser> _userManager;
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly EditProfileContext _editprofileContext;
         private readonly IEmailSender _emailSender;
         private readonly ILogger<ForgotPasswordModel> _logger;
-        /*
-         * Name: ForgotPasswordModel
-         * Parameter: userManager(UserManager<ApplicationUser>), context(AuthDbContext), emailSender(IEmailSender), logger(ILogger<ForgotPasswordModel>)
-         */
+
         public ForgotPasswordModel(UserManager<ApplicationUser> userManager,
-            AuthDbContext context,
-            IEmailSender emailSender,
+            EditProfileContext editprofileContext, 
+            IEmailSender emailSender, 
             ILogger<ForgotPasswordModel> logger)
         {
-            _emailSender = emailSender;
             _userManager = userManager;
-            _unitOfWork = new UnitOfWork(context);
+            _editprofileContext = editprofileContext;
+            _emailSender = emailSender;
             _logger = logger;
-            _logger.LogDebug("Start forgot password model.");
+            _logger.LogDebug("Start Forgot Password model.");
         } // End contructor
 
         [BindProperty]
@@ -65,7 +61,8 @@ namespace UMS.Areas.Identity.Pages.Account
 
         /*
          * Name: OnPostAsync
-         * Description: Sending email for set password.
+         * Parameter: none
+         * Description: Send email for set password.
          */
         public async Task<IActionResult> OnPostAsync()
         {
@@ -79,10 +76,13 @@ namespace UMS.Areas.Identity.Pages.Account
                     if (user == null)
                     {
                         _logger.LogWarning("The user was not found.");
-                        TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: 'The user was not found.'});";
+                        TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: 'The user was not found.'})";
                         return Page();
                     } // End check user is null
-                    var us = await _unitOfWork.Account.GetByIDAsync(user.Id);
+
+                    string sqltext = $"EXEC [dbo].ums_Get_user '{user.Id}'";
+                    // Query data from "dbo.Account" and Convert to List<EditAccount>
+                    var us = _editprofileContext.EditProfile.FromSqlRaw(sqltext).ToList().FirstOrDefault<EditProfile>();
                     if (us.acc_TypeAccoutname.ToString().ToLower() != "Email".ToLower())
                     {
                         _logger.LogWarning("This user can not change password (Social Account).");
@@ -127,11 +127,11 @@ namespace UMS.Areas.Identity.Pages.Account
                 }
                 _logger.LogTrace("End forgot password on post.");
                 return Page();
-            }
-            catch (Exception e)
+            } catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });";
+                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
+                TempData["Exception"] = message;
                 _logger.LogTrace("End forgot password on post.");
                 return Page();
             } // End try catch

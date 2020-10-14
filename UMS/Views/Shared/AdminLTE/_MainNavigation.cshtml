@@ -1,20 +1,23 @@
-﻿@*
+﻿<!--
     Namespace: ~/View/Shared/AdminLTE
     File: _MainNavigation.cshtml
-    Description: Main side bar of template.
-*@
-@using static UMS.Helpers.NavigationIndicatorHelper;  @*For active menu class*@
+    Description: Main side bar of template
+-->
+
+@using static UMS.Helpers.NavigationIndicatorHelper; <!-- For active menu class -->
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="~/" class="brand-link">
+        @*<img src="~/img/AdminLTELogo.png" alt="UMSLogo" class="brand-image img-circle elevation-3"
+            style="opacity: .8">*@
         <img src="~/img/logoUMS.png" alt="UMSLogo" class="brand-image img-circle elevation-3" />
         <span class="brand-text font-weight-light text-logo">User Management System</span>
     </a>
 
     <!-- Sidebar -->
     <div class="sidebar">
-        <!-- Sidebar user panel -->
+        <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-1 mb-2 d-flex">
             <!-- Profile image -->
             <div class="text-center">
@@ -35,7 +38,7 @@
             </div>
             <!-- End profile name -->
         </div>
-        <!-- End sidebar user panel -->
+        <!-- End sidebar user panel (optional) -->
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <!-- List of menu -->
@@ -52,7 +55,7 @@
                         <p>Edit Profile</p>
                     </a>
                 </li> <!-- Edit profile -->
-                @*ตรวจสอบว่าเป็นตำแหน่งไหน ถ้าเป็น Admin จะแสดง*@
+                <!-- ตรวจสอบว่าเป็นตำแหน่งไหน ถ้าเป็น Admin จะแสดง -->
                 @if (User.IsInRole("Admin"))
                 {
                     <li class="nav-item">
@@ -77,3 +80,15 @@
     <!-- /.sidebar -->
 </aside>
 <!-- End main side bar -->
+
+<!--Start Style-->
+<style>
+    @*Style for profile logo*@
+    #profile_Logo {
+        color: lightgray;
+        margin-top: 3px;
+        margin-left: 2px;
+        padding: 5px 0px 0px 20px;
+    }
+</style>
+<!--End Style-->

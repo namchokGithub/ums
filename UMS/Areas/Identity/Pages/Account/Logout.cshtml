@@ -1,19 +1,21 @@
 ﻿@page
 @model LogoutModel
 @{
-    ViewData["Title"] = "Logged out";
+    ViewData["Title"] = "Log out";
     string URL = "~/";
-    if (ViewData["URL"].ToString()!=null && ViewData["URL"].ToString() != "")
+    if (ViewData["URL"].ToString()!=null&& ViewData["URL"].ToString() != "")
     {
         URL = ViewData["URL"].ToString();
     }
     Layout = "~/Areas/Identity/Pages/_AuthLayout.cshtml";
 }
-@*
+
+<!--
     Namespace: ~/Areas/Identity/Pages/Account/Logout.cshtml
     Author: Namchok Singhachai
     Description: Show when logged out.
-*@
+-->
+
 <div class="hold-transition login-page">
     <div class="login-box">
         <h3 class="login-box-msg">User Management System</h3>
@@ -43,8 +45,21 @@
 <!--Start Script-->
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
-    <script>
-        @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ };
-    </script>
 }
 <!--End Script-->
+<!--Start Style-->
+<style>
+    .login-box {
+        width: 400px;
+    }
+
+    #success {
+        color: #28a745;
+    }
+
+    #checkicon {
+        color: #28a745;
+        font-size: 5em;
+    }
+</style>
+<!--End Style-->

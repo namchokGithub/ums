@@ -4,17 +4,21 @@
     ViewData["Title"] = "Confirm email";
     Layout = "~/Areas/Identity/Pages/_AuthLayout.cshtml";
 }
-@*
+
+<!--
     Namespace: ~/Areas/Identity/Pages/Account/ConfirmEnail.cshtml
     Author: Namchok Singhachai
-    Description: The confirmation email.
-*@
+    Description: Confirm the email.
+-->
+
 <h1>@ViewData["Title"]</h1>
+
 <!--Start Script-->
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
     <script>
-        @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ };
+            // Check is has exception
+            @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ }
     </script>
 }
 <!--End Script-->

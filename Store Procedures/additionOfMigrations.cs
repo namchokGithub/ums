@@ -204,16 +204,11 @@ var ums_Get_user_by_Id = @"-- =============================================
                             BEGIN
                                 SELECT [dbo].[Account].[acc_Id]
                                     , [dbo].[Account].[acc_User]
-                                    , [dbo].[Account].[acc_NormalizedUserName]
                                     , [dbo].[Account].[acc_Email]
-                                    , [dbo].[Account].[acc_NormalizedEmail]
-                                    , [dbo].[Account].[acc_PasswordHash]
-                                    , [dbo].[Account].[acc_SecurityStamp]
-                                    , [dbo].[Account].[acc_ConcurrencyStamp]
                                     , [dbo].[Account].[acc_Firstname]
                                     , [dbo].[Account].[acc_Lastname]
                                     , [dbo].[Account].[acc_IsActive]
-                                    , [dbo].[Roles].[Name] AS acc_Rolename
+                                    , [dbo].[Roles].[Name] as [acc_Rolename]
                                     , [dbo].[UserLogins].[ProviderDisplayName] AS acc_TypeAccoutname
                                 FROM [dbo].[Account]
                                     LEFT JOIN [dbo].[UserRoles] ON [dbo].[UserRoles].UserId = [dbo].[Account].acc_Id
@@ -249,7 +244,7 @@ var ums_Search_log = @"-- =============================================
                         BEGIN
                             IF @param_text = '' OR @param_text = null 
                                 SELECT
-                                [dbo].[Logs].[log_Id]
+                                    [dbo].[Logs].[log_Id]
                                     , [dbo].[Logs].[log_datetime]
                                     , CONVERT(VARCHAR(10), [dbo].[Logs].[log_datetime], 111) AS [log_date]
                                     , CONVERT(VARCHAR(10), CAST([dbo].[Logs].[log_datetime] AS TIME	), 0) AS [log_time]
@@ -261,13 +256,13 @@ var ums_Search_log = @"-- =============================================
                                     , [dbo].[Logs].[log_mvc_action]
                                     , [dbo].[Logs].[log_filename]
                                     , [dbo].[Logs].[log_linenumber]
-                            FROM [dbo].[Logs]
-                            WHERE 
+                                FROM [dbo].[Logs]
+                                WHERE 
                                     CONVERT(date, [dbo].[Logs].[log_datetime], 121) BETWEEN CONVERT(date, @param_dateFirst, 121) AND CONVERT(date, @param_dateEnd, 121)
-                            ORDER BY [dbo].[Logs].[log_Id] DESC
-                            ELSE IF @param_dateFirst = '' OR @param_dateEnd = '' OR @param_dateFirst = null OR @param_dateEnd = null
+                                ORDER BY [dbo].[Logs].[log_Id] DESC
+                            ELSE IF @param_dateFirst = '' OR @param_dateEnd = ''
                                 SELECT
-                                [dbo].[Logs].[log_Id]
+                                    [dbo].[Logs].[log_Id]
                                     , [dbo].[Logs].[log_datetime]
                                     , CONVERT(VARCHAR(10), [dbo].[Logs].[log_datetime], 111) AS [log_date]
                                     , CONVERT(VARCHAR(10), CAST([dbo].[Logs].[log_datetime] AS TIME	), 0) AS [log_time]
@@ -279,13 +274,13 @@ var ums_Search_log = @"-- =============================================
                                     , [dbo].[Logs].[log_mvc_action]
                                     , [dbo].[Logs].[log_filename]
                                     , [dbo].[Logs].[log_linenumber]
-                            FROM [dbo].[Logs]
-                            WHERE 
+                                FROM [dbo].[Logs]
+                                WHERE 
                                     [log_message] LIKE '%'+@param_text+'%'
-                            ORDER BY [dbo].[Logs].[log_Id] DESC
+                                ORDER BY [dbo].[Logs].[log_Id] DESC
                             ELSE 
                                 SELECT
-                                [dbo].[Logs].[log_Id]
+                                    [dbo].[Logs].[log_Id]
                                     , [dbo].[Logs].[log_datetime]
                                     , CONVERT(VARCHAR(10), [dbo].[Logs].[log_datetime], 111) AS [log_date]
                                     , CONVERT(VARCHAR(10), CAST([dbo].[Logs].[log_datetime] AS TIME	), 0) AS [log_time]
@@ -297,11 +292,11 @@ var ums_Search_log = @"-- =============================================
                                     , [dbo].[Logs].[log_mvc_action]
                                     , [dbo].[Logs].[log_filename]
                                     , [dbo].[Logs].[log_linenumber]
-                            FROM [dbo].[Logs]
-                            WHERE 
-                                    [log_message] LIKE '%'+@param_text+'%'
-                                AND CONVERT(date, [dbo].[Logs].[log_datetime], 121) BETWEEN CONVERT(date, @param_dateFirst, 121) AND CONVERT(date, @param_dateEnd, 121)
-                            ORDER BY [dbo].[Logs].[log_Id] DESC
+                                FROM [dbo].[Logs]
+                                WHERE 
+                                    [log_message] LIKE '%'+@param_text+'%' OR [log_message] LIKE @param_text+'%' OR [log_message] LIKE '%'+@param_text
+                                    AND CONVERT(date, [dbo].[Logs].[log_datetime], 121) BETWEEN CONVERT(date, @param_dateFirst, 121) AND CONVERT(date, @param_dateEnd, 121)
+                                ORDER BY [dbo].[Logs].[log_Id] DESC
                         END
                         GO";
 var ums_Update_all = @"-- =============================================

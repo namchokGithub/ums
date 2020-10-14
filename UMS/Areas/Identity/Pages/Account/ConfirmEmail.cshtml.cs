@@ -1,19 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UMS.Areas.Identity.Data;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.WebUtilities;
+using Microsoft.Extensions.Logging;
+using UMS.Areas.Identity.Data;
 
 /*
- * Name: ConfirmEmailModel.cs (Extend :PageModel)
+ * Name: ConfirmEmailModel.cs
  * Namespace: UMS.Areas.Identity.Pages.Account
  * Author: Idenity system
- * Description: The confirmation email.
+ * Description: Confirmation of email
  */
 
 namespace UMS.Areas.Identity.Pages.Account
@@ -23,10 +25,6 @@ namespace UMS.Areas.Identity.Pages.Account
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<ConfirmEmailModel> _logger;
-        /*
-         * Name: ConfirmEmailModel
-         * Parameter: userManager(UserManager<ApplicationUser>), logger(ILogger<ConfirmEmailModel>)
-         */
         public ConfirmEmailModel(UserManager<ApplicationUser> userManager, ILogger<ConfirmEmailModel> logger)
         {
             _userManager = userManager;
@@ -40,13 +38,13 @@ namespace UMS.Areas.Identity.Pages.Account
         /*
          * Name: OnGetAsync
          * Parameter: userId(string), code(String)
-         * Description: Checking code and user before confirm email.
+         * Description: Check code and user before confirm email
          */
         public async Task<IActionResult> OnGetAsync(string userId, string code)
         {
             try
             {
-                _logger.LogTrace("Start confirm email on get.");
+                _logger.LogTrace("Start confirm email On get.");
                 if (userId == null || code == null)
                 {
                     _logger.LogWarning("User Id or code is null.");
@@ -71,15 +69,18 @@ namespace UMS.Areas.Identity.Pages.Account
                 } else
                 {
                     StatusMessage = "Error confirming your email.";
-                    _logger.LogError("Error confirming your email.");
+                    _logger.LogTrace("Error confirming your email.");
                 }
-                _logger.LogTrace("End confirm email on get.");
+                _logger.LogTrace("End confirm email On get.");
                 return Page();
             } catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });";
-                _logger.LogTrace("End confirm email on get.");
+                // Set sweet alert with error messages
+                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })";
+                // Send alert to home pages
+                TempData["Exception"] = message;
+                _logger.LogTrace("End confirm email On get.");
                 return Page();
             } // End try catch
         } // End OnGetAsync

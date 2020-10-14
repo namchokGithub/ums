@@ -4,13 +4,17 @@
     ViewData["Title"] = "Register";
     Layout = "~/Areas/Identity/Pages/_AuthLayout.cshtml";
 }
-@*
+
+<!--
     Namespace: ~/Areas/Identity/Pages/Account/ExternalLogin.cshtml
     Author: Namchok Singhachai
     Description: External Login.
-*@
+-->
+
 <h1>@ViewData["Title"]</h1>
-<h4 id="external-login-title">Associate your @Model.ProviderDisplayName account.</h4><hr />
+<h4 id="external-login-title">Associate your @Model.ProviderDisplayName account.</h4>
+<hr />
+
 <p id="external-login-description" class="text-info">
     You've successfully authenticated with <strong>@Model.ProviderDisplayName</strong>.
     Please enter an email address for this site below and click the Register button to finish
