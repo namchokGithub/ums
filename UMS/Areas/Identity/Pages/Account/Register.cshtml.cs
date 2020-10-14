@@ -24,9 +24,9 @@ namespace UMS.Areas.Identity.Pages.Account
     public class RegisterModel : PageModel
     {
         // Service
-        private readonly SignInManager<ApplicationUser> _signInManager;
-        private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
         // Attribute
         [BindProperty] 
         public InputModel Input { get; set; } // Model input 
@@ -53,8 +53,6 @@ namespace UMS.Areas.Identity.Pages.Account
             {
                 _logger.LogError(e.Message.ToString());
                 _logger.LogTrace("End Register model Constructor.");
-                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `"+e.Message.ToString()+"`, showConfirmButton: true })";
-                RedirectToPage("Register");
             }// End try catch
         } // End Constructor
 
@@ -143,7 +141,9 @@ namespace UMS.Areas.Identity.Pages.Account
                             Email = Input.Email,
                             acc_Firstname = Input.acc_Firstname,
                             acc_Lastname = Input.acc_Lastname,
-                            acc_IsActive = 'Y'
+                            acc_IsActive = 'Y',
+                            ConcurrencyStamp = "dc294a4b-8d8a-49b0-8966-e23ff87778b0",
+                            SecurityStamp = "OWWI2VTYV564YBQIUK3PI75QL7DA6NPJ"
                         }; // Create new user
                         _logger.LogTrace("Creating new user.");
                         var result = await _userManager.CreateAsync(user, Input.Password);
@@ -151,12 +151,22 @@ namespace UMS.Areas.Identity.Pages.Account
                         {
                             _logger.LogInformation("User created a new account with password.");
                             _logger.LogDebug("Generating provider key.");
-                            var info = new UserLoginInfo("Email", RandomString(50).ToString(), "Email");
-                            result = await _userManager.AddLoginAsync(user, info);
+                            var userLogin = new ApplicationUser
+                            {
+                                UserName = Input.Email,
+                                Email = Input.Email,
+                                acc_Firstname = Input.acc_Firstname,
+                                acc_Lastname = Input.acc_Lastname,
+                                acc_IsActive = 'Y',
+                                ConcurrencyStamp = "dc294a4b-8d8a-49b0-8966-e23ff87778b1",
+                                SecurityStamp = "OWWI2VTYV564YBQIUK3PI75QL7DA6NPA"
+                            }; // Create new user
+                            UserLoginInfo info = new UserLoginInfo("Email", RandomString(50).ToString(), "Email");
+                            result = await _userManager.AddLoginAsync(userLogin, info);
                             _logger.LogTrace("Add login.");
                             if (result.Succeeded)
                             {
-                                ApplicationUser userId = await _userManager.FindByEmailAsync(Input.Email); // Find by ID
+                                ApplicationUser userId = await _userManager.FindByEmailAsync(Input.Email);
                                 _logger.LogDebug("Add default role to user.");
                                 await _userManager.AddToRoleAsync(userId, "User");
                                 _logger.LogInformation("User created a new login.");

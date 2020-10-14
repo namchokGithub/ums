@@ -48,7 +48,7 @@ namespace UMS.Controllers
                 ViewData["UserId"] = User.FindFirstValue(ClaimTypes.NameIdentifier) ?? throw new Exception("The user ID not found !.");  // Get user ID
                 _logger.LogDebug("Getting all active users.");
                 ViewData["User"] = await _unitOfWork.Account.GetAllAsync() ?? throw new Exception("Calling a method on a null object reference."); // Send data to view Index.cshtml
-                _unitOfWork.Account.Dispose();
+                await _unitOfWork.Account.DisposeAsync();
                 _logger.LogTrace("End manage user index.");
                 return View();
             }

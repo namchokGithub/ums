@@ -43,6 +43,8 @@ namespace UMS.Data
                     entity.Property(e => e.UserName).HasColumnName("acc_User");
                     entity.Property(e => e.NormalizedUserName).HasColumnName("acc_NormalizedUserName");
                     entity.Property(e => e.PasswordHash).HasColumnName("acc_PasswordHash");
+                    entity.Property(e => e.SecurityStamp).HasColumnName("acc_SecurityStamp");
+                    entity.Property(e => e.ConcurrencyStamp).HasColumnName("acc_ConcurrencyStamp");
                     entity.Property(e => e.Email).HasColumnName("acc_Email");
                     entity.Property(e => e.NormalizedEmail).HasColumnName("acc_NormalizedEmail");
                     entity.Property(e => e.acc_Firstname).HasColumnName("acc_Firstname");
@@ -54,6 +56,8 @@ namespace UMS.Data
                     entity.Property(e => e.NormalizedUserName).HasComment("Normalized UserName");
                     entity.Property(e => e.PasswordHash).HasComment("Password hash");
                     entity.Property(e => e.Email).HasComment("User email");
+                    entity.Property(e => e.SecurityStamp).HasComment("Security Stamp");
+                    entity.Property(e => e.ConcurrencyStamp).HasComment("For check edit state");
                     entity.Property(e => e.NormalizedEmail).HasComment("Normalized user email");
                     entity.Property(e => e.acc_Firstname).HasComment("Firstname");
                     entity.Property(e => e.acc_Lastname).HasComment("Lastname");
@@ -68,8 +72,6 @@ namespace UMS.Data
                 .Ignore(entity => entity.TwoFactorEnabled)
                 .Ignore(entity => entity.AccessFailedCount)
                 .Ignore(entity => entity.PhoneNumberConfirmed)
-                .Ignore(entity => entity.SecurityStamp)
-                .Ignore(entity => entity.ConcurrencyStamp)
                 .ToTable(name: "Account");
             
             builder.Entity<Account>(entity =>

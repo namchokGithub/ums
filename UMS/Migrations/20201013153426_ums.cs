@@ -209,7 +209,6 @@ namespace UMS.Migrations
                 name: "IX_UserRoles_RoleId",
                 table: "UserRoles",
                 column: "RoleId");
-
             var ums_Add_user_login = @"-- =============================================
                             -- Author:		Namchok Singhachai
                             -- Create date: 2020-09-03

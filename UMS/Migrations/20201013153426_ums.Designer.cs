@@ -10,7 +10,7 @@ using UMS.Data;
 namespace UMS.Migrations
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20201013141740_ums")]
+    [Migration("20201013153426_ums")]
     partial class ums
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -163,6 +163,12 @@ namespace UMS.Migrations
                         .HasColumnType("nvarchar(450)")
                         .HasComment("User ID");
 
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnName("acc_ConcurrencyStamp")
+                        .HasColumnType("nvarchar(max)")
+                        .HasComment("For check edit state");
+
                     b.Property<string>("Email")
                         .HasColumnName("acc_Email")
                         .HasColumnType("nvarchar(256)")
@@ -185,6 +191,11 @@ namespace UMS.Migrations
                         .HasColumnName("acc_PasswordHash")
                         .HasColumnType("nvarchar(max)")
                         .HasComment("Password hash");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnName("acc_SecurityStamp")
+                        .HasColumnType("nvarchar(max)")
+                        .HasComment("Security Stamp");
 
                     b.Property<string>("UserName")
                         .HasColumnName("acc_User")

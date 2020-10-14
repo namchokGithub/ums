@@ -52,10 +52,7 @@ namespace UMS
                 o.ReturnUrlParameter = "/";
             });
 
-            // Set connect database
-            services.AddDbContext<AuthDbContext>(options =>
-                    options.UseSqlServer(
-                       Configuration.GetConnectionString("AuthDbContextConnection")));            
+            // Set connect database          
             services.AddDbContext<AccountContext>(options =>
                     options.UseSqlServer(
                        Configuration.GetConnectionString("AuthDbContextConnection")));
