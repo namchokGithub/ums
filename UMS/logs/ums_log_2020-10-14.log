@@ -78,3 +78,46 @@
 2020/10/14 10:02:40.461 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:45 | User logged out.
 2020/10/14 10:02:54.115 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start login model.
 2020/10/14 10:02:54.130 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/14 10:58:05.058 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/14 10:58:05.392 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/14 10:58:05.398 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/14 10:58:05.398 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/14 10:58:06.068 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start login model.
+2020/10/14 10:58:06.098 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/14 10:58:42.144 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start login model.
+2020/10/14 10:58:43.380 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:154 | User logged in.
+2020/10/14 10:58:43.380 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:169 | Adding cookie into the browser.
+2020/10/14 10:58:43.425 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:51 | Welcome usermanagement2020@gmail.com to UMS.
+2020/10/14 10:58:44.769 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:52 | Getting all active users.
+2020/10/14 10:58:46.145 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:31 | Start logout model.
+2020/10/14 10:58:46.145 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:66 | User logged out.
+2020/10/14 10:58:46.159 [DEBUG] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:31 | Start logout model.
+2020/10/14 10:58:46.178 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:45 | User logged out.
+2020/10/14 10:58:47.207 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start login model.
+2020/10/14 10:58:47.221 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/14 10:58:49.427 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:50 | Start Register model.
+2020/10/14 10:58:52.218 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:210 | Checking user.
+2020/10/14 10:58:52.223 [INFO] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:211 | Detected 0 users.
+2020/10/14 10:58:56.802 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:210 | Checking user.
+2020/10/14 10:58:56.802 [INFO] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:211 | Detected 1 users.
+2020/10/14 10:58:58.737 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:210 | Checking user.
+2020/10/14 10:58:58.737 [INFO] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:211 | Detected 0 users.
+2020/10/14 10:59:00.552 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:50 | Start Register model.
+2020/10/14 10:59:00.732 [INFO] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:150 | User created a new account with password.
+2020/10/14 10:59:00.740 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:151 | Generating provider key.
+2020/10/14 10:59:08.895 [ERROR] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:168 | Optimistic concurrency failure, object has been modified.
+2020/10/14 11:01:52.294 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/14 11:01:52.505 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/14 11:01:52.505 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/14 11:01:52.505 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/14 11:01:53.449 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:51 | Start login model.
+2020/10/14 11:01:53.472 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:117 | Getting external authentication scheme.
+2020/10/14 11:02:15.301 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:50 | Start Register model.
+2020/10/14 11:02:17.582 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:210 | Checking user.
+2020/10/14 11:02:17.582 [INFO] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:211 | Detected 0 users.
+2020/10/14 11:02:27.406 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:210 | Checking user.
+2020/10/14 11:02:27.410 [INFO] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:211 | Detected 0 users.
+2020/10/14 11:02:28.536 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:50 | Start Register model.
+2020/10/14 11:02:28.980 [INFO] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:150 | User created a new account with password.
+2020/10/14 11:02:28.987 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:151 | Generating provider key.
+2020/10/14 11:02:44.523 [ERROR] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:154 | Value cannot be null. (Parameter 'user')

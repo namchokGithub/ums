@@ -150,7 +150,10 @@ namespace UMS.Areas.Identity.Pages.Account
                         _logger.LogInformation("User created a new account with password.");
                         _logger.LogDebug("Generating provider key.");
                         var info = new UserLoginInfo("Email", RandomString(50).ToString(), "Email");
-                        result = await _userManager.AddLoginAsync(user, info);
+
+                        ApplicationUser UserCreated = await _userManager.FindByEmailAsync(user.Email);
+                        result = await _userManager.AddLoginAsync(UserCreated, info);
+
                         _logger.LogTrace("Add login.");
                         if (result.Succeeded)
                         {

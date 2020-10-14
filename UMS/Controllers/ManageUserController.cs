@@ -50,15 +50,8 @@ namespace UMS.Controllers
                 _logger.LogTrace("Finding user ID.");
                 ViewData["UserId"] = User.FindFirstValue(ClaimTypes.NameIdentifier) ?? throw new Exception("The user ID not found !.");  // Get user ID
                 _logger.LogDebug("Getting all active users.");
-
-                string sqltext = "EXEC [dbo].ums_get_all_active_user";
-                var user = await _accountContext.Account.FromSqlRaw(sqltext).ToListAsync<Account>();
-                _logger.LogDebug("Get all active user.");
-                ViewData["User"] = user ?? throw new Exception("Calling a method on a null object reference.");
-
-                //ViewData["User"] = await _unitOfWork.Account.GetAllAsync() ?? throw new Exception("Calling a method on a null object reference."); // Send data to view Index.cshtml
-                //await _unitOfWork.Account.DisposeAsync();
-
+                ViewData["User"] = await _unitOfWork.Account.GetAllAsync() ?? throw new Exception("Calling a method on a null object reference."); // Send data to view Index.cshtml
+                await _unitOfWork.Account.DisposeAsync();
                 _logger.LogTrace("End manage user index.");
                 return View();
             }
