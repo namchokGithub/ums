@@ -1,4 +1,5 @@
 ﻿using System;
+using UMS.Models;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,9 +9,10 @@ using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 /*
  * Name: RegisterModel.cs (Extend : PageModel)
