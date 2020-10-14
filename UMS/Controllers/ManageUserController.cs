@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 /*
  * Name: ManageUserController.cs
@@ -22,6 +23,7 @@ namespace UMS.Controllers
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly ILogger<ManageUserController> _logger;
+        private readonly AuthDbContext _accountContext;
         /*
          * Name: ManageUserController
          * Parameter: context(AuthDbContext), logger(ILogger<ManageUserController>)
@@ -30,6 +32,7 @@ namespace UMS.Controllers
         public ManageUserController(AuthDbContext context, ILogger<ManageUserController> logger)
         {
             _logger = logger;
+            _accountContext = context;
             _unitOfWork = new UnitOfWork(context);
             _logger.LogTrace("Start manage user controller.");
         } // End constructor
@@ -47,8 +50,15 @@ namespace UMS.Controllers
                 _logger.LogTrace("Finding user ID.");
                 ViewData["UserId"] = User.FindFirstValue(ClaimTypes.NameIdentifier) ?? throw new Exception("The user ID not found !.");  // Get user ID
                 _logger.LogDebug("Getting all active users.");
-                ViewData["User"] = await _unitOfWork.Account.GetAllAsync() ?? throw new Exception("Calling a method on a null object reference."); // Send data to view Index.cshtml
-                await _unitOfWork.Account.DisposeAsync();
+
+                string sqltext = "EXEC [dbo].ums_get_all_active_user";
+                var user = await _accountContext.Account.FromSqlRaw(sqltext).ToListAsync<Account>();
+                _logger.LogDebug("Get all active user.");
+                ViewData["User"] = user ?? throw new Exception("Calling a method on a null object reference.");
+
+                //ViewData["User"] = await _unitOfWork.Account.GetAllAsync() ?? throw new Exception("Calling a method on a null object reference."); // Send data to view Index.cshtml
+                //await _unitOfWork.Account.DisposeAsync();
+
                 _logger.LogTrace("End manage user index.");
                 return View();
             }
