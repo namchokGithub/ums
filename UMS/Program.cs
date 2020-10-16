@@ -10,7 +10,7 @@ using NLog.Web;
  * Description: Program class of project
  */
 
-namespace User_Management_System
+namespace UMS
 {
     public class Program
     {

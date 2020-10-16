@@ -15,9 +15,16 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "User_Management_System": {
+    "UMS": {
       "commandName": "Project",
       "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:44346/"
+    },
+    "console": {
+      "commandName": "Project",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

@@ -1,10 +1,10 @@
-﻿using User_Management_System.Data;
+﻿using UMS.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using User_Management_System.Areas.Identity.Data;
+using UMS.Areas.Identity.Data;
 
 /*
  * Name: IdentityHostingStartup (Extend: IHostingStartup)
@@ -12,8 +12,8 @@ using User_Management_System.Areas.Identity.Data;
  * Description: Configuration for identity user.
  */
 
-[assembly: HostingStartup(typeof(User_Management_System.Areas.Identity.IdentityHostingStartup))]
-namespace User_Management_System.Areas.Identity
+[assembly: HostingStartup(typeof(UMS.Areas.Identity.IdentityHostingStartup))]
+namespace UMS.Areas.Identity
 {
     public class IdentityHostingStartup : IHostingStartup
     {

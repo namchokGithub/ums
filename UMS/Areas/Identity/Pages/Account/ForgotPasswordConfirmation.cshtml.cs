@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
  * Descriptions: Confirmation for forgot password.
  */
 
-namespace User_Management_System.Areas.Identity.Pages.Account
+namespace UMS.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class ForgotPasswordConfirmation : PageModel

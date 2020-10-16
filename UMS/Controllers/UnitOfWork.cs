@@ -1,12 +1,12 @@
 ﻿using System.Threading.Tasks;
-using User_Management_System.Data;
+using UMS.Data;
 /*
  * Name: IUnitOfWork
  * Author: Namchok Singhachai
  * Description: The class for control all.
  */
 
-namespace User_Management_System.Controllers
+namespace UMS.Controllers
 {
     public class UnitOfWork : IUnitOfWork
     {

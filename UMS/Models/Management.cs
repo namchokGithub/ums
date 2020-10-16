@@ -3,7 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace User_Management_System.Models
+namespace UMS.Models
 {
     public class Management
     {

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
  * Description: Setting active class in nav menu.
  */
 
-namespace User_Management_System.Helpers
+namespace UMS.Helpers
 {
     public static class NavigationIndicatorHelper
     {

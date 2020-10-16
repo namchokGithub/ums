@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
-using User_Management_System.Areas.Identity.Data;
+using UMS.Areas.Identity.Data;
 
 /*
  * Name: ResetPasswordModel.cs (Extend : PageModel)
@@ -16,7 +16,7 @@ using User_Management_System.Areas.Identity.Data;
  * Description: Resetting a password.
  */
 
-namespace User_Management_System.Areas.Identity.Pages.Account
+namespace UMS.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class ResetPasswordModel : PageModel

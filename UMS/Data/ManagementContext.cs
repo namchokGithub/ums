@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
-using User_Management_System.Models;
+using UMS.Models;
 using Microsoft.EntityFrameworkCore;
 
 /*
@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
  * Description: Context for management model
  */
 
-namespace User_Management_System.Data
+namespace UMS.Data
 {
     public class ManagementContext : DbContext
     {

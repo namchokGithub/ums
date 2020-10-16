@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
-using User_Management_System.Models;
+using UMS.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
-using User_Management_System.Areas.Identity.Data;
+using UMS.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 /*
@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
  * Description: The context of database for application.
  */
 
-namespace User_Management_System.Data
+namespace UMS.Data
 {
     public class AuthDbContext : IdentityDbContext<ApplicationUser>
     {

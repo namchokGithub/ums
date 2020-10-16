@@ -1,6 +1,6 @@
 using System;
 using EmailService;
-using User_Management_System.Data;
+using UMS.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
@@ -15,7 +15,7 @@ using Microsoft.Extensions.DependencyInjection;
  * Description: Setting up the project.
  */
 
-namespace User_Management_System
+namespace UMS
 {
     public class Startup
     {

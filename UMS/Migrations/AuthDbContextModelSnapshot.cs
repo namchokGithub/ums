@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using User_Management_System.Data;
+using UMS.Data;
 
-namespace User_Management_System.Migrations
+namespace UMS.Migrations
 {
     [DbContext(typeof(AuthDbContext))]
     partial class AuthDbContextModelSnapshot : ModelSnapshot
@@ -154,7 +154,7 @@ namespace User_Management_System.Migrations
                     b.ToTable("UserTokens");
                 });
 
-            modelBuilder.Entity("User_Management_System.Areas.Identity.Data.ApplicationUser", b =>
+            modelBuilder.Entity("UMS.Areas.Identity.Data.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnName("acc_Id")
@@ -232,7 +232,7 @@ namespace User_Management_System.Migrations
                     b.ToTable("Account");
                 });
 
-            modelBuilder.Entity("User_Management_System.Models.Logs", b =>
+            modelBuilder.Entity("UMS.Models.Logs", b =>
                 {
                     b.Property<int>("log_Id")
                         .ValueGeneratedOnAdd()
@@ -296,7 +296,7 @@ namespace User_Management_System.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("User_Management_System.Areas.Identity.Data.ApplicationUser", null)
+                    b.HasOne("UMS.Areas.Identity.Data.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -305,7 +305,7 @@ namespace User_Management_System.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("User_Management_System.Areas.Identity.Data.ApplicationUser", null)
+                    b.HasOne("UMS.Areas.Identity.Data.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -320,7 +320,7 @@ namespace User_Management_System.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("User_Management_System.Areas.Identity.Data.ApplicationUser", null)
+                    b.HasOne("UMS.Areas.Identity.Data.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -329,7 +329,7 @@ namespace User_Management_System.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("User_Management_System.Areas.Identity.Data.ApplicationUser", null)
+                    b.HasOne("UMS.Areas.Identity.Data.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)

@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
  * Description: For repository parttern.
  */
 
-namespace User_Management_System.Data
+namespace UMS.Data
 {
     public class Repository<T> : IRepository<T> where T : class
     {

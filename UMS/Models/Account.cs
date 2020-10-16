@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations.Schema;
  * Description: Model for table dbo.Account.
  */
 
-namespace User_Management_System.Models
+namespace UMS.Models
 {
     public class Account
     {

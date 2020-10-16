@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using User_Management_System.Models;
+using UMS.Models;
 
 /*
  * Name: LogsRepository
@@ -11,7 +11,7 @@ using User_Management_System.Models;
  * Description: Class of logs to connect data layer.
  */
 
-namespace User_Management_System.Data
+namespace UMS.Data
 {
     public class LogsRepository : Repository<Logs>, ILogsRepository
     {

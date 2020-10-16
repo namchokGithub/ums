@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Authentication;
 using System.ComponentModel.DataAnnotations;
-using User_Management_System.Areas.Identity.Data;
+using UMS.Areas.Identity.Data;
 
 /*
  * Name: RegisterModel.cs (Extend : PageModel)
@@ -18,7 +18,7 @@ using User_Management_System.Areas.Identity.Data;
  * Author: Idenity system
  */
 
-namespace User_Management_System.Areas.Identity.Pages.Account
+namespace UMS.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class RegisterModel : PageModel

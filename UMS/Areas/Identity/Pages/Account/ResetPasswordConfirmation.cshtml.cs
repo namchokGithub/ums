@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
  * Description: Confirmations for reset password.
  */
 
-namespace User_Management_System.Areas.Identity.Pages.Account
+namespace UMS.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class ResetPasswordConfirmationModel : PageModel

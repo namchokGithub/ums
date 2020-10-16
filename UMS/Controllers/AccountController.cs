@@ -3,12 +3,12 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using User_Management_System.Data;
+using UMS.Data;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
-using User_Management_System.Areas.Identity.Data;
-using static User_Management_System.Areas.Identity.Pages.Account.LoginModel;
+using UMS.Areas.Identity.Data;
+using static UMS.Areas.Identity.Pages.Account.LoginModel;
 
 /*
  * Name: AccountController.cs
@@ -16,7 +16,7 @@ using static User_Management_System.Areas.Identity.Pages.Account.LoginModel;
  * Description: The controller manages an account login.
  */
 
-namespace User_Management_System.Controllers
+namespace UMS.Controllers
 {
     [Authorize]
     public class AccountController : Controller

@@ -4,15 +4,15 @@ using EmailService;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Encodings.Web;
-using User_Management_System.Data;
+using UMS.Data;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.AspNetCore.Authorization;
-using User_Management_System.Controllers;
+using UMS.Controllers;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
-using User_Management_System.Areas.Identity.Data;
+using UMS.Areas.Identity.Data;
 
 /*
  * Name: ForgotPasswordModel.cs (Extend: PageModel)
@@ -20,7 +20,7 @@ using User_Management_System.Areas.Identity.Data;
  * Descriptions: Sending an email for resetting a password.
  */
 
-namespace User_Management_System.Areas.Identity.Pages.Account
+namespace UMS.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class ForgotPasswordModel : PageModel

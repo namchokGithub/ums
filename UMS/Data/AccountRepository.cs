@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using User_Management_System.Models;
+using UMS.Models;
 
 /*
  * Name: AccountRepository
@@ -13,7 +13,7 @@ using User_Management_System.Models;
  * Description: Class of account to connect data layer.
  */
 
-namespace User_Management_System.Data
+namespace UMS.Data
 {
     public class AccountRepository : Repository<Management>, IAccountRepository
     {

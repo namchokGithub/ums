@@ -1,129 +1,129 @@
 ######################################## User Management System log All Trace #########################################
-2020/10/15 16:03:42.945 [TRACE] [User_Management_System.Program]  Program.cs:27 | Starting Program.
+2020/10/15 16:03:42.945 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
 2020/10/15 16:03:44.538 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
 2020/10/15 16:03:44.804 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
 2020/10/15 16:03:44.804 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
 2020/10/15 16:03:44.824 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: D:\My programming\UMS\User Management System
-2020/10/15 16:03:50.223 [INFO] [User_Management_System.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
-2020/10/15 16:03:50.245 [INFO] [User_Management_System.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:158 | Adding cookie into the browser.
-2020/10/15 16:03:50.279 [INFO] [User_Management_System.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome!, usermanagement2020@gmail.com.
-2020/10/15 16:03:53.246 [INFO] [User_Management_System.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:70 | User logged out.
-2020/10/15 16:03:53.276 [INFO] [User_Management_System.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
-2020/10/15 16:03:57.124 [INFO] [User_Management_System.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
-2020/10/15 16:03:57.139 [INFO] [User_Management_System.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:158 | Adding cookie into the browser.
-2020/10/15 16:03:57.159 [INFO] [User_Management_System.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome!, usermanagement2020@gmail.com.
-2020/10/15 16:04:07.139 [INFO] [User_Management_System.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:143 | Update successfully.
-2020/10/15 16:04:13.832 [INFO] [User_Management_System.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:77 | Getting user.
-2020/10/15 16:04:19.148 [INFO] [User_Management_System.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:77 | Getting user.
-2020/10/15 16:04:24.986 [INFO] [User_Management_System.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:77 | Getting user.
-2020/10/15 16:10:51.794 [TRACE] [User_Management_System.Program]  Program.cs:27 | Starting Program.
+2020/10/15 16:03:50.223 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
+2020/10/15 16:03:50.245 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:158 | Adding cookie into the browser.
+2020/10/15 16:03:50.279 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome!, usermanagement2020@gmail.com.
+2020/10/15 16:03:53.246 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:70 | User logged out.
+2020/10/15 16:03:53.276 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
+2020/10/15 16:03:57.124 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
+2020/10/15 16:03:57.139 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:158 | Adding cookie into the browser.
+2020/10/15 16:03:57.159 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome!, usermanagement2020@gmail.com.
+2020/10/15 16:04:07.139 [INFO] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:143 | Update successfully.
+2020/10/15 16:04:13.832 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:77 | Getting user.
+2020/10/15 16:04:19.148 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:77 | Getting user.
+2020/10/15 16:04:24.986 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:77 | Getting user.
+2020/10/15 16:10:51.794 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
 2020/10/15 16:10:53.028 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
 2020/10/15 16:10:53.279 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
 2020/10/15 16:10:53.293 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
 2020/10/15 16:10:53.306 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: D:\My programming\UMS\User Management System
-2020/10/15 16:10:53.717 [INFO] [User_Management_System.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome!, usermanagement2020@gmail.com.
-2020/10/15 16:14:08.511 [TRACE] [User_Management_System.Program]  Program.cs:27 | Starting Program.
+2020/10/15 16:10:53.717 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome!, usermanagement2020@gmail.com.
+2020/10/15 16:14:08.511 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
 2020/10/15 16:14:09.832 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
 2020/10/15 16:14:10.017 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
 2020/10/15 16:14:10.029 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
 2020/10/15 16:14:10.040 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: D:\My programming\UMS\User Management System
-2020/10/15 16:14:10.894 [INFO] [User_Management_System.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
-2020/10/15 16:17:33.639 [TRACE] [User_Management_System.Program]  Program.cs:27 | Starting Program.
+2020/10/15 16:14:10.894 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/15 16:17:33.639 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
 2020/10/15 16:17:34.900 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
 2020/10/15 16:17:35.083 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
 2020/10/15 16:17:35.083 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
 2020/10/15 16:17:35.105 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: D:\My programming\UMS\User Management System
-2020/10/15 16:17:35.895 [INFO] [User_Management_System.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
-2020/10/15 16:19:59.785 [TRACE] [User_Management_System.Program]  Program.cs:27 | Starting Program.
+2020/10/15 16:17:35.895 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/15 16:19:59.785 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
 2020/10/15 16:20:01.032 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
 2020/10/15 16:20:01.217 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
 2020/10/15 16:20:01.229 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
 2020/10/15 16:20:01.240 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: D:\My programming\UMS\User Management System
-2020/10/15 16:20:02.113 [INFO] [User_Management_System.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
-2020/10/15 16:20:27.008 [INFO] [User_Management_System.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:70 | User logged out.
-2020/10/15 16:20:27.053 [INFO] [User_Management_System.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
-2020/10/15 16:20:30.845 [INFO] [User_Management_System.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:208 | Detected 0 users.
-2020/10/15 16:20:40.076 [INFO] [User_Management_System.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:208 | Detected 0 users.
-2020/10/15 16:20:44.810 [INFO] [User_Management_System.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:143 | User created successfully with password..
-2020/10/15 16:20:44.913 [ERROR] [User_Management_System.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:172 | Optimistic concurrency failure, object has been modified. (ConcurrencyFailure).
-2020/10/15 17:23:29.270 [TRACE] [User_Management_System.Program]  Program.cs:27 | Starting Program.
+2020/10/15 16:20:02.113 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/15 16:20:27.008 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:70 | User logged out.
+2020/10/15 16:20:27.053 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
+2020/10/15 16:20:30.845 [INFO] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:208 | Detected 0 users.
+2020/10/15 16:20:40.076 [INFO] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:208 | Detected 0 users.
+2020/10/15 16:20:44.810 [INFO] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:143 | User created successfully with password..
+2020/10/15 16:20:44.913 [ERROR] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:172 | Optimistic concurrency failure, object has been modified. (ConcurrencyFailure).
+2020/10/15 17:23:29.270 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
 2020/10/15 17:23:31.165 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
 2020/10/15 17:23:31.424 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
 2020/10/15 17:23:31.437 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
 2020/10/15 17:23:31.449 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: D:\My programming\UMS\User Management System
-2020/10/15 17:23:36.129 [INFO] [User_Management_System.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
-2020/10/15 17:23:36.149 [INFO] [User_Management_System.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:158 | Adding cookie into the browser.
-2020/10/15 17:23:36.189 [INFO] [User_Management_System.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
-2020/10/15 17:23:41.499 [INFO] [User_Management_System.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:77 | Getting user.
+2020/10/15 17:23:36.129 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
+2020/10/15 17:23:36.149 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:158 | Adding cookie into the browser.
+2020/10/15 17:23:36.189 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/15 17:23:41.499 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:77 | Getting user.
 2020/10/15 17:23:56.959 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
-2020/10/15 17:25:30.292 [TRACE] [User_Management_System.Program]  Program.cs:27 | Starting Program.
+2020/10/15 17:25:30.292 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
 2020/10/15 17:25:31.631 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
 2020/10/15 17:25:31.816 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
 2020/10/15 17:25:31.816 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
 2020/10/15 17:25:31.841 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: D:\My programming\UMS\User Management System
-2020/10/15 17:25:32.679 [INFO] [User_Management_System.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
-2020/10/15 17:29:56.816 [TRACE] [User_Management_System.Program]  Program.cs:27 | Starting Program.
+2020/10/15 17:25:32.679 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/15 17:29:56.816 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
 2020/10/15 17:29:58.145 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
 2020/10/15 17:29:58.329 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
 2020/10/15 17:29:58.341 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
 2020/10/15 17:29:58.352 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: D:\My programming\UMS\User Management System
-2020/10/15 17:29:59.117 [INFO] [User_Management_System.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
-2020/10/15 17:30:05.688 [INFO] [User_Management_System.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:77 | Getting user.
-2020/10/15 17:31:00.498 [TRACE] [User_Management_System.Program]  Program.cs:27 | Starting Program.
+2020/10/15 17:29:59.117 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/15 17:30:05.688 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:77 | Getting user.
+2020/10/15 17:31:00.498 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
 2020/10/15 17:31:01.777 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
 2020/10/15 17:31:01.974 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
 2020/10/15 17:31:01.974 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
 2020/10/15 17:31:01.999 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: D:\My programming\UMS\User Management System
-2020/10/15 17:31:02.496 [INFO] [User_Management_System.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
-2020/10/15 17:32:51.722 [TRACE] [User_Management_System.Program]  Program.cs:27 | Starting Program.
+2020/10/15 17:31:02.496 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/15 17:32:51.722 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
 2020/10/15 17:32:53.546 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
 2020/10/15 17:32:53.749 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
 2020/10/15 17:32:53.763 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
 2020/10/15 17:32:53.776 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: D:\My programming\UMS\User Management System
-2020/10/15 17:32:54.581 [INFO] [User_Management_System.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
-2020/10/15 17:34:41.047 [TRACE] [User_Management_System.Program]  Program.cs:27 | Starting Program.
+2020/10/15 17:32:54.581 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/15 17:34:41.047 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
 2020/10/15 17:34:42.545 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
 2020/10/15 17:34:42.755 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
 2020/10/15 17:34:42.755 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
 2020/10/15 17:34:42.781 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: D:\My programming\UMS\User Management System
-2020/10/15 17:34:43.533 [INFO] [User_Management_System.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
-2020/10/15 17:35:15.831 [INFO] [User_Management_System.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:77 | Getting user.
-2020/10/15 17:35:23.753 [INFO] [User_Management_System.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:77 | Getting user.
-2020/10/15 17:35:30.982 [INFO] [User_Management_System.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:77 | Getting user.
-2020/10/15 17:36:28.885 [INFO] [User_Management_System.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:70 | User logged out.
-2020/10/15 17:36:28.913 [INFO] [User_Management_System.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
-2020/10/15 17:36:36.631 [INFO] [User_Management_System.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
-2020/10/15 17:36:36.656 [INFO] [User_Management_System.Controllers.HomeController] [Test1114@gmail.com] Index:HomeController.cs:42 | Welcome, Test1114@gmail.com.
-2020/10/15 17:36:45.629 [INFO] [User_Management_System.Controllers.EditProfileController] [Test1114@gmail.com] EditProfile:EditProfileController.cs:143 | Update successfully.
-2020/10/15 17:39:06.856 [TRACE] [User_Management_System.Program]  Program.cs:27 | Starting Program.
+2020/10/15 17:34:43.533 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/15 17:35:15.831 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:77 | Getting user.
+2020/10/15 17:35:23.753 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:77 | Getting user.
+2020/10/15 17:35:30.982 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:77 | Getting user.
+2020/10/15 17:36:28.885 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:70 | User logged out.
+2020/10/15 17:36:28.913 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
+2020/10/15 17:36:36.631 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
+2020/10/15 17:36:36.656 [INFO] [UMS.Controllers.HomeController] [Test1114@gmail.com] Index:HomeController.cs:42 | Welcome, Test1114@gmail.com.
+2020/10/15 17:36:45.629 [INFO] [UMS.Controllers.EditProfileController] [Test1114@gmail.com] EditProfile:EditProfileController.cs:143 | Update successfully.
+2020/10/15 17:39:06.856 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
 2020/10/15 17:39:08.344 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
 2020/10/15 17:39:08.543 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
 2020/10/15 17:39:08.558 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
 2020/10/15 17:39:08.570 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: D:\My programming\UMS\User Management System
-2020/10/15 17:39:09.323 [INFO] [User_Management_System.Controllers.HomeController] [Test1114@gmail.com] Index:HomeController.cs:42 | Welcome, Test1114@gmail.com.
-2020/10/15 17:39:26.382 [INFO] [User_Management_System.Controllers.EditProfileController] [Test1114@gmail.com] EditProfile:EditProfileController.cs:203 | Update successfully.
-2020/10/15 17:39:30.400 [INFO] [User_Management_System.Areas.Identity.Pages.Account.LogoutModel] [Test1114@gmail.com] Logout.cshtml.cs:70 | User logged out.
-2020/10/15 17:39:30.427 [INFO] [User_Management_System.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
+2020/10/15 17:39:09.323 [INFO] [UMS.Controllers.HomeController] [Test1114@gmail.com] Index:HomeController.cs:42 | Welcome, Test1114@gmail.com.
+2020/10/15 17:39:26.382 [INFO] [UMS.Controllers.EditProfileController] [Test1114@gmail.com] EditProfile:EditProfileController.cs:203 | Update successfully.
+2020/10/15 17:39:30.400 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [Test1114@gmail.com] Logout.cshtml.cs:70 | User logged out.
+2020/10/15 17:39:30.427 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
 2020/10/15 17:39:40.827 [WARN] [Microsoft.AspNetCore.Identity.UserManager]   | Invalid password for user 0a5f5b63-5d15-440d-b9ba-44adb948e89e.
 2020/10/15 17:39:40.858 [WARN] [Microsoft.AspNetCore.Identity.SignInManager]   | User 0a5f5b63-5d15-440d-b9ba-44adb948e89e failed to provide the correct password.
-2020/10/15 17:39:40.884 [WARN] [User_Management_System.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:166 | Your email or password is not valid.
+2020/10/15 17:39:40.884 [WARN] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:166 | Your email or password is not valid.
 2020/10/15 17:39:43.877 [WARN] [Microsoft.AspNetCore.Identity.UserManager]   | Invalid password for user adminidtempfortestsystem2020.
 2020/10/15 17:39:43.901 [WARN] [Microsoft.AspNetCore.Identity.SignInManager]   | User adminidtempfortestsystem2020 failed to provide the correct password.
-2020/10/15 17:39:43.915 [WARN] [User_Management_System.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:166 | Your email or password is not valid.
+2020/10/15 17:39:43.915 [WARN] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:166 | Your email or password is not valid.
 2020/10/15 17:39:49.109 [WARN] [Microsoft.AspNetCore.Identity.UserManager]   | Invalid password for user adminidtempfortestsystem2020.
 2020/10/15 17:39:49.136 [WARN] [Microsoft.AspNetCore.Identity.SignInManager]   | User adminidtempfortestsystem2020 failed to provide the correct password.
-2020/10/15 17:39:49.150 [WARN] [User_Management_System.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:166 | Your email or password is not valid.
-2020/10/15 17:39:59.630 [INFO] [User_Management_System.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
-2020/10/15 17:39:59.666 [INFO] [User_Management_System.Controllers.HomeController] [Test1114@gmail.com] Index:HomeController.cs:42 | Welcome, Test1114@gmail.com.
-2020/10/15 17:40:07.227 [INFO] [User_Management_System.Areas.Identity.Pages.Account.LogoutModel] [Test1114@gmail.com] Logout.cshtml.cs:70 | User logged out.
-2020/10/15 17:40:07.248 [INFO] [User_Management_System.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
-2020/10/15 17:44:21.162 [TRACE] [User_Management_System.Program]  Program.cs:27 | Starting Program.
+2020/10/15 17:39:49.150 [WARN] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:166 | Your email or password is not valid.
+2020/10/15 17:39:59.630 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
+2020/10/15 17:39:59.666 [INFO] [UMS.Controllers.HomeController] [Test1114@gmail.com] Index:HomeController.cs:42 | Welcome, Test1114@gmail.com.
+2020/10/15 17:40:07.227 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [Test1114@gmail.com] Logout.cshtml.cs:70 | User logged out.
+2020/10/15 17:40:07.248 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
+2020/10/15 17:44:21.162 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
 2020/10/15 17:44:22.926 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
 2020/10/15 17:44:23.114 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
 2020/10/15 17:44:23.141 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
 2020/10/15 17:44:23.161 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: D:\My programming\UMS\User Management System
-2020/10/15 17:44:31.653 [INFO] [User_Management_System.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:208 | Detected 0 users.
-2020/10/15 17:44:37.726 [INFO] [User_Management_System.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:208 | Detected 0 users.
-2020/10/15 17:44:41.389 [INFO] [User_Management_System.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:208 | Detected 0 users.
-2020/10/15 17:44:43.280 [INFO] [User_Management_System.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:143 | User created successfully with password..
-2020/10/15 17:44:43.381 [ERROR] [User_Management_System.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:172 | Optimistic concurrency failure, object has been modified. (ConcurrencyFailure).
+2020/10/15 17:44:31.653 [INFO] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:208 | Detected 0 users.
+2020/10/15 17:44:37.726 [INFO] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:208 | Detected 0 users.
+2020/10/15 17:44:41.389 [INFO] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:208 | Detected 0 users.
+2020/10/15 17:44:43.280 [INFO] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:143 | User created successfully with password..
+2020/10/15 17:44:43.381 [ERROR] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:172 | Optimistic concurrency failure, object has been modified. (ConcurrencyFailure).

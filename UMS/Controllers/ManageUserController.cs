@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
-using User_Management_System.Data;
+using UMS.Data;
 using Microsoft.Extensions.Logging;
-using User_Management_System.Models;
+using UMS.Models;
 using Microsoft.AspNetCore.Authorization;
 
 /*
@@ -15,7 +15,7 @@ using Microsoft.AspNetCore.Authorization;
  * Description: The controller manages user.
  */
 
-namespace User_Management_System.Controllers
+namespace UMS.Controllers
 {
     [Authorize(Roles = "Admin")]
     public class ManageUserController : Controller

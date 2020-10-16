@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 using System.Collections.Generic;
-using User_Management_System.Models;
+using UMS.Models;
 
 /*
  * Name: IAccountRepository
@@ -9,7 +9,7 @@ using User_Management_System.Models;
  * Description: Interface for repository pattern.
  */
 
-namespace User_Management_System.Data
+namespace UMS.Data
 {
     public interface IAccountRepository : IRepository<Management>
     {

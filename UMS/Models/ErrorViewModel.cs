@@ -4,7 +4,7 @@
  * Description: Model of Edit view model
  */
 
-namespace User_Management_System.Models
+namespace UMS.Models
 {
     public class ErrorViewModel
     {

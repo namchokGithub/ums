@@ -2,10 +2,10 @@
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using User_Management_System.Data;
+using UMS.Data;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
-using static User_Management_System.Controllers.ManageUserController;
+using static UMS.Controllers.ManageUserController;
 
 /*
  * Name: UMS.Controllers.LogsController
@@ -13,7 +13,7 @@ using static User_Management_System.Controllers.ManageUserController;
  * Description: The controller manages log monitor page.
  */
 
-namespace User_Management_System.Controllers
+namespace UMS.Controllers
 {
     [Authorize(Roles = "Admin")]
     public class LogsController : Controller

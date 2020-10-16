@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 using System.Collections.Generic;
-using User_Management_System.Models;
+using UMS.Models;
 
 /*
  * Name: ILogsRepository
@@ -8,7 +8,7 @@ using User_Management_System.Models;
  * Description: Interface for logs to connect data layer.
  */
 
-namespace User_Management_System.Data
+namespace UMS.Data
 {
     public interface ILogsRepository : IRepository<Logs>
     {

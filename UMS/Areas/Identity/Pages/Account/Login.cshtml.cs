@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
-using User_Management_System.Data;
+using UMS.Data;
 using Microsoft.Extensions.Logging;
 using System.Security.Cryptography;
 using Microsoft.AspNetCore.Identity;
-using User_Management_System.Controllers;
+using UMS.Controllers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
-using User_Management_System.Areas.Identity.Data;
+using UMS.Areas.Identity.Data;
 
 /*
  * Name: LoginModel.cs (Extend: PageModel)
@@ -23,7 +23,7 @@ using User_Management_System.Areas.Identity.Data;
  * Description : The authentication for login.
  */
 
-namespace User_Management_System.Areas.Identity.Pages.Account
+namespace UMS.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class LoginModel : PageModel

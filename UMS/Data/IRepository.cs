@@ -6,7 +6,7 @@
  * Description: The interface for repository pattern.
  */
 
-namespace User_Management_System.Data
+namespace UMS.Data
 {
     public interface IRepository<T> where T : class
     {

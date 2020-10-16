@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
  * Description: The page for access to denied sites.
  */
 
-namespace User_Management_System.Areas.Identity.Pages.Account
+namespace UMS.Areas.Identity.Pages.Account
 {
     public class AccessDeniedModel : PageModel
     {

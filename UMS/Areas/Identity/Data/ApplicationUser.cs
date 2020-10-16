@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations.Schema;
  * Description: User identity model for this application.
  */
 
-namespace User_Management_System.Areas.Identity.Data
+namespace UMS.Areas.Identity.Data
 {
     // Add profile data for application users by adding properties to the ApplicationUser class
     public class ApplicationUser : IdentityUser

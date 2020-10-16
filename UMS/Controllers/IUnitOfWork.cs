@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using User_Management_System.Data;
+using UMS.Data;
 
 /*
  * Name: IUnitOfWork
@@ -8,7 +8,7 @@ using User_Management_System.Data;
  * Description: The interface class for control all.
  */
 
-namespace User_Management_System.Controllers
+namespace UMS.Controllers
 {
     public interface IUnitOfWork : IDisposable
     {

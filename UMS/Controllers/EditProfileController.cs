@@ -2,13 +2,13 @@
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using User_Management_System.Data;
+using UMS.Data;
 using Microsoft.Extensions.Logging;
 using System.Security.Cryptography;
-using User_Management_System.Models;
+using UMS.Models;
 using Microsoft.AspNetCore.Identity;
 using System.Text.RegularExpressions;
-using User_Management_System.Areas.Identity.Data;
+using UMS.Areas.Identity.Data;
 
 /*
  * Name: EditProfileController.cs
@@ -16,7 +16,7 @@ using User_Management_System.Areas.Identity.Data;
  * Description: The controller manages an user information.
  */
 
-namespace User_Management_System.Controllers
+namespace UMS.Controllers
 {
     public class EditProfileController : Controller
     {

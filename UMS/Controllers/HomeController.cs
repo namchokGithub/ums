@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using User_Management_System.Models;
+using UMS.Models;
 using Microsoft.AspNetCore.Authorization;
 
 /*
@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Authorization;
  * Description: The controller manages a home page.
  */
 
-namespace User_Management_System.Controllers
+namespace UMS.Controllers
 {
     [Authorize]
     public class HomeController : Controller

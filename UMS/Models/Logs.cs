@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations.Schema;
  * Description: Model of table log.
  */
 
-namespace User_Management_System.Models
+namespace UMS.Models
 {
     public class Logs
     {
