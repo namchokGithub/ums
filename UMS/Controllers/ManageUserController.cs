@@ -1,13 +1,13 @@
 ﻿using System;
-using UMS.Data;
-using UMS.Models;
 using System.Security.Claims;
+using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
+using UMS.Data;
 using Microsoft.Extensions.Logging;
+using UMS.Models;
 using Microsoft.AspNetCore.Authorization;
-using System.Threading.Tasks;
 
 /*
  * Name: ManageUserController.cs
@@ -48,7 +48,7 @@ namespace UMS.Controllers
                 ViewData["UserId"] = User.FindFirstValue(ClaimTypes.NameIdentifier) ?? throw new Exception("The user ID not found !.");  // Get user ID
                 _logger.LogDebug("Getting all active users.");
                 ViewData["User"] = await _unitOfWork.Account.GetAllAsync() ?? throw new Exception("Calling a method on a null object reference."); // Send data to view Index.cshtml
-                await _unitOfWork.Account.DisposeAsync();
+                _unitOfWork.Account.Dispose();
                 _logger.LogTrace("End manage user index.");
                 return View();
             }
@@ -74,7 +74,7 @@ namespace UMS.Controllers
             {
                 _logger.LogTrace("Start get user.");
                 if (id == null || id.ToString() == "") throw new Exception("Calling a method on a null object reference."); // Check if parameter is null
-                _logger.LogInformation($"Getting user by {id}.");
+                _logger.LogInformation($"Getting user.");
                 _logger.LogTrace("End get user.");
                 return new JsonResult(await _unitOfWork.Account.GetByIDAsync(id) ?? throw new Exception("Calling a method on a null object reference.")); // Return JSON by Ajax
             }
@@ -97,28 +97,28 @@ namespace UMS.Controllers
 
         /*
          * Name: EditUser
-         * Parameter: _account(Account)
+         * Parameter: _unitOfWork.Account(Account)
          * Author: Namchok Singhachai
          * Description: User profile editing.
          */
         [HttpPost]
-        public async Task<IActionResult> EditUser(Account _account)
+        public async Task<IActionResult> EditUser(Management param_account)
         {
             try
             {
                 _logger.LogTrace("Start user editing.");
                 TempData["UpdateResult"] = null;
-                _account.acc_Id = HttpContext.Request.Form["acc_Id"].ToString();
+                param_account.acc_Id = HttpContext.Request.Form["acc_Id"].ToString();
                 if (HttpContext.Request.Form["acc_RoleId"].ToString() != "0" || HttpContext.Request.Form["acc_RoleId"].ToString() != "")
                 {
                     _logger.LogDebug("Setting role ID.");
-                    _account.acc_Rolename = HttpContext.Request.Form["acc_RoleId"].ToString(); // Has condition in store procedure if equal zero or '' it's nothing happened
+                    param_account.acc_Rolename = HttpContext.Request.Form["acc_RoleId"].ToString(); // Has condition in store procedure if equal zero or '' it's nothing happened
                 } // End checking role
-                if (_account.acc_Id == null || _account.acc_Id == "") throw new Exception("Calling a method on a null object reference.");
+                if (param_account.acc_Id == null || param_account.acc_Id == "") throw new Exception("Calling a method on a null object reference.");
                 if (ModelState.IsValid)
                 {
-                    await _unitOfWork.Account.UpdateNameAsync(_account);
-                    await _unitOfWork.Account.UpdateRoleAsync(_account);
+                    await _unitOfWork.Account.UpdateNameAsync(param_account);
+                    await _unitOfWork.Account.UpdateRoleAsync(param_account);
                     var result = false;
                     while (!result)
                     {
@@ -126,15 +126,15 @@ namespace UMS.Controllers
                         {
                             await _unitOfWork.Account.CompleteAsync();
                             await _unitOfWork.Account.DisposeAsync();
-                            _logger.LogDebug("Save changes: User update successfully.");
-                            TempData["UpdateResult"] = @"toastr.success('Update user successfully!');";
+                            _logger.LogDebug("Save changes: User successfully updated.");
+                            TempData["UpdateResult"] = @"toastr.success('User successfully updated!');";
                             result = true;
                         }
                         catch (Exception e)
                         {
                             throw e;
                         } // End try catch
-                    } // if update successful
+                    } // if update successfully
                 }
                 else
                 {

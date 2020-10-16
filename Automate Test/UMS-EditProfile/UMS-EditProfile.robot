@@ -31,15 +31,14 @@ Login with "${username}" "${password}"
     Click Element       ${ums_btn_login}
 
 Go to Edit profile
-    sleep                       1s
     Click Element       ${btn_edit_profile}
+    sleep                       1s
 
 Fill firstname "${firstname}"
     Input Text      ${editprofile_input_name}    ${firstname}
 
 Fill lastname "${lastname}"
     Input Text      ${editprofile_input_lastname}    ${lastname}
-    sleep                       1s
 
 Fill currentpass "${currentpass}"
     Input Password      ${editprofile_input_curpass}    ${currentpass}
@@ -49,22 +48,20 @@ Fill newpass "${newpass}"
 
 Fill confirmpass "${confirmpass}"
     Input Password      ${editprofile_input_confirmpass}    ${confirmpass}
-    sleep                       1s
 
 Save profile
-    sleep               1s
     Click Element       ${editprofile_btn_save}
+    sleep               1s
 
 Save profileandpassword
-    sleep                1s
     Click Element       ${editprofile_btn_savepass}
+    sleep                1s
 
 Change password
-    sleep                1s
     Click Element       ${editprofile_changepass}
+    sleep                1s
 
 The alert message must say "${message}"
-    sleep                       1s
     Wait Until Page Contains    ${message}
 
 *** Test Cases ***
@@ -78,7 +75,7 @@ UMS-EditProfile-01-01
     AND Fill firstname "Namchok"
     AND Fill lastname "Singhachai"
     AND Save profile
-    THEN The alert message must say "User profile update successfully!"
+    THEN The alert message must say "Edit profile successfully!"
     [Teardown]    Close Browser
 UMS-EditProfile-01-02
     [Documentation]     กรอกชื่อจริงและนามสกุลไม่ถูกต้อง
@@ -161,7 +158,7 @@ UMS-EditProfile-02-01
     AND Fill newpass "123qweQ!"
     AND Fill confirmpass "123qweQ!"
     AND Save profileandpassword
-    THEN The alert message must say "User profile update successfully!"
+    THEN The alert message must say "Edit profile successfully!"
     [Teardown]    Close Browser
 UMS-EditProfile-02-02
     [Documentation]     กรอกชื่อจริง นามสกุล รหัสผ่านปัจจุบัน รหัสผ่านใหม่ และยืนยันรหัสผ่านไม่ถูกต้อง

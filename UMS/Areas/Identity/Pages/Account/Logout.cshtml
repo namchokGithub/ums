@@ -1,19 +1,19 @@
 ﻿@page
 @model LogoutModel
 @{
+    /*
+        Namespace: ~/Areas/Identity/Pages/Account/Logout.cshtml
+        Author: Namchok Singhachai
+        Description: Logged out page.
+    */
     ViewData["Title"] = "Logged out";
+    Layout = "~/Areas/Identity/Pages/_AuthLayout.cshtml";
     string URL = "~/";
-    if (ViewData["URL"].ToString()!=null && ViewData["URL"].ToString() != "")
+    if (ViewData["URL"].ToString() != null && ViewData["URL"].ToString() != "")
     {
         URL = ViewData["URL"].ToString();
     }
-    Layout = "~/Areas/Identity/Pages/_AuthLayout.cshtml";
 }
-@*
-    Namespace: ~/Areas/Identity/Pages/Account/Logout.cshtml
-    Author: Namchok Singhachai
-    Description: Show when logged out.
-*@
 <div class="hold-transition login-page">
     <div class="login-box">
         <h3 class="login-box-msg">User Management System</h3>
@@ -44,7 +44,9 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
     <script>
-        @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ };
+        $(document).ready(function () {
+            @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"])}; // Check is has exception
+        });
     </script>
 }
 <!--End Script-->

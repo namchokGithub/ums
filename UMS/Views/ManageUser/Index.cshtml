@@ -1,17 +1,17 @@
-﻿@*
-    Namspace: ~/View/ManageUser/Index.cshtml
-    Author: Namchok Singhachai
-    Description: The view for user management.
-*@
-@model UMS.Models.Account
+﻿@model Management
 @{
+    /*
+        Namspace: ~/View/ManageUser/Index.cshtml
+        Author: Namchok Singhachai
+        Description: The view for user management.
+    */
     ViewData["Title"] = "Manage User";                  // Set title
     Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";  // Set layout
     var id = ViewData["UserId"];
 }
-
 <!-- Content -->
-<div class="mx-auto"><br />
+<div class="mx-auto">
+    <br />
     <!--Start Card-->
     <div class="card card-info">
         <!--Start Card header-->
@@ -44,7 +44,7 @@
                                 @{ int index = 0; /* For show order in table */ }
                                 @if (ViewData["User"] != null)
                                 {
-                                    @foreach (var item in ViewData["User"] as List<Account>)
+                                    @foreach (var item in ViewData["User"] as List<Management>)
                                     {
                                         if (id.ToString() != item.acc_Id)
                                         {
@@ -109,14 +109,14 @@
                             <div class="form-group">
                                 <label asp-for="acc_Firstname">First Name</label> <code>*</code>
                                 <input asp-for="acc_Firstname" class="form-control"
-                                    id="acc_Firstname" placeholder="First name">
+                                       id="acc_Firstname" placeholder="First name">
                                 <span asp-validation-for="acc_Firstname" class="text-danger"></span>
                             </div>
 
                             <div class="form-group">
                                 <label asp-for="acc_Lastname">Last Name</label> <code>*</code>
                                 <input asp-for="acc_Lastname" class="form-control"
-                                    id="acc_Lastname" placeholder="Last name">
+                                       id="acc_Lastname" placeholder="Last name">
                                 <span asp-validation-for="acc_Lastname" class="text-danger"></span>
                             </div>
 
@@ -197,7 +197,7 @@
                         error: function (result) {
                             let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : '' // Set message status
                             let _text = 'Status : ' + result.status  + statusResText
-                            console.log(`${result}`); // Show log of error
+                            console.log(result); // Show log of error
                             toastr.error(`${_text}`);
                         } // if error
                     }).done(function () {
@@ -250,7 +250,7 @@
                     // Set message status
                     let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
                     let _text = 'Status : ' + result.status + statusResText
-                    console.log(`${result}`); // show log of error
+                    console.log(result); // show log of error
                     toastr.error(`${_text}`);
                 } // End error
             }) // End ajax for get user by id and set to form

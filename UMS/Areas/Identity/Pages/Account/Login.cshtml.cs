@@ -1,25 +1,25 @@
 ﻿using System;
-using UMS.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
-using UMS.Controllers;
 using System.Threading.Tasks;
-using UMS.Areas.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
+using UMS.Data;
 using Microsoft.Extensions.Logging;
 using System.Security.Cryptography;
 using Microsoft.AspNetCore.Identity;
+using UMS.Controllers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
+using UMS.Areas.Identity.Data;
 
 /*
  * Name: LoginModel.cs (Extend: PageModel)
- * Namespace: UMS.Areas.Identity.Pages.Account
+ * Auther: Namchok Singhachai
  * Description : The authentication for login.
  */
 
@@ -28,10 +28,10 @@ namespace UMS.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class LoginModel : PageModel
     {
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
         private readonly ManageUserController _manageUser;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
         /*
          * Name: LoginModel
          * Parameter: context (AuthDbContext), signInManager (SignInManager<ApplicationUser>), logger (ILogger<LoginModel>), 
@@ -42,30 +42,19 @@ namespace UMS.Areas.Identity.Pages.Account
             ILogger<LoginModel> logger, ILogger<ManageUserController> loggerManageUser,
             UserManager<ApplicationUser> userManager)
         {
-            try
-            {
-                _userManager = userManager;
-                _signInManager = signInManager;
-                _logger = logger;
-                _manageUser = new ManageUserController(context, loggerManageUser);
-                _logger.LogDebug("Start login model.");
-            }
-            catch (Exception e)
-            {
-                _logger.LogError(e.Message.ToString());
-                _logger.LogTrace("End login model.");
-            }// End try catch
+            _logger = logger;
+            _userManager = userManager;
+            _signInManager = signInManager;
+            _manageUser = new ManageUserController(context, loggerManageUser);
+            _logger.LogDebug("Start login model.");
         } // End constructor
-
-        [BindProperty]
-        public InputModel Input { get; set; }
-
-        public IList<AuthenticationScheme> ExternalLogins { get; set; }
-
-        public string ReturnUrl { get; set; }
 
         [TempData]
         public string ErrorMessage { get; set; }
+        [BindProperty]
+        public InputModel Input { get; set; }
+        public string ReturnUrl { get; set; }
+        public IList<AuthenticationScheme> ExternalLogins { get; set; }
 
         /*
          * Name: InputModel
@@ -104,7 +93,7 @@ namespace UMS.Areas.Identity.Pages.Account
                 if (User.Identity.IsAuthenticated)
                 {
                     _logger.LogInformation("User is authenticated.");
-                    Response.Redirect("/");
+                    Response.Redirect($"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}");
                 } // Check if logged in
                 if (!string.IsNullOrEmpty(ErrorMessage))
                 {
@@ -122,7 +111,7 @@ namespace UMS.Areas.Identity.Pages.Account
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true })";
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/").Replace("`", "'") + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End login on get.");
             } // End try catch
         } // End OnGetAsync
@@ -130,7 +119,7 @@ namespace UMS.Areas.Identity.Pages.Account
         /*
          * Name: OnPostAsync
          * Parameter: returnUrl(string)
-         * Description: The log into this system.
+         * Description: The login to this system.
          */
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
@@ -151,7 +140,7 @@ namespace UMS.Areas.Identity.Pages.Account
                             await _manageUser.DeleteUser(user.Id);
                             _logger.LogInformation("Change status Inactive to active user.");
                         } // End check status
-                        _logger.LogInformation("User logged in.");
+                        _logger.LogInformation("User logged in successfully.");
 
                         string nameCookies = StringEncryptor.EncryptString("usermanagementsystem2020", "remembermeums");
                         if (Input.RememberMe)
@@ -171,34 +160,33 @@ namespace UMS.Areas.Identity.Pages.Account
 
                         _logger.LogTrace("End login on post.");
                         return LocalRedirect(returnUrl);
-                    } // If login success
-                    else if (result.IsLockedOut)
-                    {
-                        _logger.LogWarning("User account locked out.");
-                        _logger.LogTrace("End login on post.");
-                        return RedirectToPage("/Lockout");
-                    }
+                    } // If user logged in successfully
                     else
                     {
                         _logger.LogWarning("Your email or password is not valid.");
                         ModelState.AddModelError(string.Empty, "Your email or password is not valid.");
-                        // Send alert to home pages
-                        TempData["ExceptionInValid"] = "InValid";
+                        TempData["ExceptionInValid"] = "InValid"; // Send alert to home pages
                         _logger.LogTrace("End login on post.");
                         return Page();
                     } // If Loged out
-                } // End if check modelState
+                } // End if check model state
                 _logger.LogTrace("End login on post.");
                 return Page();
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true })";
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/").Replace("`", "'") + @"`, showConfirmButton: true })";
                 _logger.LogTrace("End login on post.");
                 return Page();
             } // End try catch
         } // End OnPostAsync
 
+        /*
+         * Name: StringEncryptor
+         * Auther: Namchok Singhachai
+         * Description : The encryption and decryption
+         */
         public class StringEncryptor
         {
             /*
@@ -215,16 +203,13 @@ namespace UMS.Areas.Identity.Pages.Account
                 {
                     aes.Key = Encoding.UTF8.GetBytes(key);
                     aes.IV = iv;
-
                     ICryptoTransform encryptor = aes.CreateEncryptor(aes.Key, aes.IV);
-
                     using MemoryStream memoryStream = new MemoryStream();
                     using CryptoStream cryptoStream = new CryptoStream((Stream)memoryStream, encryptor, CryptoStreamMode.Write);
                     using (StreamWriter streamWriter = new StreamWriter((Stream)cryptoStream))
                     {
                         streamWriter.Write(plainText);
                     }
-
                     array = memoryStream.ToArray();
                 }
 

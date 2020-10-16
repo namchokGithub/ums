@@ -1,9 +1,9 @@
 ﻿using System;
-using UMS.Models;
 using System.Diagnostics;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using UMS.Models;
 using Microsoft.AspNetCore.Authorization;
 
 /*
@@ -22,20 +22,11 @@ namespace UMS.Controllers
          * Name: HomeController
          * Parameter: logger(ILogger<HomeController>)
          * Author: Wannapa Srijermtong
-         * Description: The controller for manage a home page.
          */
         public HomeController(ILogger<HomeController> logger)
         {
-            try
-            {
-                _logger = logger;
-                _logger.LogTrace("Start home controller.");
-            }
-            catch (Exception e)
-            {
-                _logger.LogError(e.Message.ToString());
-                _logger.LogTrace("End home controller.");
-            }// End try catch
+            _logger = logger;
+            _logger.LogTrace("Start home controller.");
         } // End HomeController
 
         /*
@@ -48,8 +39,8 @@ namespace UMS.Controllers
             try
             {
                 _logger.LogTrace("Start home index.");
-                _logger.LogInformation($"Welcome {User.Identity.Name} to UMS.");
-                _logger.LogTrace("Finding user ID.");
+                _logger.LogInformation($"Welcome, {User.Identity.Name}.");
+                _logger.LogTrace("Finding a user ID.");
                 ViewData["UserId"] = User.FindFirstValue(ClaimTypes.NameIdentifier) ?? throw new Exception("The user ID not found !.");
                 _logger.LogTrace("End home index.");
                 return View();

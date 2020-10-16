@@ -1,52 +1,55 @@
 ﻿@page
 @model RegisterModel
 @{
+    /*
+     * Name: Register.cshtml
+     * Namespace: ~/Area/Identity/Pages/Account
+     * Description: The registraion page.
+    */
     ViewData["Title"] = "Register";
     Layout = "~/Views/Shared/_Layout.cshtml";
     string URL = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
 }
-
-@*
-    Name: Register.cshtml
-    Namespace: ~/Area/Identity/Pages/Account
-    Description: The registraion page.
-*@
-
 <!--Start Style-->
 <style>
     #btn_back {
         width: 60px;
     }
-    #overlay{
-	    position: fixed;
-	    top: 0;
-	    z-index: 100;
-	    width: 100%;
-	    height:100%;
-	    display: none;
-	    background: rgba(0,0,0,0.05);
+
+    #overlay {
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+        display: none;
+        background: rgba(0,0,0,0.05);
     }
+
     .cv-spinner {
-	    height: 100%;
-	    display: flex;
-	    justify-content: center;
-	    align-items: center;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
     .spinner {
-	    width: 40px;
-	    height: 40px;
-	    border: 4px #ddd solid;
-	    border-top: 4px #2e93e6 solid;
-	    border-radius: 50%;
-	    animation: sp-anime 0.8s infinite linear;
+        width: 40px;
+        height: 40px;
+        border: 4px #ddd solid;
+        border-top: 4px #2e93e6 solid;
+        border-radius: 50%;
+        animation: sp-anime 0.8s infinite linear;
     }
+
     @@keyframes sp-anime {
-	    100% {
-		    transform: rotate(360deg);
-	    }
+        100% {
+            transform: rotate(360deg);
+        }
     }
-    .is-hide{
-	    display:none;
+
+    .is-hide {
+        display: none;
     }
 </style>
 <!--End Style-->
@@ -125,7 +128,7 @@
     <partial name="_ValidationScriptsPartial" />
     <script>
         $(document).ajaxSend(function () {
-            $("#overlay").fadeIn(300);
+            $("#overlay").fadeIn(200);
         });
         //Regular expression
         var RegExName = /^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$/;
@@ -177,18 +180,18 @@
                                             Swal.fire({
                                                 icon: 'error',
                                                 title: 'This user has been taken.',
-                                            })
+                                            });
                                             $('#formRegister').trigger("reset");
-                                        }
+                                        } // Checking result
                                     })
                                 } else {
                                     if (RegExName.test(acc_Firstname), RegExName.test(acc_Lastname), RegExPassword.test(Password)
                                         , RegExPassword.test(ConfirmPassword), RegEmail.test(Email), Password === ConfirmPassword
                                     ) {
                                         console.log("Submitting.");
-                                        $('#formRegister').submit()
+                                        $('#formRegister').submit();
                                     } else {
-                                        console.log(userIsExist);
+                                        console.log(userIsExist);;
                                         console.log("Invalid Input.");
                                     } // End check input
                                 }
@@ -200,63 +203,25 @@
                         error: function (result) {
                             let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : '' // Set message status
                             let _text = 'Status : ' + result.status + statusResText
-                            console.log(result) // show log of error
-                            console.log(_text)
-                            toastr.error(_text)
+                            console.log(result); // show log of error
+                            console.log(`${_text}`);
+                            toastr.error(`${_text}`);
                         } // End error
                     }).done(function () {
                         setTimeout(function () {
-                            $("#overlay").fadeOut(100);
+                            $("#overlay").fadeOut(80);
                         }, 100);
                     }); // End ajax for check user exits
                 } // End if check input
             } catch {
-                console.log(err.message)
-                toastr.error(err.message)
+                console.log(`${err.message}`);
+                toastr.error(`${err.message}`);
             }
         } // End register
 
         $(document).ready(() => {
-            @if (TempData["Exception"] != null) {@Html.Raw(TempData["Exception"])/* Swal funciton */ }; // Check is has exception
+            @if (TempData["Exception"] != null) {@Html.Raw(TempData["Exception"])}; // Check is has exception
         });
-
-        /*
-        * Name: togglePasword()
-        * Author: Wannapa Srijermtong
-        * Description: Changing show of a password.
-        */
-        function togglePasword() {
-            // Get id from input
-            var password = document.getElementById("acc_Password")
-            if (password.type === "password") {
-                document.getElementById("icon_Password").classList.remove('fa-eye-slash')
-                document.getElementById("icon_Password").classList.add('fa-eye')
-                password.type = "text";
-            } else {
-                document.getElementById("icon_Password").classList.remove('fa-eye')
-                document.getElementById("icon_Password").classList.add('fa-eye-slash')
-                password.type = "password";
-            }
-        } // End togglePasword
-
-        /*
-        * Name: toggleConfirmPasword()
-        * Author: Wannapa Srijermtong
-        * Description: Checking show of a confirm password.
-        */
-        function toggleConfirmPasword() {
-            // Get id from input
-            var password = document.getElementById("acc_ConfirmPassword")
-            if (password.type === "password") {
-                document.getElementById("icon_ConfirmPassword").classList.remove('fa-eye-slash')
-                document.getElementById("icon_ConfirmPassword").classList.add('fa-eye')
-                password.type = "text";
-            } else {
-                document.getElementById("icon_ConfirmPassword").classList.remove('fa-eye')
-                document.getElementById("icon_ConfirmPassword").classList.add('fa-eye-slash')
-                password.type = "password";
-            }
-        } // End toggleConfirmPasword
 
         /*
         * Name: checkUser()
@@ -272,25 +237,23 @@
                     type: "POST",
                     dataType: "JSON",
                     success: function (res) {
-                        // If res qual 1 is the user is exits
                         if (res) {
                             $('#alert_acc_email').removeClass('d-none')
                             console.log('This email has been  exist.')
                         } else {
                             $('#alert_acc_email').addClass('d-none')
                             console.log('No user name is exits.')
-                        } // End if
+                        } // If res qual 1 is the user is exits
                     },
                     error: function (result) {
                         let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
                         let _text = 'Status : ' + result.status + statusResText
-                        console.log(`${result}`) // show log of error
                         Swal.fire({ icon: 'error', title: 'Error !', text: `${_text}`, showConfirmButton: true });
                         toastr.error(`${_text}`);
                     } // End error
                 }).done(function () {
                     setTimeout(function () {
-                        $("#overlay").fadeOut(100);
+                        $("#overlay").fadeOut(80);
                     }, 100);
                 }); // End ajax for check user exits
             } catch (err) {

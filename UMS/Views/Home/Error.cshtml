@@ -1,13 +1,13 @@
-﻿@{
+﻿@model ErrorViewModel
+@{
+    /*
+        Namespace: ~/Areas/Identity/Pages/Account/Error.cshtml
+        Author: Namchok Singhachai
+        Description: Error page.
+    */
     ViewData["Title"] = "Access Denied";
     string URL = ViewData["URLLOGOUT"].ToString();
 }
-@model ErrorViewModel
-@*
-    Namespace: ~/Areas/Identity/Pages/Account/Access Denied.cshtml
-    Author: Namchok Singhachai
-    Description: Access Denied page.
-*@
 <!-- Content -->
 <div class="hold-transition login-page">
     <div class="login-box mx-auto mt-2 mt-lg-3">
@@ -39,5 +39,8 @@
 <!--Start Script-->
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+    <script>
+        @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"])};
+    </script>
 }
 <!--End Script-->

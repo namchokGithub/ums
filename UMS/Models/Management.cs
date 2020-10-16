@@ -3,15 +3,9 @@ using System.Diagnostics.CodeAnalysis;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-/*
- * Namspace: ~/Models/Account
- * Author: Namchok Singhachai
- * Description: Model for table dbo.Account.
- */
-
 namespace UMS.Models
 {
-    public class Account
+    public class Management
     {
         [Key]
         public string acc_Id { set; get; } // ไอดี
@@ -58,11 +52,8 @@ namespace UMS.Models
         [Column(TypeName = "char(1)")]
         public char acc_IsActive { set; get; } // สถานะของบัญชีผู้ใช้
         [AllowNull]
-        [NotMapped]
         public string acc_Rolename { set; get; } // ชื่อตำแหน่งของผู้ใช้งาน
         [AllowNull]
-        [NotMapped]
         public string acc_TypeAccoutname { set; get; } // ชื่อประเภทของผู้ใช้งาน
-
-    } // End Account 
+    } // End Management
 }

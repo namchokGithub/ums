@@ -5,8 +5,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 /*
  * Name: ApplicationUser (Extend: IdentityUser)
- * Namespace: ~/Area/Identity/Data
- * Description: User Identity model for this application.
+ * Author: Namchok Singhachai
+ * Description: User identity model for this application.
  */
 
 namespace UMS.Areas.Identity.Data

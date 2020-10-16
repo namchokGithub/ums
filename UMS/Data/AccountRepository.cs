@@ -1,11 +1,11 @@
 ﻿using System;
-using UMS.Models;
 using System.Linq;
 using System.Data;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using UMS.Models;
 
 /*
  * Name: AccountRepository
@@ -15,7 +15,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace UMS.Data
 {
-    public class AccountRepository : Repository<Account>, IAccountRepository
+    public class AccountRepository : Repository<Management>, IAccountRepository
     {
         protected readonly AuthDbContext _context;
         /*
@@ -69,9 +69,9 @@ namespace UMS.Data
          * Author: Namchok Singhachai
          * Description: The getting list of all users.
          */
-        public List<Account> GetAll()
+        public List<Management> GetAll()
         {
-            return _context.Account.FromSqlRaw("EXEC [dbo].ums_Get_all_active_user").ToList<Account>();
+            return _context.Management.FromSqlRaw("EXEC [dbo].ums_Get_all_active_user").ToList<Management>();
         } // End get all
 
         /*
@@ -79,9 +79,9 @@ namespace UMS.Data
          * Author: Namchok Singhachai
          * Description: The getting list of all users.
          */
-        public async Task<List<Account>> GetAllAsync()
+        public async Task<List<Management>> GetAllAsync()
         {
-            return await _context.Account.FromSqlRaw("EXEC [dbo].ums_Get_all_active_user").ToListAsync<Account>();
+            return await _context.Management.FromSqlRaw("EXEC [dbo].ums_Get_all_active_user").ToListAsync<Management>();
         } // End GetAllAsync
 
         /*
@@ -90,9 +90,9 @@ namespace UMS.Data
          * Author: Namchok Singhachai
          * Description: The getting a user is already active on the system by id.
          */
-        public Account GetByID(string id)
+        public Management GetByID(string id)
         {
-            return _context.Account.FromSqlRaw($"EXEC [dbo].ums_Get_user_by_Id '{id}'").AsEnumerable<Account>().FirstOrDefault();
+            return _context.Management.FromSqlRaw($"EXEC [dbo].ums_Get_user_by_Id '{id}'").AsEnumerable<Management>().FirstOrDefault();
         } // End GetByID
 
         /*
@@ -101,10 +101,10 @@ namespace UMS.Data
          * Author: Namchok Singhachai
          * Description: The getting a user is already active on the system by id.
          */
-        public async Task<Account> GetByIDAsync(string id)
+        public async Task<Management> GetByIDAsync(string id)
         {
-            var result = await _context.Account.FromSqlRaw($"EXEC [dbo].ums_Get_user_by_Id '{id}'").ToListAsync();
-            return result.FirstOrDefault<Account>();
+            var result = await _context.Management.FromSqlRaw($"EXEC [dbo].ums_Get_user_by_Id '{id}'").ToListAsync();
+            return result.FirstOrDefault<Management>();
         } // End GetByIDAsync
 
         /*
@@ -172,7 +172,7 @@ namespace UMS.Data
          * Parameter: _account(Account)
          * Description: The user profile editing (Name).
          */
-        public void UpdateName(Account _account)
+        public void UpdateName(Management _account)
         {
             _context.Database.ExecuteSqlRaw($"ums_Update_name_user '{_account.acc_Id}', '{_account.acc_Firstname}', '{_account.acc_Lastname}'");
         } // End UpdateName
@@ -182,7 +182,7 @@ namespace UMS.Data
          * Parameter: _account(Account)
          * Description: The user profile editing (Name).
          */
-        public async Task UpdateNameAsync(Account _account)
+        public async Task UpdateNameAsync(Management _account)
         {
             await _context.Database.ExecuteSqlRawAsync($"ums_Update_name_user '{ _account.acc_Id}', '{ _account.acc_Firstname}', '{ _account.acc_Lastname}'");
         } // End UpdateNameAsync
@@ -192,7 +192,7 @@ namespace UMS.Data
          * Parameter: _account(Account)
          * Description: The user profile editing (Name and Password).
          */
-        public void UpdateNameAndPassword(Account _account)
+        public void UpdateNameAndPassword(Management _account)
         {
             _context.Database.ExecuteSqlRaw($"ums_Update_all '{ _account.acc_Id}', '{ _account.acc_Firstname}', '{ _account.acc_Lastname}', '{ _account.acc_PasswordHash}'");
         } // End UpdateNameAndPassword
@@ -202,7 +202,7 @@ namespace UMS.Data
          * Parameter: _account(Account)
          * Description: The user profile editing (Name and Password).
          */
-        public async Task UpdateNameAndPasswordAsync(Account _account)
+        public async Task UpdateNameAndPasswordAsync(Management _account)
         {
             await _context.Database.ExecuteSqlRawAsync($"ums_Update_all '{ _account.acc_Id}', '{ _account.acc_Firstname}', '{ _account.acc_Lastname}', '{ _account.acc_PasswordHash}'");
         } // End UpdateNameAndPasswordAsync
@@ -212,7 +212,7 @@ namespace UMS.Data
          * Parameter: _account(Account)
          * Description: The user profile editing (Role).
          */
-        public void UpdateRole(Account _account)
+        public void UpdateRole(Management _account)
         {
             _context.Database.ExecuteSqlRaw($"ums_Update_role_user '{_account.acc_Id}', '{_account.acc_Rolename}'");
         } // End UpdateRole
@@ -222,7 +222,7 @@ namespace UMS.Data
          * Parameter: _account(Account)
          * Description: The user profile editing (Role).
          */
-        public async Task UpdateRoleAsync(Account _account)
+        public async Task UpdateRoleAsync(Management _account)
         {
             await _context.Database.ExecuteSqlRawAsync($"ums_Update_role_user '{_account.acc_Id}', '{_account.acc_Rolename}'");
         } // End UpdateRoleAsync

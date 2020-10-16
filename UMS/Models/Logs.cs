@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Threading.Tasks;
 
 /*
  * Name: LogAccount.cs
- * Namespace: Models
  * Author: Namchok Singhachai
- * Description: Model of log account
+ * Description: Model of table log.
  */
 
 namespace UMS.Models
@@ -23,7 +19,6 @@ namespace UMS.Models
 
         [DataType(DataType.Date)]
         [Column(TypeName = "datetime")]
-        // [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime log_datetime { set; get; }
 
         [AllowNull]
@@ -56,10 +51,6 @@ namespace UMS.Models
         [Column(TypeName = "nvarchar(256)")]
         public string log_mvc_action { set; get; }
 
-        //[AllowNull]
-        //[Column(TypeName = "nvarchar(256)")]
-        //public string log_mvc_controller { set; get; }
-
         [AllowNull]
         [Column(TypeName = "nvarchar(256)")]
         public string log_filename { set; get; }
@@ -67,6 +58,5 @@ namespace UMS.Models
         [AllowNull]
         [Column(TypeName = "nvarchar(256)")]
         public string log_linenumber { set; get; }
-
-    } // End Log
+    } // End Logs
 }

@@ -1,9 +1,7 @@
-﻿using System;
-
-/*
+﻿/*
  * Name : EmailConfiguration.cs
  * Author: Namchok Singhachai
- * Description: Configuration of Email service
+ * Description: Configuration for email service.
  */
 
 namespace EmailService

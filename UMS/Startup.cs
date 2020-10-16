@@ -1,7 +1,6 @@
 using System;
-using UMS.Data;
 using EmailService;
-using UMS.Controllers;
+using UMS.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
@@ -42,7 +41,11 @@ namespace UMS
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<ILogsRepository, LogsRepository>();
             services.AddScoped<IAccountRepository, AccountRepository>();
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            // Set connect database
+            services.AddDbContext<ManagementContext>(options =>
+                    options.UseSqlServer(
+                       Configuration.GetConnectionString("AuthDbContextConnection")));
 
             // Cookies
             services.ConfigureApplicationCookie(o =>
@@ -51,11 +54,6 @@ namespace UMS
                 o.SlidingExpiration = true;
                 o.ReturnUrlParameter = "/";
             });
-
-            // Set connect database          
-            services.AddDbContext<AccountContext>(options =>
-                    options.UseSqlServer(
-                       Configuration.GetConnectionString("AuthDbContextConnection")));
 
             // Service for send email
             var emailConfig = Configuration

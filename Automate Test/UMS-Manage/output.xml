@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.9.0 on win32)" generated="20201012 17:14:45.539" rpa="false">
+<robot generator="Robot 3.1.2 (Python 3.8.1 on win32)" generated="20201001 12:48:15.140" rpa="false">
 <suite id="s1" name="UMS-Manage" source="C:\Users\Namchok\Desktop\สหกิจ\ums\Automate Test\UMS-Manage\UMS-Manage.robot">
 <test id="s1-t1" name="UMS-Manage-01-01">
 <kw name="GIVEN Open web browser">
@@ -9,14 +9,14 @@
 <arg>${ums_url}</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20201012 17:14:45.833" level="INFO">Opening browser 'chrome' to base url 'https://localhost:44346/'.</msg>
-<status status="PASS" starttime="20201012 17:14:45.833" endtime="20201012 17:14:50.045"></status>
+<msg timestamp="20201001 12:48:15.325" level="INFO">Opening browser 'chrome' to base url 'https://localhost:44346/'.</msg>
+<status status="PASS" starttime="20201001 12:48:15.325" endtime="20201001 12:48:19.166"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20201012 17:14:50.046" endtime="20201012 17:14:52.181"></status>
+<status status="PASS" starttime="20201001 12:48:19.166" endtime="20201001 12:48:21.322"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:14:45.832" endtime="20201012 17:14:52.181"></status>
+<status status="PASS" starttime="20201001 12:48:15.325" endtime="20201001 12:48:21.322"></status>
 </kw>
 <kw name="WHEN Login with &quot;usermanagement2020@gmail.com&quot; &quot;123qweQ!&quot;">
 <kw name="Input Text" library="Selenium2Library">
@@ -25,8 +25,8 @@
 <arg>${ums_login_input_email}</arg>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20201012 17:14:52.183" level="INFO">Typing text 'usermanagement2020@gmail.com' into text field 'xpath=//*[@id="acc_Email"]'.</msg>
-<status status="PASS" starttime="20201012 17:14:52.182" endtime="20201012 17:14:52.441"></status>
+<msg timestamp="20201001 12:48:21.324" level="INFO">Typing text 'usermanagement2020@gmail.com' into text field 'xpath=//*[@id="acc_Email"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:21.323" endtime="20201001 12:48:21.426"></status>
 </kw>
 <kw name="Input Password" library="Selenium2Library">
 <doc>Types the given password into the text field identified by ``locator``.</doc>
@@ -34,28 +34,26 @@
 <arg>${ums_login_input_password}</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20201012 17:14:52.441" level="INFO">Typing password into text field 'xpath=//*[@id="acc_Password"]'.</msg>
-<msg timestamp="20201012 17:14:52.494" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20201012 17:14:52.570" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20201012 17:14:52.441" endtime="20201012 17:14:52.570"></status>
+<msg timestamp="20201001 12:48:21.426" level="INFO">Typing password into text field 'xpath=//*[@id="acc_Password"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:21.426" endtime="20201001 12:48:21.505"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201012 17:14:53.572" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201012 17:14:52.571" endtime="20201012 17:14:53.572"></status>
+<msg timestamp="20201001 12:48:22.509" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:48:21.505" endtime="20201001 12:48:22.509"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${ums_btn_login}</arg>
 </arguments>
-<msg timestamp="20201012 17:14:53.572" level="INFO">Clicking element 'xpath=//*[@id="account"]/div[3]/div[2]/button'.</msg>
-<status status="PASS" starttime="20201012 17:14:53.572" endtime="20201012 17:14:54.111"></status>
+<msg timestamp="20201001 12:48:22.509" level="INFO">Clicking element 'xpath=//*[@id="account"]/div[3]/div[2]/button'.</msg>
+<status status="PASS" starttime="20201001 12:48:22.509" endtime="20201001 12:48:22.796"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:14:52.182" endtime="20201012 17:14:54.111"></status>
+<status status="PASS" starttime="20201001 12:48:21.323" endtime="20201001 12:48:22.796"></status>
 </kw>
 <kw name="AND Go to Manage User">
 <kw name="Go To" library="Selenium2Library">
@@ -63,10 +61,10 @@
 <arguments>
 <arg>${ums_manage_url}</arg>
 </arguments>
-<msg timestamp="20201012 17:14:54.113" level="INFO">Opening url 'https://localhost:44346/ManageUser'</msg>
-<status status="PASS" starttime="20201012 17:14:54.112" endtime="20201012 17:14:54.471"></status>
+<msg timestamp="20201001 12:48:22.797" level="INFO">Opening url 'https://localhost:44346/ManageUser'</msg>
+<status status="PASS" starttime="20201001 12:48:22.797" endtime="20201001 12:48:22.971"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:14:54.112" endtime="20201012 17:14:54.471"></status>
+<status status="PASS" starttime="20201001 12:48:22.797" endtime="20201001 12:48:22.971"></status>
 </kw>
 <kw name="AND Edit">
 <kw name="Click Element" library="Selenium2Library">
@@ -74,18 +72,18 @@
 <arguments>
 <arg>${manage_btn_edit}</arg>
 </arguments>
-<msg timestamp="20201012 17:14:54.474" level="INFO">Clicking element 'xpath=//*[@id="showAllUserTable"]/tbody/tr[1]/td[7]/button[1]'.</msg>
-<status status="PASS" starttime="20201012 17:14:54.473" endtime="20201012 17:14:54.730"></status>
+<msg timestamp="20201001 12:48:22.972" level="INFO">Clicking element 'xpath=//*[@id="showAllUserTable"]/tbody/tr[1]/td[7]/button[1]'.</msg>
+<status status="PASS" starttime="20201001 12:48:22.972" endtime="20201001 12:48:23.024"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201012 17:14:55.735" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201012 17:14:54.731" endtime="20201012 17:14:55.735"></status>
+<msg timestamp="20201001 12:48:24.035" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:48:23.024" endtime="20201001 12:48:24.035"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:14:54.473" endtime="20201012 17:14:55.735"></status>
+<status status="PASS" starttime="20201001 12:48:22.972" endtime="20201001 12:48:24.035"></status>
 </kw>
 <kw name="AND Fill firstname &quot;Athiruj&quot;">
 <kw name="Input Text" library="Selenium2Library">
@@ -94,10 +92,10 @@
 <arg>${manage_input_name}</arg>
 <arg>${firstname}</arg>
 </arguments>
-<msg timestamp="20201012 17:14:55.738" level="INFO">Typing text 'Athiruj' into text field 'xpath=//*[@id="acc_Firstname"]'.</msg>
-<status status="PASS" starttime="20201012 17:14:55.737" endtime="20201012 17:14:55.938"></status>
+<msg timestamp="20201001 12:48:24.036" level="INFO">Typing text 'Athiruj' into text field 'xpath=//*[@id="acc_Firstname"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:24.036" endtime="20201001 12:48:24.120"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:14:55.736" endtime="20201012 17:14:55.938"></status>
+<status status="PASS" starttime="20201001 12:48:24.036" endtime="20201001 12:48:24.120"></status>
 </kw>
 <kw name="AND Fill lastname &quot;LastAthiruj&quot;">
 <kw name="Input Text" library="Selenium2Library">
@@ -106,10 +104,10 @@
 <arg>${manage_input_lastname}</arg>
 <arg>${lastname}</arg>
 </arguments>
-<msg timestamp="20201012 17:14:55.940" level="INFO">Typing text 'LastAthiruj' into text field 'xpath=//*[@id="acc_Lastname"]'.</msg>
-<status status="PASS" starttime="20201012 17:14:55.940" endtime="20201012 17:14:56.166"></status>
+<msg timestamp="20201001 12:48:24.121" level="INFO">Typing text 'LastAthiruj' into text field 'xpath=//*[@id="acc_Lastname"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:24.121" endtime="20201001 12:48:24.205"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:14:55.939" endtime="20201012 17:14:56.166"></status>
+<status status="PASS" starttime="20201001 12:48:24.121" endtime="20201001 12:48:24.205"></status>
 </kw>
 <kw name="AND Select role &quot;2&quot;">
 <kw name="Select From List By Value" library="Selenium2Library">
@@ -118,10 +116,10 @@
 <arg>${manage_input_role}</arg>
 <arg>${role_value}</arg>
 </arguments>
-<msg timestamp="20201012 17:14:56.171" level="INFO">Selecting options from selection list 'xpath=//*[@id="acc_RoleId"]' by value 2.</msg>
-<status status="PASS" starttime="20201012 17:14:56.170" endtime="20201012 17:14:56.283"></status>
+<msg timestamp="20201001 12:48:24.206" level="INFO">Selecting options from selection list 'xpath=//*[@id="acc_RoleId"]' by value 2.</msg>
+<status status="PASS" starttime="20201001 12:48:24.206" endtime="20201001 12:48:24.244"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:14:56.169" endtime="20201012 17:14:56.284"></status>
+<status status="PASS" starttime="20201001 12:48:24.205" endtime="20201001 12:48:24.244"></status>
 </kw>
 <kw name="AND Save edit user">
 <kw name="Sleep" library="BuiltIn">
@@ -129,38 +127,38 @@
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201012 17:14:57.287" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201012 17:14:56.285" endtime="20201012 17:14:57.287"></status>
+<msg timestamp="20201001 12:48:25.257" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:48:24.245" endtime="20201001 12:48:25.257"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${manage_btn_edit_save}</arg>
 </arguments>
-<msg timestamp="20201012 17:14:57.287" level="INFO">Clicking element 'xpath=//*[@id="EditUser"]/div/div/div[3]/button[2]'.</msg>
-<status status="PASS" starttime="20201012 17:14:57.287" endtime="20201012 17:14:57.916"></status>
+<msg timestamp="20201001 12:48:25.257" level="INFO">Clicking element 'xpath=//*[@id="EditUser"]/div/div/div[3]/button[2]'.</msg>
+<status status="PASS" starttime="20201001 12:48:25.257" endtime="20201001 12:48:25.486"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:14:56.285" endtime="20201012 17:14:57.917"></status>
+<status status="PASS" starttime="20201001 12:48:24.245" endtime="20201001 12:48:25.486"></status>
 </kw>
-<kw name="THEN The alert message must say &quot;Update user successfully!&quot;">
+<kw name="THEN The alert message must say &quot;Update user account successfully!&quot;">
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<status status="PASS" starttime="20201012 17:14:57.964" endtime="20201012 17:14:58.101"></status>
+<status status="PASS" starttime="20201001 12:48:25.487" endtime="20201001 12:48:25.499"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:14:57.963" endtime="20201012 17:14:58.102"></status>
+<status status="PASS" starttime="20201001 12:48:25.486" endtime="20201001 12:48:25.499"></status>
 </kw>
 <kw name="Close Browser" library="Selenium2Library" type="teardown">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20201012 17:14:58.105" endtime="20201012 17:15:01.609"></status>
+<status status="PASS" starttime="20201001 12:48:25.500" endtime="20201001 12:48:27.619"></status>
 </kw>
 <doc>กรอกชื่อจริง นามสกุล และเลือกบทบาทผู้ใช้งานถูกต้อง</doc>
 <tags>
 <tag>PASS</tag>
 </tags>
-<status status="PASS" starttime="20201012 17:14:45.831" endtime="20201012 17:15:01.610" critical="yes"></status>
+<status status="PASS" starttime="20201001 12:48:15.323" endtime="20201001 12:48:27.621" critical="yes"></status>
 </test>
 <test id="s1-t2" name="UMS-Manage-01-02">
 <kw name="GIVEN Open web browser">
@@ -170,14 +168,14 @@
 <arg>${ums_url}</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20201012 17:15:01.621" level="INFO">Opening browser 'chrome' to base url 'https://localhost:44346/'.</msg>
-<status status="PASS" starttime="20201012 17:15:01.620" endtime="20201012 17:15:06.052"></status>
+<msg timestamp="20201001 12:48:27.629" level="INFO">Opening browser 'chrome' to base url 'https://localhost:44346/'.</msg>
+<status status="PASS" starttime="20201001 12:48:27.629" endtime="20201001 12:48:31.276"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20201012 17:15:06.053" endtime="20201012 17:15:08.197"></status>
+<status status="PASS" starttime="20201001 12:48:31.276" endtime="20201001 12:48:33.414"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:01.620" endtime="20201012 17:15:08.197"></status>
+<status status="PASS" starttime="20201001 12:48:27.629" endtime="20201001 12:48:33.414"></status>
 </kw>
 <kw name="WHEN Login with &quot;usermanagement2020@gmail.com&quot; &quot;123qweQ!&quot;">
 <kw name="Input Text" library="Selenium2Library">
@@ -186,8 +184,8 @@
 <arg>${ums_login_input_email}</arg>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:08.199" level="INFO">Typing text 'usermanagement2020@gmail.com' into text field 'xpath=//*[@id="acc_Email"]'.</msg>
-<status status="PASS" starttime="20201012 17:15:08.199" endtime="20201012 17:15:08.421"></status>
+<msg timestamp="20201001 12:48:33.415" level="INFO">Typing text 'usermanagement2020@gmail.com' into text field 'xpath=//*[@id="acc_Email"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:33.415" endtime="20201001 12:48:33.510"></status>
 </kw>
 <kw name="Input Password" library="Selenium2Library">
 <doc>Types the given password into the text field identified by ``locator``.</doc>
@@ -195,28 +193,26 @@
 <arg>${ums_login_input_password}</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:08.422" level="INFO">Typing password into text field 'xpath=//*[@id="acc_Password"]'.</msg>
-<msg timestamp="20201012 17:15:08.481" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20201012 17:15:08.575" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20201012 17:15:08.421" endtime="20201012 17:15:08.576"></status>
+<msg timestamp="20201001 12:48:33.510" level="INFO">Typing password into text field 'xpath=//*[@id="acc_Password"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:33.510" endtime="20201001 12:48:33.584"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201012 17:15:09.577" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201012 17:15:08.576" endtime="20201012 17:15:09.577"></status>
+<msg timestamp="20201001 12:48:34.598" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:48:33.584" endtime="20201001 12:48:34.598"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${ums_btn_login}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:09.577" level="INFO">Clicking element 'xpath=//*[@id="account"]/div[3]/div[2]/button'.</msg>
-<status status="PASS" starttime="20201012 17:15:09.577" endtime="20201012 17:15:10.245"></status>
+<msg timestamp="20201001 12:48:34.598" level="INFO">Clicking element 'xpath=//*[@id="account"]/div[3]/div[2]/button'.</msg>
+<status status="PASS" starttime="20201001 12:48:34.598" endtime="20201001 12:48:34.898"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:08.198" endtime="20201012 17:15:10.246"></status>
+<status status="PASS" starttime="20201001 12:48:33.415" endtime="20201001 12:48:34.898"></status>
 </kw>
 <kw name="AND Go to Manage User">
 <kw name="Go To" library="Selenium2Library">
@@ -224,10 +220,10 @@
 <arguments>
 <arg>${ums_manage_url}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:10.255" level="INFO">Opening url 'https://localhost:44346/ManageUser'</msg>
-<status status="PASS" starttime="20201012 17:15:10.255" endtime="20201012 17:15:10.624"></status>
+<msg timestamp="20201001 12:48:34.899" level="INFO">Opening url 'https://localhost:44346/ManageUser'</msg>
+<status status="PASS" starttime="20201001 12:48:34.899" endtime="20201001 12:48:35.060"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:10.254" endtime="20201012 17:15:10.625"></status>
+<status status="PASS" starttime="20201001 12:48:34.899" endtime="20201001 12:48:35.061"></status>
 </kw>
 <kw name="AND Edit">
 <kw name="Click Element" library="Selenium2Library">
@@ -235,18 +231,18 @@
 <arguments>
 <arg>${manage_btn_edit}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:10.634" level="INFO">Clicking element 'xpath=//*[@id="showAllUserTable"]/tbody/tr[1]/td[7]/button[1]'.</msg>
-<status status="PASS" starttime="20201012 17:15:10.634" endtime="20201012 17:15:11.107"></status>
+<msg timestamp="20201001 12:48:35.062" level="INFO">Clicking element 'xpath=//*[@id="showAllUserTable"]/tbody/tr[1]/td[7]/button[1]'.</msg>
+<status status="PASS" starttime="20201001 12:48:35.062" endtime="20201001 12:48:35.108"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201012 17:15:12.109" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201012 17:15:11.107" endtime="20201012 17:15:12.109"></status>
+<msg timestamp="20201001 12:48:36.109" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:48:35.108" endtime="20201001 12:48:36.109"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:10.633" endtime="20201012 17:15:12.109"></status>
+<status status="PASS" starttime="20201001 12:48:35.061" endtime="20201001 12:48:36.109"></status>
 </kw>
 <kw name="AND Fill firstname &quot;!Athiruj&quot;">
 <kw name="Input Text" library="Selenium2Library">
@@ -255,10 +251,10 @@
 <arg>${manage_input_name}</arg>
 <arg>${firstname}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:12.111" level="INFO">Typing text '!Athiruj' into text field 'xpath=//*[@id="acc_Firstname"]'.</msg>
-<status status="PASS" starttime="20201012 17:15:12.110" endtime="20201012 17:15:12.305"></status>
+<msg timestamp="20201001 12:48:36.110" level="INFO">Typing text '!Athiruj' into text field 'xpath=//*[@id="acc_Firstname"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:36.110" endtime="20201001 12:48:36.189"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:12.110" endtime="20201012 17:15:12.305"></status>
+<status status="PASS" starttime="20201001 12:48:36.110" endtime="20201001 12:48:36.189"></status>
 </kw>
 <kw name="AND Fill lastname &quot;!LastAthiruj&quot;">
 <kw name="Input Text" library="Selenium2Library">
@@ -267,10 +263,10 @@
 <arg>${manage_input_lastname}</arg>
 <arg>${lastname}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:12.318" level="INFO">Typing text '!LastAthiruj' into text field 'xpath=//*[@id="acc_Lastname"]'.</msg>
-<status status="PASS" starttime="20201012 17:15:12.317" endtime="20201012 17:15:12.616"></status>
+<msg timestamp="20201001 12:48:36.189" level="INFO">Typing text '!LastAthiruj' into text field 'xpath=//*[@id="acc_Lastname"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:36.189" endtime="20201001 12:48:36.270"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:12.316" endtime="20201012 17:15:12.616"></status>
+<status status="PASS" starttime="20201001 12:48:36.189" endtime="20201001 12:48:36.271"></status>
 </kw>
 <kw name="AND Select role &quot;2&quot;">
 <kw name="Select From List By Value" library="Selenium2Library">
@@ -279,10 +275,10 @@
 <arg>${manage_input_role}</arg>
 <arg>${role_value}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:12.619" level="INFO">Selecting options from selection list 'xpath=//*[@id="acc_RoleId"]' by value 2.</msg>
-<status status="PASS" starttime="20201012 17:15:12.619" endtime="20201012 17:15:12.718"></status>
+<msg timestamp="20201001 12:48:36.271" level="INFO">Selecting options from selection list 'xpath=//*[@id="acc_RoleId"]' by value 2.</msg>
+<status status="PASS" starttime="20201001 12:48:36.271" endtime="20201001 12:48:36.309"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:12.618" endtime="20201012 17:15:12.719"></status>
+<status status="PASS" starttime="20201001 12:48:36.271" endtime="20201001 12:48:36.309"></status>
 </kw>
 <kw name="AND Save edit user">
 <kw name="Sleep" library="BuiltIn">
@@ -290,18 +286,18 @@
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201012 17:15:13.721" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201012 17:15:12.721" endtime="20201012 17:15:13.721"></status>
+<msg timestamp="20201001 12:48:37.318" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:48:36.310" endtime="20201001 12:48:37.318"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${manage_btn_edit_save}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:13.721" level="INFO">Clicking element 'xpath=//*[@id="EditUser"]/div/div/div[3]/button[2]'.</msg>
-<status status="PASS" starttime="20201012 17:15:13.721" endtime="20201012 17:15:13.831"></status>
+<msg timestamp="20201001 12:48:37.318" level="INFO">Clicking element 'xpath=//*[@id="EditUser"]/div/div/div[3]/button[2]'.</msg>
+<status status="PASS" starttime="20201001 12:48:37.318" endtime="20201001 12:48:37.360"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:12.720" endtime="20201012 17:15:13.831"></status>
+<status status="PASS" starttime="20201001 12:48:36.310" endtime="20201001 12:48:37.360"></status>
 </kw>
 <kw name="THEN The alert message must say &quot;The First name can not be blank and must only character.&quot;">
 <kw name="Wait Until Page Contains" library="Selenium2Library">
@@ -309,19 +305,19 @@
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<status status="PASS" starttime="20201012 17:15:13.842" endtime="20201012 17:15:13.888"></status>
+<status status="PASS" starttime="20201001 12:48:37.361" endtime="20201001 12:48:37.373"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:13.841" endtime="20201012 17:15:13.889"></status>
+<status status="PASS" starttime="20201001 12:48:37.361" endtime="20201001 12:48:37.374"></status>
 </kw>
 <kw name="Close Browser" library="Selenium2Library" type="teardown">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20201012 17:15:13.890" endtime="20201012 17:15:16.489"></status>
+<status status="PASS" starttime="20201001 12:48:37.374" endtime="20201001 12:48:39.487"></status>
 </kw>
 <doc>กรอกชื่อจริง นามสกุล และเลือกบทบาทผู้ใช้งานไม่ถูกต้อง</doc>
 <tags>
 <tag>FAILS</tag>
 </tags>
-<status status="PASS" starttime="20201012 17:15:01.617" endtime="20201012 17:15:16.490" critical="yes"></status>
+<status status="PASS" starttime="20201001 12:48:27.626" endtime="20201001 12:48:39.488" critical="yes"></status>
 </test>
 <test id="s1-t3" name="UMS-Manage-01-03">
 <kw name="GIVEN Open web browser">
@@ -331,14 +327,14 @@
 <arg>${ums_url}</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20201012 17:15:16.499" level="INFO">Opening browser 'chrome' to base url 'https://localhost:44346/'.</msg>
-<status status="PASS" starttime="20201012 17:15:16.499" endtime="20201012 17:15:21.199"></status>
+<msg timestamp="20201001 12:48:39.495" level="INFO">Opening browser 'chrome' to base url 'https://localhost:44346/'.</msg>
+<status status="PASS" starttime="20201001 12:48:39.495" endtime="20201001 12:48:43.218"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20201012 17:15:21.199" endtime="20201012 17:15:23.330"></status>
+<status status="PASS" starttime="20201001 12:48:43.218" endtime="20201001 12:48:45.375"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:16.498" endtime="20201012 17:15:23.330"></status>
+<status status="PASS" starttime="20201001 12:48:39.495" endtime="20201001 12:48:45.375"></status>
 </kw>
 <kw name="WHEN Login with &quot;usermanagement2020@gmail.com&quot; &quot;123qweQ!&quot;">
 <kw name="Input Text" library="Selenium2Library">
@@ -347,8 +343,8 @@
 <arg>${ums_login_input_email}</arg>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:23.332" level="INFO">Typing text 'usermanagement2020@gmail.com' into text field 'xpath=//*[@id="acc_Email"]'.</msg>
-<status status="PASS" starttime="20201012 17:15:23.331" endtime="20201012 17:15:23.702"></status>
+<msg timestamp="20201001 12:48:45.376" level="INFO">Typing text 'usermanagement2020@gmail.com' into text field 'xpath=//*[@id="acc_Email"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:45.376" endtime="20201001 12:48:45.470"></status>
 </kw>
 <kw name="Input Password" library="Selenium2Library">
 <doc>Types the given password into the text field identified by ``locator``.</doc>
@@ -356,28 +352,26 @@
 <arg>${ums_login_input_password}</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:23.703" level="INFO">Typing password into text field 'xpath=//*[@id="acc_Password"]'.</msg>
-<msg timestamp="20201012 17:15:23.769" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20201012 17:15:23.855" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20201012 17:15:23.702" endtime="20201012 17:15:23.855"></status>
+<msg timestamp="20201001 12:48:45.470" level="INFO">Typing password into text field 'xpath=//*[@id="acc_Password"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:45.470" endtime="20201001 12:48:45.544"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201012 17:15:24.857" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201012 17:15:23.855" endtime="20201012 17:15:24.857"></status>
+<msg timestamp="20201001 12:48:46.551" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:48:45.544" endtime="20201001 12:48:46.551"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${ums_btn_login}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:24.857" level="INFO">Clicking element 'xpath=//*[@id="account"]/div[3]/div[2]/button'.</msg>
-<status status="PASS" starttime="20201012 17:15:24.857" endtime="20201012 17:15:25.492"></status>
+<msg timestamp="20201001 12:48:46.551" level="INFO">Clicking element 'xpath=//*[@id="account"]/div[3]/div[2]/button'.</msg>
+<status status="PASS" starttime="20201001 12:48:46.551" endtime="20201001 12:48:46.820"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:23.331" endtime="20201012 17:15:25.493"></status>
+<status status="PASS" starttime="20201001 12:48:45.376" endtime="20201001 12:48:46.820"></status>
 </kw>
 <kw name="AND Go to Manage User">
 <kw name="Go To" library="Selenium2Library">
@@ -385,10 +379,10 @@
 <arguments>
 <arg>${ums_manage_url}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:25.504" level="INFO">Opening url 'https://localhost:44346/ManageUser'</msg>
-<status status="PASS" starttime="20201012 17:15:25.504" endtime="20201012 17:15:25.821"></status>
+<msg timestamp="20201001 12:48:46.821" level="INFO">Opening url 'https://localhost:44346/ManageUser'</msg>
+<status status="PASS" starttime="20201001 12:48:46.821" endtime="20201001 12:48:46.989"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:25.504" endtime="20201012 17:15:25.822"></status>
+<status status="PASS" starttime="20201001 12:48:46.821" endtime="20201001 12:48:46.989"></status>
 </kw>
 <kw name="AND Edit">
 <kw name="Click Element" library="Selenium2Library">
@@ -396,18 +390,18 @@
 <arguments>
 <arg>${manage_btn_edit}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:25.823" level="INFO">Clicking element 'xpath=//*[@id="showAllUserTable"]/tbody/tr[1]/td[7]/button[1]'.</msg>
-<status status="PASS" starttime="20201012 17:15:25.823" endtime="20201012 17:15:26.175"></status>
+<msg timestamp="20201001 12:48:46.991" level="INFO">Clicking element 'xpath=//*[@id="showAllUserTable"]/tbody/tr[1]/td[7]/button[1]'.</msg>
+<status status="PASS" starttime="20201001 12:48:46.990" endtime="20201001 12:48:47.046"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201012 17:15:27.178" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201012 17:15:26.176" endtime="20201012 17:15:27.178"></status>
+<msg timestamp="20201001 12:48:48.055" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:48:47.046" endtime="20201001 12:48:48.055"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:25.822" endtime="20201012 17:15:27.178"></status>
+<status status="PASS" starttime="20201001 12:48:46.990" endtime="20201001 12:48:48.055"></status>
 </kw>
 <kw name="AND Fill firstname &quot;!Athiruj&quot;">
 <kw name="Input Text" library="Selenium2Library">
@@ -416,10 +410,10 @@
 <arg>${manage_input_name}</arg>
 <arg>${firstname}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:27.182" level="INFO">Typing text '!Athiruj' into text field 'xpath=//*[@id="acc_Firstname"]'.</msg>
-<status status="PASS" starttime="20201012 17:15:27.181" endtime="20201012 17:15:27.403"></status>
+<msg timestamp="20201001 12:48:48.056" level="INFO">Typing text '!Athiruj' into text field 'xpath=//*[@id="acc_Firstname"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:48.056" endtime="20201001 12:48:48.138"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:27.180" endtime="20201012 17:15:27.404"></status>
+<status status="PASS" starttime="20201001 12:48:48.056" endtime="20201001 12:48:48.138"></status>
 </kw>
 <kw name="AND Fill lastname &quot;LastAthiruj&quot;">
 <kw name="Input Text" library="Selenium2Library">
@@ -428,10 +422,10 @@
 <arg>${manage_input_lastname}</arg>
 <arg>${lastname}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:27.406" level="INFO">Typing text 'LastAthiruj' into text field 'xpath=//*[@id="acc_Lastname"]'.</msg>
-<status status="PASS" starttime="20201012 17:15:27.405" endtime="20201012 17:15:27.580"></status>
+<msg timestamp="20201001 12:48:48.139" level="INFO">Typing text 'LastAthiruj' into text field 'xpath=//*[@id="acc_Lastname"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:48.139" endtime="20201001 12:48:48.218"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:27.405" endtime="20201012 17:15:27.580"></status>
+<status status="PASS" starttime="20201001 12:48:48.138" endtime="20201001 12:48:48.218"></status>
 </kw>
 <kw name="AND Save edit user">
 <kw name="Sleep" library="BuiltIn">
@@ -439,18 +433,18 @@
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201012 17:15:28.583" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201012 17:15:27.582" endtime="20201012 17:15:28.583"></status>
+<msg timestamp="20201001 12:48:49.219" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:48:48.219" endtime="20201001 12:48:49.219"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${manage_btn_edit_save}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:28.584" level="INFO">Clicking element 'xpath=//*[@id="EditUser"]/div/div/div[3]/button[2]'.</msg>
-<status status="PASS" starttime="20201012 17:15:28.583" endtime="20201012 17:15:28.658"></status>
+<msg timestamp="20201001 12:48:49.219" level="INFO">Clicking element 'xpath=//*[@id="EditUser"]/div/div/div[3]/button[2]'.</msg>
+<status status="PASS" starttime="20201001 12:48:49.219" endtime="20201001 12:48:49.268"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:27.581" endtime="20201012 17:15:28.658"></status>
+<status status="PASS" starttime="20201001 12:48:48.219" endtime="20201001 12:48:49.268"></status>
 </kw>
 <kw name="THEN The alert message must say &quot;The First name can not be blank and must only character.&quot;">
 <kw name="Wait Until Page Contains" library="Selenium2Library">
@@ -458,19 +452,19 @@
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<status status="PASS" starttime="20201012 17:15:28.660" endtime="20201012 17:15:28.689"></status>
+<status status="PASS" starttime="20201001 12:48:49.270" endtime="20201001 12:48:49.284"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:28.659" endtime="20201012 17:15:28.689"></status>
+<status status="PASS" starttime="20201001 12:48:49.269" endtime="20201001 12:48:49.284"></status>
 </kw>
 <kw name="Close Browser" library="Selenium2Library" type="teardown">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20201012 17:15:28.690" endtime="20201012 17:15:31.216"></status>
+<status status="PASS" starttime="20201001 12:48:49.285" endtime="20201001 12:48:51.406"></status>
 </kw>
 <doc>กรอกชื่อจริงไม่ถูกต้อง</doc>
 <tags>
 <tag>FAILS</tag>
 </tags>
-<status status="PASS" starttime="20201012 17:15:16.496" endtime="20201012 17:15:31.217" critical="yes"></status>
+<status status="PASS" starttime="20201001 12:48:39.493" endtime="20201001 12:48:51.407" critical="yes"></status>
 </test>
 <test id="s1-t4" name="UMS-Manage-01-04">
 <kw name="GIVEN Open web browser">
@@ -480,14 +474,14 @@
 <arg>${ums_url}</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20201012 17:15:31.232" level="INFO">Opening browser 'chrome' to base url 'https://localhost:44346/'.</msg>
-<status status="PASS" starttime="20201012 17:15:31.231" endtime="20201012 17:15:36.102"></status>
+<msg timestamp="20201001 12:48:51.413" level="INFO">Opening browser 'chrome' to base url 'https://localhost:44346/'.</msg>
+<status status="PASS" starttime="20201001 12:48:51.413" endtime="20201001 12:48:55.035"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20201012 17:15:36.102" endtime="20201012 17:15:38.232"></status>
+<status status="PASS" starttime="20201001 12:48:55.035" endtime="20201001 12:48:57.217"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:31.230" endtime="20201012 17:15:38.232"></status>
+<status status="PASS" starttime="20201001 12:48:51.413" endtime="20201001 12:48:57.217"></status>
 </kw>
 <kw name="WHEN Login with &quot;usermanagement2020@gmail.com&quot; &quot;123qweQ!&quot;">
 <kw name="Input Text" library="Selenium2Library">
@@ -496,8 +490,8 @@
 <arg>${ums_login_input_email}</arg>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:38.237" level="INFO">Typing text 'usermanagement2020@gmail.com' into text field 'xpath=//*[@id="acc_Email"]'.</msg>
-<status status="PASS" starttime="20201012 17:15:38.236" endtime="20201012 17:15:38.546"></status>
+<msg timestamp="20201001 12:48:57.219" level="INFO">Typing text 'usermanagement2020@gmail.com' into text field 'xpath=//*[@id="acc_Email"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:57.218" endtime="20201001 12:48:57.309"></status>
 </kw>
 <kw name="Input Password" library="Selenium2Library">
 <doc>Types the given password into the text field identified by ``locator``.</doc>
@@ -505,28 +499,26 @@
 <arg>${ums_login_input_password}</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:38.547" level="INFO">Typing password into text field 'xpath=//*[@id="acc_Password"]'.</msg>
-<msg timestamp="20201012 17:15:38.626" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20201012 17:15:38.770" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20201012 17:15:38.546" endtime="20201012 17:15:38.770"></status>
+<msg timestamp="20201001 12:48:57.309" level="INFO">Typing password into text field 'xpath=//*[@id="acc_Password"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:57.309" endtime="20201001 12:48:57.384"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201012 17:15:39.771" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201012 17:15:38.770" endtime="20201012 17:15:39.771"></status>
+<msg timestamp="20201001 12:48:58.396" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:48:57.384" endtime="20201001 12:48:58.396"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${ums_btn_login}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:39.771" level="INFO">Clicking element 'xpath=//*[@id="account"]/div[3]/div[2]/button'.</msg>
-<status status="PASS" starttime="20201012 17:15:39.771" endtime="20201012 17:15:40.738"></status>
+<msg timestamp="20201001 12:48:58.396" level="INFO">Clicking element 'xpath=//*[@id="account"]/div[3]/div[2]/button'.</msg>
+<status status="PASS" starttime="20201001 12:48:58.396" endtime="20201001 12:48:58.675"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:38.236" endtime="20201012 17:15:40.739"></status>
+<status status="PASS" starttime="20201001 12:48:57.218" endtime="20201001 12:48:58.675"></status>
 </kw>
 <kw name="AND Go to Manage User">
 <kw name="Go To" library="Selenium2Library">
@@ -534,10 +526,10 @@
 <arguments>
 <arg>${ums_manage_url}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:40.752" level="INFO">Opening url 'https://localhost:44346/ManageUser'</msg>
-<status status="PASS" starttime="20201012 17:15:40.752" endtime="20201012 17:15:41.186"></status>
+<msg timestamp="20201001 12:48:58.677" level="INFO">Opening url 'https://localhost:44346/ManageUser'</msg>
+<status status="PASS" starttime="20201001 12:48:58.676" endtime="20201001 12:48:58.841"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:40.751" endtime="20201012 17:15:41.186"></status>
+<status status="PASS" starttime="20201001 12:48:58.676" endtime="20201001 12:48:58.841"></status>
 </kw>
 <kw name="AND Edit">
 <kw name="Click Element" library="Selenium2Library">
@@ -545,18 +537,18 @@
 <arguments>
 <arg>${manage_btn_edit}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:41.261" level="INFO">Clicking element 'xpath=//*[@id="showAllUserTable"]/tbody/tr[1]/td[7]/button[1]'.</msg>
-<status status="PASS" starttime="20201012 17:15:41.260" endtime="20201012 17:15:41.723"></status>
+<msg timestamp="20201001 12:48:58.842" level="INFO">Clicking element 'xpath=//*[@id="showAllUserTable"]/tbody/tr[1]/td[7]/button[1]'.</msg>
+<status status="PASS" starttime="20201001 12:48:58.842" endtime="20201001 12:48:58.896"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201012 17:15:42.724" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201012 17:15:41.723" endtime="20201012 17:15:42.724"></status>
+<msg timestamp="20201001 12:48:59.904" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:48:58.897" endtime="20201001 12:48:59.904"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:41.260" endtime="20201012 17:15:42.724"></status>
+<status status="PASS" starttime="20201001 12:48:58.842" endtime="20201001 12:48:59.904"></status>
 </kw>
 <kw name="AND Fill firstname &quot;Athiruj&quot;">
 <kw name="Input Text" library="Selenium2Library">
@@ -565,10 +557,10 @@
 <arg>${manage_input_name}</arg>
 <arg>${firstname}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:42.737" level="INFO">Typing text 'Athiruj' into text field 'xpath=//*[@id="acc_Firstname"]'.</msg>
-<status status="PASS" starttime="20201012 17:15:42.736" endtime="20201012 17:15:42.978"></status>
+<msg timestamp="20201001 12:48:59.906" level="INFO">Typing text 'Athiruj' into text field 'xpath=//*[@id="acc_Firstname"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:59.905" endtime="20201001 12:48:59.984"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:42.735" endtime="20201012 17:15:42.979"></status>
+<status status="PASS" starttime="20201001 12:48:59.905" endtime="20201001 12:48:59.984"></status>
 </kw>
 <kw name="AND Fill lastname &quot;!LastAthiruj&quot;">
 <kw name="Input Text" library="Selenium2Library">
@@ -577,10 +569,10 @@
 <arg>${manage_input_lastname}</arg>
 <arg>${lastname}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:42.983" level="INFO">Typing text '!LastAthiruj' into text field 'xpath=//*[@id="acc_Lastname"]'.</msg>
-<status status="PASS" starttime="20201012 17:15:42.983" endtime="20201012 17:15:43.280"></status>
+<msg timestamp="20201001 12:48:59.985" level="INFO">Typing text '!LastAthiruj' into text field 'xpath=//*[@id="acc_Lastname"]'.</msg>
+<status status="PASS" starttime="20201001 12:48:59.985" endtime="20201001 12:49:00.081"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:42.982" endtime="20201012 17:15:43.281"></status>
+<status status="PASS" starttime="20201001 12:48:59.985" endtime="20201001 12:49:00.081"></status>
 </kw>
 <kw name="AND Save edit user">
 <kw name="Sleep" library="BuiltIn">
@@ -588,18 +580,18 @@
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201012 17:15:44.284" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201012 17:15:43.282" endtime="20201012 17:15:44.284"></status>
+<msg timestamp="20201001 12:49:01.086" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:49:00.082" endtime="20201001 12:49:01.086"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${manage_btn_edit_save}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:44.284" level="INFO">Clicking element 'xpath=//*[@id="EditUser"]/div/div/div[3]/button[2]'.</msg>
-<status status="PASS" starttime="20201012 17:15:44.284" endtime="20201012 17:15:44.372"></status>
+<msg timestamp="20201001 12:49:01.086" level="INFO">Clicking element 'xpath=//*[@id="EditUser"]/div/div/div[3]/button[2]'.</msg>
+<status status="PASS" starttime="20201001 12:49:01.086" endtime="20201001 12:49:01.127"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:43.282" endtime="20201012 17:15:44.372"></status>
+<status status="PASS" starttime="20201001 12:49:00.081" endtime="20201001 12:49:01.127"></status>
 </kw>
 <kw name="THEN The alert message must say &quot;The Last name can not be blank and must only character.&quot;">
 <kw name="Wait Until Page Contains" library="Selenium2Library">
@@ -607,19 +599,19 @@
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<status status="PASS" starttime="20201012 17:15:44.374" endtime="20201012 17:15:44.402"></status>
+<status status="PASS" starttime="20201001 12:49:01.129" endtime="20201001 12:49:01.143"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:44.374" endtime="20201012 17:15:44.402"></status>
+<status status="PASS" starttime="20201001 12:49:01.129" endtime="20201001 12:49:01.143"></status>
 </kw>
 <kw name="Close Browser" library="Selenium2Library" type="teardown">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20201012 17:15:44.403" endtime="20201012 17:15:46.970"></status>
+<status status="PASS" starttime="20201001 12:49:01.143" endtime="20201001 12:49:03.253"></status>
 </kw>
 <doc>กรอกนามสกุลไม่ถูกต้อง</doc>
 <tags>
 <tag>FAILS</tag>
 </tags>
-<status status="PASS" starttime="20201012 17:15:31.224" endtime="20201012 17:15:46.970" critical="yes"></status>
+<status status="PASS" starttime="20201001 12:48:51.411" endtime="20201001 12:49:03.254" critical="yes"></status>
 </test>
 <test id="s1-t5" name="UMS-Manage-01-05">
 <kw name="GIVEN Open web browser">
@@ -629,14 +621,14 @@
 <arg>${ums_url}</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20201012 17:15:46.978" level="INFO">Opening browser 'chrome' to base url 'https://localhost:44346/'.</msg>
-<status status="PASS" starttime="20201012 17:15:46.978" endtime="20201012 17:15:51.422"></status>
+<msg timestamp="20201001 12:49:03.261" level="INFO">Opening browser 'chrome' to base url 'https://localhost:44346/'.</msg>
+<status status="PASS" starttime="20201001 12:49:03.261" endtime="20201001 12:49:07.097"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20201012 17:15:51.423" endtime="20201012 17:15:53.576"></status>
+<status status="PASS" starttime="20201001 12:49:07.097" endtime="20201001 12:49:09.254"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:46.978" endtime="20201012 17:15:53.576"></status>
+<status status="PASS" starttime="20201001 12:49:03.261" endtime="20201001 12:49:09.254"></status>
 </kw>
 <kw name="WHEN Login with &quot;usermanagement2020@gmail.com&quot; &quot;123qweQ!&quot;">
 <kw name="Input Text" library="Selenium2Library">
@@ -645,8 +637,8 @@
 <arg>${ums_login_input_email}</arg>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:53.578" level="INFO">Typing text 'usermanagement2020@gmail.com' into text field 'xpath=//*[@id="acc_Email"]'.</msg>
-<status status="PASS" starttime="20201012 17:15:53.577" endtime="20201012 17:15:53.996"></status>
+<msg timestamp="20201001 12:49:09.256" level="INFO">Typing text 'usermanagement2020@gmail.com' into text field 'xpath=//*[@id="acc_Email"]'.</msg>
+<status status="PASS" starttime="20201001 12:49:09.255" endtime="20201001 12:49:09.354"></status>
 </kw>
 <kw name="Input Password" library="Selenium2Library">
 <doc>Types the given password into the text field identified by ``locator``.</doc>
@@ -654,28 +646,26 @@
 <arg>${ums_login_input_password}</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:53.997" level="INFO">Typing password into text field 'xpath=//*[@id="acc_Password"]'.</msg>
-<msg timestamp="20201012 17:15:54.070" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20201012 17:15:54.208" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20201012 17:15:53.996" endtime="20201012 17:15:54.208"></status>
+<msg timestamp="20201001 12:49:09.354" level="INFO">Typing password into text field 'xpath=//*[@id="acc_Password"]'.</msg>
+<status status="PASS" starttime="20201001 12:49:09.354" endtime="20201001 12:49:09.433"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201012 17:15:55.211" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201012 17:15:54.208" endtime="20201012 17:15:55.211"></status>
+<msg timestamp="20201001 12:49:10.440" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:49:09.433" endtime="20201001 12:49:10.440"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${ums_btn_login}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:55.211" level="INFO">Clicking element 'xpath=//*[@id="account"]/div[3]/div[2]/button'.</msg>
-<status status="PASS" starttime="20201012 17:15:55.211" endtime="20201012 17:15:56.020"></status>
+<msg timestamp="20201001 12:49:10.440" level="INFO">Clicking element 'xpath=//*[@id="account"]/div[3]/div[2]/button'.</msg>
+<status status="PASS" starttime="20201001 12:49:10.440" endtime="20201001 12:49:10.848"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:53.577" endtime="20201012 17:15:56.020"></status>
+<status status="PASS" starttime="20201001 12:49:09.255" endtime="20201001 12:49:10.848"></status>
 </kw>
 <kw name="AND Go to Manage User">
 <kw name="Go To" library="Selenium2Library">
@@ -683,10 +673,10 @@
 <arguments>
 <arg>${ums_manage_url}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:56.027" level="INFO">Opening url 'https://localhost:44346/ManageUser'</msg>
-<status status="PASS" starttime="20201012 17:15:56.026" endtime="20201012 17:15:56.511"></status>
+<msg timestamp="20201001 12:49:10.850" level="INFO">Opening url 'https://localhost:44346/ManageUser'</msg>
+<status status="PASS" starttime="20201001 12:49:10.850" endtime="20201001 12:49:11.015"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:56.026" endtime="20201012 17:15:56.511"></status>
+<status status="PASS" starttime="20201001 12:49:10.849" endtime="20201001 12:49:11.015"></status>
 </kw>
 <kw name="AND Edit">
 <kw name="Click Element" library="Selenium2Library">
@@ -694,18 +684,18 @@
 <arguments>
 <arg>${manage_btn_edit}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:56.516" level="INFO">Clicking element 'xpath=//*[@id="showAllUserTable"]/tbody/tr[1]/td[7]/button[1]'.</msg>
-<status status="PASS" starttime="20201012 17:15:56.515" endtime="20201012 17:15:57.058"></status>
+<msg timestamp="20201001 12:49:11.016" level="INFO">Clicking element 'xpath=//*[@id="showAllUserTable"]/tbody/tr[1]/td[7]/button[1]'.</msg>
+<status status="PASS" starttime="20201001 12:49:11.016" endtime="20201001 12:49:11.065"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201012 17:15:58.060" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201012 17:15:57.058" endtime="20201012 17:15:58.060"></status>
+<msg timestamp="20201001 12:49:12.074" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:49:11.065" endtime="20201001 12:49:12.074"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:56.515" endtime="20201012 17:15:58.060"></status>
+<status status="PASS" starttime="20201001 12:49:11.016" endtime="20201001 12:49:12.074"></status>
 </kw>
 <kw name="AND Fill firstname &quot;Athiruj&quot;">
 <kw name="Input Text" library="Selenium2Library">
@@ -714,10 +704,10 @@
 <arg>${manage_input_name}</arg>
 <arg>${firstname}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:58.064" level="INFO">Typing text 'Athiruj' into text field 'xpath=//*[@id="acc_Firstname"]'.</msg>
-<status status="PASS" starttime="20201012 17:15:58.063" endtime="20201012 17:15:58.351"></status>
+<msg timestamp="20201001 12:49:12.075" level="INFO">Typing text 'Athiruj' into text field 'xpath=//*[@id="acc_Firstname"]'.</msg>
+<status status="PASS" starttime="20201001 12:49:12.075" endtime="20201001 12:49:12.160"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:58.062" endtime="20201012 17:15:58.352"></status>
+<status status="PASS" starttime="20201001 12:49:12.075" endtime="20201001 12:49:12.160"></status>
 </kw>
 <kw name="AND Fill lastname &quot; &quot;">
 <kw name="Input Text" library="Selenium2Library">
@@ -726,10 +716,10 @@
 <arg>${manage_input_lastname}</arg>
 <arg>${lastname}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:58.353" level="INFO">Typing text ' ' into text field 'xpath=//*[@id="acc_Lastname"]'.</msg>
-<status status="PASS" starttime="20201012 17:15:58.353" endtime="20201012 17:15:58.582"></status>
+<msg timestamp="20201001 12:49:12.161" level="INFO">Typing text ' ' into text field 'xpath=//*[@id="acc_Lastname"]'.</msg>
+<status status="PASS" starttime="20201001 12:49:12.161" endtime="20201001 12:49:12.231"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:58.352" endtime="20201012 17:15:58.582"></status>
+<status status="PASS" starttime="20201001 12:49:12.161" endtime="20201001 12:49:12.231"></status>
 </kw>
 <kw name="AND Save edit user">
 <kw name="Sleep" library="BuiltIn">
@@ -737,18 +727,18 @@
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201012 17:15:59.585" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201012 17:15:58.584" endtime="20201012 17:15:59.585"></status>
+<msg timestamp="20201001 12:49:13.239" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:49:12.232" endtime="20201001 12:49:13.239"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${manage_btn_edit_save}</arg>
 </arguments>
-<msg timestamp="20201012 17:15:59.586" level="INFO">Clicking element 'xpath=//*[@id="EditUser"]/div/div/div[3]/button[2]'.</msg>
-<status status="PASS" starttime="20201012 17:15:59.585" endtime="20201012 17:15:59.668"></status>
+<msg timestamp="20201001 12:49:13.239" level="INFO">Clicking element 'xpath=//*[@id="EditUser"]/div/div/div[3]/button[2]'.</msg>
+<status status="PASS" starttime="20201001 12:49:13.239" endtime="20201001 12:49:13.278"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:58.583" endtime="20201012 17:15:59.669"></status>
+<status status="PASS" starttime="20201001 12:49:12.231" endtime="20201001 12:49:13.278"></status>
 </kw>
 <kw name="THEN The alert message must say &quot;The Last name can not be blank and must only character.&quot;">
 <kw name="Wait Until Page Contains" library="Selenium2Library">
@@ -756,19 +746,19 @@
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<status status="PASS" starttime="20201012 17:15:59.672" endtime="20201012 17:15:59.715"></status>
+<status status="PASS" starttime="20201001 12:49:13.279" endtime="20201001 12:49:13.290"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:15:59.671" endtime="20201012 17:15:59.716"></status>
+<status status="PASS" starttime="20201001 12:49:13.279" endtime="20201001 12:49:13.290"></status>
 </kw>
 <kw name="Close Browser" library="Selenium2Library" type="teardown">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20201012 17:15:59.717" endtime="20201012 17:16:02.270"></status>
+<status status="PASS" starttime="20201001 12:49:13.291" endtime="20201001 12:49:15.417"></status>
 </kw>
 <doc>กรอกชื่อจริง และเลือกบทบาทผู้ใช้งาน แต่ไม่กรอกนามสกุล</doc>
 <tags>
 <tag>FAILS</tag>
 </tags>
-<status status="PASS" starttime="20201012 17:15:46.975" endtime="20201012 17:16:02.271" critical="yes"></status>
+<status status="PASS" starttime="20201001 12:49:03.258" endtime="20201001 12:49:15.418" critical="yes"></status>
 </test>
 <test id="s1-t6" name="UMS-Manage-01-06">
 <kw name="GIVEN Open web browser">
@@ -778,14 +768,14 @@
 <arg>${ums_url}</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20201012 17:16:02.281" level="INFO">Opening browser 'chrome' to base url 'https://localhost:44346/'.</msg>
-<status status="PASS" starttime="20201012 17:16:02.280" endtime="20201012 17:16:08.172"></status>
+<msg timestamp="20201001 12:49:15.424" level="INFO">Opening browser 'chrome' to base url 'https://localhost:44346/'.</msg>
+<status status="PASS" starttime="20201001 12:49:15.424" endtime="20201001 12:49:19.187"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20201012 17:16:08.172" endtime="20201012 17:16:10.306"></status>
+<status status="PASS" starttime="20201001 12:49:19.187" endtime="20201001 12:49:21.343"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:16:02.280" endtime="20201012 17:16:10.306"></status>
+<status status="PASS" starttime="20201001 12:49:15.424" endtime="20201001 12:49:21.343"></status>
 </kw>
 <kw name="WHEN Login with &quot;usermanagement2020@gmail.com&quot; &quot;123qweQ!&quot;">
 <kw name="Input Text" library="Selenium2Library">
@@ -794,8 +784,8 @@
 <arg>${ums_login_input_email}</arg>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20201012 17:16:10.307" level="INFO">Typing text 'usermanagement2020@gmail.com' into text field 'xpath=//*[@id="acc_Email"]'.</msg>
-<status status="PASS" starttime="20201012 17:16:10.307" endtime="20201012 17:16:10.572"></status>
+<msg timestamp="20201001 12:49:21.344" level="INFO">Typing text 'usermanagement2020@gmail.com' into text field 'xpath=//*[@id="acc_Email"]'.</msg>
+<status status="PASS" starttime="20201001 12:49:21.344" endtime="20201001 12:49:21.441"></status>
 </kw>
 <kw name="Input Password" library="Selenium2Library">
 <doc>Types the given password into the text field identified by ``locator``.</doc>
@@ -803,28 +793,26 @@
 <arg>${ums_login_input_password}</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20201012 17:16:10.572" level="INFO">Typing password into text field 'xpath=//*[@id="acc_Password"]'.</msg>
-<msg timestamp="20201012 17:16:10.622" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20201012 17:16:10.715" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20201012 17:16:10.572" endtime="20201012 17:16:10.715"></status>
+<msg timestamp="20201001 12:49:21.442" level="INFO">Typing password into text field 'xpath=//*[@id="acc_Password"]'.</msg>
+<status status="PASS" starttime="20201001 12:49:21.441" endtime="20201001 12:49:21.515"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201012 17:16:11.717" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201012 17:16:10.716" endtime="20201012 17:16:11.717"></status>
+<msg timestamp="20201001 12:49:22.523" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:49:21.515" endtime="20201001 12:49:22.523"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${ums_btn_login}</arg>
 </arguments>
-<msg timestamp="20201012 17:16:11.718" level="INFO">Clicking element 'xpath=//*[@id="account"]/div[3]/div[2]/button'.</msg>
-<status status="PASS" starttime="20201012 17:16:11.717" endtime="20201012 17:16:12.915"></status>
+<msg timestamp="20201001 12:49:22.523" level="INFO">Clicking element 'xpath=//*[@id="account"]/div[3]/div[2]/button'.</msg>
+<status status="PASS" starttime="20201001 12:49:22.523" endtime="20201001 12:49:22.824"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:16:10.307" endtime="20201012 17:16:12.916"></status>
+<status status="PASS" starttime="20201001 12:49:21.344" endtime="20201001 12:49:22.824"></status>
 </kw>
 <kw name="AND Go to Manage User">
 <kw name="Go To" library="Selenium2Library">
@@ -832,10 +820,10 @@
 <arguments>
 <arg>${ums_manage_url}</arg>
 </arguments>
-<msg timestamp="20201012 17:16:12.953" level="INFO">Opening url 'https://localhost:44346/ManageUser'</msg>
-<status status="PASS" starttime="20201012 17:16:12.953" endtime="20201012 17:16:13.470"></status>
+<msg timestamp="20201001 12:49:22.825" level="INFO">Opening url 'https://localhost:44346/ManageUser'</msg>
+<status status="PASS" starttime="20201001 12:49:22.825" endtime="20201001 12:49:22.993"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:16:12.952" endtime="20201012 17:16:13.470"></status>
+<status status="PASS" starttime="20201001 12:49:22.825" endtime="20201001 12:49:22.993"></status>
 </kw>
 <kw name="AND Edit">
 <kw name="Click Element" library="Selenium2Library">
@@ -843,18 +831,18 @@
 <arguments>
 <arg>${manage_btn_edit}</arg>
 </arguments>
-<msg timestamp="20201012 17:16:13.474" level="INFO">Clicking element 'xpath=//*[@id="showAllUserTable"]/tbody/tr[1]/td[7]/button[1]'.</msg>
-<status status="PASS" starttime="20201012 17:16:13.473" endtime="20201012 17:16:13.933"></status>
+<msg timestamp="20201001 12:49:22.994" level="INFO">Clicking element 'xpath=//*[@id="showAllUserTable"]/tbody/tr[1]/td[7]/button[1]'.</msg>
+<status status="PASS" starttime="20201001 12:49:22.994" endtime="20201001 12:49:23.040"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201012 17:16:14.935" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201012 17:16:13.934" endtime="20201012 17:16:14.935"></status>
+<msg timestamp="20201001 12:49:24.056" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:49:23.040" endtime="20201001 12:49:24.056"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:16:13.472" endtime="20201012 17:16:14.935"></status>
+<status status="PASS" starttime="20201001 12:49:22.994" endtime="20201001 12:49:24.056"></status>
 </kw>
 <kw name="AND Fill firstname &quot; &quot;">
 <kw name="Input Text" library="Selenium2Library">
@@ -863,10 +851,10 @@
 <arg>${manage_input_name}</arg>
 <arg>${firstname}</arg>
 </arguments>
-<msg timestamp="20201012 17:16:14.938" level="INFO">Typing text ' ' into text field 'xpath=//*[@id="acc_Firstname"]'.</msg>
-<status status="PASS" starttime="20201012 17:16:14.937" endtime="20201012 17:16:15.265"></status>
+<msg timestamp="20201001 12:49:24.057" level="INFO">Typing text ' ' into text field 'xpath=//*[@id="acc_Firstname"]'.</msg>
+<status status="PASS" starttime="20201001 12:49:24.057" endtime="20201001 12:49:24.130"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:16:14.937" endtime="20201012 17:16:15.266"></status>
+<status status="PASS" starttime="20201001 12:49:24.057" endtime="20201001 12:49:24.131"></status>
 </kw>
 <kw name="AND Fill lastname &quot;LastAthiruj&quot;">
 <kw name="Input Text" library="Selenium2Library">
@@ -875,10 +863,10 @@
 <arg>${manage_input_lastname}</arg>
 <arg>${lastname}</arg>
 </arguments>
-<msg timestamp="20201012 17:16:15.269" level="INFO">Typing text 'LastAthiruj' into text field 'xpath=//*[@id="acc_Lastname"]'.</msg>
-<status status="PASS" starttime="20201012 17:16:15.268" endtime="20201012 17:16:15.638"></status>
+<msg timestamp="20201001 12:49:24.132" level="INFO">Typing text 'LastAthiruj' into text field 'xpath=//*[@id="acc_Lastname"]'.</msg>
+<status status="PASS" starttime="20201001 12:49:24.132" endtime="20201001 12:49:24.213"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:16:15.267" endtime="20201012 17:16:15.638"></status>
+<status status="PASS" starttime="20201001 12:49:24.131" endtime="20201001 12:49:24.213"></status>
 </kw>
 <kw name="AND Save edit user">
 <kw name="Sleep" library="BuiltIn">
@@ -886,18 +874,18 @@
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201012 17:16:16.642" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201012 17:16:15.640" endtime="20201012 17:16:16.642"></status>
+<msg timestamp="20201001 12:49:25.216" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:49:24.214" endtime="20201001 12:49:25.216"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${manage_btn_edit_save}</arg>
 </arguments>
-<msg timestamp="20201012 17:16:16.643" level="INFO">Clicking element 'xpath=//*[@id="EditUser"]/div/div/div[3]/button[2]'.</msg>
-<status status="PASS" starttime="20201012 17:16:16.642" endtime="20201012 17:16:16.746"></status>
+<msg timestamp="20201001 12:49:25.216" level="INFO">Clicking element 'xpath=//*[@id="EditUser"]/div/div/div[3]/button[2]'.</msg>
+<status status="PASS" starttime="20201001 12:49:25.216" endtime="20201001 12:49:25.264"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:16:15.639" endtime="20201012 17:16:16.746"></status>
+<status status="PASS" starttime="20201001 12:49:24.214" endtime="20201001 12:49:25.264"></status>
 </kw>
 <kw name="THEN The alert message must say &quot;The First name can not be blank and must only character.&quot;">
 <kw name="Wait Until Page Contains" library="Selenium2Library">
@@ -905,19 +893,19 @@
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<status status="PASS" starttime="20201012 17:16:16.748" endtime="20201012 17:16:16.780"></status>
+<status status="PASS" starttime="20201001 12:49:25.267" endtime="20201001 12:49:25.279"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:16:16.747" endtime="20201012 17:16:16.780"></status>
+<status status="PASS" starttime="20201001 12:49:25.266" endtime="20201001 12:49:25.279"></status>
 </kw>
 <kw name="Close Browser" library="Selenium2Library" type="teardown">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20201012 17:16:16.783" endtime="20201012 17:16:20.717"></status>
+<status status="PASS" starttime="20201001 12:49:25.279" endtime="20201001 12:49:28.119"></status>
 </kw>
 <doc>กรอกนามสกุล และเลือกบทบาทผู้ใช้งาน แต่ไม่กรอกชื่อจริง</doc>
 <tags>
 <tag>FAILS</tag>
 </tags>
-<status status="PASS" starttime="20201012 17:16:02.277" endtime="20201012 17:16:20.718" critical="yes"></status>
+<status status="PASS" starttime="20201001 12:49:15.421" endtime="20201001 12:49:28.120" critical="yes"></status>
 </test>
 <test id="s1-t7" name="UMS-Manage-02-01">
 <kw name="GIVEN Open web browser">
@@ -927,14 +915,14 @@
 <arg>${ums_url}</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20201012 17:16:20.727" level="INFO">Opening browser 'chrome' to base url 'https://localhost:44346/'.</msg>
-<status status="PASS" starttime="20201012 17:16:20.726" endtime="20201012 17:16:25.966"></status>
+<msg timestamp="20201001 12:49:28.127" level="INFO">Opening browser 'chrome' to base url 'https://localhost:44346/'.</msg>
+<status status="PASS" starttime="20201001 12:49:28.127" endtime="20201001 12:49:31.880"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20201012 17:16:25.966" endtime="20201012 17:16:28.106"></status>
+<status status="PASS" starttime="20201001 12:49:31.880" endtime="20201001 12:49:34.038"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:16:20.726" endtime="20201012 17:16:28.107"></status>
+<status status="PASS" starttime="20201001 12:49:28.127" endtime="20201001 12:49:34.038"></status>
 </kw>
 <kw name="WHEN Login with &quot;usermanagement2020@gmail.com&quot; &quot;123qweQ!&quot;">
 <kw name="Input Text" library="Selenium2Library">
@@ -943,8 +931,8 @@
 <arg>${ums_login_input_email}</arg>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20201012 17:16:28.108" level="INFO">Typing text 'usermanagement2020@gmail.com' into text field 'xpath=//*[@id="acc_Email"]'.</msg>
-<status status="PASS" starttime="20201012 17:16:28.108" endtime="20201012 17:16:28.446"></status>
+<msg timestamp="20201001 12:49:34.039" level="INFO">Typing text 'usermanagement2020@gmail.com' into text field 'xpath=//*[@id="acc_Email"]'.</msg>
+<status status="PASS" starttime="20201001 12:49:34.039" endtime="20201001 12:49:34.134"></status>
 </kw>
 <kw name="Input Password" library="Selenium2Library">
 <doc>Types the given password into the text field identified by ``locator``.</doc>
@@ -952,28 +940,26 @@
 <arg>${ums_login_input_password}</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20201012 17:16:28.447" level="INFO">Typing password into text field 'xpath=//*[@id="acc_Password"]'.</msg>
-<msg timestamp="20201012 17:16:28.548" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20201012 17:16:28.672" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20201012 17:16:28.446" endtime="20201012 17:16:28.673"></status>
+<msg timestamp="20201001 12:49:34.134" level="INFO">Typing password into text field 'xpath=//*[@id="acc_Password"]'.</msg>
+<status status="PASS" starttime="20201001 12:49:34.134" endtime="20201001 12:49:34.211"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201012 17:16:29.675" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201012 17:16:28.673" endtime="20201012 17:16:29.675"></status>
+<msg timestamp="20201001 12:49:35.216" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:49:34.211" endtime="20201001 12:49:35.216"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${ums_btn_login}</arg>
 </arguments>
-<msg timestamp="20201012 17:16:29.675" level="INFO">Clicking element 'xpath=//*[@id="account"]/div[3]/div[2]/button'.</msg>
-<status status="PASS" starttime="20201012 17:16:29.675" endtime="20201012 17:16:30.520"></status>
+<msg timestamp="20201001 12:49:35.216" level="INFO">Clicking element 'xpath=//*[@id="account"]/div[3]/div[2]/button'.</msg>
+<status status="PASS" starttime="20201001 12:49:35.216" endtime="20201001 12:49:35.515"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:16:28.107" endtime="20201012 17:16:30.520"></status>
+<status status="PASS" starttime="20201001 12:49:34.039" endtime="20201001 12:49:35.515"></status>
 </kw>
 <kw name="AND Go to Manage User">
 <kw name="Go To" library="Selenium2Library">
@@ -981,10 +967,10 @@
 <arguments>
 <arg>${ums_manage_url}</arg>
 </arguments>
-<msg timestamp="20201012 17:16:30.522" level="INFO">Opening url 'https://localhost:44346/ManageUser'</msg>
-<status status="PASS" starttime="20201012 17:16:30.521" endtime="20201012 17:16:30.771"></status>
+<msg timestamp="20201001 12:49:35.516" level="INFO">Opening url 'https://localhost:44346/ManageUser'</msg>
+<status status="PASS" starttime="20201001 12:49:35.516" endtime="20201001 12:49:35.679"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:16:30.521" endtime="20201012 17:16:30.772"></status>
+<status status="PASS" starttime="20201001 12:49:35.515" endtime="20201001 12:49:35.679"></status>
 </kw>
 <kw name="AND Delete">
 <kw name="Click Element" library="Selenium2Library">
@@ -992,47 +978,49 @@
 <arguments>
 <arg>${manage_btn_delete}</arg>
 </arguments>
-<msg timestamp="20201012 17:16:30.777" level="INFO">Clicking element 'xpath=//*[@id="showAllUserTable"]/tbody/tr[1]/td[7]/button[2]'.</msg>
-<status status="PASS" starttime="20201012 17:16:30.776" endtime="20201012 17:16:31.418"></status>
+<msg timestamp="20201001 12:49:35.680" level="INFO">Clicking element 'xpath=//*[@id="showAllUserTable"]/tbody/tr[1]/td[7]/button[2]'.</msg>
+<status status="PASS" starttime="20201001 12:49:35.680" endtime="20201001 12:49:35.739"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201012 17:16:32.418" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201012 17:16:31.418" endtime="20201012 17:16:32.418"></status>
+<msg timestamp="20201001 12:49:36.754" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:49:35.740" endtime="20201001 12:49:36.754"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:16:30.775" endtime="20201012 17:16:32.418"></status>
+<status status="PASS" starttime="20201001 12:49:35.680" endtime="20201001 12:49:36.754"></status>
 </kw>
-<kw name="THEN Cancle delete">
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg timestamp="20201012 17:16:33.421" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201012 17:16:32.420" endtime="20201012 17:16:33.421"></status>
-</kw>
+<kw name="AND Confirm delete">
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${manage_delete_btn_back}</arg>
+<arg>${manage_delete_btn_confirm}</arg>
 </arguments>
-<msg timestamp="20201012 17:16:33.421" level="INFO">Clicking element 'xpath=/html/body/div[3]/div/div[3]/button[2]'.</msg>
-<status status="PASS" starttime="20201012 17:16:33.421" endtime="20201012 17:16:33.533"></status>
+<msg timestamp="20201001 12:49:36.755" level="INFO">Clicking element 'xpath=/html/body/div[2]/div/div[3]/button[1]'.</msg>
+<status status="PASS" starttime="20201001 12:49:36.755" endtime="20201001 12:49:36.798"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:16:32.419" endtime="20201012 17:16:33.534"></status>
+<status status="PASS" starttime="20201001 12:49:36.755" endtime="20201001 12:49:36.798"></status>
+</kw>
+<kw name="THEN The alert message must say &quot;Delete user account successfully!&quot;">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${message}</arg>
+</arguments>
+<status status="PASS" starttime="20201001 12:49:36.799" endtime="20201001 12:49:36.812"></status>
+</kw>
+<status status="PASS" starttime="20201001 12:49:36.799" endtime="20201001 12:49:36.812"></status>
 </kw>
 <kw name="Close Browser" library="Selenium2Library" type="teardown">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20201012 17:16:33.535" endtime="20201012 17:16:37.402"></status>
+<status status="PASS" starttime="20201001 12:49:36.812" endtime="20201001 12:49:39.878"></status>
 </kw>
-<doc>ยกเลิกการลบช้อมูลผู้ใช้งาน</doc>
+<doc>ลบข้อมูลผู้ใช้งานสำเร็จ</doc>
 <tags>
-<tag>FAILS</tag>
+<tag>PASS</tag>
 </tags>
-<status status="PASS" starttime="20201012 17:16:20.724" endtime="20201012 17:16:37.403" critical="yes"></status>
+<status status="PASS" starttime="20201001 12:49:28.125" endtime="20201001 12:49:39.879" critical="yes"></status>
 </test>
 <test id="s1-t8" name="UMS-Manage-02-02">
 <kw name="GIVEN Open web browser">
@@ -1042,14 +1030,14 @@
 <arg>${ums_url}</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20201012 17:16:37.408" level="INFO">Opening browser 'chrome' to base url 'https://localhost:44346/'.</msg>
-<status status="PASS" starttime="20201012 17:16:37.408" endtime="20201012 17:16:42.608"></status>
+<msg timestamp="20201001 12:49:39.885" level="INFO">Opening browser 'chrome' to base url 'https://localhost:44346/'.</msg>
+<status status="PASS" starttime="20201001 12:49:39.885" endtime="20201001 12:49:43.674"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20201012 17:16:42.608" endtime="20201012 17:16:44.748"></status>
+<status status="PASS" starttime="20201001 12:49:43.674" endtime="20201001 12:49:45.833"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:16:37.407" endtime="20201012 17:16:44.749"></status>
+<status status="PASS" starttime="20201001 12:49:39.884" endtime="20201001 12:49:45.833"></status>
 </kw>
 <kw name="WHEN Login with &quot;usermanagement2020@gmail.com&quot; &quot;123qweQ!&quot;">
 <kw name="Input Text" library="Selenium2Library">
@@ -1058,8 +1046,8 @@
 <arg>${ums_login_input_email}</arg>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20201012 17:16:44.751" level="INFO">Typing text 'usermanagement2020@gmail.com' into text field 'xpath=//*[@id="acc_Email"]'.</msg>
-<status status="PASS" starttime="20201012 17:16:44.750" endtime="20201012 17:16:45.055"></status>
+<msg timestamp="20201001 12:49:45.833" level="INFO">Typing text 'usermanagement2020@gmail.com' into text field 'xpath=//*[@id="acc_Email"]'.</msg>
+<status status="PASS" starttime="20201001 12:49:45.833" endtime="20201001 12:49:45.927"></status>
 </kw>
 <kw name="Input Password" library="Selenium2Library">
 <doc>Types the given password into the text field identified by ``locator``.</doc>
@@ -1067,28 +1055,26 @@
 <arg>${ums_login_input_password}</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20201012 17:16:45.055" level="INFO">Typing password into text field 'xpath=//*[@id="acc_Password"]'.</msg>
-<msg timestamp="20201012 17:16:45.125" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20201012 17:16:45.270" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20201012 17:16:45.055" endtime="20201012 17:16:45.270"></status>
+<msg timestamp="20201001 12:49:45.928" level="INFO">Typing password into text field 'xpath=//*[@id="acc_Password"]'.</msg>
+<status status="PASS" starttime="20201001 12:49:45.927" endtime="20201001 12:49:46.002"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201012 17:16:46.273" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201012 17:16:45.270" endtime="20201012 17:16:46.273"></status>
+<msg timestamp="20201001 12:49:47.007" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:49:46.002" endtime="20201001 12:49:47.007"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${ums_btn_login}</arg>
 </arguments>
-<msg timestamp="20201012 17:16:46.274" level="INFO">Clicking element 'xpath=//*[@id="account"]/div[3]/div[2]/button'.</msg>
-<status status="PASS" starttime="20201012 17:16:46.273" endtime="20201012 17:16:47.248"></status>
+<msg timestamp="20201001 12:49:47.007" level="INFO">Clicking element 'xpath=//*[@id="account"]/div[3]/div[2]/button'.</msg>
+<status status="PASS" starttime="20201001 12:49:47.007" endtime="20201001 12:49:47.290"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:16:44.749" endtime="20201012 17:16:47.249"></status>
+<status status="PASS" starttime="20201001 12:49:45.833" endtime="20201001 12:49:47.290"></status>
 </kw>
 <kw name="AND Go to Manage User">
 <kw name="Go To" library="Selenium2Library">
@@ -1096,10 +1082,10 @@
 <arguments>
 <arg>${ums_manage_url}</arg>
 </arguments>
-<msg timestamp="20201012 17:16:47.266" level="INFO">Opening url 'https://localhost:44346/ManageUser'</msg>
-<status status="PASS" starttime="20201012 17:16:47.266" endtime="20201012 17:16:47.775"></status>
+<msg timestamp="20201001 12:49:47.291" level="INFO">Opening url 'https://localhost:44346/ManageUser'</msg>
+<status status="PASS" starttime="20201001 12:49:47.291" endtime="20201001 12:49:47.444"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:16:47.265" endtime="20201012 17:16:47.775"></status>
+<status status="PASS" starttime="20201001 12:49:47.291" endtime="20201001 12:49:47.444"></status>
 </kw>
 <kw name="AND Delete">
 <kw name="Click Element" library="Selenium2Library">
@@ -1107,59 +1093,41 @@
 <arguments>
 <arg>${manage_btn_delete}</arg>
 </arguments>
-<msg timestamp="20201012 17:16:47.789" level="INFO">Clicking element 'xpath=//*[@id="showAllUserTable"]/tbody/tr[1]/td[7]/button[2]'.</msg>
-<status status="PASS" starttime="20201012 17:16:47.788" endtime="20201012 17:16:48.388"></status>
+<msg timestamp="20201001 12:49:47.445" level="INFO">Clicking element 'xpath=//*[@id="showAllUserTable"]/tbody/tr[1]/td[7]/button[2]'.</msg>
+<status status="PASS" starttime="20201001 12:49:47.445" endtime="20201001 12:49:47.518"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201012 17:16:49.389" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201012 17:16:48.388" endtime="20201012 17:16:49.389"></status>
+<msg timestamp="20201001 12:49:48.529" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201001 12:49:47.518" endtime="20201001 12:49:48.529"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:16:47.786" endtime="20201012 17:16:49.389"></status>
+<status status="PASS" starttime="20201001 12:49:47.445" endtime="20201001 12:49:48.529"></status>
 </kw>
-<kw name="AND Confirm delete">
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg timestamp="20201012 17:16:50.409" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201012 17:16:49.407" endtime="20201012 17:16:50.409"></status>
-</kw>
+<kw name="THEN Cancle delete">
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${manage_delete_btn_confirm}</arg>
+<arg>${manage_delete_btn_back}</arg>
 </arguments>
-<msg timestamp="20201012 17:16:50.410" level="INFO">Clicking element 'xpath=/html/body/div[3]/div/div[3]/button[1]'.</msg>
-<status status="PASS" starttime="20201012 17:16:50.409" endtime="20201012 17:16:50.510"></status>
+<msg timestamp="20201001 12:49:48.530" level="INFO">Clicking element 'xpath=/html/body/div[2]/div/div[3]/button[2]'.</msg>
+<status status="PASS" starttime="20201001 12:49:48.530" endtime="20201001 12:49:48.567"></status>
 </kw>
-<status status="PASS" starttime="20201012 17:16:49.407" endtime="20201012 17:16:50.511"></status>
-</kw>
-<kw name="THEN The alert message must say &quot;Delete user account successfully!&quot;">
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${message}</arg>
-</arguments>
-<status status="PASS" starttime="20201012 17:16:50.512" endtime="20201012 17:16:50.639"></status>
-</kw>
-<status status="PASS" starttime="20201012 17:16:50.512" endtime="20201012 17:16:50.639"></status>
+<status status="PASS" starttime="20201001 12:49:48.530" endtime="20201001 12:49:48.567"></status>
 </kw>
 <kw name="Close Browser" library="Selenium2Library" type="teardown">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20201012 17:16:50.648" endtime="20201012 17:16:54.650"></status>
+<status status="PASS" starttime="20201001 12:49:48.568" endtime="20201001 12:49:50.692"></status>
 </kw>
-<doc>ลบข้อมูลผู้ใช้งานสำเร็จ</doc>
+<doc>ยกเลิกการลบช้อมูลผู้ใช้งาน</doc>
 <tags>
-<tag>PASS</tag>
+<tag>FAILS</tag>
 </tags>
-<status status="PASS" starttime="20201012 17:16:37.405" endtime="20201012 17:16:54.653" critical="yes"></status>
+<status status="PASS" starttime="20201001 12:49:39.883" endtime="20201001 12:49:50.693" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20201012 17:14:45.544" endtime="20201012 17:16:54.665"></status>
+<status status="PASS" starttime="20201001 12:48:15.141" endtime="20201001 12:49:50.698"></status>
 </suite>
 <statistics>
 <total>
