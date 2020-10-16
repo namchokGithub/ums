@@ -1,21 +1,21 @@
 ﻿using System;
+using UMS.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
+using UMS.Controllers;
 using System.Threading.Tasks;
+using UMS.Areas.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
-using UMS.Data;
 using Microsoft.Extensions.Logging;
 using System.Security.Cryptography;
 using Microsoft.AspNetCore.Identity;
-using UMS.Controllers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
-using UMS.Areas.Identity.Data;
 
 /*
  * Name: LoginModel.cs (Extend: PageModel)

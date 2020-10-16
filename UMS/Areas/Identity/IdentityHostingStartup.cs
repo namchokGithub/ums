@@ -1,10 +1,10 @@
 ﻿using UMS.Data;
+using UMS.Areas.Identity.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using UMS.Areas.Identity.Data;
 
 /*
  * Name: IdentityHostingStartup (Extend: IHostingStartup)

@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Threading.Tasks;
+using UMS.Areas.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Authorization;
-using UMS.Areas.Identity.Data;
 
 /*
  * Name: LogoutModel.cs (Extend: PageModel)
- * Namespace: UMS.Areas.Identity.Pages.Account
  * Author: Idenity system
+ * Descriptions: Logout from this system.
  */
 
 namespace UMS.Areas.Identity.Pages.Account

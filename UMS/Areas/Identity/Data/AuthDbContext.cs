@@ -1,8 +1,8 @@
-﻿using Microsoft.Extensions.Logging;
-using UMS.Models;
+﻿using UMS.Models;
+using UMS.Areas.Identity.Data;
+using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
-using UMS.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 /*
@@ -72,7 +72,7 @@ namespace UMS.Data
                 .Ignore(entity => entity.AccessFailedCount)
                 .Ignore(entity => entity.PhoneNumberConfirmed)
                 .ToTable(name: "Account");
-            // _logger.LogTrace("Creating applications user models.");
+            // Creating applications user models
 
             builder.Entity<IdentityRole>().ToTable("Roles");
             builder.Entity<IdentityUserRole<string>>().ToTable("UserRoles");
@@ -80,7 +80,7 @@ namespace UMS.Data
             builder.Entity<IdentityUserToken<string>>().ToTable("UserTokens");
             builder.Entity<IdentityUserClaim<string>>().ToTable("UserClaims");
             builder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaims");
-            // _logger.LogTrace("Creating Identity models.");
+            // Creating Identity models
 
             builder.Entity<Logs>(entity =>
             {
@@ -104,8 +104,6 @@ namespace UMS.Data
             builder.Entity<Logs>()
                 .Ignore(e => e.log_date)
                 .Ignore(e => e.log_time);
-            // _logger.LogTrace("Creating log models.");
-            // _logger.LogTrace("End creating on model.");
         } // End OnModelCreating
 
         public DbSet<Logs> Logs { get; set; } // Set table logs
