@@ -42,11 +42,6 @@ namespace UMS
             services.AddScoped<ILogsRepository, LogsRepository>();
             services.AddScoped<IAccountRepository, AccountRepository>();
 
-            // Set connect database
-            services.AddDbContext<ManagementContext>(options =>
-                    options.UseSqlServer(
-                       Configuration.GetConnectionString("AuthDbContextConnection")));
-
             // Cookies
             services.ConfigureApplicationCookie(o =>
             {
