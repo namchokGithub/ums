@@ -1,0 +1,266 @@
+﻿@page
+@model RegisterModel
+@{
+    /*
+     * Name: Register.cshtml
+     * Namespace: ~/Area/Identity/Pages/Account
+     * Description: The registraion page.
+    */
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string URL = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
+}
+<!--Start Style-->
+<style>
+    #btn_back {
+        width: 60px;
+    }
+
+    #overlay {
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+        display: none;
+        background: rgba(0,0,0,0.05);
+    }
+
+    .cv-spinner {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px #ddd solid;
+        border-top: 4px #2e93e6 solid;
+        border-radius: 50%;
+        animation: sp-anime 0.8s infinite linear;
+    }
+
+    @@keyframes sp-anime {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .is-hide {
+        display: none;
+    }
+</style>
+<!--End Style-->
+<div id="overlay">
+    <div class="cv-spinner">
+        <span class="spinner"></span>
+    </div>
+</div>
+<div class="hold-transition register-page">
+    <div class="register-box">
+        <div class="register-logo">
+            <h3 class="login-box-msg">User Management System</h3>
+        </div>
+        <!--Start Card-->
+        <div class="card">
+            <!--Start Card body-->
+            <div class="card-body register-card-body">
+                <p class="login-box-msg">Create new account.</p>
+                <!--Start Form register-->
+                <form asp-route-returnUrl="@Model.ReturnUrl" method="post" id="formRegister">
+                    <!--Start Input information for register-->
+                    <div class="form-group">
+                        <label asp-for="Input.acc_Firstname"></label><code>*</code>
+                        <input asp-for="Input.acc_Firstname" id="acc_Firstname" class="form-control" />
+                        <span asp-validation-for="Input.acc_Firstname" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Input.acc_Lastname"></label><code>*</code>
+                        <input asp-for="Input.acc_Lastname" id="acc_Lastname" class="form-control" />
+                        <span asp-validation-for="Input.acc_Lastname" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Input.Email"></label><code>*</code>
+                        <input asp-for="Input.Email" class="form-control" onblur="checkUser()" id="acc_Email" />
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                        <span class="text-danger d-none" id="alert_acc_email">This email has been exist.</span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Input.Password"></label><code>*</code>
+                        <div class="input-group mb-3">
+                            <input asp-for="Input.Password" id="acc_Password" class="form-control" />
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span id="icon_Password" class="fas fa-eye-slash" style="cursor:pointer" onclick="togglePasword()"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Input.ConfirmPassword"></label><code>*</code>
+                        <div class="input-group mb-3">
+                            <input asp-for="Input.ConfirmPassword" id="acc_ConfirmPassword" class="form-control" />
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span id="icon_ConfirmPassword" class="fas fa-eye-slash" style="cursor:pointer" onclick="toggleConfirmPasword()"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                    </div>
+                    <!--End Input information for Register-->
+                    <!--Start Button-->
+                    <a id="btn_back" class="btn btn-block btn-secondary float-left" href="@URL/Identity/Account/Login"> Back </a>
+                    <button onclick="register()" type="button" class="btn btn-primary float-right">Register</button>
+                    <!--End Button-->
+                </form>
+                <!--End Form Register-->
+            </div>
+        </div>
+        <!--End Card-->
+    </div>
+</div>
+<!--Start Script-->
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        $(document).ajaxSend(function () {
+            $("#overlay").fadeIn(200);
+        });
+        //Regular expression
+        var RegExName = /^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$/;
+        var RegExPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\:\;\[\]\\\|\/\.\,\'\"\()\{}\<>_#$!%@@^฿*?&\-\+\=])[A-Za-z0-9\:\;\[\]\\\|\/\.\,\'\"\()\{}\<>_#$!%@@^฿*?&\-\+\=]+$/;
+        var RegEmail = /^[\w-\.]+@@([\w-]+\.)+[\w-]{2,4}$/;
+        /*
+        * Name: register
+        * Author: Namchok Singhachai
+        * Description: Checking user is exist and input validation.
+        */
+        function register() {
+            try {
+                let acc_Firstname = $('#acc_Firstname').val()
+                let acc_Lastname = $('#acc_Lastname').val()
+                let Email = $('#acc_Email').val()
+                let Password = $('#acc_Password').val()
+                let ConfirmPassword = $('#acc_ConfirmPassword').val()
+                if (!RegExName.test(acc_Firstname)) toastr.warning('The first name can not be blank and must only character.');
+                else if (!RegExName.test(acc_Lastname)) toastr.warning('The last name can not be blank and must only character.');
+                else if (Email == "" || Email == null) toastr.warning('The Email field is required.');
+                else if (!RegEmail.test(Email)) toastr.warning('Invalid Emails.');
+                else if (!RegExPassword.test(Password)) toastr.warning('The password must contain at least 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
+                else if (!RegExPassword.test(ConfirmPassword)) toastr.warning('The current password must contain at least 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
+                else if (Password !== ConfirmPassword) toastr.warning('The password and confirm password do not match.');
+                else {
+                    $.ajax({
+                        url: "@Url.Action("GetStatusUser", "ManageUser")",
+                        data: { username: Email},
+                        type: "POST",
+                        dataType: "JSON",
+                        success: function (res) {
+                            if (res['condition'] != "error") {
+                                if (res == 'ACTIVE') {
+                                    toastr.warning('This user has been taken.');
+                                } else if (res == 'INACTIVE') {
+                                    Swal.fire({
+                                        title: 'The email is already registered.',
+                                        text: "Would you like to try login instead?",
+                                        icon: 'warning',
+                                        showCancelButton: true,
+                                        confirmButtonColor: '#3085d6',
+                                        cancelButtonColor: '#6c757d',
+                                        confirmButtonText: 'Login'
+                                    }).then((res) => {
+                                        if (res.value) {
+                                            console.log('Confirmed')
+                                            location.href = "@Url.Action("Index")"
+                                        } else {
+                                            Swal.fire({
+                                                icon: 'error',
+                                                title: 'This user has been taken.',
+                                            });
+                                            $('#formRegister').trigger("reset");
+                                        } // Checking result
+                                    })
+                                } else {
+                                    if (RegExName.test(acc_Firstname), RegExName.test(acc_Lastname), RegExPassword.test(Password)
+                                        , RegExPassword.test(ConfirmPassword), RegEmail.test(Email), Password === ConfirmPassword
+                                    ) {
+                                        console.log("Submitting.");
+                                        $('#formRegister').submit();
+                                    } else {
+                                        console.log(userIsExist);;
+                                        console.log("Invalid Input.");
+                                    } // End check input
+                                }
+                            } else {
+                                eval(res['messages']) // Excute js
+                                console.log(`Error! ${res['text']}`);
+                            } // End if result is not error
+                        },
+                        error: function (result) {
+                            let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : '' // Set message status
+                            let _text = 'Status : ' + result.status + statusResText
+                            console.log(result); // show log of error
+                            console.log(`${_text}`);
+                            toastr.error(`${_text}`);
+                        } // End error
+                    }).done(function () {
+                        setTimeout(function () {
+                            $("#overlay").fadeOut(80);
+                        }, 100);
+                    }); // End ajax for check user exits
+                } // End if check input
+            } catch {
+                console.log(`${err.message}`);
+                toastr.error(`${err.message}`);
+            }
+        } // End register
+
+        $(document).ready(() => {
+            @if (TempData["Exception"] != null) {@Html.Raw(TempData["Exception"])}; // Check is has exception
+        });
+
+        /*
+        * Name: checkUser()
+        * Author: Namchok Singhachai
+        * Description: Checking input of form registration.
+        */
+        function checkUser() {
+            try {
+                let username = $('#acc_Email').val()
+                $.ajax({
+                    url: "@Url.Action("CheckUserExist", "ManageUser")",
+                    data: { username: username},
+                    type: "POST",
+                    dataType: "JSON",
+                    success: function (res) {
+                        if (res) {
+                            $('#alert_acc_email').removeClass('d-none')
+                            console.log('This email has been  exist.')
+                        } else {
+                            $('#alert_acc_email').addClass('d-none')
+                            console.log('No user name is exits.')
+                        } // If res qual 1 is the user is exits
+                    },
+                    error: function (result) {
+                        let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
+                        let _text = 'Status : ' + result.status + statusResText
+                        Swal.fire({ icon: 'error', title: 'Error !', text: `${_text}`, showConfirmButton: true });
+                        toastr.error(`${_text}`);
+                    } // End error
+                }).done(function () {
+                    setTimeout(function () {
+                        $("#overlay").fadeOut(80);
+                    }, 100);
+                }); // End ajax for check user exits
+            } catch (err) {
+                console.log(`${err.message}`);
+                toastr.error(`${err.message}`);
+            } // End try catch
+        } // End checkUser
+    </script>
+}
+<!--End Script-->

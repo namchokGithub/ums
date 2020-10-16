@@ -1,0 +1,272 @@
+﻿@model Management
+@{
+    /*
+        Namspace: ~/View/ManageUser/Index.cshtml
+        Author: Namchok Singhachai
+        Description: The view for user management.
+    */
+    ViewData["Title"] = "Manage User";                  // Set title
+    Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";  // Set layout
+    var id = ViewData["UserId"];
+}
+<!-- Content -->
+<div class="mx-auto">
+    <br />
+    <!--Start Card-->
+    <div class="card card-info">
+        <!--Start Card header-->
+        <div class="card-header">
+            <h3 class="card-title">Manage Users</h3>
+        </div>
+        <!--End Card header-->
+        <!--Start Card body-->
+        <div class="card-body">
+            <div class="box">
+                <div class="box-body">
+                    <!--Start Manage user table-->
+                    <div class="table-responsive-md">
+                        <table id="showAllUserTable" class="table table-hover w-100 table-bordered table-striped">
+                            <!--Start Manage user table head-->
+                            <thead class="text-center">
+                                <tr>
+                                    <th>No.</th>
+                                    <th>First name</th>
+                                    <th>Last name</th>
+                                    <th>Email</th>
+                                    <th>Roles</th>
+                                    <th>Type Account</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <!--End Manage user table head-->
+                            <!--Start Manage user table body-->
+                            <tbody>
+                                @{ int index = 0; /* For show order in table */ }
+                                @if (ViewData["User"] != null)
+                                {
+                                    @foreach (var item in ViewData["User"] as List<Management>)
+                                    {
+                                        if (id.ToString() != item.acc_Id)
+                                        {
+                                            <tr>
+                                                <td><center>@(index += 1)</center></td>
+                                                <td>@item.acc_Firstname</td>
+                                                <td>@item.acc_Lastname</td>
+                                                <td>@item.acc_Email</td>
+                                                <td><center> @((item.acc_Rolename != null) ? item.acc_Rolename : "-") </center></td>
+                                                <td><center> @((item.acc_TypeAccoutname != null) ? item.acc_TypeAccoutname : "-") </center></td>
+                                                <td class="text-center">
+                                                    <input type="hidden" asp-for="acc_Id" value="@item.acc_Id">
+                                                    <button class="btn btn-warning text-white" onclick="getUser('@item.acc_Id')"><i class="fa fa-pencil-alt"></i></button>
+                                                    <button class="btn btn-danger" onclick="DeleteUser('@item.acc_Id')"><i class="fa fa-times"></i></button>
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                }
+                                else // Checking if ViweData["User"] is null.
+                                {
+                                    <tr>
+                                        <td colspan="6"><center>No results.</center></td>
+                                    </tr>
+                                }
+                            </tbody>
+                            <!--End Manage user table body-->
+                        </table>
+                    </div>
+                    <!--End Manage user table body-->
+                </div>
+                <!--End Manage user table body-->
+            </div>
+            <!--End Manage user table-->
+        </div>
+        <!--End Card body-->
+        <!--Start user form edit.  | User update in controller. -->
+        <form id="ModalEditUser" method="post" asp-action="EditUser" asp-controller="ManageUser">
+            <!--Start Modal edit user-->
+            <div class="modal fade" id="EditUser">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!--Start Modal header edit user-->
+                        <div class="modal-header bg-warning">
+                            <h4 class="modal-title  text-white">Edit user account.</h4>
+                            <!--Start Button close-->
+                            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <!--End Button close-->
+                        </div>
+                        <!--End Modal header edit user-->
+                        <!--Start Modal body edit user-->
+                        <div class="modal-body">
+                            <!-- Hidden values -->
+                            <input type="hidden" asp-for="acc_Id" name="acc_Id" />
+                            <input type="hidden" asp-for="acc_User" id="acc_User" />
+                            <input type="hidden" asp-for="acc_Email" id="acc_Email" />
+                            <input type="hidden" asp-for="acc_IsActive" id="acc_IsActive" />
+
+                            <!--Start Input Edit user-->
+                            <div class="form-group">
+                                <label asp-for="acc_Firstname">First Name</label> <code>*</code>
+                                <input asp-for="acc_Firstname" class="form-control"
+                                       id="acc_Firstname" placeholder="First name">
+                                <span asp-validation-for="acc_Firstname" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="acc_Lastname">Last Name</label> <code>*</code>
+                                <input asp-for="acc_Lastname" class="form-control"
+                                       id="acc_Lastname" placeholder="Last name">
+                                <span asp-validation-for="acc_Lastname" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="acc_Rolename">Roles</label> <code>*</code>
+                                <select class="form-control" id="acc_RoleId" name="acc_RoleId">
+                                    <option value="1">Admin</option>
+                                    <option value="2" selected>User</option> <!-- Show option form data base-->
+                                </select>
+                            </div>
+                            <!--End Input Edit user-->
+                        </div>
+                        <!--End Modal body-->
+                        <!--Start Modal footer-->
+                        <div class="modal-footer justify-content-between">
+                            <button type="button" class="btn btn-secondary float-left" data-dismiss="modal">Back</button>
+                            <button type="button" class="btn btn-success float-right" onclick="CheckUpdateUser()">Save</button>
+                        </div>
+                        <!--End Modal footer-->
+                    </div>
+                </div>
+            </div>
+            <!--End Modal Edit user-->
+        </form>
+        <!--End Form Edit user-->
+    </div>
+    <!--End Card-->
+</div>
+<!-- End content -->
+<!-- Script section -->
+<script>
+
+    /**
+     * Name: CheckUpdateUser
+     * Author: Namchok Singhachai
+     * Description: Checking value input.
+     */
+    function CheckUpdateUser() {
+        let regex = /^(([a-zA-Z])?[a-zA-Z]*)*$/; // Checking regex
+        if ($('#acc_Id').val() == '') toastr.error('ID not found.')
+        else if ($('#acc_Firstname').val() == '') toastr.warning('The First name can not be blank and must only character.')
+        else if ($('#acc_Lastname').val() == '') toastr.warning('The Last name can not be blank and must only character.')
+        else if (!regex.test($('#acc_Firstname').val())) toastr.warning('The First name can not be blank and must only character.')
+        else if (!regex.test($('#acc_Lastname').val())) toastr.warning('The Last name can not be blank and must only character.')
+        else if ($('#acc_RoleId').val() == '') toastr.warning('Please select role.')
+        else if ($('#acc_IsActive').val() == '') toastr.error('User not Active.')
+        else $("#ModalEditUser").submit();
+    } // End CheckUpdateUser
+
+    /**
+     * Name: DeleteUser
+     * Parameter: id(String)
+     * Author: Namchok Singhachai
+     * Description: Account deactivation.
+     */
+    function DeleteUser(id) {
+        try {
+            if (id == null) throw new Error("The user ID not found !.") // Check Id and throw if not found
+            // SweetAlert confirm delete
+            Swal.fire({
+                title:'Are you sure to delete?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes',
+                confirmButtonColor: '#28a745',
+                cancelButtonText: 'Back',
+                cancelButtonColor: '#6c757d'
+            }).then((result) => {
+                if (result.value) {
+                    $.ajax({
+                        url: '@Url.Action("DeleteUser", "ManageUser")',
+                        data: { id: id },
+                        method: "POST",
+                        success: () => {
+                            console.log('Delete user account successfully!')
+                            toastr.success('Delete user account successfully!')
+                        },
+                        error: function (result) {
+                            let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : '' // Set message status
+                            let _text = 'Status : ' + result.status  + statusResText
+                            console.log(result); // Show log of error
+                            toastr.error(`${_text}`);
+                        } // if error
+                    }).done(function () {
+                        setTimeout(function () { location.reload(); }, 800); // Reload pages
+                    }) // End ajax for inactive user
+                } // End if result.value
+            }) // End Swal function
+        } catch (err) {
+            console.log(`${err.message}`);
+            toastr.error(`${err.message}`);
+        }// End try catch
+    } // End DeleteUser
+
+    /**
+     * Name: getUser
+     * Parameter: id(String)
+     * Author: Namchok Singhachai
+     * Description: Get active user by ID (Ajax)
+     */
+    function getUser(id) {
+        try {
+            if (id == null) throw new Error("The user ID not found !."); // Check Id
+            $.ajax({
+                url: "@Url.Action("GetUser", "ManageUser")",
+                data: { id: id },
+                type: "POST",
+                dataType: "JSON",
+                success: function (result) {
+                    if (result['condition'] != "error") {
+                        // Set data to form
+                        if (result.acc_Rolename === 'Admin') {
+                            $('#acc_RoleId').val(1);
+                        } else if (result.acc_Rolename === 'User') {
+                            $('#acc_RoleId').val(2);
+                        } else {
+                            $('#acc_RoleId').val(0);
+                        } // end check role from select
+                        $(`input[name='acc_Id']`).val(result.acc_Id);
+                        $('#acc_IsActive').val(result.acc_IsActive);
+                        $('#acc_Firstname').val(result.acc_Firstname);
+                        $('#acc_Lastname').val(result.acc_Lastname);
+                        $('#EditUser').modal(); // Show modal
+                        console.log('Setting value successful.');
+                    } else {
+                        eval(result['messages']); // Excute js
+                        console.log(`Error! ${result['text']}`);
+                    } // End if result is not error
+                },
+                error: function (result) {
+                    // Set message status
+                    let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
+                    let _text = 'Status : ' + result.status + statusResText
+                    console.log(result); // show log of error
+                    toastr.error(`${_text}`);
+                } // End error
+            }) // End ajax for get user by id and set to form
+        } catch (err) {
+            console.log(`${err.message}`);
+            toastr.error(`${err.message}`);
+        } // End try catch
+    } // End getUser
+
+    // Check is update user success
+    @if (TempData["UpdateResult"] != null) { @Html.Raw(TempData["UpdateResult"]) /* Swal funciton */ };
+    // Check is has exception
+    @if (TempData["nullException"] != null) { @Html.Raw(TempData["nullException"]) /* Swal funciton */ };
+    // Check is has exception
+    @if (TempData["SqlException"] != null) { @Html.Raw(TempData["SqlException"]) /* Swal funciton */ };
+    // Check is has exception
+    @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ };
+</script>
+<!-- End Index of Home controller -->

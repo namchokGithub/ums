@@ -1,0 +1,46 @@
+﻿@model ErrorViewModel
+@{
+    /*
+        Namespace: ~/Areas/Identity/Pages/Account/Error.cshtml
+        Author: Namchok Singhachai
+        Description: Error page.
+    */
+    ViewData["Title"] = "Access Denied";
+    string URL = ViewData["URLLOGOUT"].ToString();
+}
+<!-- Content -->
+<div class="hold-transition login-page">
+    <div class="login-box mx-auto mt-2 mt-lg-3">
+        <h2 class="text-danger login-box-msg text-center">@ViewData["Title"]</h2>
+        <!--Start Card-->
+        <div class="card">
+            <!--Start Card body-->
+            <div class="card-body login-card-body text-center">
+                <br>
+                <i id="checkicon" class="fas fa-exclamation-circle text-danger"></i>
+                <br><br>
+                <h4 class="text-black-50">You do not have access to this resource.</h4>
+                <!-- If has model error -->
+                @if (Model.ShowRequestId)
+                {
+                    <p>
+                        <strong>Request ID:</strong> <code>@Model.RequestId</code>
+                    </p>
+                }
+                <!-- Back to home -->
+                <a href="@URL" class="btn btn-block btn-secondary btn-flat">Back</a>
+            </div>
+            <!--End Card body-->
+        </div>
+        <!--End Card-->
+    </div>
+</div>
+<!-- End Content -->
+<!--Start Script-->
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"])};
+    </script>
+}
+<!--End Script-->

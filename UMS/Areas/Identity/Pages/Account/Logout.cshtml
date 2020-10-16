@@ -1,0 +1,52 @@
+﻿@page
+@model LogoutModel
+@{
+    /*
+        Namespace: ~/Areas/Identity/Pages/Account/Logout.cshtml
+        Author: Namchok Singhachai
+        Description: Logged out page.
+    */
+    ViewData["Title"] = "Logged out";
+    Layout = "~/Areas/Identity/Pages/_AuthLayout.cshtml";
+    string URL = "~/";
+    if (ViewData["URL"].ToString() != null && ViewData["URL"].ToString() != "")
+    {
+        URL = ViewData["URL"].ToString();
+    }
+}
+<div class="hold-transition login-page">
+    <div class="login-box">
+        <h3 class="login-box-msg">User Management System</h3>
+        <!--Start Card-->
+        <div class="card">
+            <!--Start Card body-->
+            <div class="card-body login-card-body text-center">
+                <br>
+                <i id="checkicon" class="fa fa-check-circle"></i>
+                <br><br>
+                <h3 id="success">Logout!</h3>
+                <p>
+                    You have successfully logged out of the application.
+                    <br><br>
+                    <!--Start Button  Back to login-->
+                    <a class="btn btn-block btn-primary" href="@URL/Identity/Account/Login">
+                        Back to Login
+                    </a>
+                    <!--End Button  Back to login-->
+                </p>
+            </div>
+            <!--End Card body-->
+        </div>
+        <!--End Card-->
+    </div>
+</div>
+<!--Start Script-->
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        $(document).ready(function () {
+            @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"])}; // Check is has exception
+        });
+    </script>
+}
+<!--End Script-->

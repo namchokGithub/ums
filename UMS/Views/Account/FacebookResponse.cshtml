@@ -1,0 +1,42 @@
+﻿@{
+    /*
+        Namespace: ~/Views/Account/FacebookResponse.cshtml
+        Author: Namchok Singhachai
+        Description: Facebook response page.
+    */
+    ViewData["Title"] = "Facebook Response";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string URL = ViewData["URL"].ToString();
+    string URLHOME = ViewData["URLHOME"].ToString();
+}
+<!-- Content -->
+<div class="hold-transition login-page">
+    <div class="login-box mx-auto mt-2 mt-lg-3">
+        <h2 class="text-danger login-box-msg text-center">@ViewData["Title"]</h2>
+        <!--Start Card-->
+        <div class="card">
+            <!--Start Card body-->
+            <div class="card-body login-card-body text-center">
+                <br>
+                <i id="checkicon" class="fas fa-exclamation-circle text-danger"></i>
+                <br><br>
+                <h4 class="text-black-50">You do not have access to this site.</h4>
+                <!-- Back to home -->
+                <form method="post" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@URLHOME">
+                    <button type="submit" class="btn btn-block btn-secondary btn-flat">Back</button>
+                </form>
+            </div>
+            <!--End Card body-->
+        </div>
+        <!--End Card-->
+    </div>
+</div>
+<!-- End Content -->
+<!--Start Script-->
+@section Scripts {
+    <script>
+        @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) };
+    </script>
+    <partial name="_ValidationScriptsPartial" />
+}
+<!--End Script-->

@@ -1,0 +1,79 @@
+﻿@*
+    Namespace: ~/View/Shared/AdminLTE
+    File: _MainNavigation.cshtml
+    Description: Main side bar of template.
+*@
+@using static User_Management_System.Helpers.NavigationIndicatorHelper;  @*For active menu class*@
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="~/" class="brand-link">
+        <img src="~/img/logoUMS.png" alt="UMSLogo" class="brand-image img-circle elevation-3" />
+        <span class="brand-text font-weight-light text-logo">User Management System</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel mt-3 pb-1 mb-2 d-flex">
+            <!-- Profile image -->
+            <div class="text-center">
+                <i id="profile_Logo" alt="Profile" class="fas fa-user-alt nav-icon"></i> &ensp;
+            </div>
+            <!-- End profile image -->
+            <!-- Profile name -->
+            <div class="info">
+                <!-- If Authenticated then show name's user -->
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <p class="d-block text-white" data-toggle="tooltip" title="@User.Identity.Name">Hi!, @User.Identity.Name </p>
+                }
+                else
+                {
+                    <p class="d-block text-white"> Default </p>
+                }
+            </div>
+            <!-- End profile name -->
+        </div>
+        <!-- End sidebar user panel -->
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <!-- List of menu -->
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <li class="nav-item">
+                    <a asp-controller="Home" asp-action="Index" class="nav-link @Url.MakeActiveClass("home","index")">
+                        <i class="fas fa-home nav-icon"></i> &ensp;
+                        <p>Home</p>
+                    </a>
+                </li> <!-- Home -->
+                <li class="nav-item">
+                    <a asp-controller="EditProfile" asp-action="Index" asp-route-id="@ViewData["UserId"]" class="nav-link @Url.MakeActiveClass("EditProfile","Index")">
+                        <i class="fas fa-address-card nav-icon"></i> &ensp;
+                        <p>Edit Profile</p>
+                    </a>
+                </li> <!-- Edit profile -->
+                @*ตรวจสอบว่าเป็นตำแหน่งไหน ถ้าเป็น Admin จะแสดง*@
+                @if (User.IsInRole("Admin"))
+                {
+                    <li class="nav-item">
+                        <a asp-controller="ManageUser" asp-action="Index" class="nav-link @Url.MakeActiveClass("ManageUser","Index")">
+                            <i class="fas fa-user-cog nav-icon"></i> &ensp;
+                            <p>Manage Users</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Logs" asp-action="Index" class="nav-link @Url.MakeActiveClass("Logs","Index")">
+                            <i class="nav-icon fas fa-desktop nav-icon"></i> &ensp;
+                            <p>Logs Monitor</p>
+                        </a>
+                    </li>
+                    <!-- Manage users -->
+                } <!-- End if -->
+            </ul>
+            <!-- End List of menu -->
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>
+<!-- End main side bar -->

@@ -1,0 +1,158 @@
+﻿@*  
+    Namespace: ~/View/Shared/AdminLTE
+    File: _Scripts.cshtml
+    Description: Section of script
+*@
+
+<!-- REQUIRED SCRIPTS -->
+<!-- Bootstrap 4 -->
+<script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- date-range-picker -->
+<script src="~/plugins/daterangepicker/daterangepicker.js"></script>
+<!-- AdminLTE App -->
+<script src="~/js/adminlte.min.js"></script>
+<!-- Validattion -->
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+<!-- DataTables -->
+<script src="~/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="~/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="~/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="~/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<!-- Pace -->
+<script src="~/plugins/pace-progress/pace.min.js"></script>
+<!-- page script -->
+<script>
+    @*For showing name in top bar.*@
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+        $(document).on('shown.lte.pushmenu', function () {
+            $('#user_email').hide();
+        });
+        $(document).on('collapsed.lte.pushmenu', function () {
+            $('#user_email').show();
+        });
+    });
+
+    /*
+    * Name: togglePasword()
+    * Author: Wannapa Srijermtong
+    * Description: To changing show a password.
+    */
+    function togglePasword() {
+        var password = document.getElementById("acc_Password")
+        if (password.type === "password") {
+            document.getElementById("icon_Password").classList.remove('fa-eye-slash')
+            document.getElementById("icon_Password").classList.add('fa-eye')
+            password.type = "text";
+        } else {
+            document.getElementById("icon_Password").classList.remove('fa-eye')
+            document.getElementById("icon_Password").classList.add('fa-eye-slash')
+            password.type = "password";
+        }
+    } // End togglePasword
+
+    /*
+    * Name: toggleConfirmPasword()
+    * Author: Wannapa Srijermtong
+    * Description: To changing show a confirm password.
+    */
+    function toggleConfirmPasword() {
+        var password = document.getElementById("acc_ConfirmPassword")
+        if (password.type === "password") {
+            document.getElementById("icon_ConfirmPassword").classList.remove('fa-eye-slash')
+            document.getElementById("icon_ConfirmPassword").classList.add('fa-eye')
+            password.type = "text";
+        } else {
+            document.getElementById("icon_ConfirmPassword").classList.remove('fa-eye')
+            document.getElementById("icon_ConfirmPassword").classList.add('fa-eye-slash')
+            password.type = "password";
+        }
+    } // End toggleConfirmPasword
+
+    /*
+    * Name: toggleCurrentPasword()
+    * Author: Wannapa Srijermtong
+    * Description: To changing show a current password.
+    */
+    function toggleCurrentPasword() {
+        // Get id from input
+        var password = document.getElementById("acc_Current")
+        if (password.type === "password") {
+            document.getElementById("icon_CurrentPassword").classList.remove('fa-eye-slash')
+            document.getElementById("icon_CurrentPassword").classList.add('fa-eye')
+            password.type = "text";
+        } else {
+            document.getElementById("icon_CurrentPassword").classList.remove('fa-eye')
+            document.getElementById("icon_CurrentPassword").classList.add('fa-eye-slash')
+            password.type = "password";
+        }
+    } // toggleCurrentPasword
+
+    /*
+    * Name: toggleNewPasword()
+    * Author: Wannapa Srijermtong
+    * Description: For changing show a new password.
+    */
+    function toggleNewPasword() {
+        // Get id from input
+        var password = document.getElementById("acc_New")
+        if (password.type === "password") {
+            document.getElementById("icon_NewPassword").classList.remove('fa-eye-slash')
+            document.getElementById("icon_NewPassword").classList.add('fa-eye')
+            password.type = "text";
+        } else {
+            document.getElementById("icon_NewPassword").classList.remove('fa-eye')
+            document.getElementById("icon_NewPassword").classList.add('fa-eye-slash')
+            password.type = "password";
+        }
+    } // toggleNewPasword
+
+    $(function () {
+        $(function () {
+            // Set datatables in user mangement view
+            $('#showAllUserTable').DataTable({
+                "paging": true,
+                "lengthChange": true,
+                "searching": true,
+                "ordering": true,
+                "autoWidth": true,
+                "responsive": true,
+                "lengthMenu": [5, 10, 25, 50]
+            });
+        })
+        // Set datatables in log monitor view
+        $('#showAllLogs').DataTable({
+            "paging": true,
+            "lengthChange": true,
+            "searching": true,
+            "autoWidth": true,
+            "ordering": false,
+            //"order": [[0, "desc"]],
+            "responsive": true,
+            "lengthMenu": [5, 10, 25, 50, 100]
+            , "columnDefs": [
+                { "className": "text-center", "targets": [0, 1] },
+                { "width": "15%", "targets": 0 }, { "width": "10%", "targets": 1 }
+                , { "width": "10%", "targets": 2 }, { "width": "25%", "targets": 3 }, { "width": "40%", "targets": 4 }
+            ]
+        });
+    })
+
+    @*/*
+     * Name: SwalAlert
+     * Paremeter: icon(string), text(strinh)
+     * Author: Namchok Singhachai
+     * Description: sweet alert function reuse
+     */*@
+    function SwalAlert(icon, text) {
+        Swal.fire({
+            icon: icon,
+            title: text,
+            showConfirmButton: false,
+            timer: 700
+        })
+    } // End SwalAlert
+
+</script>

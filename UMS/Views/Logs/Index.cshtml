@@ -1,0 +1,486 @@
+﻿@model Logs
+
+@{
+    /*
+        Name: ~/Views/Logs/Index.cshtml
+        Author: Namchok Singhachai
+        Description: The View for log monitor.
+    */
+    ViewData["Title"] = "Log Monitor";
+    Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
+}
+<!-- style -->
+<style>
+    .logslevel > span {
+        border-radius: 4px;
+        display: inline-block;
+        font-weight: 600;
+        padding: 5px;
+    }
+</style>
+<!-- End style -->
+<!-- Content -->
+<div class="mx-auto">
+    <br />
+    <!--Start Search logs Card-->
+    <div class="card card-info" id="searchLogs">
+        <div class="card-header">
+            <h3 class="card-title">Search</h3>
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                </button>
+            </div>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+            <div class="col-md-6 offset-3">
+                <div class="form-group">
+                    <label>Message:</label>
+                    <input type="text" id="message" name="message" class="form-control" placeholder="Enter message logs">
+                    <span id="messageErrorInput" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label>Date and time range:</label>
+                    <div class="row">
+                        <div class="col-8">
+                            <input type="text" class="form-control float-right" id="logstime" name="logstime" placeholder="Date and time">
+                        </div>
+                        <div class="col-4 my-auto">
+                            <div class="form-check my-auto">
+                                <input class="form-check-input" type="checkbox" name="today" id="today">
+                                <label class="form-check-label">Today</label>
+                            </div>
+                        </div>
+                    </div> <!-- End row -->
+                    <span id="dateErrorInput" class="text-danger"></span>
+                </div> <!-- Form group -->
+            </div>
+        </div> <!-- /.card-body -->
+        <div class="card-footer">
+            <button type="reset" class="float-left btn btn-default" id="clear-search-input">Clear</button>
+            <button id="btnSearch" type="button" class="float-right btn btn-success" onclick="checkSearchInput()">Search</button>
+            <button id="loader" class="float-right btn btn-success d-none" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+            </button>
+        </div> <!-- /.card-footer -->
+    </div>
+    <!--End Search logs Card-->
+    <!--Start table logs Card-->
+    <div class="card card-info" id="logsByIndex">
+        <!--Start Card header-->
+        <div class="card-header">
+            <h3 class="card-title">Logs Monitor</h3>
+        </div>
+        <!--End Card header-->
+        <!--Start Card body-->
+        <div class="card-body">
+            <div class="box">
+                <div class="box-body">
+                    <!--Start Logs Monitor table-->
+                    <div class="table-responsive-md">
+                        <table id="showAllLogs" class="table table-hover w-100 table-bordered table-locationsiped">
+                            <!--Start Logs Monitor table head-->
+                            <thead class="text-center">
+                                <tr>
+                                    <th data-toggle="tooltip" title="Logged time">Time</th>
+                                    <th data-toggle="tooltip" title="Level of Logs">Serveity</th>
+                                    <th data-toggle="tooltip" title="Message and Exceptions">Messages</th>
+                                    <th data-toggle="tooltip" title="Logged Identity user">Identity user</th>
+                                    <th data-toggle="tooltip" title="Logged loggers">Loggers</th>
+                                    <th data-toggle="tooltip" title="Logged location">Locations</th>
+                                </tr>
+                            </thead>
+                            <!--End Logs Monitor table head-->
+                            <!--Start Logs Monitor table body-->
+                            <tbody>
+                                @if (ViewData["Logs"] != null)
+                                {
+                                    @foreach (var item in ViewData["Logs"] as List<Logs>)
+                                    {
+                                        var user_identity = (item.log_user_identity != null && item.log_user_identity != "") ? item.log_user_identity : "No user.";
+                                        var locations = "";
+                                        if (item.log_mvc_action != null && item.log_mvc_action != "")
+                                        {
+                                            if (item.log_linenumber != null && item.log_linenumber != "")
+                                            {
+                                                locations = item.log_mvc_action + ":" + item.log_linenumber;
+                                            }
+                                            else
+                                            {
+                                                locations = "Actions: " + item.log_mvc_action;
+                                            } // check 2 variable
+                                        }
+                                        else if (item.log_linenumber != null && item.log_linenumber != "")
+                                        {
+                                            locations = item.log_linenumber + " (LOC)";
+                                        }
+                                        else
+                                        {
+                                            locations = "N/A";
+                                        } // end check locations
+
+                                        <tr>
+                                            <td><center>@item.log_datetime</center></td>
+                                            @*<td><center>@(item.log_date + " " + item.log_time)</center></td>*@
+                                            @{
+                                                if (item.log_level == "FATAL")
+                                                {
+                                                    <td class="text-center"><span class="logslevel"><span class="bg-gradient-purple">@item.log_level</span></span></td>
+                                                }
+                                                else if (item.log_level == "ERROR")
+                                                {
+                                                    <td class="text-center"><span class="logslevel"><span class="bg-gradient-red">@item.log_level</span></span></td>
+                                                }
+                                                else if (item.log_level == "WARN")
+                                                {
+                                                    <td class="text-center text-white"><span class="logslevel"><span class="bg-gradient-yellow text-white">@item.log_level</span></span></td>
+                                                }
+                                                else if (item.log_level == "INFO")
+                                                {
+                                                    <td class="text-center"><span class="logslevel"><span class="bg-gradient-cyan">@item.log_level</span></span></td>
+                                                }
+                                                else
+                                                {
+                                                    <td class="text-center"><span class="logslevel"><span class="bg-gray-light">@item.log_level</span></span></td>
+                                                }
+                                            }
+                                            <td>@item.log_message</td>
+                                            <td>@user_identity</td>
+                                            <td>@item.log_logger</td>
+                                            <td>@locations</td>
+                                        </tr>
+                                    }
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="6"><center>No result.</center></td>
+                                    </tr>
+                                }
+                            </tbody>
+                            <!--End Logs Monitor table body-->
+                        </table>
+                    </div>
+                    <!--End Logs Monitor table body-->
+                </div>
+                <!--End Logs Monitor table body-->
+            </div>
+            <!--End Logs Monitor table-->
+        </div>
+        <!--End Card body-->
+    </div>
+    <!--End table logs Card-->
+    <!--Start table logs by ajax Card-->
+    <div class="card card-info" id="logsByAjax" style="display: none">
+        <!--Start Card header-->
+        <div class="card-header">
+            <h3 class="card-title">Logs Monitor</h3>
+        </div>
+        <!--End Card header-->
+        <!--Start Card body-->
+        <div class="card-body">
+            <div class="box">
+                <div class="box-body">
+                    <!--Start Logs Monitor table-->
+                    <div class="table-responsive-md">
+                        <table id="showSearchLogs" class="table table-hover w-100 table-bordered table-locationsiped">
+                            <!--Start Logs Monitor table head-->
+                            <thead class="text-center">
+                                <tr>
+                                    <th class="disabled-sorting" data-toggle="tooltip" title="Logged time">Time</th>
+                                    <th data-toggle="tooltip" title="Level of Logs">Serveity</th>
+                                    <th data-toggle="tooltip" title="Message and Exceptions">Messages</th>
+                                    <th data-toggle="tooltip" title="Logged Identity user">Identity user</th>
+                                    <th data-toggle="tooltip" title="Logged loggers">Loggers</th>
+                                    <th data-toggle="tooltip" title="Logged location">Locations</th>
+                                </tr>
+                            </thead>
+                            <!--End Logs Monitor table head-->
+                            <!--Start Logs Monitor table body-->
+                            <tbody id="TbLogs">
+                            </tbody>
+                            <!--End Logs Monitor table body-->
+                        </table>
+                    </div>
+                    <!--End Logs Monitor table body-->
+                </div>
+                <!--End Logs Monitor table body-->
+            </div>
+            <!--End Logs Monitor table-->
+        </div>
+        <!--End Card body-->
+    </div>
+    <!--End table logs by ajax Card-->
+</div>
+<!-- End content -->
+<script src="~/plugins/jquery/jquery.min.js"></script>
+<script>
+    $(document).ready(() => {
+
+        $('#clear-search-input').on('click', () => {
+            $('#messageErrorInput').empty();
+            $('#dateErrorInput').empty();
+            $('#message').val('');
+            $('#logstime').val('');
+            $('#today').prop('checked', false);
+        });
+        // Check is has exception
+        @if (ViewData["INFO"] != null) { @Html.Raw(ViewData["INFO"]) /* Swal funciton */ };
+        @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ };
+        $('#message').on('change', () => {
+            let regex = /^[a-zA-Z0-9 ]+[a-zA-Z0-9 ]|(^$)$/
+            if ($('#message').val() != null && $('#message').val() != "" && !regex.test($('#message').val())) {
+                $('#messageErrorInput').text('The messages no symbols and special chars.')
+                console.log('error')
+            } if ($('#message').val() != null && $('#message').val() != "") {
+                $('#messageErrorInput').empty();
+                $('#dateErrorInput').empty();
+            } else {
+                $('#messageErrorInput').empty();
+            }
+        })
+        $('#logstime').on('change', () => {
+            $('#messageErrorInput').empty();
+            $('#dateErrorInput').empty();
+            $('#today').prop('checked', false);
+        })
+
+        // On click on today checkbok and set today to input daterange
+        $('#today').on('click', () => {
+            if ($('#today').is(':checked')) {
+                $('#logstime').val(dateToNiceString(new Date()) + ' - ' + dateToNiceString(new Date(), 30));
+            } else {
+                $('#logstime').daterangepicker({
+                    timePicker: true,
+                    timePickerIncrement: 15,
+                    locale: {
+                        format: 'MM/DD/YYYY hh:mm A'
+                    }
+                })
+            }
+        })
+
+        //Date range picker with time picker
+        $('#logstime').daterangepicker({
+            timePicker: true,
+            timePickerIncrement: 15,
+            locale: {
+                format: 'MM/DD/YYYY hh:mm A'
+            }
+        })
+    }) // Document ready
+
+    /**
+     * Name: checkSearchInput
+     * Author: Namchok Singhachai
+     * Description: To checking input before search.
+     */
+    function checkSearchInput() {
+        try {
+            let regex = /^[a-zA-Z0-9 ]+[a-zA-Z0-9 ]|(^$)$/
+            if (!regex.test($('#message').val())) {
+                toastr.warning('The messages no symbols, special chars')
+                $('#messageErrorInput').text('The messages no symbols, special chars.')
+                console.log('error')
+            }
+            else if ($('#message').val() == '' && $('#logstime').val() == '') {
+                $('#messageErrorInput').text('Please input information for searching.')
+                $('#dateErrorInput').text('Please input information for searching.')
+                throw new Error('Please input information for searching.')
+            }
+            else
+            {
+                console.log('Message: ' + $('#message').val())
+                console.log('Date: ' + $('#logstime').val())
+                $.ajax({
+                    url: "@Url.Action("Search", "Logs")",
+                    data: { messageInput: $('#message').val(), dateInput: $('#logstime').val() },
+                    type: "POST",
+                    dataType: "JSON",
+                    beforeSend: function () {
+                        $("#btnSearch").hide();
+                        $("#loader").removeClass('d-none');
+                    },
+                    success: function (result) {
+                        // Check if id is null will return error
+                        if (result['condition'] != "error") {
+                            $('#logsByIndex').hide() // Hide first table
+                            $('#logsByAjax').show() // Hide table for result of ajax
+                            $('#TbLogs').empty() // Clear tbody
+                            $('#showSearchLogs').DataTable().destroy() // Clear datatables
+                            console.log(result.length)
+                            let myArr = new Array(result.length)
+                            let time = ''
+                            let date = ''
+                            var levelLable = ''
+                            for (var i = 0; i < myArr.length; i++) {
+                                myArr[i] = new Array(7);
+                            } // Create array
+                            //console.log(result)
+                            for (let i = 0; i < result.length; i++) {
+                                let user = (result[i].log_user_identity != "" && result[i].log_user_identity != null) ? result[i].log_user_identity : "No user.";
+                                let locations = "";
+                                if (result[i].log_mvc_action != null && result[i].log_mvc_action != "") {
+                                    if (result[i].log_linenumber != null && result[i].log_linenumber != "") {
+                                        locations = result[i].log_mvc_action + ":" + result[i].log_linenumber;
+                                    } else {
+                                        locations = "Actions: " + result[i].log_mvc_action;
+                                    } // check 3 variable
+                                }
+                                else if (result[i].log_linenumber != null && result[i].log_linenumber != "") {
+                                    locations = result[i].log_linenumber + " (LOC)";
+                                } else {
+                                    locations = "N/A";
+                                } // End check locations
+                                if (result[i].log_level == "FATAL")
+                                {
+                                    levelLable = `<td><span class="logslevel"><span class="bg-gradient-purple">${result[i].log_level}</span></span></td>`
+                                }
+                                else if (result[i].log_level == "ERROR")
+                                {
+                                    levelLable = `<td><span class="logslevel"><span class="bg-gradient-red">${result[i].log_level}</span></span></td>`
+                                }
+                                else if (result[i].log_level == "WARN")
+                                {
+                                    levelLable = `<td class="text-white"><span class="logslevel"><span class="bg-gradient-yellow text-white">${result[i].log_level}</span></span></td>`
+                                }
+                                else if (result[i].log_level == "INFO")
+                                {
+                                    levelLable = `<td><span class="logslevel"><span class="bg-gradient-cyan">${result[i].log_level}</span></span></td>`
+                                }
+                                else
+                                {
+                                    levelLable = `<td> <span class="logslevel"><span class="bg-gray-light">${result[i].log_level}</span></span></td>`
+                                } // for check level
+                                date = (result[i].log_datetime).substring(0, (result[i].log_datetime).indexOf('T'))
+                                time = (result[i].log_datetime).substring((result[i].log_datetime).indexOf('T') + 1) // Calculate datetime
+                                console.log(date);
+                                console.log(time);
+                                console.log(replaceDate(date));
+                                console.log(convertTime(time));
+                                myArr[i][0] = replaceDate(date) + ' ' + convertTime(time);
+                                myArr[i][1] = levelLable;
+                                myArr[i][2] = result[i].log_message;
+                                myArr[i][3] = user;
+                                myArr[i][4] = result[i].log_logger;
+                                myArr[i][5] = locations;
+                            } // add data to array for add to datatables // console.log(myArr)
+                            $('#showSearchLogs').DataTable({
+                                "paging": true,
+                                "lengthChange": true,
+                                "searching": true,
+                                "autoWidth": true,
+                                "ordering": false,
+                                "responsive": true,
+                                "lengthMenu": [5, 10, 25, 50, 100, 300],
+                                data: myArr,
+                                columns: [
+                                    { title: "Time" },
+                                    { title: "Serverity" },
+                                    { title: "Messages" },
+                                    { title: "User Identity" },
+                                    { title: "Loggers" },
+                                    { title: "Locations" }
+                                ], "columnDefs": [
+                                    { "className": "text-center", "targets": [0, 1, 3] },
+                                    { "width": "15%", "targets": 0 }, { "width": "10%", "targets": 1 }, { "width": "30%", "targets": 2 }
+                                    , { "width": "10%", "targets": 3 }, { "width": "10%", "targets": 4 }, { "width": "25%", "targets": 5 }
+                                ]
+                            }); // Set datatables
+                            console.log(`Successfully. ${result.length} items found.`)
+                            toastr.success(`Successfully. ${result.length} items found.`);
+                            $('#showSearchLogs > thead > tr > th').removeClass('sorting_asc');
+                        } else {
+                            eval(result['messages']) // Excute js
+                            console.log(`Error! ${result['text']}`);
+                        } // End if result is not error// End if result is not error
+                    }, complete: function () {
+                        $("#btnSearch").show();
+                        $("#loader").addClass('d-none');
+                    },
+                    error: function (result) {
+                        // Set message status
+                        let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
+                        let _text = 'Status : ' + result.status + statusResText
+                        console.log(`${result}`) // show log of error
+                        toastr.error(`${_text}`) // Alert message error
+                    } // End error
+                }) // End ajax
+            } // End if else
+        } catch (e) {
+            console.log(`${e.message}`)
+            toastr.warning(`${e.message}`)
+        }
+    } // End checkSearchInput
+
+    /**
+     * Name: dateTONiceString
+     * Parameter: myDate(Date), extra(Int)
+     * Description: Converting date to string.
+     */
+    //usage ex: alert(dateToNiceString(new Date()));
+    //returns this format: "09/14/2020 10:00 AM"
+    function dateToNiceString(myDate, extra = null) {
+        var month = new Array();
+        month[0] = "01";
+        month[1] = "02";
+        month[2] = "03";
+        month[3] = "04";
+        month[4] = "05";
+        month[5] = "06";
+        month[6] = "07";
+        month[7] = "08";
+        month[8] = "09";
+        month[9] = "10";
+        month[10] = "11";
+        month[11] = "12";
+        var hours = myDate.getHours();
+        var minutes = myDate.getMinutes();
+        var ampm = ''
+        if (extra != null) {
+            let sec = (minutes + extra) * 60;
+            hours += Math.ceil(sec / 3600);
+            minutes = (sec % 3600) / 60;
+        }
+        ampm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        var strTime = hours + ':' + minutes + ' ' + ampm;
+        return month[myDate.getMonth()] + "/" + myDate.getDate() + "/" + myDate.getFullYear() + " " + strTime;
+    } // "09/14/2020 10:00 AM - 09/15/2020 06:00 PM"
+
+    /*
+     * Name: convertTime
+     * Parameter: time(string)(format: 10:13:00.053)
+     * Author: Namchok Singhachai
+     * Description: Converting new format 10:13:10 AM
+     */
+    function convertTime(time) {
+        let hrs = time.substring(0, time.indexOf(':'))
+        let temp = time.substring(time.indexOf(':') + 1)
+        let min = temp.substring(0, temp.indexOf(':'))
+        temp = temp.substring(temp.indexOf(':') + 1)
+        let sec = temp.substring(0, temp.indexOf('.'))
+        let ampm = hrs >= 12 ? 'PM' : 'AM';
+        hrs = hrs % 12;
+        hrs = hrs ? hrs : 12;
+        return hrs + ':' + min + ':' + sec + ' ' + ampm
+    } // End convertTime
+
+    /*
+     * Name: replaceDate
+     * Parameter: date(string)(format: )
+     * Author: Namchok Singhachai
+     * Description: Converting format date 09/15/2020
+     */
+    function replaceDate(date) {
+        let yy = date.substring(0, date.indexOf('-'))
+        let temp = date.substring(date.indexOf('-') + 1)
+        let mm = temp.substring(0, temp.indexOf('-'))
+        let dd = temp.substring(temp.indexOf('-') + 1)
+        return dd + '/' + mm + '/' + yy
+    } // End replaceDate
+</script>

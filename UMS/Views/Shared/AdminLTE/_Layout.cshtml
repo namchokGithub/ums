@@ -1,0 +1,33 @@
+﻿@*
+    Namespace: ~/View/Shared/AdminLTE
+    File: _Layout.cshtml
+    Description: The layout of template.
+*@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <link rel="icon" href="~/img/logoUMS.png" type="image/icon type">
+    <title>@ViewData["Title"] | UMS </title>
+    <partial name="AdminLTE/_Styles" /> <!-- Partial of style -->
+</head>
+<!-- Body -->
+<body class="hold-transition sidebar-mini sidebar-collapse pace-success">
+    <div class="wrapper">
+        <partial name="AdminLTE/_TopNavigation" /> <!-- Partial of top navigation -->
+        <partial name="AdminLTE/_MainNavigation" /> <!-- Partial of Main navigation -->
+        <div class="content-wrapper">
+            <div class="content">
+                @RenderBody() <!-- Render content -->
+            </div>
+        </div>
+        <partial name="AdminLTE/_Footer" /> <!-- Partial of footer -->
+    </div>
+    <partial name="AdminLTE/_Scripts" /> <!-- Partial of script -->
+</body>
+<!-- End body -->
+</html>
+<!-- End html -->
