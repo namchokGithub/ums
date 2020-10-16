@@ -163,3 +163,14 @@
 2020/10/16 11:07:39.050 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:104 | Signing out.
 2020/10/16 11:07:39.050 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
 2020/10/16 11:07:39.068 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:109 | End login on get.
+2020/10/16 11:26:50.630 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/10/16 11:26:52.618 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/16 11:26:52.959 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/16 11:26:52.959 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/16 11:26:53.017 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/16 11:26:53.039 [TRACE] [UMS.Controllers.ManageUserController]  ManageUserController.cs:34 | Start manage user controller.
+2020/10/16 11:26:53.039 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/16 11:26:53.064 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:91 | Start login on get.
+2020/10/16 11:26:53.064 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:104 | Signing out.
+2020/10/16 11:26:53.064 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/10/16 11:26:53.082 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:109 | End login on get.
