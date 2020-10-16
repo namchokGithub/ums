@@ -1,9 +1,9 @@
 ﻿using System;
+using UMS.Models;
 using System.Diagnostics;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using UMS.Models;
 using Microsoft.AspNetCore.Authorization;
 
 /*
@@ -26,7 +26,7 @@ namespace UMS.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            _logger.LogTrace("Start home controller.");
+            _logger.LogInformation("Start home controller.");
         } // End HomeController
 
         /*

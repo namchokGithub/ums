@@ -21,7 +21,7 @@ namespace UMS.Areas.Identity.Pages.Account
         public ResetPasswordConfirmationModel(ILogger<ResetPasswordConfirmationModel> logger)
         {
             _logger = logger;
-            _logger.LogDebug("Start password confirmation model.");
+            _logger.LogInformation("Start password confirmation model.");
         } // End constructor
 
         public void OnGet() { _logger.LogTrace("Reset password confirmation on get."); } // End OnGet

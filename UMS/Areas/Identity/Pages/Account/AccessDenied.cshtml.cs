@@ -21,7 +21,7 @@ namespace UMS.Areas.Identity.Pages.Account
         public AccessDeniedModel(ILogger<AccessDeniedModel> logger)
         {
             _logger = logger;
-            _logger.LogDebug("Start access denined model.");
+            _logger.LogInformation("Start access denined model.");
         } // End constructor
 
         public void OnGet() { _logger.LogTrace("Access denined on get."); } // End OnGet

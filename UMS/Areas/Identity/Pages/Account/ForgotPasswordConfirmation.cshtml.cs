@@ -22,7 +22,7 @@ namespace UMS.Areas.Identity.Pages.Account
         public ForgotPasswordConfirmation(ILogger<ForgotPasswordConfirmation> logger)
         {
             _logger = logger;
-            _logger.LogDebug("Start forgot password confirmation.");
+            _logger.LogInformation("Start forgot password confirmation.");
         }  // End constructor
 
         public void OnGet() { _logger.LogTrace("Forgot forgot password confirmation on get."); } // End OnGet

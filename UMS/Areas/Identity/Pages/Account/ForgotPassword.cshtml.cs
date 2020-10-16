@@ -1,18 +1,18 @@
 ﻿using System;
+using UMS.Data;
 using System.Text;
 using EmailService;
+using UMS.Controllers;
 using System.Threading.Tasks;
+using UMS.Areas.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Encodings.Web;
-using UMS.Data;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.AspNetCore.Authorization;
-using UMS.Controllers;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
-using UMS.Areas.Identity.Data;
 
 /*
  * Name: ForgotPasswordModel.cs (Extend: PageModel)
@@ -42,7 +42,7 @@ namespace UMS.Areas.Identity.Pages.Account
             _emailSender = emailSender;
             _userManager = userManager;
             _unitOfWork = new UnitOfWork(context);
-            _logger.LogDebug("Start forgot password model.");
+            _logger.LogInformation("Start forgot password model.");
         } // End contructor
 
         [BindProperty]

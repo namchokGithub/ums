@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 using System.Threading.Tasks;
+using UMS.Areas.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity;
@@ -8,7 +9,6 @@ using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
-using UMS.Areas.Identity.Data;
 
 /*
  * Name: ResetPasswordModel.cs (Extend : PageModel)
@@ -32,7 +32,7 @@ namespace UMS.Areas.Identity.Pages.Account
         public ResetPasswordModel(UserManager<ApplicationUser> userManager, ILogger<ResetPasswordModel> logger)
         {
             _logger = logger;
-            _logger.LogDebug("Start reset password model.");
+            _logger.LogInformation("Start reset password model.");
             _userManager = userManager;
         } // End constructor
 
