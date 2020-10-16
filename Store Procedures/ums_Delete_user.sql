@@ -1,7 +1,7 @@
 -- =============================================
 -- Author:		Namchok Singhachai
 -- Create date: 2020-08-31
--- Description:	Inactive user 
+-- Description:	User deactivation.
 -- =============================================
 CREATE PROCEDURE ums_Delete_user
 	@param_Id nvarchar(max)

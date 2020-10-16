@@ -1,10 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using System;
+using Microsoft.AspNetCore.Mvc;
 
 /*
  * Namspace: ~/Helpers
  * Author: Namchok Singhachai
- * Description: Set active class in nav menu
+ * Description: Setting active class in nav menu.
  */
 
 namespace UMS.Helpers
@@ -15,7 +15,7 @@ namespace UMS.Helpers
          * Name: MakeActiveClass
          * Parametor: urlHelper(IurlHelper), controller(string), action(string)
          * Author: Namchok Singhachai
-         * Description: Set active class in nav menu
+         * Description: Setting active class in nav menu.
          */
         public static string MakeActiveClass(this IUrlHelper urlHelper, string controller, string action)
         {
@@ -45,5 +45,5 @@ namespace UMS.Helpers
                 return null;
             } // End try catch
         } // End MakeActiveClass
-    }
+    } // End NavigationIndicatorHelper
 }

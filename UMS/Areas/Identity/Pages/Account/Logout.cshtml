@@ -1,21 +1,20 @@
 ﻿@page
 @model LogoutModel
 @{
-    ViewData["Title"] = "Log out";
+    /*
+        Namespace: ~/Areas/Identity/Pages/Account/Logout.cshtml
+        Author: Namchok Singhachai
+        Description: Logged out page.
+    */
+    ViewData["Title"] = "Logged out";
+    Layout = "~/Areas/Identity/Pages/_AuthLayout.cshtml";
     string URL = "~/";
-    if (ViewData["URL"].ToString()!=null&& ViewData["URL"].ToString() != "")
+    if (ViewData["URL"].ToString() != null && ViewData["URL"].ToString() != "")
     {
         URL = ViewData["URL"].ToString();
     }
-    Layout = "~/Areas/Identity/Pages/_AuthLayout.cshtml";
 }
-
-<!--
-    Namespace: ~/Areas/Identity/Pages/Account/Logout.cshtml
-    Author: Namchok Singhachai
-    Description: Show when logged out.
--->
-
+<!--Context-->
 <div class="hold-transition login-page">
     <div class="login-box">
         <h3 class="login-box-msg">User Management System</h3>
@@ -42,24 +41,14 @@
         <!--End Card-->
     </div>
 </div>
+<!--End Context-->
 <!--Start Script-->
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+    <script>
+        $(document).ready(function () {
+            @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"])}; // Check is has exception
+        });
+    </script>
 }
 <!--End Script-->
-<!--Start Style-->
-<style>
-    .login-box {
-        width: 400px;
-    }
-
-    #success {
-        color: #28a745;
-    }
-
-    #checkicon {
-        color: #28a745;
-        font-size: 5em;
-    }
-</style>
-<!--End Style-->

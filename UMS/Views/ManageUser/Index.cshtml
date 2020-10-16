@@ -1,18 +1,14 @@
-﻿<!--
-    Namspace: ~/View/ManageUser/Index.cshtml
-    Author: Namchok Singhachai
-    Description: view for user management
--->
-
-<!-- Use Edit profile model -->
-@model UMS.Models.EditAccount
-
+﻿@model Management
 @{
+    /*
+        Namspace: ~/View/ManageUser/Index.cshtml
+        Author: Namchok Singhachai
+        Description: The view for user management.
+    */
     ViewData["Title"] = "Manage User";                  // Set title
     Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";  // Set layout
     var id = ViewData["UserId"];
 }
-
 <!-- Content -->
 <div class="mx-auto">
     <br />
@@ -46,10 +42,9 @@
                             <!--Start Manage user table body-->
                             <tbody>
                                 @{ int index = 0; /* For show order in table */ }
-                                <!-- ViewData["User"] is List from query -->
                                 @if (ViewData["User"] != null)
                                 {
-                                    @foreach (var item in ViewData["User"] as List<Account>)
+                                    @foreach (var item in ViewData["User"] as List<Management>)
                                     {
                                         if (id.ToString() != item.acc_Id)
                                         {
@@ -63,13 +58,13 @@
                                                 <td class="text-center">
                                                     <input type="hidden" asp-for="acc_Id" value="@item.acc_Id">
                                                     <button class="btn btn-warning text-white" onclick="getUser('@item.acc_Id')"><i class="fa fa-pencil-alt"></i></button>
-                                                    <button class="btn btn-danger" onclick="deleteUser('@item.acc_Id')"><i class="fa fa-times"></i></button>
+                                                    <button class="btn btn-danger" onclick="DeleteUser('@item.acc_Id')"><i class="fa fa-times"></i></button>
                                                 </td>
                                             </tr>
                                         }
                                     }
                                 }
-                                else // If ViweData["User"] is null
+                                else // Checking if ViweData["User"] is null.
                                 {
                                     <tr>
                                         <td colspan="6"><center>No results.</center></td>
@@ -86,8 +81,8 @@
             <!--End Manage user table-->
         </div>
         <!--End Card body-->
-        <!--Start Form Edit user | Update in controller -->
-        <form id="ModalEditUser" method="post" asp-action="editUser" asp-controller="ManageUser">
+        <!--Start user form edit.  | User update in controller. -->
+        <form id="ModalEditUser" method="post" asp-action="EditUser" asp-controller="ManageUser">
             <!--Start Modal edit user-->
             <div class="modal fade" id="EditUser">
                 <div class="modal-dialog">
@@ -104,7 +99,6 @@
                         <!--End Modal header edit user-->
                         <!--Start Modal body edit user-->
                         <div class="modal-body">
-
                             <!-- Hidden values -->
                             <input type="hidden" asp-for="acc_Id" name="acc_Id" />
                             <input type="hidden" asp-for="acc_User" id="acc_User" />
@@ -139,7 +133,7 @@
                         <!--Start Modal footer-->
                         <div class="modal-footer justify-content-between">
                             <button type="button" class="btn btn-secondary float-left" data-dismiss="modal">Back</button>
-                            <button onclick="updateUser()" class="btn btn-success float-right">Save</button>
+                            <button type="button" class="btn btn-success float-right" onclick="CheckUpdateUser()">Save</button>
                         </div>
                         <!--End Modal footer-->
                     </div>
@@ -148,7 +142,6 @@
             <!--End Modal Edit user-->
         </form>
         <!--End Form Edit user-->
-
     </div>
     <!--End Card-->
 </div>
@@ -157,15 +150,12 @@
 <script>
 
     /**
-     * Name: updateUser
-     * Parametor: none
+     * Name: CheckUpdateUser
      * Author: Namchok Singhachai
-     * Description: Check value input
+     * Description: Checking value input.
      */
-    function updateUser() {
-        // Check regex
-        let regex = /^(([a-zA-Z])?[a-zA-Z]*)*$/;
-        // Check value
+    function CheckUpdateUser() {
+        let regex = /^(([a-zA-Z])?[a-zA-Z]*)*$/; // Checking regex
         if ($('#acc_Id').val() == '') toastr.error('ID not found.')
         else if ($('#acc_Firstname').val() == '') toastr.warning('The First name can not be blank and must only character.')
         else if ($('#acc_Lastname').val() == '') toastr.warning('The Last name can not be blank and must only character.')
@@ -173,19 +163,18 @@
         else if (!regex.test($('#acc_Lastname').val())) toastr.warning('The Last name can not be blank and must only character.')
         else if ($('#acc_RoleId').val() == '') toastr.warning('Please select role.')
         else if ($('#acc_IsActive').val() == '') toastr.error('User not Active.')
-    } // End updateUser
+        else $("#ModalEditUser").submit();
+    } // End CheckUpdateUser
 
     /**
-     * Name: deleteUser
-     * Parameter: id
+     * Name: DeleteUser
+     * Parameter: id(String)
      * Author: Namchok Singhachai
-     * Description: Set user to inactive
+     * Description: Account deactivation.
      */
-    function deleteUser(id) {
+    function DeleteUser(id) {
         try {
-            // Check Id and throw if not found
-            if (id == null) throw new Error("ID in not defind")
-
+            if (id == null) throw new Error("The user ID not found !.") // Check Id and throw if not found
             // SweetAlert confirm delete
             Swal.fire({
                 title:'Are you sure to delete?',
@@ -197,9 +186,8 @@
                 cancelButtonColor: '#6c757d'
             }).then((result) => {
                 if (result.value) {
-                    // Ajax for Inactive user
                     $.ajax({
-                        url: '@Url.Action("deleteUser", "ManageUser")',
+                        url: '@Url.Action("DeleteUser", "ManageUser")',
                         data: { id: id },
                         method: "POST",
                         success: () => {
@@ -207,44 +195,37 @@
                             toastr.success('Delete user account successfully!')
                         },
                         error: function (result) {
-                            // Set message status
-                            let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
+                            let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : '' // Set message status
                             let _text = 'Status : ' + result.status  + statusResText
-                            // Alert message error
-                            console.log(result) // Show log of error
-                            console.log(_text)
-                            toastr.error(_text)
+                            console.log(result); // Show log of error
+                            toastr.error(`${_text}`);
                         } // if error
                     }).done(function () {
-                        setTimeout(function () { location.reload(); }, 900); // Reload pages
+                        setTimeout(function () { location.reload(); }, 800); // Reload pages
                     }) // End ajax for inactive user
                 } // End if result.value
             }) // End Swal function
         } catch (err) {
-            console.log(err.message)
-            toastr.error(err.message)
+            console.log(`${err.message}`);
+            toastr.error(`${err.message}`);
         }// End try catch
-    } // End deleteUser
+    } // End DeleteUser
 
     /**
      * Name: getUser
-     * Parameter: id
+     * Parameter: id(String)
      * Author: Namchok Singhachai
      * Description: Get active user by ID (Ajax)
      */
     function getUser(id) {
         try {
-            // Check Id
-            if (id == null) throw new Error("ID in not defind")
-
-            // Ajax for get user by id and set to form
+            if (id == null) throw new Error("The user ID not found !."); // Check Id
             $.ajax({
-                url: "@Url.Action("getUser", "ManageUser")",
+                url: "@Url.Action("GetUser", "ManageUser")",
                 data: { id: id },
                 type: "POST",
                 dataType: "JSON",
                 success: function (result) {
-                    // Check if id is null will return error
                     if (result['condition'] != "error") {
                         // Set data to form
                         if (result.acc_Rolename === 'Admin') {
@@ -258,10 +239,10 @@
                         $('#acc_IsActive').val(result.acc_IsActive);
                         $('#acc_Firstname').val(result.acc_Firstname);
                         $('#acc_Lastname').val(result.acc_Lastname);
-                        console.log('Set value success.');
                         $('#EditUser').modal(); // Show modal
+                        console.log('Setting value successful.');
                     } else {
-                        eval(result['messages']) // Excute js
+                        eval(result['messages']); // Excute js
                         console.log(`Error! ${result['text']}`);
                     } // End if result is not error
                 },
@@ -269,27 +250,23 @@
                     // Set message status
                     let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : ''
                     let _text = 'Status : ' + result.status + statusResText
-                    console.log(result) // show log of error
-                    console.log(_text)
-                    // Alert message error
-                    toastr.error(_text)
+                    console.log(result); // show log of error
+                    toastr.error(`${_text}`);
                 } // End error
             }) // End ajax for get user by id and set to form
-            console.log($(`input[name='acc_Id']`).val());
         } catch (err) {
-            console.log(err.message)
-            toastr.error(err.message)
+            console.log(`${err.message}`);
+            toastr.error(`${err.message}`);
         } // End try catch
     } // End getUser
 
     // Check is update user success
-    @if (TempData["UpdateResult"] != null) { @Html.Raw(TempData["UpdateResult"]) /* Swal funciton */ }
+    @if (TempData["UpdateResult"] != null) { @Html.Raw(TempData["UpdateResult"]) /* Swal funciton */ };
     // Check is has exception
-    @if (TempData["nullException"] != null) { @Html.Raw(TempData["nullException"]) /* Swal funciton */ }
+    @if (TempData["nullException"] != null) { @Html.Raw(TempData["nullException"]) /* Swal funciton */ };
     // Check is has exception
-    @if (TempData["SqlException"] != null) { @Html.Raw(TempData["SqlException"]) /* Swal funciton */ }
+    @if (TempData["SqlException"] != null) { @Html.Raw(TempData["SqlException"]) /* Swal funciton */ };
     // Check is has exception
-    @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ }
+    @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ };
 </script>
-
 <!-- End Index of Home controller -->

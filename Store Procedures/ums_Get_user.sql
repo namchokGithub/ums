@@ -1,7 +1,7 @@
 -- =============================================
 -- Author:		Wannapa Srijermtong
 -- Create date: 2020-09-02
--- Description:	Get user for edit profile
+-- Description:	Getting user for edit profile.
 -- =============================================
 CREATE PROCEDURE ums_Get_user
 	@param_Id nvarchar(256)

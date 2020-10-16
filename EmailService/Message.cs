@@ -1,29 +1,26 @@
 ﻿using MimeKit;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Collections.Generic;
 
 /*
- * Namspace: EmailService/Message.cs
+ * Name: Message.cs
  * Author: Namchok Singhachai
- * Description: Service for send email
+ * Description: Message for sending an email.
  */
 
 namespace EmailService
 {
     public class Message
     {
-        public List<MailboxAddress> To { set; get; } // Email to send
-        public string Subject { set; get; } // Subject of email
-        public string Content { set; get; } // Conten of email
-        public string htmlText { set; get; } // Html in email (Optional)
-
+        public List<MailboxAddress> To { set; get; } // An email for sending
+        public string Subject { set; get; } // The subject of an email
+        public string Content { set; get; } // The conten of an email
+        public string HtmlText { set; get; } // The html in an email (Optional)
         /*
-         * Name: Message (Constructor)
-         * Parametor: to(String), subject(string), content(String)
+         * Name: Message
+         * Parametor: to(IEnumerable<string>), subject(string), content(String)
          * Author: Namchok Singhachai
-         * Description: Set messages
+         * Description: Setting a messages.
          */
         public Message(IEnumerable<string> to, string subject, string content)
         {

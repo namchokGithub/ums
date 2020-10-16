@@ -2,13 +2,9 @@
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
-    "iis": {
-      "applicationUrl": "http://localhost/",
-      "sslPort": 0
-    },
     "iisExpress": {
-      "applicationUrl": "https://localhost:44346/",
-      "sslPort": 44346
+      "applicationUrl": "http://localhost:58321",
+      "sslPort": 44310
     }
   },
   "profiles": {
@@ -19,12 +15,13 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "ums": {
-      "commandName": "IIS",
+    "UMS": {
+      "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "applicationUrl": "https://localhost:44346/"
     },
     "console": {
       "commandName": "Project",

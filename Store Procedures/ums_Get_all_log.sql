@@ -1,7 +1,7 @@
 -- =============================================
 -- Author:		Namchok Singhachai
 -- Create date: 2020-09-11
--- Description:	Get all log top ?(parameter)
+-- Description:	Getting all log top ?(parameter).
 -- =============================================
 CREATE PROCEDURE ums_Get_all_log
 	@param_num int

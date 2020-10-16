@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 /*
- * Name: AccessDeniedModel.cs
- * Namespace: UMS.Areas.Identity.Pages.Account
+ * Name: AccessDeniedModel.cs (extend: PageModel)
  * Author: Idenity system
- * Description: Page for access site
+ * Description: The page for access to denied sites.
  */
 
 namespace UMS.Areas.Identity.Pages.Account
@@ -18,35 +14,38 @@ namespace UMS.Areas.Identity.Pages.Account
     public class AccessDeniedModel : PageModel
     {
         private readonly ILogger<AccessDeniedModel> _logger;
+        /*
+         * Name: AccessDeniedModel
+         * Parameter: logger(ILogger<AccessDeniedModel>)
+         */
         public AccessDeniedModel(ILogger<AccessDeniedModel> logger)
         {
             _logger = logger;
-            _logger.LogDebug("Start Access Denined model.");
+            _logger.LogInformation("Start access denined model.");
         } // End constructor
 
-        /*
-         * Name: OnGet
-         * Parameter: none
-         * Description: none
-         */
-        public void OnGet() { _logger.LogTrace("Access Denined On get.");  } // End OnGet
+        public void OnGet() { _logger.LogTrace("Access denined on get."); } // End OnGet
 
         /*
          * Name: OnPost
-         * Parameter: none
-         * Description: none
+         * Description: The destruction of system cookie.
          */
         public IActionResult OnPost()
         {
-            _logger.LogTrace("Access Denined On post.");
-            // Response.Cookies.Delete(".AspNetCore.Identity.Application");
-            foreach (var cookie in HttpContext.Request.Cookies)
+            try
             {
-                Response.Cookies.Delete(cookie.Key);
+                _logger.LogTrace("Access denined on post.");
+                foreach (var cookie in HttpContext.Request.Cookies) { Response.Cookies.Delete(cookie.Key); }
+                _logger.LogTrace("Clear cookies AspNetCore Identity Application.");
+                return RedirectToPage("/Login");
             }
-            _logger.LogTrace("Clear cookies AspNetCore Identity Application.");
-            return RedirectToPage("/Login");
+            catch (Exception e)
+            {
+                _logger.LogError(e.Message.ToString());
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("`", "'").Replace("\\", "/") + @"`, showConfirmButton: true });";
+                _logger.LogTrace("End access denined on post.");
+                return Page();
+            } // End try catch
         } // End OnPost
     } // End AccessDeniedModel
 }
-

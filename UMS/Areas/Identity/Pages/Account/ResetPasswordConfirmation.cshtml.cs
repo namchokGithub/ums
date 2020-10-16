@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
 
 /*
- * Name: ResetPasswordConfirmationModel.cs
- * Namespace: UMS.Areas.Identity.Pages.Account
+ * Name: ResetPasswordConfirmationModel.cs (Extend: PageModel)
  * Author: Idenity system
+ * Description: Confirmations for reset password.
  */
 
 namespace UMS.Areas.Identity.Pages.Account
@@ -17,9 +13,7 @@ namespace UMS.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class ResetPasswordConfirmationModel : PageModel
     {
-
         private readonly ILogger<ResetPasswordConfirmationModel> _logger;
-
         /*
          * Name: ResetPasswordConfirmationModel
          * Parameter: logger(ILogger)
@@ -27,16 +21,9 @@ namespace UMS.Areas.Identity.Pages.Account
         public ResetPasswordConfirmationModel(ILogger<ResetPasswordConfirmationModel> logger)
         {
             _logger = logger;
-            _logger.LogDebug("Start Reset Password Confirmation model.");
+            _logger.LogInformation("Start password confirmation model.");
         } // End constructor
 
-        /*
-         * Name: OnGet
-         * Parameter: none
-         */
-        public void OnGet()
-        {
-            _logger.LogTrace("Reset Password Confirmation on get.");
-        } // End OnGet
+        public void OnGet() { _logger.LogTrace("Reset password confirmation on get."); } // End OnGet
     } // End ResetPasswordConfirmationModel
 }

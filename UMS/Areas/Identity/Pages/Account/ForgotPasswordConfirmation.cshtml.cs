@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 /*
- * Name: ForgotPasswordConfirmation.cs
- * Namespace: UMS.Areas.Identity.Pages.Account
+ * Name: ForgotPasswordConfirmation.cs (Extend: PageModel)
  * Author: Idenity system
+ * Descriptions: Confirmation for forgot password.
  */
 
 namespace UMS.Areas.Identity.Pages.Account
@@ -18,27 +15,25 @@ namespace UMS.Areas.Identity.Pages.Account
     public class ForgotPasswordConfirmation : PageModel
     {
         private readonly ILogger<ForgotPasswordConfirmation> _logger;
-
+        /*
+         * Name: ForgotPasswordConfirmation
+         * Parameter: logger(ILogger<ForgotPasswordConfirmation>)
+         */
         public ForgotPasswordConfirmation(ILogger<ForgotPasswordConfirmation> logger)
         {
             _logger = logger;
-            _logger.LogDebug("Start Forgot Password Confirmation.");
+            _logger.LogInformation("Start forgot password confirmation.");
         }  // End constructor
 
-        /*
-         * Name: OnGet
-         * Parameter: none
-         */
-        public void OnGet() { _logger.LogTrace("Forgot Password Confirmation On get."); } // End OnGet
+        public void OnGet() { _logger.LogTrace("Forgot forgot password confirmation on get."); } // End OnGet
 
         /*
          * Name: OnPost
-         * Parameter: none
-         * Description: return to home page
+         * Description: Direction to home page.
          */
         public IActionResult OnPost()
         {
-            _logger.LogTrace("Forgot Password Confirmation On post.");
+            _logger.LogTrace("Forgot forgot password confirmation on post.");
             return RedirectToPage("Login");
         } // End OnPost
     } // End ForgotPasswordConfirmation

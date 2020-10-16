@@ -1,17 +1,15 @@
-﻿using System;
+﻿using UMS.Data;
+using UMS.Areas.Identity.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using UMS.Areas.Identity.Data;
-using UMS.Data;
 
 /*
  * Name: IdentityHostingStartup (Extend: IHostingStartup)
  * Namespace: ~/Area/Identity
- * Description: For config of Identity
+ * Description: Configuration for identity user.
  */
 
 [assembly: HostingStartup(typeof(UMS.Areas.Identity.IdentityHostingStartup))]
@@ -22,7 +20,7 @@ namespace UMS.Areas.Identity
         /*
          * Name: Configura
          * Parameter: builder(IWebHostBuilder)
-         * Description: Configuration for Identity
+         * Description: Configuration for identity user.
          */
         public void Configure(IWebHostBuilder builder)
         {
@@ -30,7 +28,7 @@ namespace UMS.Areas.Identity
                 services.AddDbContext<AuthDbContext>(options =>
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("AuthDbContextConnection")));
-                
+
                 services.AddDefaultIdentity<ApplicationUser>(options =>
                 {
                     options.SignIn.RequireConfirmedAccount = false;

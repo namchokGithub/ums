@@ -1,18 +1,16 @@
 ﻿using System;
-using System.Linq;
+using UMS.Data;
 using System.Security.Claims;
-using Microsoft.AspNetCore.Authorization;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
 using static UMS.Controllers.ManageUserController;
-using UMS.Models;
-using System.Threading;
 
 /*
  * Name: UMS.Controllers.LogsController
  * Author: Namchok Singhachai
- * Description: For Logs monitor
+ * Description: The controller manages log monitor page.
  */
 
 namespace UMS.Controllers
@@ -20,58 +18,42 @@ namespace UMS.Controllers
     [Authorize(Roles = "Admin")]
     public class LogsController : Controller
     {
+        private readonly ILogsRepository _logs;
         private readonly ILogger<LogsController> _logger;
-        private readonly LogsContext _logsContext;
-
         /*
-         * Name: Logs
-         * Parametor: none
-         * Description: Constructor
+         * Name: LogsController
+         * Parametor: logger(ILogger<LogsController>), authDbContext(AuthDbContext)
          */
-        public LogsController(ILogger<LogsController> logger, LogsContext logsContext)
+        public LogsController(ILogger<LogsController> logger, AuthDbContext context)
         {
-            try
-            {
-                _logger = logger;
-                _logsContext = logsContext;
-                _logger.LogTrace("Start LogsController Constructor.");
-            }
-            catch (Exception e)
-            {
-                _logger.LogError(e.Message.ToString());
-                _logger.LogTrace("End LogsController Constructor.");
-            }// End try catch
+            _logger = logger;
+            _logs = new LogsRepository(context);
+            _logger.LogInformation("Start logs controller.");
         } // End Constructor
 
         /*
          * Name: Index
-         * Parametor: log(Logs)
-         * Description: For Logs monitor
+         * Author: Namchok Singhachai
+         * Description: A show of logs.
          */
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             try
             {
-                _logger.LogTrace("Start Index.");
-                var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Find id
-                _logger.LogTrace("Find ID from first value.");
-                ViewData["UserId"] = UserId ?? throw new Exception("The user ID not found !."); // Set Data to view
-
-                int numofrow = 100; // Get top log form database
-                string sqlGetallLog = @$"Exec dbo.ums_Get_all_log {numofrow}"; // Set sql text for get data
-                
-                _logger.LogDebug($"Getting top {numofrow} from all logs.");
-                var item = _logsContext.Logs.FromSqlRaw(sqlGetallLog).ToList<Logs>();
-                ViewData["Logs"] = item ?? throw new Exception("Calling a method on a null object reference."); // Set result to view and check null value
-                ViewData["INFO"] = @$"toastr.info('Select lasted logs.');"; // Message for result query
-                _logger.LogTrace("End Index.");
+                _logger.LogTrace("Start logs index.");
+                _logger.LogTrace("Finding user ID.");
+                ViewData["UserId"] = User.FindFirstValue(ClaimTypes.NameIdentifier) ?? throw new Exception("The user ID not found!."); // Get user ID
+                _logger.LogDebug($"Getting top 100 from all logs.");
+                ViewData["Logs"] = await _logs.GetAllAsync(100) ?? throw new Exception("Calling a method on a null object reference."); // Set result to view and check null value
+                ViewData["INFO"] = @$"toastr.info('Show the last 100 results.');";
+                _logger.LogTrace("End logs index.");
                 return View();
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })"; // Message to html view
-                _logger.LogTrace("End Index.");
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'ERROR!', text: `" + e.Message.Replace("\\", "/").Replace("`", "'") + @"`, showConfirmButton: true });";
+                _logger.LogTrace("End logs index.");
                 return View();
             } // End try catch
         } // End Index
@@ -79,45 +61,32 @@ namespace UMS.Controllers
         /*
          * Name: SearchLogs
          * Parametor: [POST] dateInput(string), message(string)
-         * Description: For Logs monitor
+         * Author: Namchok Singhachai
+         * Description: Searching a log.
          */
-        public JsonResult Search(string messageInput, string dateInput)
+        public async Task<JsonResult> Search(string messageInput, string dateInput)
         {
-            try {
-                _logger.LogTrace("Start searching logs.");
-                string sqlGetLog;
-                if ((dateInput == null && messageInput == null) || (dateInput == "" && messageInput == "")) throw new Exception("Please input information for searching."); // End if param both is null 
+            try
+            {
+                _logger.LogTrace("Start searching a logs.");
+                if ((dateInput == null && messageInput == null) || (dateInput == "" && messageInput == ""))
+                    throw new Exception("Please input information for searching."); // End if param both is null 
                 _logger.LogDebug("Input Date Input: " + ((dateInput != null && dateInput != "") ? dateInput : "-"));
                 _logger.LogDebug("Input Message: " + ((messageInput != null && messageInput != "") ? messageInput : "-"));
-                if (dateInput!=null && dateInput != "")
-                {
-                    _logger.LogTrace("Set dete from dateIinput.");
-                    DateTime dateInputStart = Convert.ToDateTime(dateInput.Substring(0, (dateInput.IndexOf("-"))).ToString());
-                    DateTime dateInputEnd = Convert.ToDateTime(dateInput.Substring((dateInput.IndexOf("-")) + 1).ToString()); // Set date for query
-                    sqlGetLog = @$"Exec dbo.ums_Search_log '{dateInputStart}', '{dateInputEnd}', '{messageInput}'";
-                }
-                else
-                {
-                    sqlGetLog = @$"Exec dbo.ums_Search_log '', '', '{messageInput}'";
-                } // End if date input not null
-                _logger.LogDebug($"Getting log by {(dateInput ?? "")}{(messageInput==null?"":" or "+messageInput)}.");
-                var item = _logsContext.Logs.FromSqlRaw(sqlGetLog).ToList<Logs>();
-                if(item == null) throw new Exception("Calling a method on a null object reference.");
-                _logger.LogTrace("End searching logs.");
-                return new JsonResult(item); // Return object JSON
+                _logger.LogDebug($"Getting log by {(dateInput ?? "")}{(messageInput == null ? "" : messageInput != null && dateInput == null ? messageInput : " or " + messageInput)}.");
+                _logger.LogTrace("End searching a logs.");
+                return new JsonResult(await _logs.SearchAsync(messageInput, dateInput)); // Return object JSON
             }
             catch (Exception e)
             {
                 _logger.LogError("Error: " + e.Message.ToString());
-                string message = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message + @"`, showConfirmButton: true })"; 
-                var er = new objectJSON
+                _logger.LogTrace("End searching a logs.");
+                return new JsonResult(new ObjectJSON
                 {
                     condition = "error",
-                    messages = message,
-                    text = e.Message
-                }; // Object for set alert 
-                _logger.LogTrace("End search logs.");
-                return new JsonResult(er); // Message to html view
+                    messages = @"Swal.fire({ icon: 'error', title: 'ERROR!', text: `" + e.Message.Replace("\\", "/").Replace("`", "'") + @"`, showConfirmButton: true });",
+                    text = e.Message.Replace("\\", "/").Replace("`", "'")
+                });
             } // End try catch
         } // End searchLogs
     } // End Logs
