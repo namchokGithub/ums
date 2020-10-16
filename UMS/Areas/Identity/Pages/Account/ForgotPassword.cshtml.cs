@@ -42,7 +42,7 @@ namespace UMS.Areas.Identity.Pages.Account
             _emailSender = emailSender;
             _userManager = userManager;
             _unitOfWork = new UnitOfWork(context);
-            _logger.LogDebug("Start forgot password model.");
+            _logger.LogInformation("Start forgot password model.");
         } // End contructor
 
         [BindProperty]

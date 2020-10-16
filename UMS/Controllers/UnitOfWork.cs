@@ -1,5 +1,5 @@
-﻿using System.Threading.Tasks;
-using UMS.Data;
+﻿using UMS.Data;
+using System.Threading.Tasks;
 /*
  * Name: IUnitOfWork
  * Author: Namchok Singhachai

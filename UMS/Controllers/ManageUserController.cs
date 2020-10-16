@@ -1,12 +1,12 @@
 ﻿using System;
+using UMS.Data;
+using UMS.Models;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
-using UMS.Data;
 using Microsoft.Extensions.Logging;
-using UMS.Models;
 using Microsoft.AspNetCore.Authorization;
 
 /*
@@ -31,7 +31,7 @@ namespace UMS.Controllers
         {
             _logger = logger;
             _unitOfWork = new UnitOfWork(context);
-            _logger.LogTrace("Start manage user controller.");
+            _logger.LogInformation("Start manage user controller.");
         } // End constructor
 
         /*

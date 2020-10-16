@@ -28,7 +28,7 @@ namespace UMS.Areas.Identity.Pages.Account
         {
             _signInManager = signInManager;
             _logger = logger;
-            _logger.LogDebug("Start logout.");
+            _logger.LogInformation("Start logout.");
         } // End constructor
 
         /*

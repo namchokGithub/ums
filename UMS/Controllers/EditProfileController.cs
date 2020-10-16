@@ -1,14 +1,14 @@
 ﻿using System;
+using UMS.Data;
+using UMS.Models;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using UMS.Areas.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
-using UMS.Data;
 using Microsoft.Extensions.Logging;
 using System.Security.Cryptography;
-using UMS.Models;
 using Microsoft.AspNetCore.Identity;
 using System.Text.RegularExpressions;
-using UMS.Areas.Identity.Data;
 
 /*
  * Name: EditProfileController.cs
@@ -33,7 +33,7 @@ namespace UMS.Controllers
             _logger = logger;
             _signInManager = signInManager;
             _unitOfWork = new UnitOfWork(context);
-            _logger.LogTrace("Start editProfile controller.");
+            _logger.LogInformation("Start editProfile controller.");
         } // End Constructor
 
         /*

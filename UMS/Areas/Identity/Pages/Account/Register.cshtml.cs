@@ -45,7 +45,7 @@ namespace UMS.Areas.Identity.Pages.Account
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
-            _logger.LogDebug("Start register model.");
+            _logger.LogInformation("Start register model.");
         } // End Constructor
 
         /*

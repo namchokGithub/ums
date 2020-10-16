@@ -32,7 +32,7 @@ namespace UMS.Areas.Identity.Pages.Account
         public ResetPasswordModel(UserManager<ApplicationUser> userManager, ILogger<ResetPasswordModel> logger)
         {
             _logger = logger;
-            _logger.LogDebug("Start reset password model.");
+            _logger.LogInformation("Start reset password model.");
             _userManager = userManager;
         } // End constructor
 

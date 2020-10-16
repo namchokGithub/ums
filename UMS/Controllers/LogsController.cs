@@ -1,8 +1,8 @@
 ﻿using System;
+using UMS.Data;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using UMS.Data;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
 using static UMS.Controllers.ManageUserController;
@@ -28,7 +28,7 @@ namespace UMS.Controllers
         {
             _logger = logger;
             _logs = new LogsRepository(context);
-            _logger.LogTrace("Start logs controller.");
+            _logger.LogInformation("Start logs controller.");
         } // End Constructor
 
         /*

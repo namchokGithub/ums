@@ -46,7 +46,7 @@ namespace UMS.Areas.Identity.Pages.Account
             _userManager = userManager;
             _signInManager = signInManager;
             _manageUser = new ManageUserController(context, loggerManageUser);
-            _logger.LogDebug("Start login model.");
+            _logger.LogInformation("Start login model.");
         } // End constructor
 
         [TempData]

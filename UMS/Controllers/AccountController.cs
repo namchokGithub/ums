@@ -1,13 +1,13 @@
 ﻿using System;
+using UMS.Data;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using UMS.Areas.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
-using UMS.Data;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
-using UMS.Areas.Identity.Data;
 using static UMS.Areas.Identity.Pages.Account.LoginModel;
 
 /*
@@ -41,7 +41,7 @@ namespace UMS.Controllers
             _signInManager = signInManager;
             _userManager = userManager;
             _manageUserController = new ManageUserController(context, loggerManager);
-            _logger.LogTrace("Start account controller.");
+            _logger.LogInformation("Start account controller.");
         } // End consturcter
 
         /*
