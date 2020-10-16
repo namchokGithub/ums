@@ -15,8 +15,8 @@ ${manage_input_lastname}            xpath=//*[@id="acc_Lastname"]
 ${manage_input_role}                xpath=//*[@id="acc_RoleId"]
 ${manage_btn_edit_save}             xpath=//*[@id="EditUser"]/div/div/div[3]/button[2]
 ${manage_btn_edit_back}             xpath=//*[@id="EditUser"]/div/div/div[3]/button[1]
-${manage_delete_btn_confirm}        xpath=/html/body/div[3]/div/div[3]/button[1]
-${manage_delete_btn_back}           xpath=/html/body/div[3]/div/div[3]/button[2]
+${manage_delete_btn_confirm}        xpath=/html/body/div[2]/div/div[3]/button[1]
+${manage_delete_btn_back}           xpath=/html/body/div[2]/div/div[3]/button[2]
 
 *** Keywords ***
 Open web browser
@@ -56,11 +56,9 @@ Save edit user
     click element               ${manage_btn_edit_save} 
 
 Confirm delete
-    sleep                       1s
     Click Element       ${manage_delete_btn_confirm}
 
 Cancle delete
-    sleep                       1s
     Click Element       ${manage_delete_btn_back}
 
 # success = "Update user account successfully!"
@@ -81,7 +79,7 @@ UMS-Manage-01-01
     AND Fill lastname "LastAthiruj"
     AND Select role "2"
     AND Save edit user
-    THEN The alert message must say "Update user successfully!"
+    THEN The alert message must say "Update user account successfully!"
     [Teardown]    Close Browser
 
 UMS-Manage-01-02
@@ -148,16 +146,6 @@ UMS-Manage-01-06
 
 # UMS-Manage-02 ลบข้อมูลผู้ใช้งาน
 UMS-Manage-02-01
-    [Documentation]      ยกเลิกการลบช้อมูลผู้ใช้งาน
-    [Tags]    FAILS
-    GIVEN Open web browser
-    WHEN Login with "usermanagement2020@gmail.com" "123qweQ!"
-    AND Go to Manage User
-    AND Delete
-    THEN Cancle delete
-    [Teardown]    Close Browser
-
-UMS-Manage-02-02
     [Documentation]      ลบข้อมูลผู้ใช้งานสำเร็จ
     [Tags]    PASS
     GIVEN Open web browser
@@ -166,4 +154,14 @@ UMS-Manage-02-02
     AND Delete
     AND Confirm delete
     THEN The alert message must say "Delete user account successfully!"
+    [Teardown]    Close Browser
+
+UMS-Manage-02-02
+    [Documentation]      ยกเลิกการลบช้อมูลผู้ใช้งาน
+    [Tags]    FAILS
+    GIVEN Open web browser
+    WHEN Login with "usermanagement2020@gmail.com" "123qweQ!"
+    AND Go to Manage User
+    AND Delete
+    THEN Cancle delete
     [Teardown]    Close Browser

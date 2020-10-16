@@ -1,13 +1,13 @@
 ﻿using System;
-using UMS.Data;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Security.Claims;
-using UMS.Areas.Identity.Data;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using UMS.Data;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
+using UMS.Areas.Identity.Data;
 using static UMS.Areas.Identity.Pages.Account.LoginModel;
 
 /*
@@ -23,8 +23,8 @@ namespace UMS.Controllers
     {
         private readonly ILogger<AccountController> _logger;
         private readonly UserManager<ApplicationUser> _userManager;
-        private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly ManageUserController _manageUserController;
+        private readonly SignInManager<ApplicationUser> _signInManager;
         /*
          * Name: AccountController
          * Parameter: context(AuthDbContext), userManager(UserManager<ApplicationUser>), loggerManager(UserManager<ApplicationUser>)
@@ -37,19 +37,11 @@ namespace UMS.Controllers
             SignInManager<ApplicationUser> signInManager,
             ILogger<AccountController> logger)
         {
-            try
-            {
-                _logger = logger;
-                _signInManager = signInManager;
-                _userManager = userManager;
-                _manageUserController = new ManageUserController(context, loggerManager);
-                _logger.LogTrace("Start account controller.");
-            }
-            catch (Exception e)
-            {
-                _logger.LogError(e.Message.ToString());
-                _logger.LogTrace("End account controller.");
-            }// End try catch
+            _logger = logger;
+            _signInManager = signInManager;
+            _userManager = userManager;
+            _manageUserController = new ManageUserController(context, loggerManager);
+            _logger.LogTrace("Start account controller.");
         } // End consturcter
 
         /*
@@ -153,7 +145,7 @@ namespace UMS.Controllers
         /*
          * Name: GoogleLogin
          * Author: Wannapa Srijermtong
-         * Description: Get properties of authentication.
+         * Description: Getting properties of authentication.
          */
         [AllowAnonymous]
         public IActionResult GoogleLogin()
@@ -190,37 +182,32 @@ namespace UMS.Controllers
                 ViewData["URL"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
                 ViewData["URLHOME"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Home";
 
-                _logger.LogDebug("Getting external login info.");
+                _logger.LogDebug("Getting external login information.");
                 ExternalLoginInfo info = await _signInManager.GetExternalLoginInfoAsync();
                 if (info == null) throw new Exception("User information not found.");
 
                 _logger.LogDebug("Getting result external login and sign in.");
                 var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, true);
-                _logger.LogTrace("Creating user information.");
-                string[] userInfo = {
-                    info.Principal.FindFirst(ClaimTypes.Name).Value,
-                    info.Principal.FindFirst(ClaimTypes.Email).Value,
-                    info.Principal.FindFirst(ClaimTypes.GivenName).Value,
-                    info.Principal.FindFirst(ClaimTypes.Surname).Value
-                }; // Craete user info
 
                 if (result.Succeeded)
                 {
                     var IsActive = await _manageUserController.GetStatusUser(info.Principal.FindFirst(ClaimTypes.Email).Value);
                     if (IsActive.Value.ToString() == "ACTIVE")
                     {
-                        _logger.LogInformation("Login successfully.");
+                        _logger.LogInformation("User successfully logged in.");
                         _logger.LogTrace("End google response.");
                         return RedirectToAction("Index", "Home");
                     }
                     else if (IsActive.Value.ToString() == "INACTIVE")
                     {
                         _logger.LogInformation("This user is not active.");
-                        _logger.LogDebug("Getting user by email.");
+
+                        _logger.LogDebug("Getting a user by email.");
                         ApplicationUser user = await _userManager.FindByEmailAsync(info.Principal.FindFirst(ClaimTypes.Email).Value);
                         if (user == null) throw new Exception("Calling a method on a null object reference.");
+                        
                         await _manageUserController.DeleteUser(user.Id); // Toggle user status
-                        _logger.LogInformation("Change status inactive to active user.");
+                        _logger.LogInformation("User successfully activated");
                         _logger.LogTrace("End google response.");
                         return RedirectToAction("Index", "Home");
                     }
@@ -241,28 +228,40 @@ namespace UMS.Controllers
                         acc_IsActive = 'Y'
                     }; // create new user
 
-                    _logger.LogDebug("Creating user information.");
+                    _logger.LogDebug("Creating a user.");
                     IdentityResult identResult = await _userManager.CreateAsync(user);
                     if (identResult.Succeeded)
                     {
-                        _logger.LogDebug("Finding user by email.");
+                        _logger.LogInformation("User successfully created.");
+
+                        _logger.LogDebug("Finding a user by email.");
                         ApplicationUser userId = await _userManager.FindByEmailAsync(user.Email);
-                        await _userManager.AddToRoleAsync(userId, "User");
-                        _logger.LogInformation("User created successfully.");
-                        _logger.LogDebug("Creating an user information.");
-                        _logger.LogDebug("Adding login information.");
-                        identResult = await _userManager.AddLoginAsync(user, info);
+
+                        _logger.LogDebug("Adding a user role.");
+                        identResult = await _userManager.AddToRoleAsync(userId ?? throw new Exception("Calling a method on a null object reference."), "User");
                         if (identResult.Succeeded)
                         {
-                            _logger.LogDebug("Signing in.");
-                            await _signInManager.SignInAsync(user, false);
-                            _logger.LogInformation("Login successfully added.");
-                            _logger.LogTrace("End google response.");
-                            return RedirectToAction("Index", "Home");
-                        } // End logged in successfully
-                    } // End created successfully
+                            _logger.LogInformation("User role successfully added.");
+
+                            _logger.LogDebug("Adding a login.");
+                            identResult = await _userManager.AddLoginAsync(user, info);
+                            if (identResult.Succeeded)
+                            {
+                                _logger.LogInformation("User login successfully added.");
+
+                                _logger.LogDebug("Signing in.");
+                                await _signInManager.SignInAsync(user, false);
+                                _logger.LogInformation("User successfully logged in.");
+                                _logger.LogTrace("End google response.");
+                                return RedirectToAction("Index", "Home");
+                            } // End logged in successfully
+                        } // End user successfully added role user
+                    } // End user successfully created
+
                     _logger.LogError(identResult.Errors.First().Description.ToString());
-                    TempData["Exception"] = @"Swal.fire({
+                    if (identResult.Errors.First().Code == "DuplicateUserName")
+                    {
+                        TempData["Exception"] = @"Swal.fire({
                                                 title: 'The " + user.Email + @" is already registered.',
                                                 text: 'Would you like to try login instead?',
                                                 icon: 'warning',
@@ -273,6 +272,12 @@ namespace UMS.Controllers
                                                 console.log('Confirmed');
                                                 window.location.href = '" + $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Login"
                                                 + "';});";
+                    } 
+                    else
+                    {
+                        TempData["Exception"] = @"Swal.fire({ title: 'Error', icon: 'Error', text:`"
+                                                    + identResult.Errors.First().Description.ToString().Replace("\\", "/").Replace("`", "'") + "`, showCancelButton: true });";
+                    }
                     _logger.LogTrace("End google response.");
                     return View();
                 } // End signed in successfully
@@ -326,37 +331,32 @@ namespace UMS.Controllers
                 ViewData["URL"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
                 ViewData["URLHOME"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Home";
 
-                _logger.LogDebug("Getting user information.");
+                _logger.LogDebug("Getting external login information.");
                 ExternalLoginInfo info = await _signInManager.GetExternalLoginInfoAsync();
                 if (info == null) throw new Exception("User information not found.");
 
-                _logger.LogDebug("Getting external login and sign in.");
+                _logger.LogDebug("Getting result external login and sign in.");
                 var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, true);
-                _logger.LogTrace("Creating user information.");
-                string[] userInfo = {
-                    info.Principal.FindFirst(ClaimTypes.Name).Value,
-                    info.Principal.FindFirst(ClaimTypes.Email).Value,
-                    info.Principal.FindFirst(ClaimTypes.GivenName).Value,
-                    info.Principal.FindFirst(ClaimTypes.Surname).Value
-                }; // Crate new user info
 
                 if (result.Succeeded)
                 {
                     var IsActive = await _manageUserController.GetStatusUser(info.Principal.FindFirst(ClaimTypes.Email).Value);
                     if (IsActive.Value.ToString() == "ACTIVE")
                     {
-                        _logger.LogInformation("Login successfully.");
+                        _logger.LogInformation("User successfully logged in.");
                         _logger.LogTrace("End facebook response.");
                         return RedirectToAction("Index", "Home");
                     }
                     else if (IsActive.Value.ToString() == "INACTIVE")
                     {
                         _logger.LogInformation("This user is not active.");
-                        _logger.LogDebug("Getting user by email.");
+
+                        _logger.LogDebug("Getting a user by email.");
                         ApplicationUser user = await _userManager.FindByEmailAsync(info.Principal.FindFirst(ClaimTypes.Email).Value);
                         if (user == null) throw new Exception("Calling a method on a null object reference.");
+
                         await _manageUserController.DeleteUser(user.Id); // Toggle user status
-                        _logger.LogInformation("Change status inactive to active user.");
+                        _logger.LogInformation("User successfully activated");
                         _logger.LogTrace("End facebook response.");
                         return RedirectToAction("Index", "Home");
                     }
@@ -377,28 +377,40 @@ namespace UMS.Controllers
                         acc_IsActive = 'Y'
                     }; // Create new user
 
-                    _logger.LogDebug("Creating user information.");
+                    _logger.LogDebug("Creating a user.");
                     IdentityResult identResult = await _userManager.CreateAsync(user);
                     if (identResult.Succeeded)
                     {
-                        _logger.LogDebug("Finding user by email.");
+                        _logger.LogInformation("User successfully created.");
+
+                        _logger.LogDebug("Finding a user by email.");
                         ApplicationUser userId = await _userManager.FindByEmailAsync(user.Email);
-                        await _userManager.AddToRoleAsync(userId, "User");
-                        _logger.LogInformation("User created successfully.");
-                        _logger.LogDebug("Creating an user information.");
-                        identResult = await _userManager.AddLoginAsync(user, info);
+
+                        _logger.LogDebug("Adding a user role.");
+                        await _userManager.AddToRoleAsync(userId ?? throw new Exception("Calling a method on a null object reference."), "User");
                         if (identResult.Succeeded)
                         {
-                            _logger.LogDebug("Signing in.");
-                            await _signInManager.SignInAsync(user, false);
-                            _logger.LogInformation("Login successfully added.");
-                            _logger.LogTrace("End facebook response.");
-                            return RedirectToAction("Index", "Home");
-                        } // End logged in successfully
-                    } // End created successfully
+                            _logger.LogInformation("User role successfully added.");
+
+                            _logger.LogDebug("Adding a login.");
+                            identResult = await _userManager.AddLoginAsync(user, info);
+                            if (identResult.Succeeded)
+                            {
+                                _logger.LogInformation("User login successfully added.");
+
+                                _logger.LogDebug("Signing in.");
+                                await _signInManager.SignInAsync(user, false);
+                                _logger.LogInformation("User successfully logged in.");
+                                _logger.LogTrace("End facebook response.");
+                                return RedirectToAction("Index", "Home");
+                            } // End user successfully logged in 
+                        } // End user successfully added role user
+                    } // End user successfully created
 
                     _logger.LogError(identResult.Errors.First().Description.ToString());
-                    TempData["Exception"] = @"Swal.fire({
+                    if (identResult.Errors.First().Code == "DuplicateUserName")
+                    {
+                        TempData["Exception"] = @"Swal.fire({
                                                 title: 'The " + user.Email + @" is already registered.',
                                                 text: 'Would you like to try login instead?',
                                                 icon: 'warning',
@@ -408,7 +420,13 @@ namespace UMS.Controllers
                                             }).then((res) => {
                                                 console.log('Confirmed');
                                                 window.location.href = '" + $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Login"
-                                                + "'});";
+                                                + "';});";
+                    }
+                    else
+                    {
+                        TempData["Exception"] = @"Swal.fire({ title: 'Error', icon: 'Error', text:`"
+                                                    + identResult.Errors.First().Description.ToString().Replace("\\", "/").Replace("`", "'") + "`, showCancelButton: false });";
+                    }
                     _logger.LogTrace("End facebook response.");
                     return View();
                 } // End signed in successfully
@@ -462,44 +480,38 @@ namespace UMS.Controllers
                 ViewData["URL"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
                 ViewData["URLHOME"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Home";
 
-                _logger.LogDebug("Getting external login info.");
+                _logger.LogDebug("Getting external login information.");
                 ExternalLoginInfo info = await _signInManager.GetExternalLoginInfoAsync();
-                _logger.LogDebug("Get external login.");
                 if (info == null) throw new Exception("User information not found.");
 
                 _logger.LogDebug("Getting External login and sign in.");
                 var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, true);
-                _logger.LogTrace("Creating user information .");
-                string[] userInfo = {
-                    info.Principal.FindFirst(ClaimTypes.Name).Value,
-                    info.Principal.FindFirst(ClaimTypes.Email).Value,
-                    info.Principal.FindFirst(ClaimTypes.GivenName).Value,
-                    info.Principal.FindFirst(ClaimTypes.Surname).Value
-                }; // Create new user info
 
                 if (result.Succeeded)
                 {
                     var IsActive = await _manageUserController.GetStatusUser(info.Principal.FindFirst(ClaimTypes.Email).Value);
                     if (IsActive.Value.ToString() == "ACTIVE")
                     {
-                        _logger.LogInformation("Login successfully.");
+                        _logger.LogInformation("User successfully logged in.");
                         _logger.LogTrace("End microsoft response.");
                         return RedirectToAction("Index", "Home");
                     }
                     else if (IsActive.Value.ToString() == "INACTIVE")
                     {
                         _logger.LogInformation("This user is not active.");
+
                         _logger.LogDebug("Getting user by email.");
                         ApplicationUser user = await _userManager.FindByEmailAsync(info.Principal.FindFirst(ClaimTypes.Email).Value);
                         if (user == null) throw new Exception("Calling a method on a null object reference.");
+
                         await _manageUserController.DeleteUser(user.Id); // Toggle user status
-                        _logger.LogInformation("Change status inactive to active user.");
+                        _logger.LogInformation("User successfully activated");
                         _logger.LogTrace("End microsoft response.");
                         return RedirectToAction("Index", "Home");
                     }
                     else
                     {
-                        throw new Exception("Cannot find this user.");
+                        throw new Exception("The user not found.");
                     } // End check user is inactive
                 } // If you had an account
                 else
@@ -514,28 +526,41 @@ namespace UMS.Controllers
                         acc_IsActive = 'Y'
                     }; // Create new user
 
-                    _logger.LogDebug("Creating user information.");
+                    _logger.LogDebug("Creating a user.");
                     IdentityResult identResult = await _userManager.CreateAsync(user);
                     if (identResult.Succeeded)
                     {
-                        _logger.LogDebug("Finding user by email.");
+                        _logger.LogInformation("User successfully created.");
+
+                        _logger.LogDebug("Finding a user by email.");
                         ApplicationUser userId = await _userManager.FindByEmailAsync(user.Email);
-                        await _userManager.AddToRoleAsync(userId, "User");
-                        _logger.LogInformation("User created successfully.");
-                        _logger.LogDebug("Creating an user information.");
-                        identResult = await _userManager.AddLoginAsync(user, info);
+
+                        _logger.LogDebug("Adding a user role.");
+                        identResult = await _userManager.AddToRoleAsync(userId ?? throw new Exception("Calling a method on a null object reference."), "User");
                         if (identResult.Succeeded)
                         {
-                            _logger.LogDebug("Singing in.");
-                            await _signInManager.SignInAsync(user, false);
-                            _logger.LogInformation("Login successfully added.");
-                            _logger.LogTrace("End microsoft response.");
-                            return RedirectToAction("Index", "Home");
-                        } // End logged in successfully
+                            _logger.LogInformation("User role successfully added.");
+
+                            _logger.LogInformation("User created successfully.");
+                            _logger.LogDebug("Creating an user information.");
+                            identResult = await _userManager.AddLoginAsync(user, info);
+                            if (identResult.Succeeded)
+                            {
+                                _logger.LogInformation("User login successfully added.");
+
+                                _logger.LogDebug("Signing in.");
+                                await _signInManager.SignInAsync(user, false);
+                                _logger.LogInformation("User successfully logged in.");
+                                _logger.LogTrace("End microsoft response.");
+                                return RedirectToAction("Index", "Home");
+                            } // End user successfully logged in 
+                        } // End user successfully added role user
                     } // End created successfully
 
                     _logger.LogError(identResult.Errors.First().Description.ToString());
-                    TempData["Exception"] = @"Swal.fire({
+                    if (identResult.Errors.First().Code == "DuplicateUserName")
+                    {
+                        TempData["Exception"] = @"Swal.fire({
                                                 title: 'The " + user.Email + @" is already registered.',
                                                 text: 'Would you like to try login instead?',
                                                 icon: 'warning',
@@ -545,7 +570,13 @@ namespace UMS.Controllers
                                             }).then((res) => {
                                                 console.log('Confirmed');
                                                 window.location.href = '" + $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/Identity/Account/Login"
-                                                + "'});";
+                                                + "';});";
+                    }
+                    else
+                    {
+                        TempData["Exception"] = @"Swal.fire({ title: 'Error', icon: 'Error', text:`"
+                                                    + identResult.Errors.First().Description.ToString().Replace("\\", "/").Replace("`", "'") + "`, showCancelButton: false });";
+                    }
                     _logger.LogTrace("End microsoft response.");
                     return View();
                 } // End signed in successfully

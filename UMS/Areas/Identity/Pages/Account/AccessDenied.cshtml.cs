@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 /*
  * Name: AccessDeniedModel.cs (extend: PageModel)
- * Namespace: UMS.Areas.Identity.Pages.Account
  * Author: Idenity system
  * Description: The page for access to denied sites.
  */
@@ -25,7 +24,7 @@ namespace UMS.Areas.Identity.Pages.Account
             _logger.LogDebug("Start access denined model.");
         } // End constructor
 
-        public void OnGet() { _logger.LogTrace("Access denined on get.");  } // End OnGet
+        public void OnGet() { _logger.LogTrace("Access denined on get."); } // End OnGet
 
         /*
          * Name: OnPost
@@ -36,21 +35,17 @@ namespace UMS.Areas.Identity.Pages.Account
             try
             {
                 _logger.LogTrace("Access denined on post.");
-                foreach (var cookie in HttpContext.Request.Cookies)
-                {
-                    Response.Cookies.Delete(cookie.Key);
-                }
+                foreach (var cookie in HttpContext.Request.Cookies) { Response.Cookies.Delete(cookie.Key); }
                 _logger.LogTrace("Clear cookies AspNetCore Identity Application.");
                 return RedirectToPage("/Login");
             }
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });";
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("`", "'").Replace("\\", "/") + @"`, showConfirmButton: true });";
                 _logger.LogTrace("End access denined on post.");
                 return Page();
             } // End try catch
         } // End OnPost
     } // End AccessDeniedModel
 }
-

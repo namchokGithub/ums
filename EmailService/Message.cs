@@ -1,13 +1,11 @@
 ﻿using MimeKit;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Collections.Generic;
 
 /*
- * Namspace: EmailService/Message.cs
+ * Name: Message.cs
  * Author: Namchok Singhachai
- * Description: Service for send email
+ * Description: Message for sending an email.
  */
 
 namespace EmailService
@@ -17,13 +15,12 @@ namespace EmailService
         public List<MailboxAddress> To { set; get; } // An email for sending
         public string Subject { set; get; } // The subject of an email
         public string Content { set; get; } // The conten of an email
-        public string htmlText { set; get; } // The html in an email (Optional)
-
+        public string HtmlText { set; get; } // The html in an email (Optional)
         /*
          * Name: Message
-         * Parametor: to(String), subject(string), content(String)
+         * Parametor: to(IEnumerable<string>), subject(string), content(String)
          * Author: Namchok Singhachai
-         * Description: Constructor for set a messages.
+         * Description: Setting a messages.
          */
         public Message(IEnumerable<string> to, string subject, string content)
         {

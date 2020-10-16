@@ -4,8 +4,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 /*
  * Name: ResetPasswordConfirmationModel.cs (Extend: PageModel)
- * Namespace: UMS.Areas.Identity.Pages.Account
  * Author: Idenity system
+ * Description: Confirmations for reset password.
  */
 
 namespace UMS.Areas.Identity.Pages.Account
@@ -21,9 +21,9 @@ namespace UMS.Areas.Identity.Pages.Account
         public ResetPasswordConfirmationModel(ILogger<ResetPasswordConfirmationModel> logger)
         {
             _logger = logger;
-            _logger.LogDebug("Start Reset Password Confirmation model.");
+            _logger.LogDebug("Start password confirmation model.");
         } // End constructor
 
-        public void OnGet() { _logger.LogTrace("Reset Password Confirmation on get."); } // End OnGet
+        public void OnGet() { _logger.LogTrace("Reset password confirmation on get."); } // End OnGet
     } // End ResetPasswordConfirmationModel
 }

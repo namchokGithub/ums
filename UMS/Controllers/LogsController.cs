@@ -1,8 +1,8 @@
 ﻿using System;
-using UMS.Data;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using UMS.Data;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
 using static UMS.Controllers.ManageUserController;
@@ -18,28 +18,18 @@ namespace UMS.Controllers
     [Authorize(Roles = "Admin")]
     public class LogsController : Controller
     {
+        private readonly ILogsRepository _logs;
         private readonly ILogger<LogsController> _logger;
-        private readonly IUnitOfWork _unitOfWork;
         /*
          * Name: LogsController
          * Parametor: logger(ILogger<LogsController>), authDbContext(AuthDbContext)
          */
-        public LogsController(ILogger<LogsController> logger, AuthDbContext authDbContext)
+        public LogsController(ILogger<LogsController> logger, AuthDbContext context)
         {
             _logger = logger;
-            _unitOfWork = new UnitOfWork(authDbContext);
+            _logs = new LogsRepository(context);
             _logger.LogTrace("Start logs controller.");
         } // End Constructor
-
-        /*
-         * Name: Deconstruct
-         * Description: The deconstructor of logs controller.
-         */
-        public void Deconstruct()
-        {
-            _unitOfWork.Dispose();
-            _logger.LogTrace("End logs controller.");
-        } // End Deconstructor
 
         /*
          * Name: Index
@@ -54,8 +44,8 @@ namespace UMS.Controllers
                 _logger.LogTrace("Finding user ID.");
                 ViewData["UserId"] = User.FindFirstValue(ClaimTypes.NameIdentifier) ?? throw new Exception("The user ID not found!."); // Get user ID
                 _logger.LogDebug($"Getting top 100 from all logs.");
-                ViewData["Logs"] = await _unitOfWork.Logs.GetAllAsync(100) ?? throw new Exception("Calling a method on a null object reference."); // Set result to view and check null value
-                ViewData["INFO"] = @$"toastr.info('A show of last logs.');"; // Message for result query
+                ViewData["Logs"] = await _logs.GetAllAsync(100) ?? throw new Exception("Calling a method on a null object reference."); // Set result to view and check null value
+                ViewData["INFO"] = @$"toastr.info('Show the last 100 results.');";
                 _logger.LogTrace("End logs index.");
                 return View();
             }
@@ -83,9 +73,9 @@ namespace UMS.Controllers
                     throw new Exception("Please input information for searching."); // End if param both is null 
                 _logger.LogDebug("Input Date Input: " + ((dateInput != null && dateInput != "") ? dateInput : "-"));
                 _logger.LogDebug("Input Message: " + ((messageInput != null && messageInput != "") ? messageInput : "-"));
-                _logger.LogDebug($"Getting log by {(dateInput ?? "")}{(messageInput == null ? "" : messageInput!=null&&dateInput==null? messageInput : " or " + messageInput)}.");
+                _logger.LogDebug($"Getting log by {(dateInput ?? "")}{(messageInput == null ? "" : messageInput != null && dateInput == null ? messageInput : " or " + messageInput)}.");
                 _logger.LogTrace("End searching a logs.");
-                return new JsonResult(await _unitOfWork.Logs.SearchAsync(messageInput, dateInput)); // Return object JSON
+                return new JsonResult(await _logs.SearchAsync(messageInput, dateInput)); // Return object JSON
             }
             catch (Exception e)
             {
@@ -95,7 +85,7 @@ namespace UMS.Controllers
                 {
                     condition = "error",
                     messages = @"Swal.fire({ icon: 'error', title: 'ERROR!', text: `" + e.Message.Replace("\\", "/").Replace("`", "'") + @"`, showConfirmButton: true });",
-                    text = e.Message
+                    text = e.Message.Replace("\\", "/").Replace("`", "'")
                 });
             } // End try catch
         } // End searchLogs

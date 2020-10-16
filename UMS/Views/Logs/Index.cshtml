@@ -1,14 +1,14 @@
-﻿@model UMS.Models.Logs
+﻿@model Logs
 
 @{
+    /*
+        Name: ~/Views/Logs/Index.cshtml
+        Author: Namchok Singhachai
+        Description: The View for log monitor.
+    */
     ViewData["Title"] = "Log Monitor";
     Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
 }
-@*
-    Name: ~/Views/Logs/Index.cshtml
-    Author: Namchok Singhachai
-    Description: The View for log monitor.
-*@
 <!-- style -->
 <style>
     .logslevel > span {
@@ -33,38 +33,38 @@
             </div>
         </div>
         <!-- /.card-header -->
-            <div class="card-body">
-                <div class="col-md-6 offset-3">
-                    <div class="form-group">
-                        <label>Message:</label>
-                        <input type="text" id="message" name="message" class="form-control" placeholder="Enter message logs">
-                        <span id="messageErrorInput" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label>Date and time range:</label>
-                        <div class="row">
-                            <div class="col-8">
-                                <input type="text" class="form-control float-right" id="logstime" name="logstime" placeholder="Date and time">
-                            </div>
-                            <div class="col-4 my-auto">
-                                <div class="form-check my-auto">
-                                    <input class="form-check-input" type="checkbox" name="today" id="today">
-                                    <label class="form-check-label">Today</label>
-                                </div>
-                            </div>
-                        </div> <!-- End row -->
-                        <span id="dateErrorInput" class="text-danger"></span>
-                    </div> <!-- Form group -->
+        <div class="card-body">
+            <div class="col-md-6 offset-3">
+                <div class="form-group">
+                    <label>Message:</label>
+                    <input type="text" id="message" name="message" class="form-control" placeholder="Enter message logs">
+                    <span id="messageErrorInput" class="text-danger"></span>
                 </div>
-            </div> <!-- /.card-body -->
-            <div class="card-footer">
-                <button type="reset" class="float-left btn btn-default" id="clear-search-input">Clear</button>
-                <button id="btnSearch" type="button" class="float-right btn btn-success" onclick="checkSearchInput()">Search</button>
-                <button id ="loader" class="float-right btn btn-success d-none" type="button" disabled>
-                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                    Loading...
-                </button>
-            </div> <!-- /.card-footer -->
+                <div class="form-group">
+                    <label>Date and time range:</label>
+                    <div class="row">
+                        <div class="col-8">
+                            <input type="text" class="form-control float-right" id="logstime" name="logstime" placeholder="Date and time">
+                        </div>
+                        <div class="col-4 my-auto">
+                            <div class="form-check my-auto">
+                                <input class="form-check-input" type="checkbox" name="today" id="today">
+                                <label class="form-check-label">Today</label>
+                            </div>
+                        </div>
+                    </div> <!-- End row -->
+                    <span id="dateErrorInput" class="text-danger"></span>
+                </div> <!-- Form group -->
+            </div>
+        </div> <!-- /.card-body -->
+        <div class="card-footer">
+            <button type="reset" class="float-left btn btn-default" id="clear-search-input">Clear</button>
+            <button id="btnSearch" type="button" class="float-right btn btn-success" onclick="checkSearchInput()">Search</button>
+            <button id="loader" class="float-right btn btn-success d-none" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+            </button>
+        </div> <!-- /.card-footer -->
     </div>
     <!--End Search logs Card-->
     <!--Start table logs Card-->
@@ -379,7 +379,7 @@
                                 columns: [
                                     { title: "Time" },
                                     { title: "Serverity" },
-                                    { title: "Messages" }, 
+                                    { title: "Messages" },
                                     { title: "User Identity" },
                                     { title: "Loggers" },
                                     { title: "Locations" }

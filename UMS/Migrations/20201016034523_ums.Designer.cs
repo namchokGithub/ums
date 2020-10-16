@@ -10,14 +10,14 @@ using UMS.Data;
 namespace UMS.Migrations
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20201013153426_ums")]
+    [Migration("20201016034523_ums")]
     partial class ums
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.8")
+                .HasAnnotation("ProductVersion", "3.1.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -234,78 +234,6 @@ namespace UMS.Migrations
                     b.ToTable("Account");
                 });
 
-            modelBuilder.Entity("UMS.Models.Account", b =>
-                {
-                    b.Property<string>("acc_Id")
-                        .HasColumnType("nvarchar(450)")
-                        .HasComment("User ID");
-
-                    b.Property<string>("acc_ConcurrencyStamp")
-                        .HasColumnName("acc_ConcurrencyStamp")
-                        .HasColumnType("nvarchar(MAX)")
-                        .HasComment("For check edit state");
-
-                    b.Property<string>("acc_Email")
-                        .HasColumnName("acc_Email")
-                        .HasColumnType("nvarchar(256)")
-                        .HasComment("User email");
-
-                    b.Property<string>("acc_Firstname")
-                        .IsRequired()
-                        .HasColumnName("acc_Firstname")
-                        .HasColumnType("nvarchar(256)")
-                        .HasComment("Firstname");
-
-                    b.Property<string>("acc_IsActive")
-                        .IsRequired()
-                        .HasColumnName("acc_IsActive")
-                        .HasColumnType("char(1)")
-                        .HasComment("Status of account");
-
-                    b.Property<string>("acc_Lastname")
-                        .IsRequired()
-                        .HasColumnName("acc_Lastname")
-                        .HasColumnType("nvarchar(256)")
-                        .HasComment("Lastname");
-
-                    b.Property<string>("acc_NormalizedEmail")
-                        .HasColumnName("acc_NormalizedEmail")
-                        .HasColumnType("nvarchar(256)")
-                        .HasComment("Normalized user email");
-
-                    b.Property<string>("acc_NormalizedUserName")
-                        .HasColumnName("acc_NormalizedUserName")
-                        .HasColumnType("nvarchar(256)")
-                        .HasComment("Normalized UserName");
-
-                    b.Property<string>("acc_PasswordHash")
-                        .HasColumnName("acc_PasswordHash")
-                        .HasColumnType("nvarchar(MAX)")
-                        .HasComment("Password hash");
-
-                    b.Property<string>("acc_Rolename")
-                        .HasColumnName("acc_Rolename")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("acc_SecurityStamp")
-                        .HasColumnName("acc_SecurityStamp")
-                        .HasColumnType("nvarchar(MAX)")
-                        .HasComment("Security Stamp");
-
-                    b.Property<string>("acc_TypeAccoutname")
-                        .HasColumnName("acc_TypeAccoutname")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("acc_User")
-                        .HasColumnName("acc_User")
-                        .HasColumnType("nvarchar(256)")
-                        .HasComment("Username");
-
-                    b.HasKey("acc_Id");
-
-                    b.ToTable("Account");
-                });
-
             modelBuilder.Entity("UMS.Models.Logs", b =>
                 {
                     b.Property<int>("log_Id")
@@ -406,15 +334,6 @@ namespace UMS.Migrations
                     b.HasOne("UMS.Areas.Identity.Data.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("UMS.Areas.Identity.Data.ApplicationUser", b =>
-                {
-                    b.HasOne("UMS.Models.Account", null)
-                        .WithOne()
-                        .HasForeignKey("UMS.Areas.Identity.Data.ApplicationUser", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

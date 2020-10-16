@@ -1,15 +1,14 @@
-﻿@using Microsoft.AspNetCore.Http.Extensions
-@{
+﻿@{
+    /*
+        Namespace: ~/Views/Account/MicrosoftResponse.cshtml
+        Author: Namchok Singhachai
+        Description: Microsoft response page.
+    */
     ViewData["Title"] = "Microsoft Response";
     Layout = "~/Views/Shared/_Layout.cshtml";
     string URL = ViewData["URL"].ToString();
     string URLHOME = ViewData["URLHOME"].ToString();
 }
-@*
-    Namespace: ~/Views/Account/MicrosoftResponse.cshtml
-    Author: Namchok Singhachai
-    Description: Microsoft response page.
-*@
 <!-- Content -->
 <div class="hold-transition login-page">
     <div class="login-box mx-auto mt-2 mt-lg-3">
@@ -36,7 +35,7 @@
 <!--Start Script-->
 @section Scripts {
     <script>
-        @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ };
+        @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) };
     </script>
     <partial name="_ValidationScriptsPartial" />
 }

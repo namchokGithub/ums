@@ -1,20 +1,38 @@
-﻿@*
-    Namspace: ~/View/EditProfile/Index.cshtml
-    Author: Wannapa Srijermtong
-    Description: The profile edit page.
-*@
-@model Account
+﻿@model Account
 @{
+    /*
+        Namspace: ~/View/EditProfile/Index.cshtml
+        Author: Wannapa Srijermtong
+        Description: The profile edit page.
+    */
     ViewData["Title"] = "Edit Profile";
     Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
 
-    var editProfile = new Account();
-    if(ViewData["User"] != null)
+    var editProfile = new Management();
+    if (ViewData["User"] != null)
     {
-        editProfile = ViewData["User"] as Account;
+        editProfile = ViewData["User"] as Management;
     }
 }
+<!--Start Style-->
+<style>
+    @*Style for hyperlink Change password*@
+    .toggle-password {
+        border-left: 0px;
+        background-color: white;
+    }
+    #href_ChangePassword {
+        text-align: left;
+        color: blue;
+        cursor: pointer;
+    }
 
+    @*Style for validation*@
+    .text-danger {
+        text-align: left;
+    }
+</style>
+<!--End Style-->
 <div class="mx-auto col-5">
     <br>
     <!--Start Card-->
@@ -59,9 +77,9 @@
                     </div>
                     <span id="validation_acc_NewPassword" class="text-danger col-12"></span>
                 </div>
-                <div id="acc_ConfirmPassword" class="input-group mb-3 col-12 d-none">
-                    <input class="form-control" style="border-right:0px;" id="acc_Con" type="password" name="acc_ConfirmPassword" placeholder="Confirm password" />
-                    <div class="input-group-append toggle-password" onclick="toggleConfirmPasword()" >
+                <div id="acc_ConfirmPasswordDiv" class="input-group mb-3 col-12 d-none">
+                    <input class="form-control" style="border-right:0px;" id="acc_ConfirmPassword" type="password" name="acc_ConfirmPassword" placeholder="Confirm password" />
+                    <div class="input-group-append toggle-password" onclick="toggleConfirmPasword()">
                         <div class="input-group-text toggle-password">
                             <span id="icon_ConfirmPassword" class="fas fa-eye-slash" style="cursor:pointer"></span>
                         </div>
@@ -69,7 +87,6 @@
                     <span id="validation_acc_ConfirmPassword" class="text-danger col-12"></span>
                 </div>
                 <!--End Input change password-->
-
                 <!--End Input edit profile-->
                 <!--Start Button save profile-->
                 <div class="row">
@@ -95,7 +112,6 @@
             <!--End Form profile-->
         </div>
         <!--End Card body-->
-
         <!--Start Card footer-->
         <div id="card_Footer" class="card-footer d-none">
             <button id="btn_NotSavePassword" type="button" class="btn btn-secondary float-left d-none">Back</button>
@@ -114,63 +130,6 @@
     //Regular expression
     var RegExName = /^[a-zA-Z]+(([a-zA-Z])?[a-zA-Z]*)*$/;
     var RegExPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\:\;\[\]\\\|\/\.\,\'\"\()\{}\<>_#$!%@@^฿*?&\-\+\=])[A-Za-z0-9\:\;\[\]\\\|\/\.\,\'\"\()\{}\<>_#$!%@@^฿*?&\-\+\=]+$/;
-
-    /*
-    * Name: toggleCurrentPasword()
-    * Author: Wannapa Srijermtong
-    * Description: To changing show a current password.
-    */
-    function toggleCurrentPasword() {
-        // Get id from input
-        var password = document.getElementById("acc_Current")
-        if (password.type === "password") {
-            document.getElementById("icon_CurrentPassword").classList.remove('fa-eye-slash')
-            document.getElementById("icon_CurrentPassword").classList.add('fa-eye')
-            password.type = "text";
-        } else {
-            document.getElementById("icon_CurrentPassword").classList.remove('fa-eye')
-            document.getElementById("icon_CurrentPassword").classList.add('fa-eye-slash')
-            password.type = "password";
-        }
-    } // toggleCurrentPasword
-
-    /*
-    * Name: toggleNewPasword()
-    * Author: Wannapa Srijermtong
-    * Description: For changing show a new password.
-    */
-    function toggleNewPasword() {
-        // Get id from input
-        var password = document.getElementById("acc_New")
-        if (password.type === "password") {
-            document.getElementById("icon_NewPassword").classList.remove('fa-eye-slash')
-            document.getElementById("icon_NewPassword").classList.add('fa-eye')
-            password.type = "text";
-        } else {
-            document.getElementById("icon_NewPassword").classList.remove('fa-eye')
-            document.getElementById("icon_NewPassword").classList.add('fa-eye-slash')
-            password.type = "password";
-        }
-    } // toggleNewPasword
-
-    /*
-    * Name: toggleConfirmPasword()
-    * Author: Wannapa Srijermtong
-    * Description: For change show a confirm password.
-    */
-    function toggleConfirmPasword() {
-        // Get id from input
-        var password = document.getElementById("acc_Con")
-        if (password.type === "password") {
-            document.getElementById("icon_ConfirmPassword").classList.remove('fa-eye-slash')
-            document.getElementById("icon_ConfirmPassword").classList.add('fa-eye')
-            password.type = "text";
-        } else {
-            document.getElementById("icon_ConfirmPassword").classList.remove('fa-eye')
-            document.getElementById("icon_ConfirmPassword").classList.add('fa-eye-slash')
-            password.type = "password";
-        }
-    } // toggleConfirmPasword
 
     /*
     * Name: SaveProfile
@@ -214,7 +173,7 @@
         var acc_Lastname = $('#acc_Lname').val();
         var acc_CurrentPassword = $('#acc_Current').val();
         var acc_NewPassword = $('#acc_New').val();
-        var acc_ConfirmPassword = $('#acc_Con').val();
+        var acc_ConfirmPassword = $('#acc_ConfirmPassword').val();
 
         // Validation if acc_Firstname do not math with Regular expression.
         if (RegExName.test(acc_Firstname) && acc_Firstname != ""
@@ -251,7 +210,7 @@
                 $('#validation_acc_ConfirmPassword').html('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
                 toastr.warning('The confirm password must contain at least 1 uppercase, 1 lowercase, 1 digit and 1 special character.')
             }
-        }
+        } // End checking acc_Firstname do not math with Regular expression
     } // End SavePassword
 
     $(document).ready(function () {
@@ -262,7 +221,7 @@
             $("#card_Footer").removeClass('d-none');
             $("#acc_CurrentPassword").removeClass('d-none');
             $("#acc_NewPassword").removeClass('d-none');
-            $("#acc_ConfirmPassword").removeClass('d-none');
+            $("#acc_ConfirmPasswordDiv").removeClass('d-none');
             $("#btn_SavePassword").removeClass('d-none');
             $("#btn_NotSavePassword").removeClass('d-none');
         });
@@ -275,7 +234,7 @@
             $("#btn_NotSavePassword").addClass('d-none');
             $("#acc_CurrentPassword").addClass('d-none');
             $("#acc_NewPassword").addClass('d-none');
-            $("#acc_ConfirmPassword").addClass('d-none');
+            $("#acc_ConfirmPasswordDiv").addClass('d-none');
             $("#btn_SavePassword").addClass('d-none');
         })
 
@@ -315,7 +274,7 @@
 
             // Get id from input
             var acc_NewPassword = $('#acc_New').val();
-            var acc_ConfirmPassword = $('#acc_Con').val();
+            var acc_ConfirmPassword = $('#acc_ConfirmPassword').val();
 
             // Validation if acc_NewPassword do not match with acc_ConfirmPassword.
             if (acc_NewPassword != acc_ConfirmPassword) {
@@ -362,23 +321,3 @@
     })
 </script>
 <!--End Script-->
-
-<!--Start Style-->
-<style>
-    @*Style for hyperlink Change password*@
-    .toggle-password {
-        border-left: 0px;
-        background-color: white;
-    }
-    #href_ChangePassword {
-        text-align: left;
-        color: blue;
-        cursor: pointer;
-    }
-
-    @*Style for validation*@
-    .text-danger {
-        text-align: left;
-    }
-</style>
-<!--End Style-->

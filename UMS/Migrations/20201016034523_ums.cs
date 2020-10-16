@@ -12,18 +12,16 @@ namespace UMS.Migrations
                 columns: table => new
                 {
                     acc_Id = table.Column<string>(nullable: false, comment: "User ID"),
-                    acc_User = table.Column<string>(type: "nvarchar(256)", nullable: true, comment: "Username"),
-                    acc_NormalizedUserName = table.Column<string>(type: "nvarchar(256)", nullable: true, comment: "Normalized UserName"),
-                    acc_Email = table.Column<string>(type: "nvarchar(256)", nullable: true, comment: "User email"),
-                    acc_NormalizedEmail = table.Column<string>(type: "nvarchar(256)", nullable: true, comment: "Normalized user email"),
-                    acc_PasswordHash = table.Column<string>(type: "nvarchar(MAX)", nullable: true, comment: "Password hash"),
-                    acc_SecurityStamp = table.Column<string>(type: "nvarchar(MAX)", nullable: true, comment: "Security Stamp"),
-                    acc_ConcurrencyStamp = table.Column<string>(type: "nvarchar(MAX)", nullable: true, comment: "For check edit state"),
+                    acc_User = table.Column<string>(maxLength: 256, nullable: true, comment: "Username"),
+                    acc_NormalizedUserName = table.Column<string>(maxLength: 256, nullable: true, comment: "Normalized UserName"),
+                    acc_Email = table.Column<string>(maxLength: 256, nullable: true, comment: "User email"),
+                    acc_NormalizedEmail = table.Column<string>(maxLength: 256, nullable: true, comment: "Normalized user email"),
+                    acc_PasswordHash = table.Column<string>(nullable: true, comment: "Password hash"),
+                    acc_SecurityStamp = table.Column<string>(nullable: true, comment: "Security Stamp"),
+                    acc_ConcurrencyStamp = table.Column<string>(nullable: true, comment: "For check edit state"),
                     acc_Firstname = table.Column<string>(type: "nvarchar(256)", nullable: false, comment: "Firstname"),
                     acc_Lastname = table.Column<string>(type: "nvarchar(256)", nullable: false, comment: "Lastname"),
-                    acc_IsActive = table.Column<string>(type: "char(1)", nullable: false, comment: "Status of account"),
-                    acc_Rolename = table.Column<string>(nullable: true),
-                    acc_TypeAccoutname = table.Column<string>(nullable: true)
+                    acc_IsActive = table.Column<string>(type: "char(1)", nullable: false, comment: "Status of account")
                 },
                 constraints: table =>
                 {
@@ -209,6 +207,7 @@ namespace UMS.Migrations
                 name: "IX_UserRoles_RoleId",
                 table: "UserRoles",
                 column: "RoleId");
+
             var ums_Add_user_login = @"-- =============================================
                             -- Author:		Namchok Singhachai
                             -- Create date: 2020-09-03

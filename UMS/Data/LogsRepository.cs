@@ -1,9 +1,9 @@
 ﻿using System;
-using UMS.Models;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
+using UMS.Models;
 
 /*
  * Name: LogsRepository
@@ -43,7 +43,7 @@ namespace UMS.Data
          */
         public List<Logs> GetAll(int numofrow)
         {
-            return _context.Logs.Take(numofrow).ToList();
+            return _context.Logs.OrderByDescending(i => i.log_Id).Take(numofrow).ToList();
         } // End GetAll
 
         /*
@@ -53,7 +53,7 @@ namespace UMS.Data
          */
         public async Task<List<Logs>> GetAllAsync(int numofrow)
         {
-            return await _context.Logs.Take(numofrow).ToListAsync();
+            return await _context.Logs.OrderByDescending(i => i.log_Id).Take(numofrow).ToListAsync();
         } // End GetAllAsync
 
         /*

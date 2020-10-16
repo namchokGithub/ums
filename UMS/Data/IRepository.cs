@@ -1,10 +1,10 @@
-﻿/*
+﻿using System.Threading.Tasks;
+
+/*
  * Name: IRepository
  * Author: Namchok Singchai
- * Description: For repository pattern.
+ * Description: The interface for repository pattern.
  */
-
-using System.Threading.Tasks;
 
 namespace UMS.Data
 {
