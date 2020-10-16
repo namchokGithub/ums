@@ -18,7 +18,7 @@ namespace EmailService
         private readonly EmailConfiguration _emailConfig;
         /*
          * Name: EmailSender
-         * Parameter: emailConfig(EmailConfiguration)
+         * Parameter: emailConfig(EmailConfiguration), logger(ILogger<EmailSender>)
          * Author: Namchok Singhachai
          * Description: Setting a messages.
          */
@@ -37,18 +37,10 @@ namespace EmailService
          */
         public void SendEmail(Message message)
         {
-            try
-            {
-                _logger.LogTrace("Start send an email.");
-                var emailMessage = CreateEmailMessage(message); // Create email messages
-                _logger.LogTrace("Email Sender: Sending an email.");
-                Send(emailMessage);
-            }
-            catch (Exception e)
-            {
-                _logger.LogTrace("End send an email.");
-                throw e;
-            } // End try catch
+            _logger.LogTrace("Start send an email.");
+            var emailMessage = CreateEmailMessage(message); // Create email messages
+            _logger.LogTrace("Email Sender: Sending an email.");
+            Send(emailMessage);
         } // End SendEmail
 
         /*
@@ -126,17 +118,9 @@ namespace EmailService
          */
         public async Task SendEmailAsync(Message message)
         {
-            try
-            {
-                var mailMessage = CreateEmailMessage(message);
-                _logger.LogTrace("Email Sender: Sending an email (Async).");
-                await SendAsync(mailMessage);
-            }
-            catch (Exception e)
-            {
-                _logger.LogTrace("End send an email (Async).");
-                throw e;
-            }
+            var mailMessage = CreateEmailMessage(message);
+            _logger.LogTrace("Email Sender: Sending an email (Async).");
+            await SendAsync(mailMessage);
         } // End SendEmailAsync
 
         /*
