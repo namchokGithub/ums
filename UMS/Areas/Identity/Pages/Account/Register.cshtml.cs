@@ -106,7 +106,7 @@ namespace UMS.Areas.Identity.Pages.Account
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });";
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("`", "'").Replace("\\", "/") + @"`, showConfirmButton: true });";
                 _logger.LogTrace("Register on get.");
             }
         } // End OnGetAsync
@@ -170,7 +170,7 @@ namespace UMS.Areas.Identity.Pages.Account
                             ModelState.AddModelError(string.Empty, error.Description);
                         } // End loop get error
                         _logger.LogError(errorStr.ToString());
-                        TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + errorStr.Replace("\\", "/") + @"`, showConfirmButton: true });";
+                        TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + errorStr.Replace("`", "'").Replace("\\", "/") + @"`, showConfirmButton: true });";
                     } // End if user exist
                 } // End if model is valid
                 _logger.LogTrace("End register on post.");
@@ -179,7 +179,7 @@ namespace UMS.Areas.Identity.Pages.Account
             catch (Exception e)
             {
                 _logger.LogError(e.Message.ToString());
-                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("\\", "/") + @"`, showConfirmButton: true });";
+                TempData["Exception"] = @"Swal.fire({ icon: 'error', title: 'Error !', text: `" + e.Message.Replace("`", "'").Replace("\\", "/") + @"`, showConfirmButton: true });";
                 _logger.LogTrace("End register on post.");
                 return Page();
             } // End Try Catch

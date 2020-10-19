@@ -45,7 +45,7 @@ namespace UMS.Areas.Identity.Pages.Account
             _logger = logger;
             _userManager = userManager;
             _signInManager = signInManager;
-            _manageUser = new ManageUserController(context, loggerManageUser);
+            _manageUser = new ManageUserController(context, loggerManageUser, signInManager, userManager);
             _logger.LogInformation("Start login model.");
         } // End constructor
 

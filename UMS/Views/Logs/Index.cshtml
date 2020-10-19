@@ -312,7 +312,7 @@
                             let myArr = new Array(result.length)
                             let time = ''
                             let date = ''
-                            var levelLable = ''
+                            let levelLable = ''
                             for (var i = 0; i < myArr.length; i++) {
                                 myArr[i] = new Array(7);
                             } // Create array
@@ -421,7 +421,7 @@
     //usage ex: alert(dateToNiceString(new Date()));
     //returns this format: "09/14/2020 10:00 AM"
     function dateToNiceString(myDate, extra = null) {
-        var month = new Array();
+        let month = new Array();
         month[0] = "01";
         month[1] = "02";
         month[2] = "03";
@@ -434,9 +434,9 @@
         month[9] = "10";
         month[10] = "11";
         month[11] = "12";
-        var hours = myDate.getHours();
-        var minutes = myDate.getMinutes();
-        var ampm = ''
+        let hours = myDate.getHours();
+        let minutes = myDate.getMinutes();
+        let ampm = ''
         if (extra != null) {
             let sec = (minutes + extra) * 60;
             hours += Math.ceil(sec / 3600);
@@ -446,7 +446,7 @@
         hours = hours % 12;
         hours = hours ? hours : 12;
         minutes = minutes < 10 ? '0' + minutes : minutes;
-        var strTime = hours + ':' + minutes + ' ' + ampm;
+        let strTime = hours + ':' + minutes + ' ' + ampm;
         return month[myDate.getMonth()] + "/" + myDate.getDate() + "/" + myDate.getFullYear() + " " + strTime;
     } // "09/14/2020 10:00 AM - 09/15/2020 06:00 PM"
 
