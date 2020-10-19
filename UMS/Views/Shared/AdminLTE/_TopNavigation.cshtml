@@ -9,6 +9,14 @@
 
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
+@{
+    ApplicationUser user = await UserManager.FindByEmailAsync(User.Identity.Name);
+    string name = "Hello ";
+    if (user!=null)
+    {
+        name += user.acc_Firstname + " " + user.acc_Lastname;
+    }
+}
 <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
 
@@ -21,7 +29,7 @@
             @if (User.Identity.IsAuthenticated)
             {
                 <li class="nav-item" id="user_email">
-                    <a id="manage" class="nav-link text-dark" asp-action="Index" asp-controller="Home">Hello @UserManager.GetUserName(User)!</a>
+                    <a id="manage" class="nav-link text-dark" asp-action="Index" asp-controller="Home">@name</a>
                 </li>
             }
         </ul>

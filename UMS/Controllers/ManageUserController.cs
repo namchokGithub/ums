@@ -442,6 +442,16 @@ namespace UMS.Controllers
         } // End Edit
 
         /*
+         * Name: GetName
+         * Author: Namchok Singhachai
+         * Description: Getting name of user.
+         */
+        public async Task<string> GetName(string id)
+        {
+            return await _unitOfWork.Account.GetName(id);
+        } // End get name
+
+        /*
          * Name: objectJSON
          * Author: Namchok Singhachai
          * Description: For create json object result to view and check response

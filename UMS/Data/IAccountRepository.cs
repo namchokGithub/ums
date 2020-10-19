@@ -21,6 +21,7 @@ namespace UMS.Data
         Task<Management> GetByIDAsync(string id);
         SqlParameter GetStatus(string username);
         Task<SqlParameter> GetStatusAsync(string username);
+        Task<string> GetName(string id);
         void ToggleStatus(string id);
         Task ToggleStatusAsync(string id);
         void UpdateName(Management _account);
