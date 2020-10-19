@@ -1,7 +1,7 @@
 ﻿@model Account
 @{
     /*
-        Namspace: ~/View/EditProfile/Index.cshtml
+        Namspace: ~/View/ManageUser/EditProfile.cshtml
         Author: Wannapa Srijermtong
         Description: The profile edit page.
     */
@@ -33,22 +33,24 @@
     }
 </style>
 <!--End Style-->
+<!--Content-->
 <div class="mx-auto col-5">
     <br>
     <!--Start Card-->
     <div class="card card-info text-center">
-        <!--Start Card header-->
         <div class="card-header">
             <h3 class="card-title">Edit Profile</h3>
         </div>
-        <!--End Card header-->
         <!--Start Card body-->
         <div class="card-body">
             <!--Start Form profile-->
-            <form id="FormProfile" method="post" asp-action="EditProfile" asp-controller="EditProfile">
+            <form id="FormProfile" method="post" asp-action="Edit" asp-controller="ManageUser">
                 <!--Start Input edit profile-->
                 <input type="hidden" asp-for="acc_Id" id="acc_Id" value="@editProfile.acc_Id" />
+                <input type="hidden" asp-for="acc_Email" id="acc_Email" value="@editProfile.acc_Email" />
+                <input type="hidden" asp-for="acc_User" id="acc_User" value="@editProfile.acc_User" />
                 <input type="hidden" asp-for="acc_IsActive" id="acc_IsActive" value="f" />
+
                 <div id="acc_Firstname" class="input-group mb-3 col-12">
                     <input class="form-control" id="acc_Fname" type="text" name="acc_Firstname" placeholder="First name" asp-for="acc_Firstname" value="@editProfile.acc_Firstname" />
                     <span id="validation_acc_Firstname" class="text-danger col-12"></span>
@@ -60,7 +62,7 @@
 
                 <!--Start Input change password-->
                 <div id="acc_CurrentPassword" class="input-group mb-3 col-12 d-none">
-                    <input class="form-control" style="border-right:0px;" id="acc_Current" type="password" name="acc_CurrentPassword" placeholder="Current password" />
+                    <input class="form-control border-right-0" id="acc_Current" type="password" name="acc_CurrentPassword" placeholder="Current password"/>
                     <div class="input-group-append toggle-password" onclick="toggleCurrentPasword()">
                         <div class="input-group-text toggle-password">
                             <span id="icon_CurrentPassword" class="fas fa-eye-slash" style="cursor:pointer"></span>
@@ -69,7 +71,7 @@
                     <span id="validation_acc_CurrentPassword" class="text-danger col-12"></span>
                 </div>
                 <div id="acc_NewPassword" class="input-group mb-3 col-12 d-none">
-                    <input class="form-control" style="border-right:0px;" id="acc_New" type="password" name="acc_NewPassword" placeholder="New password" />
+                    <input class="form-control border-right-0" id="acc_New" type="password" name="acc_NewPassword" placeholder="New password" />
                     <div class="input-group-append toggle-password" onclick="toggleNewPasword()">
                         <div class="input-group-text toggle-password">
                             <span id="icon_NewPassword" class="fas fa-eye-slash" style="cursor:pointer"></span>
@@ -78,7 +80,7 @@
                     <span id="validation_acc_NewPassword" class="text-danger col-12"></span>
                 </div>
                 <div id="acc_ConfirmPasswordDiv" class="input-group mb-3 col-12 d-none">
-                    <input class="form-control" style="border-right:0px;" id="acc_ConfirmPassword" type="password" name="acc_ConfirmPassword" placeholder="Confirm password" />
+                    <input class="form-control border-right-0" id="acc_ConfirmPassword" type="password" name="acc_ConfirmPassword" placeholder="Confirm password" />
                     <div class="input-group-append toggle-password" onclick="toggleConfirmPasword()">
                         <div class="input-group-text toggle-password">
                             <span id="icon_ConfirmPassword" class="fas fa-eye-slash" style="cursor:pointer"></span>
@@ -86,7 +88,6 @@
                     </div>
                     <span id="validation_acc_ConfirmPassword" class="text-danger col-12"></span>
                 </div>
-                <!--End Input change password-->
                 <!--End Input edit profile-->
                 <!--Start Button save profile-->
                 <div class="row">
@@ -104,25 +105,22 @@
                     {
                         <div class="col-12">
                             <button id="btn_SaveProfile" type="button" class="btn btn-success btn-block float-right" onclick="SaveProfile()">Save</button>
-                        </div>
+                        </div> // Check type account
                     }
-                </div>
-                <!--End Button save profile-->
-            </form>
-            <!--End Form profile-->
-        </div>
-        <!--End Card body-->
+                </div> <!--End Button save profile-->
+            </form> <!--End Form profile-->
+        </div> <!--End Card body-->
+
         <!--Start Card footer-->
         <div id="card_Footer" class="card-footer d-none">
             <button id="btn_NotSavePassword" type="button" class="btn btn-secondary float-left d-none">Back</button>
             <button id="btn_SavePassword" type="button" class="btn btn-success float-right d-none" onclick="SavePassword()">Save</button>
         </div>
         <!--End Card footer-->
-
     </div>
     <!--End Card-->
 </div>
-
+<!--End Content-->
 <!--Start Script-->
 <script>
     @if (TempData["EditProfileException"] != null) { @Html.Raw(TempData["EditProfileException"])}; // Exeception
@@ -138,27 +136,24 @@
     */
     function SaveProfile() {
         // Get id from input
-        var acc_Firstname = $('#acc_Fname').val();
-        var acc_Lastname = $('#acc_Lname').val();
-        var acc_Id = $('#acc_Id').val();
+        let acc_Firstname = $('#acc_Fname').val();
+        let acc_Lastname = $('#acc_Lname').val();
+        let acc_Id = $('#acc_Id').val();
 
         // Validation if acc_Firstname do not math with Regular expression.
-        if (RegExName.test(acc_Firstname) && acc_Firstname != "" && RegExName.test(acc_Lastname) && acc_Lastname != "") {
+        if (RegExName.test(acc_Firstname) && acc_Firstname != "" && RegExName.test(acc_Lastname) && acc_Lastname != "" && acc_Id!='') {
             $('#validation_acc_Firstname').html('');
             $('#validation_acc_Lastname').html('');
             $('#acc_IsActive').val('f');
             $("#FormProfile").submit();
-        } else {
-            if (!RegExName.test(acc_Firstname)) {
-                $('#validation_acc_Firstname').html('The First name can not be blank and must only character.');
-                toastr.warning('The First name can not be blank and must only character.')
-            }
-            else if (!RegExName.test(acc_Lastname)) {
-                $('#validation_acc_Lastname').html('The Last name can not be blank and must only character.');
-                toastr.warning('The Last name can not be blank and must only character.')
-            } else if (acc_Id != null || acc_Id != "") {
-                toastr.warning('The user ID not found !. Calling a method on a null object reference.')
-            }
+        } else if (!RegExName.test(acc_Firstname)) {
+            $('#validation_acc_Firstname').html('The First name can not be blank and must only character.');
+            toastr.warning('The First name can not be blank and must only character.')
+        } else if (!RegExName.test(acc_Lastname)) {
+            $('#validation_acc_Lastname').html('The Last name can not be blank and must only character.');
+            toastr.warning('The Last name can not be blank and must only character.')
+        } else if (acc_Id != null || acc_Id != "") {
+            toastr.warning('The user ID not found !. Calling a method on a null object reference.')
         }
     } // End SaveProfile
 
@@ -169,11 +164,12 @@
     */
     function SavePassword() {
         // Get id from input
-        var acc_Firstname = $('#acc_Fname').val();
-        var acc_Lastname = $('#acc_Lname').val();
-        var acc_CurrentPassword = $('#acc_Current').val();
-        var acc_NewPassword = $('#acc_New').val();
-        var acc_ConfirmPassword = $('#acc_ConfirmPassword').val();
+        let acc_Id = $('#acc_Id').val();
+        let acc_Firstname = $('#acc_Fname').val();
+        let acc_Lastname = $('#acc_Lname').val();
+        let acc_CurrentPassword = $('#acc_Current').val();
+        let acc_NewPassword = $('#acc_New').val();
+        let acc_ConfirmPassword = $('#acc_ConfirmPassword').val();
 
         // Validation if acc_Firstname do not math with Regular expression.
         if (RegExName.test(acc_Firstname) && acc_Firstname != ""
@@ -181,6 +177,7 @@
             && RegExPassword.test(acc_CurrentPassword) && acc_CurrentPassword != ""
             && RegExPassword.test(acc_NewPassword) && acc_NewPassword != ""
             && RegExPassword.test(acc_ConfirmPassword) && acc_ConfirmPassword != ""
+            && acc_Id != ''
         ){
             $('#validation_acc_Firstname').html('');
             $('#validation_acc_Lastname').html('');
@@ -189,27 +186,26 @@
             $('#validation_acc_ConfirmPassword').html('');
             $('#acc_IsActive').val('t');
             $("#FormProfile").submit();
-        } else {
-            if (!RegExName.test(acc_Firstname)) {
-                $('#validation_acc_Firstname').html('The First name can not be blank and must only character.');
-                toastr.warning('The First name can not be blank and must only character.')
-            }
-            else if (!RegExName.test(acc_Lastname)) {
-                $('#validation_acc_Lastname').html('The Last name can not be blank and must only character.');
-                toastr.warning('The Last name can not be blank and must only character.')
-            }
-            else if (!RegExPassword.test(acc_CurrentPassword)) {
-                $('#validation_acc_CurrentPassword').html('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
-                toastr.warning('The current password must contain at least 1 uppercase, 1 lowercase, 1 digit and 1 special character.')
-            }
-            else if (!RegExPassword.test(acc_NewPassword)) {
-                $('#validation_acc_NewPassword').html('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
-                toastr.warning('The new password must contain at least 1 uppercase, 1 lowercase, 1 digit and 1 special character.')
-            }
-            else if (!RegExPassword.test(acc_ConfirmPassword)) {
-                $('#validation_acc_ConfirmPassword').html('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
-                toastr.warning('The confirm password must contain at least 1 uppercase, 1 lowercase, 1 digit and 1 special character.')
-            }
+        }
+        else if (!RegExName.test(acc_Firstname)) {
+            $('#validation_acc_Firstname').html('The First name can not be blank and must only character.');
+            toastr.warning('The First name can not be blank and must only character.')
+        }
+        else if (!RegExName.test(acc_Lastname)) {
+            $('#validation_acc_Lastname').html('The Last name can not be blank and must only character.');
+            toastr.warning('The Last name can not be blank and must only character.')
+        }
+        else if (!RegExPassword.test(acc_CurrentPassword)) {
+            $('#validation_acc_CurrentPassword').html('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
+            toastr.warning('The current password must contain at least 1 uppercase, 1 lowercase, 1 digit and 1 special character.')
+        }
+        else if (!RegExPassword.test(acc_NewPassword)) {
+            $('#validation_acc_NewPassword').html('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
+            toastr.warning('The new password must contain at least 1 uppercase, 1 lowercase, 1 digit and 1 special character.')
+        }
+        else if (!RegExPassword.test(acc_ConfirmPassword)) {
+            $('#validation_acc_ConfirmPassword').html('The password must contain at least <br> 1 uppercase, 1 lowercase, 1 digit and 1 special character.');
+            toastr.warning('The confirm password must contain at least 1 uppercase, 1 lowercase, 1 digit and 1 special character.')
         } // End checking acc_Firstname do not math with Regular expression
     } // End SavePassword
 
@@ -243,7 +239,7 @@
             e.preventDefault();
 
             // Get id from input
-            var acc_Firstname = $('#acc_Fname').val();
+            let acc_Firstname = $('#acc_Fname').val();
 
             // Validation if acc_Firstname do not math with Regular expression.
             if(!RegExName.test(acc_Firstname)) {
@@ -258,7 +254,7 @@
             e.preventDefault();
 
             // Get id from input
-            var acc_Lastname = $('#acc_Lname').val();
+            let acc_Lastname = $('#acc_Lname').val();
 
             // Validation if acc_Lastname do not math with Regular expression.
             if(!RegExName.test(acc_Lastname)) {
@@ -273,8 +269,8 @@
             e.preventDefault();
 
             // Get id from input
-            var acc_NewPassword = $('#acc_New').val();
-            var acc_ConfirmPassword = $('#acc_ConfirmPassword').val();
+            let acc_NewPassword = $('#acc_New').val();
+            let acc_ConfirmPassword = $('#acc_ConfirmPassword').val();
 
             // Validation if acc_NewPassword do not match with acc_ConfirmPassword.
             if (acc_NewPassword != acc_ConfirmPassword) {
@@ -304,7 +300,7 @@
             e.preventDefault();
 
             // Get id from input
-            var acc_NewPassword = $('#acc_New').val();
+            let acc_NewPassword = $('#acc_New').val();
 
             // Validation if acc_NewPassword do not math with Regular expression.
             if (!RegExPassword.test(acc_NewPassword)) {
@@ -315,6 +311,7 @@
         });
 
         // Toastr if current password is not match with password hash in database.
+        @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"])};
         @if (TempData["EditProfileErrorResult"] != null) { @Html.Raw(TempData["EditProfileErrorResult"])};
         // Toastr if EditProfile (Firstname, Lastname and Change password) Success.
         @if (TempData["EditProfileSuccessResult"] != null) { @Html.Raw(TempData["EditProfileSuccessResult"])};

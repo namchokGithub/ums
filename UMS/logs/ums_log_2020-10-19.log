@@ -1,0 +1,467 @@
+############################################## User Management System log ##############################################
+2020/10/19 10:18:36.910 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/19 10:18:37.217 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/19 10:18:37.227 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/19 10:18:37.227 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/19 10:18:39.319 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/19 10:18:39.331 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/19 10:18:43.034 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:40 | Start manage user controller.
+2020/10/19 10:18:43.052 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:272 | Getting a user by ID.
+2020/10/19 10:19:28.745 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:40 | Start manage user controller.
+2020/10/19 10:19:37.814 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:297 | Getting value from httpcontext request.
+2020/10/19 10:19:54.400 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:310 | Checking regular expression.
+2020/10/19 10:20:06.708 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:356 | Updating name user.
+2020/10/19 10:20:06.750 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:365 | Update successfully.
+2020/10/19 10:20:06.770 [INFO] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:36 | Start editProfile controller.
+2020/10/19 10:20:06.770 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:51 | Getting a user by ID.
+2020/10/19 10:20:10.363 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:40 | Start manage user controller.
+2020/10/19 10:20:10.363 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:272 | Getting a user by ID.
+2020/10/19 10:20:11.180 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:40 | Start manage user controller.
+2020/10/19 10:20:11.194 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:55 | Getting all active users.
+2020/10/19 10:20:12.170 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:40 | Start manage user controller.
+2020/10/19 10:20:12.177 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:272 | Getting a user by ID.
+2020/10/19 10:20:31.618 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:40 | Start manage user controller.
+2020/10/19 10:20:36.938 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:297 | Getting value from httpcontext request.
+2020/10/19 10:20:43.137 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:310 | Checking regular expression.
+2020/10/19 10:21:05.930 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:389 | Signing in with password.
+2020/10/19 10:21:24.066 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:401 | Hasing a password.
+2020/10/19 10:21:29.909 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:416 | Updating name user and password.
+2020/10/19 10:21:36.038 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:425 | Update successfully.
+2020/10/19 10:21:36.053 [INFO] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:36 | Start editProfile controller.
+2020/10/19 10:21:36.053 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:51 | Getting a user by ID.
+2020/10/19 10:34:54.533 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/19 10:34:54.754 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/19 10:34:54.754 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/19 10:34:54.754 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/19 10:34:55.522 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/19 10:34:55.522 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/19 10:35:02.487 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:35:02.487 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:274 | Getting a user by ID.
+2020/10/19 10:35:10.434 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:35:10.469 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:299 | Getting value from httpcontext request.
+2020/10/19 10:35:10.475 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:312 | Checking regular expression.
+2020/10/19 10:35:10.475 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:358 | Updating name user.
+2020/10/19 10:35:10.532 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:367 | Update successfully.
+2020/10/19 10:35:10.551 [INFO] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:36 | Start editProfile controller.
+2020/10/19 10:35:10.551 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:51 | Getting a user by ID.
+2020/10/19 10:35:29.180 [INFO] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:36 | Start editProfile controller.
+2020/10/19 10:35:29.198 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:76 | Getting value from httpcontext request.
+2020/10/19 10:35:29.207 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:88 | Checking regular expression.
+2020/10/19 10:35:29.555 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:167 | Signing in with password.
+2020/10/19 10:35:29.555 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:179 | Hasing a password.
+2020/10/19 10:35:29.570 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:194 | Updating name user and password.
+2020/10/19 10:35:29.589 [INFO] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:203 | Update successfully.
+2020/10/19 10:35:29.603 [INFO] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:36 | Start editProfile controller.
+2020/10/19 10:35:29.603 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:51 | Getting a user by ID.
+2020/10/19 10:35:34.877 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:31 | Start logout.
+2020/10/19 10:35:34.893 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:70 | User logged out.
+2020/10/19 10:35:34.913 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:31 | Start logout.
+2020/10/19 10:35:34.913 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
+2020/10/19 10:35:35.974 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:35:35.974 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/19 10:35:35.991 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/10/19 10:35:36.839 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:35:36.851 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/19 10:35:36.917 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
+2020/10/19 10:35:36.917 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:158 | Adding cookie into the browser.
+2020/10/19 10:35:36.943 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/19 10:35:36.943 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/19 10:35:57.818 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:35:57.818 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:274 | Getting a user by ID.
+2020/10/19 10:36:09.758 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:36:09.773 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:299 | Getting value from httpcontext request.
+2020/10/19 10:36:09.773 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:312 | Checking regular expression.
+2020/10/19 10:36:09.807 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:391 | Signing in with password.
+2020/10/19 10:36:09.807 [WARN] [Microsoft.AspNetCore.Identity.UserManager] [usermanagement2020@gmail.com] Edit: | Change password failed for user adminidtempfortestsystem2020.
+2020/10/19 10:36:09.828 [ERROR] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:423 | Incorrect password. (PasswordMismatch).
+2020/10/19 10:36:09.847 [INFO] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:36 | Start editProfile controller.
+2020/10/19 10:36:09.847 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:51 | Getting a user by ID.
+2020/10/19 10:37:16.549 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/19 10:37:17.533 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/19 10:37:17.567 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/19 10:37:17.567 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/19 10:37:17.567 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/19 10:37:17.567 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/19 10:37:26.170 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:31 | Start logout.
+2020/10/19 10:37:26.180 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:70 | User logged out.
+2020/10/19 10:37:26.213 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:31 | Start logout.
+2020/10/19 10:37:26.226 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
+2020/10/19 10:37:27.383 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:37:27.383 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/19 10:37:27.409 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/10/19 10:37:29.443 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:37:29.443 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/19 10:37:30.670 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
+2020/10/19 10:37:30.676 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:158 | Adding cookie into the browser.
+2020/10/19 10:37:30.694 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/19 10:37:30.694 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/19 10:37:32.197 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:37:32.207 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:57 | Getting all active users.
+2020/10/19 10:37:33.082 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:37:33.082 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:274 | Getting a user by ID.
+2020/10/19 10:37:46.315 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:37:46.335 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:299 | Getting value from httpcontext request.
+2020/10/19 10:37:46.335 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:312 | Checking regular expression.
+2020/10/19 10:37:46.366 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:391 | Signing in with password.
+2020/10/19 10:37:46.366 [WARN] [Microsoft.AspNetCore.Identity.UserManager] [usermanagement2020@gmail.com] Edit: | Change password failed for user adminidtempfortestsystem2020.
+2020/10/19 10:37:46.385 [ERROR] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:423 | Incorrect password. (PasswordMismatch).
+2020/10/19 10:37:46.412 [INFO] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:36 | Start editProfile controller.
+2020/10/19 10:37:46.427 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:51 | Getting a user by ID.
+2020/10/19 10:38:18.448 [INFO] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:36 | Start editProfile controller.
+2020/10/19 10:38:18.458 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:76 | Getting value from httpcontext request.
+2020/10/19 10:38:18.458 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:88 | Checking regular expression.
+2020/10/19 10:38:18.490 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:167 | Signing in with password.
+2020/10/19 10:38:18.490 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:179 | Hasing a password.
+2020/10/19 10:38:18.505 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:194 | Updating name user and password.
+2020/10/19 10:38:18.550 [INFO] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:203 | Update successfully.
+2020/10/19 10:38:18.568 [INFO] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:36 | Start editProfile controller.
+2020/10/19 10:38:18.568 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:51 | Getting a user by ID.
+2020/10/19 10:38:35.851 [INFO] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:36 | Start editProfile controller.
+2020/10/19 10:38:35.870 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:76 | Getting value from httpcontext request.
+2020/10/19 10:38:35.881 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:88 | Checking regular expression.
+2020/10/19 10:38:36.029 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:167 | Signing in with password.
+2020/10/19 10:38:36.029 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:179 | Hasing a password.
+2020/10/19 10:38:36.039 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:194 | Updating name user and password.
+2020/10/19 10:38:36.039 [INFO] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:203 | Update successfully.
+2020/10/19 10:38:36.067 [INFO] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:36 | Start editProfile controller.
+2020/10/19 10:38:36.067 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:51 | Getting a user by ID.
+2020/10/19 10:39:13.178 [INFO] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:36 | Start editProfile controller.
+2020/10/19 10:39:13.178 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:76 | Getting value from httpcontext request.
+2020/10/19 10:39:13.178 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:88 | Checking regular expression.
+2020/10/19 10:39:13.216 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:167 | Signing in with password.
+2020/10/19 10:39:13.216 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:179 | Hasing a password.
+2020/10/19 10:39:13.228 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:194 | Updating name user and password.
+2020/10/19 10:39:13.239 [INFO] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] EditProfile:EditProfileController.cs:203 | Update successfully.
+2020/10/19 10:39:13.256 [INFO] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:36 | Start editProfile controller.
+2020/10/19 10:39:13.275 [DEBUG] [UMS.Controllers.EditProfileController] [usermanagement2020@gmail.com] Index:EditProfileController.cs:51 | Getting a user by ID.
+2020/10/19 10:39:27.206 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:39:27.233 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:274 | Getting a user by ID.
+2020/10/19 10:39:30.348 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:39:30.365 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:274 | Getting a user by ID.
+2020/10/19 10:41:15.481 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/19 10:41:15.760 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/19 10:41:15.760 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/19 10:41:15.768 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/19 10:41:16.365 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/19 10:41:16.365 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/19 10:41:22.596 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:41:22.596 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:274 | Getting a user by ID.
+2020/10/19 10:41:25.576 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:41:25.614 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:299 | Getting value from httpcontext request.
+2020/10/19 10:41:25.614 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:312 | Checking regular expression.
+2020/10/19 10:41:25.614 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:358 | Updating name user.
+2020/10/19 10:41:25.673 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:367 | Update successfully.
+2020/10/19 10:41:25.677 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:41:25.693 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:274 | Getting a user by ID.
+2020/10/19 10:41:31.643 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:41:31.662 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:299 | Getting value from httpcontext request.
+2020/10/19 10:41:31.662 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:312 | Checking regular expression.
+2020/10/19 10:41:31.662 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:358 | Updating name user.
+2020/10/19 10:41:31.680 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:367 | Update successfully.
+2020/10/19 10:41:31.694 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:41:31.694 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:274 | Getting a user by ID.
+2020/10/19 10:41:43.676 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:41:43.676 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:299 | Getting value from httpcontext request.
+2020/10/19 10:41:43.692 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:312 | Checking regular expression.
+2020/10/19 10:41:59.279 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:391 | Signing in with password.
+2020/10/19 10:42:08.533 [WARN] [Microsoft.AspNetCore.Identity.UserManager] [usermanagement2020@gmail.com] Edit: | Change password failed for user adminidtempfortestsystem2020.
+2020/10/19 10:42:30.956 [ERROR] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:423 | Incorrect password. (PasswordMismatch).
+2020/10/19 10:42:33.097 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:42:33.097 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:274 | Getting a user by ID.
+2020/10/19 10:48:17.814 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/19 10:48:18.252 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/19 10:48:18.262 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/19 10:48:18.262 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/19 10:48:18.749 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/19 10:48:18.756 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/19 10:48:22.550 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:48:22.550 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:274 | Getting a user by ID.
+2020/10/19 10:48:35.307 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:48:35.344 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:299 | Getting value from httpcontext request.
+2020/10/19 10:48:35.350 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:312 | Checking regular expression.
+2020/10/19 10:48:39.034 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:391 | Signing in with password.
+2020/10/19 10:49:12.359 [ERROR] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:412 | The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2020/10/19 10:49:12.384 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/19 10:49:12.394 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/19 10:51:54.515 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/19 10:51:54.747 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/19 10:51:54.747 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/19 10:51:54.755 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/19 10:51:55.412 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/19 10:51:55.412 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/19 10:51:58.864 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:51:58.864 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:274 | Getting a user by ID.
+2020/10/19 10:52:16.106 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:52:16.145 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:299 | Getting value from httpcontext request.
+2020/10/19 10:52:16.145 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:312 | Checking regular expression.
+2020/10/19 10:52:22.554 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:391 | Signing in with password.
+2020/10/19 10:52:41.435 [ERROR] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:412 | The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2020/10/19 10:52:41.458 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/19 10:52:41.458 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/19 10:53:38.332 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/19 10:53:38.548 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/19 10:53:38.552 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/19 10:53:38.552 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/19 10:53:39.197 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/19 10:53:39.208 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/19 10:53:44.389 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:53:44.396 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:274 | Getting a user by ID.
+2020/10/19 10:53:52.814 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:53:52.848 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:299 | Getting value from httpcontext request.
+2020/10/19 10:53:52.848 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:312 | Checking regular expression.
+2020/10/19 10:53:53.096 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:391 | Signing in with password.
+2020/10/19 10:54:00.310 [WARN] [Microsoft.AspNetCore.Identity.UserManager] [usermanagement2020@gmail.com] Edit: | Change password failed for user adminidtempfortestsystem2020.
+2020/10/19 10:54:04.684 [ERROR] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:424 | Incorrect password. (PasswordMismatch).
+2020/10/19 10:54:04.707 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:54:04.707 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:274 | Getting a user by ID.
+2020/10/19 10:54:52.356 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/19 10:54:52.583 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/19 10:54:52.583 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/19 10:54:52.583 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/19 10:54:53.250 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/19 10:54:53.257 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/19 10:54:57.355 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:54:57.362 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:274 | Getting a user by ID.
+2020/10/19 10:55:13.806 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:55:13.844 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:299 | Getting value from httpcontext request.
+2020/10/19 10:55:13.851 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:312 | Checking regular expression.
+2020/10/19 10:55:14.103 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:391 | Signing in with password.
+2020/10/19 10:55:25.733 [WARN] [Microsoft.AspNetCore.Identity.UserManager] [usermanagement2020@gmail.com] Edit: | Change password failed for user adminidtempfortestsystem2020.
+2020/10/19 10:55:29.261 [ERROR] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:425 | Incorrect password. (PasswordMismatch).
+2020/10/19 10:55:29.287 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:55:29.287 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:274 | Getting a user by ID.
+2020/10/19 10:55:36.688 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:31 | Start logout.
+2020/10/19 10:55:36.697 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:70 | User logged out.
+2020/10/19 10:55:36.722 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:31 | Start logout.
+2020/10/19 10:55:36.722 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
+2020/10/19 10:55:37.706 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:55:37.706 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/19 10:55:37.724 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/10/19 10:55:38.606 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:55:38.617 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/19 10:55:38.672 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
+2020/10/19 10:55:38.681 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:158 | Adding cookie into the browser.
+2020/10/19 10:55:38.700 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/19 10:55:38.709 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/19 10:55:40.176 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:31 | Start logout.
+2020/10/19 10:55:40.191 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:70 | User logged out.
+2020/10/19 10:55:40.206 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:31 | Start logout.
+2020/10/19 10:55:40.206 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
+2020/10/19 10:57:43.928 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/19 10:57:44.152 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/19 10:57:44.152 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/19 10:57:44.160 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/19 10:57:44.931 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:57:44.931 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/19 10:57:44.957 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/10/19 10:57:51.133 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:57:51.133 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/19 10:57:52.360 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
+2020/10/19 10:57:52.367 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:158 | Adding cookie into the browser.
+2020/10/19 10:57:52.397 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/19 10:57:52.397 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/19 10:57:54.740 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:57:54.740 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:57 | Getting all active users.
+2020/10/19 10:57:56.639 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:57:56.645 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:274 | Getting a user by ID.
+2020/10/19 10:58:09.159 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:58:09.183 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:299 | Getting value from httpcontext request.
+2020/10/19 10:58:09.191 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:312 | Checking regular expression.
+2020/10/19 10:58:09.222 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:391 | Signing in with password.
+2020/10/19 10:58:09.222 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:412 | Updating name user and password.
+2020/10/19 10:58:09.297 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:421 | Update successfully.
+2020/10/19 10:58:09.316 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:58:09.363 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:274 | Getting a user by ID.
+2020/10/19 10:58:15.333 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:31 | Start logout.
+2020/10/19 10:58:15.351 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:70 | User logged out.
+2020/10/19 10:58:15.378 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:31 | Start logout.
+2020/10/19 10:58:15.378 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
+2020/10/19 10:58:16.878 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:58:16.878 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/19 10:58:16.911 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/10/19 10:58:18.181 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:58:18.193 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/19 10:58:18.222 [WARN] [Microsoft.AspNetCore.Identity.UserManager]   | Invalid password for user adminidtempfortestsystem2020.
+2020/10/19 10:58:18.222 [WARN] [Microsoft.AspNetCore.Identity.SignInManager]   | User adminidtempfortestsystem2020 failed to provide the correct password.
+2020/10/19 10:58:18.238 [WARN] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:166 | Your email or password is not valid.
+2020/10/19 10:58:20.115 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:58:20.115 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/19 10:58:20.148 [WARN] [Microsoft.AspNetCore.Identity.UserManager]   | Invalid password for user adminidtempfortestsystem2020.
+2020/10/19 10:58:20.148 [WARN] [Microsoft.AspNetCore.Identity.SignInManager]   | User adminidtempfortestsystem2020 failed to provide the correct password.
+2020/10/19 10:58:20.148 [WARN] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:166 | Your email or password is not valid.
+2020/10/19 10:58:22.973 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:58:22.973 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/19 10:58:23.036 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
+2020/10/19 10:58:23.036 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:158 | Adding cookie into the browser.
+2020/10/19 10:58:23.060 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/19 10:58:23.068 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/19 10:58:26.450 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:58:26.463 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:274 | Getting a user by ID.
+2020/10/19 10:58:39.597 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:58:39.597 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:299 | Getting value from httpcontext request.
+2020/10/19 10:58:39.617 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:312 | Checking regular expression.
+2020/10/19 10:58:39.634 [WARN] [Microsoft.AspNetCore.Identity.UserManager] [usermanagement2020@gmail.com] Edit: | Invalid password for user adminidtempfortestsystem2020.
+2020/10/19 10:58:39.634 [WARN] [Microsoft.AspNetCore.Identity.SignInManager] [usermanagement2020@gmail.com] Edit: | User adminidtempfortestsystem2020 failed to provide the correct password.
+2020/10/19 10:58:39.645 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:391 | Signing in with password.
+2020/10/19 10:58:39.645 [WARN] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:394 | The current password is incorrect!
+2020/10/19 10:58:39.665 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:58:39.676 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:274 | Getting a user by ID.
+2020/10/19 10:58:51.476 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:58:51.487 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:299 | Getting value from httpcontext request.
+2020/10/19 10:58:51.487 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:312 | Checking regular expression.
+2020/10/19 10:58:51.515 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:391 | Signing in with password.
+2020/10/19 10:58:51.526 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:412 | Updating name user and password.
+2020/10/19 10:58:51.526 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:421 | Update successfully.
+2020/10/19 10:58:51.550 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:58:51.550 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:274 | Getting a user by ID.
+2020/10/19 10:58:56.586 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:31 | Start logout.
+2020/10/19 10:58:56.598 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:70 | User logged out.
+2020/10/19 10:58:56.613 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:31 | Start logout.
+2020/10/19 10:58:56.613 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
+2020/10/19 10:58:57.417 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:58:57.426 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/19 10:58:57.426 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/10/19 10:58:58.832 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:58:58.832 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/19 10:58:58.865 [WARN] [Microsoft.AspNetCore.Identity.UserManager]   | Invalid password for user adminidtempfortestsystem2020.
+2020/10/19 10:58:58.865 [WARN] [Microsoft.AspNetCore.Identity.SignInManager]   | User adminidtempfortestsystem2020 failed to provide the correct password.
+2020/10/19 10:58:58.865 [WARN] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:166 | Your email or password is not valid.
+2020/10/19 10:59:03.804 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:59:03.804 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/19 10:59:03.839 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
+2020/10/19 10:59:03.839 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:158 | Adding cookie into the browser.
+2020/10/19 10:59:03.848 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/19 10:59:03.863 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/19 10:59:07.008 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:59:07.008 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:274 | Getting a user by ID.
+2020/10/19 10:59:07.825 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 10:59:07.834 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:57 | Getting all active users.
+2020/10/19 10:59:09.983 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/10/19 11:00:26.809 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/19 11:00:27.134 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/19 11:00:27.134 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/19 11:00:27.146 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/19 11:00:27.524 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/19 11:00:27.524 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/19 11:00:32.289 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 11:00:32.289 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:274 | Getting a user by ID.
+2020/10/19 11:00:32.669 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 11:00:32.676 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:57 | Getting all active users.
+2020/10/19 11:00:34.916 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 11:00:34.926 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:274 | Getting a user by ID.
+2020/10/19 11:00:46.840 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 11:00:46.879 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:299 | Getting value from httpcontext request.
+2020/10/19 11:00:46.879 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:312 | Checking regular expression.
+2020/10/19 11:00:47.129 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:391 | Signing in with password.
+2020/10/19 11:00:47.129 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:412 | Updating name user and password.
+2020/10/19 11:00:47.184 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:421 | Update successfully.
+2020/10/19 11:00:47.201 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 11:00:47.206 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:274 | Getting a user by ID.
+2020/10/19 11:00:54.898 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 11:00:54.911 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:299 | Getting value from httpcontext request.
+2020/10/19 11:00:54.911 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:312 | Checking regular expression.
+2020/10/19 11:00:54.911 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:358 | Updating name user.
+2020/10/19 11:00:54.936 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Edit:ManageUserController.cs:367 | Update successfully.
+2020/10/19 11:00:54.949 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 11:00:54.958 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditProfile:ManageUserController.cs:274 | Getting a user by ID.
+2020/10/19 11:01:04.508 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:31 | Start logout.
+2020/10/19 11:01:04.525 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:70 | User logged out.
+2020/10/19 11:01:04.552 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:31 | Start logout.
+2020/10/19 11:01:04.565 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
+2020/10/19 11:01:05.662 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 11:01:05.662 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/19 11:01:05.680 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/10/19 11:01:07.720 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/10/19 11:20:07.032 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/19 11:20:07.272 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/19 11:20:07.272 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/19 11:20:07.272 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/19 11:20:08.240 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 11:20:08.240 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/19 11:20:08.268 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/10/19 11:20:09.947 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 11:20:09.990 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/19 11:20:11.283 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
+2020/10/19 11:20:11.290 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:158 | Adding cookie into the browser.
+2020/10/19 11:20:11.322 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/19 11:20:11.322 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/19 11:20:11.458 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] [usermanagement2020@gmail.com] Index: | An unhandled exception has occurred while executing the request.System.InvalidOperationException: No service for type 'UMS.Controllers.ManageUserController' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.<>c__DisplayClass8_0.<CreateActivateInfo>b__1(ViewContext context)
+   at Microsoft.Extensions.Internal.PropertyActivator`1.Activate(Object instance, TContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.Activate(Object page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPageActivator.Activate(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper.RenderPartialViewAsync(TextWriter writer, Object model, IView view)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCore.Views_Shared_AdminLTE__Layout.<ExecuteAsync>b__19_1()
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCore.Views_Shared_AdminLTE__Layout.ExecuteAsync()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/10/19 11:20:27.501 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/10/19 11:25:18.947 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/19 11:25:19.210 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/19 11:25:19.210 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/19 11:25:19.210 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/19 11:25:19.829 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/19 11:25:19.836 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/19 11:25:27.783 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:31 | Start logout.
+2020/10/19 11:25:27.801 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:70 | User logged out.
+2020/10/19 11:25:27.835 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:31 | Start logout.
+2020/10/19 11:25:27.835 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
+2020/10/19 11:25:28.975 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 11:25:28.975 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/19 11:25:29.005 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/10/19 11:25:34.005 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 11:25:34.005 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/19 11:25:34.120 [WARN] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:166 | Your email or password is not valid.
+2020/10/19 11:25:38.459 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 11:25:38.459 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/19 11:25:38.650 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
+2020/10/19 11:25:38.650 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:158 | Adding cookie into the browser.
+2020/10/19 11:25:38.661 [INFO] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/19 11:25:38.690 [INFO] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:42 | Welcome, Test1111@gmail.com.
+2020/10/19 11:25:50.082 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [Test1111@gmail.com] Logout.cshtml.cs:31 | Start logout.
+2020/10/19 11:25:50.082 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [Test1111@gmail.com] Logout.cshtml.cs:70 | User logged out.
+2020/10/19 11:25:50.104 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:31 | Start logout.
+2020/10/19 11:25:50.113 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
+2020/10/19 11:25:51.107 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 11:25:51.113 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/19 11:25:51.130 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/10/19 11:25:55.223 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/19 11:25:55.223 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/19 11:25:55.273 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
+2020/10/19 11:25:55.273 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:158 | Adding cookie into the browser.
+2020/10/19 11:25:55.304 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/19 11:25:55.318 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/19 11:25:56.495 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:31 | Start logout.
+2020/10/19 11:25:56.509 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:70 | User logged out.
+2020/10/19 11:25:56.539 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:31 | Start logout.
+2020/10/19 11:25:56.556 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
+2020/10/19 11:25:59.028 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...

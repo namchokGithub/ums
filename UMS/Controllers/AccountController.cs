@@ -38,9 +38,9 @@ namespace UMS.Controllers
             ILogger<AccountController> logger)
         {
             _logger = logger;
-            _signInManager = signInManager;
             _userManager = userManager;
-            _manageUserController = new ManageUserController(context, loggerManager);
+            _signInManager = signInManager;
+            _manageUserController = new ManageUserController(context, loggerManager, signInManager, userManager);
             _logger.LogInformation("Start account controller.");
         } // End consturcter
 
