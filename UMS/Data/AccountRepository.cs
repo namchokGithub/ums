@@ -226,10 +226,5 @@ namespace UMS.Data
         {
             await _context.Database.ExecuteSqlRawAsync($"ums_Update_role_user '{_account.acc_Id}', '{_account.acc_Rolename}'");
         } // End UpdateRoleAsync
-
-        public async Task<string> GetName(string id)
-        {
-            return await _context.Management.Where(x=>x.acc_Id==id).Select(x => x.acc_Firstname).Concat(_context.Management.Select(x => x.acc_Lastname)).FirstOrDefaultAsync();
-        }
     } // End AccountRepository
 }
