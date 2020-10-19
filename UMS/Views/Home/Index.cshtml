@@ -1,10 +1,10 @@
-﻿@*
-    Namspace: ~/View/Home/Index.cshtml
-    Author: Namchok Singhachai
-    Description: The view for home.
-*@
-@using static UMS.Helpers.NavigationIndicatorHelper;
+﻿@using static UMS.Helpers.NavigationIndicatorHelper;
 @{
+    /*
+        Namspace: ~/View/Home/Index.cshtml
+        Author: Namchok Singhachai
+        Description: The view for home.
+    */
     ViewData["Title"] = "Home";
     Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
 }
@@ -16,6 +16,7 @@
     }
 </style>
 <!--End Style-->
+<!--Content-->
 <div class="row mb-2">
     <div class="col-sm-6 mt-1 mb-1">
         <h1>Web applications</h1>
@@ -27,7 +28,7 @@
             <div class="info-box">
                 <span class="info-box-icon bg-info"><i class="fas fa-user-cog"></i></span>
                 <div class="info-box-content">
-                        <span class="info-box-text">User management</span>
+                    <span class="info-box-text">User management</span>
                 </div>
                 <!-- /.info-box-content -->
             </div>
@@ -36,11 +37,11 @@
     </div>
     <!-- /.col -->
     <div class="col-md-3 col-sm-6 col-12">
-        <a asp-area="Identity" asp-page="/Account/Manage/Index" class="nav-link">
+        <a asp-controller="" asp-action="" class="nav-link @Url.MakeActiveClass("ManageUser","Index")">
             <div class="info-box">
                 <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
                 <div class="info-box-content">
-                    <span class="info-box-text">User management identity</span>
+                    <span class="info-box-text">User management</span>
                 </div>
                 <!-- /.info-box-content -->
             </div>
@@ -75,7 +76,7 @@
     </div>
     <!-- /.col -->
 </div>
+<!--End Content-->
 <script>
-    // Check is has exception
-    @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ };
+    @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) }; // Check is has exception
 </script>
