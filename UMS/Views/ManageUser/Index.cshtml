@@ -14,11 +14,9 @@
     <br />
     <!--Start Card-->
     <div class="card card-info">
-        <!--Start Card header-->
         <div class="card-header">
             <h3 class="card-title">Manage Users</h3>
         </div>
-        <!--End Card header-->
         <!--Start Card body-->
         <div class="card-body">
             <div class="box">
@@ -67,7 +65,7 @@
                                 else // Checking if ViweData["User"] is null.
                                 {
                                     <tr>
-                                        <td colspan="6"><center>No results.</center></td>
+                                        <td colspan="7"><center>No results.</center></td>
                                     </tr>
                                 }
                             </tbody>
@@ -148,7 +146,6 @@
 <!-- End content -->
 <!-- Script section -->
 <script>
-
     /**
      * Name: CheckUpdateUser
      * Author: Namchok Singhachai
@@ -269,4 +266,3 @@
     // Check is has exception
     @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ };
 </script>
-<!-- End Index of Home controller -->

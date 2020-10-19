@@ -33,15 +33,14 @@
     }
 </style>
 <!--End Style-->
+<!--Content-->
 <div class="mx-auto col-5">
     <br>
     <!--Start Card-->
     <div class="card card-info text-center">
-        <!--Start Card header-->
         <div class="card-header">
             <h3 class="card-title">Edit Profile</h3>
         </div>
-        <!--End Card header-->
         <!--Start Card body-->
         <div class="card-body">
             <!--Start Form profile-->
@@ -78,7 +77,7 @@
                     <span id="validation_acc_NewPassword" class="text-danger col-12"></span>
                 </div>
                 <div id="acc_ConfirmPasswordDiv" class="input-group mb-3 col-12 d-none">
-                    <input class="form-control" style="border-right:0px;" id="acc_ConfirmPassword" type="password" name="acc_ConfirmPassword" placeholder="Confirm password" />
+                    <input class="form-control" style="border-right:0px;" id="acc_ConfirmPassword" type="password" name="acc_ConfirmPassword" placeholder="Confirm password"/>
                     <div class="input-group-append toggle-password" onclick="toggleConfirmPasword()">
                         <div class="input-group-text toggle-password">
                             <span id="icon_ConfirmPassword" class="fas fa-eye-slash" style="cursor:pointer"></span>
@@ -86,7 +85,6 @@
                     </div>
                     <span id="validation_acc_ConfirmPassword" class="text-danger col-12"></span>
                 </div>
-                <!--End Input change password-->
                 <!--End Input edit profile-->
                 <!--Start Button save profile-->
                 <div class="row">
@@ -106,23 +104,19 @@
                             <button id="btn_SaveProfile" type="button" class="btn btn-success btn-block float-right" onclick="SaveProfile()">Save</button>
                         </div>
                     }
-                </div>
-                <!--End Button save profile-->
-            </form>
-            <!--End Form profile-->
-        </div>
-        <!--End Card body-->
+                </div> <!--End Button save profile-->
+            </form> <!--End Form profile-->
+        </div> <!--End Card body-->
         <!--Start Card footer-->
         <div id="card_Footer" class="card-footer d-none">
             <button id="btn_NotSavePassword" type="button" class="btn btn-secondary float-left d-none">Back</button>
             <button id="btn_SavePassword" type="button" class="btn btn-success float-right d-none" onclick="SavePassword()">Save</button>
         </div>
         <!--End Card footer-->
-
     </div>
     <!--End Card-->
 </div>
-
+<!--End Content-->
 <!--Start Script-->
 <script>
     @if (TempData["EditProfileException"] != null) { @Html.Raw(TempData["EditProfileException"])}; // Exeception

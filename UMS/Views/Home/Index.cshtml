@@ -1,21 +1,70 @@
-﻿@*
-    Namspace: ~/View/Home/Index.cshtml
-    Author: Namchok Singhachai
-    Description: The view for home.
-*@
-@using Microsoft.AspNetCore.Http.Extensions
+﻿@using static UMS.Helpers.NavigationIndicatorHelper;
 @{
+    /*
+        Namspace: ~/View/Home/Index.cshtml
+        Author: Namchok Singhachai
+        Description: The view for home.
+    */
     ViewData["Title"] = "Home";
     Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <a href="@Context.Request.GetEncodedUrl()">Link to myself</a>
+<!--Style-->
+<style>
+    a, a:visited, a:active, a:hover, a:link {
+        color: black;
+        text-decoration: none;
+    }
+</style>
+<!--End Style-->
+<!--Content-->
+<div class="row mb-2">
+    <div class="col-sm-6 mt-1 mb-1">
+        <h1>Web applications</h1>
+    </div>
 </div>
-
+<div class="row">
+    <div class="col-md-3 col-sm-6 col-12">
+        <a asp-controller="ManageUser" asp-action="Index" class="nav-link @Url.MakeActiveClass("ManageUser","Index")">
+            <div class="info-box">
+                <span class="info-box-icon bg-info"><i class="fas fa-user-cog"></i></span>
+                <div class="info-box-content">
+                    <span class="info-box-text">User management</span>
+                </div>
+            </div>
+        </a>
+    </div> <!-- End menu -->
+    <div class="col-md-3 col-sm-6 col-12">
+        <a asp-controller="" asp-action="" class="nav-link @Url.MakeActiveClass("ManageUser","Index")">
+            <div class="info-box">
+                <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
+                <div class="info-box-content">
+                    <span class="info-box-text">User management</span>
+                </div>
+            </div>
+        </a>
+    </div> <!-- End menu -->
+    <div class="col-md-3 col-sm-6 col-12">
+        <a asp-controller="ManageUser" asp-action="Index" class="nav-link @Url.MakeActiveClass("ManageUser","Index")">
+            <div class="info-box">
+                <span class="info-box-icon bg-info"><i class="fas fa-user-cog"></i></span>
+                <div class="info-box-content">
+                    <span class="info-box-text">User management</span>
+                </div>
+            </div>
+        </a>
+    </div> <!-- End menu -->
+    <div class="col-md-3 col-sm-6 col-12">
+        <a asp-controller="ManageUser" asp-action="Index" class="nav-link @Url.MakeActiveClass("ManageUser","Index")">
+            <div class="info-box">
+                <span class="info-box-icon bg-info"><i class="fas fa-user-cog"></i></span>
+                <div class="info-box-content">
+                    <span class="info-box-text">User management</span>
+                </div>
+            </div>
+        </a>
+    </div> <!-- End menu -->
+</div>
+<!--End Content-->
 <script>
-    // Check is has exception
-    @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) /* Swal funciton */ };
+    @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) }; // Check is has exception
 </script>
