@@ -63,16 +63,23 @@
                     </li>
                     <li class="nav-item">
                         <a asp-controller="Logs" asp-action="Index" class="nav-link @Url.MakeActiveClass("Logs","Index")">
-                            <i class="nav-icon fas fa-desktop nav-icon"></i> &ensp;
+                            <i class="fas fa-desktop nav-icon"></i> &ensp;
                             <p>Logs Monitor</p>
                         </a>
                     </li>
                     <!-- Manage users -->
                 } <!-- End if -->
+                <li class="nav-item">
+                    <a asp-area="Identity" asp-page="/Account/Logout" class="nav-link">
+                        <i class="fas fa-sign-out-alt nav-icon "></i> &ensp;
+                        <p>Logout</p>
+                    </a>
+                </li>
+                <!-- Logout -->
             </ul>
             <!-- End List of menu -->
         </nav>
-        <!-- /.sidebar-menu -->
+        <!-- /.sidebar-menu -->        
     </div>
     <!-- /.sidebar -->
 </aside>

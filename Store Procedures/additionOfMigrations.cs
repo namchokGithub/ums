@@ -402,7 +402,7 @@ migrationBuilder.Sql(ums_Update_user);
 // End create stored procedure
 
 var insertRole = @"INSERT INTO [dbo].[Roles] ([Id], [Name], [NormalizedName])
-                VALUES (1,'Admin','ADMIN'), (2,'User','USER')";
+                VALUES (1,'Admin','ADMIN'), (2,'User','USER'), (3,'Manager','MANAGER'), (4,'Support','SUPPORT')";
 var insertAdmin = @"INSERT INTO [dbo].[Account] ([acc_Id] ,[acc_User] ,[acc_NormalizedUserName] ,[acc_Email] ,[acc_NormalizedEmail] ,[acc_PasswordHash] ,[acc_SecurityStamp] ,[acc_ConcurrencyStamp], [acc_Firstname], [acc_Lastname] ,[acc_IsActive]) VALUES ('adminidtempfortestsystem2020' , 'usermanagement2020@gmail.com', 'USERMANAGEMENT2020@GMAIL.com' , 'usermanagement2020@gmail.com', 'USERMANAGEMENT2020@GMAIL.com' , 'AQAAAAEAACcQAAAAEKuboZS9XFQZJ2w6n+Iv/h9lNb/SKUH1AtUwrzPleRfBClrIUQsfNYQCChpGx6MoDQ==' ,'OWWI2VTYV564YBQIUK3PI75QL7DA6NPJ' , 'dc294a4b-8d8a-49b0-8966-e23ff87778b0' , 'Namchok' , 'Singhachai' , 'Y')";
 var insertRoleAdmin = @"INSERT INTO [dbo].[UserRoles] ([UserId] ,[RoleId])
                 VALUES ('adminidtempfortestsystem2020', 1)";

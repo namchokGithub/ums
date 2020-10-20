@@ -17,14 +17,20 @@
 </style>
 <!--End Style-->
 <!--Content-->
-<div class="row mb-2">
-    <div class="col-sm-6 mt-1 mb-1">
-        <h1>Web applications</h1>
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-3 col-sm-6 col-12">
-        <a asp-controller="ManageUser" asp-action="Index" class="nav-link @Url.MakeActiveClass("ManageUser","Index")">
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Web applications</h1>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+<div class="row justify-content-md-center">
+    @if (User.IsInRole("Admin"))
+    {
+    <div class="col-sm-12 col-md-6 col-lg-6">
+        <a asp-controller="ManageUser" asp-action="Index" class="nav-link @Url.MakeActiveClass("ManageUser", "Index")">
             <div class="info-box">
                 <span class="info-box-icon bg-info"><i class="fas fa-user-cog"></i></span>
                 <div class="info-box-content">
@@ -33,38 +39,46 @@
             </div>
         </a>
     </div> <!-- End menu -->
-    <div class="col-md-3 col-sm-6 col-12">
-        <a asp-controller="" asp-action="" class="nav-link @Url.MakeActiveClass("ManageUser","Index")">
+    }
+    <div class="col-sm-12 col-md-6 col-lg-6">
+        <a asp-controller="ExamplePage" asp-action="Project" class="nav-link @Url.MakeActiveClass("ExamplePage","Project")">
             <div class="info-box">
-                <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
+                <span class="info-box-icon bg-cyan"><i class="far fa-file"></i></span>
                 <div class="info-box-content">
-                    <span class="info-box-text">User management</span>
+                    <span class="info-box-text">Project management</span>
                 </div>
             </div>
         </a>
     </div> <!-- End menu -->
-    <div class="col-md-3 col-sm-6 col-12">
-        <a asp-controller="ManageUser" asp-action="Index" class="nav-link @Url.MakeActiveClass("ManageUser","Index")">
-            <div class="info-box">
-                <span class="info-box-icon bg-info"><i class="fas fa-user-cog"></i></span>
-                <div class="info-box-content">
-                    <span class="info-box-text">User management</span>
+    @if (User.IsInRole("Admin")|| User.IsInRole("Manager"))
+    {
+    <div class="col-sm-12 col-md-6 col-lg-6">
+            <a asp-controller="ExamplePage" asp-action="Member" class="nav-link @Url.MakeActiveClass("ExamplePage", "Member")">
+                <div class="info-box">
+                    <span class="info-box-icon bg-gradient-olive"><i class="fas fa-user-check"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Member management</span>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
     </div> <!-- End menu -->
-    <div class="col-md-3 col-sm-6 col-12">
-        <a asp-controller="ManageUser" asp-action="Index" class="nav-link @Url.MakeActiveClass("ManageUser","Index")">
-            <div class="info-box">
-                <span class="info-box-icon bg-info"><i class="fas fa-user-cog"></i></span>
-                <div class="info-box-content">
-                    <span class="info-box-text">User management</span>
+    }
+    @if (User.IsInRole("Admin"))
+    {
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <a asp-controller="ManageUser" asp-action="Index" class="nav-link @Url.MakeActiveClass("ManageUser", "Index")">
+                <div class="info-box">
+                    <span class="info-box-icon bg-info"><i class="fas fa-user-cog"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">User management</span>
+                    </div>
                 </div>
-            </div>
-        </a>
-    </div> <!-- End menu -->
+            </a>
+        </div> <!-- End menu -->
+    }
 </div>
 <!--End Content-->
 <script>
     @if (TempData["Exception"] != null) { @Html.Raw(TempData["Exception"]) }; // Check is has exception
+    @if (TempData["nullException"] != null) { @Html.Raw(TempData["nullException"]) }; // Check is has exception
 </script>
