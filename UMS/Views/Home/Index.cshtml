@@ -27,19 +27,19 @@
     </div><!-- /.container-fluid -->
 </section>
 <div class="row">
+    @if (User.IsInRole("Admin"))
+    {
     <div class="col-md-3 col-sm-6 col-12">
-        @if (User.IsInRole("Admin"))
-        {
-            <a asp-controller="ManageUser" asp-action="Index" class="nav-link @Url.MakeActiveClass("ManageUser", "Index")">
-                <div class="info-box">
-                    <span class="info-box-icon bg-info"><i class="fas fa-user-cog"></i></span>
-                    <div class="info-box-content">
-                        <span class="info-box-text">User management</span>
-                    </div>
+        <a asp-controller="ManageUser" asp-action="Index" class="nav-link @Url.MakeActiveClass("ManageUser", "Index")">
+            <div class="info-box">
+                <span class="info-box-icon bg-info"><i class="fas fa-user-cog"></i></span>
+                <div class="info-box-content">
+                    <span class="info-box-text">User management</span>
                 </div>
-            </a>
-        }
+            </div>
+        </a>
     </div> <!-- End menu -->
+    }
     <div class="col-md-3 col-sm-6 col-12">
         <a asp-controller="ExamplePage" asp-action="Project" class="nav-link @Url.MakeActiveClass("ExamplePage","Project")">
             <div class="info-box">
@@ -50,9 +50,9 @@
             </div>
         </a>
     </div> <!-- End menu -->
+    @if (User.IsInRole("Admin")|| User.IsInRole("Manager"))
+    {
     <div class="col-md-3 col-sm-6 col-12">
-        @if (User.IsInRole("Admin")|| User.IsInRole("Manager"))
-        {
             <a asp-controller="ExamplePage" asp-action="Member" class="nav-link @Url.MakeActiveClass("ExamplePage", "Member")">
                 <div class="info-box">
                     <span class="info-box-icon bg-gradient-olive"><i class="fas fa-user-check"></i></span>
@@ -61,11 +61,11 @@
                     </div>
                 </div>
             </a>
-        }
     </div> <!-- End menu -->
-    <div class="col-md-3 col-sm-6 col-12">
-        @if (User.IsInRole("Admin"))
-        {
+    }
+    @if (User.IsInRole("Admin"))
+    {
+        <div class="col-md-3 col-sm-6 col-12">
             <a asp-controller="ManageUser" asp-action="Index" class="nav-link @Url.MakeActiveClass("ManageUser", "Index")">
                 <div class="info-box">
                     <span class="info-box-icon bg-info"><i class="fas fa-user-cog"></i></span>
@@ -74,8 +74,8 @@
                     </div>
                 </div>
             </a>
-        }
-    </div> <!-- End menu -->
+        </div> <!-- End menu -->
+    }
 </div>
 <!--End Content-->
 <script>

@@ -1394,3 +1394,32 @@ System.InvalidOperationException: Invalid attempt to call ReadAsync when reader 
 2020/10/20 11:45:26.504 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
 2020/10/20 11:45:26.504 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
 2020/10/20 11:46:01.720 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/10/20 11:51:37.899 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/20 11:51:38.066 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/10/20 11:51:38.088 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/20 11:51:38.088 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/20 11:51:38.099 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/20 11:51:42.792 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/20 11:51:42.980 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/20 11:51:42.980 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/20 11:51:42.988 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/20 11:51:43.752 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:51:43.752 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/20 11:51:46.454 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:31 | Start logout.
+2020/10/20 11:51:46.473 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:70 | User logged out.
+2020/10/20 11:51:46.496 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:31 | Start logout.
+2020/10/20 11:51:46.506 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
+2020/10/20 11:51:47.715 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:51:47.720 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/20 11:51:47.738 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/10/20 11:51:53.959 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:51:53.959 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/20 11:51:55.202 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
+2020/10/20 11:51:55.224 [INFO] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:51:55.224 [INFO] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:42 | Welcome, Test1111@gmail.com.
+2020/10/20 11:51:58.741 [INFO] [UMS.Controllers.ExamplePage] [Test1111@gmail.com] Project:ExamplePage.cs:27 | Start example page controller.
+2020/10/20 11:51:59.816 [INFO] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:51:59.816 [INFO] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:42 | Welcome, Test1111@gmail.com.
+2020/10/20 11:52:00.367 [INFO] [UMS.Controllers.ExamplePage] [Test1111@gmail.com] Member:ExamplePage.cs:27 | Start example page controller.
+2020/10/20 11:52:01.560 [INFO] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:52:01.568 [INFO] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:42 | Welcome, Test1111@gmail.com.
