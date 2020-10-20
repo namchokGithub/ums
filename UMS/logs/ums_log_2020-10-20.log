@@ -949,3 +949,73 @@ System.InvalidOperationException: Invalid attempt to call ReadAsync when reader 
 2020/10/20 11:34:26.722 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:42 | Start manage user controller.
 2020/10/20 11:34:26.722 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:57 | Getting all active users.
 2020/10/20 11:34:29.011 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/10/20 11:35:00.583 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/20 11:35:00.762 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/20 11:35:00.762 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/20 11:35:00.770 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/20 11:35:01.600 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:35:01.600 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/20 11:35:04.177 [INFO] [UMS.Controllers.ExamplePage] [usermanagement2020@gmail.com] Project:ExamplePage.cs:27 | Start example page controller.
+2020/10/20 11:35:05.169 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:35:05.173 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/20 11:35:05.768 [INFO] [UMS.Controllers.ExamplePage] [usermanagement2020@gmail.com] Member:ExamplePage.cs:27 | Start example page controller.
+2020/10/20 11:35:08.084 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:35:08.095 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/20 11:35:09.272 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:35:09.272 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:57 | Getting all active users.
+2020/10/20 11:35:14.977 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:35:15.004 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:85 | Getting user.
+2020/10/20 11:35:18.213 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditUser:ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:35:18.231 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditUser:ManageUserController.cs:122 | Setting role ID.
+2020/10/20 11:35:18.285 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditUser:ManageUserController.cs:137 | Save changes: User successfully updated.
+2020/10/20 11:35:18.299 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:35:18.299 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:57 | Getting all active users.
+2020/10/20 11:35:20.895 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:35:20.895 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:85 | Getting user.
+2020/10/20 11:35:26.087 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:35:26.098 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:85 | Getting user.
+2020/10/20 11:35:28.819 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditUser:ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:35:28.835 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditUser:ManageUserController.cs:122 | Setting role ID.
+2020/10/20 11:35:28.849 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditUser:ManageUserController.cs:137 | Save changes: User successfully updated.
+2020/10/20 11:35:28.863 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:35:28.876 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:57 | Getting all active users.
+2020/10/20 11:35:31.119 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:35:31.134 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:57 | Getting all active users.
+2020/10/20 11:35:32.348 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:35:32.362 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:57 | Getting all active users.
+2020/10/20 11:35:33.020 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:31 | Start logout.
+2020/10/20 11:35:33.038 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:70 | User logged out.
+2020/10/20 11:35:33.066 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:31 | Start logout.
+2020/10/20 11:35:33.066 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
+2020/10/20 11:35:34.339 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:35:34.352 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/20 11:35:34.361 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/10/20 11:37:11.680 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/20 11:37:11.857 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/20 11:37:11.862 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/20 11:37:11.862 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/20 11:37:12.937 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:37:12.942 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/20 11:37:12.976 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/10/20 11:37:14.379 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:37:14.396 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/20 11:37:15.628 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
+2020/10/20 11:37:15.628 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:158 | Adding cookie into the browser.
+2020/10/20 11:37:15.664 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:37:15.664 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/20 11:37:16.479 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:37:16.487 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:57 | Getting all active users.
+2020/10/20 11:37:18.035 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:37:18.035 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:85 | Getting user.
+2020/10/20 11:37:22.643 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditUser:ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:37:22.643 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditUser:ManageUserController.cs:122 | Setting role ID.
+2020/10/20 11:37:22.708 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditUser:ManageUserController.cs:137 | Save changes: User successfully updated.
+2020/10/20 11:37:22.723 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:37:22.723 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:57 | Getting all active users.
+2020/10/20 11:37:26.708 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:37:26.708 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:85 | Getting user.
+2020/10/20 11:37:38.098 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditUser:ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:37:38.112 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditUser:ManageUserController.cs:122 | Setting role ID.
+2020/10/20 11:37:38.132 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] EditUser:ManageUserController.cs:137 | Save changes: User successfully updated.
+2020/10/20 11:37:38.146 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:37:38.158 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:57 | Getting all active users.
