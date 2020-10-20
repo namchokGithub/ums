@@ -28,17 +28,20 @@
 </section>
 <div class="row">
     <div class="col-md-3 col-sm-6 col-12">
-        <a asp-controller="ManageUser" asp-action="Index" class="nav-link @Url.MakeActiveClass("ManageUser","Index")">
-            <div class="info-box">
-                <span class="info-box-icon bg-info"><i class="fas fa-user-cog"></i></span>
-                <div class="info-box-content">
-                    <span class="info-box-text">User management</span>
+        @if (User.IsInRole("Admin"))
+        {
+            <a asp-controller="ManageUser" asp-action="Index" class="nav-link @Url.MakeActiveClass("ManageUser", "Index")">
+                <div class="info-box">
+                    <span class="info-box-icon bg-info"><i class="fas fa-user-cog"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">User management</span>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
+        }
     </div> <!-- End menu -->
     <div class="col-md-3 col-sm-6 col-12">
-        <a asp-controller="ExamplePage" asp-action="Project" class="nav-link @Url.MakeActiveClass("Home","Index")">
+        <a asp-controller="ExamplePage" asp-action="Project" class="nav-link @Url.MakeActiveClass("ExamplePage","Project")">
             <div class="info-box">
                 <span class="info-box-icon bg-cyan"><i class="far fa-file"></i></span>
                 <div class="info-box-content">
@@ -48,24 +51,30 @@
         </a>
     </div> <!-- End menu -->
     <div class="col-md-3 col-sm-6 col-12">
-        <a asp-controller="ExamplePage" asp-action="Member" class="nav-link @Url.MakeActiveClass("Home","Index")">
-            <div class="info-box">
-                <span class="info-box-icon bg-gradient-olive"><i class="fas fa-user-check"></i></span>
-                <div class="info-box-content">
-                    <span class="info-box-text">Member management</span>
+        @if (User.IsInRole("Admin")|| User.IsInRole("Manager"))
+        {
+            <a asp-controller="ExamplePage" asp-action="Member" class="nav-link @Url.MakeActiveClass("ExamplePage", "Member")">
+                <div class="info-box">
+                    <span class="info-box-icon bg-gradient-olive"><i class="fas fa-user-check"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Member management</span>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
+        }
     </div> <!-- End menu -->
     <div class="col-md-3 col-sm-6 col-12">
-        <a asp-controller="ManageUser" asp-action="Index" class="nav-link @Url.MakeActiveClass("ManageUser","Index")">
-            <div class="info-box">
-                <span class="info-box-icon bg-yellow"><i class="fas fa-user-cog"></i></span>
-                <div class="info-box-content">
-                    <span class="info-box-text">User management</span>
+        @if (User.IsInRole("Admin"))
+        {
+            <a asp-controller="ManageUser" asp-action="Index" class="nav-link @Url.MakeActiveClass("ManageUser", "Index")">
+                <div class="info-box">
+                    <span class="info-box-icon bg-info"><i class="fas fa-user-cog"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">User management</span>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
+        }
     </div> <!-- End menu -->
 </div>
 <!--End Content-->

@@ -1477,3 +1477,573 @@ System.InvalidOperationException: Invalid attempt to call ReadAsync when reader 
 2020/10/20 11:37:38.158 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:55 | Finding user ID.
 2020/10/20 11:37:38.158 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:57 | Getting all active users.
 2020/10/20 11:37:38.176 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:60 | End manage user index.
+2020/10/20 11:39:28.269 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/10/20 11:39:29.646 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/20 11:39:29.830 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/20 11:39:29.830 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/20 11:39:29.830 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/20 11:39:30.543 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:39:30.595 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:39:30.595 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:41 | Start home index.
+2020/10/20 11:39:30.595 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/20 11:39:30.611 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:43 | Finding a user ID.
+2020/10/20 11:39:30.611 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:45 | End home index.
+2020/10/20 11:39:34.110 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:39:34.134 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:31 | Start logout.
+2020/10/20 11:39:34.145 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:66 | Start Logout on post.
+2020/10/20 11:39:34.145 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:70 | User logged out.
+2020/10/20 11:39:34.145 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:72 | The destruction of cookies AspNetCore Identity Application.
+2020/10/20 11:39:34.159 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:74 | End Log out model On Post.
+2020/10/20 11:39:34.159 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:39:34.176 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:31 | Start logout.
+2020/10/20 11:39:34.176 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:42 | Start logout on get.
+2020/10/20 11:39:34.176 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
+2020/10/20 11:39:34.176 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:48 | The destruction of cookies AspNetCore Identity Application.
+2020/10/20 11:39:34.190 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:50 | End logout model on get.
+2020/10/20 11:39:35.514 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:39:35.526 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:39:35.526 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/20 11:39:35.548 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:91 | Start login on get.
+2020/10/20 11:39:35.548 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:104 | Signing out.
+2020/10/20 11:39:35.548 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/10/20 11:39:35.548 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:109 | End login on get.
+2020/10/20 11:39:44.123 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:39:44.126 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:39:44.126 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/20 11:39:44.155 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:128 | Start login on post.
+2020/10/20 11:39:44.155 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:133 | Signing in with password.
+2020/10/20 11:39:45.336 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
+2020/10/20 11:39:45.336 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:161 | End login on post.
+2020/10/20 11:39:45.358 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:39:45.361 [INFO] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:39:45.361 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:41 | Start home index.
+2020/10/20 11:39:45.361 [INFO] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:42 | Welcome, Test1113@gmail.com.
+2020/10/20 11:39:45.361 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:43 | Finding a user ID.
+2020/10/20 11:39:45.361 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:45 | End home index.
+2020/10/20 11:39:49.204 [TRACE] [UMS.Data.AuthDbContext]  Project:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:39:49.220 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:39:49.226 [INFO] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1113@gmail.com] AccessDenied.cshtml.cs:24 | Start access denined model.
+2020/10/20 11:39:49.226 [TRACE] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1113@gmail.com] AccessDenied.cshtml.cs:27 | Access denined on get.
+2020/10/20 11:39:54.320 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] [Test1113@gmail.com]  | An unhandled exception has occurred while executing the request.System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/AdminLTE/_Layout.cshtml': 'Scripts'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/10/20 11:40:35.155 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/10/20 11:40:36.415 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/20 11:40:36.615 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/20 11:40:36.615 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/20 11:40:36.615 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/20 11:40:37.000 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:40:37.050 [INFO] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:40:37.050 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:41 | Start home index.
+2020/10/20 11:40:37.050 [INFO] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:42 | Welcome, Test1113@gmail.com.
+2020/10/20 11:40:37.064 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:43 | Finding a user ID.
+2020/10/20 11:40:37.064 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:45 | End home index.
+2020/10/20 11:40:38.968 [TRACE] [UMS.Data.AuthDbContext]  Project:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:40:39.011 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:40:39.027 [INFO] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1113@gmail.com] AccessDenied.cshtml.cs:24 | Start access denined model.
+2020/10/20 11:40:39.036 [TRACE] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1113@gmail.com] AccessDenied.cshtml.cs:27 | Access denined on get.
+2020/10/20 11:40:44.820 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] [Test1113@gmail.com]  | An unhandled exception has occurred while executing the request.System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/AdminLTE/_Layout.cshtml': 'Scripts'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/10/20 11:40:46.519 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:40:46.519 [INFO] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1113@gmail.com] AccessDenied.cshtml.cs:24 | Start access denined model.
+2020/10/20 11:40:46.519 [TRACE] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1113@gmail.com] AccessDenied.cshtml.cs:27 | Access denined on get.
+2020/10/20 11:40:48.000 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] [Test1113@gmail.com]  | An unhandled exception has occurred while executing the request.System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/AdminLTE/_Layout.cshtml': 'Scripts'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/10/20 11:40:50.252 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:40:50.258 [INFO] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:40:50.258 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:41 | Start home index.
+2020/10/20 11:40:50.273 [INFO] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:42 | Welcome, Test1113@gmail.com.
+2020/10/20 11:40:50.273 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:43 | Finding a user ID.
+2020/10/20 11:40:50.283 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:45 | End home index.
+2020/10/20 11:40:55.204 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:40:55.217 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:40:55.221 [INFO] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1113@gmail.com] AccessDenied.cshtml.cs:24 | Start access denined model.
+2020/10/20 11:40:55.221 [TRACE] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1113@gmail.com] AccessDenied.cshtml.cs:27 | Access denined on get.
+2020/10/20 11:40:56.687 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] [Test1113@gmail.com]  | An unhandled exception has occurred while executing the request.System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/AdminLTE/_Layout.cshtml': 'Scripts'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/10/20 11:40:58.746 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:40:58.746 [INFO] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1113@gmail.com] AccessDenied.cshtml.cs:24 | Start access denined model.
+2020/10/20 11:40:58.757 [TRACE] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1113@gmail.com] AccessDenied.cshtml.cs:27 | Access denined on get.
+2020/10/20 11:41:23.714 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/10/20 11:41:25.054 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/20 11:41:25.236 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/20 11:41:25.236 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/20 11:41:25.236 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/20 11:41:26.215 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:41:26.272 [INFO] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:41:26.272 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:41 | Start home index.
+2020/10/20 11:41:26.272 [INFO] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:42 | Welcome, Test1113@gmail.com.
+2020/10/20 11:41:26.284 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:43 | Finding a user ID.
+2020/10/20 11:41:26.284 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:45 | End home index.
+2020/10/20 11:41:27.664 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:41:27.688 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:41:27.703 [INFO] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1113@gmail.com] AccessDenied.cshtml.cs:24 | Start access denined model.
+2020/10/20 11:41:27.711 [TRACE] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1113@gmail.com] AccessDenied.cshtml.cs:27 | Access denined on get.
+2020/10/20 11:41:43.887 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] [Test1113@gmail.com]  | An unhandled exception has occurred while executing the request.System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/AdminLTE/_Layout.cshtml': 'Scripts'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/10/20 11:41:50.845 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:41:50.845 [INFO] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:41:50.845 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:41 | Start home index.
+2020/10/20 11:41:50.845 [INFO] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:42 | Welcome, Test1113@gmail.com.
+2020/10/20 11:41:50.864 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:43 | Finding a user ID.
+2020/10/20 11:41:50.864 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:45 | End home index.
+2020/10/20 11:42:43.751 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/10/20 11:42:45.048 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/20 11:42:45.228 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/20 11:42:45.228 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/20 11:42:45.237 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/20 11:42:46.043 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:42:46.089 [INFO] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:42:46.098 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:41 | Start home index.
+2020/10/20 11:42:46.098 [INFO] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:42 | Welcome, Test1113@gmail.com.
+2020/10/20 11:42:46.098 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:43 | Finding a user ID.
+2020/10/20 11:42:46.098 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:45 | End home index.
+2020/10/20 11:42:47.282 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:42:47.315 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:42:47.315 [INFO] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1113@gmail.com] AccessDenied.cshtml.cs:24 | Start access denined model.
+2020/10/20 11:42:47.338 [TRACE] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1113@gmail.com] AccessDenied.cshtml.cs:27 | Access denined on get.
+2020/10/20 11:42:51.713 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] [Test1113@gmail.com]  | An unhandled exception has occurred while executing the request.System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/AdminLTE/_Layout.cshtml': 'Scripts'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/10/20 11:42:53.568 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:42:53.568 [INFO] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:42:53.579 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:41 | Start home index.
+2020/10/20 11:42:53.579 [INFO] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:42 | Welcome, Test1113@gmail.com.
+2020/10/20 11:42:53.579 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:43 | Finding a user ID.
+2020/10/20 11:42:53.579 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:45 | End home index.
+2020/10/20 11:42:54.308 [TRACE] [UMS.Data.AuthDbContext]  Project:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:42:54.322 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:42:54.322 [INFO] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1113@gmail.com] AccessDenied.cshtml.cs:24 | Start access denined model.
+2020/10/20 11:42:54.330 [TRACE] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1113@gmail.com] AccessDenied.cshtml.cs:27 | Access denined on get.
+2020/10/20 11:42:55.834 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] [Test1113@gmail.com]  | An unhandled exception has occurred while executing the request.System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/AdminLTE/_Layout.cshtml': 'Scripts'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/10/20 11:42:57.495 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:42:57.495 [INFO] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1113@gmail.com] AccessDenied.cshtml.cs:24 | Start access denined model.
+2020/10/20 11:42:57.509 [TRACE] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1113@gmail.com] AccessDenied.cshtml.cs:27 | Access denined on get.
+2020/10/20 11:42:59.689 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] [Test1113@gmail.com]  | An unhandled exception has occurred while executing the request.System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/AdminLTE/_Layout.cshtml': 'Scripts'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/10/20 11:43:01.173 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:43:01.173 [INFO] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1113@gmail.com] AccessDenied.cshtml.cs:24 | Start access denined model.
+2020/10/20 11:43:01.173 [TRACE] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1113@gmail.com] AccessDenied.cshtml.cs:27 | Access denined on get.
+2020/10/20 11:43:02.455 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] [Test1113@gmail.com]  | An unhandled exception has occurred while executing the request.System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/AdminLTE/_Layout.cshtml': 'Scripts'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/10/20 11:43:03.957 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:43:03.957 [INFO] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:43:03.957 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:41 | Start home index.
+2020/10/20 11:43:03.974 [INFO] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:42 | Welcome, Test1113@gmail.com.
+2020/10/20 11:43:03.974 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:43 | Finding a user ID.
+2020/10/20 11:43:03.974 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:45 | End home index.
+2020/10/20 11:43:04.969 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:43:04.981 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:43:04.981 [INFO] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1113@gmail.com] AccessDenied.cshtml.cs:24 | Start access denined model.
+2020/10/20 11:43:04.990 [TRACE] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1113@gmail.com] AccessDenied.cshtml.cs:27 | Access denined on get.
+2020/10/20 11:43:05.798 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] [Test1113@gmail.com]  | An unhandled exception has occurred while executing the request.System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/AdminLTE/_Layout.cshtml': 'Scripts'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/10/20 11:43:07.377 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:43:07.377 [INFO] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1113@gmail.com] AccessDenied.cshtml.cs:24 | Start access denined model.
+2020/10/20 11:43:07.377 [TRACE] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1113@gmail.com] AccessDenied.cshtml.cs:27 | Access denined on get.
+2020/10/20 11:43:08.367 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] [Test1113@gmail.com]  | An unhandled exception has occurred while executing the request.System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/AdminLTE/_Layout.cshtml': 'Scripts'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/10/20 11:43:09.932 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:43:09.932 [INFO] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:43:09.943 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:41 | Start home index.
+2020/10/20 11:43:09.943 [INFO] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:42 | Welcome, Test1113@gmail.com.
+2020/10/20 11:43:09.943 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:43 | Finding a user ID.
+2020/10/20 11:43:09.957 [TRACE] [UMS.Controllers.HomeController] [Test1113@gmail.com] Index:HomeController.cs:45 | End home index.
+2020/10/20 11:43:11.425 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:43:11.425 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [Test1113@gmail.com] Logout.cshtml.cs:31 | Start logout.
+2020/10/20 11:43:11.450 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [Test1113@gmail.com] Logout.cshtml.cs:66 | Start Logout on post.
+2020/10/20 11:43:11.458 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [Test1113@gmail.com] Logout.cshtml.cs:70 | User logged out.
+2020/10/20 11:43:11.458 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [Test1113@gmail.com] Logout.cshtml.cs:72 | The destruction of cookies AspNetCore Identity Application.
+2020/10/20 11:43:11.471 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [Test1113@gmail.com] Logout.cshtml.cs:74 | End Log out model On Post.
+2020/10/20 11:43:11.471 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:43:11.471 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:31 | Start logout.
+2020/10/20 11:43:11.491 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:42 | Start logout on get.
+2020/10/20 11:43:11.491 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
+2020/10/20 11:43:11.491 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:48 | The destruction of cookies AspNetCore Identity Application.
+2020/10/20 11:43:11.503 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:50 | End logout model on get.
+2020/10/20 11:43:12.730 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:43:12.730 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:43:12.742 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/20 11:43:12.758 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:91 | Start login on get.
+2020/10/20 11:43:12.758 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:104 | Signing out.
+2020/10/20 11:43:12.758 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/10/20 11:43:12.773 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:109 | End login on get.
+2020/10/20 11:43:23.568 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:43:23.568 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:43:23.581 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/20 11:43:23.601 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:128 | Start login on post.
+2020/10/20 11:43:23.601 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:133 | Signing in with password.
+2020/10/20 11:43:24.826 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
+2020/10/20 11:43:24.834 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:161 | End login on post.
+2020/10/20 11:43:24.851 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:43:24.851 [INFO] [UMS.Controllers.HomeController] [Test1112@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:43:24.851 [TRACE] [UMS.Controllers.HomeController] [Test1112@gmail.com] Index:HomeController.cs:41 | Start home index.
+2020/10/20 11:43:24.862 [INFO] [UMS.Controllers.HomeController] [Test1112@gmail.com] Index:HomeController.cs:42 | Welcome, Test1112@gmail.com.
+2020/10/20 11:43:24.862 [TRACE] [UMS.Controllers.HomeController] [Test1112@gmail.com] Index:HomeController.cs:43 | Finding a user ID.
+2020/10/20 11:43:24.862 [TRACE] [UMS.Controllers.HomeController] [Test1112@gmail.com] Index:HomeController.cs:45 | End home index.
+2020/10/20 11:43:28.250 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:43:28.255 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [Test1112@gmail.com] Logout.cshtml.cs:31 | Start logout.
+2020/10/20 11:43:28.255 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [Test1112@gmail.com] Logout.cshtml.cs:66 | Start Logout on post.
+2020/10/20 11:43:28.270 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [Test1112@gmail.com] Logout.cshtml.cs:70 | User logged out.
+2020/10/20 11:43:28.270 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [Test1112@gmail.com] Logout.cshtml.cs:72 | The destruction of cookies AspNetCore Identity Application.
+2020/10/20 11:43:28.270 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [Test1112@gmail.com] Logout.cshtml.cs:74 | End Log out model On Post.
+2020/10/20 11:43:28.291 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:43:28.291 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:31 | Start logout.
+2020/10/20 11:43:28.302 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:42 | Start logout on get.
+2020/10/20 11:43:28.302 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
+2020/10/20 11:43:28.302 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:48 | The destruction of cookies AspNetCore Identity Application.
+2020/10/20 11:43:28.316 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:50 | End logout model on get.
+2020/10/20 11:43:29.559 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:43:29.559 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:43:29.568 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/20 11:43:29.568 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:91 | Start login on get.
+2020/10/20 11:43:29.584 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:104 | Signing out.
+2020/10/20 11:43:29.584 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/10/20 11:43:29.584 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:109 | End login on get.
+2020/10/20 11:43:35.253 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:43:35.253 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:43:35.267 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/20 11:43:35.267 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:128 | Start login on post.
+2020/10/20 11:43:35.267 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:133 | Signing in with password.
+2020/10/20 11:43:35.328 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
+2020/10/20 11:43:35.335 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:161 | End login on post.
+2020/10/20 11:43:35.346 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:43:35.346 [INFO] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:43:35.346 [TRACE] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:41 | Start home index.
+2020/10/20 11:43:35.346 [INFO] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:42 | Welcome, Test1111@gmail.com.
+2020/10/20 11:43:35.363 [TRACE] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:43 | Finding a user ID.
+2020/10/20 11:43:35.363 [TRACE] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:45 | End home index.
+2020/10/20 11:43:37.392 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:43:37.403 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:43:37.403 [INFO] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1111@gmail.com] AccessDenied.cshtml.cs:24 | Start access denined model.
+2020/10/20 11:43:37.411 [TRACE] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1111@gmail.com] AccessDenied.cshtml.cs:27 | Access denined on get.
+2020/10/20 11:43:42.575 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] [Test1111@gmail.com]  | An unhandled exception has occurred while executing the request.System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/AdminLTE/_Layout.cshtml': 'Scripts'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/10/20 11:43:44.470 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:43:44.474 [INFO] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:43:44.474 [TRACE] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:41 | Start home index.
+2020/10/20 11:43:44.474 [INFO] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:42 | Welcome, Test1111@gmail.com.
+2020/10/20 11:43:44.488 [TRACE] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:43 | Finding a user ID.
+2020/10/20 11:43:44.488 [TRACE] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:45 | End home index.
+2020/10/20 11:43:45.306 [TRACE] [UMS.Data.AuthDbContext]  Member:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:43:45.306 [INFO] [UMS.Controllers.ExamplePage] [Test1111@gmail.com] Member:ExamplePage.cs:27 | Start example page controller.
+2020/10/20 11:45:10.417 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/10/20 11:45:11.756 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/20 11:45:11.934 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/20 11:45:11.939 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/20 11:45:11.939 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/20 11:45:12.696 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:45:12.745 [INFO] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:45:12.753 [TRACE] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:41 | Start home index.
+2020/10/20 11:45:12.753 [INFO] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:42 | Welcome, Test1111@gmail.com.
+2020/10/20 11:45:12.753 [TRACE] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:43 | Finding a user ID.
+2020/10/20 11:45:12.753 [TRACE] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:45 | End home index.
+2020/10/20 11:45:15.409 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:45:15.426 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [Test1111@gmail.com] Logout.cshtml.cs:31 | Start logout.
+2020/10/20 11:45:15.426 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [Test1111@gmail.com] Logout.cshtml.cs:66 | Start Logout on post.
+2020/10/20 11:45:15.443 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [Test1111@gmail.com] Logout.cshtml.cs:70 | User logged out.
+2020/10/20 11:45:15.443 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [Test1111@gmail.com] Logout.cshtml.cs:72 | The destruction of cookies AspNetCore Identity Application.
+2020/10/20 11:45:15.443 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [Test1111@gmail.com] Logout.cshtml.cs:74 | End Log out model On Post.
+2020/10/20 11:45:15.465 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:45:15.465 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:31 | Start logout.
+2020/10/20 11:45:15.473 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:42 | Start logout on get.
+2020/10/20 11:45:15.473 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
+2020/10/20 11:45:15.473 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:48 | The destruction of cookies AspNetCore Identity Application.
+2020/10/20 11:45:15.473 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:50 | End logout model on get.
+2020/10/20 11:45:16.386 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:45:16.403 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:45:16.413 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/20 11:45:16.432 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:91 | Start login on get.
+2020/10/20 11:45:16.432 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:104 | Signing out.
+2020/10/20 11:45:16.432 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/10/20 11:45:16.444 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:109 | End login on get.
+2020/10/20 11:45:17.709 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:45:17.709 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:45:17.709 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/20 11:45:17.739 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:128 | Start login on post.
+2020/10/20 11:45:17.739 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:133 | Signing in with password.
+2020/10/20 11:45:18.917 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
+2020/10/20 11:45:18.923 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:158 | Adding cookie into the browser.
+2020/10/20 11:45:18.923 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:161 | End login on post.
+2020/10/20 11:45:18.943 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:45:18.943 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:45:18.943 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:41 | Start home index.
+2020/10/20 11:45:18.943 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/20 11:45:18.956 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:43 | Finding a user ID.
+2020/10/20 11:45:18.956 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:45 | End home index.
+2020/10/20 11:45:19.823 [TRACE] [UMS.Data.AuthDbContext]  Project:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:45:19.833 [INFO] [UMS.Controllers.ExamplePage] [usermanagement2020@gmail.com] Project:ExamplePage.cs:27 | Start example page controller.
+2020/10/20 11:45:21.130 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:45:21.130 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:45:21.130 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:41 | Start home index.
+2020/10/20 11:45:21.130 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/20 11:45:21.144 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:43 | Finding a user ID.
+2020/10/20 11:45:21.144 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:45 | End home index.
+2020/10/20 11:45:21.677 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:45:21.677 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:45:21.693 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:54 | Start manage user index.
+2020/10/20 11:45:21.693 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:55 | Finding user ID.
+2020/10/20 11:45:21.693 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:57 | Getting all active users.
+2020/10/20 11:45:21.753 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:60 | End manage user index.
+2020/10/20 11:45:22.553 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:45:22.553 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:45:22.564 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:41 | Start home index.
+2020/10/20 11:45:22.564 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/20 11:45:22.564 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:43 | Finding a user ID.
+2020/10/20 11:45:22.564 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:45 | End home index.
+2020/10/20 11:45:23.115 [TRACE] [UMS.Data.AuthDbContext]  Member:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:45:23.129 [INFO] [UMS.Controllers.ExamplePage] [usermanagement2020@gmail.com] Member:ExamplePage.cs:27 | Start example page controller.
+2020/10/20 11:45:23.818 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:45:23.818 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:45:23.818 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:41 | Start home index.
+2020/10/20 11:45:23.830 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/20 11:45:23.830 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:43 | Finding a user ID.
+2020/10/20 11:45:23.830 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:45 | End home index.
+2020/10/20 11:45:24.356 [TRACE] [UMS.Data.AuthDbContext]  Project:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:45:24.365 [INFO] [UMS.Controllers.ExamplePage] [usermanagement2020@gmail.com] Project:ExamplePage.cs:27 | Start example page controller.
+2020/10/20 11:45:24.910 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:45:24.910 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:45:24.926 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:41 | Start home index.
+2020/10/20 11:45:24.926 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/20 11:45:24.926 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:43 | Finding a user ID.
+2020/10/20 11:45:24.939 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:45 | End home index.
+2020/10/20 11:45:25.738 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:45:25.738 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:42 | Start manage user controller.
+2020/10/20 11:45:25.738 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:54 | Start manage user index.
+2020/10/20 11:45:25.751 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:55 | Finding user ID.
+2020/10/20 11:45:25.751 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:57 | Getting all active users.
+2020/10/20 11:45:25.770 [TRACE] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:60 | End manage user index.
+2020/10/20 11:45:26.504 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/10/20 11:45:26.504 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/20 11:45:26.504 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:41 | Start home index.
+2020/10/20 11:45:26.504 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/20 11:45:26.519 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:43 | Finding a user ID.
+2020/10/20 11:45:26.519 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:45 | End home index.
+2020/10/20 11:46:01.720 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
