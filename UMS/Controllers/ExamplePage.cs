@@ -20,8 +20,9 @@ namespace UMS.Controllers
          * Name: AccountController
          * Parameter: logger(ILogger<ExamplePage>)
          */
-        public ExamplePage()
+        public ExamplePage(ILogger<ExamplePage> logger)
         {
+            _logger = logger;
             _logger.LogInformation("Start example page controller.");
         } // End consturcter
         /*
@@ -32,5 +33,25 @@ namespace UMS.Controllers
         {
             return View();
         } // End Index
+
+        /*
+         * Name: Project
+         * Author: Namchok Singhachai
+         * Description: Page for project manager.
+         */
+        public IActionResult Project()
+        {
+            return View();
+        } // End Project        
+
+        /*
+         * Name: Member
+         * Author: Namchok Singhachai
+         * Description: Page for member manager.
+         */
+        public IActionResult Member()
+        {
+            return View();
+        } // End Member
     } // End ExamplePage
 }
