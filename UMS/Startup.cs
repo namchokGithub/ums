@@ -1,6 +1,6 @@
 using System;
-using EmailService;
 using UMS.Data;
+using EmailService;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
