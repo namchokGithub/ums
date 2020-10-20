@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -39,6 +40,7 @@ namespace UMS.Controllers
          * Author: Namchok Singhachai
          * Description: Page for project manager.
          */
+        [Authorize(Roles = "Admin, Manager")]
         public IActionResult Project()
         {
             return View();
