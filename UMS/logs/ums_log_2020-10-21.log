@@ -1,0 +1,129 @@
+############################################## User Management System log ##############################################
+2020/10/21 14:29:18.496 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/21 14:29:18.826 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/21 14:29:18.832 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/21 14:29:18.832 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/21 14:29:19.568 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/21 14:29:19.568 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/21 14:29:19.615 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/10/21 14:29:52.439 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/21 14:29:52.439 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/21 14:29:52.459 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/10/21 14:36:38.794 [INFO] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:48 | Start register model.
+2020/10/21 14:36:40.477 [INFO] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:42 | Start manage user controller.
+2020/10/21 14:36:41.422 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:215 | Checking user.
+2020/10/21 14:36:41.431 [INFO] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:216 | Detected 0 users.
+2020/10/21 14:36:42.630 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/21 14:36:42.630 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/21 14:36:42.648 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/10/21 14:36:44.119 [INFO] [UMS.Areas.Identity.Pages.Account.ForgotPasswordModel]  ForgotPassword.cshtml.cs:45 | Start forgot password model.
+2020/10/21 14:39:06.226 [INFO] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:35 | Start reset password model.
+2020/10/21 14:39:06.239 [DEBUG] [UMS.Areas.Identity.Pages.Account.ResetPasswordModel]  ResetPassword.cshtml.cs:87 | Encoding to input model.
+2020/10/21 14:46:27.662 [INFO] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:48 | Start register model.
+2020/10/21 14:46:28.429 [INFO] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:42 | Start manage user controller.
+2020/10/21 14:46:28.466 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:215 | Checking user.
+2020/10/21 14:46:28.471 [INFO] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:216 | Detected 0 users.
+2020/10/21 14:46:30.269 [INFO] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:42 | Start manage user controller.
+2020/10/21 14:46:30.332 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:215 | Checking user.
+2020/10/21 14:46:30.332 [INFO] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:216 | Detected 0 users.
+2020/10/21 14:49:41.880 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/21 14:49:41.893 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/21 14:49:41.909 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/10/21 14:49:44.175 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/21 14:49:44.175 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/21 14:49:44.664 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
+2020/10/21 14:49:44.678 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:158 | Adding cookie into the browser.
+2020/10/21 14:49:44.705 [INFO] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/21 14:49:44.723 [INFO] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:42 | Welcome, Test1111@gmail.com.
+2020/10/21 14:49:47.727 [INFO] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Test1111@gmail.com] AccessDenied.cshtml.cs:24 | Start access denined model.
+2020/10/21 14:51:40.822 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/21 14:51:41.075 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/21 14:51:41.081 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/21 14:51:41.081 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/21 14:51:42.089 [INFO] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/21 14:51:42.100 [INFO] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:42 | Welcome, Test1111@gmail.com.
+2020/10/21 14:52:18.310 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/10/21 14:52:18.544 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/10/21 14:52:18.549 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/10/21 14:52:18.549 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/10/21 14:52:19.604 [INFO] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/21 14:52:19.613 [INFO] [UMS.Controllers.HomeController] [Test1111@gmail.com] Index:HomeController.cs:42 | Welcome, Test1111@gmail.com.
+2020/10/21 14:52:21.078 [INFO] [UMS.Controllers.ManageUserController] [Test1111@gmail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/21 14:52:21.085 [DEBUG] [UMS.Controllers.ManageUserController] [Test1111@gmail.com] EditProfile:ManageUserController.cs:275 | Getting a user by ID.
+2020/10/21 14:54:54.102 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [Test1111@gmail.com] Logout.cshtml.cs:31 | Start logout.
+2020/10/21 14:54:54.113 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [Test1111@gmail.com] Logout.cshtml.cs:70 | User logged out.
+2020/10/21 14:54:54.127 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:31 | Start logout.
+2020/10/21 14:54:54.147 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
+2020/10/21 14:54:55.274 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/21 14:54:55.282 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/21 14:54:55.300 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/10/21 14:54:56.678 [INFO] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:48 | Start register model.
+2020/10/21 14:54:57.309 [INFO] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:42 | Start manage user controller.
+2020/10/21 14:54:57.433 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:215 | Checking user.
+2020/10/21 14:54:57.433 [INFO] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:216 | Detected 0 users.
+2020/10/21 14:55:15.148 [INFO] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:42 | Start manage user controller.
+2020/10/21 14:55:15.174 [DEBUG] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:215 | Checking user.
+2020/10/21 14:55:15.174 [INFO] [UMS.Controllers.ManageUserController]  CheckUserExist:ManageUserController.cs:216 | Detected 0 users.
+2020/10/21 14:55:20.287 [INFO] [UMS.Controllers.ManageUserController]  GetStatusUser:ManageUserController.cs:42 | Start manage user controller.
+2020/10/21 14:55:20.347 [INFO] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:48 | Start register model.
+2020/10/21 14:55:20.590 [INFO] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:143 | User created successfully with password..
+2020/10/21 14:55:20.600 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:145 | Creating a provider key.
+2020/10/21 14:55:20.657 [INFO] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:149 | User successfully added.
+2020/10/21 14:55:20.676 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:152 | Adding a default role for users.
+2020/10/21 14:55:20.723 [INFO] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:156 | User role successfully added.
+2020/10/21 14:55:20.723 [DEBUG] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:158 | Signing in.
+2020/10/21 14:55:20.810 [INFO] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:160 | User signed in successfully.
+2020/10/21 14:55:20.833 [INFO] [UMS.Controllers.HomeController] [Somchai@mail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/21 14:55:20.846 [INFO] [UMS.Controllers.HomeController] [Somchai@mail.com] Index:HomeController.cs:42 | Welcome, Somchai@mail.com.
+2020/10/21 14:55:25.704 [INFO] [UMS.Areas.Identity.Pages.Account.AccessDeniedModel] [Somchai@mail.com] AccessDenied.cshtml.cs:24 | Start access denined model.
+2020/10/21 14:55:34.511 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] [Somchai@mail.com]  | An unhandled exception has occurred while executing the request.System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/AdminLTE/_Layout.cshtml': 'Scripts'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/10/21 14:55:36.368 [INFO] [UMS.Controllers.HomeController] [Somchai@mail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/21 14:55:36.379 [INFO] [UMS.Controllers.HomeController] [Somchai@mail.com] Index:HomeController.cs:42 | Welcome, Somchai@mail.com.
+2020/10/21 14:56:04.020 [INFO] [UMS.Controllers.ManageUserController] [Somchai@mail.com] EditProfile:ManageUserController.cs:42 | Start manage user controller.
+2020/10/21 14:56:04.035 [DEBUG] [UMS.Controllers.ManageUserController] [Somchai@mail.com] EditProfile:ManageUserController.cs:275 | Getting a user by ID.
+2020/10/21 15:01:36.261 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [Somchai@mail.com] Logout.cshtml.cs:31 | Start logout.
+2020/10/21 15:01:36.270 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [Somchai@mail.com] Logout.cshtml.cs:70 | User logged out.
+2020/10/21 15:01:36.304 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:31 | Start logout.
+2020/10/21 15:01:36.316 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
+2020/10/21 15:01:37.460 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/21 15:01:37.476 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/21 15:01:37.491 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/10/21 15:01:38.059 [INFO] [UMS.Controllers.ManageUserController]  GoogleLogin:ManageUserController.cs:42 | Start manage user controller.
+2020/10/21 15:01:38.069 [INFO] [UMS.Controllers.AccountController]  GoogleLogin:AccountController.cs:44 | Start account controller.
+2020/10/21 15:01:45.289 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/21 15:01:45.305 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/21 15:01:45.315 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/10/21 15:01:52.449 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/10/21 15:01:52.458 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/10/21 15:01:52.532 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
+2020/10/21 15:01:52.539 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:158 | Adding cookie into the browser.
+2020/10/21 15:01:52.555 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/10/21 15:01:52.565 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/10/21 15:01:57.331 [INFO] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:31 | Start logs controller.
+2020/10/21 15:01:57.347 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:46 | Getting top 100 from all logs.
+2020/10/21 15:01:58.101 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:42 | Start manage user controller.
+2020/10/21 15:01:58.126 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:57 | Getting all active users.
+2020/10/21 15:03:48.142 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:42 | Start manage user controller.
+2020/10/21 15:03:48.161 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:85 | Getting user.
+2020/10/21 15:06:20.346 [INFO] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:31 | Start logs controller.
+2020/10/21 15:06:20.366 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:46 | Getting top 100 from all logs.

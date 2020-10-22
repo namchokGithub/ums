@@ -40,6 +40,8 @@
         </a>
     </div> <!-- End menu -->
     }
+    @if (User.IsInRole("Admin")|| User.IsInRole("Manager"))
+    {
     <div class="col-sm-12 col-md-6 col-lg-6">
         <a asp-controller="ExamplePage" asp-action="Project" class="nav-link @Url.MakeActiveClass("ExamplePage","Project")">
             <div class="info-box">
@@ -50,8 +52,6 @@
             </div>
         </a>
     </div> <!-- End menu -->
-    @if (User.IsInRole("Admin")|| User.IsInRole("Manager"))
-    {
     <div class="col-sm-12 col-md-6 col-lg-6">
             <a asp-controller="ExamplePage" asp-action="Member" class="nav-link @Url.MakeActiveClass("ExamplePage", "Member")">
                 <div class="info-box">

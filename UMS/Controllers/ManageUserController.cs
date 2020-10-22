@@ -264,6 +264,7 @@ namespace UMS.Controllers
          * Author: Wannapa Srijermtong
          * Description: Getting Firstname, Lastname and LoginProvider by user Id.
          */
+        [AllowAnonymous] // All user
         public async Task<IActionResult> EditProfile()
         {
             try
