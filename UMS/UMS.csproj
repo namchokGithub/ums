@@ -6,6 +6,7 @@
   </PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.9" />
 		<PackageReference Include="NLog" Version="4.7.4" />
 		<PackageReference Include="SendGrid" Version="9.21.0" />
 		<PackageReference Include="NLog.Config" Version="4.7.4" />

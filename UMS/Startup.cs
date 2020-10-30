@@ -59,7 +59,7 @@ namespace UMS
 
             // Controller with view and add razor pages
             services.AddControllersWithViews();
-            services.AddRazorPages();
+            services.AddRazorPages().AddRazorRuntimeCompilation();
 
             // Add mvc
             services.AddMvcCore().AddDataAnnotations();

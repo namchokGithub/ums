@@ -12,10 +12,6 @@
 }
 <!--Start Style-->
 <style>
-    #btn_back {
-        width: 60px;
-    }
-
     #overlay {
         position: fixed;
         top: 0;
@@ -51,6 +47,69 @@
     .is-hide {
         display: none;
     }
+
+    .container-fluid {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    @@media screen and (max-width: 321px) {
+        body {
+            line-height: 0.5 !important;
+        }
+        .login-box-msg {
+            font-size: 20px !important;
+            padding: 0 0 5px !important;
+        }
+
+        p.login-box-msg {
+            font-size: 15px !important;
+            padding: 0 15px 15px !important;
+        }
+
+        form {
+            width: 90% !important;
+            margin: auto !important;
+        }
+    }
+    /*screen and (max-width: 321px)*/
+
+    @@media screen and (max-width: 376px) and (min-width: 321px) {
+        .login-box-msg {
+            font-size: 25px !important;
+            padding: 0 0 5px !important;
+        }
+
+        p.login-box-msg {
+            font-size: 16px !important;
+            padding: 0 10px 10px !important;
+        }
+
+        form {
+            width: 90% !important;
+            margin: auto !important;
+        }
+    }
+    /*screen and (max-width: 376px) and (min-width: 321px)*/
+
+    @@media screen and (max-width: 426px) and (min-width: 376px) {
+        .login-box-msg {
+            font-size: 25px !important;
+            padding: 0 0 5px !important;
+        }
+
+        p.login-box-msg {
+            font-size: 16px !important;
+            padding: 0 10px 10px !important;
+        }
+
+        form {
+            width: 90% !important;
+            margin: auto !important;
+        }
+    }
+    /*screen and (max-width: 426px) and (min-width: 376px)*/
+
 </style>
 <!--End Style-->
 <div id="overlay">
@@ -114,8 +173,14 @@
                     </div>
                     <!--End Input information for Register-->
                     <!--Start Button-->
-                    <a id="btn_back" class="btn btn-block btn-secondary float-left" href="@URL/Identity/Account/Login"> Back </a>
-                    <button onclick="register()" type="button" class="btn btn-primary float-right">Register</button>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 mb-1">
+                            <a id="btn_back" class="btn btn-block btn-secondary float-left" href="@URL/Identity/Account/Login"> Back </a>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <button onclick="register()" type="button" class="btn btn-block btn-primary float-right">Register</button>
+                        </div>
+                    </div>
                     <!--End Button-->
                 </form>
                 <!--End Form Register-->

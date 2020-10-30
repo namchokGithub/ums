@@ -21,12 +21,126 @@
         pass = LoginModel.StringEncryptor.DecryptStringToPass("usermanagementsystem2020", cookiesRememberme);
     }
 }
+<!-- Style -->
+<style>
+    @@media screen and (max-width: 321px) {
+        .login-box-msg {
+            font-size: 25px !important;
+        }
+
+        .btn-block {
+            width: 68%;
+            margin: auto;
+        }
+
+        .col-sm-12 > .btn-block {
+            width: 100%;
+        }
+
+        p.login-box-msg {
+            font-size: 20px !important;
+            padding: 0 15px 15px !important;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        form {
+            width: 70% !important;
+            margin: auto !important;
+        }
+
+        .login-page {
+            margin: 0 auto !important;
+        }
+
+        .login-card-body {
+            padding: 15px !important;
+        }
+    } 
+    /*screen and (max-width: 321px)*/
+
+    @@media screen and (max-width: 376px) and (min-width: 321px) {
+        .login-box-msg {
+            font-size: 30px !important;
+        }
+
+        .btn-block {
+            width: 85%;
+            margin: auto;
+        }
+
+        .col-sm-12 > .btn-block {
+            width: 100%;
+        }
+
+        p.login-box-msg {
+            font-size: 20px !important;
+            padding: 0 15px 15px !important;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        form {
+            width: 85% !important;
+            margin: auto !important;
+        }
+
+        .login-card-body {
+            padding: 20px !important;
+        }
+    }
+    /*screen and (max-width: 376px) and (min-width: 321px)*/
+
+    @@media screen and (max-width: 426px) and (min-width: 376px) {
+
+        p {
+            margin-top: 0;
+            margin-bottom: 7px;
+        }
+
+        .btn-block {
+            width: 90%;
+            margin: auto;
+        }
+
+        .col-sm-12 > .btn-block {
+            width: 100%;
+        }
+
+        form {
+            width: 90% !important;
+            margin: auto !important;
+        }
+    }
+    /*screen and (max-width: 426px) and (min-width: 376px)*/
+
+    @@media screen and (max-width: 769px) and (min-width: 426px) {
+
+        p {
+            margin-top: 0;
+            margin-bottom: 7px;
+        }
+    }
+    /*screen and (max-width: 769px) and (min-width: 426px)*/
+
+    .container-fluid {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+</style>
+<!-- End Style -->
 <!--Content-->
 <div class="hold-transition login-page">
-    <div class="login-box">
+    <div class="login-box position-fixed">
         <h3 class="login-box-msg">User Management System</h3>
         <!--Start Card-->
-        <div class="card">
+        <div class="card m-auto">
             <!--Start Card body-->
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Login to start UMS</p>
@@ -56,12 +170,12 @@
                     <span id="inValidUser" class="text-danger small"></span>
                     <!--End Input password-->
                     <!--Start Hyperlink-->
-                    <a href="@URL/Identity/Account/ForgotPassword" class="text-center">I forgot my password</a><br>
-                    <a href="@URL/Identity/Account/Register" class="text-center">Register a new membership</a>
+                    <a href="@URL/Identity/Account/ForgotPassword" class="">I forgot my password</a><br>
+                    <a href="@URL/Identity/Account/Register" class="">Register a new membership</a>
                     <!--End Hyperlink-->
-                    <div class="row">
+                    <div class="row" id="rememberCheckbox">
                         <!--Start Checkbox remember Me-->
-                        <div class="col-8">
+                        <div class="col-md-8 col-sm-12" >
                             <div class="checkbox">
                                 <label asp-for="Input.RememberMe">
                                     <input asp-for="Input.RememberMe" id="RememberMe" />
@@ -71,7 +185,7 @@
                         </div>
                         <!--End Checkbox remember Me-->
                         <!--Start Button login-->
-                        <div class="col-4">
+                        <div class="col-md-4 col-sm-12">
                             <button type="submit" id="btn_Login" class="btn btn-primary btn-block">Login</button>
                         </div>
                         <!--Endt Button login-->
