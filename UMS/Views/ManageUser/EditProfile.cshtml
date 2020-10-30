@@ -34,7 +34,7 @@
 </style>
 <!--End Style-->
 <!--Content-->
-<div class="mx-auto col-5">
+<div class="mx-auto col-md-5">
     <br>
     <!--Start Card-->
     <div class="card card-info text-center">
@@ -94,10 +94,10 @@
                     <!--If Login ProviderLogin is Email can change password-->
                     @if (editProfile.acc_TypeAccoutname == "Email")
                     {
-                        <div class="col-9">
+                        <div class="col-md-8 col-lg-8">
                             <p id="href_ChangePassword">Change password</p>
                         </div>
-                        <div class="col-3">
+                        <div class="col-md-4 col-lg-4">
                             <button id="btn_SaveProfile" type="button" class="btn btn-success btn-block float-right" onclick="SaveProfile()">Save</button>
                         </div>
                     }
@@ -113,8 +113,14 @@
 
         <!--Start Card footer-->
         <div id="card_Footer" class="card-footer d-none">
-            <button id="btn_NotSavePassword" type="button" class="btn btn-secondary float-left d-none">Back</button>
-            <button id="btn_SavePassword" type="button" class="btn btn-success float-right d-none" onclick="SavePassword()">Save</button>
+            <div class="row">
+                <div class="col-md-6 mb-1">
+                    <button id="btn_NotSavePassword" type="button" class="btn btn-block btn-secondary float-left d-none">Back</button>
+                </div>
+                <div class="col-md-6">
+                    <button id="btn_SavePassword" type="button" class="btn btn-block btn-success float-right d-none" onclick="SavePassword()">Save</button>
+                </div>
+            </div>
         </div>
         <!--End Card footer-->
     </div>
