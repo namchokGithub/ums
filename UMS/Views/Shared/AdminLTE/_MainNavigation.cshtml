@@ -58,7 +58,7 @@
                     <li class="nav-item">
                         <a asp-controller="ManageUser" asp-action="Index" class="nav-link @Url.MakeActiveClass("ManageUser","Index")">
                             <i class="fas fa-user-cog nav-icon"></i> &ensp;
-                            <p>Manage Users</p>
+                            <p>Users</p>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -69,6 +69,21 @@
                     </li>
                     <!-- Manage users -->
                 } <!-- End if -->
+                <li class="nav-item">
+                    <a asp-controller="ExamplePage" asp-action="Project" class="nav-link @Url.MakeActiveClass("ExamplePage","Project")">
+                        <i class="fas fa-file nav-icon"></i> &ensp;
+                        <p>Project</p>
+                    </a>
+                </li>
+                @if (User.IsInRole("Admin") || User.IsInRole("Manager") || User.IsInRole("Support"))
+                {
+                    <li class="nav-item">
+                        <a asp-controller="ExamplePage" asp-action="Member" class="nav-link @Url.MakeActiveClass("ExamplePage","Member")">
+                            <i class="fas fa-user-check nav-icon"></i> &ensp;
+                            <p>Member</p>
+                        </a>
+                    </li>
+                }
                 <li class="nav-item">
                     <a asp-area="Identity" asp-page="/Account/Logout" class="nav-link">
                         <i class="fas fa-sign-out-alt nav-icon "></i> &ensp;

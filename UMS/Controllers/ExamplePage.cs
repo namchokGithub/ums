@@ -40,7 +40,6 @@ namespace UMS.Controllers
          * Author: Namchok Singhachai
          * Description: Page for project manager.
          */
-        [Authorize(Roles = "Admin, Manager")]
         public IActionResult Project()
         {
             return View();
@@ -51,6 +50,7 @@ namespace UMS.Controllers
          * Author: Namchok Singhachai
          * Description: Page for member manager.
          */
+        [Authorize(Roles = "Admin, Manager, Support")]
         public IActionResult Member()
         {
             return View();
