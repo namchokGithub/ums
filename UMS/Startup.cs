@@ -8,6 +8,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Protocols.OpenIdConnect;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 /*
  * Name : Startup
@@ -37,6 +41,31 @@ namespace UMS
          */
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication()
+            .AddCookie()
+            .AddOpenIdConnect(o =>
+            {
+                o.ClientId = "U2b3157fb56db756a26f718bc7b4baa2f";
+                o.ClientSecret = "6c4fdbc37efad850188cd1c1aaac61f8";
+                o.ResponseType = OpenIdConnectResponseType.Code;
+                o.UseTokenLifetime = true;
+                o.SaveTokens = true;
+                o.Scope.Add("email");
+
+                o.Configuration = new OpenIdConnectConfiguration
+                {
+                    Issuer = "https://access.line.me",
+                    AuthorizationEndpoint = "https://access.line.me/oauth2/v2.1/authorize?bot_prompt=aggressive",
+                    TokenEndpoint = "https://api.line.me/oauth2/v2.1/token"
+                };
+                o.TokenValidationParameters = new TokenValidationParameters
+                {
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(o.ClientSecret)),
+                    NameClaimType = "name",
+                    ValidAudience = o.ClientId
+                };
+            });
+
             // Repository
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<ILogsRepository, LogsRepository>();
@@ -88,6 +117,7 @@ namespace UMS
                 microsoftOptions.ClientId = "ed43a983-e56c-4a2a-a1e8-55b74d56fbc4";
                 microsoftOptions.ClientSecret = ".j-k5QvM40k4Mzm1d7PwWBAQv~w42_MV.e";
             });
+
         } // End ConfigureServices
 
         /*

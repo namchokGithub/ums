@@ -9,6 +9,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
 using static UMS.Areas.Identity.Pages.Account.LoginModel;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 
 /*
  * Name: AccountController.cs
@@ -49,6 +51,11 @@ namespace UMS.Controllers
          * Author: Wannapa Srijermtong
          */
         public IActionResult Index() { return View(); } // End Index
+
+        public IActionResult LineLogin()
+        {
+            return Challenge(new AuthenticationProperties { RedirectUri = "/" }, OpenIdConnectDefaults.AuthenticationScheme);
+        }
 
         /*
          * Name: InputModel

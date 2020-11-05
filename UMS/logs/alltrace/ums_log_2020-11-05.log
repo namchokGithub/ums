@@ -126,3 +126,205 @@
 2020/11/05 12:08:16.964 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
 2020/11/05 12:08:16.973 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:43 | Finding a user ID.
 2020/11/05 12:08:16.973 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:45 | End home index.
+2020/11/05 12:23:16.229 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/11/05 12:23:17.869 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/11/05 12:23:18.104 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/11/05 12:23:18.104 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/11/05 12:23:18.113 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/11/05 12:23:18.498 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]  Index: | An unhandled exception has occurred while executing the request.System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.TypeLoadException: Could not load type 'Microsoft.AspNetCore.Authentication.Internal.RequestPathBaseCookieBuilder' from assembly 'Microsoft.AspNetCore.Authentication, Version=3.1.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'.
+   at Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions..ctor()
+   --- End of inner exception stack trace ---
+   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean wrapExceptions, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& hasNoDefaultCtor)
+   at System.RuntimeType.CreateInstanceDefaultCtorSlow(Boolean publicOnly, Boolean wrapExceptions, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, Boolean wrapExceptions)
+   at System.Activator.CreateInstance[T]()
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/11/05 12:24:03.998 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/11/05 12:24:05.599 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/11/05 12:24:05.781 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/11/05 12:24:05.786 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/11/05 12:24:05.786 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/11/05 12:24:06.417 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]  Index: | An unhandled exception has occurred while executing the request.System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.TypeLoadException: Could not load type 'Microsoft.AspNetCore.Authentication.Internal.RequestPathBaseCookieBuilder' from assembly 'Microsoft.AspNetCore.Authentication, Version=3.1.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'.
+   at Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions..ctor()
+   --- End of inner exception stack trace ---
+   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean wrapExceptions, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& hasNoDefaultCtor)
+   at System.RuntimeType.CreateInstanceDefaultCtorSlow(Boolean publicOnly, Boolean wrapExceptions, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, Boolean wrapExceptions)
+   at System.Activator.CreateInstance[T]()
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/11/05 12:26:05.529 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/11/05 12:26:07.072 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/11/05 12:26:07.283 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/11/05 12:26:07.283 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/11/05 12:26:07.283 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/11/05 12:26:07.719 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]  Index: | An unhandled exception has occurred while executing the request.System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.TypeLoadException: Could not load type 'Microsoft.AspNetCore.Authentication.Internal.RequestPathBaseCookieBuilder' from assembly 'Microsoft.AspNetCore.Authentication, Version=3.1.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'.
+   at Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions..ctor()
+   --- End of inner exception stack trace ---
+   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean wrapExceptions, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& hasNoDefaultCtor)
+   at System.RuntimeType.CreateInstanceDefaultCtorSlow(Boolean publicOnly, Boolean wrapExceptions, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, Boolean wrapExceptions)
+   at System.Activator.CreateInstance[T]()
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/11/05 12:27:27.168 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/11/05 12:27:28.715 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/11/05 12:27:28.907 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/11/05 12:27:28.907 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/11/05 12:27:28.907 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/11/05 12:27:29.429 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]  Index: | An unhandled exception has occurred while executing the request.System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.TypeLoadException: Could not load type 'Microsoft.AspNetCore.Authentication.Internal.RequestPathBaseCookieBuilder' from assembly 'Microsoft.AspNetCore.Authentication, Version=3.1.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'.
+   at Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions..ctor()
+   --- End of inner exception stack trace ---
+   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean wrapExceptions, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& hasNoDefaultCtor)
+   at System.RuntimeType.CreateInstanceDefaultCtorSlow(Boolean publicOnly, Boolean wrapExceptions, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, Boolean wrapExceptions)
+   at System.Activator.CreateInstance[T]()
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/11/05 12:27:50.447 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/11/05 12:28:54.460 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/11/05 12:28:56.009 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/11/05 12:28:56.215 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/11/05 12:28:56.220 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/11/05 12:28:56.220 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/11/05 12:28:56.610 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]  Index: | An unhandled exception has occurred while executing the request.System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.TypeLoadException: Could not load type 'Microsoft.AspNetCore.Authentication.Internal.RequestPathBaseCookieBuilder' from assembly 'Microsoft.AspNetCore.Authentication, Version=3.1.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'.
+   at Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions..ctor()
+   --- End of inner exception stack trace ---
+   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean wrapExceptions, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& hasNoDefaultCtor)
+   at System.RuntimeType.CreateInstanceDefaultCtorSlow(Boolean publicOnly, Boolean wrapExceptions, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, Boolean wrapExceptions)
+   at System.Activator.CreateInstance[T]()
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/11/05 12:32:08.297 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/11/05 12:32:09.861 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/11/05 12:32:10.061 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/11/05 12:32:10.066 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/11/05 12:32:10.066 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/11/05 12:32:10.547 [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]  Index: | An unhandled exception has occurred while executing the request.System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.TypeLoadException: Could not load type 'Microsoft.AspNetCore.Authentication.Internal.RequestPathBaseCookieBuilder' from assembly 'Microsoft.AspNetCore.Authentication, Version=3.1.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'.
+   at Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions..ctor()
+   --- End of inner exception stack trace ---
+   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean wrapExceptions, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& hasNoDefaultCtor)
+   at System.RuntimeType.CreateInstanceDefaultCtorSlow(Boolean publicOnly, Boolean wrapExceptions, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, Boolean wrapExceptions)
+   at System.Activator.CreateInstance[T]()
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020/11/05 12:32:18.292 [INFO] [Microsoft.Hosting.Lifetime]   | Application is shutting down...
+2020/11/05 12:34:53.411 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/11/05 12:34:55.076 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/11/05 12:34:55.259 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/11/05 12:34:55.259 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/11/05 12:34:55.269 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/11/05 12:50:12.096 [TRACE] [UMS.Program]  Program.cs:27 | Starting Program.
+2020/11/05 12:50:13.660 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/11/05 12:50:13.935 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/11/05 12:50:13.935 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/11/05 12:50:13.943 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/11/05 12:50:14.426 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/11/05 12:50:14.443 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/11/05 12:50:14.443 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/11/05 12:50:14.469 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:91 | Start login on get.
+2020/11/05 12:50:14.472 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:104 | Signing out.
+2020/11/05 12:50:14.472 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/11/05 12:50:14.472 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:109 | End login on get.
+2020/11/05 12:50:36.146 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/11/05 12:50:36.146 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/11/05 12:50:36.146 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/11/05 12:50:36.183 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:128 | Start login on post.
+2020/11/05 12:50:36.183 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:133 | Signing in with password.
+2020/11/05 12:50:37.413 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
+2020/11/05 12:50:37.413 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:158 | Adding cookie into the browser.
+2020/11/05 12:50:37.428 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:161 | End login on post.
+2020/11/05 12:50:37.445 [TRACE] [UMS.Data.AuthDbContext]  Index:AuthDbContext.cs:27 | Start application context.
+2020/11/05 12:50:37.456 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/11/05 12:50:37.456 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:41 | Start home index.
+2020/11/05 12:50:37.456 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/11/05 12:50:37.456 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:43 | Finding a user ID.
+2020/11/05 12:50:37.456 [TRACE] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:45 | End home index.
+2020/11/05 12:50:39.082 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/11/05 12:50:39.082 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:31 | Start logout.
+2020/11/05 12:50:39.097 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:66 | Start Logout on post.
+2020/11/05 12:50:39.097 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:70 | User logged out.
+2020/11/05 12:50:39.097 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:72 | The destruction of cookies AspNetCore Identity Application.
+2020/11/05 12:50:39.097 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:74 | End Log out model On Post.
+2020/11/05 12:50:39.117 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/11/05 12:50:39.117 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:31 | Start logout.
+2020/11/05 12:50:39.131 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:42 | Start logout on get.
+2020/11/05 12:50:39.131 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
+2020/11/05 12:50:39.131 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:48 | The destruction of cookies AspNetCore Identity Application.
+2020/11/05 12:50:39.131 [TRACE] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:50 | End logout model on get.
+2020/11/05 12:50:39.942 [TRACE] [UMS.Data.AuthDbContext]  AuthDbContext.cs:27 | Start application context.
+2020/11/05 12:50:39.942 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/11/05 12:50:39.942 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/11/05 12:50:39.958 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:91 | Start login on get.
+2020/11/05 12:50:39.958 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:104 | Signing out.
+2020/11/05 12:50:39.958 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/11/05 12:50:39.958 [TRACE] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:109 | End login on get.
