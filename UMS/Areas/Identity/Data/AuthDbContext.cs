@@ -108,5 +108,6 @@ namespace UMS.Data
 
         public DbSet<Logs> Logs { get; set; } // Set table logs
         public DbSet<Management> Management { get; set; } // Set table logs
+        public DbSet<Project> Project { get; set; } // Set table project
     } // End AuthDbContext
 }
