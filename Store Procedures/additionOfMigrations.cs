@@ -413,3 +413,28 @@ migrationBuilder.Sql(insertAdmin);
 migrationBuilder.Sql(insertRole);
 migrationBuilder.Sql(insertAdminProviderKey);
 migrationBuilder.Sql(insertRoleAdmin);
+
+var insertStatus = @"USE [UMS]
+                    GO
+                    SET ANSI_NULLS ON
+                    GO
+                    SET QUOTED_IDENTIFIER ON
+                    GO
+                    CREATE TABLE [dbo].[Status](
+                        [stat_Id] [int] IDENTITY(1,1) NOT NULL,
+                        [stat_name] [varchar](50) NULL,
+                    CONSTRAINT [PK_Status] PRIMARY KEY CLUSTERED 
+                    (
+                        [stat_Id] ASC
+                    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+                    ) ON [PRIMARY]
+                    GO
+                    SET IDENTITY_INSERT [dbo].[Status] ON 
+
+                    INSERT [dbo].[Status] ([stat_Id], [stat_name]) VALUES (1, N'Success')
+                    INSERT [dbo].[Status] ([stat_Id], [stat_name]) VALUES (2, N'Error')
+                    INSERT [dbo].[Status] ([stat_Id], [stat_name]) VALUES (3, N'Fail')
+                    SET IDENTITY_INSERT [dbo].[Status] OFF
+                    GO
+                    ";
+migrationBuilder.Sql(insertStatus);
