@@ -1,0 +1,32 @@
+############################################## User Management System log ##############################################
+2020/11/03 20:49:12.262 [INFO] [Microsoft.Hosting.Lifetime]   | Now listening on: https://localhost:44346
+2020/11/03 20:49:12.823 [INFO] [Microsoft.Hosting.Lifetime]   | Application started. Press Ctrl+C to shut down.
+2020/11/03 20:49:12.842 [INFO] [Microsoft.Hosting.Lifetime]   | Hosting environment: Development
+2020/11/03 20:49:12.875 [INFO] [Microsoft.Hosting.Lifetime]   | Content root path: C:\Users\Namchok\Desktop\สหกิจ\ums\UMS
+2020/11/03 20:49:15.168 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/11/03 20:49:15.193 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/11/03 20:49:44.412 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:31 | Start logout.
+2020/11/03 20:49:44.429 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel] [usermanagement2020@gmail.com] Logout.cshtml.cs:70 | User logged out.
+2020/11/03 20:49:44.462 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:31 | Start logout.
+2020/11/03 20:49:44.470 [INFO] [UMS.Areas.Identity.Pages.Account.LogoutModel]  Logout.cshtml.cs:46 | User logged out.
+2020/11/03 20:49:49.110 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/11/03 20:49:49.116 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/11/03 20:49:49.135 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/11/03 20:49:51.351 [INFO] [UMS.Areas.Identity.Pages.Account.RegisterModel]  Register.cshtml.cs:48 | Start register model.
+2020/11/03 21:12:50.695 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/11/03 21:12:50.737 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/11/03 21:12:50.737 [DEBUG] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:106 | Getting external authentication scheme.
+2020/11/03 21:12:52.055 [INFO] [UMS.Controllers.ManageUserController]  ManageUserController.cs:42 | Start manage user controller.
+2020/11/03 21:12:52.055 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:49 | Start login model.
+2020/11/03 21:12:52.192 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:143 | User logged in successfully.
+2020/11/03 21:12:52.192 [INFO] [UMS.Areas.Identity.Pages.Account.LoginModel]  Login.cshtml.cs:158 | Adding cookie into the browser.
+2020/11/03 21:12:52.217 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:29 | Start home controller.
+2020/11/03 21:12:52.224 [INFO] [UMS.Controllers.HomeController] [usermanagement2020@gmail.com] Index:HomeController.cs:42 | Welcome, usermanagement2020@gmail.com.
+2020/11/03 21:12:55.123 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:42 | Start manage user controller.
+2020/11/03 21:12:55.130 [DEBUG] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] Index:ManageUserController.cs:57 | Getting all active users.
+2020/11/03 21:25:15.128 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:42 | Start manage user controller.
+2020/11/03 21:25:15.149 [INFO] [UMS.Controllers.ManageUserController] [usermanagement2020@gmail.com] GetUser:ManageUserController.cs:85 | Getting user.
+2020/11/03 21:38:55.817 [INFO] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:31 | Start logs controller.
+2020/11/03 21:38:55.834 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:46 | Getting top 100 from all logs.
+2020/11/03 22:04:50.511 [INFO] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:31 | Start logs controller.
+2020/11/03 22:04:50.581 [DEBUG] [UMS.Controllers.LogsController] [usermanagement2020@gmail.com] Index:LogsController.cs:46 | Getting top 100 from all logs.
