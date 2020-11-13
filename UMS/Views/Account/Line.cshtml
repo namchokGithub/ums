@@ -1,0 +1,41 @@
+﻿@using System.Text;
+@using Microsoft.IdentityModel.Tokens;
+@using UMS.Areas.Identity.Pages.Account;
+@{
+    ViewData["Title"] = "Line";
+    Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
+}
+https%3A%2F%2Flocalhost%3A44346%2FAccount%2FLine
+<h1>Line</h1>
+
+<input id="code" value="@ViewData["code"]" type="text">
+<input id="state" value="@ViewData["state"]" type="text">
+<input id="friendship_status_changed" value="@ViewData["friendship_status_changed"] type="text"">
+
+<a class="btn btn-info text-white" onclick="getToken()">Get token</a>
+<script>
+    function getToken() {
+        let code = $('#code').val();
+        $.ajax({
+            url: `https://api.line.me/oauth2/v2.1/token`,
+            data: {
+                grant_type: "authorization_code",
+                code: code,
+                redirect_uri: "https://localhost:44346/Account/Line",
+                client_id: "1655213862",
+                client_secret: "cc6a98410d26fefe7020b4b855bd78c0"
+            },
+            method: "POST",
+            success: (res) => {
+                console.log("test")
+                console.log(res);  
+            },
+            error: function (result) {
+                let statusResText = (result.responseText != '') ? ' Text: ' + result.responseText : '' // Set message status
+                let _text = 'Status : ' + result.status  + statusResText
+                console.log(result); // Show log of error
+                toastr.error(`${_text}`);
+            } // if error
+        })
+    }
+</script>

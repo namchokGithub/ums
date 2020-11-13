@@ -12,6 +12,7 @@ using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 
 /*
  * Name : Startup
@@ -41,27 +42,33 @@ namespace UMS
          */
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddAuthentication()
-            .AddCookie()
+            services.AddAuthentication(options => {
+                //options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                //options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
+            })
+            .AddCookie(options => {
+                options.LoginPath = @"/Identity/Account/Login";
+            })
             .AddOpenIdConnect(o =>
             {
-                o.ClientId = "U2b3157fb56db756a26f718bc7b4baa2f";
-                o.ClientSecret = "6c4fdbc37efad850188cd1c1aaac61f8";
+                o.ClientId = "1655213862";
+                o.ClientSecret = "cc6a98410d26fefe7020b4b855bd78c0";
                 o.ResponseType = OpenIdConnectResponseType.Code;
+                o.GetClaimsFromUserInfoEndpoint = true;
                 o.UseTokenLifetime = true;
                 o.SaveTokens = true;
                 o.Scope.Add("email");
-
+                o.CallbackPath = "/Home";
                 o.Configuration = new OpenIdConnectConfiguration
                 {
                     Issuer = "https://access.line.me",
-                    AuthorizationEndpoint = "https://access.line.me/oauth2/v2.1/authorize?bot_prompt=aggressive",
+                    AuthorizationEndpoint = "https://access.line.me/oauth2/v2.1/authorize?bot_prompt=aggressive&response_type=code",
                     TokenEndpoint = "https://api.line.me/oauth2/v2.1/token"
                 };
                 o.TokenValidationParameters = new TokenValidationParameters
                 {
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(o.ClientSecret)),
-                    NameClaimType = "name",
+                    NameClaimType = "Line",
                     ValidAudience = o.ClientId
                 };
             });

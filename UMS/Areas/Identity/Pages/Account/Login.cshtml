@@ -194,7 +194,15 @@
                     <a id="btn_Microsoft" class="btn btn-block btn-secondary" asp-controller="Account" asp-action="MicrosoftLogin">
                         <i class="fas fa-th-large mr-2"></i>
                         Login With Microsoft
-                    </a>
+                    </a>                    
+                    <a id="btn_Microsoft" class="btn btn-block btn-success text-white" onclick="LineLogin()">
+                        <i class="fab fa-line mr-2"></i>
+                        Login With Line
+                    </a>                    
+                    @*<a id="btn_Microsoft" class="btn btn-block btn-success" asp-controller="Account" asp-action="LineLogin">
+                        <i class="fab fa-line mr-2"></i>
+                        Login With Line
+                    </a>*@
                 </div>
                 <!--End Social media login-->
             </div>
@@ -209,6 +217,9 @@
     <partial name="_ValidationScriptsPartial" />
 }
 <script>
+    function LineLogin() {
+        window.location = "https://access.line.me/oauth2/v2.1/authorize?response_type=code&client_id=1655213862&redirect_uri=https%3A%2F%2Flocalhost%3A44346%2FAccount%2FLine&state=12341abcde&scope=profile%20openid%20email&nonce=09871xyz"
+    }
     $(document).ready(function () {
         @if (TempData["ExceptionLoggedOut"] != null) { @Html.Raw(TempData["ExceptionLoggedOut"]) };    // Check is has exception
         @{ var IsInValid = TempData["ExceptionInValid"] as String;}

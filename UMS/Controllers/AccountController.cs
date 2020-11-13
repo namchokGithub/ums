@@ -1,6 +1,8 @@
 ﻿using System;
 using UMS.Data;
+using Line.Login;
 using System.Linq;
+using Line.Login.Models;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using UMS.Areas.Identity.Data;
@@ -11,6 +13,9 @@ using Microsoft.AspNetCore.Authorization;
 using static UMS.Areas.Identity.Pages.Account.LoginModel;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
 
 /*
  * Name: AccountController.cs
@@ -23,6 +28,7 @@ namespace UMS.Controllers
     [Authorize]
     public class AccountController : Controller
     {
+        LineLoginClient client;
         private readonly ILogger<AccountController> _logger;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ManageUserController _manageUserController;
@@ -43,6 +49,7 @@ namespace UMS.Controllers
             _userManager = userManager;
             _signInManager = signInManager;
             _manageUserController = new ManageUserController(context, loggerManager, signInManager, userManager);
+            //client = new LineLoginClient("1655213862", "cc6a98410d26fefe7020b4b855bd78c0", "/Account/Line", "LineAuth", Scope.Profile | Scope.OpenId);
             _logger.LogInformation("Start account controller.");
         } // End consturcter
 
@@ -52,10 +59,21 @@ namespace UMS.Controllers
          */
         public IActionResult Index() { return View(); } // End Index
 
+        [AllowAnonymous]
         public IActionResult LineLogin()
         {
-            return Challenge(new AuthenticationProperties { RedirectUri = "/" }, OpenIdConnectDefaults.AuthenticationScheme);
+            return Challenge(new AuthenticationProperties { RedirectUri = $"{this.Request.Scheme}://{this.Request.Host}/Account/Line" }, OpenIdConnectDefaults.AuthenticationScheme);
         }
+
+        [AllowAnonymous]
+        public IActionResult Line(string code, string state, bool friendship_status_changed)
+        {
+            ViewData["code"] = code;
+            ViewData["state"] = state;
+            ViewData["friendship_status_changed"] = friendship_status_changed;
+            return View();
+        }
+
 
         /*
          * Name: InputModel
